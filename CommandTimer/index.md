@@ -9,7 +9,7 @@
 # 目录
 
 * [初次使用](https://snowcutieowo.github.io/CommandTimer/#!getting-started.md)
-* [配置详解]((https://snowcutieowo.github.io/CommandTimer/#!configuration.md))
+* [配置详解](https://snowcutieowo.github.io/CommandTimer/#!configuration.md)
   * [命令](https://snowcutieowo.github.io/CommandTimer/#!configuration.commands.md)
   * [计划表](https://snowcutieowo.github.io/CommandTimer/#!configuration.schedules.md)
   * [条件](https://snowcutieowo.github.io/CommandTimer/#!configuration.conditions.md)
