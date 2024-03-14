@@ -25,20 +25,25 @@
 # 目录
 
 spark
-* [主页](https://snowcutieowo.github.io/spark/#!spark.home.md)
-* [安装](https://snowcutieowo.github.io/spark/#!spark.installation.md)
-* [命令用法](https://snowcutieowo.github.io/spark/#!spark.command-usage.md)
-* [正确使用报告浏览器](https://snowcutieowo.github.io/spark/#!spark.using-the-viewer.md)
-* [开发者 API](https://snowcutieowo.github.io/spark/#!spark.developer-api.md)
-* [配置文件](https://snowcutieowo.github.io/spark/#!spark.configuration.md)
+
+- [主页](https://snowcutieowo.github.io/spark/#!spark.home.md)
+- [安装](https://snowcutieowo.github.io/spark/#!spark.installation.md)
+- [命令用法](https://snowcutieowo.github.io/spark/#!spark.command-usage.md)
+- [正确使用报告浏览器](https://snowcutieowo.github.io/spark/#!spark.using-the-viewer.md)
+- [开发者 API](https://snowcutieowo.github.io/spark/#!spark.developer-api.md)
+- [配置文件](https://snowcutieowo.github.io/spark/#!spark.configuration.md)
+
 spark 教程
-* [排查卡顿问题](https://snowcutieowo.github.io/spark/#!spark-guides.finding-the-cause-of-lag-spikes.md)
-* [刻循环](https://snowcutieowo.github.io/spark/#!spark-guides.the-tick-loop.md)
-* [TPS 与 MSPT](https://snowcutieowo.github.io/spark/#!spark-guides.tps-and-mspt.md)
+
+- [排查卡顿问题](https://snowcutieowo.github.io/spark/#!spark-guides.finding-the-cause-of-lag-spikes.md)
+- [刻循环](https://snowcutieowo.github.io/spark/#!spark-guides.the-tick-loop.md)
+- [TPS 与 MSPT](https://snowcutieowo.github.io/spark/#!spark-guides.tps-and-mspt.md)
+
 spark 其他内容
-* [优势何在？](https://snowcutieowo.github.io/spark/#!spark-misc.spark-vs.-others.md)
-* [使用 async-profiler 引擎](https://snowcutieowo.github.io/spark/#!spark-misc.using-async-profiler-engine.md)
-* [关于 spark 的统计信息](https://snowcutieowo.github.io/spark/#!spark-misc.about-spark-metrics.md)
-* [spark 的原数据](https://snowcutieowo.github.io/spark/#!spark-misc.raw-spark-data.md)
-* [变量](https://snowcutieowo.github.io/spark/#!spark-misc.placeholders.md)
-* [鸣谢](https://snowcutieowo.github.io/spark/#!spark-misc.credits.md)
+
+- [优势何在？](https://snowcutieowo.github.io/spark/#!spark-misc.spark-vs.-others.md)
+- [使用 async-profiler 引擎](https://snowcutieowo.github.io/spark/#!spark-misc.using-async-profiler-engine.md)
+- [关于 spark 的统计信息](https://snowcutieowo.github.io/spark/#!spark-misc.about-spark-metrics.md)
+- [spark 的原数据](https://snowcutieowo.github.io/spark/#!spark-misc.raw-spark-data.md)
+- [变量](https://snowcutieowo.github.io/spark/#!spark-misc.placeholders.md)
+- [鸣谢](https://snowcutieowo.github.io/spark/#!spark-misc.credits.md)
