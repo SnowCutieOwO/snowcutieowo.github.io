@@ -19,9 +19,9 @@
 # 目录
 
 通用    
-* [主页](https://snowcutieowo.github.io/PlayerPoints/#!home.md)
-* [PlaceholderAPI 支持](https://snowcutieowo.github.io/PlayerPoints/#!placeholederapi-support.md)
-* [命令与权限](https://snowcutieowo.github.io/PlayerPoints/#!commands-&-permissions.md)
+- [主页](https://snowcutieowo.github.io/PlayerPoints/#!home.md)
+- [PlaceholderAPI 支持](https://snowcutieowo.github.io/PlayerPoints/#!placeholederapi-support.md)
+- [命令与权限](https://snowcutieowo.github.io/PlayerPoints/#!commands-&-permissions.md)
 
 API 用法    
-* [开始使用](https://snowcutieowo.github.io/PlayerPoints/#!api-getting-started.md)
+- [开始使用](https://snowcutieowo.github.io/PlayerPoints/#!api-getting-started.md)
