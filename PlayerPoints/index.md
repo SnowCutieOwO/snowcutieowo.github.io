@@ -20,7 +20,7 @@ _此为再版翻译_
 
 通用    
 * [主页](https://snowcutieowo.github.io/PlayerPoints/#!home.md)
-* [PlaceholderAPI 支持](https://snowcutieowo.github.io/PlayerPoints/#!placeholederapi-support.md)
+* [PlaceholderAPI 支持](https://snowcutieowo.github.io/PlayerPoints/#!placeholderapi-support.md)
 * [命令与权限](https://snowcutieowo.github.io/PlayerPoints/#!commands-&-permissions.md)
 
 API 用法    
