@@ -1,68 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Docsify-Guide</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>docsify</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="description" content="Description">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!-- 设置浏览器图标 -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <!-- 默认主题 -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-</head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/themes/vue.css" title="vue" />
+    <link rel="stylesheet" href="/themes/dark.css" title="dark" disabled />
+    <link rel="stylesheet" href="/themes/buble.css" title="buble" disabled />
+    <link rel="stylesheet" href="/themes/pure.css" title="pure" disabled />
+    <style>
+      nav.app-nav li ul {
+        min-width: 100px;
+      }
 
-<body>
-    <!-- 定义加载时候的动作 -->
-    <div id="app">加载中...</div>
+      #carbonads {
+        box-shadow: none !important;
+        width: auto !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script src="//cdn.jsdelivr.net/npm/docsify-plugin-carbon@1"></script>
     <script>
-        window.$docsify = {
-            // 项目名称
-            name: 'Docsify-Guide',
-            // 仓库地址，点击右上角的Github章鱼猫头像会跳转到此地址
-            repo: 'https://github.com/YSGStudyHards',
-            // 侧边栏支持，默认加载的是项目根目录下的_sidebar.md文件
-            loadSidebar: true,
-            // 导航栏支持，默认加载的是项目根目录下的_navbar.md文件
-            loadNavbar: true,
-            // 封面支持，默认加载的是项目根目录下的_coverpage.md文件
-            coverpage: true,
-            // 最大支持渲染的标题层级
-            maxLevel: 5,
-            // 自定义侧边栏后默认不会再生成目录，设置生成目录的最大层级（建议配置为2-4）
-            subMaxLevel: 4,
-            // 小屏设备下合并导航栏到侧边栏
-            mergeNavbar: true,
-            /*搜索相关设置*/
-            search: {
-                maxAge: 86400000,// 过期时间，单位毫秒，默认一天
-                paths: 'auto',// 注意：仅适用于 paths: 'auto' 模式
-                placeholder: '搜索',              
-                // 支持本地化
-                placeholder: {
-                    '/zh-cn/': '搜索',
-                    '/': 'Type to search'
-                },
-                noData: '找不到结果',
-                depth: 4,
-                hideOtherSidebarContent: false,
-                namespace: 'Docsify-Guide',
-            }
-        }
-    </script>
-    <!-- docsify的js依赖 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-    <!-- emoji表情支持 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-    <!-- 图片放大缩小支持 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-    <!-- 搜索功能支持 -->
-    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-    <!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
-    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-</body>
+      // Set html "lang" attribute based on URL
+      var lang = location.hash.match(/#\/(de-de|es|ru-ru|zh-cn)\//);
 
+      if (lang) {
+        document.documentElement.setAttribute('lang', lang[1]);
+      }
+
+      // Docsify configuration
+      window.$docsify = {
+        alias: {
+          '.*?/awesome':
+            'https://raw.githubusercontent.com/docsifyjs/awesome-docsify/master/README.md',
+          '.*?/changelog':
+            'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG.md',
+          '/.*/_navbar.md': '/_navbar.md',
+          '/es/(.*)':
+            'https://raw.githubusercontent.com/docsifyjs/docs-es/master/$1',
+          '/de-de/(.*)':
+            'https://raw.githubusercontent.com/docsifyjs/docs-de/master/$1',
+          '/ru-ru/(.*)':
+            'https://raw.githubusercontent.com/docsifyjs/docs-ru/master/$1',
+          '/zh-cn/(.*)':
+            'https://cdn.jsdelivr.net/gh/docsifyjs/docs-zh@master/$1',
+        },
+        auto2top: true,
+        basePath: '/docs/',
+        coverpage: true,
+        executeScript: true,
+        loadSidebar: true,
+        loadNavbar: true,
+        mergeNavbar: true,
+        maxLevel: 4,
+        subMaxLevel: 2,
+        name: 'docsify',
+        nameLink: {
+          '/es/': '#/es/',
+          '/de-de/': '#/de-de/',
+          '/ru-ru/': '#/ru-ru/',
+          '/zh-cn/': '#/zh-cn/',
+          '/': '#/',
+        },
+        search: {
+          noData: {
+            '/es/': '¡No hay resultados!',
+            '/de-de/': 'Keine Ergebnisse!',
+            '/ru-ru/': 'Никаких результатов!',
+            '/zh-cn/': '没有结果!',
+            '/': 'No results!',
+          },
+          paths: 'auto',
+          placeholder: {
+            '/es/': 'Buscar',
+            '/de-de/': 'Suche',
+            '/ru-ru/': 'Поиск',
+            '/zh-cn/': '搜索',
+            '/': 'Search',
+          },
+          pathNamespaces: ['/es', '/de-de', '/ru-ru', '/zh-cn'],
+        },
+        plugins: [
+          DocsifyCarbon.create('CEBI6KQE', 'docsifyjsorg'),
+          function (hook, vm) {
+            hook.beforeEach(function (html) {
+              if (/githubusercontent\.com/.test(vm.route.file)) {
+                url = vm.route.file
+                  .replace('raw.githubusercontent.com', 'github.com')
+                  .replace(/\/master/, '/blob/master');
+              } else if (/jsdelivr\.net/.test(vm.route.file)) {
+                url = vm.route.file
+                  .replace('cdn.jsdelivr.net/gh', 'github.com')
+                  .replace('@master', '/blob/master');
+              } else {
+                url =
+                  'https://github.com/docsifyjs/docsify/blob/develop/docs/' +
+                  vm.route.file;
+              }
+              var editHtml = '[:memo: Edit Document](' + url + ')\n';
+              return (
+                editHtml +
+                html +
+                '\n\n----\n\n' +
+                '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>\n\n' +
+                '<a href="https://vercel.com/?utm_source=docsifyjs&utm_campaign=oss" target="_blank" title="Vercel has given us a Pro account"><img src="/docs/_media/powered-by-vercel.svg" alt="Vercel" width="150"></a>'
+              );
+            });
+          },
+        ],
+      };
+    </script>
+    <script src="/lib/docsify.js"></script>
+    <script src="/lib/plugins/search.js"></script>
+    <script src="/lib/plugins/front-matter.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-markdown.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-nginx.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-php.min.js"></script>
+  </body>
 </html>
