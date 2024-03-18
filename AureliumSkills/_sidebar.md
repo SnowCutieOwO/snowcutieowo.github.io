@@ -1,0 +1,27 @@
+* [前言](README.md)
+* [欢迎](welcome.md)
+* 配置
+  * [主配置](configuration.main-config.md)
+    * [MySQL](configuration.main-config.mysql.md)
+  * [消息文本](configuration.messages.md)
+  * [奖励配置](configuration.rewards.md)
+  * [战利品配置](configuration.loot.md)
+  * [经验来源](configuration.sources.md)
+  * [技能设置](configuration.abilities.md)
+  * [菜单](configuration.menu.md)
+    * [菜单格式变动](configuration.menu.menu-format-changes.md)
+  * [经验条件](configuration.xp-requirements.md)
+* 游戏体验
+  * [属性](gameplay.stats.md)
+    * [属性修饰语](gameplay.stats.stat-modifier.md) 
+    * [生命值相关](gameplay.health.md)
+  * [魔法技能](gameplay.stats.md)
+  * [经验翻倍](gameplay.multipliers.md)
+  * [条件](gameplay.requirements.md)
+* 用法
+  * [命令列表](usage.commands.md)
+  * [权限列表](usage.perimissions.md)
+  * [变量集群](usage.placeholders.md)
+* 其他
+  * [常见问题](other.faq.md)
+  * [冲突内容](other.incompabilities.md)
