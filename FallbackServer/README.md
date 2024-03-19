@@ -11,7 +11,8 @@
 不论如何还是把这篇维基给弄出来了，接下来可以试试把它放到作者那里去。    
 就这样。
 
-原帖地址：https://www.spigotmc.org/resources/86398/    
+原帖地址：https://www.spigotmc.org/resources/86398/
+
 维基原文：https://fallbackserver-wiki.gitbook.io/fallbackserver-wiki
 
 *注：本译文不包含原文的“视频”章节。*
