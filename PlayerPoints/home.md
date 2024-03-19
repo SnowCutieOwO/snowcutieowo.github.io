@@ -17,4 +17,4 @@ PlayerPoints 是一个简洁高效的经济插件，允许管理玩家用作货�
 
 ## 其他下载与安装方式
 
-另一种可行的方法是，你可以从 Github 的代码中自行编译插件。Players 使用 Gradle 来编译和构建插件。若要这么做，你需要在源码包的根文件夹中输入 `./gradlew build` 命令。在完成构建后插件应该会出现在 `./build/libs` 文件夹中。 
+另一种可行的方法是，你可以从 Github 的代码中自行编译插件。PlayerPoints 使用 Gradle 来编译和构建插件。若要这么做，你需要在源码包的根文件夹中输入 `./gradlew build` 命令。在完成构建后插件应该会出现在 `./build/libs` 文件夹中。 
