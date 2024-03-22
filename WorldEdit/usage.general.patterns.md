@@ -1,10 +1,3 @@
-<style>
-    pre {
-        font-size: 13px;
-        color: #525252;
-        border-left-width: 40px;
-    }
-</style>
 # 图案
 
 你可能注意到（如果没有的话，很快就会了）有些“WorldEdit”命令要求一个“图案”[^1]参数。图案可以是非常简单（例如单方块 - `stone`）到非常复杂的。图案决定了通过命令、工具或其他方式对世界地形进行修改时的内容。
@@ -105,18 +98,15 @@
 > //replace oak_stairs ^acacia_stairs
 > ```
 > 将一个选区内所有含水的方块更换为不含水的状态：
-> <pre>
-> 
->  //set &#094;[waterlogged=false]
-> 
-> </pre>
+> ```
+>  //set ^[waterlogged=false]
+> ```
 > 
 > 将所有台阶替换为两两叠加的完整方块：
-> <pre>
 > 
->  //replace ##slabs &#094;[type=double]
-> 
-> </pre>
+> ```
+> //replace ##slabs ^[type=double]
+> ```
 
 ### 方块类型图案
 
