@@ -20,7 +20,7 @@
 2. 使用一个第三方的客户端模组，例如 [WorldEdit CUI (Fabric)](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric)。注意这个模组需要 Fabric，所以你需要先在客户端上安装 Fabric。
 
 > **注意：**
-> 如果你需要使用更老版本的 Minecraft（1.12.2 或更早），除了下载一个旧版本的 WorldEdit（6.x 版）外，你也可能需要用到旧版本的 [Mumfrey 制作的 WorldEditCUI 模组](https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1292886-worldeditcui)。注意这个模组需要 LiteLoader（安装方法在帖子中可以找到）。[/td][/tr][/table]
+> 如果你需要使用更老版本的 Minecraft（1.12.2 或更早），除了下载一个旧版本的 WorldEdit（6.x 版）外，你也可能需要用到旧版本的 [Mumfrey 制作的 WorldEditCUI 模组](https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1292886-worldeditcui)。注意这个模组需要 LiteLoader（安装方法在帖子中可以找到）。
 
 选区显示的效果不会受到 WorldEdit 安装方式不同的影响（在 Bukkit 服务器上或是单人游戏，都没关系）。
 
