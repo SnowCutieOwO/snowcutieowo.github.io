@@ -1,4 +1,5 @@
 * [前言](README.md)
+* [更新日志](changelogs.md)
 * [目录](table-of-contents.md)
 * [安装](installtion.md)
 * [快速开始](quick-start.md)
