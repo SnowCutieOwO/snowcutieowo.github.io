@@ -1,20 +1,20 @@
 # 命令列表
 
 > 本章内容：
-> * 通用命令
-> * 导航命令
-> * 选区命令
-> * 区域命令
-> * 生成命令
-> * 结构与剪贴板命令
-> * 绑定工具命令[^1]
-> * 超级镐子命令
-> * 笔刷命令
-> * 生物群系命令
-> * 区块命令
-> * 快照命令
-> * 脚本命令
-> * 实用工具命令
+> * [通用命令](commands.md#通用命令2)
+> * [导航命令](commands.md#导航命令)
+> * [选择命令](commands.md#选择命令)
+> * [区域命令](commands.md#区域命令)
+> * [生成命令](commands.md#生成命令)
+> * [结构与剪贴板命令](commands.md#结构与剪贴板命令)
+> * [绑定工具命令](commands.md#绑定工具命令)[^1]
+> * [超级镐子命令](commands.md#超级镐子命令)
+> * [笔刷命令](commands.md#笔刷命令)
+> * [生物群系命令](commands.md#生物群系命令)
+> * [区块命令](commands.md#区块命令)
+> * [快照命令](commands.md#快照命令)
+> * [快速脚本命令](commands.md#快速脚本命令)
+> * [实用工具命令](commands.md#实用工具命令)
 
 > **注意：**
 > 以英文方括号“`[ ]`”标注的参数为选填参数，以英文尖角括号“`< >`”标注的参数为必填参数。
@@ -129,6 +129,13 @@
 |`[新状态]`|将牺牲的内容调整为其他内容的参数|
 |[-h]|显示信息框|
 
+**`//update`**
+|描述|对选区内施加一次副作用|
+|---|---|
+|**权限**|`worldedit.update`|
+|**用法**|`//update [副作用组]`|
+|`[副作用组]`|所要应用的副作用|
+
 **`//reorder`**
 |描述|设置 WorldEdit 的重排模式|
 |---|---|
@@ -162,11 +169,19 @@
 |---|---|
 |**用法**|`/toggleplace`|
 
+**`/placement`（或 //placement）**
+|描述|改变所使用的放置方法|
+|---|---|
+|**用法**|`/placement <放置类型> [倍数] [偏移]`|
+|`<放置类型>`|所要使用的放置类型|
+|`[倍数]`|施加偏移的次数|
+|`[偏移]`|距放置位置的偏移量|
+
 **`/searchitem (或 //searchitem、//l、//search)`**
 |描述|搜寻指定的物品|
 |---|---|
 |**权限**|`worldedit.searchitem`|
-|**用法**|/searchite [-bi] [-p <页码>] <关键词...>|
+|**用法**|`/searchite [-bi] [-p <页码>] <关键词...>`|
 |`[-b]`|仅搜索方块|
 |`[-i]`|仅搜索物品|
 |`[-p <页码>]`|返回搜索结果的指定页码|
@@ -225,6 +240,15 @@
 |   `[-g]`|若脚下为空，是否强制在脚下生成玻璃方块使得传送后不坠落|
 
 ## 选择命令
+
+**`//pos`**
+|描述|选择位置|
+|---|---|
+|**权限**|`worldedit.selection.pos`|
+|**用法**|`//pos [坐标1] [坐标2] [-s <选择模式>]`|
+|`[坐标1]`|一号点位所设置的位置。若不填入则默认选择玩家所在的位置。|
+|`[坐标2]`|二号点位所设置的位置。若不填入则默认选择玩家所在的位置。|
+|`[-s <选择模式>]`|切换所要使用的选择模式|
 
 **`//pos1`**
 |描述|选定一号点位|
@@ -309,6 +333,13 @@
 |`[-h]`|仅水平缩小选区|
 |`[-v]`|仅垂直缩小选区|
 
+**`//trim`**
+|描述|将选区收缩至只包含指定方块的大小，但不会由此变为分散选区。|
+|---|---|
+|**权限**|`worldedit.selection.trim`|
+|**用法**|`//trim [蒙版]`|
+|`[蒙版]`|选区中指定收缩边界方块的蒙版|
+
 **`//size`**
 |描述|获取选区大小|
 |---|---|
@@ -335,8 +366,8 @@
 **`//sel (或 /;、//desel、//deselect)`**
 |描述|选择一个区域选择器|
 |---|---|
-|**用法**|`//sel [-d] [selector]`|
-|`[选择器]`|切换至的选择器|
+|**用法**|`//sel [-d] [选择器或列表]`|
+|`[选择器或列表]`|切换至的选择器|
 |`[-d]`|设置默认选择器|
 
 **`//expand`**
@@ -430,6 +461,15 @@
 |`[重复次数]`|重复平滑操作的次数|
 |`[蒙版]`|指定本次操作所影响的方块|
 
+**`//snowsmooth`**
+|描述|使得区域内的雪片按其层数平滑化<br><br>示例：“//snowsmooth 1 -m snow_block,snow”只会平滑地形内的雪|
+|---|---|
+|**权限**|`worldedit.region.snowsmooth`|
+|**用法**|`//snowsmooth [次数] [-l <雪块数量>] [-m <蒙版>]`|
+|`[次数]`|重复操作的次数|
+|`[-l <雪块数量>]`|设置平滑化后雪层下的血块数量|
+|`[-m <蒙版>]`|用作高度图的蒙版方块|
+
 **`//move`**
 |描述|移动选区内的内容[^9]|
 |---|---|
@@ -519,6 +559,17 @@
 |`[高度]`|圆柱体的高度。|
 |`[-h]`|生成空心圆柱体。|
 
+**`//cone`**
+|描述|生成锥形体|
+|---|---|
+|**权限**|`worldedit.generation.cone`|
+|**用法**|`//cone [-h] <pattern> <radii> [height] [thickness]`|
+|`<方块>`|组成锥形体的方块内容|
+|`<半径>`|锥形体的半径，前一个为南北半径，后一个为东西半径|
+|`[高度]`|锥形体的高度|
+|`[-h]`|是否生成空心锥形体|
+|`[厚度]`|若生成锥形体，则此参数决定锥形体内外壁的厚度|
+
 **`//hsphere`**
 |描述|生成空心球体|
 |---|---|
@@ -548,11 +599,25 @@
 |`[密度]`|森林的密度，数字大小介于 0 到 100|
 
 **`/pumpkins`**
-|描述|生成类似于自然生成的南瓜堆|
+|描述|生成类似于自然分布的南瓜堆|
 |---|---|
 |**权限**|`worldedit.generation.pumpkins`|
 |**用法**|`/pumpkins [大小]`|
 |`[size]`|南瓜堆的大小|
+
+**`//features`**
+|描述|生成 Minecraft 的地物[^14]|
+|---|---|
+|**权限**|`worldedit.generation.feature`|
+|**用法**|`//feature <地物名>`|
+|`<地物名>`|所要生成地物的名称|
+
+**`//structure`**
+|描述|生成 Minecraft 的建筑结构[^15]|
+|---|---|
+|**权限**|`worldedit.generation.structure`|
+|**用法**|`//structure <结构名>`|
+|`<结构名>`|所要生成的结构名称|
 
 **`//hpyramid`**
 |描述|生成空心的金字塔|
@@ -600,8 +665,8 @@
 **`/schematic (或 /schem、//schematic、//schem)`**
 |描述|保存/载入区域的结构命令|
 |---|---|
-|**权限**|`worldedit.schematic.delete、worldedit.schematic.list、worldedit.clipboard.load、worldedit.schematic.save、worldedit.schematic.formats、worldedit.schematic.load、worldedit.clipboard.save`|
-|**用法**|`/schematic <list|formats|load|delete|save>`|
+|**权限**|`worldedit.schematic.delete`、`worldedit.schematic.list`、`worldedit.clipboard.load`、`worldedit.schematic.save`、`worldedit.schematic.formats`、`worldedit.schematic.load`、`worldedit.clipboard.save`、`worldedit.clipboard.share`、`worldedit.schematic.share`|
+|**用法**|`/schematic <list|formats|load|delete|save|share>`|
 
 **`/schematic list (或 /schematic all、/schematic ls)`**
 |描述|列出已保存的结构<br><br>注意：格式在完全载入之前不会完全验证。|
@@ -642,6 +707,15 @@
 |`[格式名称]`|结构文件的格式。|
 |`[-f]`|覆盖已有的文件。|
 
+**`/schematic share`**
+|描述|将剪贴板内的建筑结构分享至在线网站|
+|---|---|
+|**权限**|`worldedit.clipboard.share`、`worldedit.schematic.share`|
+|**用法**|`/schematic share [结构名称] [位置] [格式]`|
+|`[结构名称]`|使用的结构名称，默认精确到后缀名|
+|`[位置]`|分享的位置|
+|`[格式]`|使用的格式|
+
 **`//copy`**
 |描述|将选区复制至剪贴板|
 |---|---|
@@ -667,6 +741,7 @@
 |**权限**|`worldedit.clipboard.paste`|
 |**用法**|`//paste [-abenos] [-m <源蒙版>]`|
 |`[-a]`|忽略空气方块|
+|`[-v]`|包含结构空位方块|
 |`[-o]`|在原位置粘贴|
 |`[-s]`|粘贴后保持选区|
 |`[-n]`|不粘贴建筑结构, 只粘贴选区。（与 -s 参数相似）|
@@ -700,12 +775,13 @@
 **`/tool`**
 |描述|将手上物品绑定指定的工具|
 |---|---|
-|**用法**|`/tool <none|navwand|info|deltree|floodfill|lrbuild|cycler|farwand|repl|tree|selwand|stacker>`|
+|**用法**|`/tool <cycler|navwand|none|floodfill|deltree|farwand|selwand|stacker|repl|tree|lrbuild|info>`|
 
-**`/tool none (or /tool unbind)`**
-|描述|将工具从手上的物品解绑|
+**`/tool cycler`**
+|描述|将方块数据循环魔杖绑定至手上的物品|
 |---|---|
-|**用法**|`/tool none`|
+|**权限**|`worldedit.tool.data-cycler`|
+|**用法**|`/tool cycler`|
 
 **`/tool navwand`**
 |描述|将导航魔杖绑定至手上的物品|
@@ -713,17 +789,10 @@
 |**权限**|`worldedit.setwand`|
 |**用法**|`/tool navwand`|
 
-**`/tool info`**
-|描述|将查询魔杖绑定至手上的物品|
+**`/tool none (or /tool unbind)`**
+|描述|将工具从手上的物品解绑|
 |---|---|
-|**权限**|`worldedit.tool.info`|
-|**用法**|`/tool info`|
-
-**`/tool deltree`**
-|描述|将浮空树移除魔杖绑定至手上的物品|
-|---|---|
-|**权限**|`worldedit.tool.deltree`|
-|**用法**|`/tool deltree`|
+|**用法**|`/tool none`|
 
 **`/tool floodfill (or /tool flood)`**
 |描述|将填充魔杖绑定至手上的物品|
@@ -733,25 +802,31 @@
 |`<方块>`|填充方块的内容|
 |`<范围>`|填充方块的范围|
 
-**`/tool lrbuild`**
-|描述|将大面积建筑魔杖绑定至手上的物品|
+**`/tool deltree`**
+|描述|将浮空树移除魔杖绑定至手上的物品|
 |---|---|
-|**权限**|`worldedit.tool.lrbuild`|
-|**用法**|`/tool lrbuild <左键放置方块> <右键放置方块>`|
-|`<左键放置方块>`|左键点击放置的方块|
-|`<右键放置方块>`|右键点击放置的方块|
-
-**`/tool cycler`**
-|描述|将方块数据循环魔杖绑定至手上的物品|
-|---|---|
-|**权限**|`worldedit.tool.data-cycler`|
-|**用法**|`/tool cycler`|
+|**权限**|`worldedit.tool.deltree`|
+|**用法**|`/tool deltree`|
 
 **`/tool farwand`**
 |描述|将超距魔杖绑定至手上的物品|
 |---|---|
 |**权限**|`worldedit.tool.farwand`|
 |**用法**|`/tool farwand`|
+
+**`/tool selwand`**
+|描述|将选区魔杖绑定至手上的物品|
+|---|---|
+|**权限**|`worldedit.setwand`|
+|**用法**|`/tool selwand`|
+
+**`/tool stacker`**
+|描述|将堆叠魔杖绑定至手上的物品|
+|---|---|
+|**权限**|`worldedit.tool.stack`|
+|**用法**|`/tool stacker [范围] [蒙版]`|
+|`[范围]`|堆叠的最大范围|
+|`[蒙版]`|堆叠所使用的蒙版|
 
 **`/tool repl`**
 |描述|将替换魔杖绑定至手上的物品|
@@ -767,19 +842,19 @@
 |**用法**|`/tool tree [树种]`|
 |`[树种]`|生成的树种|
 
-**`/tool selwand`**
-|描述|将选区魔杖绑定至手上的物品|
+**`/tool info`**
+|描述|将查询魔杖绑定至手上的物品|
 |---|---|
-|**权限**|`worldedit.setwand`|
-|**用法**|`/tool selwand`|
+|**权限**|`worldedit.tool.info`|
+|**用法**|`/tool info`|
 
-**`/tool stacker`**
-|描述|将堆叠魔杖绑定至手上的物品|
+**`/tool lrbuild`**
+|描述|将大面积建筑魔杖绑定至手上的物品|
 |---|---|
-|**权限**|`worldedit.tool.stack`|
-|**用法**|`/tool stacker [范围] [蒙版]`|
-|`[范围]`|堆叠的最大范围|
-|`[蒙版]`|堆叠所使用的蒙版|
+|**权限**|`worldedit.tool.lrbuild`|
+|**用法**|`/tool lrbuild <左键放置方块> <右键放置方块>`|
+|`<左键放置方块>`|左键点击放置的方块|
+|`<右键放置方块>`|右键点击放置的方块|
 
 **`/none`**
 > **警告：**    
@@ -971,7 +1046,7 @@
 **`/brush (或 /br、//brush、//br)`**
 |描述|笔刷的相关命令|
 |---|---|
-|**用法**|`/brush <forest|butcher|paint|none|clipboard|gravity|heightmap|extinguish|sphere|raise|smooth|cylinder|set|apply|deform|lower|snow|biome>`|
+|**用法**|`/brush <forest|splatter|butcher|paint|none|clipboard|snowsmooth|gravity|heightmap|extinguish|feature|sphere|raise|smooth|cylinder|set|apply|deform|lower|erode|dilate|snow|biome|morph>`|
 
 **`/brush forest`**
 |描述|将森林笔刷绑定在手持的物品上，可在区域内快速大面积植树|
@@ -982,6 +1057,15 @@
 |`[半径]`|笔刷的大小|
 |`[密度]`|生成树林的密度|
 |`<树种>`|使用的树种|
+
+**`/brush splatter (或 /brush splat)`**
+|描述|将喷溅笔刷绑定在手持的物品上|
+|---|---|
+|**权限**|`worldedit.brush.splatter`|
+|**用法**|`/brush splatter <方块> [半径] [疏密]`|
+|`<方块>`|放置的方块|
+|`[半径]`|放置的半径|
+|`[疏密]`|喷溅笔刷的密度值，值应处于 0-10 之间|
 
 **`/brush butcher (或 /brush kill)`**
 |描述|将屠戮笔刷绑定在手持的物品上，可击杀指定半径内的生物|
@@ -1019,10 +1103,21 @@
 |**权限**|`worldedit.brush.clipboard`|
 |**用法**|`/brush clipboard [-abeo] [-m <源蒙版>]`|
 |`[-a]`|不从剪贴板复制空气方块|
+|`[-v]`|包括结构空位方块|
 |`[-o]`|粘贴操作始于目标位置而不是其中心|
 |`[-e]`|若可能，则粘贴实体|
 |`[-b]`|若可能，则粘贴生物群系|
 |`[-m <源蒙版>]`|跳过匹配此剪贴板蒙版中的方块|
+
+**`/brush snowsmooth`**
+|描述|将雪层平滑笔刷绑定在手持的物品上|
+|---|---|
+|**权限**|`worldedit.brush.snowsmooth`|
+|**用法**|`/brush snowsmooth [半径] [次数] [-l <雪块数量>] [-m <蒙版>]`|
+|`[半径]`|笔刷的半径|
+|`[次数]`|重复操作的次数|
+|`[-l <雪块数量>]`|设置平滑化后雪层下的血块数量|
+|`[-m <蒙版>]`|用作高度图的蒙版方块|
 
 **`/brush gravity (或 /brush grav)`**
 |描述|将重力笔刷绑定在手持的物品上，可绘制模拟重力情况下的地形|
@@ -1050,6 +1145,15 @@
 |**权限**|`worldedit.brush.ex`|
 |**用法**|`/brush extinguish [半径]`|
 |`[半径]`|灭火笔刷单次操作的作用半径|
+
+**`/brush feature`**
+|描述|地物笔刷，可生成 Minecraft 原版的地物|
+|---|---|
+|**用法**|`/brush feature <形状> [半径] [密度] <类型>`|
+|`<形状>`|区域的形状|
+|`[半径]`|笔刷的半径|
+|`[密度]`|生成地物的密集程度|
+|`<类型>`|生成地物的名称|
 
 **`/brush sphere (或 /brush s)`**
 |描述|选择球形笔刷|
@@ -1122,6 +1226,21 @@
 |`<形状>`|笔刷作用区域的形状|
 |`[半径]`|笔刷的粗细|
 
+**`/brush erode`**
+|描述|变形笔刷的收缩预设，可将作用范围内的方块向内收缩|
+|---|---|
+|**权限**|`worldedit.brush.morph`|
+|**用法**|`/brush erode [笔刷大小]`|
+|`[笔刷大小]`|笔刷大小|
+
+**`/brush dilate`**
+
+|描述|变形笔刷的膨胀预设，可将作用范围内的方块向外膨胀|
+|---|---|
+|**权限**|`worldedit.brush.morph`|
+|用法|`/brush dilate [笔刷大小]`|
+|`[笔刷大小]`|笔刷的大小|
+
 **`/brush snow`**
 |描述|将覆雪笔刷绑定在手持的物品上，可根据需要绘制覆雪|
 |---|---|
@@ -1135,10 +1254,11 @@
 |描述|将生物群系笔刷绑定在手持的物品上，可根据需要绘制指定的生物群系|
 |---|---|
 |**权限**|`worldedit.brush.biome`|
-|**用法**|`/brush biome <形状> [半径] <生物群系>`|
+|**用法**|`/brush biome [-c] <形状> [半径] <生物群系>`|
 |`<形状>`|笔刷作用区域的形状|
 |`[半径]`|笔刷的粗细|
 |`<生物群系>`|生物群系种类|
+|`[-c]`|是否使用完整列|
 
 ## 生物群系命令
 
@@ -1339,7 +1459,6 @@
 |`[高度]`|造雪的高度|
 |`[-s]`|允许积雪|
 
-
 **`/thaw (or //thaw)`**
 |描述|融化附近的冰块，范围为圆柱形|
 |---|---|
@@ -1410,6 +1529,8 @@
 * McWorldEditGuide, 2020.3.22, */worldedit tz*, https://minecraft-worldedit.fandom.com/wiki//worldedit_tz
 * 姑苏小码哥, 2023.11.07,《什么是曼哈顿距离》, https://zhuanlan.zhihu.com/p/393809007
 * McWorldEditGuide, 2020.5.19, *//hcyl*, https://minecraft-worldedit.fandom.com/wiki///hcyl
+* Minecraft 中文维基, 2024.3.16, *地物*, https://zh.minecraft.wiki/w/%E5%9C%B0%E7%89%A9
+* Minecraft 中文维基, 2024.3.10, *生成结构*, https://zh.minecraft.wiki/w/%E7%94%9F%E6%88%90%E7%BB%93%E6%9E%84
 
 ## 脚注
 [^1]: 此处取名差异详见“WorldEdit 文档”章节，即首章的注释一。
@@ -1451,3 +1572,11 @@
     ![img](https://static.wikia.nocookie.net/minecraft-worldedit/images/1/1d/Hcyl4.png/revision/latest?cb=20200619070642)
 
 [^13]: 下方“高度”参数代指圆柱区域的高度，下一条命令中的“高度”参数与之相同。
+
+[^14]: 
+    地物（Feature）是在地形生成后在每个区块生成的装饰性方块结构。
+    完整地物列表请参见官方维基的“[地物](https://zh.minecraft.wiki/w/%E5%9C%B0%E7%89%A9)”章节。
+
+[^15]: 
+    生成结构被定义为：在Java版世界创建界面的“生成结构”选项关闭时会被禁用的任何结构。 
+    完整结构列表请参见官方维基的“[生成结构](https://zh.minecraft.wiki/w/%E7%94%9F%E6%88%90%E7%BB%93%E6%9E%84)”章节。
