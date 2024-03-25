@@ -9,7 +9,13 @@
 * 跟进 [#e0aabcd](https://github.com/EngineHub/WorldEditDocs/commit/e0aabcd24376413b37c7a1a4f90fef6672049763)
   * 此次更新分两天完成，此为 commands.md 绑定命令处二次重排。此处命令也补全了 `/placement` 命令在 permissions.mc 中缺少对应权限的问题。
 
+#### 2024/3/25 13:19
+
+* 完成 [#1d6759e](https://github.com/EngineHub/WorldEditDocs/commit/1d6759efc75fac304450be4b3c4a3868d692cf68) 的跟进
+* 完成 [#e0aabcd](https://github.com/EngineHub/WorldEditDocs/commit/e0aabcd24376413b37c7a1a4f90fef6672049763) 的跟进
+* 将“[剪贴板](usage.clipboard.md)”章节的漏洞上报至了 EngineHub 原文维基开源处（[issue#49](https://github.com/EngineHub/WorldEditDocs/issues/49)）。
+
 #### TODO
 
-[ ] 将 3.24 的剩余更新完成
-[ ] 更新 clipboard.md 章节，新增结构共享功能
+1. ~~将 3.24 的剩余更新完成~~
+2. ~~更新 clipboard.md 章节，新增结构共享功能~~
