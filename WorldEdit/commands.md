@@ -25,13 +25,15 @@
 ## 通用命令[^2]
 
 **`/worldedit (或 /we)`**
+
 |描述|WorldEdit 命令|
 |---|---|
 |**用法**|`/worldedit <help\|version\|trace\|reload\|cui\|tz\|report>`|
 
 **`/worldedit help`**
+
 |描述|显示 WorldEdit 命令的帮助|
-|---|---|
+|--:|---|
 |权限|`worldedit.help`|
 |用法|`/worldedit help [-s] [-p <页码>] [命令...]`|
 |`[-s]`|列出给定命令的子命令列表|
@@ -39,34 +41,40 @@
 |[命令...]|查询的命令|
 
 **`/worldedit version(或 /worldedit ver)`**
+
 |描述|获取 WorldEdit 版本|
 |---|---|
 |用法|`/worldedit version`|
 
 **`/worldedit trace`**
+
 |描述|切换对接追踪模式|
 |---|---|
 |**用法**|`/worldedit trace [对接模式]`|
 |`[对接模式]`|记录所设置的模式|
 
 **`/worldedit reload`**
+
 |描述|重载配置文件|
 |---|---|
 |**权限**|`worldedit.reload`|
 |**用法**|`/worldedit reload`|
 
 **`/worldedit cui`**
+
 |描述|唤醒 CUI 模组进程（内部用法）[^3]|
 |---|---|
 |**用法**|`/worldedit cui`|
 
 **`/worldedit tz`**
+
 |描述|为快照设置时区[^4]|
 |---|---|
 |**用法**|`/worldedit tz <时区>`|
 |`<时区>`|所设置的时区|
 
 **`/worldedit report`**
+
 |描述|通过 WorldEdit 生成报告|
 |---|---|
 |**权限**|`worldedit.report`|
@@ -74,6 +82,7 @@
 |`[-p]`|将报告上传至在线剪贴板。|
 
 **`/undo (或 //undo)`**
+
 |描述|撤销一次最近（历史记录）的操作|
 |---|---|
 |**权限**|`worldedit.history.undo`、`worldedit.history.undo.self`|
@@ -82,6 +91,7 @@
 |`[玩家名称]`|指定玩家的名称|
 
 **`/redo (或 //redo)`**
+
 |描述|重做最近一次（历史记录）的操作|
 |---|---|
 |**权限**|`worldedit.history.redo`、`worldedit.history.redo.self`|
@@ -90,12 +100,14 @@
 |`[玩家名称]`|指定玩家的名称|
 
 **`/clearhistory (或 //clearhistory)`**
+
 |描述|清除历史记录。|
 |---|---|
 |**权限**|`worldedit.history.clear`|
 |**用法**|`/clearhistory`|
 
 **`//limit`**
+
 |描述|修改单次操作方块数量的上限|
 |---|---|
 |**权限**|`worldedit.limit`|
@@ -103,6 +115,7 @@
 |`[限制]`|设置的限制量|
 
 **`//timeout`**
+
 |描述|修改计算超时时间|
 |---|---|
 |**权限**|`worldedit.timeout`|
@@ -121,8 +134,9 @@
 |[快速模式]|新的快速模式状态|
 
 **`//perf`**
+
 |描述|切换提升性能所牺牲的内容。<br><br>需要注意的是，该命令可能会在未来被修改。请先不要遵守该命令的参数格式。|
-|---|---|
+|---|:--|
 |**权限**|`worldedit.perf`|
 |**用法**|`//perf [-h] [副作用][^5] [新状态]`|
 |`[副作用]`|所牺牲的内容|
@@ -130,6 +144,7 @@
 |[-h]|显示信息框|
 
 **`//update`**
+
 |描述|对选区内施加一次副作用|
 |---|---|
 |**权限**|`worldedit.update`|
@@ -137,6 +152,7 @@
 |`[副作用组]`|所要应用的副作用|
 
 **`//reorder`**
+
 |描述|设置 WorldEdit 的重排模式|
 |---|---|
 |**权限**|`worldedit.reorder`|
@@ -144,6 +160,7 @@
 |`[重排模式]`|重排模式状态|
 
 **`//drawsel`**
+
 |描述|切换选区可见性|
 |---|---|
 |**权限**|`worldedit.drawsel`|
@@ -151,13 +168,15 @@
 |[选区可见性]|新的选区可见性状态|
 
 **`//watchdog`**
+
 |描述|切换看门狗（线程守护）对接状态。<br><br>该功能可用性取决于服务器核心是否包含看门狗（线程守护）。不是所有服务器核心都支持对接，也不是所有服务器都有看门狗（线程守护）|
-|---|---|
+|---|:--|
 |**权限**|`worldedit.watchdog`|
 |**用法**|`//watchdog [对接模式]`|
 |[对接模式]|设置的看门狗（线程守护）对接状态|
 
 **`/gmask (或 //gmask)`**
+
 |描述|设置全局蒙版|
 |---|---|
 |**权限**|`worldedit.global-mask`|
@@ -165,6 +184,7 @@
 |`[蒙版]`|所设蒙版名称|
 
 **`/toggleplace (或 //toggleplace)`**
+
 |描述|在你当前的位置和圈定的一号点位置间切换，用以进行建筑行为|
 |---|---|
 |**用法**|`/toggleplace`|
@@ -178,6 +198,7 @@
 |`[偏移]`|距放置位置的偏移量|
 
 **`/searchitem (或 //searchitem、//l、//search)`**
+
 |描述|搜寻指定的物品|
 |---|---|
 |**权限**|`worldedit.searchitem`|
@@ -190,12 +211,14 @@
 ## 导航命令
 
 **`/unstuck (或 /!)`**
+
 |描述|从被卡住的方块中逃出|
 |---|---|
 |**权限**|`worldedit.navigation.unstuck`|
 |**用法**|`/unstuck`|
 
 **`/ascend (或 /asc)`**
+
 |描述|向上方方块传送|
 |---|---|
 |**权限**|`worldedit.navigation.ascend`|
@@ -203,6 +226,7 @@
 |`[层数]`|向上传送的层数|
 
 **`/descend (或 /desc)`**
+
 |描述|向下方方块传送|
 |---|---|
 |**权限**|`worldedit.navigation.ascend`|
@@ -210,6 +234,7 @@
 |`[层数]`|向下传送的层数|
 
 **`/ceil`**
+
 |描述|传送至天花板的位置|
 |---|---|
 |**权限**|`worldedit.navigate.ceiling`|
@@ -219,18 +244,21 @@
 |   `[-g]`|若脚下为空，是否强制在脚下生成玻璃方块使得传送后不坠落|
 
 **`/thru`**
+
 |描述|穿墙|
 |---|---|
 |**权限**|`worldedit.navigation.thru.command`|
 |**用法**|`/thru`|
 
 **`/jumpto (或 /j)`**
+
 |描述|穿墙|
 |---|---|
 |**权限**|`worldedit.navigation.jumpto.command`|
 |**用法**|`/jumpto`|
 
 **`/up`**
+
 |描述|向上移动一段距离|
 |---|---|
 |**权限**|`worldedit.navigation.up`|
@@ -242,6 +270,7 @@
 ## 选择命令
 
 **`//pos`**
+
 |描述|选择位置|
 |---|---|
 |**权限**|`worldedit.selection.pos`|
@@ -251,6 +280,7 @@
 |`[-s <选择模式>]`|切换所要使用的选择模式|
 
 **`//pos1`**
+
 |描述|选定一号点位|
 |---|---|
 |**权限**|`worldedit.selection.pos`|
@@ -258,6 +288,7 @@
 |`[坐标]`|将一号点位设置在的指定位置。[^6]|
 
 **`//pos2`**
+
 |描述|选定二号点位|
 |---|---|
 |**权限**|`worldedit.selection.pos`|
@@ -265,18 +296,21 @@
 |`[坐标]`|将二号点位设置在的指定位置。|
 
 **`//hops1`**
+
 |描述|将准星指向的方块设置为一号点位|
 |---|---|
 |**权限**|`worldedit.selection.hpos`|
 |**用法**|`//hpos1`|
 
 **`//hops2`**
+
 |描述|将准星指向的方块设置为二号点位|
 |---|---|
 |**权限**|`worldedit.selection.hpos`|
 |**用法**|`//hpos2`|
 
 **`//chunk`**
+
 |描述|选中当前所处的区块。<br><br>该命令只会选择高 256 格的部分，可通过指定 y 轴坐标拓宽。例如 x,1,z 会选中 y=256 到 y=511 的位置。|
 |---|---|
 |**权限**|`worldedit.selection.chunk`|
@@ -286,6 +320,7 @@
 |[-c]|使用区块坐标而不是方块坐标|
 
 **`//wand`**
+
 |描述|获取编辑魔杖（通常为木斧）。<br>你必须拥有至少一个与木斧编辑功能相关的权限，否则你就不能使用它。|
 |---|---|
 |**权限**|`worldedit.wand`|
@@ -293,12 +328,14 @@
 |`[-n]`|获取导航魔杖|
 
 **`/toggleeditwand`**
+
 |描述|提醒用户现在该工具为魔杖，并可以被命令 /tool none 解绑。|
 |---|---|
 |**权限**|`worldedit.wand.toggle`|
 |**用法**|`/toggleeditwand`|
 
 **`//contract`**
+
 |描述|缩小选区|
 |---|---|
 |**权限**|`worldedit.selection.contract`|
@@ -308,6 +345,7 @@
 |`[方向]`|缩小的方向|
 
 **`//shift`**
+
 |描述|移动选区|
 |---|---|
 |**权限**|`worldedit.selection.shift`|
@@ -316,6 +354,7 @@
 |`[方向]`|移动的方向|
 
 **`//outset`**
+
 |描述|在六个方向上扩展选区|
 |---|---|
 |**权限**|`worldedit.selection.outset`|
@@ -325,6 +364,7 @@
 |`[-v]`|仅垂直拓展选区|
 	
 **`//inset`**
+
 |描述|在六个方向上缩小选区|
 |---|---|
 |**权限**|`worldedit.selection.inset`|
@@ -334,6 +374,7 @@
 |`[-v]`|仅垂直缩小选区|
 
 **`//trim`**
+
 |描述|将选区收缩至只包含指定方块的大小，但不会由此变为分散选区。|
 |---|---|
 |**权限**|`worldedit.selection.trim`|
@@ -341,6 +382,7 @@
 |`[蒙版]`|选区中指定收缩边界方块的蒙版|
 
 **`//size`**
+
 |描述|获取选区大小|
 |---|---|
 |**权限**|`worldedit.selection.size`|
@@ -348,6 +390,7 @@
 |`[-c]`|将信息复制到剪贴板|
 
 **`//count`**
+
 |描述|计算与指定蒙版匹配的方块数量|
 |---|---|
 |**权限**|`worldedit.analysis.count`|
@@ -355,6 +398,7 @@
 |`<蒙版>`|参与计算的蒙版|
 
 **`//distr`**
+
 |描述|获取选区内的方块占比|
 |---|---|
 |**权限**|`worldedit.analysis.distr`|
@@ -364,6 +408,7 @@
 |`[-p <页码>]`|指定上一次查询信息的页码|
 
 **`//sel (或 /;、//desel、//deselect)`**
+
 |描述|选择一个区域选择器|
 |---|---|
 |**用法**|`//sel [-d] [选择器或列表]`|
@@ -371,6 +416,7 @@
 |`[-d]`|设置默认选择器|
 
 **`//expand`**
+
 |描述|拓宽选区|
 |---|---|
 |**权限**|`worldedit.selection.expand`|
@@ -380,6 +426,7 @@
 |`[方向]`|选区扩展的方向|
 
 **`//expand vert`**
+
 |描述|将选区在垂直方向上扩展，使得其能选中整个 y 轴上的方块|
 |---|---|
 |**用法**|`//expand vert`|
@@ -387,6 +434,7 @@
 ## 区域命令
 
 **`//set`**
+
 |描述|按给定参数的方块填充选区|
 |---|---|
 |**权限**|`worldedit.region.set`|
@@ -394,6 +442,7 @@
 |`<方块>`|所放置方块的内容|
 
 **`//line`**
+
 |描述|在选区角或顶点附近生成形似直线的方块。<br>只能在长方体或凸面多边体选区中使用。|
 |---|---|
 |**权限**|`worldedit.region.line`|
@@ -403,6 +452,7 @@
 |`[-h]`|是否空心|
 
 **`//curve`**
+
 |描述|通过给定的点放置形似曲线的方块|
 |---|---|
 |**权限**|`worldedit.region.curve`|
@@ -412,6 +462,7 @@
 |`[-h]`|是否空心|
 
 **`//replace (或 //re、//rep)`**
+
 |描述|将选区内的指定方块替换为其他方块|
 |---|---|
 |**权限**|`worldedit.region.replace`|
@@ -420,6 +471,7 @@
 |`<替换方块>`|将上一个参数中选中的方块替换为的方块[^8]|
 
 **`//overlay`**
+
 |描述|将选区内方块的最顶层覆盖上指定的方块|
 |---|---|
 |**权限**|`worldedit.region.overlay`|
@@ -427,6 +479,7 @@
 |`<方块>`|用于覆盖的方块|
 
 **`//center (或 //middle)`**
+
 |描述|将选区中心附近的位置替换为指定的方块|
 |---|---|
 |**权限**|`worldedit.region.center`|
@@ -434,12 +487,14 @@
 |`<方块>`|中心部分组成的方块|
 	
 **`//naturalize`**
+
 |描述|将石质方块上覆盖三格厚的泥土|
 |---|---|
 |**权限**|`worldedit.region.naturalize`|
 |**用法**|`//naturalize`|
 
 **`//walls`**
+
 |描述|在选区边界筑墙|
 |---|---|
 |**权限**|`worldedit.region.walls`|
@@ -447,6 +502,7 @@
 |`<方块>`|用于筑墙的方块|
 
 **`//faces (或 //outline)`**
+
 |描述|在选区内建造墙壁、地板和天花板|
 |---|---|
 |**权限**|``worldedit.region.faces|
@@ -454,6 +510,7 @@
 |`<方块>`|用于建造的方块|
 
 **`//smooth`**
+
 |描述|修整选区内的地表，使其更加平滑<br><br>例如，“//smooth 1 grass_block,dirt,stone” 只会平整草方块、泥土、石头构成的地形。|
 |---|---|
 |**权限**|`worldedit.region.smooth`|
@@ -462,6 +519,7 @@
 |`[蒙版]`|指定本次操作所影响的方块|
 
 **`//snowsmooth`**
+
 |描述|使得区域内的雪片按其层数平滑化<br><br>示例：“//snowsmooth 1 -m snow_block,snow”只会平滑地形内的雪|
 |---|---|
 |**权限**|`worldedit.region.snowsmooth`|
@@ -471,6 +529,7 @@
 |`[-m <蒙版>]`|用作高度图的蒙版方块|
 
 **`//move`**
+
 |描述|移动选区内的内容[^9]|
 |---|---|
 |**权限**|`worldedit.region.move`|
@@ -485,6 +544,7 @@
 |`[-m <蒙版>]`|设置蒙版，ID无效的方块默认改为空气|
 
 **`//stack`**
+
 |描述|向指定方向排列复制建筑|
 |---|---|
 |**权限**|`worldedit.region.stack`|
@@ -498,6 +558,7 @@
 |`[-m <蒙版>]`|设置蒙版，ID无效的方块默认改为空气|
 
 **`//regen`**
+
 |描述|重生成选区内的地形|
 |---|---|
 |**权限**|`worldedit.regen`|
@@ -506,6 +567,7 @@
 |`[-b]`|同时重新生成生物群系|
 
 **`//deform`**
+
 |描述|通过表达式改变选区的形状<br><br>表达式会为每个方块执行，并会改变 x、y、z 轴的变量，以指向新的方块。<br>更多细节请查阅 https://ehub.to/we/expr|
 |---|---|
 |**权限**|`worldedit.region.deform`|
@@ -516,6 +578,7 @@
 |`[-c]`|使用选区中心的原坐标|
 
 **`//hollow`**
+
 |描述|将选区内的建筑掏空使其成为空心<br><br>厚度以曼哈顿距离[^10]计算。|
 |---|---|
 |**权限**|`worldedit.region.hollow`|
@@ -524,6 +587,7 @@
 |`[方块]`|填充被掏空区域的方块|
 
 **`//forest`**
+
 |描述|在区域内生成森林|
 |---|---|
 |**权限**|`worldedit.region.forest`|
@@ -532,6 +596,7 @@
 |`[密度]`|生成的树在区域内的密度|
 
 **`//flora`**
+
 |描述|在区域内生成植被|
 |---|---|
 |**权限**|`worldedit.region.flora`|
@@ -540,7 +605,8 @@
 
 ## 生成命令
 
-**`//hcyl`[^12]
+**`//hcyl`**[^12]
+
 |描述|生成空心圆柱体。|
 |---|---|
 |**权限**|`worldedit.generation.cylinder`|
@@ -550,6 +616,7 @@
 |`[高度]`|圆柱体的高度。|
 
 **`//cyl`**
+
 |描述|生成一个圆柱体。|
 |---|---|
 |**权限**|`worldedit.generation.cylinder`|
@@ -560,6 +627,7 @@
 |`[-h]`|生成空心圆柱体。|
 
 **`//cone`**
+
 |描述|生成锥形体|
 |---|---|
 |**权限**|`worldedit.generation.cone`|
@@ -571,6 +639,7 @@
 |`[厚度]`|若生成锥形体，则此参数决定锥形体内外壁的厚度|
 
 **`//hsphere`**
+
 |描述|生成空心球体|
 |---|---|
 |**权限**|`worldedit.generation.sphere`|
@@ -580,6 +649,7 @@
 |`[-r]`|将球体底部抬升至放置位置|
 
 **`//sphere`**
+
 |描述|生成实心球体。|
 |---|---|
 |**权限**|`worldedit.generation.sphere`|
@@ -590,6 +660,7 @@
 |`[-h]`|生成空心球体。|
 
 **`/forestgen`**
+
 |描述|生成一片森林|
 |---|---|
 |**权限**|`worldedit.generation.forest`|
@@ -599,6 +670,7 @@
 |`[密度]`|森林的密度，数字大小介于 0 到 100|
 
 **`/pumpkins`**
+
 |描述|生成类似于自然分布的南瓜堆|
 |---|---|
 |**权限**|`worldedit.generation.pumpkins`|
@@ -606,6 +678,7 @@
 |`[size]`|南瓜堆的大小|
 
 **`//features`**
+
 |描述|生成 Minecraft 的地物[^14]|
 |---|---|
 |**权限**|`worldedit.generation.feature`|
@@ -613,6 +686,7 @@
 |`<地物名>`|所要生成地物的名称|
 
 **`//structure`**
+
 |描述|生成 Minecraft 的建筑结构[^15]|
 |---|---|
 |**权限**|`worldedit.generation.structure`|
@@ -620,6 +694,7 @@
 |`<结构名>`|所要生成的结构名称|
 
 **`//hpyramid`**
+
 |描述|生成空心的金字塔|
 |---|---|
 |**权限**|`worldedit.generation.pyramid`|
@@ -628,6 +703,7 @@
 |`<大小>`|金字塔的大小|
 
 **`//pyramid`**
+
 |描述|生成实心的金字塔|
 |---|---|
 |**权限**|`worldedit.generation.pyramid`|
@@ -637,6 +713,7 @@
 |`[-h]`|生成空心金字塔|
 
 **`//generate (或 //gen、//g)`**
+
 |描述|根据公式生成指定图形。<br><br>更多细节请查阅 https://ehub.to/we/expr|
 |---|---|
 |**权限**|`worldedit.generation.shape`|
@@ -649,6 +726,7 @@
 |`[-c]`|使用选区中心的原坐标|
 
 **`//generatebiome (或 //genbiome、//gb)`**
+
 |描述|根据指定表达式生成生物群系。<br><br>更多细节请查阅 https://ehub.to/we/expr|
 |---|---|
 |**权限**|`worldedit.generation.shape.biome`|
@@ -663,12 +741,14 @@
 ## 结构与剪贴板命令
 
 **`/schematic (或 /schem、//schematic、//schem)`**
+
 |描述|保存/载入区域的结构命令|
 |---|---|
 |**权限**|`worldedit.schematic.delete`、`worldedit.schematic.list`、`worldedit.clipboard.load`、`worldedit.schematic.save`、`worldedit.schematic.formats`、`worldedit.schematic.load`、`worldedit.clipboard.save`、`worldedit.clipboard.share`、`worldedit.schematic.share`|
 |**用法**|`/schematic <list|formats|load|delete|save|share>`|
 
 **`/schematic list (或 /schematic all、/schematic ls)`**
+
 |描述|列出已保存的结构<br><br>注意：格式在完全载入之前不会完全验证。|
 |---|---|
 |**权限**|`worldedit.schematic.list`|
@@ -678,12 +758,14 @@
 |`[-n]`|按日期的从旧到新排列|
 
 **`/schematic formats (或 /schematic listformats, /schematic f)`**
+
 |描述|列出可用格式|
 |---|---|
 |**权限**|`worldedit.schematic.formats`|
 |**用法**|`/schematic formats`|
 
 **`/schematic load`**
+
 |描述|将指定结构文件载入剪贴板|
 |---|---|
 |**权限**|`worldedit.clipboard.load、worldedit.schematic.load`|
@@ -692,6 +774,7 @@
 |`[格式名称]`|结构文件的格式。|
 
 **`/schematic delete (或 /schematic d)`**
+
 |描述|删除一个已保存的结构|
 |---|---|
 |**权限**|`worldedit.schematic.delete`|
@@ -699,6 +782,7 @@
 |`<文件名称>`|结构文件的名称。|
 
 **`/schematic save`**
+
 |描述|将结构保存至剪贴板|
 |---|---|
 |**权限**|`worldedit.clipboard.save、worldedit.save`|
@@ -708,6 +792,7 @@
 |`[-f]`|覆盖已有的文件。|
 
 **`/schematic share`**
+
 |描述|将剪贴板内的建筑结构分享至在线网站|
 |---|---|
 |**权限**|`worldedit.clipboard.share`、`worldedit.schematic.share`|
@@ -717,6 +802,7 @@
 |`[格式]`|使用的格式|
 
 **`//copy`**
+
 |描述|将选区复制至剪贴板|
 |---|---|
 |**权限**|`worldedit.clipboard.copy`|
@@ -726,6 +812,7 @@
 |`[-m <蒙版>]`|设置蒙版，ID无效的方块默认改为空气|
 
 **`//cut`**
+
 |描述|将选区剪切至剪贴板|
 |---|---|
 |**权限**|`worldedit.clipboard.cut`|
@@ -736,6 +823,7 @@
 |`[-m <蒙版>]`|设置蒙版，ID无效的方块默认改为空气|
 
 **`//paste`**
+
 |描述|将剪贴板内容粘贴至当前位置|
 |---|---|
 |**权限**|`worldedit.clipboard.paste`|
@@ -750,7 +838,9 @@
 |`[-m <源蒙版>]`|仅复制匹配此蒙版的方块|
 
 **`//rotate`**
+
 |描述|按一定角度旋转剪贴板内的建筑结构<br><br>在不破坏结构的前提下将剪贴板内的东西旋转。角度通过度数表示，正数角度会使建筑顺时针旋转。多个旋转可叠加。插件不会对旋转进行插值操作，因此旋转结构时所用度数应为 90° 的倍数。|
+|---|:--|
 |**权限**|`worldedit.clipboard.rotate`|
 |**用法**|`//rotate <Y 轴旋转角度> [X 轴旋转角度] [Z 轴旋转角度]`|
 |`<Y 轴旋转角度>`|Y 轴方向上的旋转角度|
@@ -758,6 +848,7 @@
 |`[Z 轴旋转角度]`|Z 轴方向上的旋转角度|
 
 **`//flip`**
+
 |描述|根据起始位置将剪贴板内的建筑结构翻转|
 |---|---|
 |**权限**|`worldedit.clipboard.flip`|
@@ -765,6 +856,7 @@
 |`[方位]`|结构旋转的方位，默认为命令执行者看向的位置。|
 
 **`/clearclipboard`**
+
 |描述|清除剪贴板中的内容|
 |---|---|
 |**权限**|`worldedit.clipboard.clear`|
@@ -773,28 +865,33 @@
 ## 绑定工具命令
 
 **`/tool`**
+
 |描述|将手上物品绑定指定的工具|
 |---|---|
 |**用法**|`/tool <cycler|navwand|none|floodfill|deltree|farwand|selwand|stacker|repl|tree|lrbuild|info>`|
 
 **`/tool cycler`**
+
 |描述|将方块数据循环魔杖绑定至手上的物品|
 |---|---|
 |**权限**|`worldedit.tool.data-cycler`|
 |**用法**|`/tool cycler`|
 
 **`/tool navwand`**
+
 |描述|将导航魔杖绑定至手上的物品|
 |---|---|
 |**权限**|`worldedit.setwand`|
 |**用法**|`/tool navwand`|
 
 **`/tool none (or /tool unbind)`**
+
 |描述|将工具从手上的物品解绑|
 |---|---|
 |**用法**|`/tool none`|
 
 **`/tool floodfill (or /tool flood)`**
+
 |描述|将填充魔杖绑定至手上的物品|
 |---|---|
 |**权限**|`worldedit.tool.flood-fill`|
@@ -803,24 +900,28 @@
 |`<范围>`|填充方块的范围|
 
 **`/tool deltree`**
+
 |描述|将浮空树移除魔杖绑定至手上的物品|
 |---|---|
 |**权限**|`worldedit.tool.deltree`|
 |**用法**|`/tool deltree`|
 
 **`/tool farwand`**
+
 |描述|将超距魔杖绑定至手上的物品|
 |---|---|
 |**权限**|`worldedit.tool.farwand`|
 |**用法**|`/tool farwand`|
 
 **`/tool selwand`**
+
 |描述|将选区魔杖绑定至手上的物品|
 |---|---|
 |**权限**|`worldedit.setwand`|
 |**用法**|`/tool selwand`|
 
 **`/tool stacker`**
+
 |描述|将堆叠魔杖绑定至手上的物品|
 |---|---|
 |**权限**|`worldedit.tool.stack`|
@@ -829,6 +930,7 @@
 |`[蒙版]`|堆叠所使用的蒙版|
 
 **`/tool repl`**
+
 |描述|将替换魔杖绑定至手上的物品|
 |---|---|
 |**权限**|`worldedit.tool.replacer`|
@@ -836,6 +938,7 @@
 |`<方块>`|放置的方块种类|
 
 **`/tool tree`**
+
 |描述|将造林魔杖绑定至手上的物品|
 |---|---|
 |**权限**|`worldedit.tool.tree`|
@@ -843,12 +946,14 @@
 |`[树种]`|生成的树种|
 
 **`/tool info`**
+
 |描述|将查询魔杖绑定至手上的物品|
 |---|---|
 |**权限**|`worldedit.tool.info`|
 |**用法**|`/tool info`|
 
 **`/tool lrbuild`**
+
 |描述|将大面积建筑魔杖绑定至手上的物品|
 |---|---|
 |**权限**|`worldedit.tool.lrbuild`|
@@ -972,6 +1077,7 @@
 |`<右键放置方块>`|右键点击放置的方块|
 
 **`// (或 /,)`**
+
 |描述|切换超级镐子的功能|
 |---|---|
 |**权限**|`worldedit.superpickaxe`|
@@ -979,6 +1085,7 @@
 |`[超级镐子模式]`|切换的超级镐子模式|
 
 **`/mask`**
+
 |描述|设置笔刷蒙版|
 |---|---|
 |**权限**|`worldedit.brush.options.mask`|
@@ -986,6 +1093,7 @@
 |`[蒙版]`|所设置的蒙版|
 
 **`/material (或 //material)`**
+
 |描述|设置笔刷绘制的方块|
 |---|---|
 |**权限**|`worldedit.brush.options.material`|
@@ -993,6 +1101,7 @@
 |`<方块>`|笔刷工具所使用的方块名称|
 
 **`/range`**
+
 |描述|设置笔刷范围|
 |---|---|
 |**权限**|`worldedit.brush.options.range`|
@@ -1000,6 +1109,7 @@
 |`<范围>`|所设置的笔刷范围|
 
 **`/size`**
+
 |描述|设置笔刷大小|
 |---|---|
 |**权限**|`worldedit.brush.options.size`|
@@ -1007,6 +1117,7 @@
 |`<大小>`|所设置的笔刷大小|
 
 **`/tracemask`**
+
 |描述|设置阻止使用工具的追踪蒙版|
 |---|---|
 |**权限**|`worldedit.brush.options.tracemask`|
@@ -1016,18 +1127,21 @@
 ## 超级镐子命令
 
 **`/superpickaxe (或 /pickaxe、/sp)`**
+
 |描述|超级镐子工具的总命令|
 |---|---|
 |**权限**|`worldedit.superpickaxe.area、worldedit.superpickaxe.recursive、worldedit.superpickaxe`|
 |**用法**|`/superpickaxe <single|area|recursive>`|
 
 **`/superpickaxe single`**
+
 |描述|启用超级镐子的单点挖掘模式|
 |---|---|
 |**权限**|`worldedit.superpickaxe`|
 |**用法**|`/superpickaxe single`|
 
 **`/superpickaxe area`**
+
 |描述|启用超级镐子的范围破坏模式|
 |---|---|
 |**权限**|`worldedit.superpickaxe.area`|
@@ -1035,6 +1149,7 @@
 |`<范围>`|超级镐子范围破坏模式下的挖掘半径|
 
 **`/superpickaxe recursive (或 /superpickaxe recur)`**
+
 |描述|启用超级镐子的连锁破坏模式|
 |---|---|
 |**权限**|`worldedit.superpickaxe.recursive`|
@@ -1044,11 +1159,13 @@
 ## 笔刷命令
 
 **`/brush (或 /br、//brush、//br)`**
+
 |描述|笔刷的相关命令|
 |---|---|
 |**用法**|`/brush <forest|splatter|butcher|paint|none|clipboard|snowsmooth|gravity|heightmap|extinguish|feature|sphere|raise|smooth|cylinder|set|apply|deform|lower|erode|dilate|snow|biome|morph>`|
 
 **`/brush forest`**
+
 |描述|将森林笔刷绑定在手持的物品上，可在区域内快速大面积植树|
 |---|---|
 |**权限**|`worldedit.brush.forest`|
@@ -1059,6 +1176,7 @@
 |`<树种>`|使用的树种|
 
 **`/brush splatter (或 /brush splat)`**
+
 |描述|将喷溅笔刷绑定在手持的物品上|
 |---|---|
 |**权限**|`worldedit.brush.splatter`|
@@ -1068,6 +1186,7 @@
 |`[疏密]`|喷溅笔刷的密度值，值应处于 0-10 之间|
 
 **`/brush butcher (或 /brush kill)`**
+
 |描述|将屠戮笔刷绑定在手持的物品上，可击杀指定半径内的生物|
 |---|---|
 |**权限**|`worldedit.brush.butcher`|
@@ -1084,6 +1203,7 @@
 |`[-w]`|击杀水生生物|
 
 **`/brush paint`**
+
 |描述|将绘制笔刷绑定在手持的物品上，可对地形进行绘制|
 |---|---|
 |**权限**|`worldedit.brush.paint`|
@@ -1093,11 +1213,13 @@
 |`[密度]`|笔刷的密度|
 
 **`/brush none (或 /brush unbind)`**
+
 |描述|将手上物品绑定的笔刷解绑|
 |---|---|
 |**用法**|`/brush none`|
 
 **`/brush clipboard (或 /brush copy)`**
+
 |描述|选择剪贴板中保留的笔刷预设|
 |---|---|
 |**权限**|`worldedit.brush.clipboard`|
@@ -1110,6 +1232,7 @@
 |`[-m <源蒙版>]`|跳过匹配此剪贴板蒙版中的方块|
 
 **`/brush snowsmooth`**
+
 |描述|将雪层平滑笔刷绑定在手持的物品上|
 |---|---|
 |**权限**|`worldedit.brush.snowsmooth`|
@@ -1120,6 +1243,7 @@
 |`[-m <蒙版>]`|用作高度图的蒙版方块|
 
 **`/brush gravity (或 /brush grav)`**
+
 |描述|将重力笔刷绑定在手持的物品上，可绘制模拟重力情况下的地形|
 |---|---|
 |**权限**|`worldedit.brush.gravity`|
@@ -1128,6 +1252,7 @@
 |`[-h <高度>]`|受影响方块从上至下的高度，不是目标 Y 轴位置 + 半径的参数。|
 
 **`/brush heightmap`**
+
 |描述|将地形笔刷绑定在手持的物品上，可根据需要抬升或降低地面的高度|
 |---|---|
 |**权限**|`worldedit.brush.heightmap`|
@@ -1140,6 +1265,7 @@
 |`[-r]`|略微随机化笔刷的地形调整幅度|
 
 **`/brush extinguish (或 /brush ex)`**
+
 |描述|将灭火笔刷绑定在手持的物品上，可根据需要熄灭指定区域的火焰|
 |---|---|
 |**权限**|`worldedit.brush.ex`|
@@ -1147,6 +1273,7 @@
 |`[半径]`|灭火笔刷单次操作的作用半径|
 
 **`/brush feature`**
+
 |描述|地物笔刷，可生成 Minecraft 原版的地物|
 |---|---|
 |**用法**|`/brush feature <形状> [半径] [密度] <类型>`|
@@ -1156,6 +1283,7 @@
 |`<类型>`|生成地物的名称|
 
 **`/brush sphere (或 /brush s)`**
+
 |描述|选择球形笔刷|
 |---|---|
 |**权限**|`worldedit.brush.sphere`|
@@ -1165,6 +1293,7 @@
 |`[-h]`|绘制空心球体|
 
 **`/brush raise`**
+
 |描述|将抬升笔刷绑定在手持的物品上，可根据需要将指定位置的方块抬升一格|
 |---|---|
 |**权限**|`worldedit.brush.raise`|
@@ -1173,7 +1302,9 @@
 |`[半径]`|笔刷的大小|
 
 **`/brush smooth`**
+
 |描述|将地形软化笔刷绑定在手持的物品上，可根据需要软化地形<br><br>示例：‘/brush smooth 2 4 grass_block,dirt,stone’|
+|---|---|
 |**权限**|`worldedit.brush.smooth`|
 |**用法**|`/brush smooth [半径] [重复次数] [蒙版]`|
 |`[半径]`|地形软化笔刷的作用范围|
@@ -1181,6 +1312,7 @@
 |`[蒙版]`|为指定高度使用的地形蒙版|
 
 **`/brush cylinder (或 /brush cyl、/brush c)`**
+
 |描述|将圆柱笔刷绑定在手持的物品上，可绘制圆柱体|
 |---|---|
 |**权限**|`worldedit.brush.cylinder`|
@@ -1191,6 +1323,7 @@
 |`[-h]`|绘制空心圆柱体|
 
 **`/brush set`**
+
 |描述|设置绑定在手上物品的笔刷，可对地形进行绘制|
 |---|---|
 |**权限**|`worldedit.brush.set`|
@@ -1200,6 +1333,7 @@
 |`<方块>`|笔刷所生成的方块|
 
 **`/brush apply`**
+
 |描述|应用绑定在手上物品的笔刷，对作用方块施加指定的功能|
 |---|---|
 |**权限**|`worldedit.brush.apply`|
@@ -1208,6 +1342,7 @@
 |`[半径]`|笔刷的粗细|
 
 **`/brush deform`**
+
 |描述|改变笔刷，将表达式应用至指定区域|
 |---|---|
 |**权限**|`worldedit.brush.deform`|
@@ -1219,6 +1354,7 @@
 |`[-o]`|以放置位置为原坐标|
 
 **`/brush lower`**
+
 |描述|将沉降笔刷绑定在手持的物品上，可根据需要将指定位置的方块降低一格|
 |---|---|
 |**权限**|`worldedit.brush.lower`|
@@ -1227,6 +1363,7 @@
 |`[半径]`|笔刷的粗细|
 
 **`/brush erode`**
+
 |描述|变形笔刷的收缩预设，可将作用范围内的方块向内收缩|
 |---|---|
 |**权限**|`worldedit.brush.morph`|
@@ -1242,6 +1379,7 @@
 |`[笔刷大小]`|笔刷的大小|
 
 **`/brush snow`**
+
 |描述|将覆雪笔刷绑定在手持的物品上，可根据需要绘制覆雪|
 |---|---|
 |**权限**|`worldedit.brush.snow`|
@@ -1251,6 +1389,7 @@
 |`[-s]`|是否允许雪片堆叠|
 
 **`/brush biome`**
+
 |描述|将生物群系笔刷绑定在手持的物品上，可根据需要绘制指定的生物群系|
 |---|---|
 |**权限**|`worldedit.brush.biome`|
@@ -1263,6 +1402,7 @@
 ## 生物群系命令
 
 **`/biomelist (或 /biomels)`**
+
 |描述|显示当前版本可用的生物群系|
 |---|---|
 |**权限**|`worldedit.biome.list`|
@@ -1270,6 +1410,7 @@
 |`[-p <页码>]`|列表的页码。|
 
 **`/biomeinfo`**
+
 |描述|获取指定方块所处的生物群系。<br><br>默认情况下，会检查你圈定的选区内的所有方块所处的生物群系。|
 |---|---|
 |**权限**|`worldedit.biome.info`|
@@ -1278,6 +1419,7 @@
 |`[-p]`|只检查你所处的方块。|
 
 **`//setbiome`**
+
 |描述|设置当前方块或选区的生物群系。<br><br>默认情况下，会修改选区内的所有方块的生物群系。|
 |---|---|
 |**权限**|`worldedit.biome.set`|
@@ -1288,12 +1430,14 @@
 ## 区块命令
 
 **`/chunkinfo`**
+
 |描述|获取你所处的区块的信息|
 |---|---|
 |**权限**|`worldedit.chunkinfo`|
 |**用法**|`/chunkinfo`|
 
 **`/listchunks`**
+
 |描述|列出选区中包含的区块|
 |---|---|
 |**权限**|`worldedit.listchunks`|
@@ -1301,6 +1445,7 @@
 |`[-p <页码>]`|列表的页码。|
 
 **`/delchunks`**
+
 |描述|删除选区所包括的区块|
 |---|---|
 |**权限**|`worldedit.delchunks`|
@@ -1310,6 +1455,7 @@
 ## 快照命令
 
 **`/restore (或 //restore)`**
+
 |描述|将选区还原到保存的快照状态|
 |---|---|
 |**权限**|`worldedit.snapshots.restore`|
@@ -1317,12 +1463,14 @@
 |`[snapshot]`|所要恢复的对应快照|
 
 **`/snapshot (或 /snap)`**
+
 |描述|用于存储备份的快照命令|
 |---|---|
 |**权限**|`worldedit.snapshots.restore, worldedit.snapshots.list`|
 |**用法**|`/snapshot <before\|use\|sel\|after\|list>`|
 
 **`/snapshot before`**
+
 |描述|选择指定日期前的最近快照|
 |---|---|
 |**权限**|`worldedit.snapshots.restore`|
@@ -1330,13 +1478,15 @@
 |`<日期>`|所选快照的日期|
 
 **`/snapshot use`**
+
 |描述|指定使用一个快照|
 |---|---|
 |**权限**|`worldedit.snapshots.restore`|
 |**用法**|`/snapshot use <名称>`|
-|`<name>`|所使用的快照|
+|`<名称>`|所使用的快照|
 
 **`/snapshot sel`**
+
 |描述|基于列表上的 ID 选择快照|
 |---|---|
 |**权限**|`worldedit.snapshots.restore`|
@@ -1344,6 +1494,7 @@
 |`<序号>`|所使用的快照列表 ID|
 
 **`/snapshot after`**
+
 |描述|选择指定日期后的最近快照|
 |---|---|
 |**权限**|`worldedit.snapshots.restore`|
@@ -1351,6 +1502,7 @@
 |`<日期>`|所选快照的日期|
 
 **`/snapshot list`**
+
 |描述|列出快照|
 |---|---|
 |**权限**|`worldedit.snapshots.list`|
@@ -1360,6 +1512,7 @@
 ## 快速脚本命令
 
 **`/cs`**
+
 |描述|执行一个快速脚本|
 |---|---|
 |**权限**|`worldedit.scripting.execute`|
@@ -1369,6 +1522,7 @@
 
 
 **`/.s`**
+
 |描述|执行最近运行的一个快速脚本|
 |---|---|
 |**权限**|`worldedit.scripting.execute`|
@@ -1378,6 +1532,7 @@
 ## 实用工具命令
 
 **`//fill`**
+
 |描述|填充指定区域|
 |---|---|
 |**权限**|`worldedit.fill`|
@@ -1387,6 +1542,7 @@
 |`[深度]`|填充的作用深度|
 
 **`//fillr`**
+
 |描述|连锁填补洞穴|
 |---|---|
 |**权限**|`worldedit.fill.recursive`|
@@ -1396,6 +1552,7 @@
 |`[深度]`|填充的作用深度|
 
 **`//drain`**
+
 |描述|抽干指定位置的水|
 |---|---|
 |**权限**|`worldedit.drain`|
@@ -1404,6 +1561,7 @@
 |`[-w]`|同时抽干含水方块中的水|
 
 **`/fixlava (或 //fixlava)`**
+
 |描述|将岩浆从静止状态修复为流动状态|
 |---|---|
 |**权限**|`worldedit.fixlava`|
@@ -1411,6 +1569,7 @@
 |`<半径>`|修复的作用半径|
 
 **`/fixwater (或 //fixwater)`**
+
 |描述|将水从静止状态修复为流动状态|
 |---|---|
 |**权限**|`worldedit.fixwater`|
@@ -1418,6 +1577,7 @@
 |`<半径>`|修复的作用半径|
 
 **`/removeabove (或 //removeabove)`**
+
 |描述|移除你头顶的方块。|
 |---|---|
 |**权限**|`worldedit.removeabove`|
@@ -1426,6 +1586,7 @@
 |`[高度]`|移除的上方区域的最大高度|
 
 **`/removebelow (或 //removebelow)`**
+
 |描述|移除你脚下的方块。|
 |---|---|
 |**权限**|`worldedit.removebelow`|
@@ -1434,6 +1595,7 @@
 |`[高度]`|移除的下方区域的最大高度|
 
 **`/removenear (或 //removenear)`**
+
 |描述|清除你附近的方块。|
 |---|---|
 |**权限**|`worldedit.removenear`|
@@ -1442,6 +1604,7 @@
 |`[半径]`|所移除的范围|
 
 **`/replacenear (或 //replacenear)`**
+
 |描述|替换附近的方块|
 |---|---|
 |**权限**|`worldedit.replacenear`|
@@ -1451,6 +1614,7 @@
 |`<替换方块>`|将上一个参数中选中的方块替换为的方块[^8]|
 
 **`/snow (或 //snow)`**
+
 |描述|给区域覆雪，范围为圆柱形[^13]|
 |---|---|
 |**权限**|`worldedit.snow`|
@@ -1460,6 +1624,7 @@
 |`[-s]`|允许积雪|
 
 **`/thaw (or //thaw)`**
+
 |描述|融化附近的冰块，范围为圆柱形|
 |---|---|
 |**权限**|`worldedit.thaw`|
@@ -1467,7 +1632,8 @@
 |`[半径]`|融冰的范围|
 |`[高度]`|融冰的高度|
 
-`/green (或 //green)`
+**`/green (或 //green)`**
+
 |描述|将区域内的泥土转化为草方块|
 |---|---|
 |**权限**|`worldedit.green`|
@@ -1477,6 +1643,7 @@
 |`[-f]`|将砂土也转化为草方块|
 
 **`/extinguish (或 //ex、//ext、//extinguish、/ex、/ext)`**
+
 |描述|熄灭邻近的火焰|
 |---|---|
 |**权限**|`worldedit.extinguish`|
@@ -1484,6 +1651,7 @@
 |`[半径]`|熄灭火焰的立方体区域大小|
 
 **`/butcher`**
+
 |描述|击杀所有邻近的实体|
 |---|---|
 |**权限**|`worldedit.butcher`|
@@ -1500,6 +1668,7 @@
 |`[-w]`|击杀水生生物|
 
 **`/remove (或 /rem、/rement)`**
+
 |描述|删除指定种类的实体|
 |---|---|
 |**权限**|`worldedit.remove`|
@@ -1508,6 +1677,7 @@
 |`<半径>`|删除实体的范围，注意删除区域为立方体|
 
 **`//calculate (或 //calc、//eval、//evaluate、//solve)`**
+
 |描述|计算一个数学表达式|
 |---|---|
 |**权限**|`worldedit.calc`|
@@ -1515,6 +1685,7 @@
 |`<输入...>`|所要计算的表达式|
 
 **`//help`**
+
 |描述|显示 WorldEdit 的命令帮助|
 |---|---|
 |**权限**|`worldedit.help`|
@@ -1523,25 +1694,13 @@
 |`[-p <页码>]`|列表的页码。|
 |`[命令...]`|所要查询的命令|
 
-## 另见
-
-* LocusAzzurro, 2016.2.23,《WorldEdit CUI 设置详解》, https://www.mcbbs.net/forum.php?mod=viewthread&tid=560516
-* McWorldEditGuide, 2020.3.22, */worldedit tz*, https://minecraft-worldedit.fandom.com/wiki//worldedit_tz
-* 姑苏小码哥, 2023.11.07,《什么是曼哈顿距离》, https://zhuanlan.zhihu.com/p/393809007
-* McWorldEditGuide, 2020.5.19, *//hcyl*, https://minecraft-worldedit.fandom.com/wiki///hcyl
-* Minecraft 中文维基, 2024.3.16, *地物*, https://zh.minecraft.wiki/w/%E5%9C%B0%E7%89%A9
-* Minecraft 中文维基, 2024.3.10, *生成结构*, https://zh.minecraft.wiki/w/%E7%94%9F%E6%88%90%E7%BB%93%E6%9E%84
-
-## 脚注
 [^1]: 此处取名差异详见“WorldEdit 文档”章节，即首章的注释一。
 
-[^2]: 由于 BBCODE 代码出现了不兼容的问题，此处将最外层文本框去除以保证最大阅读体验。
+[^2]: 由于 Markdown 代码出现了不兼容的问题，此处将最外层文本框去除以保证最大阅读体验。
 
-[^3]: 译者注：输入该命令可控制客户端 CUI 的显示与关闭。
-未安装对应模组的用户输入该命令不会收到任何反馈。
+[^3]: 译者注：输入该命令可控制客户端 CUI 的显示与关闭。<br>未安装对应模组的用户输入该命令不会收到任何反馈。
 
-[^4]: 译者注：将 WorldEdit 的时钟设置为指定的现实时区。默认使用格林尼治时间。
-这个命令主要用于测量快照之间的时间点，目前尚不稳定且正在开发中。
+[^4]: 译者注：将 WorldEdit 的时钟设置为指定的现实时区。默认使用格林尼治时间。<br>这个命令主要用于测量快照之间的时间点，目前尚不稳定且正在开发中。
 
 [^5]: 原文为 “sideEffect”，指副作用，下文释义取其意译“牺牲的内容”，该参数用于调整服务器使用哪些内容换取 WorldEdit 的性能提升。
 
@@ -1553,30 +1712,14 @@
 
 [^9]: 选区本身不会随着内容的移动而移动！
 
-[^10]:
-    曼哈顿距离，又称“出租车几何”，是一种用以标明两个点在标准坐标系上的绝对轴距总和的方式。图示：![img](https://pic3.zhimg.com/80/v2-b7e8f8d527d6a530e8dfa0596404ab5e_720w.jpg)
+[^10]: 曼哈顿距离，又称“出租车几何”，是一种用以标明两个点在标准坐标系上的绝对轴距总和的方式。
 
 [^11]: 原文误作“forest”。
 
-[^12]: 
-    等价于命令 //cyl -h，参数格式为 <半径1> (<半径2>)。
-    空心圆柱的厚度默认为一格方块。
-    //cyl -h 和 //hcyl 生成的示例详见下图：
-    //hcyl 95:15 20
-    ![img](https://static.wikia.nocookie.net/minecraft-worldedit/images/c/cf/Hcyl1.png/revision/latest?cb=20200619070616)
-    //hcyl 98 15 3
-    ![img](https://static.wikia.nocookie.net/minecraft-worldedit/images/2/2f/Hcyl2.png/revision/latest?cb=20200619070625)
-    //hcyl 155 20,5 5
-    ![img](https://static.wikia.nocookie.net/minecraft-worldedit/images/6/69/Hcyl3.png/revision/latest?cb=20200619070633)
-    //hcyl 35,35:15,35:4 10,5 20
-    ![img](https://static.wikia.nocookie.net/minecraft-worldedit/images/1/1d/Hcyl4.png/revision/latest?cb=20200619070642)
-
+[^12]: 等价于命令 //cyl -h，参数格式为 <半径1> (<半径2>)。<br>空心圆柱的厚度默认为一格方块。
+    
 [^13]: 下方“高度”参数代指圆柱区域的高度，下一条命令中的“高度”参数与之相同。
 
-[^14]: 
-    地物（Feature）是在地形生成后在每个区块生成的装饰性方块结构。
-    完整地物列表请参见官方维基的“[地物](https://zh.minecraft.wiki/w/%E5%9C%B0%E7%89%A9)”章节。
+[^14]: 地物（Feature）是在地形生成后在每个区块生成的装饰性方块结构。<br>完整地物列表请参见官方维基的“[地物](https://zh.minecraft.wiki/w/%E5%9C%B0%E7%89%A9)”章节。
 
-[^15]: 
-    生成结构被定义为：在Java版世界创建界面的“生成结构”选项关闭时会被禁用的任何结构。 
-    完整结构列表请参见官方维基的“[生成结构](https://zh.minecraft.wiki/w/%E7%94%9F%E6%88%90%E7%BB%93%E6%9E%84)”章节。
+[^15]: 生成结构被定义为：在Java版世界创建界面的“生成结构”选项关闭时会被禁用的任何结构。<br>完整结构列表请参见官方维基的“[生成结构](https://zh.minecraft.wiki/w/%E7%94%9F%E6%88%90%E7%BB%93%E6%9E%84)”章节。
