@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+  <!-- README.md
+    本维基基于 Docsify，使用了多种插件，致力给各位阅读本文档的用户以最好的体验
+    内部版本号: 1.0.2
+  -->
+  <!-- changelog.md
+    1.0.1:
+      增加自定义提示框
+    1.0.2:
+      增加 toc 拓展
+      修改两个 css 文件使其符合内容
+      将右上角的样式修改为 shields.io 的徽章
+  -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Continue Project</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="WorldGuard Chinese Wiki Translation">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="/css/sidebar.min.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css" />
+  <link rel="stylesheet" href="/css/toc.css" />
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'WorldGuard 中文维基',
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '搜索...',
+        noData: '无结果',
+        depth: 4
+      },
+      loadSidebar: true,
+      sidebarDisplayLevel: 1,
+      loadNavbar: true,
+      pagination: {
+        previousText: {
+          '/en/': 'PREVIOUS',
+          '/': '上一章节'
+        },
+        nextText: {
+          '/en/': 'NEXT',
+          '/': '下一章节'
+        },
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      copyCode: {
+        buttonText: '📄',
+        errorText: '出错了!',
+        successText: '已复制!',
+      },
+      tabs: {
+        tabComments: true,
+        tabHeadings: true
+      },
+      darkMode: {
+        dark: {
+          background: "#1c2022",
+          toggleBtnBg: "#34495e",
+          textColor: "#b4b4b4"
+        },
+        light: {
+          background: "white",
+          toggleBtnBg: "#c9c9c9",
+          textColor: "var(--theme-color)"
+        },
+      hideCode: {
+          scroll: true, // Enable scrolling
+          height: 300 // Max height
+        },
+      'flexible-alerts': {
+          style: 'flat',
+          note: {
+            label: {
+              '/': '笔记'
+            }
+          },
+          tip: {
+            label: {
+              '/': '提示'
+            }
+          },
+          warning: {
+            label: {
+              '/': '警告'
+            }
+          },
+          attention: {
+            label: {
+              '/': '注意'
+            }
+          }
+        }
+      },
+      toc: {
+          scope: '.markdown-section',
+          headings: 'h1, h2',
+          title: '本章目录',
+      }
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//fastly.jsdelivr.net/npm/docsify@4"></script>
+  <!-- ↑ 此为 Docsify 本体组件 ↑ -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- ↑ 此为 Doscify 搜索拓展组件 ↑-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- ↑ 此为 Docsify 图片缩放拓展组件 ↑ -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <!-- ↑ 此为 Docsify 复制代码拓展组件 ↑ -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-java.min.js"></script>
+  <!-- ↑ 此为 Docsify Java 语法拓展组件 ↑ -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <!-- ↑ 此为 Docsify TAB 拓展组件 ↑ -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- ↑ 此为 Docsify 侧边栏展开优化组件 ↑ -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-footnote/dist/docsify-footnote.min.js"></script>
+  <!-- ↑ 此为 Docsify 脚注支持组件 ↑ -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-bilibili@latest/bilibili.min.js"></script>
+  <!-- ↑ 此为 Docsify Bilibili 视频嵌入支持组件 ↑ -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- ↑ 此为 Docsify 仿 Gitbook 式翻页标签 ↑ -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script>
+  <!-- ↑ 此为 Docsify 夜间模式组件 ↑ -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-hide-code/dist/docsify-hide-code.min.js"></script>
+  <!-- ↑ 此为 Docsify 代码折叠组件 ↑ -->
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <!-- ↑ 此为 Docsify 自定义提示框组件 ↑ -->
+  <script>
+    Prism.languages['hocon'] = {
+        'number': {
+            pattern: /(?<![^\s\u00a0\u2007\u202f\ufeff$"{}\[\]:=,+#`^?!@*&])(-?(0|[1-9]\d*)((\.\d+)?([eE][+-]?\d+)?)?)(?![^\s\u00a0\u2007\u202f\ufeff$"{}\[\]:=,+#`^?!@*&])/i,
+        },
+        'punctuation': /[{}[\]]/,
+        'property': {
+            pattern: /(^|[^\\])"?(?:\\.-|[^\\"\r\n])*"?(?=\s*=)/,
+            lookbehind: true,
+            greedy: true
+        },
+        'string': {
+            pattern: /(")(([^"\\n]|\\["\\bfnrt/]|\\u[0-9a-fA-F]{4})*)(")/,
+        },
+        'comment': {
+            pattern: /(#|\/\/).*/
+        },
+        'boolean': /(?<![^\\s\u00a0\u2007\u202f\ufeff$"{}\[\]:=,+#`^?!@*&])(include|true|false|yes|no|on|off)(?![^\s\u00a0\u2007\u202f\ufeff$"{}\[\]:=,+#`^?!@*&])/,
+        'operator': {
+            pattern: /[=:]/,
+            lookbehind: true
+        },
+        'null': {
+            pattern: /\bnull\b/,
+            alias: 'keyword'
+        }
+    }
+  </script>
+  <!-- ↑ 此为引自 AstralFlow 维基的 HOCON 语法高亮 ↑ -->
+  <!-- 详细内容请见 https://github.com/kalculos/AstralFlow/blob/main/docs/index.html -->
+  <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
+</body>
+</html>
