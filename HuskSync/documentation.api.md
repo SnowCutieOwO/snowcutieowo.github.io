@@ -158,5 +158,5 @@ public class HuskSyncAPIHook {
 现在你已经把所有东西都准备妥当了，你可以开始与 HuskSync API 进行交互了！
 
 * [数据快照 API](documentation.api.data-snapshot-api.md) —— 获取、编辑、创建与删除数据快照并更新玩家
-* 自定义数据 API —— 注册自定义数据类型以使得你的插件数据能被 HuskSync 同步
-* API 事件 —— 监听、取消与修改异步事件的数据结果
+* [自定义数据 API](documentation.api.custom-data-api.md) —— 注册自定义数据类型以使得你的插件数据能被 HuskSync 同步
+* [API 事件](documentation.api.api-events.md) —— 监听、取消与修改异步事件的数据结果
