@@ -7,4 +7,4 @@
 > [!WARNING|label:警告]
 > 在启用 `PlaceholderAPI_For_Rewards` 后，带有 PLaceholderAPI 变量的物品可能会出现“损坏”的名称、描述或颜色。使用该功能后果自负。这<font color="red">不是</font> ExcellentCrates 的问题。
 
-在命令中的变量默认是支持且完全有问题的。使用时无需额外操作。
+在命令中的变量默认是支持且完全没有问题的。使用时无需额外操作。
