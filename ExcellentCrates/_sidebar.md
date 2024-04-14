@@ -13,6 +13,6 @@
     * [💵 开箱收费](features.crate-open-cost.md)
     * [🎍 奖品预览](features.crate-previews.md)
     * [⏳ 抽奖限制](features.reward-win-limits.md)
-    * [🎨 抽奖变量](features.reward-placeholders.md)
+    * [🎨 奖励变量](features.reward-placeholders.md)
 * 🧰 实用
     * [变量列表](utility.placeholders.md)
