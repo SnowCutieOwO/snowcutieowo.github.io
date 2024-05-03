@@ -87,7 +87,7 @@
 > [!TIP|label:提示]
 > 大多数字符串标志都会接受 `\n` 作为换行符（例如，通过 `greeting`/`farewell` 向玩家发送多行文本，或是一个通过 `greeting-title` 和 `farewell-title` 设置的正副标题）。
 
-它们也接受颜色代码，不论是旧版本 `&[0-9a-f]` 的格式还是新版本 ``[RrYyGgCcBbPp012w]` 等表示暗红、红色、暗黄、黄色等的格式，也接受 `[&`][klmnox]` 等格式的乱码、粗体、删除线、下划线和斜体文本。
+它们也接受颜色代码，不论是旧版本 `&[0-9a-f]` 的格式还是新版本 `[RrYyGgCcBbPp012w]` 等表示暗红、红色、暗黄、黄色等的格式，也接受 `[&``][klmnox]` 等格式的乱码、粗体、删除线、下划线和斜体文本。
 
 它们也支持嵌入内建变量，例如 `%name%` 可以表示玩家名称，`%world%` 表示世界名称，`%online%` 表示在线玩家数量。
 
@@ -278,7 +278,7 @@
 |item-pickup|state（状态）|区域内是否可以捡起物品|
 |item-drop|state（状态）|区域内是否可以丢弃物品|
 |exp-drops|state（状态）|区域内是否可以掉落经验值|
-|deny-message|string（字符串）|被拒绝操作的完年假所收到的消息|
+|deny-message|string（字符串）|被拒绝操作的玩家所收到的消息|
 |invicible|state（状态）|区域内的玩家是否是无敌的|
 |fall-damage|state（状态）|区域内的玩家是否受到摔落伤害|
 |game-mode|gamemode（游戏模式）|在玩家进入区域所设定的游戏模式（survival 生存模式、creative 创造模式、adventure 冒险模式）|
