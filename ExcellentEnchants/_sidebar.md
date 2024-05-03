@@ -11,6 +11,6 @@
     * [集成](features.intergration.md)
     * [稀有度](features.rarity.md)
     * [分布](features.distribution.md)
-    * [收费](features.charges.md)
+    * [充能](features.charges.md)
 * 🧰 实用
     * [变量列表](utility.placeholders.md)
