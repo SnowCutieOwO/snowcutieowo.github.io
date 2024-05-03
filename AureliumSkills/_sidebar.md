@@ -14,7 +14,7 @@
 * 游戏体验
   * [属性](gameplay.stats.md)
     * [属性修饰语](gameplay.stats.stat-modifier.md) 
-    * [生命值相关](gameplay.health.md)
+    * [生命值相关](gameplay.stats.health.md)
   * [魔法技能](gameplay.stats.md)
   * [经验翻倍](gameplay.multipliers.md)
   * [条件](gameplay.requirements.md)
