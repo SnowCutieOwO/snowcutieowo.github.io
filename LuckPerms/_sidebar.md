@@ -42,7 +42,7 @@
    * [贡献](developers.contributing.md)
 * 参考
    * [从 v4 升级至 v5](reference.upgrading-from-v4-to-v5.md)
-   * [从 GM 迁移至 PEX](reference.migrating-from-gm-or-pex.md)
+   * [从 GM 或 PEX 迁移](reference.migrating-from-gm-or-pex.md)
    * [权限计算的运作方式](reference.how-permission-calculation-works.md)
    * [网页编辑器的技术细节](reference.web-editor-technical-details.md)
    * [自托管网页界面](reference.self-hosting-the-web-interfaces.md)
