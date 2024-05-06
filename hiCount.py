@@ -10,13 +10,15 @@ def is_chinese(char):
         return False
 
 def hiCount(s,debug=False):
-    count = 0
-    ignore_ = ["，","、","“","”","（","）","？","！","。"]
+    count,lCount = 0,0
+    ignore_ = ["，","、","“","”","（","）","？","！","。","—","：","《","》","【","】","；"]
     for i in s:
         if is_chinese(i) and i not in ignore_:
             count += 1
-    print("字数",count)
-    return count
+        elif i in ignore_:
+            lCount += 1
+    print("字数",count,"中文字符数",lCount)
+    return (count,lCount)
 
 def openRead(name,debug=False):
     # print(os.getcwd())
@@ -38,16 +40,17 @@ def foundFiles(name,debug=False):
     return (False,None)
 
 def __main__():
-    count = 0
+    count = [0,0]
     a = foundFiles(input('请输入要计数的维基名称: '))
     if a[0]:
         for wj in a[1]:
             # 遍历并打开文件
             countFiles = openRead(wj)
             print(wj,end=" ")
-            count += hiCount(countFiles)
+            count[0] += hiCount(countFiles)[0]
+            count[1] += hiCount(countFiles)[1]
         else:
-            print('共',count,'字')
+            print('共',count[0],'字,','其中汉字',count[0]-count[1],'字,','中文标点符号',count[1],'字')
 
 __main__()
         
