@@ -34,11 +34,10 @@ def openRead(name,debug=False):
 
 def foundFiles(name,debug=False):
     c = name + "\*.md"
-    print(c)
     dirs = glob.glob(c)
     for files in dirs:
         if debug:
-            print(files) 
+            print(files)
     else:
         return (True,dirs)
     return (False,None)
