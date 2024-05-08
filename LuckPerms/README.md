@@ -15,4 +15,6 @@
 
 维基原文：https://luckperms.net/wiki/Home    
 原站链接：https://luckperms.net/    
-旧译链接：https://izzelaliz.gitbooks.io/luckperms-wiki/content/ （已过时）
+旧译链接：
+* https://izzelaliz.gitbooks.io/luckperms-wiki/content/（已过时）
+* https://pluginscdtribe.github.io/wiki/luckperms/（已过时）
