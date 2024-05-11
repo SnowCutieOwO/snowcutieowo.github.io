@@ -32,3 +32,9 @@ CommandTimer 以任务的形式运作。任务是在一次执行表内同时触�
 * `timezoneOverwriteValue`：覆盖设置的服务器时区（**该功能在当前版本无效**）
 * `language`：插件所使用的语言。你可以在 `language` 文件夹下加入自己的语言文件
 * `disablePapiPlaceholderWarnings`：在 PAPI 变量使用不正确时禁用警告消息
+
+## 其他语言
+
+这里是由社区维护的其他语言维基，我们不对这些内容的实时性做出保证。
+
+* 简体中文（本维基）：https://snowcutieowo.github.io/CommandTimer/#/
