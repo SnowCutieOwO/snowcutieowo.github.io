@@ -45,6 +45,7 @@
 * `/spark profiler start --interval <字节>` 开始分析内存分配，且只按给定速度采样（默认值是 `524287`，即 [i]512 KB[/i]）；
 * `/spark profiler stop --comment <注释>` 停止分析，并在浏览界面中填写注释；
 * `/spark profiler stop --separate-parent-calls` 停止分析，并在浏览界面中将不同父方法调用的内容分开显示。（[i]已弃用[/i]）
+* `/spark profiler stop --save-to-file` 将文件保存至本地文件夹而非上传至网络。
 </details>
 
 ## 健康分析
