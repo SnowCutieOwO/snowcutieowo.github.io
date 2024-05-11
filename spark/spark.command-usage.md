@@ -1,7 +1,7 @@
 # 命令用法
 
->**注意：**
-`/sparkb`、`/sparkv` 和 `/sparkc` 是 BungeeCord、Velocity 以及 Forge/Fabric 专用的命令，在使用对应服务端时应该将 `/spark` 替换成上述的命令。
+> [!INFO|label:注意]
+> `/sparkb`、`/sparkv` 和 `/sparkc` 是 BungeeCord、Velocity 以及 Forge/Fabric 专用的命令，在使用对应服务端时应该将 `/spark` 替换成上述的命令。
 
 ## 分析器
 

@@ -17,4 +17,5 @@
   * [关于 spark 的统计信息](spark-misc.about-spark-metrics.md)
   * [spark 的原数据](spark-misc.raw-spark-data.md)
   * [变量](spark-misc.placeholders.md)
+  * [信息点](spark-misc.info-points.md)
   * [鸣谢](spark-misc.credits.md)
