@@ -82,7 +82,7 @@ def __main__():
         for wj in a[1]:
             # 遍历并打开文件            
             # 文件加入记录列表
-            rawFile = wj.lstrip(wikiName + '\\')
+            rawFile = wj[len(wikiName)+1:]
             fileList.append(rawFile)
             if config['debug']:
                print(rawFile,end=" ")
