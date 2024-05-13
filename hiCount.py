@@ -8,7 +8,8 @@ config = {
     "ignoredFiles": [
         '_404.md',
         '_navbar.md',
-        '_sidebar.md'
+        '_sidebar.md',
+        '.nojekyll'
     ],
     "debug": False
 }
