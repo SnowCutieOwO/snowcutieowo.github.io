@@ -1,11 +1,10 @@
 .card {
     width: auto;
-    height: 80px;
+    height: auto;
     border-radius: 8px;
     background: #ffffff;
     position: relative;
     padding: 8px;
-    padding-left: 10px;
     border: 2px solid #e3e2e2;
     transition: 0.5s ease-out;
     overflow: visible;
@@ -52,19 +51,71 @@
     font-weight: none;
 }
 
+.card hr {
+    margin: 5px 1px 5px 1px;
+    width: auto;
+    border: none;
+    border-top: 1px solid #b4b4b4;
+}
+
 .grid-container {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-rows: 80px;
-    grid-gap: .4rem;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .8rem;
 }
 
-.item1 {
+.grid-container .item1-1 {
     grid-column-start: 1;
     grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
-.item2 {
+.grid-container .item1-2 {
     grid-column-start: 2;
     grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.grid-container .item2-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.grid-container .item2-2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.grid-container .item3-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.grid-container-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .8rem;
+}
+
+.grid-container-2 .item1-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.grid-container-2 .item1-2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }

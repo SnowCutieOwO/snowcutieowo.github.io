@@ -20,11 +20,18 @@
       增加右上角毛玻璃 Github 图标
       修改了加载界面的图标
       修复了侧边栏展开消失的问题
-      将 fastly.jsdelivr.net 更换为了 fastly.jsdelivr.net 以优化脚本加载速度
+      将 cdn.jsdelivr.net 更换为了 fastly.jsdelivr.net 以优化脚本加载速度
     1.0.6:
       增加了维基内页面跳转的按钮样式。
       略微修改了回到顶部按钮的样式。
       更新 FontAwesome 拓展组件。
+    1.0.7:
+      略微修改了 `docsify-tabs` 的样式，使其更加适配维基。
+      修复了侧边栏的宽度遮挡滚动条的问题。
+      对代码块的部分内容进行了优化。
+    1.0.8:
+      优化了导航栏，引入自行修改的爱发电按钮样式。
+      对代码块部分内容进行二次优化。
   -->
 <html lang="en">
 <head>
@@ -41,6 +48,46 @@
   <link rel="stylesheet" href="css/sidebar.min.css" />
   <link rel="stylesheet" href="css/ui-buttons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    :root {
+      --docsifytabs-tab-highlight-color: #82c2a5;
+      --docsifytabs-border-radius-px: 5px;
+    }
+    .docsify-tabs--classic > .docsify-tabs__tab:first-of-type {
+      border-top-left-radius: 0;
+    }
+    .docsify-tabs--classic > .docsify-tabs__tab:last-of-type {
+      border-top-right-radius: 0;
+    }
+    .sidebar-toggle {
+      width: 240px;
+    }
+    .markdown-section pre {
+      line-height: 1.1em;
+      border-radius: 5px;
+      padding: 13px 0px 10px 13px;
+      overflow: auto;
+      max-height: 500px;
+    }
+
+    .docsify-copy-code-button:focus, pre:hover .docsify-copy-code-button {
+      border-radius: 5px;
+    }
+    .markdown-section pre::after {
+      position: absolute;
+      left: 5px;
+      top: 8px;
+      font-size: 12px;
+    }
+
+    .markdown-section pre > code {
+      padding: unset;
+    }
+
+    .markdown-section output::after, .markdown-section pre::after {
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
   <div id="app">
@@ -80,7 +127,8 @@
       },
       tabs: {
         tabComments: true,
-        tabHeadings: true
+        tabHeadings: true,
+        sync: false
       },
       darkMode: {
         dark: {
@@ -100,24 +148,16 @@
       'flexible-alerts': {
           style: 'flat',
           note: {
-            label: {
-              '/': '笔记'
-            }
+            label: '笔记'
           },
           tip: {
-            label: {
-              '/': '提示'
-            }
+            label: '提示'
           },
           warning: {
-            label: {
-              '/': '警告'
-            }
+            label: '警告'
           },
           attention: {
-            label: {
-              '/': '注意'
-            }
+            label: '注意'
           }
         }
       },
@@ -161,6 +201,10 @@
   <script src="//fastly.jsdelivr.net/npm/docsify-hide-code/dist/docsify-hide-code.min.js"></script>
   <!-- ↑ 此为 Docsify 代码折叠组件 ↑ -->
   <script src="//fastly.jsdelivr.net/npm/docsify-plugin-flexible-alerts"></script>
+  <!-- ↑ 此为 Docsify 自定义提示框组件 ↑ -->
+  <script src="//fastly.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+  <script src="//fastly.jsdelivr.net/npm/prismjs@1/components/prism-kotlin.min.js"></script>
+  <script src="//fastly.jsdelivr.net/npm/prismjs@1/components/prism-xml-doc.min.js"></script>
   <!-- ↑ 此为 Docsify 自定义提示框组件 ↑ -->
   <script>
     Prism.languages['hocon'] = {
