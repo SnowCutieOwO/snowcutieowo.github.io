@@ -1,7 +1,8 @@
 <!-- _sidebar.md -->
 
+* [前言](README.md)
 * spark
-  * [主页](/)
+  * [主页](spark.home.md)
   * [安装](spark.installation.md)
   * [命令用法](spark.command-usage.md)
   * [正确使用报告浏览器](spark.using-the-viewer.md)
