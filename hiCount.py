@@ -71,8 +71,15 @@ def __main__():
     #     "数字字符数": num
     #     "是否计数": bool
     # }
-    wikiName = input('请输入要计数的维基名称: ')
-    a = foundFiles(wikiName)
+    wikiName = ''
+    while wikiName == '':
+        wikiName = input('请输入要计数的维基名称: ')
+        a = foundFiles(wikiName)
+        if not a[0]:
+            print("对应维基文件夹不存在，请检查名称后重试！")
+            continue
+        else:
+            break
     fileList = []
     countList = []
     ignoredList = []
@@ -82,7 +89,7 @@ def __main__():
         for wj in a[1]:
             # 遍历并打开文件            
             # 文件加入记录列表
-            rawFile = wj[len(wikiName)+1:]
+            rawFile = wj[wj.find("\\")+1:]
             fileList.append(rawFile)
             if config['debug']:
                print(rawFile,end=" ")
@@ -106,8 +113,7 @@ def __main__():
             finalResult = pandas.DataFrame(finalResult)
             print(finalResult)
             print('共',count[0],'字,','其中汉字',count[0]-count[1],'字,','中文标点符号',count[1],'字,','英文字母',count[2],'字,','数字符号',count[3],'字')
-    else:
-        print("对应维基文件夹不存在，请检查名称后重试！")
+
 
 __main__()
         
