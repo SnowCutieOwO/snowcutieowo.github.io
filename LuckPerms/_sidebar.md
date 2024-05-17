@@ -1,7 +1,7 @@
 <!-- _sidebar.md -->
 
 * [前言](README.md)
-* [首页](home.md)
+* [主页](home.md)
 * [安装（单服）](install-on-a-single-server.md)
 * [安装（群组服）](install-on-multiple-servers.md.md)
 * [开始](getting-started.md)
