@@ -7,7 +7,7 @@
 > 若插件载入失败，请检查你是否运行了[不受支持的版本]。
 
 * 以 Java 17+ 运行的 Spigot（1.17.1+）、Fabric（最新版 Minecraft）、Sponge（API v10）的 Minecraft Java 版服务器；
-* （对群组服）群组服核心（Velocity、BungeeCord） 和 MySQL（v8.0+）或 MariaDB 数据库；
+* （对群组服）群组服核心（Velocity、BungeeCord） 和 MySQL（v8.0+）MariaDB 或 PostgreSQL 数据库；
 * （可选的 [Redis 支持]）Redis 数据库（v5.0+）
 
 ## 为服务器下载 HuskHomes
@@ -55,7 +55,7 @@
 
 * 找到每个子服上的 HuskHomes 的[配置文件]()（Spigot 端为 `~/plugins/HuskHomes/config.yml`，Fabric/Sponge 端为 `~/config/huskhomes/config.yml`）；
 * 在 `database` 部分配置下，将 `type` 的值设置为 `MYSQL` 或 `MARIADB`（取决于你使用了哪种服务器）；
-* 在 `mysql/credentials` 部分配置中，输入你的 MySQL 或 MariaDB 数据库登录凭据；
+* 在 `mysql/credentials` 部分配置中，输入你的 MySQL、MariaDB 或 PostgreSQL 数据库登录凭据；
 * 下滑并找到 `cross_server` 设置，将其修改为 `true`；
 * 若你喜欢，你可以配置 Redis 服务器用于网络通信（若要如此，请将 `messenger_type` 设置为 `REDIS`）；
 * 保存配置文件。请确保所有子服的配置文件都更新过。
