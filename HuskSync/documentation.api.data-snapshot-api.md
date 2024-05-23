@@ -162,8 +162,10 @@ huskSyncAPI.getCurrentData(user).thenAccept(optionalSnapshot -> {
 |`husksync:statistics`|玩家的统计数据|`#getStatistics`|`#setStatistics`|
 |`husksync:health`|玩家的生命值|`#getHealth`|`#setHealth`|
 |`husksync:hunger`|玩家的饥饿度、饱和度和消耗度|`#getHunger`|`#setHunger`|
+|`husksync:attributes`|玩家的属性|`#getAttributes`|`#setAttributes`|
 |`husksync:experience`|玩家的等级、经验值和得分|`#getExperience`|`#setExperience`|
-|`husksync:game_mode`|玩家的游戏模式和飞行状态|`#getGameMode`|`#setGameMode`|
+|`husksync:game_mode`|玩家的游戏模式|`#getGameMode`|`#setGameMode`|
+|`husksync:flight_status`|玩家是否能够飞行/当前飞行状态|`#getFlightStatus`|`#setFlightStatus`|
 |`husksync:persistent_data`|玩家的持久化数据容器|`#getPersistentData`|`#setPersistentData`|
 |自定义类型; `plugin:foo`|任意自定义类型|`#getData(Identifer)`|`#setData(Identifier)`|
 
@@ -199,24 +201,30 @@ huskSyncAPI.getCurrentData(user).thenAccept(optionalSnapshot -> {
         System.out.println("User has no game mode data!");
         return;
     }
+    Optional<Data.FlightStatus> flightStatusOptional = snapshot.getFlightStatus();
+    if (flightStatusOptional.isEmpty()) {
+        System.out.println("User has no flight status data!");
+        return;
+    }
     // getExperience() and getHunger() work similarly
         
     // Get the health data
     Data.Health health = healthOptional.get();
     double currentHealth = health.getCurrentHealth(); // Current health
-    double maxHealth = health.getMaxHealth(); // Max health
     double healthScale = health.getHealthScale(); // Health scale (e.g., 20 for 20 hearts)
-    snapshot.setHealth(BukkitData.Health.from(20, 20, 20));
+    snapshot.setHealth(BukkitData.Health.from(20, 20));
+    // Need max health? Look at the Attributes data type.
     
     // Get the game mode data
     Data.GameMode gameMode = gameModeOptional.get();
     String gameModeName = gameMode.getGameModeName(); // Game mode name (e.g., "SURVIVAL")
-    boolean isFlying = gameMode.isFlying(); // Whether the player is *currently* flying
-    boolean canFly = gameMode.canFly(); // Whether the player *can* fly
-    snapshot.setGameMode(BukkitData.GameMode.from("SURVIVAL", false, false));
-    
-    // Save the snapshot - This will update the player if online and save the snapshot to the database
-    huskSyncAPI.setCurrentData(user, snapshot);
+    snapshot.setGameMode(BukkitData.GameMode.from("SURVIVAL"));
+
+    // Get flight data
+    Data.FlightStatus flightStatus = flightStatusOptional.get(); // Whether the player is flying
+    boolean isFlying = flightStatus.isFlying(); // Whether the player is *currently* flying
+    boolean canFly = flightStatus.isAllowFlight(); // Whether the player *can* fly
+    snapshot.setFlightStatus(BukkitData.FlightStatus.from(false, false));
 });
 ```
 * 若要让代码更加简洁，我们可以使用 `HuskSyncAPI#editCurrentData()` 方法来获取玩家当前数据并在 `Consumer` 类中进行操作。

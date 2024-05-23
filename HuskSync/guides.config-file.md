@@ -28,12 +28,14 @@ check_for_updates: true
 # 为运行了 HuskSync 的服务器指定通用 ID。擅自修改本项后果自负！
 cluster_id: ''
 # 启用开发者调试日志
-debug_logging: false
+debug_logging: true
 # 是否启用现代化的, 内容丰富的 TAB 补全建议 (若可用)
 brigadier_tab_completion: false
 # 是否启用 Player Analytics 联动.
 # 相关文档: https://william278.net/docs/husksync/plan-hook
 enable_plan_hook: true
+# 在安装 ProtocolLib 后处理锁定玩家时，是否直接取消对应玩家的游戏事件包
+cancel_packets: true
 # 数据库设置
 database:
   # 使用的数据库种类 (MYSQL, MARIADB, POSTGRES, MONGO)
@@ -42,10 +44,10 @@ database:
   credentials:
     host: localhost
     port: 3306
-    database: HuskSync
+    database: minecraft
     username: root
-    password: pa55w0rd
-    # 仅在使用了 MYSQL, MARIADB 或 POSTGRES 类型的数据库下修改本项
+    password: ''
+    # 仅在使用了 MARIADB 或 POSTGRES 类型的数据库下修改本项
     parameters: ?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8
   # MYSQL, MARIADB, POSTGRES 数据库 Hikari 连接池设置. 请勿擅自修改, 否则后果自负!
   connection_pool:
@@ -100,9 +102,9 @@ synchronization:
   # 玩家死亡时的数据同步方式与时间设置
   save_on_death:
     # 是否在玩家死亡时创建一份快照（包含死亡时的掉落物）
-    enabled: false
+    enabled: true
     # 在死亡快照中保存什么样的物品（DROPS 或 ITEMS_TO_KEEP）。需要注意的是 ITEMS_TO_KEEP（对启用了 keepInventory 规则的服务器）需要 1.19.4+ 版本才可使用。
-    items_to_save: DROPS
+    items_to_save: ITEMS_TO_KEEP
     # 是否为背包为空的玩家创建死亡快照？
     save_empty_items: true
     # 在死亡界面退出并登入其他服务器的玩家是否保留物品。
@@ -120,24 +122,27 @@ synchronization:
   # 决定同步的数据类型。
   # 相关文档: https://william278.net/docs/husksync/sync-features
   features:
-    potion_effects: true
+    inventory: true
     ender_chest: true
     experience: true
     advancements: true
     game_mode: true
-    inventory: true
+    flight_status: true
+    potion_effects: true
     persistent_data: true
-    hunger: true
-    health: true
     statistics: true
+    health: true
+    hunger: true
+    attributes: true
+    persistent_data: true
     location: false
   # 在完成数据同步前不可执行的命令（以 * 表示所有命令）
   blacklisted_commands_while_locked:
     - '*'
   # 监听器的事件优先级 (HIGHEST, NORMAL, LOWEST)。若遇到插件冲突则可修改该部分设置
   event_priorities:
-    join_listener: LOWEST
     quit_listener: LOWEST
+    join_listener: LOWEST
     death_listener: NORMAL
 ```
 ### `server.yml`

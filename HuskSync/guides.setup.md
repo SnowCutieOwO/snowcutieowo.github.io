@@ -17,6 +17,7 @@
 
 * 将插件拖放至每个 Spigot 子服的 `/plugins/` 文件夹下；
 * 无需将 HuskSync 安装在群组服上。
+* 额外地，你可以安装 [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/) 加强对锁定用户处理能力，或安装 [Plan](https://www.spigotmc.org/resources/plan-player-analytics.32536/) 插件来快速统计玩家数据。
 
 ### 2. 重启服务器
 
@@ -31,18 +32,22 @@
 * 在 `redis` 的 `credentials` 设置中，输入你的 Redis 数据库登录凭据。如果你的 Redis 数据库没有设置密码，请将密码一项留空（译者注：即空字符串 '' 或 ""）；
 * 除非你在一个群组下区分多个子群组，每个子群组之间的玩家数据相互隔离，否则不应更改 `cluster_id` 的值。
 
-#### 对于 MongoDB 用户
+<details>
+<summary>重要 - MongoDB 用户</summary>
 
 * 找到服务器上的 HuskSync 配置文件（`~/plugins/HuskSync/config.yml`）。
 * 将 `database` 下的 `type` 值设置为 `MONGO`。
 * 在 `database` 下的 `credentials` 配置中，输入 MongoDB 数据库的登录凭据。切记不要擅自修改 `connection_pool` 部分的设置。
+</details>
 
-##### MongoDB Atlas
+<details>
+<summary>对 MongoDB Atlas 用户的额外配置</summary>
 
 * 找到服务器上的 HuskSync 配置文件（`~/plugins/HuskSync/config.yml`）。
 * 将 `mongo_settings` 下的 `using_atlas` 设置为 `true`。
 * 将 `mongo_settings` 下的 `parameters` 中的 `&authSource=HuskSync` 部分删去即可。
 （在使用 Atlas 时自动无视 `credentials` 下 `port` 设置的值）
+</details>
 
 ### 4. 在 server.yml 文件中设置服务器名称
 
