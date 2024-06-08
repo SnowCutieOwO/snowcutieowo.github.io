@@ -58,4 +58,5 @@ watch-files: true
 |rabbitmq|连接至 RabbitMQ 实例并使用 PubSub over AMQP 系统来交流。|
 |nats|连接至 Nats 实例并使用 PubSub 系统来交流。|
 |custom|强制 messaging-service 使用你通过 LuckPerms API 实现的通信方式。|
-也可以通过 LuckPerms 实现自己的通行服务。确保你将 messaging-service 设置为了 `custom`，否则插件会在启用时报错。|
+
+你也可以通过 LuckPerms API 实现自己的通信服务。但在此之前确保你将 messaging-service 设置为了 `custom`，否则插件会在启用时报错。
