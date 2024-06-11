@@ -197,17 +197,17 @@
 * `-g <区域组>` 用于指定区域组（见“区域标志”章节）；
 * `-e` 用于设置空白值。
 
-> [!INFO|label:示例：将“mall”区域的 `pvp` 标志对“非成员玩家”设置为“deny”]
+> [!INFO|label:示例：将“mall”区域的`pvp`标志对“非成员玩家”设置为“deny”]
 > ```
 > /rg flag mall pvp -g nonmembers deny
 > ```
 
-> [!INFO|label:示例：取消“mall”区域设置的 `greeting` 标志值]
+> [!INFO|label:示例：取消“mall”区域设置的`greeting`标志值]
 > ```
 > /rg flag mall greeting
 > ```
 
-> [!INFO|label:示例：将“mall”的 `gerrting` 标志的值设置为空白]
+> [!INFO|label:示例：将“mall”的`gerrting`标志的值设置为空白]
 > ```
 > /rg list -p sk89q
 > ```
