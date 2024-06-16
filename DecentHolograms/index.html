@@ -34,6 +34,7 @@
       对代码块部分内容进行二次优化。
     1.0.9:
       紧急修复代码框不能横向滚动的问题。
+      优化代码框及加载页面的样式。
   -->
 <html lang="en">
 <head>
@@ -68,8 +69,9 @@
       line-height: 1.1em;
       border-radius: 5px;
       padding: 13px 0px 10px 13px;
-      overflow: auto;
+      overflow-y: auto;
       max-height: 500px;
+      white-space: pre-wrap;
     }
 
     .markdown-section > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) code {
