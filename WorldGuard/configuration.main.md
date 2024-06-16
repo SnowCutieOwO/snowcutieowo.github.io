@@ -25,7 +25,7 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 >     block-wither-explosions: false
 > ```
 > 但是你想要在下界把这个设置成 `false`。所以你需要打开 `worlds/world_nether/config.yml` 并将文件的内容替换为：
-> ```
+> ```YAML
 > mobs:
 >     block-creeper-block-damage: false
 > ```
