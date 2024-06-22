@@ -19,6 +19,7 @@ HuskHomes 提供了一系列的 API 事件供你的插件监听，用于检测�
 |`ReceiveTeleportRequestEvent`|4.1|✅|当玩家收到传送请求时调用|
 |`ReplyTeleportRequestEvent`|4.1|✅|当玩家接受或拒绝传送请求时调用|
 |`TeleportWarmupEvent`|3.0|✅|当玩家开始传送预热时调用|
+|`TeleportWarmupCancelledEvent`|4.6.3|❌|当玩家的传送预热被打断时调用|
 |`TeleportEventEvent`|3.0|✅|当玩家被传送后调用‡|
 |`TeleportBackEventEvent`|4.1|✅|当玩家被传送回他们的上一个位置（`/back`）时调用‡|
 

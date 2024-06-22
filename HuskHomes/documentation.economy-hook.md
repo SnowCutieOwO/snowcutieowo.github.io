@@ -37,16 +37,16 @@ HuskHomes 支持将特定的操作设置为收费。玩家必须持有数量足�
 
 |操作种类|操作描述|默认消耗|
 |:---|:---|---:|
-|`additional_home_slot`|玩家购买一个额外的设置家传送点槽位。|`$100.00`|
-|`make_home_public`|玩家将家传送点转为开放。|`$50.00`|
-|`random_teleport`|玩家执行 /rtp 命令。|`$25.00`|
-|`back_command`|玩家执行 /back 命令返回至上一个传送点。|`$0.00`|
-|`home_teleport`|玩家执行 /home 命令传送至自己的家传送点。|`$0.00`|
-|`public_home_teleport`|玩家执行 /phome 命令传送至公开的家传送点。|`$0.00`|
-|`warp_teleport`|玩家执行 /warp 命令传送至地标传送点。|`$0.00`|
-|`spawn_teleport`|玩家执行 /spawn 命令传送至主城出生点。|`$0.00`|
-|`send_teleport_request`|玩家发送传送请求。|`$0.00`|
-|`accept_teleport_request`|玩家同意其他玩家的传送请求。|`$0.00`|
+| `ADDITIONAL_HOME_SLOT`    | 玩家购买一个额外的设置家传送点槽位。       |     `100.00` |
+| `MAKE_HOME_PUBLIC`        | 玩家将家传送点转为开放。                  |      `50.00` |
+| `RANDOM_TELEPORT`         | 玩家执行 /rtp 命令。                     |      `25.00` |
+| `BACK_COMMAND`            | 玩家执行 /back 命令返回至上一个传送点。    |       `0.00` |
+| `HOME_TELEPORT`           | 玩家执行 /home 命令传送至自己的家传送点。  |       `0.00` |
+| `PUBLIC_HOME_TELEPORT`    | 玩家执行 /phome 命令传送至公开的家传送点。 |       `0.00` |
+| `WARP_TELEPORT`           | 玩家执行 /warp 命令传送至地标传送点。     |       `0.00` |
+| `SPAWN_TELEPORT`          | 玩家执行 /spawn 命令传送至主城出生点。    |       `0.00` |
+| `SEND_TELEPORT_REQUEST`   | 玩家发送传送请求。                       |       `0.00` |
+| `ACCEPT_TELEPORT_REQUEST` | 玩家同意其他玩家的传送请求。              |       `0.00` |
 
 ### 示例配置
 
@@ -57,7 +57,7 @@ HuskHomes 支持将特定的操作设置为收费。玩家必须持有数量足�
 
 ```YAML
 economy:
-  # 启用经济插件联动（需要安装 Vault）
+  # 启用经济插件联动（需要安装 Vault 与任意支持它的经济插件）
   enabled: false
   # 设置玩家可以免费设置多少个家传送点，若超出该数量，玩家就需要花钱购买额外槽位。
   free_home_slots: 5

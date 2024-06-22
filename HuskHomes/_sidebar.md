@@ -4,8 +4,8 @@
   * [📚 安装教程](guides.setup.md)
   * [📊 数据导入](guides.importing-data.md)
   * [📄 配置文件](guides.config-files.md)
-  * [⛔ 访问控制](guide.managing-access.md)
-  * [🖥️ 命令列表](guide.commands.md)
+  * [⛔ 访问控制](guides.managing-access.md)
+  * [🖥️ 命令列表](guides.commands.md)
   * [📜 冲突命令](guides.command-conflicts.md)
 * 文档
   * [📁 数据库](documentation.database.md)
