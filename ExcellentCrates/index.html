@@ -36,6 +36,8 @@
       紧急修复代码框不能横向滚动的问题。
       优化代码框及加载页面的样式。
       修复加载界面出现黑色圆点的问题。
+    1.0.10:
+      优化了侧边栏的显示样式。
   -->
 <html lang="en">
 <head>
@@ -75,9 +77,50 @@
       white-space: pre-wrap;
     }
 
-    .markdown-section > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) code {
-    overflow: unset;
+    .sidebar h1 {
+      font-size: 1.7rem;
     }
+
+    .sidebar ul li a:hover {
+      text-decoration: unset;
+      background-color: #f4f4f4;
+      border-radius: 5px;
+      transition-duration: 0.2s;
+    }
+
+    .sidebar ul li a {
+      padding: 3px 3px 0 10px;
+      margin: 0 0 5px 0;
+      transition-duration: 0.2s;
+      font-size: 16px;
+      left: -10px;
+      position: relative;
+    }
+
+    .sidebar sidebar-nav {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar ul li ul {
+      padding-left: unset;
+    }
+
+    .sidebar ul, .sidebar ul li {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .sidebar ul li.active > a {
+      border-right: unset;
+      border-radius: 5px;
+      background-color: #f4f4f4;
+    }
+
+    .markdown-section > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) code {
+      overflow: unset;
+    }
+
     .docsify-copy-code-button:focus, pre:hover .docsify-copy-code-button {
       border-radius: 5px;
     }
