@@ -16,10 +16,14 @@
 * [玩家拓展](https://www.spigotmc.org/resources/player-conditions-commandtimer-extension.97186/)
 * [服务器拓展](https://www.spigotmc.org/resources/server-conditions-commandtimer-extension.97188/)
 * [GriefDefender 拓展](https://www.spigotmc.org/resources/griefdefender-conditions-commandtimer-extension.106330/)
+* [WorldGuard 拓展](https://www.spigotmc.org/resources/worldguard-conditions-commandtimer-extension.112403/)
+* [Vault 拓展](https://www.spigotmc.org/resources/vault-conditions-commandtimer-extension.112471/)
 
 ### 社区拓展模块
 
 如果你制作了拓展模块并想发布在这里，请在 [Github](https://github.com/titivermeesch/CommandTimer) 上发出请求。
+
+* [PlaceholderAPI Extension](https://github.com/TreemanKing/CommandTimer-PAPIConditions)
 
 ## 制作拓展模块
 
