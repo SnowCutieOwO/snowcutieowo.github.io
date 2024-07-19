@@ -56,9 +56,3 @@ Player p = facts.get("player")
 * ConditionCompare
 
 这些类型中除 `ConditionCompare` 外均为 Java 自带的数据类型，`ConditionCompare` 会在两个值比较时使用。可以为 EQUAL、LESS_THEN、BIGGER_OR_EQUAL_THEN 等。类本身可以有不同的选择。可以在[这里](https://github.com/titivermeesch/CommandTimer_PlayerConditions/blob/master/src/main/java/me/playbosswar/cmtplayerconditions/conditions/PlayerTimeInWorldCondition.java)找到相关示例。
-
-### 示例
-相关示例可在如下列表中找到：
-* https://github.com/titivermeesch/CommandTimer_TimeConditions
-* https://github.com/titivermeesch/CommandTimer_GriefDefender
-* https://github.com/titivermeesch/CommandTimer_PlayerConditions
