@@ -5,11 +5,35 @@
 ## 开始使用
 我们将一些有用的章节放在这里，以便你能快速上手本插件。
 
-> 章节   
-> [初次使用]()
+<div class="grid-container-1">
+<div class="item1">
+<div class="card">
+<div class="card-details">
+    <a href="./#/overview.first-startup-guide">
+    <p class="text-title">:fas fa-book: 初次使用</p>
+    <p class="text-body">章节</p>
+    </a>
+</div>
+</div>
+</div>
+<div class="item2">
+<div class="card">
+<div class="card-details">
+    <a href="./#/other.support">
+    <p class="text-title">:fas fa-book: 支持</p>
+    <p class="text-body">章节</p>
+    </a>
+</div>
+</div>
+</div>
+<div class="item3">
+<div class="card">
+<div class="card-details">
+    <a href="./#/overview.known-errors-issues">
+    <p class="text-title">:fas fa-book: 已知错误/问题</p>
+    <p class="text-body">章节</p>
+    </a>
+</div>
+</div>
 
-> 章节  
-> [支持]()
-
-> 章节  
-> [已知错误/问题]()
+</div>
