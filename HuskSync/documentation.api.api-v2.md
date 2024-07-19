@@ -19,6 +19,7 @@ HuskSync 提供了一个 API 用于获取和返回 `UserData` 对象；这是一
 
 * HuskSync 有一个 `User` 对象，代表着特定玩家在数据库中保存的数据。你可以通过方法 `HuskSyncAPI#getUser(uuid)` 请求玩家数据。
 * 若你有一个在线的 `org.bukkit.Player` 对象，你可以使用方法 `BukkitPlayer#adapt(player)` 来获取一个 `OnlineUser` 对象（继承 `User`），以此代表一个已登入的玩家。
+
 ```Java
 public class HuskSyncAPIHook {
 
@@ -28,7 +29,6 @@ public class HuskSyncAPIHook {
         this.huskSyncAPI = HuskSyncAPI.getInstance();
     }
     
-
     public void logUserName(UUID uuid) {
         // getUser() returns a CompletableFuture supplying an Optional<User>
         huskSyncAPI.getUser(uuid).thenAccept(optionalUser -> {
