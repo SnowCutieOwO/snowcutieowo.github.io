@@ -21,7 +21,7 @@
 
 ## `/lp log recent [玩家] [页码]`
 
-**所需权限：** luckperms.log.recent
+**所需权限：** `luckperms.log.recent`
 **可用参数：**
 
 * `[玩家]` - 筛选的玩家/UUID
@@ -31,7 +31,7 @@
 
 ## `/lp log search <关键词> [页码]`
 
-**所需权限：** luckperms.log.search
+**所需权限：** `luckperms.log.search`
 **可用参数：**
 
 * `<关键词>` - 参与搜索的关键词
@@ -41,7 +41,7 @@
 
 ## `/lp log notify [on|off]`
 
-**所需权限：** luckperms.log.notify
+**所需权限：** `luckperms.log.notify`
 **可用参数：**
 
 * `[on|off]` - 是否启用或禁用
@@ -50,7 +50,7 @@
 
 ## `/lp log userhistory <玩家> [页码]`
 
-**所需权限：** luckperms.log.userhistory
+**所需权限：** `luckperms.log.userhistory`
 **可用参数：**
 
 * `<玩家>` - 所要搜索的玩家
@@ -60,7 +60,7 @@
 
 ## `/lp log grouphistory <权限组> [页码]`
 
-**所需权限：** luckperms.log.grouphistory
+**所需权限：** `luckperms.log.grouphistory`
 **可用参数：**
 
 * `<权限组>` - 所要搜索的权限组
@@ -70,7 +70,7 @@
 
 ## `/lp log trackhistory <路线> [页码]`
 
-**所需权限：** luckperms.log.trackhistory
+**所需权限：** `luckperms.log.trackhistory`
 **可用参数：**
 
 * `<路线>` - 所要搜索的路线

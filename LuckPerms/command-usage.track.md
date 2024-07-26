@@ -23,28 +23,28 @@
 
 ## `/lp track <路线> info`
 
-**所需权限：** luckperms.track.info
+**所需权限：** `luckperms.track.info`
 
 显示路线内的所有权限组。
 
 ## `/lp track <路线> editor`
 
-**所需权限：** luckperms.track.editor
+**所需权限：** `luckperms.track.editor`
 
 打开编辑指定路线的网页权限编辑器。在改动保存后，界面会显示一条用于应用改动的命令。
 
 ## `/lp track <路线> append <权限组>`
 
-**所需权限：** luckperms.track.append
+**所需权限：** `luckperms.track.append`
 **可用参数：**
 
-* <权限组> - 添加的权限组
+* `<权限组>` - 添加的权限组
 
 在路线末加入指定的权限组。
 
 ## `/lp track <路线> insert <权限组> <位置>`
 
-**所需权限：** luckperms.track.insert
+**所需权限：** `luckperms.track.insert`
 **可用参数：**
 
 * `<权限组>` - 插入的权限组
@@ -54,22 +54,22 @@
 
 ## `/lp track <路线> remove <权限组>`
 
-**所需权限：** luckperms.track.remove
+**所需权限：** `luckperms.track.remove`
 **可用参数：**
 
-* <权限组> - the group to remove
+* `<权限组>` - 要移除的权限组
 
 从路线中移除指定的权限组。
 
 ## `/lp track <路线> clear`
 
-**所需权限：** luckperms.track.clear
+**所需权限：** `luckperms.track.clear`
 
 移除路线中的所有权限组。
 
 ## `/lp track <路线> rename <新名称>`
 
-**所需权限：** luckperms.track.rename
+**所需权限：** `luckperms.track.rename`
 **可用参数：**
 
 * `<新名称>` - 路线的新名称
@@ -78,7 +78,7 @@
 
 ## `/lp track <路线> clone <复制名称>`
 
-**所需权限：** luckperms.track.clone
+**所需权限：** `luckperms.track.clone`
 **可用参数：**
 
 * `<新名称>` - 复制路线的名称

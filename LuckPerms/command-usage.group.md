@@ -27,17 +27,17 @@
 
 ## `/lp group <权限组> info`
 
-**所需权限：** luckperms.group.info    
+**所需权限：** `luckperms.group.info`    
 显示指定组的信息。
 
 ## `/lp group <权限组> editor`
 
-**所需权限：** luckperms.group.editor    
+**所需权限：** `luckperms.group.editor`    
 打开编辑指定权限组权限数据的网页界面。在改动保存后，界面会显示一条用于应用改动的命令。
 
 ## `/lp group <权限组> listmembers [页码]`
 
-**所需权限：** luckperms.group.listmembers    
+**所需权限：** `luckperms.group.listmembers`    
 **可用参数：** 
 
 * `[页码]` - 浏览的页码
@@ -46,7 +46,7 @@
 
 ## `/lp group <权限组> setweight <权重>`
 
-**所需权限：** luckperms.group.setweight    
+**所需权限：** `luckperms.group.setweight`    
 **可用参数：** 
 
 * `<权重>` - 设置的权重
@@ -55,32 +55,32 @@
 
 ## `/lp group <权限组> setdisplayname <名称>`
 
-**所需权限：** luckperms.group.setdisplayname    
+**所需权限：** `luckperms.group.setdisplayname`    
 **可用参数：** 
 
 * `<名称>` - 设置的名称
-* `[上下文...]` - 显示该名称的[上下文]
+* `[上下文...]` - 显示该名称的[上下文](features.context.md)
 
 设置权限组的显示名称。可以用于表示权限组的“别称”。
 
 ## `/lp group <权限组> showtracks`
 
-**所需权限：** luckperms.group.showtracks    
+**所需权限：** `luckperms.group.showtracks`    
 
 显示该权限组所处的路线位置。
 
 ## `/lp group <权限组> clear [上下文]`
 
-**所需权限：** luckperms.group.clear    
+**所需权限：** `luckperms.group.clear`    
 **可用参数：** 
 
-* `[上下文...]` - 用于过滤的[上下文]
+* `[上下文...]` - 用于过滤的[上下文](features.context.md)
 
 清除权限组的权限、继承组及元数据内容。
 
 ## `/lp group <权限组> rename <新名称>`
 
-**所需权限：** luckperms.group.rename    
+**所需权限：** `luckperms.group.rename`    
 **可用参数：** 
 
 * `<新名称>` - 权限组的新名称
@@ -89,7 +89,7 @@
 
 ## `/lp group <权限组> clone <复制组名称>`
 
-**所需权限：** luckperms.group.clone
+**所需权限：** `luckperms.group.clone`    
 **可用参数：** 
 
 * `<复制组名称>` - 复制后新组的名称

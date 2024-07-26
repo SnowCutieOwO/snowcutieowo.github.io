@@ -19,95 +19,95 @@ Velocity|[/plugins/luckperms/config.yml](https://github.com/LuckPerms/LuckPerms/
 ### 基础设置
 
 * [server](#server)
-* [use-server-uuid-cache]
+* [use-server-uuid-cache](#use-server-uuid-cache)
 
 ### 存储设置
 
-* storage-method
-* data
-* pool-settings
-* split-storage
+* [storage-method](#storage-method)
+* [data](#data)
+* [pool-settings](#pool-settings)
+* [split-storage](#split-storage)
 
 ### 更新准备&通信服务
 
-* sync-minutes
-* watch-files
-* messaging-service
-* auto-push-updates
-* push-log-entries
-* broadcast-received-log-entries
-* redis
-* rabbitmq
+* [sync-minutes](#sync-minutes)
+* [watch-files](#watch-files)
+* [messaging-service](#messaging-service)
+* [auto-push-updates](#auto-push-updates)
+* [push-log-entries](#push-log-entries)
+* [broadcast-received-log-entries](#broadcast-received-log-entries)
+* [redis](#redis)
+* [rabbitmq](#rabbitmq)
 
 ### 个性化设置
 
-* temporary-add-behaviour
-* primary-group-calculation
-* argument-based-command-permissions
-* log-notify
-* meta-formatting
+* [temporary-add-behaviour](#temporary-add-behaviour)
+* [primary-group-calculation](#primary-group-calculation)
+* [argument-based-command-permissions](#argument-based-command-permissions)
+* [log-notify](#log-notify)
+* [meta-formatting](#meta-formatting)
 
 ### 权限计算&继承
 
-* inheritance-traversal-algorithm
+* [inheritance-traversal-algorithm](#inheritance-traversal-algorithm)
 
 #### 权限方案设置
 
-* include-global
-* include-global-world
-* apply-global-groups
-* apply-global-world-groups
+* [include-global](#include-global)
+* [include-global-world](#include-global-world)
+* [apply-global-groups](#apply-global-groups)
+* [apply-global-world-groups](#apply-global-world-groups)
 
 #### 元数据查询设置
 
-* meta-value-selection-default
-* meta-value-selection
+* [meta-value-selection-default](#meta-value-selection-default)
+* [meta-value-selection](#meta-value-selection)
 
 #### 继承设置
 
-* apply-wildcards
-* apply-regex
-* apply-shorthand
+* [apply-wildcards](#apply-wildcards)
+* [apply-regex](#apply-regex)
+* [apply-shorthand](#apply-shorthand)
 
 #### Bukkit 相关设置
 
-* apply-bukkit-child-permissions
-* apply-bukkit-default-permissions
-* apply-bukkit-attachment-permissions
+* [apply-bukkit-child-permissions](#apply-bukkit-child-permissions)
+* [apply-bukkit-default-permissions](#apply-bukkit-default-permissions)
+* [apply-bukkit-attachment-permissions](#apply-bukkit-attachment-permissions)
 
 #### Bungee 相关设置
 
-* apply-bungee-config-permissions
+* [apply-bungee-config-permissions](#apply-bungee-config-permissions)
 
 #### Sponge 相关设置
 
-* apply-sponge-implicit-wildcards
-* apply-sponge-default-subjects
+* [apply-sponge-implicit-wildcards](#apply-sponge-implicit-wildcards)
+* [apply-sponge-default-subjects](#apply-sponge-default-subjects)
 
 #### 额外设置
 
-* world-rewrite
-* group-weight
+* [world-rewrite](#world-rewrite)
+* [group-weight](#group-weight)
 
 ### 微调设置
 
 #### 服务器操作方/Vault（仅 Bukkit）
 
-* enable-ops
-* auto-op
-* commands-allow-op
-* use-vault-server
-* vault-server
-* vault-include-global
-* vault-ignore-world
-* vault-debug
+* [enable-ops](#enable-ops)
+* [auto-op](#auto-op)
+* [commands-allow-op](#commands-allow-op)
+* [use-vault-server](#use-vault-server)
+* [vault-server](#vault-server)
+* [vault-include-global](#vault-include-global)
+* [vault-ignore-world](#vault-ignore-world)
+* [vault-debug](#vault-debug)
 
 ### 杂项设置 
 
-* debug-logins
-* allow-invalid-usernames
-* prevent-primary-group-removal
-* contexts.json
+* [debug-logins](#debug-logins)
+* [allow-invalid-usernames](#allow-invalid-usernames)
+* [prevent-primary-group-removal](#prevent-primary-group-removal)
+* [contexts.json](#contextsjson)
 
 ## 配置源
 
@@ -309,7 +309,7 @@ watch-files: true
 messaging-service: none
 ```
 
-### `auto-push-update`
+### `auto-push-updates`
 
 是否在通过命令产生改动后允许 LuckPerms 自动更新数据。
 

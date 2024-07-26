@@ -23,7 +23,7 @@
 * [`cleartrack` <路线> [上下文...]](#lp-usergroup-玩家权限组-parent-cleartrack-路线-上下文)
 * [`switchprimarygroup` <权限组>](#lp-user-user-parent-switchprimarygroup-权限组)
 
-## `/lp user/group <玩家|权限组> parent info [页码] [排序模式]
+## `/lp user/group <玩家|权限组> parent info [页码] [排序模式]`
 
 **所需权限：** `luckperms.user.parent.info` 或 `luckperms.group.parent.info`    
 **可用参数：**
@@ -42,23 +42,23 @@
 |`abc/alphabetically`|将会按字母顺序（A-Z）排序|
 |`!abc/!alphabetically`|将会按字母顺序反向（Z-A）排序|
 
-## `/lp user/group <玩家|权限组> parent set <权限组> [上下文...]
+## `/lp user/group <玩家|权限组> parent set <权限组> [上下文...]`
 
 **所需权限：** `luckperms.user.parent.set` 或 `luckperms.group.parent.set`    
 **可用参数：**
 
 * `<权限组>` - 所设置的权限组
-* `[上下文...]` - 所设置权限组的[上下文]
+* `[上下文...]` - 所设置权限组的[上下文](features.context.md)
 
 设置玩家/权限组的继承。与“parent add”命令不同的是，这条命令会清除所有给定上下文的权限组。添加命令只会直接将继承关系“加在”已有的玩家/权限组继承关系上。若命令执行时不指定上下文，则命令也会更新玩家所在的主权限组。
 
-## `/lp user/group <玩家|权限组> parent add <权限组> [上下文...]
+## `/lp user/group <玩家|权限组> parent add <权限组> [上下文...]`
 
 **所需权限：** `luckperms.user.parent.add` 或 `luckperms.group.parent.add`    
 **可用参数：**
 
 * `<权限组>` - 所添加的权限组
-* `[上下文...]` - 所添加权限组的[上下文]
+* `[上下文...]` - 所添加权限组的[上下文](features.context.md)
 
 
 为玩家/权限组添加继承关系。与“parent set”命令不同的是，这条命令添加的继承关系会直接加在已有的继承关系之上。其他继承的组不会被删除，玩家的主权限组也不会受到干扰。

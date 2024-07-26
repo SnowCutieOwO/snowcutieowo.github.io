@@ -106,6 +106,6 @@
 **所需权限：** `luckperms.user.permission.clear` 或 `luckperms.group.permission.clear`    
 **可用参数：**
 
-* `[上下文...]` - 过滤的[上下文]
+* `[上下文...]` - 过滤的[上下文](features.context.md)
 
 移除玩家/权限组的所有权限。

@@ -40,19 +40,19 @@
 
 ## `/lp sync`
 
-**所需权限：** luckperms.sync
+**所需权限：** `luckperms.sync`    
 
 刷新已载入的数据。若数据库中的数据发生改动，该命令会将这些改动应用在服务器上。
 
 ## `/lp info`
 
-**所需权限：** luckperms.info
+**所需权限：** `luckperms.info`    
 
 显示 LuckPerms 的信息/数据，包括调试输出、统计数据、设置内容以及配置文本的一些重要设置项。
 
 ## `/lp editor [类型] [过滤]`
 
-**所需权限：** luckperms.editor     
+**所需权限：** `luckperms.editor`     
 **可用参数：**
 * `[类型]` - 在编辑器会话中选择的参数。可以为“all（全部）”、“users（玩家）”、“online（在线）”或“groups（用户组）”
 * `[过滤]` - 若所选类型包含玩家（如，“all”、“users” 或 “online”），则会将不以参数所给内容开头的权限条目隐藏。权限组不受该过滤影响。
@@ -62,7 +62,7 @@
 
 ## `/lp verbose <on|record|off|upload> [过滤]`
 
-**所需权限：** luckperms.verbose    
+**所需权限：** `luckperms.verbose`    
 **可用参数：**
 
 * `<on|record|off|upload>` - 是否启用/禁用日志记录或上传日志输出内容
@@ -82,11 +82,11 @@
 * `!Luck & !anticheat` - 匹配所有不通过我的玩家且不以“anticheat”开头的检查
 * `anticheat & !anticheat.check` - 匹配所有以“anticheat”但不以“anticheat.check”开头的检查
 
-更多信息可[见此]。
+更多信息可[见此](features.verbose.md)。
 
-`/lp verbose command <me|玩家> <命令>`
+## `/lp verbose command <me|玩家> <命令>`
 
-**所需权限：** luckperms.vebose    
+**所需权限：** `luckperms.verbose`    
 **可用参数：** 
 
 * `<me|player>` - 打开权限检查系统的玩家。使用 `me` 表示你自己
@@ -96,7 +96,7 @@
 
 ## `/lp tree [范围] [玩家]`
 
-**所需权限：** luckperms.tree    
+**所需权限：** `luckperms.tree`    
 **可用参数：** 
 
 * `[范围]` - 树的根节点（使用 `.` 表示所有权限）
@@ -111,7 +111,7 @@
 
 ## `/lp search [筛选条件] <权限>`
 
-**所需权限：** luckperms.search    
+**所需权限：** `luckperms.search`    
 **可用参数：** 
 
 * `[筛选条件]` - 搜索内容与结果间的联系
@@ -129,25 +129,25 @@
 
 ## `/lp networksync`
 
-**所需权限：** luckperms.sync
+**所需权限：** `luckperms.sync`
 
 刷新数据库内的数据，并使用插件通信服务（若设置的话）来“ping”其他所有连接的服务器使其一同刷新。
 
 ## `/lp import <file|code --upload> [--replace]`
 
-**所需权限：** luckperms.import    
+**所需权限：** `luckperms.import`    
 **可用参数：** 
 
 * `<file>` - 所要导入的文件
 * `<code> --upload` - 所要从网络导入的文件
 * `[--replace]` - 若包含，则会覆盖原有权限数据。否则合并权限数据。
 
-从文件或网络将权限数据导入 LuckPerms。
+从文件或网络将权限数据导入 LuckPerms。    
 若为文件，则必须为 JSON GZIP 类型的压缩包，且从 LuckPerms v5 带出。若来自于网络，则代码必须以 `--upload` 参数生成。文件应该会生成在插件文件夹中。在导入文件时，`.json.gz` 也需要加入文件名称。在导入本地或网络文件中，`--replace` 标志可以加在命令末尾来覆盖已有的权限数据。若 `--replace` 标志不存在，则已有的权限数据会和导入的权限数据合并。
 
 ## `/lp export <file|--upload>`
 
-**所需权限：** luckperms.export
+**所需权限：** `luckperms.export`
 **可用参数：** 
 
 * `<file>` - 导出的文件名称
@@ -159,7 +159,7 @@
 
 ## `/lp reloadconfig`
 
-**所需权限：** luckperms.reloadconfig
+**所需权限：** `luckperms.reloadconfig`
 
 重载配置文件中的某些设置。该命令不会重载整个配置文件，有些设置（如存储设置等）可能需要重启服务器才能生效。
 
@@ -178,13 +178,13 @@
 
 ## `/lp translations`
 
-**所需权限：** luckperms.translations
+**所需权限：** `luckperms.translations`
 
 显示已载入翻译的信息，并可通过该命令载入社区贡献的翻译文本。
 
 ## `/lp creategroup <名称> [权重] [显示名称]`
 
-**所需权限：** luckperms.creategroup
+**所需权限：** `luckperms.creategroup`
 **可用参数：** 
 
 * `<名称>` - 权限组名称。
@@ -194,7 +194,7 @@
 创建权限组。
 ## `/lp deletegroup <名称>`
 
-**所需权限：** luckperms.deletegroup
+**所需权限：** `luckperms.deletegroup`
 **可用参数：** 
 
 * `<名称>` - 权限组名称。
@@ -203,22 +203,22 @@
 
 ## `/lp listgroups`
 
-**所需权限：** luckperms.listgroups
+**所需权限：** `luckperms.listgroups`
 
 列出当前可用的所有权限组。
 
-## `/lp createtrack <name>`
+## `/lp createtrack <名称>`
 
-**所需权限：** luckperms.createtrack
+**所需权限：** `luckperms.createtrack`
 **可用参数：** 
 
 * `<名称>` - 路线的名称
 
 创建新路线。
 
-## `/lp deletetrack <name>`
+## `/lp deletetrack <名称>`
 
-**所需权限：** luckperms.deletetrack
+**所需权限：** `luckperms.deletetrack`
 **可用参数：** 
 
 * `<名称>` - 路线的名称
@@ -227,5 +227,6 @@
 
 ## `/lp listtracks`
 
-**所需权限：** luckperms.listtracks
-Displays a list of all current tracks.
+**所需权限：** `luckperms.listtracks`
+
+显示当前路线。

@@ -12,32 +12,32 @@
 
 ## 目录
 
-* [/lp user <玩家> `info`]
-* [/lp user <玩家> `permission`]
-* [/lp user <玩家> `parent`]
-* [/lp user <玩家> `meta`]
-* [/lp user <玩家> `editor`]
-* [/lp user <玩家> `promote` <路线> [上下文...]]
-* [/lp user <玩家> `demote` <路线> [上下文...]]
-* [/lp user <玩家> `showtracks`]
-* [/lp user <玩家> `clear` [上下文...]]
-* [/lp user <玩家> `clone` <玩家>]
+* [/lp user <玩家> `info`](#lp-user-玩家-info)
+* [/lp user <玩家> `permission`](command-usage.permission.md)
+* [/lp user <玩家> `parent`](command-usage.parent.md)
+* [/lp user <玩家> `meta`](command-usage.meta.md)
+* [/lp user <玩家> `editor`](#lp-user-玩家-editor)
+* [/lp user <玩家> `promote` <路线> [上下文...]](#lp-user-玩家-promote-路线-上下文-标志)
+* [/lp user <玩家> `demote` <路线> [上下文...]](#lp-user-玩家-demote-路线-上下文-标志)
+* [/lp user <玩家> `showtracks`](#lp-user-玩家-showtracks)
+* [/lp user <玩家> `clear` [上下文...]](#lp-user-玩家-clear-上下文)
+* [/lp user <玩家> `clone` <玩家>](#lp-user-玩家-clone-玩家)
 
 ## `/lp user <玩家> info`
 
-**所需权限：** luckperms.user.info
+**所需权限：** `luckperms.user.info`
 
 显示玩家的信息，包括名称、所属初级权限组、继承的权限组以及当前的上下文内容。
 
 ## `/lp user <玩家> editor`
 
-**所需权限：** luckperms.user.editor
+**所需权限：** `luckperms.user.editor`
 
 为指定权限组打开编辑权限的界面。在改动保存后，界面会显示一条用于应用改动的命令。
 
 ## `/lp user <玩家> promote <路线> [上下文...] [标志...]`
 
-**所需权限：** luckperms.user.promote    
+**所需权限：** `luckperms.user.promote`    
 **可用参数：** 
 
 * `<路线>` - 晋升的路线名称
@@ -49,7 +49,7 @@
 
 ## `/lp user <玩家> demote <路线> [上下文...] [标志...]`
 
-**所需权限：** luckperms.user.demote    
+**所需权限：** `luckperms.user.demote`    
 **可用参数：** 
 
 * `<路线>` - 降级的路线名称
@@ -61,13 +61,13 @@
 
 ## `/lp user <玩家> showtracks`
 
-**所需权限：** luckperms.user.showtracks
+**所需权限：** `luckperms.user.showtracks`
 
 显示玩家所处的路线。
 
 ## `/lp user <玩家> clear [上下文...]`
 
-**所需权限：** luckperms.user.clear
+**所需权限：** `luckperms.user.clear`
 **可用参数：** 
 
 * `[上下文...]` - 过滤的上下文内容
@@ -76,7 +76,7 @@
 
 ## `/lp user <玩家> clone <玩家>`
 
-**所需权限：** luckperms.user.clone
+**所需权限：** `luckperms.user.clone`
 **可用参数：** 
 
 * `<玩家>` - 另一个玩家的名称
