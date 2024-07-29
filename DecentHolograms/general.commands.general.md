@@ -20,6 +20,8 @@ DecentHolograms 的通用命令
 
 ### `/dh convert <插件> [文件]`
 
+**权限：**`dh.command.convert`
+
 从其他悬浮字插件导入悬浮字数据。
 对应的悬浮字插件无需安装在服务器上，只需它的文件！
 
@@ -28,15 +30,21 @@ DecentHolograms 的通用命令
 
 ### `/dh list [页码]`
 
+**权限：**`dh.command.list`
+
 列出悬浮字文件中载入的所有悬浮字。
 
 * `[页码]` - 查看的页码。
 
 ### `/dh reload`
 
+**权限：**`dh.command.reload`
+
 重载插件。
 
 ### `/dh version`
+
+**权限：**`dh.command.version`
 
 **别名：**`about`、`ver`
 

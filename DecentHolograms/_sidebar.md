@@ -1,5 +1,5 @@
 * [前言](README.md)
-* [开始](get-started.md)
+* [欢迎](welcome.md)
 * 通用
   * [安装](general.setup.md)
   * [兼容性](general.compatibility.md)

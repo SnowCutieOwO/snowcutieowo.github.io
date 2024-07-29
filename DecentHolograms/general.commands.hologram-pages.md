@@ -12,17 +12,21 @@
 
 ## 命令
 
-**命令别称：**`page`、`p`
+**别称：**`page`、`p`
+
+**权限：**`dh.command.pages`
 
 > [!NOTE|label:命令帮助]
 > 可输入如下命令来查看所有可用的子命令：
 > ```
-> ### `### `/dh p help
+> /dh p help
 > ```
 
 ### `/dh p actions <悬浮字> <页码> <点击类型> [列表页码]`
 
-按指定[点击类型]为悬浮字增加点击操作。
+**权限：**`dh.command.pages.actions`
+
+按指定[点击类型](general.actions.md#动作类型)为悬浮字增加点击操作。
 
 * `<悬浮字>` - 悬浮字的名称。
 * `<页码>` - 悬浮字所处的页码。
@@ -31,7 +35,9 @@
 
 ### `/dh p add <悬浮字> [内容]`
 
-**命令别称：**`append`
+**别称：**`append`
+
+**权限：**`dh.command.pages.add`
 
 向悬浮字中插入新的一页。
 
@@ -39,6 +45,8 @@
 * `[内容]` - 新页面中的默认内容。默认内容可在 [`defaults.text` 配置]中修改。
 
 ### `/dh p addaction <悬浮字> <页码> <点击类型> <操作>`
+
+**权限：**`dh.command.pages.addaction`
 
 向悬浮字页中加入指定 `<点击类型>` 的 `<操作>`。
 
@@ -49,6 +57,8 @@
 
 ### `/dh p clearactions <悬浮字> <页码> <点击类型>`
 
+**权限：**`dh.command.pages.clearactions`
+
 清理第 `<页码>` 页中所有 `<点击类型>` 的操作。
 
 * `<悬浮字>` - 悬浮字的名称。
@@ -56,6 +66,8 @@
 * `<点击类型>` - 悬浮字操作的点击类型。
 
 ### `/dh p insert <悬浮字> <页码> [内容]`
+
+**权限：**`dh.command.pages.insert`
 
 向悬浮字中插入新的一页。
 
@@ -65,7 +77,9 @@
 
 ### `/dh p remove <悬浮字> <页码>`
 
-**命令别称：**`del`、`delete`、`rem`
+**别称：**`del`、`delete`、`rem`
+
+**权限：**`dh.command.pages.remove`
 
 从悬浮字中删去指定页。
 
@@ -74,7 +88,9 @@
 
 ### `/dh p removeaction <悬浮字> <页码> <点击类型> <序号>`
 
-**命令别称：**`remaction`
+**别称：**`remaction`
+
+**权限：**`dh.command.pages.removeaction`
 
 删除第 `<页码>` 页悬浮字中 `<点击类型>` 的操作。
 
@@ -85,6 +101,8 @@
 
 ### `/dh p swap <悬浮字> <目标页1> <目标页2>`
 
+**权限：**`dh.command.pages.swap`
+
 将 `<目标页1>` 与 `<目标页2>` 交换。
 
 * `<悬浮字>` - 悬浮字的名称。
@@ -93,7 +111,9 @@
 
 ### `/dh p switch <悬浮字> <页码> [玩家名称]`
 
-**命令别称：**`go`、`view`
+**别称：**`go`、`view`
+
+**权限：**`dh.command.pages.switch`
 
 切换至悬浮字中的其他页。
 

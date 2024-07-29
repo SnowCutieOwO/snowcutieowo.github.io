@@ -40,3 +40,15 @@ DecentHolograms 由少量的主命令和较多的子命令构成。若要让悬�
 > ```
 > /dh h c demo
 > ```
+
+## 权限
+
+DecentHolograms 提供了一些你可使用的权限。
+
+|权限|描述|
+|---|---|
+|`dh.default`|允许使用 `/decentholograms` 命令（仅可显示插件信息）与 [`/dh version`](general.commands.general.md#dh-version)。|
+|`dh.admin`|允许使用插件所有命令与子命令。|
+|`dh.command`|与 `dh.admin` 相同，允许使用插件所有命令与子命令。|
+|`dh.command.<命令>`|允许使用插件的指定命令。如 `dh.command.version` 允许使用 [`/dh version`](general.commands.general.md#dh-version)|
+|`dh.command.<命令>.<子命令>`|允许使用插件的指定子命令。如 `dh.command.holograms.create` 允许使用 [`/dh holograms create ...`](general.commands.hologram.md#dh-h-create-名称--l世界名称xyz-内容)|

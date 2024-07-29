@@ -12,7 +12,8 @@
 
 ## 命令
 
-**命令别称：**`line`、`l`
+**别称：**`line`、`l`
+**权限：**`dh.command.lines`
 
 > [!NOTE|label:命令帮助]
 > 可输入如下命令来查看所有可用的子命令：
@@ -22,7 +23,8 @@
 
 ### `/dh l add <悬浮字> <页码> [内容]`
 
-**命令别称：**`append`
+**别称：**`append`
+**权限：**`dh.command.lines.add`
 
 向悬浮字添加一行新的文本。
 
@@ -32,6 +34,8 @@
 
 ### `/dh l addflag <悬浮字> <页码> <行号> <标志>`
 
+**权限：**`dh.command.lines.addflag`
+
 向悬浮字行添加标志。
 
 * `<悬浮字>` - 悬浮字的名称。
@@ -39,7 +43,9 @@
 * `<行号>` - 待修改文本所在行号。
 * `<标志>` - 添加的标志名称。
 
-### `/dh l align <悬浮字> <页码> <行1> <行2> {X|Z|XZ}`
+### `/dh l align <悬浮字> <页码> <行1> <行2> {X|Z|XZ|FACING}`
+
+**权限：**`dh.command.lines.align`
 
 将 `<行1>` 与 `<行2>` 在指定方向的轴上对齐。
 
@@ -47,11 +53,13 @@
 * `<页码>` - 页码索引，即待编辑行所在页。
 * `<行1>` - 第一行的行号。
 * `<行2>` - 第二行的行号。
-* `{X|Z|XZ}` - 将 `<行1>` 与 `<行2>` 在 X、Z 或 XZ 轴/平面对齐。
+* `{X|Z|XZ|FACING}` - 将 `<行1>` 与 `<行2>` 在 X、Z 或 XZ 轴/平面对齐。
 
 ### `/dh l edit <悬浮字> <页码> <行号>`
 
-**命令别称：**`e`
+**别称：**`e`
+
+**权限：**`dh.command.lines.edit`
 
 向你发送一条聊天消息，可通过点击直接在聊天栏生成编辑命令。
 
@@ -61,7 +69,9 @@
 
 ### `/dh l height <悬浮字> <页码> <行号> <高度>`
 
-**命令别称：**`setheight`
+**别称：**`setheight`
+
+**权限：**`dh.command.lines.height`
 
 设置所在行的高度。
 
@@ -72,6 +82,8 @@
 
 ### `/dh l info <悬浮字> <页码> <行号>`
 
+**权限：**`dh.command.lines.info`
+
 显示悬浮字行的有关信息。
 
 * `<悬浮字>` - 悬浮字的名称。
@@ -79,6 +91,8 @@
 * `<行号>` - 待修改文本所在行号。
 
 ### `/dh l insert <悬浮字> <页码> <行号> [内容]`
+
+**权限：**`dh.command.lines.insert`
 
 在给定行号的下方插入一行新的文本。
 
@@ -89,9 +103,11 @@
 
 ### `/dh l offsetx <悬浮字> <页码> <行号> <偏移>`
 
-**命令别称：**`offx`、`xoff`、`xoffset`
+**别称：**`offx`、`xoff`、`xoffset`
 
-    Set the X offset of a hologram line.
+**权限：**`dh.command.lines.offsetx`
+
+设置悬浮字行的 X 轴偏移。
 
 * `<悬浮字>` - 悬浮字的名称。
 * `<页码>` - 页码索引，即待编辑行所在页。
@@ -100,7 +116,9 @@
 
 ### `/dh l offsetz <悬浮字> <页码> <行号> <偏移>`
 
-**命令别称：**`offz`、`zoff`、`zoffset`
+**别称：**`offz`、`zoff`、`zoffset`
+
+**权限：**`dh.command.lines.offsetz`
 
 * `<悬浮字>` - 悬浮字的名称。
 * `<页码>` - 页码索引，即待编辑行所在页。
@@ -109,7 +127,9 @@
 
 ### `/dh l remove <悬浮字> <页码> <行号>`
 
-**命令别称：**`del`、`delete`、`rem`
+**别称：**`del`、`delete`、`rem`
+
+**权限：**`dh.command.lines.remove`
 
 从悬浮字中删除指定行的文本。
 
@@ -118,6 +138,8 @@
 * `<行号>` - 待修改文本所在行号。
 
 ### `/dh l removeflag <悬浮字> <页码> <行号> <标志>`
+
+**权限：**`dh.command.lines.removeflag`
 
 从悬浮字中删除指定行的标志。
 
@@ -128,6 +150,8 @@
 
 ### `/dh l set <悬浮字> <页码> <行号> <内容>`
 
+**权限：**`dh.command.lines.set`
+
 将悬浮字指定行替换为新的内容。
 
 * `<悬浮字>` - 悬浮字的名称。
@@ -137,7 +161,8 @@
 
 ### `/dh l setfacing <悬浮字> <页码> <行号> <朝向>`
 
-**命令别称：**`facing`、`face`
+**别称：**`facing`、`face`
+**权限：**`dh.command.lines.setfacing`
 
 设置悬浮字的面朝方向（yaw）。仅影响 `#HEAD:`、`#SMALLHEAD:` 与 `#ENTITY` 内容的悬浮字行。
 
@@ -148,7 +173,9 @@
 
 ### `/dh l setpermission <悬浮字> <页码> <行号> [权限]`
 
-**命令别称：**`perm`、`permission`、`setperm`
+**别称：**`perm`、`permission`、`setperm`
+
+**权限：**`dh.command.lines.setpermission`
 
 设置浏览悬浮字行所需的权限。
 
@@ -158,6 +185,8 @@
 * `[权限]` - 显示本行悬浮字所需的权限。留空表示清除所设置的权限。
 
 ### `/dh l swap <悬浮字> <页码> <行1> <行2>`
+
+**权限：**`dh.command.lines.swap`
 
 交换悬浮字内的两行文本。
 

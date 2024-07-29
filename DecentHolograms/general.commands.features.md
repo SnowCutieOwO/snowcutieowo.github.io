@@ -13,7 +13,10 @@ DecentHolograms 的悬浮字特殊功能命令
 ## 命令
 
 **别称：**`features`、`f`
-> [!NOTE|label:命令帮助]
+
+**权限：**`dh.command.features`
+
+> [!INFO|label:命令帮助]
 > 可输入如下命令来查看所有可用的子命令：
 > ```
 > /dh f help
@@ -23,6 +26,8 @@ DecentHolograms 的悬浮字特殊功能命令
 
 **别称：**`off`
 
+**权限：**`dh.command.features.disable`
+
 禁用指定功能。
 
 * `<功能>` - 所要禁用的功能。
@@ -31,11 +36,15 @@ DecentHolograms 的悬浮字特殊功能命令
 
 **别称：**`on`
 
+**权限：**`dh.command.features.enable`
+
 启用指定功能。
 
 * `<功能>` - 所要启用的功能。
 
 ### `/dh f info <功能>`
+
+**权限：**`dh.command.features.info`
 
 显示有关功能的信息。
 
@@ -43,9 +52,13 @@ DecentHolograms 的悬浮字特殊功能命令
 
 ### `/dh f list`
 
+**权限：**`dh.command.features.list`
+
 列出所有可用功能。
 
 ### `/dh f reload <功能>`
+
+**权限：**`dh.command.features.reload`
 
 重载指定功能。
 

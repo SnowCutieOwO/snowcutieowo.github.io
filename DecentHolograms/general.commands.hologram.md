@@ -12,7 +12,10 @@
 
 ## 命令
 
-> [!NOTE|label:命令帮助]
+**别称：**`hologram`、`holo`、`h`
+**权限：**`dh.command.holograms`
+
+> [!INFO|label:命令帮助]
 > 可输入如下命令来查看所有可用的子命令：
 > ```
 > /dh h help
@@ -20,12 +23,16 @@
 
 ### `/dh h addflag <悬浮字> <标志>`
 
+**权限：**`dh.command.holograms.addflag`
+
 向指定悬浮字添加标志。
 
 * `<悬浮字>` - 悬浮字的名称。
-* `<标志>` - 添加的[标志]。
+* `<标志>` - 添加的[标志](general.flags.md)。
 
 ### `/dh h align <悬浮字> {X|Y|Z|XZ|FACING} <其他悬浮字>`
+
+**权限：**`dh.command.holograms.align`
 
 将指定悬浮字移动到其他悬浮字按特定轴对齐的位置上。
 
@@ -35,13 +42,17 @@
 
 ### `/dh h center <悬浮字>`
 
+**权限：**`dh.command.holograms.center`
+
 将悬浮字中心水平移动到当前所在方块正中央。
 
 * `<悬浮字>` - 悬浮字的名称。
 
 ### `/dh h clone <悬浮字> <名称> [临时] [-l:<世界名称>:<x>:<y>:<z>]`
 
-**命令别称：**`copy`
+**别称：**`copy`
+
+**权限：**`dh.command.holograms.clone`
 
 复制已有悬浮字。
 
@@ -60,7 +71,9 @@
 
 ### `/dh h create <名称> [-l:<世界名称>:<x>:<y>:<z>] [内容]`
 
-**命令别称：**`create`、`c`
+**别称：**`create`、`c`
+
+**权限：**`dh.command.holograms.create`
 
 创建新的悬浮字。
 
@@ -78,7 +91,9 @@
 
 ### `/dh h delete <悬浮字>`
 
-**命令别称：**`del`、`remove`、`rem`
+**别称：**`del`、`remove`、`rem`
+
+**权限：**`dh.command.holograms.delete`
 
 删除现存的悬浮字。
 
@@ -86,13 +101,17 @@
 
 ### `/dh h disable <悬浮字>`
 
-**命令别称：**`off`
+**别称：**`off`
+
+**权限：**`dh.command.holograms.disable`
 
 禁用指定的悬浮字。禁用后它不会对任何玩家显示。
 
 * `<悬浮字>` - 悬浮字的名称。
 
 ### `/dh h downorigin <悬浮字> {true|false}`
+
+**权限：**`dh.command.holograms.downorigin`
 
 设置下行插入的状态。设置为 true 时，新插入的悬浮字行会将已有的悬浮字顶起。
 
@@ -101,7 +120,9 @@
 
 ### `/dh h enable <悬浮字>`
 
-**命令别称：**`on`
+**别称：**`on`
+
+**权限：**`dh.command.holograms.enable`
 
 启用指定的悬浮字。
 
@@ -109,11 +130,15 @@
 
 ### `/dh h info <悬浮字>`
 
+**权限：**`dh.command.holograms.info`
+
 显示悬浮字的详细信息。
 
 * `<悬浮字>` - 悬浮字的名称。
 
 ### `/dh h lines <悬浮字> <页码> [列表页码]`
+
+**权限：**`dh.command.holograms.lines`
 
 列出悬浮字所有插入的文本行。
 
@@ -123,7 +148,9 @@
 
 ### `/dh h move <悬浮字> <x> <y> <z>`
 
-**命令别称：**`mv`
+**别称：**`mv`
+
+**权限：**`dh.command.holograms.move`
 
 将悬浮字移动至指定坐标。
 
@@ -134,7 +161,9 @@
 
 ### `/dh h movehere <悬浮字>`
 
-**命令别称：**`mvhr`
+**别称：**`mvhr`
+
+**权限：**`dh.command.holograms.movehere`
 
 将指定悬浮字传送至你的位置。
 
@@ -142,11 +171,15 @@
 
 ### `/dh h near <距离>`
 
+**权限：**`dh.command.holograms.near`
+
 列出指定范围内存在的悬浮字。
 
 * `<距离>` - 搜索悬浮字的范围，单位为格。
 
 ### `/dh h removeflag <悬浮字> <标志>`
+
+**权限：**`dh.command.holograms.removeflag`
 
 将悬浮字中的指定标志删去。
 
@@ -155,12 +188,16 @@
 
 ### `/dh h rename <悬浮字> <new_name>`
 
+**权限：**`dh.command.holograms.rename`
+
 重命名现存的悬浮字。
 
 * `<悬浮字>` - 需要重命名的悬浮字名称
 * `<new_name>` - 悬浮字的新名称。
 
 ### `/dh h setdisplayrange <悬浮字> <范围>`
+
+**权限：**`dh.command.holograms.setdisplayrange`
 
 设置玩家可见悬浮字的最大范围。
 
@@ -169,7 +206,9 @@
 
 ### `/dh h setfacing <悬浮字> <朝向>`
 
-**命令别称：**`facing`、`face`、`setface`
+**别称：**`facing`、`face`、`setface`
+
+**权限：**`dh.command.holograms.setfacing`
 
 设置悬浮字的面朝方向（yaw）。仅影响 `#HEAD:`、`#SMALLHEAD:` 与 `#ENTITY` 内容的悬浮字行。
 
@@ -178,7 +217,9 @@
 
 ### `/dh h setpermission <悬浮字> [权限]`
 
-**命令别称：**`permission`、`setperm`、`perm`
+**别称：**`permission`、`setperm`、`perm`
+
+**权限：**`dh.command.holograms.setpermission`
 
 显示浏览当前悬浮字所需的权限。
 
@@ -187,7 +228,9 @@
 
 ### `/dh h setupdateinterval <悬浮字> <间隔>`
 
-**命令别称：**`updateinterval`
+**别称：**`updateinterval`
+
+**权限：**`dh.command.holograms.setupdateinterval`
 
 设置更新间隔。
 
@@ -196,6 +239,8 @@
 
 ### `/dh h setupdaterange <悬浮字> <范围>`
 
+**权限：**`dh.command.holograms.setupdaterange`
+
 设置玩家可看见悬浮字刷新的最大范围。
 
 * `<悬浮字>` - 悬浮字的名称。
@@ -203,13 +248,17 @@
 
 ### `/dh h teleport <悬浮字>`
 
-**命令别称：**`tele、tp
+**别称：**`tele`、`tp`
+
+**权限：**`dh.command.holograms.teleport`
 
 将你传送至指定悬浮字的位置。
 
 * `<悬浮字>` - 悬浮字的名称。
 
 ### `/dh h update <悬浮字>`
+
+**权限：**`dh.command.holograms.update`
 
 隐藏悬浮字并将其再次显示，达到手动刷新的效果。
 

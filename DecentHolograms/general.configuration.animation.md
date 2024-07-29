@@ -17,36 +17,32 @@
 ### animation_example.yml
 ```YAML
 #
-# Speed of the animation in ticks.
-# Represents the delay between animation steps.
+# 单位为刻的动画速度.
+# 代表每帧动画之间的延迟.
 #
-# For speed of 2, the animation will wait
-# two ticks between each step.
+# 如果设置为 2, 则每帧之间会等待 2 刻.
 speed: 2
 
 #
-# Pause of the animation in ticks.
-# Represents the delay between animation runs.
+# 单位为刻的动画间隔.
+# 表示每次动画播放之间的延迟.
 #
-# For speed of 20, the animation will wait
-# 20 ticks between each run.
+# 如果设置为 20, 则每次动画播放时都会等待 20 刻.
 pause: 20
 
 #
-# Steps of the animation
+# 动画帧
 #
-# List of strings that's going to be cycled
-# over during the animation.
+# 动画逐帧显示的文本内容.
 #
-# You can use '{text}' placeholder, to display
-# the text, that is inside this animation
-# in the hologram:
-# - <#ANIM:example>This text</ANIM>
+# 你可以使用 '{text}' 变量来显示通过标签传入的文本参数
+# 如下文中的 "文本" 可以通过 {text} 显示
+# - <#ANIM:example>文本</ANIM>
 #
 steps:
-- 'Example 1 {text}'
-- 'Example 2'
-- 'Example 3'
-- 'Example 4'
-- 'Example 5'
+- '示例 1 {text}'
+- '示例 2'
+- '示例 3'
+- '示例 4'
+- '示例 5'
 ```
