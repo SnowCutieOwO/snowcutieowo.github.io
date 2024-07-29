@@ -16,6 +16,7 @@ DecentHolograms 支持两种类型的动画：预制动画与自定义动画。
 > 若要在动画中使用变量，你应该在 [`config.yml`](general.configuration.config.md) 下启用 `allow-placeholder-inside-animation` 设置，
 
 ## 预制动画
+
 这里有一些你可以使用的预制动画，任何文本都可套用这些格式。
 
 ### 随机颜色
@@ -67,3 +68,11 @@ DecentHolograms 支持两种类型的动画：预制动画与自定义动画。
 ```
 <#ANIM:scroll>文本</#ANIM>
 ```
+
+## 自定义动画
+
+自定义动画以 YAML 的格式存储在插件的 `animations` 文件夹中，可以通过与[预制动画](#预制动画)相同的格式引用。
+
+但是与与预制动画不同的一点是，你不能使用额外的选项来自定义动画。你能做到的只有在行内使用 `{text}` 内建变量来显示 `<#ANIM>` 标签包含的文本。
+
+示例动画文件会在插件初次安装时生成，你也可以在[这个章节](general.configuration.animation.md)找到它。
