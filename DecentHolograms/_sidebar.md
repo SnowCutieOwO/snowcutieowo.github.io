@@ -10,7 +10,7 @@
     * [特性](general.commands.features.md)
     * [悬浮字](general.commands.hologram.md)
     * [悬浮字行](general.commands.hologram-line.md)
-    * [悬浮字页](general.commands.hologram.pages.md)
+    * [悬浮字页](general.commands.hologram-pages.md)
   * [配置](general.configuration.md)
     * [主配置](general.configuration.config.md)
     * [动画配置](general.configuration.animation.md)
