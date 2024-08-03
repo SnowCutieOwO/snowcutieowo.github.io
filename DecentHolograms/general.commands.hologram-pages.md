@@ -39,10 +39,10 @@
 
 **权限：**`dh.command.pages.add`
 
-向悬浮字中插入新的一页。
+向悬浮字末尾插入新的一页。
 
 * `<悬浮字>` - 悬浮字的名称。
-* `[内容]` - 新页面中的默认内容。默认内容可在 [`defaults.text` 配置]中修改。
+* `[内容]` - 新页面中的默认内容。默认内容可在 [`defaults.text` 配置](general.configuration.config.md)中修改。
 
 ### `/dh p addaction <悬浮字> <页码> <点击类型> <操作>`
 
