@@ -10,11 +10,11 @@
 
 Bukkit 版本的 WorldEdit 的配置文件可以在 `plguins/WorldEdit/config.yml`，一般位于服务器核心的同级目录下[^1]。
 
-需要注意的是，Bukkit 所使用的 YAML 格式配置文件容错率很低。在文件中使用的缩进必须使用四个空格（TAB 缩进符会破坏文件结构！），且要一直遵守 YAML 的格式。如果你很少或从未编辑过 YAML 类型的文件的话，你可以将你的配置文件放进一些在线格式检测器中（例如[这个网站](http://yaml-online-parser.appspot.com/)[^2]），并确保你所设置的配置文件中没有任何格式错误。
+需要注意的是，Bukkit 所使用的 YAML 格式配置文件容错率很低。在文件中使用的缩进必须使用四个空格（TAB 缩进符会破坏文件结构！），且要一直遵守 YAML 的格式。如果你很少或从未编辑过 YAML 类型的文件的话，你可以将你的配置文件放进一些在线格式检测器中（例如[这个网站](https://yaml-online-parser.appspot.com/)[^2]），并确保你所设置的配置文件中没有任何格式错误。
 
 ### Forge/Fabric 客户端/服务器
 
-Forge/Fabric 的配置文件选项可在 `config/worldedit/worldedit.properties` 文件中找到。在服务器中，这个文件则会对应存在于服务器的根目录下（也就是服务器核心 .jar 文件的同级目录附近）。在单人客户端中，这会存在于你的“.minecraft”文件夹下。
+NeoForge/Fabric 的配置文件选项可在 `config/worldedit/worldedit.properties` 文件中找到。在服务器中，这个文件则会对应存在于服务器的根目录下（也就是服务器核心 .jar 文件的同级目录附近）。在单人客户端中，这会存在于你的“.minecraft”文件夹下。
 
 ### Sponge 服务器
 

@@ -52,9 +52,9 @@ WorldEdit 是由许多用户共同维护开发的，WorldEdit 的很大一部分
 
 造成这个问题的两个原因可能是线程守护强行中止了服务器进程，或者服务器内存溢出。
 
-请确保你至少为服务器分配了 1GB（维持服务器运行）+ 每 1000 万个操作的方块增加 2GB 内存。例如，若你正在编辑的方块数量达到了 5000 万左右，则 `50 / 10 = 5`，然后 `1 + 2 * 5`，即你需要分配 11GB 的内存。若要将 11GB 分配至你的服务器，你需要在开服参数中添加 `-Xmx11G`。Bukkit/Spigot 服务端见[此示例操作步骤](https://bukkit.gamepedia.com/Setting_the_Java_Virtual_Machine_Heap_Size)。在 Forge/Fabric 服务器上大体相同。
+请确保你至少为服务器分配了 1GB（维持服务器运行）+ 每 1000 万个操作的方块增加 2GB 内存。例如，若你正在编辑的方块数量达到了 5000 万左右，则 `50 / 10 = 5`，然后 `1 + 2 * 5`，即你需要分配 11GB 的内存。若要将 11GB 分配至你的服务器，你需要在开服参数中添加 `-Xmx11G`。Bukkit/Spigot 服务端见[此示例操作步骤](https://bukkit.gamepedia.com/Setting_the_Java_Virtual_Machine_Heap_Size)。在 NeoForge/Fabric 服务器上大体相同。
 
-若要修复线程守护强行中止服务器的问题，尝试将线程守护的超时时间拉长。对于 Spigot/Paper 服务端，可以在 `spigot.yml` 下的 `timeout-time` 项设置处调整。对于 Forge/Fabric 服务端，则是 `server.properties` 下的 `max-tick-time` 项。大多数情况下这些操作是不必要的，因为 WorldEdit 在大多数情况下都会触发线程守护。
+若要修复线程守护强行中止服务器的问题，尝试将线程守护的超时时间拉长。对于 Spigot/Paper 服务端，可以在 `spigot.yml` 下的 `timeout-time` 项设置处调整。对于 NeoForge/Fabric 服务端，则是 `server.properties` 下的 `max-tick-time` 项。大多数情况下这些操作是不必要的，因为 WorldEdit 在大多数情况下都会触发线程守护。
 
 ### 我的服务器在单人客户端操作时崩溃了（大于 100 万方块数量的操作）！
 

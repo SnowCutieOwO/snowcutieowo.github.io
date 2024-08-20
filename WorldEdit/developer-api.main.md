@@ -10,7 +10,7 @@ WorldEdit 为其他模组和插件提供了一个稳定的公开接口。它提�
 * `worldedit-core`：核心 API。它不依赖任何平台，但也不提供任何转换类；
 * `worldedit-bukkit`：Bukkit 平台集成。依赖于 Bukkit API，并通过 `BukkitAdapter` 提供了在 Bukkit 数据类型和 WorldEdit 数据类型之间的转换功能；
 * `worldedit-fabric-mcXYZ`：Fabric 平台集成。依赖于 Fabric API，并通过 `FabricAdapter` 提供了在 Fabric 数据类型和 WorldEdit 数据类型之间的转换功能。使用前需将 XYZ 替换为对应的 Minecraft 版本；
-* `worldedit-forge-mcXYZ`：Forge 平台集成。依赖于 Forge，并通过 `ForgeAdapter` 提供了在 Forge 数据类型和 WorldEdit 数据类型之间的转换功能。使用前需将 XYZ 替换为对应的 Minecraft 版本；
+* `worldedit-neoforge-mcXYZ`：NeoForge 平台集成。依赖于 NeoForge，并通过 `ForgeAdapter` 提供了在 Forge 数据类型和 WorldEdit 数据类型之间的转换功能。使用前需将 XYZ 替换为对应的 Minecraft 版本；
 * `worldedit-sponge-mcXYZ`：Sponge 平台集成。依赖于 Sponge API，并通过 `SpongeAdapter` 提供了在 Sponge 数据类型和 WorldEdit 数据类型之间的转换功能。使用前需将 XYZ 替换为对应的 Minecraft 版本；（目前只支持 1.12.2，因为 Sponge 只在这个版本有模组核心。）
 * `worldedit-cli`：命令行集成。用作依赖时可能不很有用，但可以在 Minecraft 之外使用 WorldEdit 的功能。
 

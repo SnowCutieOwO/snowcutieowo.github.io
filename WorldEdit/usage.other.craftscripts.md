@@ -34,7 +34,7 @@
 
 > [!TIPS|label:提示]    
 > 当我们使用 WorldEdit API 编写快速脚本时，对这部分内容的限制并不算多。    
-> 进阶用户甚至可以与服务端底层 API（如 Bukkit、Forge 等）进行对接。
+> 进阶用户甚至可以与服务端底层 API（如 Bukkit、NeoForge 等）进行对接。
 
 ### 介绍
 

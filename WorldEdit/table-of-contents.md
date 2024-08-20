@@ -45,11 +45,10 @@ WorldEdit 是一个在 Minecraft 游戏内使用的快捷地图编辑器。通�
 
 ## 相关链接
 
-* [WorldEdit 主页](http://www.enginehub.org/worldedit)
-* [适用于 Bukkit 的插件下载](https://dev.bukkit.org/projects/worldedit/files/)
-* [适用于 Forge/Fabric 的模组下载](https://www.curseforge.com/minecraft/mc-mods/worldedit/files)
+* [WorldEdit 主页](https://www.enginehub.org/worldedit)
+* [适用于 Bukkit/NeoForge/Fabric 的模组下载](https://modrinth.com/plugin/worldedit/versions)
 * [适用于 Sponge 的插件下载](https://ore.spongepowered.org/EngineHub/WorldEdit)
-* [实验性构建](http://builds.enginehub.org/job/worldedit?branch=master)
+* [实验性构建](https://builds.enginehub.org/job/worldedit?branch=master)
 * [Discord 聊天群组](https://discord.gg/enginehub/)
 
 ## 另见

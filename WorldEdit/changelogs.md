@@ -15,6 +15,14 @@
 * 完成 [#e0aabcd](https://github.com/EngineHub/WorldEditDocs/commit/e0aabcd24376413b37c7a1a4f90fef6672049763) 的跟进
 * 将“[剪贴板](usage.clipboard.md)”章节的漏洞上报至了 EngineHub 原文维基开源处（[issue#49](https://github.com/EngineHub/WorldEditDocs/issues/49)）。
 
+#### 2024/8/20 15:49
+
+* 完成 [#50d0a82](https://github.com/EngineHub/WorldEditDocs/commit/50d0a82c36bd30dfcf5d5e93ba8371864c237e7d) 的跟进
+* 完成 [#c6b16a8](https://github.com/EngineHub/WorldEditDocs/commit/c6b16a804f9400ef0d2ecbc1c18597d08d4e49d3) 的跟进
+* 完成 [#a975bd0](https://github.com/EngineHub/WorldEditDocs/commit/a975bd07da5b294c7d7d235ed646e09da5df1c3e) 的跟进
+* 完成 [#d89d5d2](https://github.com/EngineHub/WorldEditDocs/commit/d89d5d2db7c7e4a737f180f963788a79c4f78801) 的跟进
+* 完成 [#a96db57](https://github.com/EngineHub/WorldEditDocs/commit/a96db572331b56235699dbb35676cf5288173679) 的跟进
+
 #### TODO
 
 1. ~~将 3.24 的剩余更新完成~~
