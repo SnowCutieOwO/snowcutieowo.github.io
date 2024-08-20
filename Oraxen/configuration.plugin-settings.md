@@ -49,15 +49,9 @@ Plugin:
 
 保护功能可以阻止玩家直接偷窃纹理包。这不会让其代码增加，但鉴于代码的特殊性，在启用后**不应**尝试打开生成的 zip 文件，否则会导致硬盘受损。
 
-<center>
+![img](images/image30.png '1 艾字节（EB）= 1000000000（1 亿） 吉字节（GB）')
 
-![img](images/image30.png)
-<sup>1 艾字节（EB）= 1000000000（1 亿） 吉字节（GB）</sup>
-
-![img](images/image31.png)
-<sup>操作系统会比你先害怕文件大小导致的后果</sup>
-
-</center>
+![img](images/image31.png '操作系统会比你先害怕文件大小导致的后果')
 
 ### 上传
 
@@ -68,7 +62,7 @@ Plugin:
       server: atlas.oraxen.com # 你也可以运行自己的 polymath 实例
 ```
 
-Oraxen 集成了 Polymoth（以 Python 编写的高兼容性自定义网页服务器）。你可以在[这里](https://github.com/Th0rgal/Polymath/)下载源码，并自行托管或使用指定实例（atlas）。你也可以使其[接入自己的托管服务]()。
+Oraxen 集成了 Polymoth（以 Python 编写的高兼容性自定义网页服务器）。你可以在[这里](https://github.com/Th0rgal/Polymath/)下载源码，并自行托管或使用指定实例（atlas）。你也可以使其[接入自己的托管服务](developer.custom-hosting-service.md)。
 
 ### 调度
 

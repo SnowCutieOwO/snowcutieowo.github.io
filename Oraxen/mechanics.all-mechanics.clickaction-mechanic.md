@@ -7,7 +7,7 @@
 
 ## 配置
 
-若要着手制作，先创建一个基础的[方块]()或[家具]()。
+若要着手制作，先创建一个基础的[方块](mechanics.noteblock-mechanic.md)或[家具](mechanics.furniture-mechanic.md)。
 
 接下来，在 `mechanics` 不分，你可以在任何 `noteblock-mechanic`、`furniture-mechanic` 或 `stringblock-mechanic` 下添加默认的 clickAction 机制。
 

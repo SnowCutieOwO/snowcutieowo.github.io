@@ -74,7 +74,7 @@ storage-mathod: sqlite
 
 这些存储类型中的格式大致相同，部分因语法差异而略有区别。
 
-部分示例文件可以在[文末]找到。
+部分示例文件可以在[文末](#示例文件)找到。
 
 若要使用这些选项，可按如下内容分别设置：
 ```YAML
@@ -94,7 +94,7 @@ storage-method: toml
 
 若要存储大量数据，则我们会推荐你使用这个，或者考虑扩展一个服务器网络。若你已经在运行多个服务器且想在服务器之间同步数据，那么你就需要使用其中一种的远程数据库。
 
-数据库结构可在[这里]找到。
+数据库结构可在[这里](https://github.com/LuckPerms/LuckPerms/tree/master/common/src/main/resources/me/lucko/luckperms/schema)找到。
 
 若要使用这些选项，可按如下内容分别设置：
 ```YAML

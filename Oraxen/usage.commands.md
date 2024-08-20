@@ -72,8 +72,8 @@ oraxen.command.repair.all # 允许使用 /o repair all 命令
 
 这个命令能通过配方管理器在游戏内添加新的合成表。更多信息可见“配方”章节。
 
-![img](images/image.png)
-<br><sup>通过命令 /o recipe show all 显示的配方</sup>
+![img](images/image.png '通过命令 /o recipe show all 显示的配方')
+
 
 **命令用法：**
 

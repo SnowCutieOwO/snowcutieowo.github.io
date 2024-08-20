@@ -72,8 +72,8 @@
 
 ## 下一步
 
-* [命令与权限]
-* [配置文件]
-* [数据库]
-* [Redis 支持]
-* [语言贡献]
+* [命令与权限](guides.commands.md)
+* [配置文件](guides.config-files.md)
+* [数据库](documentation.database.md)
+* [Redis 支持](documentation.redis-support.md)
+* [语言贡献](documentation.translations.md)

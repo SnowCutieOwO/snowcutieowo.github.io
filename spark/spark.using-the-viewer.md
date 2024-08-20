@@ -18,8 +18,7 @@
 
 你可以把线程想象成一个在客户端/服务端/等等...干活的工人。以 Minecraft *服务器*为例，我们感兴趣的线程一般叫做“服务器线程”，这是服务端用于运行游戏的线程。
 
-![img](images/viewer-tree-thread.png)    
-<sup>一张图片，显示了服务器主线程的名称。</sup>
+![img](images/viewer-tree-thread.png '一张图片，显示了服务器主线程的名称。')    
 
 ### 调用框架（“节点”）
 
@@ -43,8 +42,7 @@
 
 你可以**点击**节点，展开并浏览它的**子节点**。这些子节点会在它下方显示。
 
-![img](images/viewer-tree-expand.png)
-<sup>一张图片，显示了展开的节点与其下的子节点的内容。</sup>
+![img](images/viewer-tree-expand.png '一张图片，显示了展开的节点与其下的子节点的内容。')
 
 当在这个示例中展开“服务器线程”时：
 
@@ -59,8 +57,7 @@
 
 ### 进一步分析
 
-![img](images/viewer-tree-expand-again.png)
-<sup>一张图片，显示了进一步展开的子节点列表。</sup>
+![img](images/viewer-tree-expand-again.png '一张图片，显示了进一步展开的子节点列表。')
 
 这个时候，我们就可以看到服务器执行的方法被分别展示在了我们的报告中。
 
@@ -93,8 +90,7 @@ Minecraft 客户端/服务器混淆（“加密代码，让代码更难被读懂
 
 你可以在页面的**右上角**的**下拉式菜单栏**中找到这一部分的内容。
 
-![img](images/viewer-deobf.png)
-<sup>一张图片，显示了用户所手动选择的反混淆映射表类型。</sup>
+![img](images/viewer-deobf.png '一张图片，显示了用户所手动选择的反混淆映射表类型。')
 
 ## 标记特定的调用方法
 
@@ -106,8 +102,7 @@ Minecraft 客户端/服务器混淆（“加密代码，让代码更难被读懂
 
 你也可以**右键点击**调用的方法，然后在弹出的菜单中点击**“Toggle bookmark（标记）”**
 
-![img](images/viewer-bookmark.png)
-<sup>一张图片，显示了在方法上右键所弹出的菜单，并选择了“标记”选项。</sup>
+![img](images/viewer-bookmark.png '一张图片，显示了在方法上右键所弹出的菜单，并选择了“标记”选项。')
 
 你会注意到这个方法变成了红色。
 
@@ -162,15 +157,11 @@ Minecraft 客户端/服务器混淆（“加密代码，让代码更难被读懂
 
 若要打开火焰图浏览模式，只需要在顶部的控制栏点击“火焰”标志，或者**右键**点击一个线程/方法调用之后，再在弹出的菜单中选择**“View as Flame Graph（以火焰图浏览）”**
 
-![img](images/viewer-flame-open.png)
-
-<sup>一张图片，显示了在方法上右键所弹出的菜单，并选择了“以火焰图浏览”选项。</sup>
+![img](images/viewer-flame-open.png '一张图片，显示了在方法上右键所弹出的菜单，并选择了“以火焰图浏览”选项。')
 
 如此操作过后，便可打开火焰图浏览模式。
 
-![img](images/viewer-flame.png)
-
-<sup>一张图片，显示了火焰图浏览模式中各个方法或线程显示的样式。</sup>
+![img](images/viewer-flame.png '一张图片，显示了火焰图浏览模式中各个方法或线程显示的样式。')
 
 在这个模式中，每个节点的**长度**，**对应**了执行这部分内容所消耗的时间。
 
@@ -180,6 +171,4 @@ Minecraft 客户端/服务器混淆（“加密代码，让代码更难被读懂
 
 若要退出火焰图浏览模式，返回正常的阅读模式，只需点击在页面**右上角**的“Exit Flame View（退出火焰图浏览模式）”即可。
 
-![img](images/viewer-flame-exit.png)
-
-<sup>一张图片，显示了“退出火焰图浏览”按钮的样子。</sup>
+![img](images/viewer-flame-exit.png '一张图片，显示了“退出火焰图浏览”按钮的样子。')

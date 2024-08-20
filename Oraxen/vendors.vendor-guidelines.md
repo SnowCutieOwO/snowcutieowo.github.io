@@ -238,7 +238,7 @@ my_example_furniture:
 
 ItemsAdder 因其使用了盔甲架，会使用相同的 `HEAD`。
 
-你可以在[展示实体属性]()部分详细阅读。
+你可以在[展示实体属性](mechanics.furniture-mechanic.display-entity-furniture.md#展示实体属性)部分详细阅读。
 
 `barrier` 属性用于指定家具的碰撞箱。
 

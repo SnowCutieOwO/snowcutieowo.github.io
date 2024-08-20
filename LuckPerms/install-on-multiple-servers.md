@@ -2,7 +2,7 @@
 
 LuckPerms 自设计之初便为群组服着想。在正确安装与配置之后，权限数据会在群组子服间传输。
 
-在群组中安装 LuckPerms 时，默认的[安装步骤]和[安装需求]仍然有效。
+在群组中安装 LuckPerms 时，默认的[安装步骤](install-on-a-single-server.md)和[安装需求](install-on-a-single-server.md#要求)仍然有效。
 
 但是，群组服安装有一个额外的要求。    
 **所有的 LuckPerms 示例都必须连接至同一个存储系统**。这意味着你只能使用 `MySQL`、`MariaDB`、`PostgreSQL` 或 `MongoDB` 中的一个。LuckPerms 必须连接至同一个 SQL/MongoDB 服务器，且要能读取到同一数据库或集。
@@ -52,19 +52,19 @@ sponge {
 
 在安装了 LuckPerms 之后，你需要关闭服务器，打开主配置文件，并将注意力集中在下文的选项：
 
-[**`server`**]()
+[**`server`**](configuration.md#server)
 
 若你想要在安装时就设置权限或继承权限组，你就需要修改配置文件中 `server` 的值。（这部分配置文件就在配置文件的最顶上！😄）
 
 这个值用于决定一个“服务器”对所有玩家进服时的上下文[^1]。
 
-[**`storage-method`**]()
+[**`storage-method`**](configuration.md#storage-method)
 
 正如在页面顶所述的那样，若你想要在子服之间同步数据，那么子服安装的所有 LuckPerms 都需要连接到同一个服务器。
 
 这意味着 `storage-method` 只能是 `mysql`、`mariadb`、`postgresql` 或 `mongodb`。请不要忘了在配置文件中填写数据库的连接凭证！
 
-[**`messaging-service`**]()
+[**`messaging-service`**](configuration.md#messaging-service)
 
 “通信服务”是 LuckPerms 内的一个功能，允许服务器在权限数据发生改变时提醒其他服务器。该功能也允许条目在群组之间调配。
 
@@ -84,4 +84,4 @@ sponge {
 
 这意味着如果你想要用 LuckPerms 在 Spigot 或 Sponge 子服做权限检查，你也需要在子服上安装它，在群组服核心上安装它是不能代替它在子服安装的步骤的。
 
-[^1]: 条件值，即执行命令时的“[情境]”。
+[^1]: 条件值，即执行命令时的“[情境](features.context.md)”。

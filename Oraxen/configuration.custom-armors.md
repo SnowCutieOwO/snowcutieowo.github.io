@@ -96,11 +96,7 @@ ruby_helmet:
 > 
 > 对于 Iris，你需要安装 [CIT Resewn](https://modrinth.com/mod/cit-resewn)，这之后的所有内容都会为你处理好。
 
-<center>
-
 ![img](images/image36.png)
-
-</center>
 
 > [!WARNING|label:警告]
 > 命名装备时需要小心，防止纹理无法识别。
@@ -166,13 +162,9 @@ https://oraxen.com/resources/armor_leggings.png
 > 其他深度会导致渐变不完全，且着色器使用的像素为黑色。
 > 这不会破坏 Optifine 或 Iris 版本的纹理包，但有可能破坏原版的纹理包。
 
-<center>
-
 ![img](images/image37.png)
 
 ![img](images/image38.png)
-
-</center>
 
 > [!TIP|label:提示]
 > 你可以通过在文件夹中添加 **\_e\_.png** 结尾的文件，让你的纹理具有**辐射**（无需 Optifine）。例如 `ruby_armor_layer_1_e.png`。

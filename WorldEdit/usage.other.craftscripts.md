@@ -29,10 +29,10 @@
 * 接受 WorldEdit 强大的方块类型格式（`//set sign[facing=north]`）；
 * 获取用户的选区。
 
-> **提示：**    
+> [!TIPS|label:提示]    
 > 推荐你在编写快速脚本之前对 Java 或者 JavaScript 进行一些基本的了解。
 
-> **提示：**    
+> [!TIPS|label:提示]    
 > 当我们使用 WorldEdit API 编写快速脚本时，对这部分内容的限制并不算多。    
 > 进阶用户甚至可以与服务端底层 API（如 Bukkit、Forge 等）进行对接。
 

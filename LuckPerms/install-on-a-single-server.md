@@ -104,7 +104,7 @@ LuckPerms 对安装环境有一些要求。不过*大多数*服务器都可以�
 
 ### 网络连接
 
-LuckPerms 使用了一系列[外部库]，其中部分内容会在[运行时自动下载]。
+LuckPerms 使用了一系列[外部库](project-info.external-connections.md)，其中部分内容会在[运行时自动下载](project-info.external-connections.md#下载外部库)。
 
 若你的服务器网络不佳或尚未联网，你可以（在有网的地方先）本地安装 LP，然后将 `/LuckPerms/libs/` 下的文件复制到服务器中。
 

@@ -7,43 +7,12 @@
 
 转到 ModelEngine 文件夹。它看起来应该像这样：
 
-
-<center>
-
-![img](images/image39.png)
-
-<sup>
-
-ModelEngine 的文件夹内容，图片由 @Thew 提供
-
-</sup>
-
-</center>
+![img](images/image39.png 'ModelEngine 的文件夹内容，图片由 @Thew 提供')
 
 打开 `resource pack`（资源包）文件夹：
 
-<center>
-
-
-![img](images/image40.png)
-
-<sup>
-
-resource pack 文件夹的内容，图片由 @Thew 提供
-
-</sup>
-
-</center>
+![img](images/image40.png 'resource pack 文件夹的内容，图片由 @Thew 提供')
 
 复制 assets 文件夹（整个文件夹，不只是里面的文件！），将其放入 `Oraxen/pack` 中，然后看起来应该像这样：
 
-<center>
-
-![img](images/image41.png)
-
-<sup>
-Oraxen/pack 文件夹的内容，图片由 @Thew 提供
-</sup>
-
-
-</center>
+![img](images/image41.png 'Oraxen/pack 文件夹的内容，图片由 @Thew 提供')

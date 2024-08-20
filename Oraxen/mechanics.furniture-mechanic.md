@@ -4,15 +4,7 @@
 
 ## 家具机制
 
-<center>
-
-![img](images/image48.png)
-
-<sup>
-示例家具
-</sup>
-
-</center>
+![img](images/image48.png '示例家具')
 
 ### 单物品示例配置
 

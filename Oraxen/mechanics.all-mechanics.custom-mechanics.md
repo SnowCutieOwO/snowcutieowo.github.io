@@ -5,7 +5,7 @@
 
 这个机制仅对物品生效，不对方块/家具生效。
 
-对于那些内容，请参阅[点击动作（clickAction）机制]()章节。
+对于那些内容，请参阅[点击动作（clickAction）机制](mechanics.all-mechanics.clickaction-mechanic.md)章节。
 
 本章节提及的机制包含三个主要部分：
 
