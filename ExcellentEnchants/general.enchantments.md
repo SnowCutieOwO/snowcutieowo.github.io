@@ -72,7 +72,7 @@
 
 |附魔名称|附魔描述|作用物品|冲突附魔|
 |---|---|---|---|
-|下界杀手（Bane of Netherspawn）|概率对下界生物造成额外伤害。|剑、斧|Sharpness、Bane of Arthropods、Smite、Village Defender|
+|下界杀手（Bane of Netherspawn）|概率对下界生物造成额外伤害。|剑、斧|锋利、亡灵杀手、节肢杀手、村庄卫士|
 |致盲（Blindness）|命中时概率附加失明效果。|剑、斧|-|
 |混乱（Confusion）|命中时概率附加反胃效果。|剑、斧|-|
 |治愈（Cure）|命中时概率治愈僵尸村民与僵尸猪灵。|剑、斧|-|
