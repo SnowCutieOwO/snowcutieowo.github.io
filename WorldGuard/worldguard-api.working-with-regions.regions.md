@@ -34,7 +34,7 @@
 > ```Java
 > if (region instanceof ProtectedPolygonalRegion) {
 >     ProtectedPolygonalRegion polygon = (ProtectedPolygonalRegion) region;
->     List<BlockVector2D> points = polygon.getPoints();
+>     List<BlockVector2> points = polygon.getPoints();
 > }
 > ```
 
@@ -143,7 +143,7 @@ ProtectedRegion region = new ProtectedCuboidRegion("spawn", min, max);
 
 只支持平面多边形。这些是垂直方向上无限拓展的区域，也就是从最小 Y 轴覆盖到最大 Y 轴的区域。至少需要三个点来创建一个有效的平面多边形区域。
 ```Java
-List<BlockVector2> points = Lists.newArrayList(); // 从 Guava 调用
+List<BlockVector2> points = new ArrayList<>();
 points.add(BlockVector2.at(3, 4));
 points.add(BlockVector2.at(0, 0));
 points.add(BlockVector2.at(19, 3));

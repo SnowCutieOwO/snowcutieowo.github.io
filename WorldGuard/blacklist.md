@@ -7,15 +7,15 @@
 * 向玩家在放置附魔台的时候发送消息。
 
 示例黑名单文件如下：
-```HOCON
+```Ini
 # 禁用岩浆桶
-[lavabucket]
+[lava_bucket]
 ignore-groups=admins,mods
 on-use=deny,tell
-message=Sorry, you can't use lava buckets!
+message=抱歉, 但你不可以在这里使用岩浆桶!
 
 # 禁止挖掘矿物
-[goldore,ironore]
+[gold_ore,iron_ore]
 ignore-groups=admins
 on-break=deny,tell,notify
 
@@ -50,9 +50,9 @@ on-place=deny,notify,kick
 
 ### 匹配格式
 
-物品和方块可以通过它们的（旧版）数字 ID 和在 [Bukkit 的材料列表](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)中所提及的名称匹配。多个物品或方块名称可以用一个英文逗号“,”分隔：
-```
-[wood,brick,glass]
+物品和方块可以通过它们在 [Bukkit 的材料列表](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)中所提及的名称匹配。多个物品或方块名称可以用一个英文逗号“,”分隔：
+```Ini
+[oak_wood,brick,glass]
 ```
 
 ## 匹配格式
@@ -73,7 +73,7 @@ on-place=deny,notify,kick
 |on-dispense|当投掷器投掷了列表中的物品时|
 
 当指定事件时，一个“操作”列表需要在配置后指定，如下所示：
-```HOCON
+```Ini
 [enchantment_table]
 on-place=deny,tell
 on-drop=notify
@@ -97,7 +97,7 @@ on-drop=notify
 
 选项在事件的同一个配置部分被指定，可见下文示例：
 
-```HOCON
+```Ini
 [enchantment_table]
 on-place=deny,tell
 message=抱歉, 但是你不能使用附魔台!
@@ -122,13 +122,13 @@ message=抱歉, 但是你不能使用附魔台!
 ## 示例
 
 > [!NOTE|label:示例：禁用任意种类的桶]
-> ```HOCON
+> ```Ini
 > [lavabucket,waterbucket,bucket]
 > on-use=deny,tell
 > ```
 
 > [!NOTE|label:示例：踢出正在使用 TNT 的玩家，并提醒管理员]
-> ```HOCON
+> ```Ini
 > [tnt]
 > ignore-groups=admins
 > on-place=deny,notify,kick
@@ -175,7 +175,7 @@ message=抱歉, 但是你不能使用附魔台!
 
 WorldGuard 可以将整个入记录至 MySQL 数据库。尽管如此，你仍然还是要自行创建数据库与数据表。数据库需要创建的表的结构已在下文代码中给出。
 
-```MySQL
+```SQL
 CREATE TABLE IF NOT EXISTS `blacklist_events` (
  `id` int(11) NOT NULL AUTO_INCREMENT,
  `world` varchar(10) NOT NULL,

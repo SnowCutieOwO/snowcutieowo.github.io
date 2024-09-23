@@ -47,6 +47,9 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 |auto-no-drowning-group|FALSE|使 `wg-amphibious` 权限组内的玩家上线时无法被淹死。|
 |use-player-move-event|TRUE|是否允许 WorldGuard 使用少量 CPU 来计算玩家移动事件。若要使用 healing（治疗）、feeding（饱食）、greeting（欢迎标语）和部分其他的区域标志，则该项必须启用。|
 |use-player-teleports|TRUE|是否在计算玩家位置的时候考虑传送。该项在你使用玩家移动事件或任意需要检测移动事件的标志时应当保持开启。|
+|use-particle-effects|TRUE|是否在操作被阻止时显示粒子效果。|
+|disable-permission-cache|FALSE|WorldGuard 会在查询权限时调用先前的缓存以加快判断结果，在使用检查性能差的权限插件时相当有用。如果你在使用现代的权限插件情况下使用缓慢权限更新时遇到问题，请将该选项设置为 `TRUE`。|
+|custom-metrics-charts|TRUE|将部分信息上传至 [bStats](https://bstats.org/plugin/bukkit/WorldGuard/3283)|
 |host-keys||玩家可以连接至服务器的来源域名。见“域名秘钥”章节。|
 
 ### security.*
@@ -55,13 +58,14 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 |---|---|---|
 |deop-everyone-on-join|FALSE|在玩家上线时自动清除其 OP 状态。|
 |block-in-game-op-command|FALSE|禁用游戏内的 /op 命令。|
+|host-keys-allow-forge-clients|FALSE|允许玩家通过[域名密钥](configuration.host-keys.md)进入时使用 Forge 客户端。|
 
 ### build-permission-nodes.*
 
 |设置|默认值|描述|
 |---|---|---|
 |enable|FALSE|通过权限限制服务器上玩家的建筑权限。见“建筑权限”章节。|
-|deny-message||考虑到建筑由权限控制，这条消息会在玩家没有权限时发送。如果没有设置，那么将会使用默认消息。|
+|deny-message|`"&eSorry, but you are not permitted to do that here."`|考虑到建筑由权限控制，这条消息会在玩家没有权限时发送。如果没有设置，那么将会使用默认消息。|
 
 ### event-handling.*
 
@@ -92,8 +96,9 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 
 |设置|默认值|描述|
 |---|---|---|
-|block-potions|[]（列表）|被禁用的药水列表。可用的药水种类可在 Bukkit 文档中找到。|
+|block-potions|[]（列表）|被禁用的药水列表。可用的药水种类可在 [Bukkit 文档](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html)中找到。|
 |block-potions-overly-reliably|FALSE|WorldGuard 是否需要严格阻止 [i]block-potions[/i] 中提及的对应种类的药水。一般不需要设置此项，如果设置可能会误拦截其他种类的药水。|
+|disable-conduit-effects|FALSE|是否禁用海洋之心给予的潮涌能量效果。|
 
 > [!NOTE|label:示例：禁用夜视和速度药水]
 > 在 Bukkit 文档找到的名称可以按如下方式填入：
@@ -102,6 +107,10 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 > ```
 
 ### simulation.sponge.*
+
+> [!WARNING|label:警告]
+> 
+
 |设置|默认值|描述|
 |---|---|---|
 |enable|FALSE|是否模拟 Minecraft Classic 中的海绵方块行为。在 Minecraft 生存模式和 Minecraft 1.8 的介入之前，海绵是不会吸水的，这个选项已经过时且不建议启用。|
@@ -174,6 +183,7 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 |block-above-ground-slimes|FALSE|是否禁止史莱姆在地表生成。|
 |block-other-explosions|FALSE|是否禁用其他的爆炸事件。|
 |block-zombie-door-destruction|FALSE|是否禁用僵尸破门的能力。|
+|block-vehicle-entry|FALSE|是否阻止实体乘坐载具（如矿车、船等）。|
 |block-creature-spawn|[]（列表）|不应生成的实体列表。|
 
 
@@ -211,6 +221,13 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 |disable-creature-trampling|FALSE|禁用生物踩踏对海龟蛋的破坏。|
 |disable-player-trampling|FALSE|禁用玩家踩踏对海龟蛋的破坏。|
 
+### sniffer-egg.*
+
+|设置|默认值|描述|
+|---|---|---|
+|disable-creature-trampling|FALSE|禁用生物踩踏对嗅探兽蛋的破坏。|
+|disable-player-trampling|FALSE|禁用玩家踩踏对嗅探兽蛋的破坏。|
+
 ### weather.*
 
 |设置|默认值|描述|
@@ -219,7 +236,8 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 |disable-lightning-strike-fire|FALSE|是否禁用雷击产生的火焰。|
 |disable-thunderstorm|FALSE|是否禁用雷暴天气。|
 |disable-weather|FALSE|是否完全禁用雨天（包括雷暴天）。|
-|disable-pig-zombification|是否禁用猪受雷击变成僵尸猪灵的机制。||
+|disable-pig-zombification|FALSE|是否禁用猪受雷击转化为僵尸猪灵的机制。|
+|disable-villager-witchification|FALSE|是否禁用村民受雷击转化为女巫的机制。|
 |disable-powered-creepers|FALSE|是否禁用苦力怕被雷击后生成充能苦力怕的机制。|
 |always-raining|FALSE|天气锁定在下雨状态。|
 |always-thundering|FALSE|天气锁定在雷暴状态。|
@@ -247,17 +265,20 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 
 ### chest-protection.*
 
+> [!WARNING|label:警告]
+> 这些设置默认不处于配置文件中。这些功能被标记为弃用，且可能在未来被移除。
+
 |设置|默认值|描述|
 |---|---|---|
 |enable|FALSE|是否启用箱子保护功能。|
-|disable-off-check|FALSE|即使关闭箱子保护功能，WorldGuard 也仍然会保护那些带有包含文本 `[Lock]` 的告示牌的箱子，这可以使保护机制启用后，玩家不会恶意锁定其他玩家的箱子。若将该选项设置为 `true`，则箱子保护将不会激活。|
+|disable-off-check|TRUE|即使关闭箱子保护功能，WorldGuard 也仍然会保护那些带有包含文本 `[Lock]` 的告示牌的箱子，这可以使保护机制启用后，玩家不会恶意锁定其他玩家的箱子。若将该选项设置为 `true`，则箱子保护将不会激活。|
 
 
 ### blacklist.*
 
 |设置|默认值|描述|
 |---|---|---|
-|use-as-whitelist|FALSE|是否翻转黑名单的功能，即将该项设置为 true后，只有在该列表上的物品才可使用。|
+|use-as-whitelist|FALSE|是否翻转[黑名单](blacklist.md)的功能，即将该项设置为 true 后，只有在该列表上的物品才可使用。|
 
 ### blacklist.logging.*
 
@@ -269,7 +290,7 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 |enable|TRUE|是否启用将日志输出到控制台的功能。|
 |database:|||
 |enable|FALSE|是否启用将日志存储至数据库的功能。|
-|dsn|jdbc:mysql://localhost:3306/minecraft|连接至数据库的字符串。`minecraft` 处应当替换为数据库的名称。|
+|dsn|`jdbc:mysql://localhost:3306/minecraft`|连接至数据库的字符串。`minecraft` 处应当替换为数据库的名称。|
 |user|root|连接至数据库所使用的用户名。|
 |pass||连接至数据库所使用的密码。|
 |table|blacklist_events|所使用的数据库表名。|
@@ -285,7 +306,7 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 
 |设置|默认值|描述|
 |---|---|---|
-|wand|leather|右键方块查询区域信息的工具。默认情况下，该物品为皮革。在这之前是线，但 Minercraft 在之后的版本中为线添加了功能。|
+|wand|minecraft:leather|右键方块查询区域信息的工具。默认情况下，该物品为皮革。在这之前是线，但 Minercraft 在之后的版本中为线添加了功能。|
 |disable-bypass-by-default|FALSE|是否默认禁用绕过权限功能。|
 |announce-bypass-status|FALSE|是否在登录时提醒 `/region bypass` 的消息提示。|
 |invincibility-removes-mobs|FALSE|当玩家在设置了无敌（invincibility）标志的区域内受到实体的攻击，是否将该实体从世界中删除。|
@@ -296,6 +317,11 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 |use-paper-entity-origin|FALSE|在使用 Paper 服务端时，该选项会将出生于对应区域的实体当做该区域的成员，而不是它们当前所处位置。这会防止那些跑进其他区域的实体被击杀。（需要注意的是这与以玩家为敌对目标的实体不同——那些实体仍然取决于玩家的权限而不是它们本身。）|
 |max-claim-volume|30000|通过自助式区域认领功能获得的区域所可以包含的最大方块数量。|
 |claim-only-inside-existing-regions|FALSE|决定玩家是否只能认领已有的区域。|
+|cancel-chat-without-recipients|FALSE|若发出的聊天消息没有接收者（如处于 `receive-chat` 设置为 `deny` 的区域），是否阻止消息的发出。将该项功能启用可能会影响外部消息的传递（如 Discord 消息同步）。|
+|nether-portal-protection|TRUE|是否锁定任何传送至受保护区域的传送门。|
+|set-parent-on-claim||通过[自助区域认领](regions.claiming.md)创建的区域 ID，会被自动分配为[继承关系](regions.priority-and-inheritance.md#继承)|
+|location-flags-only-inside-regions|FALSE|需要确认玩家位置的[标志](regions.region-flags.md)是否只在指定区域生效。|
+|title-always-use-default-time|TRUE|如果你使用了区域的进入/离开标语，其他插件使得标题消失过快时，请开启该设置。|
 |max-region-count-per-player:||玩家（通过自助式区域认领功能）可认领的最大区域数量。该设置可以按权限组进行区别，在该设置下有新条目被加入时即对应权限组可领取的数量也被相应设置（例如“default”，默认用户组）。“default”项为默认设置。如果玩家同时处于多个权限组中，那么玩家的所能认领的区域总数在这些值中取最大值而不是叠加。|
 |default|7|（见上。）|
 
@@ -326,13 +352,16 @@ UUID 迁移可以重复进行（对配置文件也会进行频繁的更改）且
 
 ### regions.sql.*
 
+> [!WARNING|label:警告]
+> 这些设置默认不处于配置文件中。这些功能被标记为弃用，且可能在未来被移除。
+
 > [!TIP|label:提示]
 > 你不能分世界覆盖这些设置。
 
 |设置|默认值|描述|
 |---|---|---|
 |use|FALSE|是否使用 MySQL 存储相关数据（见“数据存储”章节）。|
-|dsn|jdbc:mysql://localhost/worldguard|用于数据库连接的字符串。`worldguard` 为数据库名称。|
+|dsn|`jdbc:mysql://localhost/worldguard`|用于数据库连接的字符串。`worldguard` 为数据库名称。|
 |username|worldguard|连接至数据库所使用的用户名。|
 |password|worldguard|连接至数据库所使用的密码。|
 |table-prefix||数据库所使用的表名。|

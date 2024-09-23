@@ -58,10 +58,11 @@
 
 ### 如何只对非玩家成员设置禁止离开区域的标志？
 
-你也许需要为指定的区域组设置这个标志（注意，此为默认情况）：
+因为非成员为 `entry` 和 `exit` 的默认设置，你无需设置区域组：
+
 ```
 /rg addmember example_region sk89q
-/rg flag example_region exit -g nonmembers deny
+/rg flag example_region exit deny
 ```
 
 ### 如何让玩家从某个位置离开一个设置了 exit=deny 的区域？
@@ -144,7 +145,7 @@
 
 ### 为什么活塞不工作？
 
-你是否设置了 `build` 标志？你也许不想要那么做。请确保已经取消设置：
+你是否设置了 `build` 标志？你**不应该**那么做。请确保已经取消设置：
 ```
 /rg flag __global__ build
 ```

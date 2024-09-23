@@ -34,7 +34,7 @@
 
 玩家和权限组均可为一个区域的成员或拥有者。若要指定一个权限组，你需要在其名称开头加上 `g:`。如下所示：
 ```
-/rg addmember town Notch sk89q g:builders
+/rg addmember town wizjany sk89q g:builders
 /rg addowner town sk89q
 /rg removemember town g:builders
 /rg removeowner town sk89q
@@ -44,13 +44,13 @@
 
 最后，在你创建区域的时候，你也可以为其设置拥有者：
 ```
-/rg define town Notch sk89q g:builders
+/rg define town wizjany sk89q g:builders
 ```
 
 区域数据会间隔一定时间自动保存，因此你无需输入命令来手动保存数据。
 
 > [!NOTE|label:示例：创建一个主城区域，只有 build 权限组可以在其中进行建筑操作]
-> 1. 圈定主城区域的范围；
+> 1. 用 WorldEdit 的选区工具圈定主城区域的范围；
 > 2. 创建一个名为“spawn”的范围：
 > ```
 > /rg define spawn
@@ -59,9 +59,6 @@
 > ```
 > /rg addmember spawn g:builders
 > ```
-
-> [!TIP|label:提示]
-> 你对区域的改动会在一小段时间后自动保存。尽管区域数据仍然可以使用命令 `/rg save` 来强制保存。所有保存操作都在后台完成，不会使服务器产生卡顿。
 
 ### 其他命令
 
@@ -77,7 +74,7 @@
 ```
 /rg list
 ```
-你可以用下列命令将指定区域的边界设置为当前 WorldEdit 的选区，若未圈定选区则该命令无效：
+你可以用下列命令修改现存区域的大小或形状：
 ```
 /rg redefine 区域名称
 ```
@@ -104,6 +101,9 @@
 > ```
 > /rg flag mine build allow
 > ```
+
+> [!WARNING|label:警告]
+> `build` 标志有些额外的属性，我们不建议修改这个标志，除非你知道你在做什么。见[区域标志概览](regions.region-flags.md)来获得更多信息。
 
 ### 标志
 

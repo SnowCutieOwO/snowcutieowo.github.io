@@ -12,6 +12,12 @@
 |worldguard.region.bypass.<世界名称>|绕过指定世界的除 PVP 保护外的各种保护。|
 |worldguard.region.toggle-bypass|允许通过 `/rg bypass` 命令切换上述功能（但仍需要有绕过权限）。|
 |worldguard.chest-protection.override|绕过聊天保护并开启受保护的箱子。|
+|worldguard.god.override-regions|允许在 `invicibility` 标志设置为 `DENY` 的区域内保持上帝模式。|
+|worldguard.auto-invincible|配置文本 `auto-invicible` 选项启用时自动在登录时隐身。|
+|worldguard.override.potions|允许使用 `blocked-potions` 配置中禁用的药水效果。|
+|worldguard.override.lighter|无视配置文本中的 `ignition.block-lighter` 使用打火石或烈焰弹。|
+|worldguard.override.infinite-stack|无视配置文本中的 `protection.remove-infinite-stacks` 选项设置。|
+
 
 > [!WARNING|label:警告]
 > 如果你是 OP 或拥有全部权限，你也会拥有上述保护权限，导致原本区域设置的保护标志对你不起作用。
@@ -50,15 +56,16 @@
 |worldguard.region.save|允许使用 `/rg save` 命令。|
 |worldguard.region.migratedb|允许使用 `/rg migratedb` 命令。|
 |worldguard.region.migrateuuid|允许使用 `/rg migrateuuid` 命令。|
+|worldguard.region.migrateheights|允许使用 `/rg migrateheights` 命令。|
 |worldguard.region.define|允许使用 `/rg define` 命令。|
 |worldguard.region.claim|允许使用 `/rg claim` 命令。|
 |worldguard.region.unlimited|绕过区域领取数量限制。|
 |worldguard.region.list|允许使用 `/rg list` 命令。|
 |worldguard.region.list.own|允许使用 `/rg list` 命令，且能在自己区域上使用。|
 
-### 分区域命令权限
+### 分区域权限
 
-下列命令支持通过基础权限（例如 `worldguard.region.redefine`）使用，但也可以通过指定的权限使得区域成员使用命令（需要注意的是区域的拥有者也是其成员）：
+下列权限支持通过基础权限（例如 `worldguard.region.redefine`）使用，但也可以通过指定的权限使得区域成员使用命令（需要注意的是区域的拥有者也是其成员）：
 
 * `worldguard.region.redefine.own.<区域名称>`
 * `worldguard.region.redefine.member.<区域名称>`
@@ -70,17 +77,19 @@
 
 |权限|描述|
 |---|---|
-|worldguard.region.redefine.*|允许使用命令 `/rg redefine`|
-|worldguard.region.remove.*|允许使用命令 `/rg remove`|
-|worldguard.region.setpriority.*|允许使用命令 `/rg setpriority`|
-|worldguard.region.setparent.*|允许使用命令 `/rg setparent`|
-|worldguard.region.select.*|允许使用命令 `/rg select`|
-|worldguard.region.info.*|允许使用命令 `/rg info` 和 `/rg flags`|
-|worldguard.region.teleport.*|允许使用命令 `/rg teleport`|
-|worldguard.region.addmember.*|允许使用命令 `/rg addmember`|
-|worldguard.region.addowner.*|允许使用命令 `/rg addowner`|
-|worldguard.region.removemember.*|允许使用命令 `/rg removemember`|
-|worldguard.region.removeowner.*|允许使用命令 `/rg removeowner`|
+|worldguard.region.redefine.*|允许使用 `/rg redefine` 命令。|
+|worldguard.region.remove.*|允许使用 `/rg remove` 命令。|
+|worldguard.region.setpriority.*|允许使用 `/rg setpriority`命令。|
+|worldguard.region.setparent.*|允许使用 `/rg setparent` 命令。|
+|worldguard.region.select.*|允许使用 `/rg select` 命令。|
+|worldguard.region.info.*|允许使用 `/rg info` 和 `/rg flags` 命令。|
+|worldguard.region.teleport.*|允许使用 `/rg teleport` 命令。|
+|worldguard.region.teleportcenter.*|允许在观察者模式下使用 `/rg teleport -c` 命令。|
+|worldguard.region.addmember.*|允许使用 `/rg addmember` 命令。|
+|worldguard.region.addowner.*|允许使用 `/rg addowner` 命令。|
+|worldguard.region.removemember.*|允许使用 `/rg removemember` 命令。|
+|worldguard.region.removeowner.*|允许使用 `/rg removeowner` 命令。|
+|worldguard.region.locationoverride.*|无视配置文本中 `regions.location-flags-only-inside-regions` 选项的设置。|
 
 > [!NOTE|label:示例：允许玩家查看自己所拥有区域的详细信息]
 > 

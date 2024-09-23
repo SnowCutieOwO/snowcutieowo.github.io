@@ -24,15 +24,16 @@
 
 如果命令不起作用，有可能是 WorldGuard 初始化失败导致的：
 
-* 确保你正在使用 Bukkit（或支持 Bukkit 的服务端）。在游戏内或控制台中使用 `version` 命令，并确保返回的信息中包含“Bukkit”或“CraftBukkit”；
-* 请确保你安装了 WorldEdit；
+* 确保你正在使用支持 Bukkit 的服务端，例如 [Spigot](https://spigotmc.org) 或者 [Paper](https://papermc.io) 。在游戏内或控制台中使用 `version` 命令，可以检查你使用的服务端核心种类；
+* 请确保你安装了对应版本的 WorldEdit；
 * 请确保你安装的 WorldGuard 和你当前的 Minecraft 版本匹配。
 
 如果这些措施没能帮到你，你需要检查一下你的开服日志：
 
 * 如果你使用了面板服，那么请检查日志输出界面；
 * 你也可以打开服务器目录中 log 文件夹下的“latest.log”文件。（在旧版本的 Minecraft 中，日志文件为存放在服务器根目录下的 server.log）
-如果你不能通过服务器日志找到问题，你可以寻求帮助或提交漏洞报告。
+
+如果你不能通过服务器日志找到问题，你可以[寻求帮助](getting-help.md)。
 
 ### WorldGuard 存在多久了？
 
@@ -49,13 +50,13 @@ WorldGuard 由许多开发者共同维护，WorldGuard 的代码很大程度上�
 > [!TIP|label:注意]
 > 新版本 WorldGuard 的许多功能是默认关闭的，不太可能会引起这种问题。
 
-找出原因的最简单方法就是查看被阻止建造时的消息提示。WorldGuard 通常使用一条红色的消息，或者是“嘿！抱歉，但你不能在这里____（Hey! Sorry, but you can't ____ here.）。”如果你没有收到任何提示，那么就不太可能是 WorldGuard 所造成的。
+找出原因的最简单方法就是查看被阻止建造时的消息提示。WorldGuard 通常使用一条红色的消息，或者是“嘿！抱歉，但你不能在这里____（Hey! Sorry, but you can't \_\_\_\_ here.）。”如果你没有收到任何提示，那么就不太可能是 WorldGuard 所造成的。
 
 如果不能马上确认是 WorldGuard 导致的话：
 
 * 请确保 Minecraft 本身的 “出生点保护（Spawn Protection）”是被禁用的。出生点保护禁止任何人在世界出生点附近的区域进行破坏或建筑行为。若要修改出生点保护，将 server.properties 下 `spawn-protection` 的值修改为 `0` 即可；
 * 确保你没有在冒险模式中测试；
-* 更新你的 CraftBukkit/Spigot/Paper 版本。
+* 更新你的服务端核心（如 Spigot 或 Paper）。
 
 如果这些步骤不起作用，那么 WorldGuard 中的一个模拟玩家行为并将其报告给插件的简单命令会派上用场，它可以找出哪个插件阻止了该事件。使用“命令列表”章节讲到的“testbreak”和“testplace”命令来找出这些插件。
 
@@ -93,7 +94,7 @@ WorldGuard 由许多开发者共同维护，WorldGuard 的代码很大程度上�
 * 你将一个区域的其他标志（`pvp`、`ride` 等）设置为了“allow”；
 * 产生问题的物品来自第三方插件或模组（见“保护什么？”章节）；
 * WorldGuard 尚不会保护你正在尝试做的指定事件。这不在简单的方块建造或破坏范围内。请确保你正在使用最新版本的 WorldGuard，如果问题持续存在，请提交漏洞报告；
-* 你所使用的 CraftBukkit/Spigot/Paper 版本存在漏洞。
+* 你所使用的服务端核心存在漏洞。
 
 如果你仍然找不出问题所在，请尝试获取其他人帮助。
 
@@ -103,7 +104,7 @@ WorldGuard 由许多开发者共同维护，WorldGuard 的代码很大程度上�
 
 你可以使用在“命令列表”章节中提到的“testbreak”和“testplace”命令对可能存在问题的插件进行排查。如果你找到了任何在 WorldGuard 之上的插件显示“ALLOW”字样的，那么这个插件就是问题所在。
 
-另外一种可能是你所使用的 CraftBukkit/Spigot/Paper 版本存在漏洞。确保你使用的是最新版本。如果你仍然找不出问题所在，请尝试获取其他人帮助。
+另外一种可能是你所使用的服务端核心（如 Spigot 或 Paper）存在漏洞。确保你使用的是最新版本。如果你仍然找不出问题所在，请尝试获取其他人帮助。
 
 ## 区域保护
 

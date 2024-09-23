@@ -32,7 +32,7 @@ host-keys:
 另外，我们更建议你设置“随机地址”。一个随机地址的示例可能是 `*.play.example.com`，这意味着*任意*前缀都可以让其正常生效（例如 `aa.play.example.com`、`ab.play.example.com`、`ac.play.example.com`等。）
 
 > [!TIP|label:提示]
-> 如果你没有域名或不能设置随机域名，那么你可可以试试 xip.io 提供的转发服务。
+> 如果你没有域名或不能设置随机域名，那么你可可以试试 [sslip.io](https://sslip.io/) 提供的转发服务。
 
 ## 其他方法
 

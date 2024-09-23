@@ -127,8 +127,10 @@ new RegionOverlapAssociation(deepInside).getAssociation(inside) == OWNER
 > 首先，正确的 `RegionAssociation` 必须为事件而创建。下文叙述的 `createRegionAssociable()` 并会返回一个 `RegionAssociable`。
 > ```Java
 > private RegionAssociable createRegionAssociable(Object cause) {
->     if (cause instanceof Player) {
->         return WorldGuardPlugin.inst().wrapPlayer((Player) cause);
+>     if (!cause.isKnown()) {
+>         return Associables.constant(Association.NON_MEMBER);
+>     } else if (cause instanceof Player player) {
+>         return WorldGuardPlugin.inst().wrapPlayer(player);
 >     } else if (cause instanceof Entity entity) {
 >         RegionQuery query = WorldGuard.getInstance().getPlatform().getRegionContainer().createQuery();
 >         WorldConfiguration config = WorldGuard.getInstance().getPlatform().getGlobalStateManager().get(BukkitAdapter.adapt(entity.getWorld()));

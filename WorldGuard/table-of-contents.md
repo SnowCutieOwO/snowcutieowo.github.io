@@ -57,9 +57,9 @@ WorldGuard 有一大堆为服主、地图制作者、普通的生存服务器和
 
 ## 相关链接
 
-* [WorldGuard 插件主页](http://www.enginehub.org/worldguard)
-* [下载适用于 Bukkit 的 WorldGuard 插件](http://dev.bukkit.org/bukkit-plugins/worldguard/files/)
-* [实验性构建](http://builds.enginehub.org/job/worldguard?branch=master)
+* [WorldGuard 插件主页](https://www.enginehub.org/worldguard)
+* [下载适用于 Bukkit 的 WorldGuard 插件](https://dev.bukkit.org/bukkit-plugins/worldguard/files/)
+* [实验性构建](https://builds.enginehub.org/job/worldguard?branch=master)
 * [Discord 聊天群组](https://discord.gg/enginehub/)
 
 [^1]: 原维基在本章节包含了另外一个章节，“索引与表格”，该子章节中包含的两个页面为空白和搜索页，后者已被维基自带的搜索功能代替，因此该翻译版本将其省略。

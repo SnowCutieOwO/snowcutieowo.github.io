@@ -8,25 +8,25 @@
 * 通过 `receive-chat` 标志禁止玩家接收聊天消息；
 * 通过 `vine-growth` 标志禁止区域内的藤蔓生长。
 
-一个区域可同时拥有多个不同的标志，但有些标志只能设置一个值。标志可以通过 `/region flag` 命令设置，下文是设置“spawn”和“hospital”的标志的示例：
+一个区域可同时拥有多个不同的标志，但有些标志只能设置一个值。标志可以通过 `/region flag`（或其缩写 `/rg flag`） 命令设置，下文是设置“spawn”和“hospital”的标志的示例：
 
 ```
 /region flag spawn pvp deny
 /region flag spawn greeting Welcome to spawn!
-/region flag hospital heal-amount 2
-/region flag hospital heal-delay 1
+/rg flag hospital heal-amount 2
+/rg flag hospital heal-delay 1
 ```
 
 通过不指定标志的值来将它的状态重置：
 
 ```
-/region flag spawn pvp
+/rg flag spawn pvp
 ```
 
 通过“flags”命令列出已设置的标志列表：
 
 ```
-/region flags spawn
+/rg flags spawn
 ```
 
 命令的输出在游戏内是可以交互的。在对应的值上点击可以修改它们的值，底部的箭头按钮则可以翻页。
@@ -46,14 +46,18 @@
 
 ## 区域组
 
-有些时候，有些标志可能只需要对某些特定的玩家而不是所有人使用。那么这时候就需要在设置标志时使用可选的“区域组”，它们有这些参数可用：
+有些时候，有些标志可能只需要对某些特定的玩家而不是所有人使用。那么这时候就需要在设置标志时使用可选的“区域组”。
 
+区域组描述了玩家是否为区域的（非）成员。它们由 WorldGuard 在内部处理，并完全与权限组无关。
 
-* all（所有玩家）
-* members（成员）
-* owners（区域拥有者）
-* nonmembers（除区域成员外的所有人）
-* nonowners（除区域拥有者外的所有人）
+默认存在以下这些区域组：
+
+|区域组|描述|
+|all|所有玩家|
+|members|成员|
+|owners|区域拥有者|
+|nonmembers|除区域成员外的所有人|
+|nonowners|除区域拥有者外的所有人|
 
 
 区域组可以通过 `-g` 设置，如下所示：
@@ -69,8 +73,7 @@
 
 ## 标志种类
 
-每一个标志都有对其参数种类的限制，决定了该参数将需要什么样的值。例如，标志 *heal-amount* 是一个数字标志，这意味着在设置这个标志时你只能填入数字。
-
+每一个标志都有对其参数种类的限制，决定了该参数将需要什么样的值。例如，标志 `heal-amount` 是一个整数标志，这意味着在为这个标志设置值时你只能填入整数。
 
 |标志种类|释义|
 |---|---|
@@ -89,7 +92,7 @@
 
 它们也接受颜色代码，不论是旧版本 `&[0-9a-f]` 的格式还是新版本 `[RrYyGgCcBbPp012w]` 等表示暗红、红色、暗黄、黄色等的格式，也接受 `[&``][klmnox]` 等格式的乱码、粗体、删除线、下划线和斜体文本。
 
-它们也支持嵌入内建变量，例如 `%name%` 可以表示玩家名称，`%world%` 表示世界名称，`%online%` 表示在线玩家数量。
+它们也支持嵌入内建变量，例如 `%name%` 可以表示玩家名称，`%world%` 表示世界名称，`%online%` 表示在线玩家数量，`%id%` 表示玩家 UUID，`%health%` 表示玩家当前生命值。
 
 > [!NOTE|label:示例：使用字符串的格式设置]
 > 设置出生点的 `greeting-title` 标志，向进入区域的玩家发送花里胡哨的欢迎消息：
@@ -105,10 +108,10 @@
 * 更高优先级的区域标志将会覆盖低优先级区域的标志值。
 * 全局区域和其他区域相同，但它的优先级是最低的。
 
-尽管如此，还是有可能在这些过程之后产生冲突的标志值。想象两个不同的区域，例如，有着一样的优先级。在那个时候，标志的值取决于标志的种类：
+尽管如此，还是有可能在这些过程之后产生冲突的标志值。假设这里有两个不同的区域，且有着一样的优先级。此时，标志的值取决于它们的种类：
 
-* 对 state 类的标志，若已经设置了 `deny`，则最终的值仍然是 `deny`，若设置的值是 `allow`，则最终的值是 `allow`。
-* 对其他种类的标志，则结果不会固定。因此，不要在重叠且优先级相同的区域里面，设置两条不同的欢迎信息。
+* 对 state 类型的标志，若设置 `deny`，最终的值仍是 `deny`，若设置 `allow`，则最终的值是 `allow`。
+* 对于其他种类的标志，结果不固定。因此，不能也不建议在重叠且优先级相同的区域中设置两条不同的欢迎/离开信息。
 
 ## 标志的默认值
 
@@ -144,11 +147,11 @@
 |pvp|state|是否允许 PVP|
 |sleep|state|是否允许在床上睡觉|
 |respawn-anchors|state|是否允许激活重生锚|
-|tnt|state|是否允许 TNT 爆炸或造成伤害|
+|tnt|state|是否允许 TNT 爆炸破坏方块|
 |vehicle-place|state|是否允许放置载具（船、矿车等）|
 |vehicle-destroy|state|是否允许破坏载具|
-|lighter|state|是否可以使用打火石|
-|block-trampling|state|耕地和乌龟蛋是否可以被破坏|
+|lighter|state|是否可以使用打火石或烈焰弹|
+|block-trampling|state|耕地、乌龟蛋和嗅探兽蛋是否可以被破坏|
 |frosted-ice-form|state|是否允许带有冰霜行者的玩家在水上产生临时的冰块|
 |item-frame-rotation|state|物品是否可以在物品展示框中旋转|
 |firework-damage|state|烟花是否可以对实体造成伤害|
@@ -188,11 +191,11 @@
 |ghast-fireball|state|恶魂火球和凋灵的骷髅头是否可以造成爆炸|
 |other-explosion|state|爆炸是否造成伤害|
 |fire-spread|state|火焰是否可以蔓延|
-|enderman-grief|state|末影人是否可以破坏方块|
+|enderman-grief|state|末影人是否可以拾起/放置方块|
 |snowman-trails|state|雪傀儡脚下是否会产生雪|
 |ravager-grief|state|劫掠兽是否可以破坏方块|
 |mob-damage|state|实体是否可以攻击玩家|
-|mob-spawning|state|是否禁止实体的生成|
+|mob-spawning|state|是否禁止实体的生成，包括玩家使用刷怪蛋等方法手动放置的怪物|
 |deny-spawn|实体种类列表|禁止生成的实体列表|
 |entity-painting-destroy|state|非玩家来源是否可以破坏挂画|
 |entity-item-frame-destroy|state|非玩家来源是否可以破坏物品展示框|
@@ -227,17 +230,18 @@
 |sculk-growth|state|区域内的幽匿块（和幽匿脉络）是否会蔓延|
 |crop-growth|state|区域内的农作物（小麦、土豆、西瓜等）是否会生长|
 |soil-dry|state|区域中的耕地是否会变干|
-|coral-fade|state|区域中的珊瑚块脱水后是否会死亡
+|coral-fade|state|区域中的珊瑚块脱水后是否会死亡|
+|copper-fade|铜块是否会氧化|
 
 > [!WARNING|label:警告]
-> 标志 `fire-spread`、`water-flow`、`lava-flow` 和 `leaf-decay` 需要在配置文本中启用“高频标志”才可正常使用。这是因为这些事件的触发会非常频繁，也就需要更多对区域的检查，并潜在地降低服务器的运行效率（或者只是警告服务器的内存占用略微上升）。
+> 标志 `fire-spread`、`water-flow`、`lava-flow` 和 `lava-fire` 需要在配置文本中启用“高频标志”才可正常使用。这是因为这些事件的触发会非常频繁，也就需要更多对区域的检查，并潜在地降低服务器的运行效率（或者只是警告服务器的内存占用略微上升）。
 
 ### 自然事件
 
 |标志名称|种类|描述|
 |---|---|---|
-|entry|state|玩家是否可以进入该区域|
-|exit|state|玩家是否可以离开该区域|
+|entry|state|玩家（默认为非成员）是否可以进入该区域|
+|exit|state|玩家（默认为非成员）是否可以离开该区域|
 |exit-via-teleport|state|玩家是否可以通过传送离开该区域。<br><br>仅在玩家被禁止以正常方式离开区域时有效。|
 |exit-override|boolean|是否总是允许玩家离开|
 |entry-deny-message|state|禁止玩家进入区域发送的消息|
@@ -251,7 +255,7 @@
 |enderpearl|state|是否允许在区域内使用末影珍珠|
 |chorus-fruit-teleport|state|是否允许在区域内使用紫颂果传送|
 |teleport|location|在玩家使用 `/region teleport` 传送至区域时，玩家固定出现在的地点|
-|spawn|location|在区域内死亡的玩家重生的位置|
+|spawn|location|在区域内死亡的玩家（默认成员）重生的位置|
 |teleport-message|state|输入命令 `/region teleport` 传送入区域内的玩家所发送的消息|
 
 > [!TIP|label:提示]
@@ -265,7 +269,7 @@
 > `greeting` 和 `farewell` 项需要配置文件中“使用玩家移动事件” 的设置**不**关闭。
 
 > [!NOTE|label:示例：阻止非成员进入名为“secret_club”的区域]
-> 实现该功能的关键是需要将区域设置为“非成员”：
+> 因为进入标志默认对非成员生效，你无需在这里额外设置：
 > ```
 > /rg flag secret_club entry -g nonmembers deny
 > ```
@@ -328,5 +332,8 @@
 |send-chat|state|玩家是否可以发送聊天消息|
 |receive-chat|state|玩家是否可以收到聊天消息|
 |potion-splash|state|药水是否可以拥有喷溅效果|
+
+> [!NOTE|label:提示]
+> WorldGuard 只能限制安装了本插件的服务器中的命令或聊天消息。若你正在使用群组等跨服同步消息的插件，WorldGuard 不能拦截这些消息。
 
 [^1]: 若要禁用消息显示，可使用 `-e` 参数。

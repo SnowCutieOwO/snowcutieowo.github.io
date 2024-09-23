@@ -65,21 +65,17 @@ WorldGuard 的部分，例如区域保护，只需要处理“与方块交互”
 > [!NOTE|label:示例]
 > 假设你的开服脚本是这样的：
 > ```Batch
-> @ECHO OFF
-> SET BINDIR=%~dp0
-> CD /D "%BINDIR%"
-> "%ProgramFiles(x86)%\Java\jre7\bin\java.exe" -Xincgc -Xmx1G -jar craftbukkit.jar
-> PAUSE
+> @echo off
+> java -Xmx4096M -Xms4096M -jar server.jar nogui
+> pause
 > ```
 > 你可以按如下格式将参数 `-Dworldguard.debug.listener=true` 加进去：
 > ```Batch
-> @ECHO OFF
-> SET BINDIR=%~dp0
-> CD /D "%BINDIR%"
-> "%ProgramFiles(x86)%\Java\jre7\bin\java.exe" -Dworldguard.debug.listener=true -Xincgc -Xmx1G -jar craftbukkit.jar
-> PAUSE
+> @echo off
+> java -Xmx4096M -Xms4096M -Dworldguard.debug.listener=true -jar server.jar nogui
+> pause
 > ```
-> 参数可以在“java.exe”后，“-jar”参数前的任意位置添加。在本示例中，该参数被放在了 java.exe 之后。
+> 参数可以在“java.exe”后，“-jar”参数前的任意位置添加。在本示例中，该参数被放在了 -jar 前。
 
 ## 解释输出
 

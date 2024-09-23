@@ -20,7 +20,7 @@ ApplicableRegionSet set = query.getApplicableRegions(loc);
 ```
 > [!NOTE|label:示例：获取位于 (10, 64, 100) 的区域]
 > ```Java
-> Location loc = new Location(world, 10, 64, 100);
+> Location loc = new com.sk89q.worldedit.util.Location(world, 10, 64, 100); // 如上所述, 也可从 Bukkit 获取
 > RegionContainer container = WorldGuard.getInstance().getPlatform().getRegionContainer();
 > RegionQuery query = container.createQuery();
 > ApplicableRegionSet set = query.getApplicableRegions(loc);
@@ -42,7 +42,7 @@ ApplicableRegionSet set = regions.getApplicableRegions(position);
 ```
 > [!NOTE|label:示例：获取位于 (10, 64, 100) 的区域]
 > ```Java
-> Location loc = new Location(world, 10, 64, 100);
+> Location loc = new new com.sk89q.worldedit.util.Location(world, 10, 64, 100); // 如上所述, 也可从 Bukkit 获取
 > RegionContainer container = WorldGuard.getInstance().getPlatform().getRegionContainer();
 > RegionManager regions = container.get(world);
 > // 确保区域非空的检查
@@ -76,7 +76,8 @@ ApplicableRegionSet set = new RegionResultSet(regions, null); // 无全局区域
 
 ## 使用 ApplicableRegionSet
 
-如果你对获取区域列表感兴趣的话，`ApplicableRegionSet` 包含 `Iterable<ProtectedRegion>`，所以你可以将这些内容枚举出来：
+如果你对获取区域列表感兴趣的话，`ApplicableRegionSet` 包含 `Iterable<ProtectedRegion>`，所以你可以将这些内容枚举出来。但是，在区域间通过枚举检查可能会忽略一些设置，比如优先级、标志默认值、继承关系以及全局区域。我们还是比较建议通过本地的查询方法进行保护或标志检查，这些在[保护查询](worldguard-api.working-with-regions.querying-protection.md)和[标志计算](worldguard-api.working-with-regions.flag-calculation.md)章节中均有提及。
+
 ```Java
 for (ProtectedRegion region : set) {
     // 对每个区域做一些不同的事情
@@ -84,9 +85,6 @@ for (ProtectedRegion region : set) {
 ```
 
 > [!NOTE|label:示例：获取区域列表]
-> 谷歌的 Guava 库有 `Lists.newArrayList(Iterable)` 方法来将 `Iterable` 对象转化为 `ArrayList`。
 > ```Java
 > List<ProtectedRegion> region = Lists.newArrayList(set);
 > ```
-
-如果你正在进行区域搜索来检查保护或标志，那么可以参阅“[保护查询]”和“[标志计算]”章节。
