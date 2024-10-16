@@ -94,7 +94,7 @@ public class LoginParticleData extends BukkitData implements Adaptable {
 public class LoginParticleSerializer extends BukkitSerializer.Json<LoginParticleData> implements Serializer<LoginParticleData> {
     
     // We need to create a constructor that takes our instance of the API
-    public GameMode(@NotNull HuskSyncAPI api) {
+    public LoginParticleSerializer(@NotNull HuskSyncAPI api) {
         super(api, LoginParticleData.class); // We pass the class type here so that Gson knows what class we're serializing
     }
 

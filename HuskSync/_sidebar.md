@@ -2,6 +2,7 @@
 * [首页](home.md)
 * 教程
   * [📚 安装教程](guides.setup.md)
+  * [⚠️ 兼容相关](guides.compatbility.md)
   * [📄 配置文件](guides.config-file.md)
   * [🔗 问题排查](guides.troubleshooting.md)
   * [↪️ 数据切换](guides.data-rotation.md)

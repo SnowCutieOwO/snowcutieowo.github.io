@@ -17,7 +17,7 @@
 
 * 将插件拖放至每个 Spigot 子服的 `/plugins/` 文件夹下；
 * 无需将 HuskSync 安装在群组服上。
-* 额外地，你可以安装 [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/) 加强对锁定用户处理能力，或安装 [Plan](https://www.spigotmc.org/resources/plan-player-analytics.32536/) 插件来快速统计玩家数据。
+* 额外地，你可以安装 [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/) 或 [PacketEvents](https://www.spigotmc.org/resources/packetevents-api.80279/) 加强对锁定用户处理能力，或安装 [Plan](https://www.spigotmc.org/resources/plan-player-analytics.32536/) 插件来快速统计玩家数据。
 
 ### 2. 重启服务器
 
@@ -33,11 +33,12 @@
 * 除非你在一个群组下区分多个子群组，每个子群组之间的玩家数据相互隔离，否则不应更改 `cluster_id` 的值。
 
 <details>
-<summary>重要 - MongoDB 用户</summary>
+<summary>MongoDB 用户 - 额外安装步骤</summary>
 
 * 找到服务器上的 HuskSync 配置文件（`~/plugins/HuskSync/config.yml`）。
 * 将 `database` 下的 `type` 值设置为 `MONGO`。
 * 在 `database` 下的 `credentials` 配置中，输入 MongoDB 数据库的登录凭据。切记不要擅自修改 `connection_pool` 部分的设置。
+* 在 `mongo_settings` 下的 `parameters` 部分，确保指定的 `&authSource=` 符合你使用的数据库（默认为 `HuskSync`）。
 </details>
 
 <details>
@@ -47,6 +48,14 @@
 * 将 `mongo_settings` 下的 `using_atlas` 设置为 `true`。
 * 将 `mongo_settings` 下的 `parameters` 中的 `&authSource=HuskSync` 部分删去即可。
 （在使用 Atlas 时自动无视 `credentials` 下 `port` 设置的值）
+</details>
+
+<details>
+<summary>Pterodactyl 自托管用户 - Redis 安装教程</summary>
+
+若你在服务器上一并运行着 Redis 服务器，你需要将地址设置为 `172.18.0.1`（若修改了网络设置，则参照修改后的内容），并在 Redis 的配置文件 `nano /etc/redis/redis.conf` 中进行绑定。
+除此之外，你还需要取消 `requirepass` 部分的注释，并设置密码以允许外部连接，或禁用 `protected-mode`。在设置密码且通过命令 `systemctl restart redis` 重启 Redis 后，你还需要在你的 Pterodactyl `.env` 中更新密码（`nano /var/www/pterodactyl/.env`）并通过 `cd /var/www/pterodactyl && php artisan config:clear` 刷新缓存。
+另外你可能需要允许来自防火墙的连接，视分布位置而定。
 </details>
 
 ### 4. 在 server.yml 文件中设置服务器名称

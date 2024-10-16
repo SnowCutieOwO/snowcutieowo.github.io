@@ -34,7 +34,7 @@ brigadier_tab_completion: false
 # 是否启用 Player Analytics 联动.
 # 相关文档: https://william278.net/docs/husksync/plan-hook
 enable_plan_hook: true
-# 在安装 ProtocolLib 后处理锁定玩家时，是否直接取消对应玩家的游戏事件包
+# 在安装 ProtocolLib 或 PacketEvents 后处理锁定玩家时，是否直接取消对应玩家的游戏事件包
 cancel_packets: true
 # 数据库设置
 database:
@@ -138,6 +138,14 @@ synchronization:
   # 在完成数据同步前不可执行的命令（以 * 表示所有命令）
   blacklisted_commands_while_locked:
     - '*'
+  # 同步属性相关设置
+  attributes:
+    # 同步玩家数据时忽略哪些数据. 支持使用通配符.
+    # (示例：['minecraft:generic.max_health', 'minecraft:generic.*'])
+    ignored_attributes: []
+    # 同步玩家数据时保留哪些数据，支持使用通配符。
+    # (示例：['minecraft:effect.speed', 'minecraft:effect.*'])
+    ignored_modifiers: ['minecraft:effect.*', 'minecraft:creative_mode_*']
   # 监听器的事件优先级 (HIGHEST, NORMAL, LOWEST)。若遇到插件冲突则可修改该部分设置
   event_priorities:
     quit_listener: LOWEST
