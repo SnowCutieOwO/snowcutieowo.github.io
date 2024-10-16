@@ -29,7 +29,7 @@
 ### 2. 重启服务器并修改配置
 
 * 开启，之后关闭服务器，使 HuskSync 生成一份配置文件；
-* 你现在可以按喜好编辑[配置文件]与本地语言文件了。
+* 你现在可以按喜好编辑[配置文件](guides.config-files.md)与本地语言文件了。
 
 ### 4. 重启服务器
 
@@ -44,16 +44,16 @@
 ### 1. 安装 jar 插件
 
 * 将插件拖放至每个 Spigot 服务器的 `/plugins/` 或 Fabric/Sponge 的 `/mods`文件夹下；
-* 你不需要将 HuskSync 安装在群组服上。
+* 你不需要将 HuskHomes 安装在群组服上。
 
 ### 2. 重启服务器
 
-* 开启，之后关闭服务器，使 HuskSync 生成一份配置文件；
-* 对于高级用户：如果你喜欢的话，你可以自己创建一个 config.yml 文件并使得每个子服的 `/plugins/HuskSync/`（或 `/config/huskhomes/`） 文件夹同步，更方便地更新配置文件。
+* 开启，之后关闭服务器，使 HuskHomes 生成一份配置文件；
+* 对于高级用户：如果你喜欢的话，你可以自己创建一个 config.yml 文件并使得每个子服的 `/plugins/HuskHomes/`（或 `/config/huskhomes/`） 文件夹同步，更方便地更新配置文件。
 
 ### 3. 配置服务器启用跨服模式
 
-* 找到每个子服上的 HuskHomes 的[配置文件]()（Spigot 端为 `~/plugins/HuskHomes/config.yml`，Fabric/Sponge 端为 `~/config/huskhomes/config.yml`）；
+* 找到每个子服上的 HuskHomes 的[配置文件](guides.config-files.md)（Spigot 端为 `~/plugins/HuskHomes/config.yml`，Fabric/Sponge 端为 `~/config/huskhomes/config.yml`）；
 * 在 `database` 部分配置下，将 `type` 的值设置为 `MYSQL` 或 `MARIADB`（取决于你使用了哪种服务器）；
 * 在 `mysql/credentials` 部分配置中，输入你的 MySQL、MariaDB 或 PostgreSQL 数据库登录凭据；
 * 下滑并找到 `cross_server` 设置，将其修改为 `true`；
@@ -69,6 +69,16 @@
 
 * 请确保你输入的 MySQL 数据库凭证正确，若正确则你的群组现在就在跨服使用 HuskHomes！
 * 你可以按需决定是否删除一开始生成的 `HuskHomesData.db` SQLite 文件。
+
+<detail>
+<summary>跨服随机传送</summary>
+
+在使用跨服随机传送时，下面三项必须为 true。
+
+1. 必须将 `rtp.cross-server` 为 `true`。
+2. 你必须使用 Redis 作为消息代理。
+3. 在 `rtp.random_target_servers` 必须匹配 `server.yml` 与群组端配置的值！
+</detail>
 
 ## 下一步
 

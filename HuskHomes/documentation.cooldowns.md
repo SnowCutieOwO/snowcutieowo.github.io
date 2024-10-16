@@ -8,7 +8,7 @@ HuskHomes 支持在玩家执行特定操作时设置冷却。玩家在执行下�
 
 拥有[权限节点](guide.commands.md) `huskhomes.bypass_cooldowns` 的玩家可以无视冷却，并可立即执行他们想要的操作。
 
-[size=3][b]操作列表[/b][/size]
+### 操作列表
 
 |操作|描述|
 |---|---|

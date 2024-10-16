@@ -24,8 +24,8 @@ API 通过 Maven 在 [repo.william278.net](https://repo.william278.net/#/release
 
 HuskHomes API 在如下平台可用：
 
-* `bukkit` - Bukkit、Spigot、Paper 等提供 Bukkit API 并继承了带有 `org.bukkit` 适配器的 `BaseHuskHomesAPI`。
-* `fabric` - Fabric、Quilt 等提供了 Fabric 回调式监听器的平台。
+* `bukkit` - Bukkit、Spigot、Paper 等提供 Bukkit API 监听器与 `org.bukkit` 对象的适配器。
+* `fabric` - Fabric、Quilt 等提供了 Fabric API 回调与 `net.minecraft` 对象的适配器。
 * `sponge` - Sponge 等提供了 Sponge API 事件的平台。
 * `common` - 全平台可用的通用 API。
 
@@ -47,7 +47,8 @@ HuskHomes 4.3.1 之前的版本发布在 [JitPack](https://jitpack.io/#net.willi
 
 #### Maven 导入信息
 
-将仓库按如下代导入至你的 `pom.xml` 文件。你也可以指定 `/snapshots` 来使用包含最新开发构建的仓库（不稳定故不推荐）。
+将仓库按如下代导入至你的 `pom.xml` 文件。你也可以指定 `/snapshots` 来使用包含最新开发构建的仓库。
+
 ```XML
 <repositories>
     <repository>
@@ -56,7 +57,8 @@ HuskHomes 4.3.1 之前的版本发布在 [JitPack](https://jitpack.io/#net.willi
     </repository>
 </repositories>
 ```
-将依赖按如下代码导入至你的 `pom.xml` 文件。将 `VERSION` 处替换为 HuskHomes 最新的版本号（去除字母 v）：![img](https://img.shields.io/github/v/tag/WiIIiam278/HuskHomes?color=%23ffffff&label=%20&style=flat-square)
+将依赖按如下代码导入至你的 `pom.xml` 文件。将 `VERSION` 处替换为 HuskHomes 最新的版本号（去除字母 v）：![img](https://img.shields.io/github/v/tag/WiIIiam278/HuskHomes?color=%23ffffff&label=%20&style=flat-square)。需要注意的是对于 Fabric，你还需要在版本号后添加 Minecraft 的版本号（如 `3.6.1+1.20.1`）
+
 ```XML
 <dependency>
     <groupId>net.william278.huskhomes</groupId>
@@ -70,7 +72,7 @@ HuskHomes 4.3.1 之前的版本发布在 [JitPack](https://jitpack.io/#net.willi
 
 #### Gradle 安装信息
 
-将依赖按如下代码添加至你的 `build.gradle`。你也可以指定 `/snapshots` 来使用包含最新开发构建的仓库（不稳定故不推荐）。
+将依赖按如下代码添加至你的 `build.gradle`。你也可以指定 `/snapshots` 来使用包含最新开发构建的仓库。需要注意的是对于 Fabric，你还需要在版本号后添加 Minecraft 的版本号（如 `3.6.1+1.20.1`）
 ```Kotlin
 allprojects {
     repositories {
