@@ -97,7 +97,7 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 |设置|默认值|描述|
 |---|---|---|
 |block-potions|[]（列表）|被禁用的药水列表。可用的药水种类可在 [Bukkit 文档](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html)中找到。|
-|block-potions-overly-reliably|FALSE|WorldGuard 是否需要严格阻止 [i]block-potions[/i] 中提及的对应种类的药水。一般不需要设置此项，如果设置可能会误拦截其他种类的药水。|
+|block-potions-overly-reliably|FALSE|WorldGuard 是否需要严格阻止 *block-potions* 中提及的对应种类的药水。一般不需要设置此项，如果设置可能会误拦截其他种类的药水。|
 |disable-conduit-effects|FALSE|是否禁用海洋之心给予的潮涌能量效果。|
 
 > [!NOTE|label:示例：禁用夜视和速度药水]

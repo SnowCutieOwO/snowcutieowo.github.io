@@ -60,7 +60,6 @@ database:
   mongo_settings:
     using_atlas: false
     parameters: ?retryWrites=true&w=majority&authSource=HuskSync
-  # Names of tables to use on your database. Don't modify this unless you know what you're doing!
   # 数据库使用的表名。请勿擅自修改, 否则后果自负！
   table_names:
     users: husksync_users
