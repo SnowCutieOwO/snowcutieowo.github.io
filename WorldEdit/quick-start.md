@@ -6,7 +6,7 @@
 * 如果你正在使用 NeoForge/Fabric 且正在单人模式游玩，那么 WorldEdit 只会在启用了作弊模式的情况下启用；
 * 如果你的 NeoForge/Fabric 服务器安装了 WorldEdit，那么只有 OP 玩家可以使用相关的内容。
 
-> [!TIPS|label:提示]：
+> [!TIP|label:提示]：
 > 对于 NeoForge/Fabric，你可以：
 >
 > * 在 WorldEdit 的设置中启用“cheat-mode（作弊模式）”（见“配置文本”章节）来让你允许在生存模式下使用 WorldEdit 的功能（服务器上同样可用，所有玩家都能使用）；

@@ -30,7 +30,7 @@ WorldEdit 的一个强大功能就是它可以载入世界的部分结构，由�
 
 你可能注意到了，每个单独的备份都有各自的时间戳。WorldEdit 给这些备份以时间戳命名以表明哪些备份是最新的。世界文件夹必须存在于备份文件中，而世界文件夹中又必须有一个区域文件夹。你可以在顶级目录中拥有多个世界存档文件夹的备份，或者为单独世界文件夹添加多个备份。
 
-> [!TIPS|label:提示]    
+> [!TIP|label:提示]    
 > 如果你正在使用 Linux 等类似的系统，你可以使用下列选项在合适的文件夹中创建一个 zip 文件备份：```zip -v backups\`date "+%Y-%m-%d-%H-%M-%S"`.zip -r world```。
 
 ### 支持的归档格式
@@ -38,7 +38,7 @@ WorldEdit 的一个强大功能就是它可以载入世界的部分结构，由�
 WorldEdit 本身通过 Java 的 zip 库支持 zip 文件。但是，Java 的 zip 库只能支持那些最基础的 zip 文件。如果你在使用 zip 的时候遇到了莫名其妙的读取错误，你可能就需要安装 TrueZip。若你要使用其他的归档格式，例如 tarballs，则你也可以安装 TrueZip。
 
 TrueZip 可以[从 maven 仓库下载 Jar 文件](https://repo.maven.apache.org/maven2/de/schlichtherle/truezip/6.8.1/truezip-6.8.1.jar)并将其保存为 `truezip.jar` 文件。这个文件在 Bukkit 服务端下应该被放在 `plugins` 或 `plugins/WorldEdit`，在其他平台上应该被放在 `mods` 文件夹！）。你也可以在备份文件存储在服务器之外的情况下使用绝对路径（例如在另一分区中，这个建议对大部分硬盘读取失败的情况有效）。
-> [!TIPS|label:提示]    
+> [!TIP|label:提示]    
 > 使用归档备份（例如，zip 文件）可以保存硬盘空间，但相对会在还原的时候提升 CPU 用量。这些利弊应当由你自己权衡。
 
 ## 使用快照
