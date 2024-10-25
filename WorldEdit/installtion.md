@@ -45,7 +45,7 @@ WorldEdit 运行在 Java 版（JE 版），或是你的单人游戏与本地服�
 
 ### NeoForge 单人游戏
 
-首先，你需要安装 Minecraft Forge。有许多第三方启动器能直接安装整合包。如果你正在使用其中的一种，你可以从启动器界面找到该模组并进行安装[^2]。否则的话，Forge 会尝试将文件安装至官方启动器。在通过上述的方式成功安装 Forge 以后，[从 Modrnith 网站下载 WorldEdit](https://modrinth.com/plugin/worldedit/versions?l=neoforge)。请确保你为你的 Minecraft 获取了正确且平台对应版本的 WorldEdit（用于 Fabric 的模组也会发布在这个页面——请确保你正确选择了对应平台）。
+首先，你需要安装 Minecraft Forge。有许多第三方启动器能直接安装整合包。如果你正在使用其中的一种，你可以从启动器界面找到该模组并进行安装。否则的话，Forge 会尝试将文件安装至官方启动器。在通过上述的方式成功安装 Forge 以后，[从 Modrnith 网站下载 WorldEdit](https://modrinth.com/plugin/worldedit/versions?l=neoforge)。请确保你为你的 Minecraft 获取了正确且平台对应版本的 WorldEdit（用于 Fabric 的模组也会发布在这个页面——请确保你正确选择了对应平台）。
 1. 如果你在官方启动器安装了 Forge，请按照 [Mojang 提供的步骤指导](https://help.minecraft.net/hc/en-us/articles/4409159214605) 找到你的“.minecraft”文件夹所在位置。若你正在使用第三方启动器，文件所处的位置可能略有不同[^3]（请尝试参考相关文档）；
 2. 在“.minecraft”文件夹下找到名为“mods”的文件夹。如果没有，创建一个（通常在首次运行 Forge 客户端的时候就会生成）
 3. 将 WorldEdit 的 .jar 文件放入 mods 文件夹中。从你的启动器中启动 Forge 客户端。如果正确按照上面的步骤来的话，模组列表中会出现 WorldEdit 的相关信息。
@@ -85,24 +85,6 @@ WorldEdit 运行在 Java 版（JE 版），或是你的单人游戏与本地服�
 ## 脚注
 
 [^1]: 译者注：此处意译为“加载方式”，而非原先的“模组载入器”，因为 WorldEdit 不止有模组形式，也有插件形式的。
-
-[^2]: 
-    以 HMCL 为例，
-    首先打开启动器，你可以看到如下界面    
-    ![img](https://attachment.mcbbs.net/data/myattachment/forum/202311/08/220529mg200218fd256fd0.png)    
-    点击“版本列表”，接着你会进入这个界面    
-    ![img](https://attachment.mcbbs.net/data/myattachment/forum/202311/08/220532zsven4lnvs8844wf.png)    
-    点击“安装新游戏版本”，接着你会进入这个界面    
-    ![img](https://attachment.mcbbs.net/data/myattachment/forum/202311/08/220535xmxz1yifnnn1ifmy.png)    
-    点击选择你需要的版本，本示例选择 1.20.1    
-    ![img](https://attachment.mcbbs.net/data/myattachment/forum/202311/08/220536jyuz6uijx2rxzvlu.png)    
-    点击“Forge”    
-    ![img](https://attachment.mcbbs.net/data/myattachment/forum/202311/08/220531rvinpmme4oxcnoex.png)    
-    点击最上面的版本   
-    ![img](https://attachment.mcbbs.net/data/myattachment/forum/202311/08/220533fepn0p30yflneuyn.png)    
-    然后返回界面，点击右下角的“开始安装”    
-    ![img](https://attachment.mcbbs.net/data/myattachment/forum/202311/08/220536jyuz6uijx2rxzvlu.png)    
-    然后静待安装完毕即可。安装完成后点击确认按钮，启动器会自动退回主界面。
 
 [^3]: 以 HMCL 和 PCL 为例，这两个启动器的 .minecraft 目录在未设置的情况下都与启动器文件本身处于同级目录，也就是，就在它们旁边。
 
