@@ -2,6 +2,7 @@
 
 内部版本号：
 
+- ajLeaderboards: `1.0.11`
 - AureliumSkills：`1.0.11`
 - Codex：`1.0.11`
 - CommandTimer：`1.0.11`
