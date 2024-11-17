@@ -29,19 +29,19 @@ async-profiler 依赖于 libstdc++。如果当前镜像中不存在这个库，�
 > java.lang.UnsatisfiedLinkError: /tmp/spark-xxxx-libasyncProfiler.so.tmp: Error loading shared library libstdc++.so.6: No such file or directory (needed by /tmp/spark-xxxx-libasyncProfiler.so.tmp)
 
 若要在 Alpine 上安装 libstdc++，你需要输入这个命令：
-```Linux
+```bash
 apk add libstdc++
 ```
 若要在 Debian/Ubuntu 上安装 libstdc++，你需要输入这个命令：
-```Linux
+```bash
 apk install libstdc++6
 ```
 若你正在使用基于 Alpine 的 Java Docker 镜像，你需要将下列内容加入你的 Dockerfile：
-```Linux
+```docker
 RUN apk add --no-cache libstdc++
 ```
 若你正在使用基于 Debian 的 Java Docker 镜像，你需要将下列内容加入你的 Dockerfile：
-```Linux
+```docker
 RUN apt-get install libstdc++6
 ```
 
@@ -50,7 +50,7 @@ RUN apt-get install libstdc++6
 async-profiler 会在不能使用 perf-event 时自动使用“itimer”模式。大多数 Docker 运行时环境均限制此类访问。
 
 对大部分用户来讲，这无伤大雅，但如果你想记录本地代码的有关信息，你就需要将下列标志添加至面板服，以此确保 async-profiler 能正常使用。
-```Linux
+```bash
 docker run --cap-add SYS_ADMIN ...
 ```
 
@@ -64,8 +64,8 @@ docker run --cap-add SYS_ADMIN ...
 * `openjdk-8-dbg` 或
 * `openjdk-11-dbg`
 
-例如，在 Ununtu 中为：
-```Linux
+例如，在 Ubuntu 中为：
+```bash
 apt install openjdk-11-dbg
 ```
 

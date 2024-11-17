@@ -7,15 +7,16 @@
 > <#ANIM:<名称>>任意文本</#ANIM>
 > ```
 
-> [!INFO|label:示例]
-> ```
-> <#ANIM:example>文本</#ANIM>
-> ```
+::: info 示例
+```
+<#ANIM:example>文本</#ANIM>
+```
+:::
 
 ## 示例动画文件
 
 ### animation_example.yml
-```YAML
+``` YAML
 #
 # 单位为刻的动画速度.
 # 代表每帧动画之间的延迟.

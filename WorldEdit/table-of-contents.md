@@ -1,4 +1,8 @@
-# WorldEdit 文档
+---
+title: WorldEdit 文档
+---
+
+# {{ $frontmatter.title }}
 
 WorldEdit 是一个在 Minecraft 游戏内使用的快捷地图编辑器。通过一系列的命令与“笔刷”的组合，你可以将你的世界塑造成你想要的形状，或只是简单地执行多样化的地形修整操作。
 
@@ -14,34 +18,53 @@ WorldEdit 是一个在 Minecraft 游戏内使用的快捷地图编辑器。通�
 
 ## 文档
 
-* 安装
-* 快速上手
-* 配置
-* 权限
-* 命令
-* 用法
-  * 通用
-    * 历史
-    * 会话
-    * 图形
-    * 蒙版
-  * 导航
-  * 区域
-    * 选择
-    * 区域操作
-  * 剪贴板
-  * 生成
-  * 绑定工具[^1]
-  * 笔刷
-  * 实用工具
-  * 快照
-  * 其他
-    * 表达式
-    * 快速脚本[^2]
-* 开发者 API
-* 常见问题
-* 获取帮助
-* 插件源码
+* [前言](README.md)
+* [更新日志](changelogs.md)
+* [目录](table-of-contents.md)
+* [安装](installtion.md)
+* [快速开始](quick-start.md)
+* [配置文件](configuration.md)
+* [权限](permissions.md)
+* [命令](commands.md)
+* [用法](usage.main.md)
+  * [通用](usage.general.main.md)
+    * [历史](usage.general.history.md)
+    * [会话](usage.general.sessions.md)
+    * [图案](usage.general.patterns.md)
+    * [蒙版](usage.general.masks.md)
+  * [导航](usage.navigation.md)
+  * [区域](usage.regions.main.md)
+    * [选区](usage.regions.selection.md)
+    * [区域操作](usage.regions.region-operations.md)
+  * [剪贴板](usage.clipboard.md)
+  * [生成](usage.generation.md)
+  * [绑定工具](usage.tools.md)
+  * [笔刷](usage.brushes.md)
+  * [实用工具](usage.utilities.md)[^1]
+  * [快照](usage.snapshots.md)
+  * [其他](usage.other.main.md)
+    * [表达式](usage.other.expression-syntax.md)
+    * [快速脚本](usage.other.craftscripts.md)[^2]
+* [开发者 API](developer-api.main.md)
+  * [API 概念](developer-api.api-concepts.main.md)
+    * [操作方](developer-api.api-concepts.actors.md)
+    * [本地会话](developer-api.api-concepts.local-sessions.md)
+    * [方块](developer-api.api-concepts.blocks.md)
+    * [图案与蒙版](developer-api.api-concepts.patterns-and-masks.md)
+    * [区段](developer-api.api-concepts.extents.md)
+    * [区域](developer-api.api-concepts.regions.md)
+    * [注册项](developer-api.api-concepts.registries.md)
+    * [会话编辑](developer-api.api-concepts.edit-sessions.md)
+    * [适配器](developer-api.api-concepts.adapters.md)
+  * [API 示例](developer-api.api-examples.main.md)
+    * [剪贴板示例](developer-api.api-examples.clipboard-examples.md)
+    * [结构示例](developer-api.api-examples.schematic-examples.md)
+    * [LocalSession 示例](developer-api.api-examples.localsession-examples.md)
+  * [内部 API](developer-api.internal-apis.md)
+* [常见问题](common-questions.md)
+* [获取帮助](getting-help.md)
+* [源码](source-code.md)
+
 
 ## 相关链接
 

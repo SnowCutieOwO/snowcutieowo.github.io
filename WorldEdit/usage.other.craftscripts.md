@@ -29,12 +29,14 @@
 * 接受 WorldEdit 强大的方块类型格式（`//set sign[facing=north]`）；
 * 获取用户的选区。
 
-> [!TIP|label:提示]    
-> 推荐你在编写快速脚本之前对 Java 或者 JavaScript 进行一些基本的了解。
+::: tip
+推荐你在编写快速脚本之前对 Java 或者 JavaScript 进行一些基本的了解。
+:::
 
-> [!TIP|label:提示]    
-> 当我们使用 WorldEdit API 编写快速脚本时，对这部分内容的限制并不算多。    
-> 进阶用户甚至可以与服务端底层 API（如 Bukkit、NeoForge 等）进行对接。
+::: tip  
+当我们使用 WorldEdit API 编写快速脚本时，对这部分内容的限制并不算多。    
+进阶用户甚至可以与服务端底层 API（如 Bukkit、NeoForge 等）进行对接。
+:::
 
 ### 介绍
 
@@ -49,36 +51,42 @@
 **操作方块**
 
 所有在 WorldEdit 中的方块编辑都是通过 EditSession 完成的。这个对象会自动处理所有历史和方块放置顺序。若要为自己的快速脚本获取一个编辑选区，你需要使用：
+
 ```Java
 var sess = context.remember();
 ```
-每次你调用这个方法时，都会获得一个新的 `EditSession` 对象，所以请确保在编写脚本时只引入一个该对象。若要设置方块，你既要提供一个表示方块种类和一或多个属性的结合内容 `BlockState`，或一个 `BaseBlock`，即表示带有可能的额外 NBT 数据的 `BlockState` 对象，所以请确保在编写脚本时只引入一个该对象。若要设置方块，你既要提供一个表示方块种类和一或多个属性的结合内容
-> **示例：将一个方块设置为白色羊毛**
-> ```Java
-> importPackage(Packages.com.sk89q.worldedit.world.block);
-> 
-> var sess = context.remember();
-> sess.setBlock(player.getBlockOn().toVector().toBlockPoint(), BlockTypes.WHITE_WOOL.getDefaultState());
-> ```
 
-若要获取方块，请在 EditSession 上使用方法 `getBlock()` 方法。这个方法 会返回一个 `BaseBlock`。将
+每次你调用这个方法时，都会获得一个新的 `EditSession` 对象，所以请确保在编写脚本时只引入一个该对象。若要设置方块，你既要提供一个表示方块种类和一或多个属性的结合内容 `BlockState`，或一个 `BaseBlock`，即表示带有可能的额外 NBT 数据的 `BlockState` 对象，所以请确保在编写脚本时只引入一个该对象。若要设置方块，你既要提供一个表示方块种类和一或多个属性的结合内容。
+
+::: info 示例：将一个方块设置为白色羊毛
+
+```Java
+importPackage(Packages.com.sk89q.worldedit.world.block);
+var sess = context.remember();
+sess.setBlock(player.getBlockOn().toVector().toBlockPoint(), BlockTypes.WHITE_WOOL.getDefaultState());
+```
+:::
+
+若要获取方块，请在 EditSession 上使用方法 `getBlock()` 方法。这个方法将会返回一个 `BaseBlock`。
 
 ### 处理参数
 
 参数在 `argv` 变量中传递。若你需要检查玩家提供的参数数量是否正确，你可以使用方法 `CraftScriptContext#checkArgs()`。将
 `CraftScriptContext` 可通过 `CraftScriptContext#checkArgs()` 进行基本的参数判断。你也可以使用 `WorldEdit.getInstance().getPatternFactory()` 和 `.getMaskFactory()` 直接对接 WorldEdit 的判断器。
 
-> **示例：检查参数**
-> ```Java
-> context.checkArgs(1, 3, "<block> [width] [height]");
-> var block = context.getBlock(argv[1]);
-> ```
+::: info 示例：检查参数
+```Java
+context.checkArgs(1, 3, "<block> [width] [height]");
+var block = context.getBlock(argv[1]);
+```
+:::
 
 如果玩家输入了一个无效方块怎么办？脚本将会抛出一个错误，如果你不尝试捕捉这个错误的话，玩家就会收到这条错误的消息，且脚本也会被强制中止。
 
 ### 处理 Java 包
 
 若要导入一个 Java 包，你可以按下列格式进行操作：
+
 ```Java
 importPackage(Packages.package.name.here);
 ```

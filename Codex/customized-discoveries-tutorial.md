@@ -3,7 +3,7 @@
 在这一章节中我会向你解释如何使用我的另一个插件 ConditionalEvents 与本插件进行配合。ConditionalEvents 允许你在达到特定条件时触发时间，并执行不同的操作。例如，如果玩家捡起了一个物品，或是按下了一个按钮，设置好的一些时间就会被触发。
 
 所以，在我的插件 ConditionalEvents 的帮助下，你可以创建更复杂的可发现物。让我们假设你想要做通过消耗一个物品来解锁一个可发现物的功能，比如吃掉一个苹果，所以我们就可以这样创建分类：
-```YAML
+``` YAML
 name: "&c&lFood"
 discover_title:
   title: "&c&lCODEX UPDATED"
@@ -34,7 +34,7 @@ discoveries:
 ```
 
 如你所见，我们只是创建了一个“食物”分类下的可发现物（文件名称可以为 food.yml）。所以我们现在就来着手制作一个 ConditionalEvents 触发事件。
-```YAML
+``` YAML
 mystery_apple_eat:
     type: item_consume
     conditions:

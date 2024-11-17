@@ -3,10 +3,12 @@
 
 ## 命令
 
+::: info 提示
 你可以使用下列命令浏览所有该部分的所有命令：
-> ```
-> /dh features help
-> ```
+```
+/dh features help
+```
+:::
 
 ## 伤害显示
 
@@ -14,8 +16,9 @@
 
 ### 配置
 
-> [!NOTE|label:提示]
-> **该功能可在主配置文件 `config.yml` 中修改。**
+::: info 提示
+**该功能可在主配置文件 `config.yml` 中修改。**
+:::
 
 #### config.yml
 
@@ -50,8 +53,9 @@ damage-display:
 
 ### 配置
 
-> [!NOTE|label:提示]
-> **该功能可在主配置文件 `config.yml` 中修改。**
+::: info 提示
+**该功能可在主配置文件 `config.yml` 中修改。**
+:::
 
 #### config.yml
 

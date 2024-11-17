@@ -16,7 +16,7 @@
 输出的 .json 文件名称通常按照下列格式：`<玩家名>_<时间戳>_<保存原因>_<短UUID>.json`
 
 示例的输出文件：William278_2022-10-12_21-46-37_disconnect_f7719f5c.json
-```json
+``` JSON
 {
   "status": {
     "health": 20.0,

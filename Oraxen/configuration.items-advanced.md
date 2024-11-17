@@ -3,6 +3,229 @@
 
 ## 原版选项
 
+### 组件（Components）
+
+:::: tabs
+
+::: tab 1.20.5
+`max_stack_size` - 设置 Oraxen 物品单格最大堆叠数量
+`enchantment_glint_override` - 设置附魔光效的覆盖状态
+`fire_resistant` - 设置该 Oraxen 物品是否免疫火焰与岩浆伤害
+`durability` - 设置 Oraxen 物品耐久度
+`hide_tooltip` - 隐藏 Oraxen 物品的所有提示框
+`food` - 使得物品可消耗
+
+上述所有属性的示例：
+
+```YAML
+my_item:
+  itemname: <gradient:#4B36B1:#6699FF>My Item
+  Components:
+    enchantment_glint_override: false
+    durability: 10
+    # if the material above isnt a normal tool, but say PAPER
+    # The item will not have its durability lowered by actions by default
+    # Example of making the tool lower its durability from hitting entities and breaking blocks
+    #durability:
+    #  value: 10
+    #  damage_block_break: true
+    # damage_entity_hit: true
+    max_stack_size: 10
+    fire_resistant: true
+    hide_tooltip: true
+    tool:
+      damage_per_block:                       # Optional, defaults to 1
+      default_mining_speed:                   # Optional, defaults to 1.0
+      rules:
+        - speed: 1.0
+          correct_for_drops: true             # If mining the given blocks should drop or not
+          material: DIAMOND_BLOCK             # The material this rule applies to, also supports list format
+          #materials:
+          #  - DIAMOND_BLOCK
+          #  - NETHERITE_BLOCK
+          # List of all tags can be found at https://minecraft.wiki/w/Tag#Block_tags_2
+          tag: minecraft:mineable/axe         # The block-tag this rule applies to, also supports list format
+          #tags:
+          #  - minecraft:mineable/axe
+          #  - minecraft:mineable/shovel
+    food:
+      nutrition: 2
+      saturation: 2 
+      can_always_eat: false                   # Optional, default is false
+      eat_seconds: 1.6                        # Optional, default is 1.6
+      replacement:                            # Optional, 1.21+ only, null if not specified (aka no replacement)
+        #minecraft_type: DIAMOND
+        #crucible_item: crucibleid
+        #eco_item: ecoid
+        #mmoitems_id: id
+        #mmoitems_type: type
+        oraxen_item: itemid
+      effects:
+        mining_fatigue:
+          duration: 10                        # In seconds, default is 20
+          amplifier: 1
+          ambient: false
+          show_icon: true
+          show_particles: true
+          probability: 50
+```
+:::
+
+::: tab 1.21
+
+`max_stack_size` - 设置 Oraxen 物品单格最大堆叠数量  
+`enchantment_glint_override` - 设置附魔光效的覆盖状态  
+`fire_resistant` - 设置该 Oraxen 物品是否免疫火焰与岩浆伤害  
+`durability` - 设置 Oraxen 物品耐久度  
+`hide_tooltip` - 隐藏 Oraxen 物品的所有提示框  
+`food` - 使得物品可消耗  
+`jukebox_playable` - 使物品可被放入唱片机并播放指定乐曲  
+* `show_in_tooltip` - 在提示框中显示物品的歌曲信息
+* `song_key` - 歌的名称（自定义歌曲需要数据包）
+
+上述所有属性的示例：
+
+```YAML
+my_item:
+  itemname: <gradient:#4B36B1:#6699FF>My Item
+  Components:
+    enchantment_glint_override: false
+    durability: 10
+    # if the material above isnt a normal tool, but say PAPER
+    # The item will not have its durability lowered by actions by default
+    # Example of making the tool lower its durability from hitting entities and breaking blocks
+    #durability:
+    #  value: 10
+    #  damage_block_break: true
+    # damage_entity_hit: true
+    max_stack_size: 10
+    fire_resistant: true
+    hide_tooltip: true
+    tool:
+      damage_per_block:                       # Optional, defaults to 1
+      default_mining_speed:                   # Optional, defaults to 1.0
+      rules:
+        - speed: 1.0
+          correct_for_drops: true             # If mining the given blocks should drop or not
+          material: DIAMOND_BLOCK             # The material this rule applies to, also supports list format
+          #materials:
+          #  - DIAMOND_BLOCK
+          #  - NETHERITE_BLOCK
+          # List of all tags can be found at https://minecraft.wiki/w/Tag#Block_tags_2
+          tag: minecraft:mineable/axe         # The block-tag this rule applies to, also supports list format
+          #tags:
+          #  - minecraft:mineable/axe
+          #  - minecraft:mineable/shovel
+    food:
+      nutrition: 2
+      saturation: 2 
+      can_always_eat: false                   # Optional, default is false
+      eat_seconds: 1.6                        # Optional, default is 1.6
+      replacement:                            # Optional, 1.21+ only, null if not specified (aka no replacement)
+        #minecraft_type: DIAMOND
+        #crucible_item: crucibleid
+        #eco_item: ecoid
+        #mmoitems_id: id
+        #mmoitems_type: type
+        oraxen_item: itemid
+      effects:
+        mining_fatigue:
+          duration: 10                        # In seconds, default is 20
+          amplifier: 1
+          ambient: false
+          show_icon: true
+          show_particles: true
+          probability: 50
+      jukebox_playable:
+        show_in_tooltip: true
+        song_key: mysong.id
+```
+:::
+
+::: tab 1.21.2+
+`equippable` - 使得该物品可像盔甲一样被装备
+`damage_resistant` - 使得物品无视某些伤害
+  * 如果你想要设置多种伤害类型，你需要添加新自定义标签的数据包。
+  * 所有可用的伤害类型可以在[这里](https://zh.minecraft.wiki/w/%E6%A0%87%E7%AD%BE#%E4%BC%A4%E5%AE%B3%E7%B1%BB%E5%9E%8B)查看。
+`enchantable` - 设置该物品在附魔台内的最大附魔消耗.
+`glider` - 设置该物品在装备时是否可以像鞘翅一样滑翔。
+`item_model` - 物品的基础模型，可替代 `custom_model_data`。
+  * 参考模型可在 `assets/<namespace>/models/item/<model>` -> `item_model: 命名空间:模型` 下找到。
+`tooltip_style` - 物品提示框的类型。
+  * 自定义提示框背景可在 `assets/<namespace>/textures/gui/sprites/tooltip/<id>_background` 下找到示例。
+  * 自定义提示框边框可在 `assets/<namespace>/textures/gui/sprites/tooltip/<id>_frame` 下找到示例。
+  * 可通过 mcmeta 添加自定义 & 动态样式。[维基链接](https://zh.minecraft.wiki/w/%E8%B5%84%E6%BA%90%E5%8C%85)
+`use_cooldown` - 对物品添加使用冷却。
+`use_remainder` - 将物品在消耗后替换为其他物品。
+
+上述所有属性的示例：
+
+```YAML
+my_item:
+  itemname: <gradient:#4B36B1:#6699FF>My Item
+  Components:
+    enchantment_glint_override: false
+    durability: 10
+    # if the material above isnt a normal tool, but say PAPER
+    # The item will not have its durability lowered by actions by default
+    # Example of making the tool lower its durability from hitting entities and breaking blocks
+    #durability:
+    #  value: 10
+    #  damage_block_break: true
+    # damage_entity_hit: true
+    max_stack_size: 10
+    fire_resistant: true
+    hide_tooltip: true
+    tool:
+      #damage_per_block:                       # Optional, defaults to 1
+      #default_mining_speed:                   # Optional, defaults to 1.0
+      rules:
+        - speed: 1.0
+          correct_for_drops: true             # If mining the given blocks should drop or not
+          material: DIAMOND_BLOCK             # The material this rule applies to, also supports list format
+          #materials:
+          #  - DIAMOND_BLOCK
+          #  - NETHERITE_BLOCK
+          # List of all tags can be found at https://minecraft.wiki/w/Tag#Block_tags_2
+          tag: minecraft:mineable/axe         # The block-tag this rule applies to, also supports list format
+          #tags:
+          #  - minecraft:mineable/axe
+          #  - minecraft:mineable/shovel
+    food:
+      nutrition: 2
+      saturation: 2 
+      #can_always_eat: false                   # Optional, default is false
+    damage_resistant: is_fire
+    enchantable: 1
+    glider: true
+    item_model: minecraft:example         #`assets/minecraft/models/item/example.json`
+    tooltip_style: minecraft:example      #`assets/minecraft/textures/gui/sprites/tooltip/example_(background & frame)`
+    use_remainder:
+      #minecraft_type: DIAMOND
+      #crucible_item: crucibleid
+      #eco_item: ecoid
+      #mmoitems_id: id
+      #mmoitems_type: type
+      oraxen_item: itemid
+    use_cooldown:
+      seconds: 1.2                        #Default is 1.0
+      group: oraxen:example               #Default is `oraxen:itemid`, set to ""-blank to affect by material
+    equippable:
+      slot: HEAD
+      #model: minecraft:example           Optional, primarily useful for Custom-Armor
+      #camera_overlay: minecraft:example  Optional, used by carved_pumpkin etc, example; `assets/minecraft/textures/example.png`
+      #equip_sound: item.armor.equip_chain
+      #allowed_entities:                  Optional, defaults to all entities
+      #  - PLAYER
+      #  - SKELETON
+      #dispensable: true                  Optional, default is true
+      #swappable: true                    Optional, default is true
+      #damage_on_hurt: true               Optional, default is true
+```
+:::
+
+::::
+
 ### 物品模板（ItemTemplate）
 
 与格式刷类似，该功能允许你将模板物品的属性快速应用至其他物品。
@@ -27,14 +250,30 @@ template_item2:
   material: CLOCK
 ```
 
-### 显示名称（DisplayName）
+### 自定义名称（Custom Name）
 
 改变显示在提示框顶部的名称，即物品名称。
+
+:::: tabs
+
+::: tab 1.20.5+
+
+```YAML
+my_item:
+  itemname: "<red><bold>示例" # 示例名称
+  #customname: "example" # 应当只用于保证与旧版的兼容性
+```
+
+:::
+
+::: tab 1.18-1.20.4
 
 ```YAML
 my_item:
   displayname: "<red><bold>示例" # 示例名称
 ```
+
+:::
 
 ### 材料（Material）
 
@@ -87,7 +326,7 @@ my_item:
 
 ### 隐藏物品（excludeFromInventory）
 
-允许你将该物品在 Oraxen 的物品列表中隐藏。设置后它将不再在该界面中可见，但仍然可以通过 [Oraxen 的给予命令]()获取。在应用至其他插件例如界面图标时非常有用。
+允许你将该物品在 Oraxen 的物品列表中隐藏。设置后它将不再在该界面中可见，但仍然可以通过 [Oraxen 的给予命令](usage.commands.md#获取物品)获取。在应用至其他插件例如界面图标时非常有用。
 
 ```YAML
   excludeFromInventory: true
@@ -97,9 +336,10 @@ my_item:
 
 允许你修改物品的耐久度（不很有用）。
 
-> [!INFO|label:提示]
-> 在 Oraxen 1.174.0 之后的版本，所有低于 1.20.5 的服务器都不再使用该功能。
-> 1.20.5+ 的服务器使用 `max-durability` 标签而非该设置。
+::: info 提示
+在 Oraxen 1.174.0 之后的版本，所有低于 1.20.5 的服务器都不再使用该功能。
+1.20.5+ 的服务器使用 `max-durability` 标签而非该设置。
+:::
 
 ```YAML
 my_item:
@@ -308,8 +548,8 @@ my_item:
 
 ### 资源包设置
 
-该部分有独立的章节，你可以在[这里]()继续阅读。
+该部分有独立的章节，你可以在[这里](configuration.item-appearance.md)继续阅读。
 
 ### 机制选项
 
-该部分有独立的章节。你可以在[这里]()继续阅读。
+该部分有独立的章节。你可以在[这里](mechanics.introduction.md)继续阅读。

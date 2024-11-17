@@ -1,4 +1,4 @@
-# :fas fa-images: 动画
+# 🖼️ 动画
 如何使用 DecentHolograms 内置的动画
 
 DecentHolograms 支持两种类型的动画：预制动画与自定义动画。
@@ -12,8 +12,9 @@ DecentHolograms 支持两种类型的动画：预制动画与自定义动画。
 <#ANIM:<名称>:<参数>>文本</#ANIM>
 ```
 
-> [!NOTE|label:提示]
-> 若要在动画中使用变量，你应该在 [`config.yml`](general.configuration.config.md) 下启用 `allow-placeholder-inside-animation` 设置，
+::: info 提示
+若要在动画中使用变量，你应该在 [`config.yml`](general.configuration.config.md) 下启用 `allow-placeholder-inside-animation` 设置，
+:::
 
 ## 预制动画
 
@@ -35,10 +36,11 @@ DecentHolograms 支持两种类型的动画：预制动画与自定义动画。
 <#ANIM:wave:<颜色1>,<颜色2>>文本</#ANIM>
 ```
 
-> [!NOTE|label:示例]
-> ```
-> <#ANIM:wave:&f,&b&l>文本</#ANIM>
-> ```
+::: info 示例
+```
+<#ANIM:wave:&f,&b&l>文本</#ANIM>
+```
+:::
 
 ### 燃烧
 
@@ -48,10 +50,11 @@ DecentHolograms 支持两种类型的动画：预制动画与自定义动画。
 <#ANIM:burn:<color1>,<color2>>文本</#ANIM>
 ```
 
-> [!NOTE|label:示例]
-> ```
-> <#ANIM:burn:&f,&b&l>文本</#ANIM>
-> ```
+::: info 示例
+```
+<#ANIM:burn:&f,&b&l>文本</#ANIM>
+```
+:::
 
 ### 打字机
 

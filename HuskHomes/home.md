@@ -10,6 +10,7 @@
   * [⛔ 访问控制](guide.managing-access.md)
   * [🖥️ 命令列表](guide.commands.md)
   * [📜 冲突命令](guides.command-conflicts.md)
+  * [❓ 常见问题](guides.faq.md)
 ## 文档
   * [📁 数据库](documentation.database.md)
   * [⛅ Redis 支持](documentation.redis-support.md)
@@ -30,7 +31,7 @@
     * [❗ API 事件](documentation.api.api-events.md)
 ## 链接
   * [💻 GitHub](https://github.com/WiIIiam278/HuskHomes)
-  * [📂 Downloads](https://william278.net/project/huskhomes/)
+  * [📂 下载链接](https://william278.net/project/huskhomes/)
     * [🔧 Modrinth](https://modrinth.com/plugin/huskhomes)
     * [🚰 Spigot](https://www.spigotmc.org/resources/huskhomes.83767/)
     * [🛒 Polymart](https://polymart.org/resource/huskhomes.284/)

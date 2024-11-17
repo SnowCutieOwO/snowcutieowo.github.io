@@ -1,4 +1,5 @@
-# Placeholder API变量
+# PlaceholderAPI 变量
+
 **本插件**提供了一些可以在 GUI 或其他插件中使用的变量。
 
 

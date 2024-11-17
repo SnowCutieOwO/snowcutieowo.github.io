@@ -4,9 +4,9 @@
 
 若要创建一个区域，你需要告诉 WorldGuard 这个区域的实际位置。WorldEdit（的小木斧）所创建的选区就可以用在这里。
 
-> [!TIP|label:首次使用 WorldEdit？]
-> 你可以参考 WorldEdit 维基的“[快速开始](https://snowcutieowo.github.io/WorldEdit/#/quick-start)”章节来学习如何通过 WorldEdit 创建一个选区。
-
+::: tip 首次使用 WorldEdit？
+你可以参考 WorldEdit 维基的“[快速开始](https://snowcutieowo.github.io/WorldEdit/#/quick-start)”章节来学习如何通过 WorldEdit 创建一个选区。
+:::
 
 选区可以是这样的形状：
 
@@ -49,16 +49,17 @@
 
 区域数据会间隔一定时间自动保存，因此你无需输入命令来手动保存数据。
 
-> [!NOTE|label:示例：创建一个主城区域，只有 build 权限组可以在其中进行建筑操作]
-> 1. 用 WorldEdit 的选区工具圈定主城区域的范围；
-> 2. 创建一个名为“spawn”的范围：
-> ```
-> /rg define spawn
-> ```
-> 3. 将 build 权限组添加为其成员：
-> ```
-> /rg addmember spawn g:builders
-> ```
+::: info 示例：创建一个主城区域，只有 build 权限组可以在其中进行建筑操作
+1. 用 WorldEdit 的选区工具圈定主城区域的范围；
+2. 创建一个名为“spawn”的范围：
+```
+/rg define spawn
+```
+3. 将 build 权限组添加为其成员：
+```
+/rg addmember spawn g:builders
+```
+:::
 
 ### 其他命令
 
@@ -91,19 +92,21 @@
 * 若你需要某个禁止建筑的区域覆盖其他所有玩家可自由建筑的区域，你需要使用 `build` 的区域标志；
 * 若你创建的区域没有保护其中的建筑，你需要使用 `passthrough` 区域标志。
 
-> [!NOTE|label:示例：创建重叠在主城出生点范围内的矿区，供玩家自由挖掘]
-> 1. 圈定矿区的范围；
-> 2. 使用下列命令创建名为“mine”的区域：
-> ```
-> /rg define mine
-> ```
-> * 将该区域的 `build` 标志设置为 `allow`，这允许所有玩家在其中建筑或挖掘方块，因为 spawn 区域没有指定 build 的标志：
-> ```
-> /rg flag mine build allow
-> ```
+::: info 示例：创建重叠在主城出生点范围内的矿区，供玩家自由挖掘
+1. 圈定矿区的范围；
+2. 使用下列命令创建名为“mine”的区域：
+```
+/rg define mine
+```
+* 将该区域的 `build` 标志设置为 `allow`，这允许所有玩家在其中建筑或挖掘方块，因为 spawn 区域没有指定 build 的标志：
+```
+/rg flag mine build allow
+```
+:::
 
-> [!WARNING|label:警告]
-> `build` 标志有些额外的属性，我们不建议修改这个标志，除非你知道你在做什么。见[区域标志概览](regions.region-flags.md)来获得更多信息。
+::: warning
+`build` 标志有些额外的属性，我们不建议修改这个标志，除非你知道你在做什么。见[区域标志概览](regions.region-flags.md)来获得更多信息。
+:::
 
 ### 标志
 
@@ -113,21 +116,22 @@
 ```
 浏览“区域标志”章节教程来获得更多教程。
 
-> [!NOTE|label:示例：创建一个主城附近的战斗场，玩家可以在其中战斗但不能破坏方块，而 builders 权限组可以在其中建筑]
-> 1. 圈定竞技场的区域；
-> 2. 通过下列命令创建名为“arena”的区域：
-> ```
-> /rg define arena
-> ```
-> * 通过下列命令将 `pvp` 标志设置为 `allow`：
-> ```
-> /rg flag arena pvp allow
-> ```
-> * 在竞技场内的 builders 权限组玩家仍然不能建造，因为他们还不是这个区域的成员，即便他们是主城区域的成员也不行（如果你已经设置过上文提及的例子中的内容）。无论如何，你创建了竞技场区域并为其设置了 pvp 标志，但没有设置保护，所以将 `passthrough` 标志设置为 `allow` 以使其绕过区域保护检查：
-> ```
-> /rg flag arena passthrough allow
-> ```
+::: info 示例：创建一个主城附近的战斗场，玩家可以在其中战斗但不能破坏方块，而 builders 权限组可以在其中建筑]
+1. 圈定竞技场的区域；
+2. 通过下列命令创建名为“arena”的区域：
+```
+/rg define arena
+```
+* 通过下列命令将 `pvp` 标志设置为 `allow`：
+```
+/rg flag arena pvp allow
+```
+* 在竞技场内的 builders 权限组玩家仍然不能建造，因为他们还不是这个区域的成员，即便他们是主城区域的成员也不行（如果你已经设置过上文提及的例子中的内容）。无论如何，你创建了竞技场区域并为其设置了 pvp 标志，但没有设置保护，所以将 `passthrough` 标志设置为 `allow` 以使其绕过区域保护检查：
+```
+/rg flag arena passthrough allow
+```
+:::
 
 ## 常见情境
 
-如果你在想如何做某件事（例如允许使用门、拉杆或压力板等），请检查“命令情境”章节。
+如果你在想如何做某件事（例如允许使用门、拉杆或压力板等），请检查“[常见情境](regions.common-scenarios.md)”章节。

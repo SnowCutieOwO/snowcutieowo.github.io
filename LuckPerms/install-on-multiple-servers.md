@@ -29,7 +29,12 @@ ip_forward: true
 bungeecord: true
 ```
 在每个海绵端子服的 `config/sponge/global.conf` 文件中，你需要这样设置：
-```HOCON
+<!--
+  这段内容需要改进：
+  原因：Shiki 不支持渲染 HOCON 格式
+-->
+
+```
 sponge {
     bungeecord {
         ip-forwarding=true

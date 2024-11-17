@@ -3,25 +3,33 @@
 
 ## 问题列表
 
-### 哪些数据可以被同步？
+::: details 哪些数据可以被同步？
 
 HuskSync 支持同步许多数据，所有同步的数据种类均可按照你的喜好更高。请浏览“[同步功能](documentation.sync-features.md)”章节以获取可同步数据的完整列表。
 
-### 是否支持模组物品？
+:::
+
+::: details 是否支持模组物品？
 
 若你在 Arclight 或类似的核心上运行 HuskSync，请注意我们不会给你提供支持，但基本上 v3.x+ 的 HuskSync 可以正常地保存及同步物品。
 
 **太长不读** - 可能支持但不完全保证兼容性，我们不会将其直接标记为支持。在部署至实际生产环境之前请再三测试！
 
-### 是否支持 MMOItems/SlimeFun/ItemsAdder 的物品？
+:::
+
+::: details 是否支持 MMOItems/SlimeFun/ItemsAdder 的物品？
 
 带有自定义物品的插件，在 3.x 之后的 HuskSync 应该会被支持；但我们无法确保所有种类的自定义物品实现方法都可以正常显示。在部署至实际生产环境之前请再三测试！
 
-### 是否需要 Redis？什么是 Redis？
+:::
+
+::: details 是否需要 Redis？什么是 Redis？
 
 HuskSync 需要 Redis 来操作（原因如下）。Redis 是一种运行在内存中的数据库，可用于服务器之间的数据缓存与群组之间的信息交换。安装 Redis 的方法与安装 MySQL 的方式相似（译者注：是真的。尤其是 Windows，除 MySQL 有安装包需要解压外，二者均可通过 cmd 观察运行状态。）若你正在使用官方的服务器，则你可能需要咨询客服是否支持 Redis。若你正在寻找支持 Redis 的服务器提供商，我在[这里](https://william278.net/redis-hosts)为你提供了一个列表，你可以稍后浏览。
 
-### 插件如何同步数据？
+:::
+
+::: details 插件如何同步数据？
 
 HuskSync 利用 MySQL 和 Redis 来实现最大效率的数据同步。
 
@@ -29,7 +37,9 @@ HuskSync 利用 MySQL 和 Redis 来实现最大效率的数据同步。
 
 该方法用于显著提升同步性能与稳定性。一些其他的方法被用于优化这个过程，例如通过 Snappy 压缩序列化的数据。
 
-### HuskSync 为什么不支持同步玩家经济/支持 Vault？
+:::
+
+::: details HuskSync 为什么不支持同步玩家经济/支持 Vault？
 
 这个问题被经常提及，我有一个很好的理由来解释为什么 HuskSync 不支持它。
 
@@ -47,8 +57,12 @@ Vault 是一个为开发者提供通用 API 的插件，它主要实现这两件
 
 因此，这里有些经济插件——例如 [XConomy](https://github.com/YiC200333/XConomy) 或 [RedisEconomy](https://github.com/Emibergo02/RedisEconomy) 能够胜任，并且我也推荐你们使用。若要使用不兼容的经济插件，Vault 为你提供了在插件之间迁移经济数据的方法（即 `/vault-convert`）。
 
-### 这个插件会比 MySQLDataBridge 好吗？
+:::
+
+::: details 这个插件会比 MySQLDataBridge 好吗？
 
 我可没法回答这个问题！使用体验应当是因人而异的。
 
 HuskSync 提供数据同步方法的性能，取决于你的服务器网络环境，以及你的玩家数据量。另外 HuskSync 还提供了更强大的回滚功能，以及快照备份/管理功能，如果这是你想要的话，你就更应该使用本插件。
+
+:::

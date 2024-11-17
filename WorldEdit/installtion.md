@@ -1,19 +1,12 @@
 # 安装
 
-> * 需求
->   * 选择加载方式[^1]
-> * 逐步安装
->   * Bukkit / Spigot / Paper
->   * Forge 单人游戏
->   * Fabric 单人游戏/服务器
->   * Forge 服务器 / Sponge
->   * 想要显示选区边界？
+[[toc]]
 
 ## 安装需求
 
 WorldEdit 运行在 Java 版（JE 版），或是你的单人游戏与本地服务器的 Minecraft 上。
 
-**WolrdEdit 不能在 Realms、Windows 10 版、基岩版（Bedrock Edition，BE 版）或携带版（Pocket Edition，PE版，旧手机版）上使用。**这些版本的 Minecraft 只有有限或根本没有的模组支持。需要注意的是“Windows 10 版”是一个特殊版本的 Minecraft，而不是在 Windows 10 操作系统上运行的 Minecraft。
+**WorldEdit 不能在 Realms、Windows 10 版、基岩版（Bedrock Edition，BE 版）或携带版（Pocket Edition，PE版，旧手机版）上使用。** 这些版本的 Minecraft 只有有限或根本没有的模组支持。需要注意的是“Windows 10 版”是一个特殊版本的 Minecraft，而不是在 Windows 10 操作系统上运行的 Minecraft。
 
 在你安装 WorldEdit 前，你需要装一个合适的“模组（插件）加载器”，例如 NeoForge、Fabric、Spigot、Bukkit 或 Sponge。我们建议你阅读下一章节来获悉模组平台选择的相关事宜。
 
@@ -79,12 +72,11 @@ WorldEdit 运行在 Java 版（JE 版），或是你的单人游戏与本地服�
 1. 在服务器端输入 `//drawsel` 命令使用有限的选区可视化功能。仅对小于 48x48x48 的立方体选区有效（在旧版本中为 32x32x32），且你需要处于创造模式。显示受到限制是因为结构方块本身在很长一段时间内都以该种方式运作；
 2. 使用一个第三方的客户端模组，例如 [WorldEdit CUI (Fabric)](https://modrinth.com/mod/worldedit-cui)[^5]。注意这个模组需要 Fabric，所以你需要先在客户端上安装 Fabric。
 
-> [!NOTE|label:注意]    
-> 如果你需要使用更老版本的 Minecraft（1.12.2 或更早），除了下载一个旧版本的 WorldEdit（6.x 版）你也可能需要用到旧版本的 [Mumfrey 制作的 WorldEditCUI 模组](https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1292886-worldeditcui)。注意这个模组需要 LiteLoader（安装方法在帖子中可以找到）。
+::: tip   
+如果你需要使用更老版本的 Minecraft（1.12.2 或更早），除了下载一个旧版本的 WorldEdit（6.x 版）你也可能需要用到旧版本的 [Mumfrey 制作的 WorldEditCUI 模组](https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1292886-worldeditcui)。注意这个模组需要 LiteLoader（安装方法在帖子中可以找到）。
+:::
 
 ## 脚注
-
-[^1]: 译者注：此处意译为“加载方式”，而非原先的“模组载入器”，因为 WorldEdit 不止有模组形式，也有插件形式的。
 
 [^3]: 以 HMCL 和 PCL 为例，这两个启动器的 .minecraft 目录在未设置的情况下都与启动器文件本身处于同级目录，也就是，就在它们旁边。
 

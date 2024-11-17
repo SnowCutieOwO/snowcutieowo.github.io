@@ -2,8 +2,8 @@
 
 LuckPerms 是一个开源项目，在宽松的 [MIT 许可证](https://github.com/LuckPerms/LuckPerms/blob/master/LICENSE.txt)条款下自由发布。
 
-> [MIT License](https://github.com/KyoriPowered/adventure/blob/master/license.txt)|
-|>
+> [MIT License](https://github.com/KyoriPowered/adventure/blob/master/license.txt)
+>
 > Copyright (c) lucko (Luck) <luck@lucko.me>
 > Copyright (c) Turbotailz <turbo@tailz.dev>
 > Copyright (c) contributors

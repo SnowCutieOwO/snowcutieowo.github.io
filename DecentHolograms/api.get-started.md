@@ -1,4 +1,4 @@
-# :fas fa-cog:开始
+# ⚙️ 开始
 着手使用 DecentHolograms API
 
 在本章节中，你会学习如何将 DecentHolograms 作为前置打包进你自己的插件，并使用它的 API。请注意，这之后为了让你的插件正常工作，它就会以 DecentHolograms 为硬依赖。
@@ -9,12 +9,13 @@
 
 将下列内容添加至你的构建文件中，来将 DecentHolograms API 加入项目。
 
-<!-- tabs:start -->
+:::: tabs
 
-#### **Gradle**
+::: tab Gradle
 
 ### build.gradle
-```Kotlin
+
+``` Kotlin
 repositories {
     maven { 
       id = "jitpack"
@@ -26,8 +27,9 @@ depencencies {
     compileOnly 'com.github.decentsoftware-eu:decentholograms:2.8.6'
 }
 ```
+:::
 
-#### **Maven**
+::: tab Maven
 
 ### pom.xml
 
@@ -48,18 +50,19 @@ depencencies {
   </dependency>
 </dependencies>
 ```
+:::
 
-<!-- tabs:end -->
+::::
 
-> [!TIP|label:收到了关于 NBT-API 不能正常载入的报错？]
+> [!TIP] 收到了关于 NBT-API 不能正常载入的报错？
 > 试着将 CodeMC 的仓库加入你的构建文件：
-> <!-- tabs:start -->
+> :::: tabs
 >
-> #### **Gradle**
+> ::: tab Gradle id='2'
 > 
 > ### build.gradle
 >
-> ```Kotlin
+> ``` Kotlin
 > repositories {
 >   // Other repositories, including jitpack
 >   maven {
@@ -68,8 +71,11 @@ depencencies {
 >   }
 > }
 > ```
+> :::
 >
-> #### **Maven**
+> ::: tab Maven id='2'
+> 
+> ### pom.xml
 > 
 > ```XML
 > <repositories>
@@ -81,20 +87,19 @@ depencencies {
 > </repositories>
 > ```
 > 
-> <!-- tabs:end -->
+> :::
+> ::::
 
 ## 作为（软）依赖导入
 
 DecentHolograms 需要安装在服务器中才可使用它的 API。
 为确保 DecentHolograms 先于你的插件载入，将它在你的 `plugin.yml` 或 `paper-plugin.yml` 文件中添加为软依赖，如下所示：
 
-<!-- tabs:start -->
+### plugin.yml
 
-#### **plugin.yml**
+:::: tabs
 
-<!-- tabs:start -->
-
-#### **软依赖**
+::: tab 软依赖 id='3'
 
 ```YAML
 name: 'MyPlugin'
@@ -106,8 +111,9 @@ main: 'com.example.plugin.MyPlugin'
 softdepend:
   - DecentHolograms
 ```
+:::
 
-#### **硬依赖**
+::: tab 硬依赖 id='3'
 
 ```YAML
 name: 'MyPlugin'
@@ -120,13 +126,15 @@ depend:
   - DecentHolograms
 ```
 
-<!-- tabs:end -->
+:::
 
-#### **paper-plugin.yml**
+::::
 
-<!-- tabs:start -->
+### paper-plugin.yml
 
-#### **软依赖**
+:::: tabs
+
+::: tab 软依赖 id='4'
 
 ```YAML
 name: 'MyPlugin'
@@ -141,8 +149,9 @@ dependencies:
       load: BEFORE
       required: false # This is the default when not present
 ```
+:::
 
-#### **硬依赖**
+::: tab 硬依赖 id='4'
 
 ```YAML
 name: 'MyPlugin'
@@ -157,7 +166,6 @@ dependencies:
       load: BEFORE
       required: true
 ```
+:::
 
-<!-- tabs:end -->
-
-<!-- tabs:end -->
+::::

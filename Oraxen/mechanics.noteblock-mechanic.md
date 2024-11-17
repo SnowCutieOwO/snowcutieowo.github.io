@@ -139,12 +139,13 @@ Mechanics:
       protection_type: CONTAINER
 ```
 
-> [!NOTE|label:提示]
-> 该功能需要 LightAPI，但这个插件不能在新版本的 Paper 上运行，因为高版本对区块与光照处理有着许多变化。
->
-> 你可以在[这里](https://github.com/IPECTER/LighterAPI/releases/tag/5.4.0-SNAPSHOT)找到原插件的分支版本。
->
-> 这个版本应该能在新版本的 Spigot 与 Paper 上正常运行。
+::: info 提示
+该功能需要 LightAPI，但这个插件不能在新版本的 Paper 上运行，因为高版本对区块与光照处理有着许多变化。
+
+你可以在[这里](https://github.com/IPECTER/LighterAPI/releases/tag/5.4.0-SNAPSHOT)找到原插件的分支版本。
+
+这个版本应该能在新版本的 Spigot 与 Paper 上正常运行。
+:::
 
 <div class="card">
 <div class="card-details">

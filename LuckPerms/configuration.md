@@ -646,7 +646,12 @@ apply-bungee-config-permissions: false
 
 #### 示例
 
-```HOCON
+<!--
+  这段内容需要改进：
+  原因：Shiki 不支持渲染 HOCON 格式
+-->
+
+```
 apply-sponge-implicit-wildcards=true
 ```
 
@@ -660,7 +665,12 @@ apply-sponge-implicit-wildcards=true
 
 #### 示例
 
-```HOCON
+<!--
+  这段内容需要改进：
+  原因：Shiki 不支持渲染 HOCON 格式
+-->
+
+```
 apply-sponge-default-subjects=true
 ```
 

@@ -2,59 +2,47 @@
 
 下面的情况可能是你会经常遇见的。其中的某些问题已经在其他章节里详细叙述了。
 
-> * [综合](regions.common-scenarios.md#综合)
->   * [如何允许门、拉杆等方块的使用？](regions.common-scenarios.md#如何允许门拉杆等方块的使用)
->   * [如何允许玩家骑乘马和矿车？](regions.common-scenarios.md#如何允许玩家骑乘马和矿车)
->   * [如何阻止在荒野区域建筑？](regions.common-scenarios.md#如何阻止在荒野区域建筑)
->   * [如何只对非玩家成员设置禁止离开区域的标志？](regions.common-scenarios.md#如何只对非玩家成员设置禁止离开区域的标志)
->   * [如何让玩家从某个位置离开一个设置了 exit=deny 的区域？](regions.common-scenarios.md#如何让玩家从某个位置离开一个设置了-exitdeny-的区域)
->   * [如何解除所有附魔台的保护？](regions.common-scenarios.md#如何解除所有附魔台的保护)
->   * [如何允许挖掘方块但阻止方块放置？](regions.common-scenarios.md#如何允许挖掘方块但阻止方块放置)
->   * [如何允许玩家阅读讲台上的书但阻止他们取书？](regions.common-scenarios.md#如何允许玩家阅读讲台上的书但阻止他们取书)
->   * [如何只允许玩家破坏指定种类的方块？](regions.common-scenarios.md#如何只允许玩家破坏指定种类的方块)
-> * [地皮设置](regions.common-scenarios.md#地皮设置)
-> * [如何创建一个带地皮的预设？](regions.common-scenarios.md#如何创建一个带地皮的预设)
-> * [如何阻止大厅区域的门等方块的使用？](regions.common-scenarios.md#如何阻止大厅区域的门等方块的使用)
-> * [问题](regions.common-scenarios.md#问题)
->   * [为什么活塞不工作？](regions.common-scenarios.md#为什么活塞不工作)
+[[toc]]
 
-> [!TIP|label:提示]
-> 请确保阅读“常见问题”章节来获取更多问题的解决办法。
+::: tip
+请确保阅读“常见问题”章节来获取更多问题的解决办法。
+:::
 
 ## 综合
 
 ### 如何允许门、拉杆等方块的使用？
 
-> 如果你想要所有人都能使用门、拉杆、按钮和压力板等红石元件，你可以设置 `use` 标志：
-> ```
-> /rg flag 区域名称 use allow
-> ```
-> 如果你想要这个标志对**所有**区域都生效，那么你就需要对全局区域设置：
-> ```
-> /rg flag __global__ use allow
-> ```
+如果你想要所有人都能使用门、拉杆、按钮和压力板等红石元件，你可以设置 `use` 标志：
+```
+/rg flag 区域名称 use allow
+```
+如果你想要这个标志对**所有**区域都生效，那么你就需要对全局区域设置：
+```
+/rg flag __global__ use allow
+```
 
 ### 如何允许玩家骑乘马和矿车？
 
-> 如果你想要所有玩家都可以使用任意种类的坐骑，你可以设置 `ride` 标志：
-> ```
-> /rg flag 区域名称 ride allow
-> ```
-> 如果你想要这个标志对**所有**区域都生效，那么你就需要对全局区域设置：
-> ```
-> /rg flag __global__ ride allow
-> ```
+如果你想要所有玩家都可以使用任意种类的坐骑，你可以设置 `ride` 标志：
+```
+/rg flag 区域名称 ride allow
+```
+如果你想要这个标志对**所有**区域都生效，那么你就需要对全局区域设置：
+```
+/rg flag __global__ ride allow
+```
 
-> [!WARNING|label:警告]
-> 这会允许玩家骑乘其他区域中的实体！仅在你需要这么做的时候使用，否则会出现玩家盗窃这些实体的问题。[/td][/tr][/table]
+::: warning
+这会允许玩家骑乘其他区域中的实体！仅在你需要这么做的时候使用，否则会出现玩家盗窃这些实体的问题。
+:::
 
 ### 如何阻止在荒野区域建筑？
 
-> 就像在“全局区域”章节讲到的那样，你可以将 `passthrough` 标志设置为 `deny`：
-> ```
-> /rg flag __global__ passthrough deny
-> ```
-> 但是**不要**设置 `build` 标志。
+就像在“全局区域”章节讲到的那样，你可以将 `passthrough` 标志设置为 `deny`：
+```
+/rg flag __global__ passthrough deny
+```
+但是**不要**设置 `build` 标志。
 
 ### 如何只对非玩家成员设置禁止离开区域的标志？
 
@@ -86,7 +74,7 @@
 ### 如何允许玩家阅读讲台上的书但阻止他们取书？
 
 首先，确保你正在使用 7.0.1 或更高版本的 WorldGuard。早于 1.14 的版本（讲台还未出现）不支持。
-* 将 `use` 标志设置为 `allow`：`/rg flag <区域名称> use allow`
+* 将 `use` 标志设置为 `allow`：`/rg flag <区域名称use allow`
 
 ### 如何只允许玩家破坏指定种类的方块？
 
@@ -128,8 +116,9 @@
 /rg setparent shop3 shop_template
 ```
 
-> [!TIP|label:提示]
-> 一个等价的做法是将大厅区域的优先级设置得低一些（`/rg setpriority mall -1`）
+::: tip
+一个等价的做法是将大厅区域的优先级设置得低一些（`/rg setpriority mall -1`）
+:::
 
 ### 如何阻止大厅区域的门等方块的使用？
 
@@ -156,5 +145,6 @@
 /rg flag __global__ passthrough deny
 ```
 
-> [!WARNING|label:警告]
-> 在这种情况下，插件无法阻止区域边界之间活塞推动导致的方块改变。漏洞追踪器已出现该问题的相关报告，即 #3234。
+::: warning
+在这种情况下，插件无法阻止区域边界之间活塞推动导致的方块改变。漏洞追踪器已出现该问题的相关报告，即 #3234。
+:::

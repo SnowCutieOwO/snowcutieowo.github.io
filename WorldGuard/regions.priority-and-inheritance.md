@@ -14,33 +14,35 @@
 /rg setpriority example 5
 ```
 
-> [!NOTE|label:示例：创建一个“pub”区域，只有处在“pub 组”中的玩家才可进行建筑，即使主城出生点已经有区域允许“builder”组玩家建造]
-> 如果你只是创建了一个和主城区域重叠在一起的区域，那么玩家需要同时为“pub”*和*“builders”组的成员才可继续建造。之后，你需要将 pub 区域设置为更高优先级的权限组。
-> 1. 圈定 pub 的区域；
-> 2. 通过下列命令创建“pub”区域：
-> ```
-> /rg define pub
-> ```
-> 3. 将“pub”区域的优先级设置为大于 0 的数字，且要高于主城区域的优先级：
-> ```
-> /rg setpriority pub 10
-> ```
+::: info 示例：创建一个“pub”区域，只有处在“pub 组”中的玩家才可进行建筑，即使主城出生点已经有区域允许“builder”组玩家建造
+如果你只是创建了一个和主城区域重叠在一起的区域，那么玩家需要同时为“pub”*和*“builders”组的成员才可继续建造。之后，你需要将 pub 区域设置为更高优先级的权限组。
+1. 圈定 pub 的区域；
+2. 通过下列命令创建“pub”区域：
+```
+/rg define pub
+```
+3. 将“pub”区域的优先级设置为大于 0 的数字，且要高于主城区域的优先级：
+```
+/rg setpriority pub 10
+```
+:::
 
-> [!NOTE|label:示例：创建一个 PVP 场地中特殊的“治疗”区域，其中禁止 PVP 而该区域外的位置允许。]
-> 这里的目的就是要覆盖 PVP 场地的 `pvp = allow` 标志。
-> 1. 圈定治疗区域的范围；
-> 2. 创建“heal”区域：
-> ```
-> /rg define heal
-> ```
-> 3. 将 `pvp` 标志设置为 `deny`：
-> ```
-> /rg flag heal pvp deny
-> ```
-> 4. 将“heal”区域的优先级设置为高于 0 和 PVP 场地的区域优先级的数字：
-> ```
-> /rg setpriority heal 10
-> ```
+::: info 示例：创建一个 PVP 场地中特殊的“治疗”区域，其中禁止 PVP 而该区域外的位置允许。
+这里的目的就是要覆盖 PVP 场地的 `pvp = allow` 标志。
+1. 圈定治疗区域的范围；
+2. 创建“heal”区域：
+```
+/rg define heal
+```
+3. 将 `pvp` 标志设置为 `deny`：
+```
+/rg flag heal pvp deny
+```
+4. 将“heal”区域的优先级设置为高于 0 和 PVP 场地的区域优先级的数字：
+```
+/rg setpriority heal 10
+```
+:::
 
 注意：因为 *deny* 会在冲突时覆盖 *allow*，你实际上并不需要提升“heal”区域的优先级。尽管如此，在你需要用 *allow* 覆盖 *deny* 参数设置时仍需设置优先级以实现覆盖。
 
@@ -69,25 +71,27 @@
 
 WorldGuard 将会检测循环继承关系（译者注：例如甲区域继承了乙区域，而乙区域又继承了甲区域，需注意这种情况并不会实际出现）并自动阻止。
 
-> [!NOTE|label:示例：创建一个包含多块地皮的“mall”区域   ] 
-> 在创建 mall、plot1、plot2 区域之后，在这些地皮上即可设置继承关系：
-> ```
-> /rg setparent plot1 mall
-> /rg setparent plot2 mall
-> ```
-> 然后我们需要使一个假想已存在的组“mall_owners”成为“mall”区域的拥有组：
-> ```
-> /rg addowner mall g:mall_owners
-> ```
-> 那么“mall”区域的拥有组就可以在地皮内自由建筑。
+::: info 示例：创建一个包含多块地皮的“mall”区域
+在创建 mall、plot1、plot2 区域之后，在这些地皮上即可设置继承关系：
+```
+/rg setparent plot1 mall
+/rg setparent plot2 mall
+```
+然后我们需要使一个假想已存在的组“mall_owners”成为“mall”区域的拥有组：
+```
+/rg addowner mall g:mall_owners
+```
+那么“mall”区域的拥有组就可以在地皮内自由建筑。
 >
-> 若你向其中的一块地皮添加了成员或拥有者，他们就可以在自己的地皮中建筑：
-> ```
-> /rg addowner plot1 sk89q
-> ```
+若你向其中的一块地皮添加了成员或拥有者，他们就可以在自己的地皮中建筑：
+```
+/rg addowner plot1 sk89q
+```
+:::
 
-> [!TIP|label:注意]
-> 非玩家来源，例如活塞，也可以是区域的成员。成员继承关系不只对玩家生效。这意味着在父区域的活塞，也可以将方块推入它们之中的子区域。
+::: tip 注意
+非玩家来源，例如活塞，也可以是区域的成员。成员继承关系不只对玩家生效。这意味着在父区域的活塞，也可以将方块推入它们之中的子区域。
+:::
 
 ### 临时区域
 
@@ -98,28 +102,29 @@ WorldGuard 将会检测循环继承关系（译者注：例如甲区域继承了
 /rg define -g plot_template
 ```
 
-> [!NOTE|label:示例：让上述的“mall”示例中的地皮拓展一个“plot_region”临时区域]
-> 创建一个临时的地皮区域：
-> ```
-> /rg define -g plot_template
-> ```
-> 让地皮区域继承这个临时区域的标志：
-> ```
-> /rg setparent plot1 plot_template
-> /rg setparent plot2 plot_template
-> ```
-> 让临时区域继承“mall”的标志：
-> ```
-> /rg setparent plot_template mall
-> ```
-> 玩家需要能够和“mall”区域中的箱子进行交互。所以，你先要在“mall”区域上对 `chest-access` 标志进行设置：
-> ```
-> /rg flag mall chest-access allow
-> ```
-> 然后，现在你需要拒绝每一个地皮区域中的 `chest-access` 标志。幸运的是，你有可供使用的临时地皮区域，所以输入这条命令即可：
-> ```
-> /rg flag plot_template chest-access deny
-> ```
+::: info 示例：让上述的“mall”示例中的地皮拓展一个“plot_region”临时区域]
+创建一个临时的地皮区域：
+```
+/rg define -g plot_template
+```
+让地皮区域继承这个临时区域的标志：
+```
+/rg setparent plot1 plot_template
+/rg setparent plot2 plot_template
+```
+让临时区域继承“mall”的标志：
+```
+/rg setparent plot_template mall
+```
+玩家需要能够和“mall”区域中的箱子进行交互。所以，你先要在“mall”区域上对 `chest-access` 标志进行设置：
+```
+/rg flag mall chest-access allow
+```
+然后，现在你需要拒绝每一个地皮区域中的 `chest-access` 标志。幸运的是，你有可供使用的临时地皮区域，所以输入这条命令即可：
+```
+/rg flag plot_template chest-access deny
+```
+:::
 
 ### 继承 or 优先级？
 

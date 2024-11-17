@@ -13,5 +13,8 @@ Oraxen 是一个 Minecraft 插件，它允许你向服务器中增加新的自�
 
 安装 Oraxen 的过程相当快且简便：只需将 Oraxen.jar 与 [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/) 放入 `/plugins/` 文件夹，然后重启服务器即可。
 
-> [!NOTE|label:提示]
-> 经测试，Oraxen 兼容 1.18 至 1.20.4 的 Spigot 与 Paper。
+::: info 提示
+经测试，Oraxen 兼容 1.18 至 1.21.3 的 Spigot 与 Paper。
+:::
+
+对于 1.21.2+ 的服务器，最新版本建议使用 [Paper](https://papermc.io/downloads/paper) 为服务端核心。对于旧版本的 Minecraft，首先请安装 `Oraxen 1.183.0`，这样你就能让配置文件进行兼容更新，之后即可升级版本。

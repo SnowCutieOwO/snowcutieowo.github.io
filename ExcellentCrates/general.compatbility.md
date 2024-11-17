@@ -11,4 +11,4 @@
 |[CoinsEngine](https://www.spigotmc.org/resources/84121/)|允许你在付费开箱功能中使用不同种类的硬币。|
 |[ProtocolLib](https://www.spigotmc.org/resources/1997/)|允许使用其他悬浮字插件为宝箱设置悬浮字。|
 |[DecentHolograms](https://www.spigotmc.org/resources/96927/)|允许使用悬浮字功能。|
-|[PlaceholderAPI](https://www.spigotmc.org/resources/6245/)|允许提供可在其他地方使用的[额外变量]()。无需安装拓展，这些功能已经在插件中打包。|
+|[PlaceholderAPI](https://www.spigotmc.org/resources/6245/)|允许提供可在其他地方使用的[额外变量](utility.placeholders.md)。无需安装拓展，这些功能已经在插件中打包。|

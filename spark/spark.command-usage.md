@@ -1,7 +1,8 @@
 # 命令用法
 
-> [!INFO|label:注意]
-> `/sparkb`、`/sparkv` 和 `/sparkc` 是 BungeeCord、Velocity 以及 Forge/Fabric 专用的命令，在使用对应服务端时应该将 `/spark` 替换成上述的命令。
+::: info 注意
+`/sparkb`、`/sparkv` 和 `/sparkc` 是 BungeeCord、Velocity 以及 Forge/Fabric 专用的命令，在使用对应服务端时应该将 `/spark` 替换成上述的命令。
+:::
 
 ## 分析器
 
@@ -31,8 +32,9 @@
 * `/spark profiler start --timeout <秒>` 开始分析，并在给定的时间之后**自动停止**；
 * `/spark profiler start --thread *` 开始分析，并记录**所有线程**；
 * `/spark profiler start --alloc` 开始分析，并分析内存分配（内存使用情况）而非 CPU 的使用情况。
-<details> <summary>高级用户参数</summary>你可以使用以下命令：
+::: details 高级用户参数
 
+你可以使用以下命令：
 * `/spark profiler start --interval <毫秒>` 开始分析，并按参数中的间隔时间采样（默认值为 4，表示采样间隔为 4 毫秒）；
 * `/spark profiler start --thread *` 开始分析，并记录所有线程；
 * `/spark profiler start --thread <线程名称>` 开始分析，并记录参数所给定的线程；
@@ -46,7 +48,8 @@
 * `/spark profiler stop --comment <注释>` 停止分析，并在浏览界面中填写注释；
 * `/spark profiler stop --separate-parent-calls` 停止分析，并在浏览界面中将不同父方法调用的内容分开显示。（[i]已弃用[/i]）
 * `/spark profiler stop --save-to-file` 将文件保存至本地文件夹而非上传至网络。
-</details>
+
+:::
 
 ## 健康分析
 
@@ -146,4 +149,4 @@
 * 有关**刻**和**滴答**的释义：https://zh.minecraft.wiki/w/%E5%88%BB
 * 部分译名参考自站内搬运帖：https://www.mcbbs.net/thread-823209-1-1.html
 * 部分译名参考自中文维基：https://zh.minecraft.wiki/w/%E5%88%BB
-* 部分译名参考自知乎文章[i]《由浅入深了解GC原理》[/i]：https://zhuanlan.zhihu.com/p/100475619
+* 部分译名参考自知乎文章 *《由浅入深了解GC原理》*：https://zhuanlan.zhihu.com/p/100475619

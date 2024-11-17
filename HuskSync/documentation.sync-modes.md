@@ -10,8 +10,9 @@ HuskSync 提供了两种分别使用 Redis 和 MySQL 的数据同步模式使得
 * `DELAY` 同步模式使用了 `network_latency_miliseconds` 设置值来在监听 Redis 数据前添加延时。
 你可以在 `config.yml` 下 `synchronization` 的 `sync_mode` 修改你所使用的同步模式。
 
-> [!WARNING|lavel:警告]
-> 群组下的所有服务器应当使用相同的同步模式（至少是在一个集群中）。
+::: warning
+群组下的所有服务器应当使用相同的同步模式（至少是在一个集群中）。
+:::
 
 ### 在配置文本中修改同步模式
 

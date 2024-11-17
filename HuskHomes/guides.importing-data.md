@@ -1,7 +1,8 @@
 # 数据导入
 
-> [!WARNIING|label:警告]
-> 导入数据后会覆盖 HuskHomes 的已有数据，请在开始导入之前备份数据库中的数据。
+::: warning
+导入数据后会覆盖 HuskHomes 的已有数据，请在开始导入之前备份数据库中的数据。
+:::
 
 HuskHomes 支持从下列插件/模组中导入数据，可使用 `/huskhomes import` 命令进行数据迁移。
 

@@ -20,5 +20,6 @@
 
 其他需要使用到 `LocalSession` 的内容是玩家的历史记录。如果你通过编辑会话模拟玩家进行操作，你可以使用 `LocalSession` 来 `remember` 玩家的 `EditSession`，这会允许他们通过命令 `//undo` 来撤销该操作。你也可以通过 `EditSession` 手动进行 `undo` 和 `redo` 操作。
 
-> **提示：**    
-> 通过 `LocalSession` 操作历史记录只能对由该玩家造成的改动或直接修改至该玩家的改动生效（即，会话的拥有者）。若你在玩家的历史记录之外存储 `EditSession`（例如，在玩家操作中独立完成的自动操作），你可以通过 `EditSession#undo(EditSession)` 方法直接撤销操作。
+::: info   
+通过 `LocalSession` 操作历史记录只能对由该玩家造成的改动或直接修改至该玩家的改动生效（即，会话的拥有者）。若你在玩家的历史记录之外存储 `EditSession`（例如，在玩家操作中独立完成的自动操作），你可以通过 `EditSession#undo(EditSession)` 方法直接撤销操作。
+:::

@@ -1,4 +1,4 @@
-# :fas fa-mouse: 动作
+# 🖱️ 动作
 在悬浮字中插入并使用点击动作
 
 DecentHolograms 允许你为悬浮字页添加点击动作，玩家可以在左/右键点击悬浮字时触发它们。
@@ -21,10 +21,11 @@ DecentHolograms 允许你为悬浮字页添加点击动作，玩家可以在左/
 
 * `<消息文本>` - 发送的消息。支持内建变量与 PlaceholderAPI 变量。
 
-> [!INFO|label:示例]
-> ```
-> MESSAGE:你点击了这个悬浮字! # 向玩家发送 "你点击了这个悬浮字!".
-> ```
+::: info 示例
+```
+MESSAGE:你点击了这个悬浮字! # 向玩家发送 "你点击了这个悬浮字!".
+```
+:::
 
 ### `COMMAND:<命令>`
 
@@ -32,25 +33,28 @@ DecentHolograms 允许你为悬浮字页添加点击动作，玩家可以在左/
 
 * `<命令>` - 点击执行的命令。支持内建变量与 PlaceholderAPI 变量。
 
-> [!INFO|label:示例]
-> ```
-> COMMAND:/help               # 以玩家身份执行 /help 命令.
-> COMMAND:我的名字是 {player} # 向玩家发送消息 "我的名字是 {player}".
-> ```
+::: info 示例
+```
+COMMAND:/help               # 以玩家身份执行 /help 命令.
+COMMAND:我的名字是 {player} # 向玩家发送消息 "我的名字是 {player}".
+```
+:::
 
 ### `CONSOLE:<命令>`
 
-> [!WARNING|label:警告]
-> **不可通过此操作执行群组命令！**
+::: warning
+**不可通过此操作执行群组命令！**
+:::
 
 通过控制台执行指定的命令。
 
 * `<命令>` - 通过控制台执行的命令。支持内建变量与 PlaceholderAPI 变量。
 
-> [!INFO|label:示例]
-> ```
-> CONSOLE:say {player} 点击了一条悬浮字! # 以控制台身份执行命令 "/say {player} 点击了一条悬浮字!".
-> ```
+::: info 示例
+```
+CONSOLE:say {player} 点击了一条悬浮字! # 以控制台身份执行命令 "/say {player} 点击了一条悬浮字!".
+```
+:::
 
 ### `CONNECT:<服务器>`
 
@@ -58,10 +62,11 @@ DecentHolograms 允许你为悬浮字页添加点击动作，玩家可以在左/
 
 * `<服务器>` - 点击时连接至的服务器。
 
-> [!INFO|label:示例]
-> ```
-> CONNECT:lobby # 将玩家连接至服务器 "lobby".
-> ```
+::: info 示例
+```
+CONNECT:lobby # 将玩家连接至服务器 "lobby".
+```
+:::
 
 ### `TELEPORT:[<世界>:]<x>:<y>:<z>[:<yaw>:<pitch>]`
 
@@ -73,13 +78,14 @@ DecentHolograms 允许你为悬浮字页添加点击动作，玩家可以在左/
 * `<z>` - 目标位置的 z 轴位置。
 * `[:<yaw>:<pitch>]` - 可选的 `<yaw>` 和 `<pitch>` 值。默认为玩家当前视角朝向。
 
-> [!INFO|label:示例]
-> ```
-> TELEPORT:0:100:0 # 将玩家传送至当前世界的 0,100,0.
-> TELEPORT:world:0:100:0 # 将玩家传送至世界 "world" 的 0,100,0.
-> TELEPORT:0:100:0:-180:0 # 将玩家传送至当前世界的 0,100,0, 且面朝正北方.
-> TELEPORT:world:0:100:0:-180:0 # 将玩家传送至世界 "world" 的 0,100,0, 且面朝正北方.
-> ```
+::: info 示例
+```
+TELEPORT:0:100:0 # 将玩家传送至当前世界的 0,100,0.
+TELEPORT:world:0:100:0 # 将玩家传送至世界 "world" 的 0,100,0.
+TELEPORT:0:100:0:-180:0 # 将玩家传送至当前世界的 0,100,0, 且面朝正北方.
+TELEPORT:world:0:100:0:-180:0 # 将玩家传送至世界 "world" 的 0,100,0, 且面朝正北方.
+```
+:::
 
 ### `SOUND:<音效>[:<音量>:<音调>]`
 
@@ -88,11 +94,12 @@ DecentHolograms 允许你为悬浮字页添加点击动作，玩家可以在左/
 * `<音效>` - 播放的音效。完整列表[见此](https://docs.andre601.ch/Spigot-Sounds)
 * `[:<音量>:<音调>]` - 可选的音量与音调值。默认为 `1.0`。
 
-> [!INFO|label:示例]
-> ```
-> SOUND:ENTITY_CREEPER_PRIMED # 按原声调与音量播放 "苦力怕：嘶嘶作响".
-> SOUND:ENTITY_CREEPER_PRIMED:0.5:0.5 # 0.5 倍声调与音量播放 "苦力怕：嘶嘶作响".
-> ```
+::: info 示例
+```
+SOUND:ENTITY_CREEPER_PRIMED # 按原声调与音量播放 "苦力怕：嘶嘶作响".
+SOUND:ENTITY_CREEPER_PRIMED:0.5:0.5 # 0.5 倍声调与音量播放 "苦力怕：嘶嘶作响".
+```
+:::
 
 ### `PERMISSION:<权限>`
 
@@ -100,10 +107,11 @@ DecentHolograms 允许你为悬浮字页添加点击动作，玩家可以在左/
 
 * `<权限>` - 检查的权限。
 
-> [!INFO|label:示例]
-> ```
-> PERMISSION:some.permission.here # 检查玩家是否拥有权限 some.permission.here
-> ```
+::: info 示例
+```
+PERMISSION:some.permission.here # 检查玩家是否拥有权限 some.permission.here
+```
+:::
 
 ### `NEXT_PAGE[:<悬浮字>]`
 
@@ -111,11 +119,12 @@ DecentHolograms 允许你为悬浮字页添加点击动作，玩家可以在左/
 
 * `[:<悬浮字>]` - 可选的参数，指定切换页码的悬浮字。默认为绑定该操作的悬浮字。
 
-> [!INFO|label:示例]
-> ```
-> NEXT_PAGE               # 将玩家点击的悬浮字移动到下一页.
-> NEXT_PAGE:some_hologram # 将悬浮字 "some_hologram" 移动到下一页.
-> ```
+::: info 示例
+```
+NEXT_PAGE               # 将玩家点击的悬浮字移动到下一页.
+NEXT_PAGE:some_hologram # 将悬浮字 "some_hologram" 移动到下一页.
+```
+:::
 
 ### `PREV_PAGE[:<悬浮字>]`
 
@@ -123,11 +132,12 @@ DecentHolograms 允许你为悬浮字页添加点击动作，玩家可以在左/
 
 * `[:<悬浮字>]` - 可选的参数，指定切换页码的悬浮字。默认为绑定该操作的悬浮字。
 
-> [!INFO|label:示例]
-> ```
-> PREV_PAGE               # 将玩家点击的悬浮字移动到上一页.
-> PREV_PAGE:some_hologram # 将悬浮字 "some_hologram" 移动到下一页.
-> ```
+::: info 示例
+```
+PREV_PAGE               # 将玩家点击的悬浮字移动到上一页.
+PREV_PAGE:some_hologram # 将悬浮字 "some_hologram" 移动到下一页.
+```
+:::
 
 ### `PAGE:[<悬浮字>:]<页码>`
 
@@ -136,8 +146,9 @@ DecentHolograms 允许你为悬浮字页添加点击动作，玩家可以在左/
 * `[<悬浮字>:]` - 可选的 `<悬浮字>` 参数，指定切换页码的悬浮字。默认为绑定该操作的悬浮字。
 * `<页码>` - 切换至的指定页码。
 
-> [!INFO|label:示例]
-> ```
-> PAGE:2               # 将玩家点击的悬浮字切换到第二页.
-> PAGE:some_hologram:1 # 将悬浮字 "some_hologram" 切换到第二页.
-> ```
+::: info 示例
+```
+PAGE:2               # 将玩家点击的悬浮字切换到第二页.
+PAGE:some_hologram:1 # 将悬浮字 "some_hologram" 切换到第二页.
+```
+:::

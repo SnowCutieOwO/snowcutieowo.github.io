@@ -4,7 +4,7 @@
 
 `excllentcrates.*` - 允许完全控制插件。    
 `excllentcrates.crate.[宝箱 ID]` - 允许开启指定宝箱。    
-`excllentcrates.massopen` - 允许使用连抽功能。 (given by default)
+`excllentcrates.massopen` - 允许使用连抽功能。（默认拥有）
 `excllentcrates.command.*` - 允许使用插件所有的命令。
     `excllentcrates.command.drop` - 允许使用 /crate drop 命令。
     `excllentcrates.command.dropkey` - 允许使用 /crate dropkey 命令。

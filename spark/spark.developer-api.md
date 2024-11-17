@@ -10,9 +10,9 @@ API 成品会发布到 Sonatype Snapshots 仓库中。
 
 你可以通过 Gradle 或者 Maven 将它导入至你的项目，或将其用作依赖。可以根据需要添加下文的构建脚本或 pom。
 
-<!-- tabs:start -->
+:::: tabs
 
-#### **Maven**
+::: tab Maven
 
 ```HTML
 <repositories>
@@ -32,7 +32,9 @@ API 成品会发布到 Sonatype Snapshots 仓库中。
 </dependencies>
 ```
 
-#### **Gradle (Groovy DSL)**
+:::
+
+::: tab Gradle (Groovy DSL)
 
 ```Kotlin
 repositories {
@@ -43,8 +45,9 @@ dependencies {
     compileOnly 'me.lucko:spark-api:0.1-SNAPSHOT'
 }
 ```
+:::
 
-#### **Gradle (Kotlin DSL)**
+::: tab Gradle (Kotlin DSL)
 
 ```Kotlin
 repositories {
@@ -55,7 +58,9 @@ dependencies {
     compileOnly("me.lucko:spark-api:0.1-SNAPSHOT")
 }
 ```
-<!-- tabs:end -->
+:::
+
+::::
 
 ### 访问 API
 

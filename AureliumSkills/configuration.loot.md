@@ -53,7 +53,7 @@
 **示例配置**
 基础的物品掉落示例：
 
-```
+``` YAML
 - type: item
   material: iron_ingot
   weight: 10
@@ -62,7 +62,7 @@
 
 带有自定义名称和描述及附魔的，略复杂的掉落示例：
 
-```
+``` YAML
 - type: item
   material: diamond_sword
   weight: 5
@@ -80,7 +80,7 @@
 
 带有自定义效果和数据值的药水示例：
 
-```
+``` YAML
 - type: item
   material: potion
   weight: 10
@@ -99,7 +99,7 @@
 
 带有隐藏附魔标签的物品，且通过NBT使用了自定义模型数据的物品示例：
 
-```
+``` YAML
 - type: item
   material: paper
   weight: 10
@@ -120,7 +120,7 @@
 - `command` - 执行命令的内容，不需要以斜杠 “/” 开头。支持内建变量 {player} 以表示执行玩家，以及所有的 PlaceholderAPI 变量的解析。
 示例配置：
 
-```
+``` YAML
 - type: command
   weight: 10
   executor: console

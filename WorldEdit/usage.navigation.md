@@ -2,13 +2,7 @@
 
 你可能经常会挤到狭小的空间里进行建筑活动。下面的命令可以帮你解决可能遇到的问题。
 
-* [导航魔杖](usage.navigation.md#导航魔杖)
-* [自行脱困](usage.navigation.md#自行脱困)
-* [跳向视野内的方块](usage.navigation.md#跳向视野内的方块)
-* [穿墙](usage.navigation.md#穿墙)
-* [上升与下降](usage.navigation.md#上升与下降)
-* [上升至天花板](usage.navigation.md#上升至天花板)
-* [上升任意距离](usage.navigation.md#上升任意距离)
+[[toc]]
 
 ## 导航魔杖
 

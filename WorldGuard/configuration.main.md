@@ -16,27 +16,27 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 
 如果你打开了分世界配置文件，里面显示的内容几乎是空的。当你想要覆盖一个世界的设置的时候，你就需要把它们放进分世界的配置文件中。
 
-> [!NOTE|label:示例：按世界创建配置选项]
-> 在主配置文件中，你将 `block-creeper-block-damage` 设置为了 true：
-> ```YAML
-> mobs:
->     block-creeper-explosions: false
->     block-creeper-block-damage: true
->     block-wither-explosions: false
-> ```
-> 但是你想要在下界把这个设置成 `false`。所以你需要打开 `worlds/world_nether/config.yml` 并将文件的内容替换为：
-> ```YAML
-> mobs:
->     block-creeper-block-damage: false
-> ```
-> 上级键和其下的设置只需按这样复制即可。
+::: info 示例：按世界创建配置选项
+在主配置文件中，你将 `block-creeper-block-damage` 设置为了 true：
+```YAML
+mobs:
+    block-creeper-explosions: false
+    block-creeper-block-damage: true
+    block-wither-explosions: false
+```
+但是你想要在下界把这个设置成 `false`。所以你需要打开 `worlds/world_nether/config.yml` 并将文件的内容替换为：
+```YAML
+mobs:
+    block-creeper-block-damage: false
+```
+上级键和其下的设置只需按这样复制即可。
 
 
 ## 设置
 
-> [!TIP|label:注意]    
-> 此处选项仅作参考，你应优先修改 `config.yml` 中的设置，因为其中一些选项可能需要在其他地方再次设置。
-
+::: tip 注意
+此处选项仅作参考，你应优先修改 `config.yml` 中的设置，因为其中一些选项可能需要在其他地方再次设置。
+:::
 
 |设置|默认值|描述|
 |---|---|---|
@@ -77,11 +77,12 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 |ignore-hopper-item-move-events|FALSE|禁用保护传输物品并在容器之间交互的漏斗。这可以设置成 true 以略微提高服务器效率，尤其是有大量放置的漏斗的服务器，但是需要注意的是它可以允许保护区域外的漏斗向保护区域内的其他容器传递物品，只要它们足够靠近边界。|
 |break-hoppers-on-denied-move|TRUE|如果一个漏斗尝试传递一个物品并被拒绝（只需上一条设置为 false），WorldGuard 将会尝试摧毁这个漏斗方块来阻止它继续传递相似的物品。|
 
-> [!NOTE|label:示例：禁用区域内工作台的保护]
-> 可以按如下格式设置 `interaction-whitelist` 项：
-> ```YAML
-> interaction-whitelist: [workbench]
-> ```
+::: info 示例：禁用区域内工作台的保护
+可以按如下格式设置 `interaction-whitelist` 项：
+```YAML
+interaction-whitelist: [workbench]
+```
+:::
 
 ### protection.*
 
@@ -100,16 +101,18 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 |block-potions-overly-reliably|FALSE|WorldGuard 是否需要严格阻止 *block-potions* 中提及的对应种类的药水。一般不需要设置此项，如果设置可能会误拦截其他种类的药水。|
 |disable-conduit-effects|FALSE|是否禁用海洋之心给予的潮涌能量效果。|
 
-> [!NOTE|label:示例：禁用夜视和速度药水]
-> 在 Bukkit 文档找到的名称可以按如下方式填入：
-> ```YAML
-> block-potions: [night_vision, speed]
-> ```
+::: info 示例：禁用夜视和速度药水
+在 Bukkit 文档找到的名称可以按如下方式填入：
+```YAML
+block-potions: [night_vision, speed]
+```
+:::
 
 ### simulation.sponge.*
 
-> [!WARNING|label:警告]
-> 
+::: warning
+这部分配置默认不存在于文件中。这些内容已被标记为弃用，且可能在未来的某些时候移除。
+:::
 
 |设置|默认值|描述|
 |---|---|---|
@@ -134,12 +137,13 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 |allow-portal-anywhere|FALSE|是否允许传送门方块出现在非法的位置。|
 |disable-water-damage-blocks|[]（列表）|列表中填入的方块将不会被水冲毁。|
 
-> [!NOTE|label:示例：阻止红石线和红石火把被水冲毁]
-> 材料名称取自 Bukkit 的材料名称列表：
-> ```YAML
-> physics:
->     disable-water-damage-blocks: [redstone_wire, redstone_torch]
-> ```
+::: info 示例：阻止红石线和红石火把被水冲毁
+材料名称取自 Bukkit 的材料名称列表：
+```YAML
+physics:
+    disable-water-damage-blocks: [redstone_wire, redstone_torch]
+```
+:::
 
 ### ignition.*
 
@@ -265,8 +269,9 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 
 ### chest-protection.*
 
-> [!WARNING|label:警告]
-> 这些设置默认不处于配置文件中。这些功能被标记为弃用，且可能在未来被移除。
+::: warning
+这些设置默认不处于配置文件中。这些功能被标记为弃用，且可能在未来被移除。
+:::
 
 |设置|默认值|描述|
 |---|---|---|
@@ -301,8 +306,9 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 
 ### regions.*
 
-> [!TIP|label:提示]    
-> 你不能在分世界的配置文件中覆盖 `use-creature-spawn-event` 的设置。
+::: tip    
+你不能在分世界的配置文件中覆盖 `use-creature-spawn-event` 的设置。
+:::
 
 |设置|默认值|描述|
 |---|---|---|
@@ -325,8 +331,8 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 |max-region-count-per-player:||玩家（通过自助式区域认领功能）可认领的最大区域数量。该设置可以按权限组进行区别，在该设置下有新条目被加入时即对应权限组可领取的数量也被相应设置（例如“default”，默认用户组）。“default”项为默认设置。如果玩家同时处于多个权限组中，那么玩家的所能认领的区域总数在这些值中取最大值而不是叠加。|
 |default|7|（见上。）|
 
-> [!WARNING|label:警告]
-> 此分类下也有一些额外的设置，但我们不推荐修改这些设置。
+[!WARNING|label:警告]
+此分类下也有一些额外的设置，但我们不推荐修改这些设置。
 
 |设置|默认值|描述|
 |---|---|---|
@@ -342,8 +348,8 @@ UUID 迁移可以重复进行（对配置文件也会进行频繁的更改）且
 
 ### regions.uuid-migration.*
 
-> [!TIP|label:提示]
-> 你不能分世界覆盖这些设置。
+::: tip
+你不能分世界覆盖这些设置。
 
 |设置|默认值|描述|
 |---|---|---|
@@ -352,11 +358,11 @@ UUID 迁移可以重复进行（对配置文件也会进行频繁的更改）且
 
 ### regions.sql.*
 
-> [!WARNING|label:警告]
-> 这些设置默认不处于配置文件中。这些功能被标记为弃用，且可能在未来被移除。
+[!WARNING|label:警告]
+这些设置默认不处于配置文件中。这些功能被标记为弃用，且可能在未来被移除。
 
-> [!TIP|label:提示]
-> 你不能分世界覆盖这些设置。
+::: tip
+你不能分世界覆盖这些设置。
 
 |设置|默认值|描述|
 |---|---|---|

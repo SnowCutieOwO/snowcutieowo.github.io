@@ -6,11 +6,11 @@
 * 如果你正在使用 NeoForge/Fabric 且正在单人模式游玩，那么 WorldEdit 只会在启用了作弊模式的情况下启用；
 * 如果你的 NeoForge/Fabric 服务器安装了 WorldEdit，那么只有 OP 玩家可以使用相关的内容。
 
-> [!TIP|label:提示]：
-> 对于 NeoForge/Fabric，你可以：
->
-> * 在 WorldEdit 的设置中启用“cheat-mode（作弊模式）”（见“配置文本”章节）来让你允许在生存模式下使用 WorldEdit 的功能（服务器上同样可用，所有玩家都能使用）；
-> * 或者，将“use-in-creative（创造模式下使用）”启用，来允许你在创造模式下使用 WorldEdit（服务器上同样可用，对所有创造模式玩家有效）
+::: tip
+对于 NeoForge/Fabric，你可以：
+* 在 WorldEdit 的设置中启用“cheat-mode（作弊模式）”（见“配置文本”章节）来让你允许在生存模式下使用 WorldEdit 的功能（服务器上同样可用，所有玩家都能使用）；
+* 或者，将“use-in-creative（创造模式下使用）”启用，来允许你在创造模式下使用 WorldEdit（服务器上同样可用，对所有创造模式玩家有效）
+:::
 
 ### 想要看见选区边界？
 
@@ -19,8 +19,9 @@
 1. 在服务器端输入 `//drawsel` 命令使用有限的选区可视化功能。仅对小于 48x48x48 的立方体选区有效（在旧版本中为 32x32x32），且你需要处于创造模式。显示受到限制是因为结构方块本身在很长一段时间内都以该种方式运作；
 2. 使用一个第三方的客户端模组，例如 [WorldEdit CUI (Fabric)](https://www.curseforge.com/minecraft/mc-mods/worldeditcui-fabric)。注意这个模组需要 Fabric，所以你需要先在客户端上安装 Fabric。
 
-> [!NOTE|label:注意]
-> 如果你需要使用更老版本的 Minecraft（1.12.2 或更早），除了下载一个旧版本的 WorldEdit（6.x 版）外，你也可能需要用到旧版本的 [Mumfrey 制作的 WorldEditCUI 模组](https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1292886-worldeditcui)。注意这个模组需要 LiteLoader（安装方法在帖子中可以找到）。
+::: info 注意
+如果你需要使用更老版本的 Minecraft（1.12.2 或更早），除了下载一个旧版本的 WorldEdit（6.x 版）外，你也可能需要用到旧版本的 [Mumfrey 制作的 WorldEditCUI 模组](https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1292886-worldeditcui)。注意这个模组需要 LiteLoader（安装方法在帖子中可以找到）。
+:::
 
 选区显示的效果不会受到 WorldEdit 安装方式不同的影响（在 Bukkit 服务器上或是单人游戏，都没关系）。
 
@@ -45,7 +46,7 @@
 * 站在你需要选择两点的某处，并分别输入命令 `//pos1` 和 `//pos2`[^1]；
 * 看向方块并输入命令 `//hpos1` 和 `//hpos2`
 
-> **实战：**
+> **实战：**    
 > 创建一个用于下一部分测试的选区，大小大致为 15x15x15。
 
 ## 操作选区

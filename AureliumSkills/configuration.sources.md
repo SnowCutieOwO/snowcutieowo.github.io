@@ -18,7 +18,7 @@
   
 这里是一个挖掘技能通过自定义方块获取经验的完整示例：  
 
-```
+``` YAML
 sources:
   mining:
     custom:

@@ -182,7 +182,13 @@ meta:
 ```
 
 #### 示例 HOCON 文件
-```HOCON
+
+<!--
+  这段内容需要改进：
+  原因：Shiki 不支持渲染 HOCON 格式
+-->
+
+```
 uuid=c1d60c50-70b5-4722-8057-87767557e50d
 name=Luck
 primary-group=default
@@ -225,7 +231,9 @@ meta=[
     }
 ]
 ```
+
 #### 示例 TOML 文件
+
 ```TOML
 uuid = "c1d60c50-70b5-4722-8057-87767557e50d"
 name = "Luck"

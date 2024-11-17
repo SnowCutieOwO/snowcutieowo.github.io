@@ -4,8 +4,9 @@
 
 ## 安装需求
 
-> [!NOTE|label:注意]
-> 若插件启动失败，请检查你是否在运行[不受支持的版本](unsupported-versions.md)。
+::: info 注意
+若插件启动失败，请检查你是否在运行[不受支持的版本](guides.compatbility.md#不兼容版本)。
+:::
 
 * MySQL 数据库（8.0 或更高版本）
 * Redis 数据库（5.0 或更高版本）— 请浏览[常见问题](guides.faqs.md)来获取更多信息。
@@ -32,31 +33,31 @@
 * 在 `redis` 的 `credentials` 设置中，输入你的 Redis 数据库登录凭据。如果你的 Redis 数据库没有设置密码，请将密码一项留空（译者注：即空字符串 '' 或 ""）；
 * 除非你在一个群组下区分多个子群组，每个子群组之间的玩家数据相互隔离，否则不应更改 `cluster_id` 的值。
 
-<details>
-<summary>MongoDB 用户 - 额外安装步骤</summary>
+::: details MongoDB 用户 - 额外安装步骤
 
 * 找到服务器上的 HuskSync 配置文件（`~/plugins/HuskSync/config.yml`）。
 * 将 `database` 下的 `type` 值设置为 `MONGO`。
 * 在 `database` 下的 `credentials` 配置中，输入 MongoDB 数据库的登录凭据。切记不要擅自修改 `connection_pool` 部分的设置。
 * 在 `mongo_settings` 下的 `parameters` 部分，确保指定的 `&authSource=` 符合你使用的数据库（默认为 `HuskSync`）。
-</details>
 
-<details>
-<summary>对 MongoDB Atlas 用户的额外配置</summary>
+:::
+
+::: details 对 MongoDB Atlas 用户的额外配置
 
 * 找到服务器上的 HuskSync 配置文件（`~/plugins/HuskSync/config.yml`）。
 * 将 `mongo_settings` 下的 `using_atlas` 设置为 `true`。
 * 将 `mongo_settings` 下的 `parameters` 中的 `&authSource=HuskSync` 部分删去即可。
 （在使用 Atlas 时自动无视 `credentials` 下 `port` 设置的值）
-</details>
 
-<details>
-<summary>Pterodactyl 自托管用户 - Redis 安装教程</summary>
+:::
+
+::: details Pterodactyl 自托管用户 - Redis 安装教程
 
 若你在服务器上一并运行着 Redis 服务器，你需要将地址设置为 `172.18.0.1`（若修改了网络设置，则参照修改后的内容），并在 Redis 的配置文件 `nano /etc/redis/redis.conf` 中进行绑定。
 除此之外，你还需要取消 `requirepass` 部分的注释，并设置密码以允许外部连接，或禁用 `protected-mode`。在设置密码且通过命令 `systemctl restart redis` 重启 Redis 后，你还需要在你的 Pterodactyl `.env` 中更新密码（`nano /var/www/pterodactyl/.env`）并通过 `cd /var/www/pterodactyl && php artisan config:clear` 刷新缓存。
 另外你可能需要允许来自防火墙的连接，视分布位置而定。
-</details>
+
+:::
 
 ### 4. 在 server.yml 文件中设置服务器名称
 
@@ -67,5 +68,5 @@
 
 * 若提供的 MySQL 和 Redis 数据库登录凭据有效，服务器开启之后数据同步功能就会正常运行；
 * 若你需要从 HuskSync 1.x 版本或 MySQLPlayerDataBridge 导入数据，请浏览下方的教程：
-  * [从旧版迁移]
-  * [从 MPDB 迁移]
+  * [从旧版迁移](guides.legacy-migration.md)
+  * [从 MPDB 迁移](guides.mpdb-migration.md)

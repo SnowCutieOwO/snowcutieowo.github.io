@@ -36,23 +36,24 @@ Oraxen 能够通过两种方式添加自定义盔甲：纹饰或着色器。
 
 因为它需要用到数据包，你需要在添加/移除盔甲套装后完全重启服务器才可应用改动。
 
-> [!WARNING|label:警告]
-> 将 `CustomArmor.armor_type` 设置为 `TRIMS` 后，你需要：
-> 1. 启动服务器，让其生成数据包
-> 2. 关闭服务器
-> 3. 再次重启，使其应用先前生成的数据包
+::: warning
+将 `CustomArmor.armor_type` 设置为 `TRIMS` 后，你需要：
+1. 启动服务器，让其生成数据包
+2. 关闭服务器
+3. 再次重启，使其应用先前生成的数据包
+:::
 
 ### 如何配置盔甲？
 
-> [!INFO|label:提示]
-> 确保你的 Oraxen 物品的 itemID 遵照了`盔甲名称_盔甲类型`的格式。
-> 
-> 对于上文的示例，则为 `ruby_chestplate`、`ruby_leggings` 和 `ruby_boots`。
->
-> 
-> 确保你的 `armor-layer` 文件遵照了 `**盔甲名称**_armor_layer_1或2.png` 的格式。
-> 
-> 在下文的示例中，我们需要一份 `**ruby**_armor_layer_1.png` 和 `**ruby**_armor_layer_2.png` 文件。
+::: info 提示
+确保你的 Oraxen 物品的 itemID 遵照了`盔甲名称_盔甲类型`的格式。
+
+对于上文的示例，则为 `ruby_chestplate`、`ruby_leggings` 和 `ruby_boots`。
+
+确保你的 `armor-layer` 文件遵照了 `**盔甲名称**_armor_layer_1或2.png` 的格式。
+
+在下文的示例中，我们需要一份 `**ruby**_armor_layer_1.png` 和 `**ruby**_armor_layer_2.png` 文件。
+:::
 
 只需设置材料并指定两次纹理图标即可：
 
@@ -89,27 +90,28 @@ ruby_helmet:
 
 装备时使用的贴图有一些限制并需要进一步测试。这时我们会用到一种技巧。
 
-> [!WARNING|label:警告]
-> 如果你通过 Optifine 或 Iris 使用了自定义着色器，你需要做一些额外的处理才能让自定义物品正常显示。
->
-> 对于 Optifine，所有事情都会由插件自动处理。
-> 
-> 对于 Iris，你需要安装 [CIT Resewn](https://modrinth.com/mod/cit-resewn)，这之后的所有内容都会为你处理好。
+::: warning
+如果你通过 Optifine 或 Iris 使用了自定义着色器，你需要做一些额外的处理才能让自定义物品正常显示。
+
+对于 Optifine，所有事情都会由插件自动处理。
+
+对于 Iris，你需要安装 [CIT Resewn](https://modrinth.com/mod/cit-resewn)，这之后的所有内容都会为你处理好。
+:::
 
 ![img](images/image36.png)
 
-> [!WARNING|label:警告]
-> 命名装备时需要小心，防止纹理无法识别。
-> 
-> 如果你想要创建一个**紫水晶（amethyst）**套装，则你的套装物品必须是这样：
-> 
-> - **amethyst**_helmet
-> - **amethyst**_chestplate
-> - **amethyst**_leggings
-> - **amethyst**_boots
-> 在[第二步](#2-正确命名纹理)中创建的对应纹理名称应当是这样的：
-> - **amethyst**_armor_layer_1.png
-> - **amethyst**_armor_layer_2.png
+::: warning
+命名装备时需要小心，否则纹理可能会无法识别。
+
+如果你想要创建一个**紫水晶（amethyst）**套装，则你的套装物品必须是这样：
+
+- **amethyst**_helmet
+- **amethyst**_chestplate
+- **amethyst**_leggings
+- **amethyst**_boots
+在[第二步](#2-正确命名纹理)中创建的对应纹理名称应当是这样的：
+- **amethyst**_armor_layer_1.png
+- **amethyst**_armor_layer_2.png
 
 #### 如何配置你的盔甲？
 
@@ -127,17 +129,19 @@ ruby_helmet:
       - default/armors/ruby_helmet
 ```
 
-> [!INFO|label:提示]
-> 确保你的 Oraxen 物品的 itemID 遵照了`盔甲名称_盔甲类型`的格式。
-> 
-> 对于上文的示例，则为 `ruby_chestplate`、`ruby_leggings` 和 `ruby_boots`。
+::: info 提示
+确保你的 Oraxen 物品的 itemID 遵照了`盔甲名称_盔甲类型`的格式。
 
-> [!INFO|label:提示]
-> 这也是只有皮革盔甲才会生效的原因。
->
-> 自定义盔甲不能以钻石为基础材料。
->
-> 若要设置自定义盔甲数量，设置属性修饰符（Attribute Modifiers）即可。
+对于上文的示例，则为 `ruby_chestplate`、`ruby_leggings` 和 `ruby_boots`。
+:::
+
+::: info 提示
+这也是只有皮革盔甲才会生效的原因。
+
+自定义盔甲不能以钻石为基础材料。
+
+若要设置自定义盔甲数量，设置属性修饰符（Attribute Modifiers）即可。
+:::
 
 ### 如何修改装备外观？
 
@@ -153,22 +157,24 @@ https://oraxen.com/resources/armor_rest.png
 
 https://oraxen.com/resources/armor_leggings.png
 
-> [!WARNING|label:警告]
-> 请确保你的纹理分辨率与 `settings.yml` 中的相符合。
-> 默认情况下分辨率设置为 16。这意味着你的盔甲纹理大小必须为 64x32 像素。
-> 若你想要使用更高的分辨率，你需要修改 `settings.yml` 中的值。例如，128*64分辨率的盔甲纹理必须在 `settings.yml` 将分辨率设置为 32。你不能让一部分纹理使用 64x32，而另一部分使用 128x64，这个设置只能一刀切。
->
-> 另外你还需要确保纹理的位深度是 32 位。
-> 其他深度会导致渐变不完全，且着色器使用的像素为黑色。
-> 这不会破坏 Optifine 或 Iris 版本的纹理包，但有可能破坏原版的纹理包。
+::: warning
+请确保你的纹理分辨率与 `settings.yml` 中的相符合。
+默认情况下分辨率设置为 16。这意味着你的盔甲纹理大小必须为 64x32 像素。
+若你想要使用更高的分辨率，你需要修改 `settings.yml` 中的值。例如，128*64分辨率的盔甲纹理必须在 `settings.yml` 将分辨率设置为 32。你不能让一部分纹理使用 64x32，而另一部分使用 128x64，这个设置只能一刀切。
+
+另外你还需要确保纹理的位深度是 32 位。
+其他深度会导致渐变不完全，且着色器使用的像素为黑色。
+这不会破坏 Optifine 或 Iris 版本的纹理包，但有可能破坏原版的纹理包。
+:::
 
 ![img](images/image37.png)
 
 ![img](images/image38.png)
 
-> [!TIP|label:提示]
-> 你可以通过在文件夹中添加 **\_e\_.png** 结尾的文件，让你的纹理具有**辐射**（无需 Optifine）。例如 `ruby_armor_layer_1_e.png`。
-> 这张纹理会被当做辐射图，像素点的 Alpha 通道值会视作辐射量。
+::: info 提示
+你可以通过在文件夹中添加 **\_e\_.png** 结尾的文件，让你的纹理具有**辐射**（无需 Optifine）。例如 `ruby_armor_layer_1_e.png`。
+这张纹理会被当做辐射图，像素点的 Alpha 通道值会视作辐射量。
+:::
 
 #### 2) 正确命名纹理
 

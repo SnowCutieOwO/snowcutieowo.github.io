@@ -17,8 +17,9 @@ WorldGuard 中存在着一套面向玩家的基础认领系统。通过命令 `/
 * **重叠保护：**玩家所认领的区域不可与自己不拥有的区域重叠；
 * **认领重叠：**如果配置文本中启用了 `regions.claim-only-inside-existing-regions` 项，那么该区域必须完全处于玩家所拥有的区域内。需要注意的是认领区域*不*需要完全和上述玩家所拥有的区域重叠（见[漏洞报告 #753](https://github.com/EngineHub/WorldGuard/issues/753)）
 
-> [!TIP|label:提示]
-> 目前为止，插件尚未支持非矩形选区。见[漏洞报告 #1537](https://github.com/EngineHub/WorldGuard/issues/1537)。
+::: tip
+目前为止，插件尚未支持非矩形选区。见[漏洞报告 #1537](https://github.com/EngineHub/WorldGuard/issues/1537)。
+:::
 
 ## 其他命令
 

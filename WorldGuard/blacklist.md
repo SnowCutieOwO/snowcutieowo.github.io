@@ -33,8 +33,9 @@ on-place=deny,notify,kick
 * `worlds/world_nether/blacklist.txt`
 * `worlds/mining_world/blacklist.txt`
 
-> [!TIP|label:提示]
-> 现在并不能将同一个黑名单文件在多个世界之间共享。你可能需要通过操作系统自带的“symlink”来将两个文件保持同步更新。
+::: tip
+现在并不能将同一个黑名单文件在多个世界之间共享。你可能需要通过操作系统自带的“symlink”来将两个文件保持同步更新。
+:::
 
 ## 格式
 
@@ -116,29 +117,37 @@ message=抱歉, 但是你不能使用附魔台!
 
 将黑名单模式切换为白名单模式（通过配置文件）将会把配置的功能反转。在这种情况下只有被标注为 `allow` 的操作才可以被允许。
 
-> [!TIP|label:提示]
-> 白名单模式非常严格。在需要放置方块的情况下，你需要先在配置文本里允许使用该方块（玩家手中的物品）、与世界上存在的所有方块的交互（允许方块放置“其上”）以及放置方块。你可能会发现通过建筑权限为玩家设置相关保护更加容易，因为它支持“*”通配符（在权限节点中使用），这样就可以减少你的工作量。
+::: tip
+白名单模式非常严格。在需要放置方块的情况下，你需要先在配置文本里允许使用该方块（玩家手中的物品）、与世界上存在的所有方块的交互（允许方块放置“其上”）以及放置方块。你可能会发现通过建筑权限为玩家设置相关保护更加容易，因为它支持“*”通配符（在权限节点中使用），这样就可以减少你的工作量。
+:::
 
 ## 示例
 
-> [!NOTE|label:示例：禁用任意种类的桶]
-> ```Ini
-> [lavabucket,waterbucket,bucket]
-> on-use=deny,tell
-> ```
+::: info 示例：禁用任意种类的桶
+```Ini
+[lavabucket,waterbucket,bucket]
+on-use=deny,tell
+```
+:::
 
-> [!NOTE|label:示例：踢出正在使用 TNT 的玩家，并提醒管理员]
-> ```Ini
-> [tnt]
-> ignore-groups=admins
-> on-place=deny,notify,kick
-> 示例：只允许处在权限组“obsidian”或为管理员的玩家挖掘和放置黑曜石[/b]
-> 
-> [obsidian]
-> ignore-groups=admins,obsidian
-> on-place=deny,tell
-> on-break=deny,tell
-> ```
+::: info 示例：踢出正在使用 TNT 的玩家，并提醒管理员
+
+```Ini
+[tnt]
+ignore-groups=admins
+on-place=deny,notify,kick
+```
+:::
+
+::: info 示例：只允许处在权限组“obsidian”或为管理员的玩家挖掘和放置黑曜石
+
+```Ini
+[obsidian]
+ignore-groups=admins,obsidian
+on-place=deny,tell
+on-break=deny,tell
+```
+:::
 
 ## 日志记录
 

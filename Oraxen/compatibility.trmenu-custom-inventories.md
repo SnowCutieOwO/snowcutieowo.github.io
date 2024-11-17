@@ -1,10 +1,11 @@
 # TrMenu - 自定义背包
 TrMenu 是免费开源的插件，允许你创建自定义菜单。
 
-> [!NOTE|label:提示]
-> 这里有一个更新且更高效的方式创建背包，基于字符替换。这里是我们合作者的一个教程链接：
->
-> https://mcmodels.net/how-to-tutorials/oraxen-tutorials-guides/how-to-create-custom-guis-using-oraxen/
+::: info 提示
+这里有一个更新且更高效的方式创建背包，基于字符替换。这里是我们合作者的一个教程链接：
+
+https://mcmodels.net/how-to-tutorials/oraxen-tutorials-guides/how-to-create-custom-guis-using-oraxen/
+:::
 
 TrMenu 不仅支持 Oraxen 物品，还允许你快速地在配置中引用它们。这样你就可以为你的物品或礼包预览创建炫酷的图标...或者是炫酷的抽奖展示界面。
 

@@ -10,11 +10,13 @@ RegionContainer container = WorldGuard.getInstance().getPlatform().getRegionCont
 ```
 RegionManager regions = container.get(world);
 ```
-> [!TIP|label:提示]
-> 见“引自 Bukkit 的对象”章节来获知如何转化 Bukkit 的世界。
+::: tip
+见“[引自 Bukkit 的对象](worldguard-api.from-bukkit-objects.md)”章节来获知如何转化 Bukkit 的世界。
+:::
 
-> [!WARNING|label:警告]
-> 返回值在区域支持被禁用或区域数据载入失败时**可能会返回 null**。WorldGuard 可能会间歇性地尝试重新载入这些数据。
+::: warning
+返回值在区域支持被禁用或区域数据载入失败时**可能会返回 null**。WorldGuard 可能会间歇性地尝试重新载入这些数据。
+:::
 
 ## 区域管理
 
@@ -29,16 +31,17 @@ ProtectedRegion region = regions.getRegion("spawn");
 * 测试指定命名的区域是否存在：`regions.hasRegion(String)`
 * 获取区域大小：`regions.size()`
 
-> [!INFO|label:示例：获取名为“spawn”的区域数据]
-> ```Java
-> RegionContainer container = WorldGuard.getInstance().getPlatform().getRegionContainer();
-> RegionManager regions = container.get(world);
-> if (regions != null) {
->     return regions.getRegion("spawn");
-> } else {
->     // 在世界不支持区域或区域数据读取失败情况下执行的代码
-> }
-> ```
+::: info 示例：获取名为“spawn”的区域数据
+```Java
+RegionContainer container = WorldGuard.getInstance().getPlatform().getRegionContainer();
+RegionManager regions = container.get(world);
+if (regions != null) {
+    return regions.getRegion("spawn");
+} else {
+    // 在世界不支持区域或区域数据读取失败情况下执行的代码
+}
+```
+:::
 
 ### 创建区域
 

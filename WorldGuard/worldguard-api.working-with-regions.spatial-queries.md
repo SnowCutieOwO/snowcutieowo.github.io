@@ -18,13 +18,14 @@ WorldGuard 针对下列两种区域查询方法进行了优化：
 RegionQuery query = container.createQuery();
 ApplicableRegionSet set = query.getApplicableRegions(loc);
 ```
-> [!NOTE|label:示例：获取位于 (10, 64, 100) 的区域]
-> ```Java
-> Location loc = new com.sk89q.worldedit.util.Location(world, 10, 64, 100); // 如上所述, 也可从 Bukkit 获取
-> RegionContainer container = WorldGuard.getInstance().getPlatform().getRegionContainer();
-> RegionQuery query = container.createQuery();
-> ApplicableRegionSet set = query.getApplicableRegions(loc);
-> ```
+::: info 示例：获取位于 (10, 64, 100) 的区域]
+```Java
+Location loc = new com.sk89q.worldedit.util.Location(world, 10, 64, 100); // 如上所述, 也可从 Bukkit 获取
+RegionContainer container = WorldGuard.getInstance().getPlatform().getRegionContainer();
+RegionQuery query = container.createQuery();
+ApplicableRegionSet set = query.getApplicableRegions(loc);
+```
+:::
 
 缓存的一个特征就是它会在区域功能未启用或区域数据载入失败时**返回虚拟结果**：
 
@@ -40,14 +41,14 @@ ApplicableRegionSet set = query.getApplicableRegions(loc);
 BlockVector3 position = BlockVector3.at(20, 10, 4);
 ApplicableRegionSet set = regions.getApplicableRegions(position);
 ```
-> [!NOTE|label:示例：获取位于 (10, 64, 100) 的区域]
-> ```Java
-> Location loc = new new com.sk89q.worldedit.util.Location(world, 10, 64, 100); // 如上所述, 也可从 Bukkit 获取
-> RegionContainer container = WorldGuard.getInstance().getPlatform().getRegionContainer();
-> RegionManager regions = container.get(world);
-> // 确保区域非空的检查
-> ApplicableRegionSet set = regions.getApplicableRegions(loc.toVector().toBlockPoint());
-> ```
+::: info 示例：获取位于 (10, 64, 100) 的区域]
+```Java
+Location loc = new new com.sk89q.worldedit.util.Location(world, 10, 64, 100); // 如上所述, 也可从 Bukkit 获取
+RegionContainer container = WorldGuard.getInstance().getPlatform().getRegionContainer();
+RegionManager regions = container.get(world);
+// 确保区域非空的检查
+ApplicableRegionSet set = regions.getApplicableRegions(loc.toVector().toBlockPoint());
+```
 
 如果目标是找到一个重叠了其他区域的区域列表，那么需要在管理模块上使用方法 `getApplicableRegions(ProtectedRegion)`。因为区域的形状和区域实际上是相同的，需要使用虚拟命名。
 ```Java
@@ -71,8 +72,9 @@ regions.add(pub);
 
 ApplicableRegionSet set = new RegionResultSet(regions, null); // 无全局区域的情况
 ```
-> [!WARNING|label:警告]
-> 返回的区域列表可能会按照位置重新排序。在你将列表给予实例事件，它不应再被使用。
+::: warning
+返回的区域列表可能会按照位置重新排序。在你将列表给予实例事件后，它不应再被使用。
+:::
 
 ## 使用 ApplicableRegionSet
 
@@ -84,7 +86,8 @@ for (ProtectedRegion region : set) {
 }
 ```
 
-> [!NOTE|label:示例：获取区域列表]
-> ```Java
-> List<ProtectedRegion> region = Lists.newArrayList(set);
-> ```
+::: info 示例：获取区域列表
+```Java
+List<ProtectedRegion> region = Lists.newArrayList(set);
+```
+:::

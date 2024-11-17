@@ -2,37 +2,22 @@
 
 在你成功创建了一块选区之后，我们就要来上点猛料了。
 
-> * [设置方块](usage.regions.region-operations.md#设置方块)
-> * [替换方块](usage.regions.region-operations.md#替换方块)
-> * [筑墙（及其他边界）](usage.regions.region-operations.md#筑墙及其他边界)
-> * [覆盖](usage.regions.region-operations.md#覆盖)
-> * [堆叠复制](usage.regions.region-operations.md#堆叠复制)
-> * [移动](usage.regions.region-operations.md#移动)
-> * [平滑化](usage.regions.region-operations.md#平滑化)
-> * [重生成](usage.regions.region-operations.md#重生成)
-> * [自然化](usage.regions.region-operations.md#自然化)
-> * [生成植被](usage.regions.region-operations.md#生成植被)
-> * [植树造林](usage.regions.region-operations.md#植树造林)
-> * [掏空区域](usage.regions.region-operations.md#掏空区域)
-> * [绘制曲线](usage.regions.region-operations.md#绘制曲线)
-> * [设置中心方块](usage.regions.region-operations.md#设置中心方块)
-> * [选区变换](usage.regions.region-operations.md#选区变换)
-> * [设置生物群系](usage.regions.region-operations.md#设置生物群系)
+[[toc]]
 
 ## 设置方块
 
 最基本的操作，使用命令 `//set <方块>` 即可将选区内以指定内容全部填充。
 
-> **示例：设置你的选区**
-> 简单图案：
-> ```
-> //set stone
-> ```
-> 复杂图案（有关内容请参阅“图案”章节）：
-> ```
-> //set 30%red_wool,*oak_log,#copy,##slabs
-> ```
-> [^1]
+::: info 示例：设置你的选区
+简单图案：
+```
+//set stone
+```
+复杂图案（有关内容请参阅“图案”章节）：[^1]
+```
+//set 30%red_wool,*oak_log,#copy,##slabs
+```
+:::
 
 ## 替换方块
 
@@ -40,19 +25,20 @@
 
 需要注意的是你可以忽略这个蒙版参数——它在默认情况下为已存在的方块。
 
-> **示例：替换选区内的方块**    
-> 将所有非空气方块替换为草：
-> ```
-> //replace grass_block
-> ```
-> 将所有石头替换为绿色羊毛：
-> ```
-> //replace stone green_wool
-> ```
-> 将地面上所有的沙子[^2]替换为矿物方块：
-> ```
-> //replace "sand <air" diamond_block,iron_block,gold_block
-> ```
+::: info 示例：替换选区内的方块 
+将所有非空气方块替换为草：
+```
+//replace grass_block
+```
+将所有石头替换为绿色羊毛：
+```
+//replace stone green_wool
+```
+将地面上所有的沙子[^2]替换为矿物方块：
+```
+//replace "sand <air" diamond_block,iron_block,gold_block
+```
+:::
 
 ## 筑墙（及其他边界）
 
@@ -81,11 +67,12 @@
 * `-e` 会将选区内的实体一并堆叠复制；
 * `-b` 会将选区内的生物群系一并堆叠复制（可能需要重进游戏才能见到变动）。
 
-> **一些堆叠复制命令的用法**    
-> ![img](https://worldedit.enginehub.org/en/latest/_images/stack_bridge.jpg)    
-> 通过 `//stack` 命令延长的桥    
-> ![img](https://worldedit.enginehub.org/en/latest/_images/stack_tunnel.jpg)    
-> 快速地在一座山中挖掘隧道。请在这么做之前确保你已经选中了天花板和地板上的方块。
+::: info 一些堆叠复制命令的用法  
+![img](https://worldedit.enginehub.org/en/latest/_images/stack_bridge.jpg)    
+通过 `//stack` 命令延长的桥    
+![img](https://worldedit.enginehub.org/en/latest/_images/stack_tunnel.jpg)    
+快速地在一座山中挖掘隧道。请在这么做之前确保你已经选中了天花板和地板上的方块。
+:::
 
 ## 移动
 
@@ -102,15 +89,16 @@
 
 移动命令也有与 `//stack` 命令相同的三个标志，`-e` 会将选区内的实体一并移动，`-b` 会将选区内的生物群系一并移动（原本的生物群系不受影响），`-m <蒙版>` 参数则只移动匹配蒙版的方块。
 
-> **示例：使用移动命令**
-> 将选区向前移动两格方块，原地以石头填充：
-> ```
-> //move 2 me stone
-> ```
-> 将选区向前移动五格方块，对原地不作处理：
-> ```
-> //move 5 down
-> ```
+::: info 示例：使用移动命令
+将选区向前移动两格方块，原地以石头填充：
+```
+//move 2 me stone
+```
+将选区向前移动五格方块，对原地不作处理：
+```
+//move 5 down
+```
+:::
 
 ## 平滑化
 
@@ -120,8 +108,9 @@
 
 命令 `//regen` 命令允许你将选区内的方块重生成至世界最初的状态。它是基于世界的种子进行地形还原的，因此多次执行命令只会得到完全相同的结果。
 
-> [!WARNING|label:警告]
-> 重生成命令会使用当前世界的生成器，这意味着如果世界是通过外部生成器生成的，或者 Minecraft 的地形生成机制同时被修改，那么重新生成的区域有可能会显得格格不入。
+::: warning
+重生成命令会使用当前世界的生成器，这意味着如果世界是通过外部生成器生成的，或者 Minecraft 的地形生成机制同时被修改，那么重新生成的区域有可能会显得格格不入。
+:::
 
 ## 自然化
 
@@ -159,26 +148,29 @@
 
 默认情况下，坐标会从选择的最小点到最大点为 -1 的位置向 1 的位置延伸。使用 `-r` 标志将会使用原本的世界坐标，而 `-o` 参数则会根据你的放置位置将 Minecraft 的坐标适当偏移。
 
-> **示例：变换选区**    
-> 生成一个丘陵地形：
-> ```
-> //deform y+=0.2*sin(x*10)
-> ```
-> 将你的选区上下翻转：
-> ```
-> //deform swap(x,y)
-> ```
+::: info 示例：变换选区
+生成一个丘陵地形：
+```
+//deform y+=0.2*sin(x*10)
+```
+将你的选区上下翻转：
+```
+//deform swap(x,y)
+```
+:::
 
 ## 设置生物群系
 
 WorldEdit 大部分情况下都是用来修改方块的，但是命令 `//setbiome` 允许你设置选区中的生物群系。生物群系的名称需为指定的[群系 ID](https://zh.minecraft.wiki/w/%E7%94%9F%E7%89%A9%E7%BE%A4%E7%B3%BB#%E6%95%B0%E6%8D%AE%E5%80%BC)如果你想要修改为一个模组提供的生物群系，那么 `命名空间:` 前缀就必须添加，例如 `minecraft:plains`。
 
-> [!TIP|label:提示]
-> WorldEdit 在其 7.2 之后的版本支持了 Minecraft 于 1.15 版本添加的三维生物群系。这意味着大部分情况下，生物群系只会在你的选区中设置，Y 轴方位上不再会受到影响。不幸的是，Mojang 将三维的生物群系设置为了 4x4x4 的立体空间而不是 1x1x1 的方块，且其边缘也会模糊。这意味着生物群系不能像之前那样被很好的控制，这样它也不能完全贴合你的选区进行设置了。    
-> 额外地，直到 1.18，Mojang 让整个主世界不完全遵守三维生物群系，所以在某些情况下 WorldEdit 将会设置 `Y = 0` 处的生物群系来确保生成和可视化内容。    
-> 若要更进一步地贴合旧版本的行为，请在设置生物群系前先使用命令 `//expand vert`
+::: tip
+WorldEdit 在其 7.2 之后的版本支持了 Minecraft 于 1.15 版本添加的三维生物群系。这意味着大部分情况下，生物群系只会在你的选区中设置，Y 轴方位上不再会受到影响。不幸的是，Mojang 将三维的生物群系设置为了 4x4x4 的立体空间而不是 1x1x1 的方块，且其边缘也会模糊。这意味着生物群系不能像之前那样被很好的控制，这样它也不能完全贴合你的选区进行设置了。    
+额外地，直到 1.18，Mojang 让整个主世界不完全遵守三维生物群系，所以在某些情况下 WorldEdit 将会设置 `Y = 0` 处的生物群系来确保生成和可视化内容。    
+若要更进一步地贴合旧版本的行为，请在设置生物群系前先使用命令 `//expand vert`
+:::
 
-[^1]: 译者注：这条命令的意思是，将选区内用 30% 的羊毛、任意朝向的橡木原木、剪贴板的内容及任意台阶方块填充。
-带有百分号的为“随机图案”，带有英文星号（*）的为“随机状态图案”，而 #copy 参数则表示剪贴板内容，##slab 则表示任意种类的台阶，包括但不限于橡木台阶、金合欢木台阶、石台阶等。这些内容均在“图案”章节提及，读者可自行翻阅。
+[^1]: 
+    译者注：这条命令的意思是，将选区内用 30% 的羊毛、任意朝向的橡木原木、剪贴板的内容及任意台阶方块填充。  
+    带有百分号的为“随机图案”，带有英文星号（*）的为“随机状态图案”，而 #copy 参数则表示剪贴板内容，##slab 则表示任意种类的台阶，包括但不限于橡木台阶、金合欢木台阶、石台阶等。这些内容均在“图案”章节提及，读者可自行翻阅。
 
 [^2]: 译者注：实际上包含了任意与空气接触的沙子，但不会影响处于其下方（默认下方的方块任意一面不与空气接触）的方块。

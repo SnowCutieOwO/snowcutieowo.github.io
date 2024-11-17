@@ -5,7 +5,7 @@ HuskHomes 支持将家传送点显示在服务器的网络地图上。下列地�
 * [Dynmap](https://github.com/webbukkit/dynmap)
 * [BlueMap](https://github.com/BlueMap-Minecraft/BlueMap)
 * [Pl3xMap](https://github.com/BillyGalbreath/Pl3xMap)（仅 1.19.4+ 的 Paper 服务端）
-[/list]
+
 若要启用地图插件的联动支持，你需要在配置文件 `config.yml` 下的 `map_hook` 位置，将 `enabled` 项设置为 `true`。你也可以自由设置是否将公共家传送点或地标传送点显示在地图上，或是二者同时显示。
 
 ## Dynmap

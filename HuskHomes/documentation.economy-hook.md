@@ -5,15 +5,17 @@ HuskHomes 支持将特定的操作设置为收费。玩家必须持有数量足�
 
 ### Spigot & Paper 的安装
 
-> [!INFO|label:对下列服务端有效：]
-> Spigot、Paper
+::: info 对下列服务端有效：
+Spigot、Paper
+:::
 
 若要启用经济插件联动，同时安装 [Vault](https://www.spigotmc.org/resources/vault.34315/) 和任意一个支持 Vault 的经济插件。然后，将 `config.yml` 下 `economy` 的 `enabled` 选项值设置为 `true`。
 
 ### Sponge 的安装
 
-> [!INFO|label:对下列服务端有效：]
-> Sponge
+::: info 对下列服务端有效：
+Sponge
+:::
 
 若要在 Sponge 服务器上启用经济联动，你需要安装一个通过 Sponge 经济 API 管理玩家经济的模组。然后，将 `config.yml` 下 `economy` 的 `enabled` 选项值设置为 `true`。
 
@@ -50,8 +52,9 @@ HuskHomes 支持将特定的操作设置为收费。玩家必须持有数量足�
 
 ### 示例配置
 
-> [!WARNING|label:警告]
-> 你必须在 config.yml 中指定一个小数值。（例如，`100.00` 是有效的，而 `100` 无效。）经济消耗在 `config.yml` 下 `economy` 的 `costs` 配置。
+::: warning
+你必须在 config.yml 中指定一个小数值。（例如，`100.00` 是有效的，而 `100` 无效。）经济消耗在 `config.yml` 下 `economy` 的 `costs` 配置。
+:::
 
 ### 设置经济消耗（config.yml）
 

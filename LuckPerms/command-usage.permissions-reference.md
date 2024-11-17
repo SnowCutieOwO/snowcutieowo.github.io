@@ -2,7 +2,9 @@
 
 LuckPerms 的每个命令与其他功能有各自的权限。权限会在[命令用法](command-usage.md)部分列出。但是，能在列表中看到对应的权限与命令还是非常有用的。下表会列出。
 
-> 注意：这个列表不会在[基于参数的权限](how-to.setup-argument-based-command-permissions.md)可用时包含任何权限。若你需要知道这些权限，最好使用[权限检查系统](features.verbose.md)。
+::: info 注意
+这个列表不会在[基于参数的权限](how-to.setup-argument-based-command-permissions.md)可用时包含任何权限。若你需要知道这些权限，最好使用[权限检查系统](features.verbose.md)。
+:::
 
 ## 权限列表
 

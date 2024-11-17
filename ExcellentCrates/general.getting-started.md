@@ -8,9 +8,10 @@ Java 版本：17 或更高
 <font color="red">必须</font> [nightcore](https://github.com/nulli0n/nightcore-spigot/releases)（最新版）    
 <font color="green">可选</font> [ProtocolLib](https://ci.dmulloy2.net/job/ProtocolLib/)（最新构建）- 用于悬浮字相关内容。
 
-> [!WARNING|label:警告]
-> 模组端（Mohist, Forge）尚未支持。    
-> 针对多线程核心（MultiPaper、Foila）的支持仍在开发中。
+::: warning 
+模组端（Mohist, Forge）尚未支持。    
+针对多线程核心（MultiPaper、Foila）的支持仍在开发中。
+:::
 
 ## 插件安装
 

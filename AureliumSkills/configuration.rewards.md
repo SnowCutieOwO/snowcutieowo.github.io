@@ -7,7 +7,7 @@
 ### YAML 格式  
 正确地配置奖励需要你预先学习一些 YAML 的语法结构，技术上一般称作映射列表。这些就是包含着多个元素的列表，与 JSON 中的数组相似。映射列表通常如下方格式般定义：  
 
-```
+``` YAML
 patterns:
   - type: stat # 列表中的第一个元素开始标志
     stat: strength
@@ -17,7 +17,9 @@ patterns:
     value: 1.5
 ```
 
-> **！**注意横杠符号之间的缩进。在这个示例中，正常的一个缩进是两个空格。所以，在你映射列表中的各个值（如type、stat、value）相比较它们的开头，应当有共计四个空格的缩进。
+::: tip
+注意横杠符号之间的缩进。在这个示例中，正常的一个缩进是两个空格。所以，在你映射列表中的各个值（如type、stat、value）相比较它们的开头，应当有共计四个空格的缩进。
+:::
 
 ## 文件结构  
 奖励是存储在 `AureliumSkils/rewards` 文件夹下的可修改配置，它们的名称对应了它将会修改的各个技能名称（例如，farming.yml 表示它只会控制农耕技能的相关奖励）。这里也有一个 `global.yml` 用以控制所有技能的奖励内容，因此添加进这个文件中的所有奖励将会对所有技能生效。默认情况下，你会看见每个技能有各自的示例配置。每个文件都被分成两大区域，分别是 `patterns` 与`levels`。  
@@ -33,7 +35,7 @@ patterns:
 ### 指定等级（Levels）区域 
 该区域设置到达特定等级时的奖励内容。你必须按下列各式先定义一个到达对应等级触发的区域，然后才能开始填入奖励内容。设置如下文所示：  
 
-```
+``` YAML
 levels:
   5:
     - type: command
@@ -55,13 +57,15 @@ levels:
 
 示例：  
 
-```
+``` YAML
 - type: stat
   stat: strength
   value: 1
 ```
 
-> **！****是否想要移除默认的属性奖励？**你可以将固定奖励部分设置为诸如 `patterns: []` 的格式来禁用默认的奖励内容。但在这种情况下你可能需要编辑消息文件里的文本，使得在没有属性奖励的情况下不出现多余的空格。
+::: info 是否想要移除默认的属性奖励？
+你可以将固定奖励部分设置为诸如 `patterns: []` 的格式来禁用默认的奖励内容。但在这种情况下你可能需要编辑消息文件里的文本，使得在没有属性奖励的情况下不出现多余的空格。
+:::
 
 ### 命令奖励（`command`） 
 命令奖励允许你以控制台或玩家的身份执行命令。  
@@ -80,7 +84,7 @@ levels:
 
 示例：  
 
-```
+``` YAML
 - type: command
   executor: console
   command: say leveled up!
@@ -101,7 +105,7 @@ levels:
 
 示例：  
 
-```
+``` YAML
 - type: permission
   permission: some.permission.node
   value: true
@@ -116,7 +120,7 @@ levels:
 
 示例： 
 
-```
+``` YAML
 - type: item
   key: some_item_key
   amount: 24
@@ -131,14 +135,14 @@ levels:
 
 示例：  
 
-```
+``` YAML
 - type: money
   amount: 1000
 ```
 
 若你不使用 Vault 或有其他的经济（译者注：例如点券），你可以使用命令奖励来正常给予货币奖励。你也可以使用 PlaceholderAPI 的 Math 变量拓展，通过计算按等级的应发放货币量来给予玩家对应数量的货币。下面是一个例子：  
 
-```
+``` YAML
 - type: command
   executor: console
   command: eco give {player} %math_{level}*2+100%
@@ -153,7 +157,7 @@ levels:
   ”。  
 设置了菜单和聊天栏消息的示例:  
 
-```
+``` YAML
 - type: permission
   permission: some.permission.node
   value: true 
@@ -165,7 +169,7 @@ levels:
 
 在 menu_message 和 chat_message 相同的情况下使用 message 参数简写的示例：  
 
-```
+``` YAML
 - type: command
   executor: console
   command: say leveled up!

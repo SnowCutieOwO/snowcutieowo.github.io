@@ -23,28 +23,8 @@ DecentHolograms 是一个面向管理员用户开放的插件，它将管理插�
 
 该教程提供了编辑悬浮字的一些基本规则，包括创建和修改它们。若要参照完整的命令列表，请参考下文的章节。
 
-<div class="grid-container-2">
-  <div class="item1-1">
-    <div class="card">
-    <div class="card-details">
-        <a href="./#/general.formats-colors">
-        <p class="text-title">:fas fa-book: 格式与颜色</p>
-        <p class="text-body">点此进入该章节</p>
-        </a>
-    </div>
-    </div>
-  </div>
-  <div class="item1-2">
-    <div class="card">
-    <div class="card-details">
-        <a href="./#/general.commands.md">
-        <p class="text-title">:fas fa-book: 命令</p>
-        <p class="text-body">点此进入该章节</p>
-        </a>
-    </div>
-    </div>
-  </div>
-</div>
+* [格式与颜色](general.formats-colors.md)
+* [命令](general.commands.md)
 
 ### 创建悬浮字示例
 
@@ -52,14 +32,16 @@ DecentHolograms 是一个面向管理员用户开放的插件，它将管理插�
 
 ### 创建悬浮字
 
-> [!NOTE|label:提示]
-> 若要在控制台执行命令，你需要在命令中加入 `-l:<世界名称>:<x>:<y>:<z>` 参数。
+::: info 
+若要在控制台执行命令，你需要在命令中加入 `-l:<世界名称>:<x>:<y>:<z>` 参数。
+:::
 
 > /dh create example
 
 ![img](images/hologram-create.png)
 
 ### 编辑悬浮字行
+
 > /dh line set example 1 1 &3&lDECENT HOLOGRAMS    
 > /dh line add example 1 &fHologram plugin
 
@@ -67,6 +49,7 @@ DecentHolograms 是一个面向管理员用户开放的插件，它将管理插�
 
 ### 添加悬浮字页
 你可以根据你的需要添加任意数量的悬浮字页。
+
 > /dh page add example    
 > /dh page switch example 2
 
@@ -80,7 +63,7 @@ DecentHolograms 是一个面向管理员用户开放的插件，它将管理插�
 > /dh page addaction example 2 LEFT PREV_PAGE
 
 在设置正确的点击操作后，玩家可以在第一页右键切换到下一页，在第二页点击切换到上一页。    
-更多可用的操作可以在[这里]找到。
+更多可用的操作可以在[这里](general.actions.md)找到。
 
 ### 总结
 

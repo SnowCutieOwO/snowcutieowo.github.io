@@ -20,4 +20,4 @@ eventProvider.subscribe(eventTypes.passwordChange, event -> {
 
 ## 提供的事件
 
-所有事件都有详细文档，见[事件包](https://github.com/kyngs/LibrePremium/tree/master/API/src/main/java/xyz/kyngs/librelogin/api/event/events)章节获取更多信息。
+所有事件都有详细文档，见[事件包](https://github.com/kyngs/LibrePremium/tree/master/API/src/main/java/xyz/kyngs/librelogin/api/event/events)获取更多信息。

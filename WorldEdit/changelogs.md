@@ -23,7 +23,12 @@
 * 完成 [#d89d5d2](https://github.com/EngineHub/WorldEditDocs/commit/d89d5d2db7c7e4a737f180f963788a79c4f78801) 的跟进
 * 完成 [#a96db57](https://github.com/EngineHub/WorldEditDocs/commit/a96db572331b56235699dbb35676cf5288173679) 的跟进
 
+#### 2024/11/14 0:05
+
+* 完成对维基整体迁移的操作。WorldEdit 为本次迁移首个进行格式适配的维基。
+    * 相关内容将在维基完全翻新后同步至主仓库。
+
 #### TODO
 
-1. ~~将 3.24 的剩余更新完成~~
-2. ~~更新 clipboard.md 章节，新增结构共享功能~~
+[x] 将 3.24 的剩余更新完成  
+[x] 更新 clipboard.md 章节，新增结构共享功能

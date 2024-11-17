@@ -1,9 +1,10 @@
 # 耕地机制
 如何向游戏内添加自定义方块
 
-> [!NOTE|label:提示]
-> 如果你正在查询的是如何向游戏内添加自定义耕作机制，我们推荐你看看 [CustomCrops](https://polymart.org/resource/customcrops.2625)。
-> 它非常适合用于这类内容，且与 Oraxen 兼容性良好。
+::: info 提示
+如果你正在查询的是如何向游戏内添加自定义耕作机制，我们推荐你看看 [CustomCrops](https://polymart.org/resource/customcrops.2625)。
+它非常适合用于这类内容，且与 Oraxen 兼容性良好。
+:::
 
 ## 它是如何起效的？
 

@@ -59,23 +59,25 @@ WorldGuard 的部分，例如区域保护，只需要处理“与方块交互”
 
 若要使用该模式，需要在启动命令中添加参数 `-Dworldguard.debug.listener=true`。
 
-> [!TIP|label:提示]
-> 该功能最好在私人的测试用服务器上使用，如果在玩家较多的服务器上使用，后台可能会被日志刷屏。
+::: tip
+该功能最好在私人的测试用服务器上使用，如果在玩家较多的服务器上使用，后台可能会被日志刷屏。
+:::
 
-> [!NOTE|label:示例]
-> 假设你的开服脚本是这样的：
-> ```Batch
-> @echo off
-> java -Xmx4096M -Xms4096M -jar server.jar nogui
-> pause
-> ```
-> 你可以按如下格式将参数 `-Dworldguard.debug.listener=true` 加进去：
-> ```Batch
-> @echo off
-> java -Xmx4096M -Xms4096M -Dworldguard.debug.listener=true -jar server.jar nogui
-> pause
-> ```
-> 参数可以在“java.exe”后，“-jar”参数前的任意位置添加。在本示例中，该参数被放在了 -jar 前。
+::: info 示例
+假设你的开服脚本是这样的：
+```Batch
+@echo off
+java -Xmx4096M -Xms4096M -jar server.jar nogui
+pause
+```
+你可以按如下格式将参数 `-Dworldguard.debug.listener=true` 加进去：
+```Batch
+@echo off
+java -Xmx4096M -Xms4096M -Dworldguard.debug.listener=true -jar server.jar nogui
+pause
+```
+参数可以在“java.exe”后，“-jar”参数前的任意位置添加。在本示例中，该参数被放在了 -jar 前。
+:::
 
 ## 解释输出
 
@@ -87,8 +89,9 @@ WorldGuard 的部分，例如区域保护，只需要处理“与方块交互”
 * PLACE GRAVEL @       [Block{0,99,0} | FallingSand] :EntityChangeBlockEvent [CANCELLED]
 * SPAWN DROPPED_ITEM   [Block{0,99,0} | FallingSand] @-0,0,0 :EntityChangeBlockEvent
 ```
-> [!TIP|label:提示]
-> 上文中的输出因解释需要而做了精简化处理。
+::: tip
+上文中的输出因解释需要而做了精简化处理。
+:::
 
 每一行的大致格式是这样的：
 ```

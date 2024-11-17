@@ -21,7 +21,7 @@ bytebin 的源码在 https://github.com/lucko/bytebin —— 你可以用 [Maven
 
 相似地，你可以在这里下载预构建的二进制文件：https://ci.lucko.me/job/bytebin/
 
-```linux
+```
 mkdir bytebin
 cd bytebin
 curl -O https://ci.lucko.me/job/bytebin/lastSuccessfulBuild/artifact/target/bytebin.jar

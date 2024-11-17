@@ -1,4 +1,4 @@
-# :fas fa-bars: 事件
+# 🚧 事件
 DecentHolograms 提供的自定义事件
 
 DecentHolograms 提供了一系列自定义事件，全都可以在指定情况下触发。* `

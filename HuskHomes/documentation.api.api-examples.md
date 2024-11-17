@@ -1,6 +1,8 @@
 # API 示例
-> [!NOTE|label:请注意：]
-> HuskHomes API 本身仅支持 Bukkit，但是 Fabric 和 Sponge 支持 [API 事件](documentation.api.api-events.md)。
+
+::: info 请注意：
+HuskHomes API 本身仅支持 Bukkit，但是 Fabric 和 Sponge 支持 [API 事件](documentation.api.api-events.md)。
+:::
 
 HuskHomes API 为下列内容提供了方法与类：
 
@@ -74,8 +76,9 @@ public class HuskHomesAPIHook {
 ### CompletableFuture
 HuskHomesAPI 的许多方法都返回浏览异步执行的 [CompletableFutures](https://www.baeldung.com/java-completablefuture)，以此确保它们依赖的数据库请求不会堵塞服务器的主线程。当一个计划任务（future）完成执行后，你可以通过 `#thenAccept()` 方法来接受返回内容。
 
-> [!WARNING|label:警告]
-> 你不应该在 HuskHomesAPI 中返回的计划任务（future）上使用 `#join()` 方法，因为计划任务（future）是基于服务器的异步任务运行的，如果你尝试通过锁定主线程来操作它们的话，很有可能导致线程死锁并使你的服务器崩溃。
+::: warning 
+你不应该在 HuskHomesAPI 中返回的计划任务（future）上使用 `#join()` 方法，因为计划任务（future）是基于服务器的异步任务运行的，如果你尝试通过锁定主线程来操作它们的话，很有可能导致线程死锁并使你的服务器崩溃。
+:::
 
 ## 获取玩家的家传送点
 

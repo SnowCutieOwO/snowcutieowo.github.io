@@ -7,8 +7,9 @@
 
 机制（Mechanic）是自定义物品的一种属性。它们可以因物品不同而略有差异。例如，耐久机制允许你给不同的物品定义不同的耐久，但不是所有物品都有相同的耐久度。
 
-> [!NOTE|label:提示]
-> 耐久机制通过在元数据中存储物品的耐久值，并通过原版耐久条显示实现。
+::: info 提示
+耐久机制通过在元数据中存储物品的耐久值，并通过原版耐久条显示实现。
+:::
 
 ### 所以如果每个物品的机制有差别，我如何每次覆写不同的耐久度？
 
@@ -24,8 +25,9 @@ item -> item.setCustomTag(NAMESPACED_KEY, PersistentDataType.INTEGER, section.ge
 
 ## 创建第一个自定义机制
 
-> [!NOTE|label:提示]
-> 在这个教程中我会以耐久机制为例（因其便于理解），但你也可以按照本教程创建其他的自定义机制。
+::: info 提示
+在这个教程中我会以耐久机制为例（因其便于理解），但你也可以按照本教程创建其他的自定义机制。
+:::
 
 ### 第一步：创建我们的机制类
 
@@ -216,16 +218,17 @@ Bukkit.getPluginManager().registerEvents(new Listener() {
 * 继承了 [Mechanic](https://github.com/Th0rgal/Oraxen/blob/master/src/main/java/io/th0rgal/oraxen/items/mechanics/Mechanic.java) 的机制类
 * 在 `<机制名称>MechanicsManager` 类中的机制代码（同样可选）
 
-> [!NOTE|label:提示]
-> 因为 `ItemModifier`，你能够通过自定义机制修改物品。
-> ```Java
-> item -> item.setCustomTag(NAMESPACED_KEY,
->                         PersistentDataType.INTEGER, section.getInt("value"))
-> ```
-> 你也可以用相似的方式修改纹理包：
-> ```Java
-> ResourcePack.addModifiers(packFolder -> {/* 修改内容 */});
-> ```
+::: info 提示
+因为 `ItemModifier`，你能够通过自定义机制修改物品。
+```Java
+item -> item.setCustomTag(NAMESPACED_KEY,
+                        PersistentDataType.INTEGER, section.getInt("value"))
+```
+你也可以用相似的方式修改纹理包：
+```Java
+ResourcePack.addModifiers(packFolder -> {/* 修改内容 */});
+```
+:::
 
 终于，你注册了你的自定义机制！
 

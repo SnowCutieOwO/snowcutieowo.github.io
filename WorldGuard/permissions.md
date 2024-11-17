@@ -19,8 +19,9 @@
 |worldguard.override.infinite-stack|无视配置文本中的 `protection.remove-infinite-stacks` 选项设置。|
 
 
-> [!WARNING|label:警告]
-> 如果你是 OP 或拥有全部权限，你也会拥有上述保护权限，导致原本区域设置的保护标志对你不起作用。
+::: warning
+如果你是 OP 或拥有全部权限，你也会拥有上述保护权限，导致原本区域设置的保护标志对你不起作用。
+:::
 
 ## 命令权限
 
@@ -91,20 +92,22 @@
 |worldguard.region.removeowner.*|允许使用 `/rg removeowner` 命令。|
 |worldguard.region.locationoverride.*|无视配置文本中 `regions.location-flags-only-inside-regions` 选项的设置。|
 
-> [!NOTE|label:示例：允许玩家查看自己所拥有区域的详细信息]
-> 
-> 使用形如 own.* 的权限。
-> 
-> ```
-> worldguard.region.info.own.*
-> ```
+::: info 示例：允许玩家查看自己所拥有区域的详细信息
 
-> [!NOTE|label:示例：允许所有玩家使用命令 `/rg teleport city`]
-> 
-> 区域名称可以在权限节点中添加。
-> ```
-> worldguard.region.teleport.city.*
-> ```
+使用形如 own.* 的权限。
+
+```
+worldguard.region.info.own.*
+```
+:::
+
+::: info 示例：允许所有玩家使用命令 `/rg teleport city`
+
+区域名称可以在权限节点中添加。
+```
+worldguard.region.teleport.city.*
+```
+:::
 
 ### 标志命令权限
 
@@ -127,7 +130,7 @@ worldguard.region.flag.*
 * `worldguard.region.flag.flags.<标志名称>.<设置的值>.<区域名称>`    
 `<设置的值>` 可以是 `allow`、`deny` 或 `unset`（如果没有预先提供）等。更复杂的值也会被检查，但是，诸如 `,` 和 `.` 等的特殊字符会被忽略。
 
-> **示例：允许玩家只能修改自己拥有的区域，并限制他们只能修改 `use` 和 `chest-access` 标志的状态**
+::: info 示例：允许玩家只能修改自己拥有的区域，并限制他们只能修改 `use` 和 `chest-access` 标志的状态
 
 你需要给玩家提供下列权限：
 ```
@@ -135,6 +138,8 @@ worldguard.region.flag.regions.own.*
 worldguard.region.flag.flags.use.*
 worldguard.region.flag.flags.chest-access.*
 ```
+
+:::
 
 ## 分页面
 

@@ -4,6 +4,7 @@
 ## 变量列表
 
 |变量名称|描述|示例返回值|
+|---|---|---|
 |`%huskhomes_homes_count%`|返回玩家设置的家传送点数量。|3|
 |`%huskhomes_max_homes%`|返回玩家可设置的家传送点最大数量。|10|
 |`%huskhomes_max_public_homes%`|返回玩家可设置的公开家传送点数量。|5|

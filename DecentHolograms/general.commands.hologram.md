@@ -15,11 +15,12 @@
 **别称：**`hologram`、`holo`、`h`
 **权限：**`dh.command.holograms`
 
-> [!INFO|label:命令帮助]
-> 可输入如下命令来查看所有可用的子命令：
-> ```
-> /dh h help
-> ```
+::: info 命令帮助
+可输入如下命令来查看所有可用的子命令：
+```
+/dh h help
+```
+:::
 
 ### `/dh h addflag <悬浮字> <标志>`
 
@@ -61,13 +62,14 @@
 * `[临时]` - 可选布尔值（填 true / false），表示复制的悬浮字是否为临时存在（不会保存至文件）。默认为 `false`。
 * `[-l:<世界名称>:<x>:<y>:<z>]` - 可选的位置参数，允许你将复制的悬浮字放在指定世界的位置。这个参数可以让控制台执行这个命令。
 
-> [!NOTE|label:示例]
-> ```
-> /dh h clone test test_clone
-> /dh h clone test test_clone true
-> /dh h clone test test_clone -l:world:0:100:0
-> /dh h clone test test_clone true -l:world:0:100:0
-> ```
+::: info 示例
+```
+/dh h clone test test_clone
+/dh h clone test test_clone true
+/dh h clone test test_clone -l:world:0:100:0
+/dh h clone test test_clone true -l:world:0:100:0
+```
+:::
 
 ### `/dh h create <名称> [-l:<世界名称>:<x>:<y>:<z>] [内容]`
 
@@ -81,13 +83,14 @@
 * `[-l:<世界名称>:<x>:<y>:<z>]` - 可选的位置参数，允许你指定悬浮字生成的位置。这个参数可以让控制台执行这个命令。
 * `[内容]` - 悬浮字第一行的文本。（可选）
 
-> [!NOTE|label:示例]
-> ```
-> /dh h create test
-> /dh h create test -l:world:0:100:0
-> /dh h create test First Line
-> /dh h create test -l:world:0:100:0 First Line
-> ```
+::: info 示例
+```
+/dh h create test
+/dh h create test -l:world:0:100:0
+/dh h create test First Line
+/dh h create test -l:world:0:100:0 First Line
+```
+:::
 
 ### `/dh h delete <悬浮字>`
 

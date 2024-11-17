@@ -16,11 +16,12 @@ DecentHolograms 的悬浮字特殊功能命令
 
 **权限：**`dh.command.features`
 
-> [!INFO|label:命令帮助]
-> 可输入如下命令来查看所有可用的子命令：
-> ```
-> /dh f help
-> ```
+::: info 命令帮助
+可输入如下命令来查看所有可用的子命令：
+```
+/dh f help
+```
+:::
 
 ### `/dh f disable <功能>`
 

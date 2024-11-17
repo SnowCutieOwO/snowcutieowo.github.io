@@ -8,8 +8,9 @@
 
 ## 内部变量
 
-> [!NOTE|label:提示]
-> 此为插件配置内部使用的变量。若要使用 PlaceholderAPI，请浏览上文。
+::: info 提示
+此为插件配置内部使用的变量。若要使用 PlaceholderAPI，请浏览上文。
+:::
 
 附魔变量：
 * `%enchantment_id%` - 附魔的 ID。

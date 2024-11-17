@@ -1,8 +1,9 @@
 # MPDB 数据迁移
 该教程将会引导你将 MySQLPlayerDataBridge（MPDB） 插件的数据迁移至 HuskSync 2.x。
 
-> [!WARNING|label:警告]
-> 请注意，由于 MPDB 的更新，HuskSync 仅支持从 MySQLPlayerDataBase `<= 4.9.2` 的版本迁移。对未来版本的支持还在更新中。
+::: warning
+请注意，由于 MPDB 的更新，HuskSync 仅支持从 MySQLPlayerDataBase `<= 4.9.2` 的版本迁移。对未来版本的支持还在更新中。
+:::
 
 ## 需求
 

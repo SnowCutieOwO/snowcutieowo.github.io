@@ -18,7 +18,12 @@
 
 在 `config.conf` 中找到下面的配置并填写：
 
-```HOCON
+<!--
+  这段内容需要改进：
+  原因：Shiki 不支持渲染 HOCON 格式
+-->
+
+```
 # 该部分用于配置其他插件迁移来的数据库设置。
 # 请见维基获得更多信息：https://github.com/kyngs/LibreLogin/wiki/Database-Migration
 migration {

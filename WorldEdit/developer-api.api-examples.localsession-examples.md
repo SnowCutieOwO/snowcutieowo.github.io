@@ -1,6 +1,8 @@
 # LocalSession 示例
-> **注意：**
-> 该文档讲述的是使用会话数据的 API。在游戏对会话功能的解释请转到“[会话](usage.general.sessions.md)”章节。对 LocalSession API 的概述请转到“[本地会话](developer-api.api-concepts.local-sessions.md)”章节。
+
+::: info
+该文档讲述的是使用会话数据的 API。在游戏对会话功能的解释请转到“[会话](usage.general.sessions.md)”章节。对 LocalSession API 的概述请转到“[本地会话](developer-api.api-concepts.local-sessions.md)”章节。
+:::
 
 本章节所述概念出现在如下部分的示例中：操作方、区域、本地会话、适配器。
 

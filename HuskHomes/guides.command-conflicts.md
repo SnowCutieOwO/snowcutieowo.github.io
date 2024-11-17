@@ -6,8 +6,10 @@
 本章节给出了几种缓解此问题的方法。
 
 ## 禁用 EssentialsX 命令
-> [!INFO|label:对下列插件有效：]
-> EssentialsX（Spigot、Paper）
+
+::: info 对下列插件有效：
+EssentialsX（Spigot、Paper）
+:::
 
 [EssentialsX](https://essentialsx.net/) 是一个流行的基础插件，提供了包括 `/home`、`/warp`、`/spawn` 和 `/tpa` 在内的命令。如果你安装了这个插件，你就需要禁用这些命令来避免与 HuskHomes 的冲突。
 
@@ -45,16 +47,19 @@ disabled-commands:
 ```
   
 ## 命名空间
-> [!INFO|label:对下列核心有效：]
-> Spigot、Paper、Fabric、Sponge
+::: info 对下列核心有效：
+Spigot、Paper、Fabric、Sponge
+:::
 
 所有命令都会以命名空间的形式注册，所以你可以用这种方式来使用它们。例如，`/minecraft:tp` 将会执行原版的传送命令，而 `/huskhomes:tp` 则会执行 HuskHomes 的命令。
 
 若你的服务器上有多个注册了相同命令的插件，例如，你可以使用 `/huskhomes:home` 执行 HuskHomes 的家传送点命令，而不是 EssentialsX 的家传送点命令。但是，这样会有些不方便，并且也会让玩家难以理解，所以我们推荐你创建命令别称来让这变得更简单。
 
 ## 编辑 Commands.yml
-> [!INFO|label:对下列核心有效：]
-> Spigot、Paper
+
+::: info 对下列核心有效：
+Spigot、Paper
+:::
 
 Spigot 提供了一个 [`commands.yml` 文件](https://bukkit.fandom.com/wiki/Commands.yml)，能让你设置命令的等价用法。这个文件不但能设置其他插件的额外等价命令，还能决定哪些命令由哪些插件优先处理。
 

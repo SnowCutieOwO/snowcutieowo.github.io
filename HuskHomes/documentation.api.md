@@ -9,7 +9,7 @@ API 通过 Maven 在 [repo.william278.net](https://repo.william278.net/#/release
 [![img]https://repo.william278.net/api/badge/latest/releases/net/william278/huskhomes?color=00fb9a&name=Maven&prefix=v](https://repo.william278.net/#/releases/net/william278/huskhomes/)
 
 为保持一致及方便使用，HuskHomes 的 API 版本与插件本身同步。但请注意次要的更新补丁可能导致 API 的变动，但绝不会在没有提醒的情况下对 API 进行大幅度更新。
-[table=98%,White]
+
 |API 版本|HuskHomes 版本|是否支持|
 |:-:|:-:|:-:|
 |v4.x|*v4.0—当前版本*|✅|
@@ -19,8 +19,9 @@ API 通过 Maven 在 [repo.william278.net](https://repo.william278.net/#/release
 
 ### 平台
 
-> [!NOTE|lavel:提示]
-> 对于低于 `v4.6` 的版本，HuskHomes 仅通过 Bukkit 平台分发（`net.william278:huskhomes`）
+::: tip 提示
+对于低于 `v4.6` 的版本，HuskHomes 仅通过 Bukkit 平台分发（`net.william278:huskhomes`）
+:::
 
 HuskHomes API 在如下平台可用：
 

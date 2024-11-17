@@ -1,8 +1,9 @@
 # MythicMobs - 自定义实体
 MythicMobs 允许你创建带有高级技能与属性的自定义实体与 BOSS。
 
-> [!NOTE|label:提示]
-> 如果插件与 MythicMobs 不能正常工作，请使用 5.0.2 版本、
+::: info 提示
+如果插件与 MythicMobs 不能正常工作，请使用 5.0.2 版本、
+:::
 
 该功能由 [yzl210](https://github.com/yzl210) 为你呈现，不要忘记感谢他！
 

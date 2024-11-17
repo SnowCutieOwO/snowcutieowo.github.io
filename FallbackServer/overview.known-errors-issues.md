@@ -1,4 +1,5 @@
 # 💥 已知问题
+
 ViaVersion（包括其附属 ViaRewind、ViaBackwards）安装在群组服上时有可能导致服务器出现问题，也有可能会使得本插件不会正常工作。
 
 一些奇怪的分支核心如 Aegis，也会破坏包括本插件在内的一系列插件的兼容性。
@@ -35,5 +36,3 @@ java.util.zip.ZipException: zip file is empty
 	at java.util.jar.JarFile.<init>(JarFile.java:284) ~[?:?]
 ```
 这类错误一般是插件损坏导致的，大多数时候都是因为下载的插件出了问题，这时你只需要返回 SpigotMC 并再次下载本插件并重新按步骤安装即可。
-
-脚注

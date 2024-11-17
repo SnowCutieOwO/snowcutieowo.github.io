@@ -10,5 +10,6 @@
 |**/codex reload**|重载配置文件。|
 |**/codex open <玩家名称> <GUI名称>**|为玩家打开一个菜单。|
 
-> [!NOTE|label:提示]
-> 使用上述的所有命令只需一条权限：`codex.admin`。
+::: info
+使用上述的所有命令只需一条权限：`codex.admin`。
+:::

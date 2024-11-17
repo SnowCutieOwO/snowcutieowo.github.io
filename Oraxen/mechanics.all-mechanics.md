@@ -36,13 +36,15 @@ Mechanics:
 
 这允许你将任何物品转化为背包。
 
-> [!INFO|label:提示]
-> 这个机制可能会导致物品复制漏洞！
-> 
-> 如果你发现了相关问题，请提交[漏洞报告](https://github.com/oraxen/oraxen/issues/new?assignees=&labels=bug&template=bug-report.yml&title=%5BBUG%5D+%3Cname+for+bug%3E)，我们会尽可能尝试修复！
+::: info 提示
+这个机制可能会导致物品复制漏洞！
 
-> [!WARNING|label:警告]
-> 此为已知复制漏洞，如果你的背包使用了诸如纸等的可堆叠材料，请确保物品能像下文配置的那样不可堆叠。
+如果你发现了相关问题，请提交[漏洞报告](https://github.com/oraxen/oraxen/issues/new?assignees=&labels=bug&template=bug-report.yml&title=%5BBUG%5D+%3Cname+for+bug%3E)，我们会尽可能尝试修复！
+:::
+
+::: warning 警告
+此为已知复制漏洞，如果你的背包使用了诸如纸等的可堆叠材料，请确保物品能像下文配置的那样不可堆叠。
+:::
 
 #### 单物品配置
 
@@ -65,10 +67,11 @@ backpack:
 
 若要添加自定义音效，只需简单地按照下文示例并将其添加至 `Oraxen/sound.yml` 即可。
 
-> [!WARNING|label:警告]
-> 任何立体音效都不会在指定位置或跟随实体播放。
->
-> 若你想要做到这样的效果，请确保你的 .ogg 音效文件为单声道格式。
+::: warning
+任何立体音效都不会在指定位置或跟随实体播放。
+
+若你想要做到这样的效果，请确保你的 .ogg 音效文件为单声道格式。
+:::
 
 `song` 为你在 `sound.yml` 定义的 `命名空间:音效名称`。
 
@@ -410,8 +413,9 @@ bottledexp:
 
 ### 挖掘基岩
 
-> [!WARNING|label:警告]
-> 这个机制基于 ProtocolLib，如果你不能使用或未安装 ProtocolLib，你需要禁用这个选项。
+::: warning
+这个机制基于 ProtocolLib，如果你不能使用或未安装 ProtocolLib，你需要禁用这个选项。
+:::
 
 #### 单物品配置
 

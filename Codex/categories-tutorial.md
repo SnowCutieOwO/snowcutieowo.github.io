@@ -1,7 +1,7 @@
 # 分类教程
 
 在 categories 文件夹下你可以按你的需要创建任意多的文件。每一个文件都会对应一个“可发现对象”的类别。在下一个展示的配置文本中你可以见到 regions.yml 的内容。接下来会展示分类配置文件中你所有可配置的选项。
-```YAML
+``` YAML
 name: "&c&lWorld &7&lRegions"
 discover_title:
   title: "&c&lCODEX UPDATED"
@@ -72,5 +72,6 @@ discoveries:
 |**discovered_on_mob_kill:**<br>**type:** ZOMBIE<br>**name:** "Shadow Warrior"<br>**discovered_on_mob_kill:**<br>**type:** SKELETON<br>**discovered_on_mob_kill:**<br>**mythic_mobs_id:** SkeletonKing|若你想要玩家通过击杀实体来解锁这个条目，那么你就需要添加这段设置，并且指定实体的种类和/或名称。<br>所有有效实体名称一栏：https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html
 |**commands:**<br>-"xp give %player% 50"<br>-"msg %player% &7+50 &6XP"`|若你想要玩家在解锁区域后执行命令，那么你就需要填写这个部分的设置。<br>（译者注: 每一行填入一个命令。）|
 
-> [!INFO|label:提示]
-> **谨记：**如果一个可发现对象没有 `discovered_on_region` 或 `discovered_on_mob_kill` 参数中的至少一个，那么代表着这个条目仅能通过命令 `/codex unlock` 解锁。
+::: info 谨记：
+如果一个可发现对象没有 `discovered_on_region` 或 `discovered_on_mob_kill` 参数中的至少一个，那么代表着这个条目仅能通过命令 `/codex unlock` 解锁。
+:::

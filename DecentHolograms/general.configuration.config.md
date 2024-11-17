@@ -1,8 +1,9 @@
 # 配置
 主配置文件
 
-> [!NOTE|label:提示]
-> 主 `config.yml` 也包含[特性](general.configuration.features.md)的设置。
+::: info 提示
+主 `config.yml` 也包含[特性](general.configuration.features.md)的设置。
+:::
 
 ## config.yml
 ```YAML

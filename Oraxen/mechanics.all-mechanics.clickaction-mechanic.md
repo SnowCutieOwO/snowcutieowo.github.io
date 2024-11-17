@@ -34,45 +34,22 @@ Mechanics:
           - '[console] say <player> hello <player>!'
 ```
 
-> [!WARNING|label:警告]
-> 这个机制不支持没有碰撞箱的家具。
+::: warning
+这个机制不支持没有碰撞箱的家具。
+:::
 
 ## 条件
 
 条件具有强大的灵活性。你可以对玩家（Player）或服务器（Server）使用任意“get”类方法。可参阅下文 Spigot Javadoc 获取所有可用的方法。
 
-<div class="grid-container-1">
-<div class="item1">
-<div class="card">
-<div class="card-details">
-    <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/Player.html">
-    <p class="text-title"><img src="https://www.spigotmc.org/favicon.ico"> Player (Spigot-API 1.18.1-R0.1-SNAPSHOT API)</p>
-    </a>
-</div>
-</div>
-</div>
-<div class="item2">
-<div class="card">
-<div class="card-details">
-    <a href="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Server.html">
-    <p class="text-title"><img src="https://www.spigotmc.org/favicon.ico"> Server (Spigot-API 1.18.1-R0.1-SNAPSHOT API)</p>
-    </a>
-</div>
-</div>
-</div>
-</div>
+* [Player (Spigot-API 1.18.1-R0.1-SNAPSHOT API)](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/Player.html)
+* [Server (Spigot-API 1.18.1-R0.1-SNAPSHOT API)](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Server.html)
 
 <center><sup>提示！按“Ctrl + F”并搜索“get”就可以找到所有有效的方法。</sup></center>
 
 除此之外，Spring 文档提供了一种理解条件表达式的思路。
 
-<div class="card">
-<div class="card-details">
-    <a href="https://docs.spring.io/spring-framework/docs/3.0.x/reference/expressions.html">
-    <p class="text-title"><img src="https://docs.spring.io/favicon.ico"> 6. Spring 表达式语言（SpEL）</p>
-    </a>
-</div>
-</div>
+* 6. [Spring 表达式语言（SpEL）](https://docs.spring.io/spring-framework/docs/3.0.x/reference/expressions.html)
 
 ### 条件示例
 

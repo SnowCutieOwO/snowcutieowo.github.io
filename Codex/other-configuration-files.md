@@ -2,7 +2,7 @@
 
 ## Config.yml 文件
 
-```YAML
+``` YAML
 # When enabled, names of locked discoveries will be hid den.
 hi de_locked_discoveries_name: true
 

@@ -3,8 +3,9 @@
 
 ## 安装需求
 
-> [!NOTE|label:提示]
-> 若插件载入失败，请检查你是否运行了[不受支持的版本]。
+::: info 提示
+若插件载入失败，请检查你是否运行了[不受支持的版本](unsupported-versions.md)。
+:::
 
 * 以 Java 17+ 运行的 Spigot（1.17.1+）、Fabric（最新版 Minecraft）、Sponge（API v10）的 Minecraft Java 版服务器；
 * （对群组服）群组服核心（Velocity、BungeeCord） 和 MySQL（v8.0+）MariaDB 或 PostgreSQL 数据库；
@@ -70,15 +71,15 @@
 * 请确保你输入的 MySQL 数据库凭证正确，若正确则你的群组现在就在跨服使用 HuskHomes！
 * 你可以按需决定是否删除一开始生成的 `HuskHomesData.db` SQLite 文件。
 
-<detail>
-<summary>跨服随机传送</summary>
+::: deatils 跨服随机传送
 
 在使用跨服随机传送时，下面三项必须为 true。
 
 1. 必须将 `rtp.cross-server` 为 `true`。
 2. 你必须使用 Redis 作为消息代理。
 3. 在 `rtp.random_target_servers` 必须匹配 `server.yml` 与群组端配置的值！
-</detail>
+
+:::
 
 ## 下一步
 

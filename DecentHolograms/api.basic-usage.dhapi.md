@@ -30,18 +30,19 @@ DHAPI.createHologram(String, Location, boolean);
 
 在这里填入 `true` 可以告诉 DecentHolograms，这条悬浮字是永久的，需要存进它在 `holograms` 下的 YAML 文件里。在这之后，这条悬浮字就会在插件启用时自动载入。
 
-> [!WARNING|label:重要！]
-> 调用 `createHologram` 时若指定的悬浮字名称已存在，则会抛出一个错误。
-> 若要避免这种情况，请先在调用方法前检查相同的悬浮字是否已存在。
-> 
-> ```Java
-> public void createHologram(String name, Location location){
->    if(DHAPI.getHologram(name) != null)
->         return;
-> 
->     DHAPI.createHologram(name, location);
-> }
-> ```
+::: warning 重要！
+调用 `createHologram` 时若指定的悬浮字名称已存在，则会抛出一个错误。
+若要避免这种情况，请先在调用方法前检查相同的悬浮字是否已存在。
+
+```Java
+public void createHologram(String name, Location location){
+   if(DHAPI.getHologram(name) != null)
+        return;
+
+    DHAPI.createHologram(name, location);
+}
+```
+:::
 
 ### 添加初始文本
 
@@ -81,9 +82,10 @@ DHAPI.getHologramPage(Hologram, int);
 
 `int` 处填入的应该为不小于 0 的整数，表示获取悬浮字的索引。
 
-> [!WARNING|label:重要提醒]
-> * 方法可能会返回 `null`，因此提供的页码应该不小于 0，且小于页码总数。
-> * 除非[手动移除](#删除已有页)，否则悬浮字实例总会有一个序号为 0 的 `HologramPage` 实例。 
+::: warning 重要提醒
+* 方法可能会返回 `null`，因此提供的页码应该不小于 0，且小于页码总数。
+* 除非[手动移除](#删除已有页)，否则悬浮字实例总会有一个序号为 0 的 `HologramPage` 实例。 
+:::
 
 ## 获取悬浮字行
 
@@ -123,10 +125,11 @@ DHAPI.addHologramLine(Hologram, int, String);
 
 `int` 处填入的应该为不小于 0 的整数，表示获取悬浮字的索引。需要注意的是，序号从 0 开始计数，例如第一页的序号为 0，第二页的序号为 1。
 
-> [!TIP|label:提示]
-> 你可以将 String 参数替换为 `org.bukkit.Material` 或 `org.bukkit.ItemStack` 示例。
-> 这会按你提供的 Material / ItemStack 创建一个悬浮物品。
-> 如果你传入的参数为后者，则某些 NBT 可能不会被加入。前者不包含任何 NBT 值。
+::: tip 提示
+你可以将 String 参数替换为 `org.bukkit.Material` 或 `org.bukkit.ItemStack` 示例。
+这会按你提供的 Material / ItemStack 创建一个悬浮物品。
+如果你传入的参数为后者，则某些 NBT 可能不会被加入。前者不包含任何 NBT 值。
+:::
 
 ### 覆盖已有行
 
@@ -147,10 +150,11 @@ DHAPI.setHologramLine(Hologram, int, int, String);
 
 `int` 处填入的应该为不小于 0 的整数，表示获取悬浮字页的索引（同样以 0 起始）。第二个 `int` 填入的则是悬浮字行的索引。
 
-> [!TIP|label:提示]
-> 你可以将 String 参数替换为 `org.bukkit.Material` 或 `org.bukkit.ItemStack` 示例。
-> 这会按你提供的 Material / ItemStack 创建一个悬浮物品。
-> 如果你传入的参数为后者，则某些 NBT 可能不会被加入。前者不包含任何 NBT 值。
+::: tip 提示
+你可以将 String 参数替换为 `org.bukkit.Material` 或 `org.bukkit.ItemStack` 示例。
+这会按你提供的 Material / ItemStack 创建一个悬浮物品。
+如果你传入的参数为后者，则某些 NBT 可能不会被加入。前者不包含任何 NBT 值。
+:::
 
 最后你也可以编辑整页的文本。若要这么做，你可以使用 `setHologramLines` 方法（注意末尾的 `s`）方法：
 
@@ -184,10 +188,11 @@ DHAPI.insertHologramLine(Hologram, int, int, String);
 
 `int` 处填入的应该为不小于 0 的整数，表示获取悬浮字页的索引（同样以 0 起始）。第二个 `int` 填入的则是悬浮字行的索引。
 
-> [!TIP|label:提示]
-> 你可以将 String 参数替换为 `org.bukkit.Material` 或 `org.bukkit.ItemStack` 示例。
-> 这会按你提供的 Material / ItemStack 创建一个悬浮物品。
-> 如果你传入的参数为后者，则某些 NBT 可能不会被加入。前者不包含任何 NBT 值。
+::: tip 提示
+你可以将 String 参数替换为 `org.bukkit.Material` 或 `org.bukkit.ItemStack` 示例。
+这会按你提供的 Material / ItemStack 创建一个悬浮物品。
+如果你传入的参数为后者，则某些 NBT 可能不会被加入。前者不包含任何 NBT 值。
+:::
 
 ### 移除已有行
 
@@ -207,8 +212,9 @@ DHAPI.removeHologramLine(Hologram, int, int);
 
 这将会移除指定页（第二页，以 0 起始的序号）指定行号（第三个参数）的悬浮字。
 
-> [!TIP|label:提示]
-> 与 `List#remove` 方法相似，删除方法会返回一个 `HologramLine` 实例，其中含有你删除的内容，这样你就可以把它用在其他地方。
+::: tip 提示
+与 `List#remove` 方法相似，删除方法会返回一个 `HologramLine` 实例，其中含有你删除的内容，这样你就可以把它用在其他地方。
+:::
 
 ## 编辑悬浮字页
 

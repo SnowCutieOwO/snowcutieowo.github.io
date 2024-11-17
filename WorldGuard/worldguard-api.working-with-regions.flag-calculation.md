@@ -10,22 +10,24 @@
 
 `queryAllValues(RegionAssociable, Flag)` 可以用于获取对一个标志设置的所有值。标志可以从 `Flags` 中获取。
 
-> [!NOTE|label:示例：获取 greeting 标志设置的消息，将其设置在玩家上]
-> ```Java
-> LocalPlayer localPlayer = WorldGuardPlugin.inst().wrapPlayer(player);
-> Collection<String> greetings = set.queryAllValues(localPlayer, Flags.GREET_MESSAGE);
-> ```
+::: info 示例：获取 greeting 标志设置的消息，将其设置在玩家上
+```Java
+LocalPlayer localPlayer = WorldGuardPlugin.inst().wrapPlayer(player);
+Collection<String> greetings = set.queryAllValues(localPlayer, Flags.GREET_MESSAGE);
+```
+:::
 
 ### 获取单个值
 
 `queryValue(RegionAssociable, Flag)` 可以用于获取单个值。取决于标志种类，这可能是找到的第一个值，或者是“最匹配”的值。截至维基最后一次编辑前，仅 `StateFlags` 会实际意义上地选择“最匹配”的值。
 
-> [!NOTE|label:示例：获取 greeting 标志设置的消息，将其设置在玩家上]
-> ```Java
-> LocalPlayer localPlayer = WorldGuardPlugin.inst().wrapPlayer(player);
-> String greeting = set.queryValue(localPlayer, Flags.GREET_MESSAGE);
-> ```
-> 若这个标志没有在任何区域上被设置，那么返回的值有可能是 `null`。
+::: info 示例：获取 greeting 标志设置的消息，将其设置在玩家上
+```Java
+LocalPlayer localPlayer = WorldGuardPlugin.inst().wrapPlayer(player);
+String greeting = set.queryValue(localPlayer, Flags.GREET_MESSAGE);
+```
+若这个标志没有在任何区域上被设置，那么返回的值有可能是 `null`。
+:::
 
 ### 获取 StateFlag 的值
 
@@ -36,46 +38,50 @@
 
 你仍然可以使用 `queryValue`，但你一次只能指定一个标志。
 
-> [!NOTE|label:示例：测试 build 标志]
-> ``` Java
-> LocalPlayer localPlayer = WorldGuardPlugin.inst().wrapPlayer(player);
-> if (!set.testState(localPlayer, Flags.BUILD)) {
->     event.setCancelled(true);
-> }
-> ```
+::: info 示例：测试 build 标志]
+``` Java
+LocalPlayer localPlayer = WorldGuardPlugin.inst().wrapPlayer(player);
+if (!set.testState(localPlayer, Flags.BUILD)) {
+    event.setCancelled(true);
+}
+```
+:::
 
 ### 无玩家标志
 
 如果你正在尝试寻找不需要玩家的标志（例如，`creeper-explosion` 标志），那么你就可以在 `RegionAssociable` 参数的位置使用 `null`。
 
-> [!NOTE|label:示例：测试爬行者爆炸摧毁（creeper-explosion）标志]
-> ```Java
-> if (!set.testState(null, Flags.CREEPER_EXPLOSION)) {
->     event.setCancelled(true);
-> }
-> ```
+::: info 示例：测试爬行者爆炸摧毁（creeper-explosion）标志]
+```Java
+if (!set.testState(null, Flags.CREEPER_EXPLOSION)) {
+    event.setCancelled(true);
+}
+```
+:::
 
-> [!TIP|label:提示]
-> 你也可以在与玩家有关的标志中使用 `null`，但在区域组标志中这不会正常工作。
+::: tip
+你也可以在与玩家有关的标志中使用 `null`，但在区域组标志中这不会正常工作。
+:::
 
 ### 也可通过 RegionQuery
 
 该页面中描述的方法同样在 `RegionQuery` 中可直接获取。
 
-> [!NOTE|label:示例：使用 `RegionQuery` 直接查询标志]
-> ```Java
-> LocalPlayer localPlayer = WorldGuardPlugin.inst().wrapPlayer(player);
-> Location loc = new Location(world, 10, 64, 100);
-> RegionContainer container = WorldGuard.getInstance().getPlatform().getRegionContainer();
-> RegionQuery query = container.createQuery();
-> 
-> // 不与之冲突:
-> // ApplicableRegionSet set = query.getApplicableRegions(loc);
-> 
-> // 只是直接测试标志:
-> query.testState(loc, localPlayer, Flags.BUILD);
-> ```
-> 额外地，你可以使用 `testBuild` 等作为 `testState(..., Flags.BUILD, 你的标志)` 的快捷方式。
+::: info 示例：使用 `RegionQuery` 直接查询标志]
+```Java
+LocalPlayer localPlayer = WorldGuardPlugin.inst().wrapPlayer(player);
+Location loc = new Location(world, 10, 64, 100);
+RegionContainer container = WorldGuard.getInstance().getPlatform().getRegionContainer();
+RegionQuery query = container.createQuery();
+
+// 不与之冲突:
+// ApplicableRegionSet set = query.getApplicableRegions(loc);
+
+// 只是直接测试标志:
+query.testState(loc, localPlayer, Flags.BUILD);
+```
+额外地，你可以使用 `testBuild` 等作为 `testState(..., Flags.BUILD, 你的标志)` 的快捷方式。
+:::
 
 ### 非玩家操作
 
@@ -123,38 +129,39 @@ new RegionOverlapAssociation(deepInside).getAssociation(inside) == OWNER
 * `ConstantAssociation` 有预置的归属关系（`new ConstantAssociation(Association.MEMBER)` 或 `Associables.constant(Association.MEMBER)`）；
 * `DelayedRegionOverlapAssociation` 的运作方式有点像 `RegionOverlapAssociation`，但不会对源区域进行区域检查，除非有需求。
 
-> [!NOTE|label:示例：探究 WorldGuard 如何处理区域保护]
-> 首先，正确的 `RegionAssociation` 必须为事件而创建。下文叙述的 `createRegionAssociable()` 并会返回一个 `RegionAssociable`。
-> ```Java
-> private RegionAssociable createRegionAssociable(Object cause) {
->     if (!cause.isKnown()) {
->         return Associables.constant(Association.NON_MEMBER);
->     } else if (cause instanceof Player player) {
->         return WorldGuardPlugin.inst().wrapPlayer(player);
->     } else if (cause instanceof Entity entity) {
->         RegionQuery query = WorldGuard.getInstance().getPlatform().getRegionContainer().createQuery();
->         WorldConfiguration config = WorldGuard.getInstance().getPlatform().getGlobalStateManager().get(BukkitAdapter.adapt(entity.getWorld()));
->         Location loc = entity.getLocation(); // getOrigin() 可以用在 Paper 服务器上
->         return new DelayedRegionOverlapAssociation(query, BukkitAdapter.adapt(loc), config.useMaxPriorityAssociation);
->     } else if (cause instanceof Block block) {
->         RegionQuery query = WorldGuard.getInstance().getPlatform().getRegionContainer().createQuery();
->         WorldConfiguration config = WorldGuard.getInstance().getPlatform().getGlobalStateManager().get(BukkitAdapter.adapt(block.getWorld()));
->         Location loc = block.getLocation();
->         return new DelayedRegionOverlapAssociation(query, BukkitAdapter.adapt(loc), config.useMaxPriorityAssociation);
->     } else {
->         return Associables.constant(Association.NON_MEMBER);
->     }
-> }
-> ```
-> 让我们看看它可以用在哪：
-> ``` Java
-> @EventHandler
-> public void onPlayerBucketFill(PlayerBucketFillEvent event) {
->     Player player = event.getPlayer();
->     RegionAssociable associable = createRegionAssociable(player);
-> 
->     if (!set.testState(associable, /* 在这里写上你的标志 */)) {
->         event.setCancelled(true);
->     }
-> }
-> ```
+::: info 示例：探究 WorldGuard 如何处理区域保护]
+首先，正确的 `RegionAssociation` 必须为事件而创建。下文叙述的 `createRegionAssociable()` 并会返回一个 `RegionAssociable`。
+```Java
+private RegionAssociable createRegionAssociable(Object cause) {
+    if (!cause.isKnown()) {
+        return Associables.constant(Association.NON_MEMBER);
+    } else if (cause instanceof Player player) {
+        return WorldGuardPlugin.inst().wrapPlayer(player);
+    } else if (cause instanceof Entity entity) {
+        RegionQuery query = WorldGuard.getInstance().getPlatform().getRegionContainer().createQuery();
+        WorldConfiguration config = WorldGuard.getInstance().getPlatform().getGlobalStateManager().get(BukkitAdapter.adapt(entity.getWorld()));
+        Location loc = entity.getLocation(); // getOrigin() 可以用在 Paper 服务器上
+        return new DelayedRegionOverlapAssociation(query, BukkitAdapter.adapt(loc), config.useMaxPriorityAssociation);
+    } else if (cause instanceof Block block) {
+        RegionQuery query = WorldGuard.getInstance().getPlatform().getRegionContainer().createQuery();
+        WorldConfiguration config = WorldGuard.getInstance().getPlatform().getGlobalStateManager().get(BukkitAdapter.adapt(block.getWorld()));
+        Location loc = block.getLocation();
+        return new DelayedRegionOverlapAssociation(query, BukkitAdapter.adapt(loc), config.useMaxPriorityAssociation);
+    } else {
+        return Associables.constant(Association.NON_MEMBER);
+    }
+}
+```
+让我们看看它可以用在哪：
+``` Java
+@EventHandler
+public void onPlayerBucketFill(PlayerBucketFillEvent event) {
+    Player player = event.getPlayer();
+    RegionAssociable associable = createRegionAssociable(player);
+
+    if (!set.testState(associable, /* 在这里写上你的标志 */)) {
+        event.setCancelled(true);
+    }
+}
+```
+:::

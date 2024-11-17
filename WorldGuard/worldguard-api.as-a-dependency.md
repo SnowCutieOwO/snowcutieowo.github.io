@@ -19,36 +19,38 @@ API 当前支持的版本为 7.x。旧版本的 API（以及 Minecraft）不再�
 
 Maven 仓库应当是全天在线的，它也是 Minecraft 历史上运行时间最长的 Maven 仓库。如果遇到问题，请参阅“获取帮助”章节。
 
-> [!INFO|label:示例：配置一个 Maven 的 pom,xml]
-> ```XML
-> <repositories>
->     <repository>
->         <id>sk89q-repo</id>
->         <url>https://maven.enginehub.org/repo/</url>
->     </repository>
-> </repositories>
-> 
-> <dependencies>
->     <dependency>
->         <groupId>com.sk89q.worldguard</groupId>
->         <artifactId>worldguard-bukkit</artifactId>
->         <version>VERSION</version>
->         <scope>provided</scope>
->     </dependency>
-> </dependencies>
-> ```
+::: info 示例：配置一个 Maven 的 pom.xml
+```XML
+<repositories>
+    <repository>
+        <id>sk89q-repo</id>
+        <url>https://maven.enginehub.org/repo/</url>
+    </repository>
+</repositories>
 
-> [!INFO|label:示例：配置一个 Gradle 的构建脚本]
-> ```Kotlin
-> repositories {
->     mavenCentral()
->     maven { url "https://maven.enginehub.org/repo/" }
-> }
-> 
-> dependencies {
->     compileOnly 'com.sk89q.worldguard:worldguard-bukkit:VERSION'
-> }
-> ```
+<dependencies>
+    <dependency>
+        <groupId>com.sk89q.worldguard</groupId>
+        <artifactId>worldguard-bukkit</artifactId>
+        <version>VERSION</version>
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
+```
+:::
+
+::: info 示例：配置一个 Gradle 的构建脚本
+```Kotlin
+repositories {
+    mavenCentral()
+    maven { url "https://maven.enginehub.org/repo/" }
+}
+
+dependencies {
+    compileOnly 'com.sk89q.worldguard:worldguard-bukkit:VERSION'
+}
+```
+:::
 
 ## 修改 plugin.yml
 
