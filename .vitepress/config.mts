@@ -967,6 +967,6 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/SnowCutieOwO/Continue' }
     ],
-    logo: 'favicon.ico'
+    logo: '/favicon.ico'
   }
 })
