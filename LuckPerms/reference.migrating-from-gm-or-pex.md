@@ -6,7 +6,7 @@
 
 首先下表比较了 GroupManager、PermissionsEx 和 LuckPerms 中的**等价命令**。如果你知道如何在 GM 或 PEX 中使用哪条命令，那么下表可以帮你快速找出在 LuckPerms 中执行相同命令的方法。
 
-当然也有 [LuckPerms 的完整命令列表](com|mand-usage.md)，你可能更需要阅读这个章节！
+当然也有 [LuckPerms 的完整命令列表](command-usage.md)，你可能更需要阅读这个章节！
 
 其次，也有额外插件能让你继续使用*某些* GroupManager 或 PermissionsEx 的命令，并自动执行 LuckPerms 对应的功能。你可以在[这里](https://github.com/LuckPerms/LuckPermsCompat)找到更多有关信息。但是，通常来说，我们希望你“除旧迎新”，这样就可以立即适应*对应*的 LuckPerms 命令 —— 一段时间后就会像 GM 或 PEX 那样熟练使用！
 

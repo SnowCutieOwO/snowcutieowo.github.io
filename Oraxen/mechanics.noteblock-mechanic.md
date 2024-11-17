@@ -147,14 +147,7 @@ Mechanics:
 这个版本应该能在新版本的 Spigot 与 Paper 上正常运行。
 :::
 
-<div class="card">
-<div class="card-details">
-    <a href="https://www.spigotmc.org/resources/lightapi.4510">
-    <p class="text-title"><img src="https://www.spigotmc.org/favicon.ico"> LightAPI</p>
-    <p class="text-body">SpigotMC - High Performance Minecraft</p>
-    </a>
-</div>
-</div>
+* [LightAPI（SpigotMC）](https://www.spigotmc.org/resources/lightapi.4510)
 
 ## 容器
 

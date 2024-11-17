@@ -89,7 +89,7 @@ var api = ((LibreLoginProvider<ProxiedPlayer, ServerInfo>) getProxy().getPluginM
 
 ## 用法
 
-API 中的所有用法都有文档记载。你的 IDE 应该会帮你下载好插件的源码，你可以直接进行浏览。对 API 事件，请见[API 事件]()章节。
+API 中的所有用法都有文档记载。你的 IDE 应该会帮你下载好插件的源码，你可以直接进行浏览。对 API 事件，请见[API 事件](api.api-events.md)章节。
 
 ## 警告
 

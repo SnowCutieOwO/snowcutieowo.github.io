@@ -13,7 +13,7 @@ LuckPerms 的每个命令与其他功能有各自的权限。权限会在[命令
 | luckperms.sync | [`/lp sync` 命令](command-usage.general.md#lp-sync) 与 [`/lp networksync` 命令](command-usage.general.md#lp-networksync)|
 | luckperms.info | [`/lp info` 命令](command-usage.general.md#lp-info)|
 | luckperms.editor | [`/lp editor` 命令](command-usage.general.md#lp-editor-type)|
-| luckperms.applyedits | [`/lp applyedits` 命令](Web-Editor#saving-your-changes)|
+| luckperms.applyedits | [`/lp applyedits` 命令](features.web-editor.md#保存你的修改)|
 | luckperms.verbose | [`/lp verbose` 命令](command-usage.general.md#lp-verbose-onrecordoffupload-filter)|
 | luckperms.verbose.commandother | [`/lp verbose command <名称> <命令>` 命令](features.verbose.md)|
 | luckperms.tree | [`/lp tree` 命令](command-usage.general.md#lp-tree-范围-玩家)|

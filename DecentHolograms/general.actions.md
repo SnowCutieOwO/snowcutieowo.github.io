@@ -5,7 +5,7 @@ DecentHolograms 允许你为悬浮字页添加点击动作，玩家可以在左/
 
 ## 点击类型
 
-这些点击类型会在 [`addaction` 页面命令](general.commands.hologram.pages.md#dh-p-addaction-悬浮字-页码-点击类型-操作)中使用，来指定点击动作的触发类型。
+这些点击类型会在 [`addaction` 页面命令](general.commands.hologram-pages.md#dh-p-addaction-悬浮字-页码-点击类型-操作)中使用，来指定点击动作的触发类型。
 
 * `LEFT`
 * `RIGHT`

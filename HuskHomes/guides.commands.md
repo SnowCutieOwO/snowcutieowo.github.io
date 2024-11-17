@@ -1,6 +1,6 @@
 # 命令列表
 
-HuskHomes 提供了一系列你可使用的命令。本章节将会为列出所有命令及其对应权限，让你更好[控制玩家的访问内容](guide.managing-access.md)。
+HuskHomes 提供了一系列你可使用的命令。本章节将会为列出所有命令及其对应权限，让你更好[控制玩家的访问内容](guides.managing-access.md)。
 
 ## 命令与权限表
 

@@ -166,7 +166,7 @@ java -jar server.jar
 
 服务器的名称，会用于某些与服务器名称有关的权限。
 
-若设置为“global”则会无视该设定。更多有关服务器名称相关权限的信息，即权限组运作原理，可以在[这里]()找到。
+若设置为“global”则会无视该设定。更多有关服务器名称相关权限的信息，即权限组运作原理，可以在[这里](reference.how-permission-calculation-works.md)找到。
 
 #### 示例
 
@@ -190,7 +190,7 @@ use-server-uuid-cache: false
 
 插件使用的存储方式。
 
-完整支持类型列表[见此](storage-types.md)。
+完整支持类型列表[见此](storage.md)。
 
 **可用类型**：`mysql`、`mariadb`、`postgresql`、`sqlite`、`h2`、`json`、`yaml`、`hocon` 和 `mongodb`。
 
@@ -556,7 +556,7 @@ apply-wildcards: true
 
 插件是否允许判断正则表达式权限。
 
-若设置为 true，LuckPerms 将会检测以“r=”开头的正则表达式，并返回所有匹配表达式的权限节点。若你没有设置任何正则权限，启用该选项也不会影响性能。更多信息可以在[这里]()找到。
+若设置为 true，LuckPerms 将会检测以“r=”开头的正则表达式，并返回所有匹配表达式的权限节点。若你没有设置任何正则权限，启用该选项也不会影响性能。更多信息可以在[这里](reference.how-permission-calculation-works.md#正则)找到。
 
 #### 示例
 
@@ -568,7 +568,7 @@ apply-regex: true
 
 插件是否应当解析缩写（如 GLOB 形式的）权限。
 
-该功能的更多信息可以在[这里]()找到。
+该功能的更多信息可以在[这里](reference.how-permission-calculation-works.md#缩写权限)找到。
 
 #### 示例
 

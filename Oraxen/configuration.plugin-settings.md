@@ -62,7 +62,7 @@ Plugin:
       server: atlas.oraxen.com # 你也可以运行自己的 polymath 实例
 ```
 
-Oraxen 集成了 Polymoth（以 Python 编写的高兼容性自定义网页服务器）。你可以在[这里](https://github.com/Th0rgal/Polymath/)下载源码，并自行托管或使用指定实例（atlas）。你也可以使其[接入自己的托管服务](developer.custom-hosting-service.md)。
+Oraxen 集成了 Polymoth（以 Python 编写的高兼容性自定义网页服务器）。你可以在[这里](https://github.com/Th0rgal/Polymath/)下载源码，并自行托管或使用指定实例（atlas）。你也可以使其[接入自己的托管服务](developers.custom-hosting-service.md)。
 
 ### 调度
 
