@@ -275,6 +275,8 @@ my_item:
 
 :::
 
+::::
+
 ### 材料（Material）
 
 允许你修改物品的类型。
@@ -471,67 +473,6 @@ piercing
 mending
 vanishing_curse
 soul_speed
-```
-
-### 1.20.5 属性
-
-`max_stack_size` - 设置 Oraxen 物品的最大堆叠数量
-`enchantment_glint_override` - 设置物品附魔光效的覆盖状态
-`fire_resistant` - 设置 Oraxen 物品是否免疫火焰与岩浆摧毁
-`durability` - 设置 Oraxen 物品的耐久度
-`hide_tooltips` - 隐藏 Oraxen 物品悬浮提示框的所有内容
-`food` - 通过一些选项让物品可以被食用并播放对应动画
-
-上述属性的示例：
-
-```YAML
-my_item:
-  #itemname is also allowed
-  displayname: <gradient:#4B36B1:#6699FF>My Item
-  material: IRON_PICKAXE
-  Components:
-    enchantment_glint_override: false
-    durability: 10
-    # 若上述的物品不是原版的带耐久工具，如 PAPER
-    # 则默认情况下耐久不会因操作而减少
-    # 让工具通过造成伤害和破坏方块降低耐久的示例配置
-    #durability:
-    #  value: 10
-    #  damage_block_break: true
-    # damage_entity_hit: true
-    max_stack_size: 10
-    fire_resistant: true
-    hide_tooltips: true
-    food:
-      nutrition: 2
-      saturation: 2
-      can_always_eat: true
-      eat_seconds: 1.6
-      effects:
-        mining_fatigue:
-          duration: 10
-          amplifier: 1
-          ambient: false
-          show_icon: true
-          show_particles: true
-          probability: 50
-```
-
-### 1.21 属性
-
-`jukebox_playable` - 是否能被塞入唱片机并播放指定歌曲
-
-`show_in_tooltip` - 在物品栏上方显示歌曲信息
-
-`song_key` - 歌曲名称（自定义歌曲需要资源包）
-
-```YAML
-myitem:
-  material: PAPER
-  Components:
-    jukebox_playable:
-      show_in_tooltip: true
-      song_key: mysong.id
 ```
 
 ### 如何指定自定义模型数据（Custom Model Data）？

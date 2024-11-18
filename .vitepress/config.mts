@@ -644,9 +644,14 @@ export default defineConfig({
                     { text: '可染色物品', link: '/Oraxen/configuration.items-advanced.dyeable-items' },
                   ]
                 },
-                { text: '自定义盔甲', link: '/Oraxen/configuration.custom-armors' },
+                {
+                  text: '自定义盔甲', link: '/Oraxen/configuration.custom-armors', collapsed: true, items: [
+                    { text: '基于组件（1.21.2+）', link: '/Oraxen/configuration.custom-armors.component-based' },
+                    { text: '基于盔甲纹饰（1.20-1.21.1）', link: '/Oraxen/configuration.custom-armors.trims-based' },
+                    { text: '基于核心着色器（1.18-1.19.4）', link: '/Oraxen/configuration.custom-armors.shader-based' }
+                  ]
+                },
                 { text: '自定义 HUD', link: '/Oraxen/configuration.custom-hud' },
-                { text: '手势动作', link: '/Oraxen/configuration.gestures' },
                 { text: '物品外观', link: '/Oraxen/configuration.item-appearance' },
                 {
                   text: '自定义字符', link: '/Oraxen/configuration.glyphs', collapsed: true, items: [

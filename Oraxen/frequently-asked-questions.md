@@ -61,7 +61,7 @@ https://github.com/lolgeny/item-tooltip-remover
 
 次选项：[加入 Discord 聊天群组](https://discord.gg/4Qk5kBT9UX)，获取你的 Oraxen 认证并在“支持（Support）”与“请求（Requests）”频道发言。
 
-## 我只想使用 Oraxen 的机制
+### 我只想使用 Oraxen 的机制
 
 前往 `settings.yml` 并按如下设置进行调整：
 
