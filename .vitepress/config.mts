@@ -38,6 +38,8 @@ export default defineConfig({
           { text: 'Codex', link: '/Codex/README' },
           { text: 'CommandTimer', link: '/CommandTimer/README' },
           { text: 'DecentHolograms', link: 'DecentHolograms/README' },
+          { text: 'ExcellentCrates', link: '/ExcellentCrates/README' },
+          { text: 'ExcellentEnchants', link: '/ExcellentEnchants/README' },
           { text: 'FallbackServer', link: '/FallbackServer/README' },
           { text: 'HuskHomes', link: '/HuskHomes/README' },
           { text: 'HuskSync', link: '/HuskSync/README' },
@@ -45,6 +47,7 @@ export default defineConfig({
           { text: 'LuckPerms', link: '/LuckPerms/README' },
           { text: 'Oraxen', link: '/Oraxen/README' },
           { text: 'PlayerPoints', link: '/PlayerPoints/README' },
+          { text: 'Shopkeepers', link: '/Shopkeepers/README'},
           { text: 'spark', link: '/spark/README' },
           { text: 'WorldEdit', link: '/WorldEdit/README' },
           { text: 'WorldGuard', link: '/WorldGuard/README' },
@@ -64,6 +67,8 @@ export default defineConfig({
             { text: 'Codex', link: '/Codex/README' },
             { text: 'CommandTimer', link: '/CommandTimer/README' },
             { text: 'DecentHolograms', link: 'DecentHolograms/README' },
+            { text: 'ExcellentCrates', link: '/ExcellentCrates/README' },
+            { text: 'ExcellentEnchants', link: '/ExcellentEnchants/README' },
             { text: 'FallbackServer', link: '/FallbackServer/README' },
             { text: 'HuskHomes', link: '/HuskHomes/README' },
             { text: 'HuskSync', link: '/HuskSync/README' },
@@ -71,6 +76,7 @@ export default defineConfig({
             { text: 'LuckPerms', link: '/LuckPerms/README' },
             { text: 'Oraxen', link: '/Oraxen/README' },
             { text: 'PlayerPoints', link: '/PlayerPoints/README' },
+            { text: 'Shopkeepers', link: '/Shopkeepers/README'},
             { text: 'spark', link: '/spark/README' },
             { text: 'WorldEdit', link: '/WorldEdit/README' },
             { text: 'WorldGuard', link: '/WorldGuard/README' },
@@ -644,14 +650,9 @@ export default defineConfig({
                     { text: '可染色物品', link: '/Oraxen/configuration.items-advanced.dyeable-items' },
                   ]
                 },
-                {
-                  text: '自定义盔甲', link: '/Oraxen/configuration.custom-armors', collapsed: true, items: [
-                    { text: '基于组件（1.21.2+）', link: '/Oraxen/configuration.custom-armors.component-based' },
-                    { text: '基于盔甲纹饰（1.20-1.21.1）', link: '/Oraxen/configuration.custom-armors.trims-based' },
-                    { text: '基于核心着色器（1.18-1.19.4）', link: '/Oraxen/configuration.custom-armors.shader-based' }
-                  ]
-                },
+                { text: '自定义盔甲', link: '/Oraxen/configuration.custom-armors' },
                 { text: '自定义 HUD', link: '/Oraxen/configuration.custom-hud' },
+                { text: '手势动作', link: '/Oraxen/configuration.gestures' },
                 { text: '物品外观', link: '/Oraxen/configuration.item-appearance' },
                 {
                   text: '自定义字符', link: '/Oraxen/configuration.glyphs', collapsed: true, items: [
@@ -758,6 +759,44 @@ export default defineConfig({
                 { text: '开始使用', link: '/PlayerPoints/api-usage.getting-started' }
               ]
             },
+          ]
+        },
+      ],
+      '/Shopkeepers/': [
+        { text: '返回首页', link: '/index' },
+        { text: '前言', link: '/Shopkeepers/README'},
+        {
+          text: 'Shopkeepers 维基', items: [
+            { text: '首页', link: '/Shopkeepers/home' },
+            { text: '安装与更新', link: '/Shopkeepers/installtion-updating' },
+            { text: '配置', link: '/Shopkeepers/installtion-updating.configuration' },
+            { text: '语言文件', link: '/Shopkeepers/installtion-updating.language-files' },
+            { text: '权限', link: '/Shopkeepers/installtion-updating.permissions' },
+            { text: '统计数据', link: '/Shopkeepers/installtion-updating.plugin-statistics' },
+            { text: '创建商店', link: '/Shopkeepers/creating-shops' },
+            { text: '编辑商店', link: '/Shopkeepers/creating-shops.editing-shops' },
+            { text: '设置管理员商店', link: '/Shopkeepers/creating-shops.admin-shop-setup' },
+            { text: '设置玩家商店', link: '/Shopkeepers/creating-shops.setup-player-shop' },
+            { text: '变量物品', link: '/Shopkeepers/creating-shops.placeholder-items' },
+            { text: 'Citizens 村民商店', link: '/Shopkeepers/creating-shops.citizens-shopkeepers' },
+            { text: '命令列表', link: '/Shopkeepers/commands' },
+            {
+              text: '其他功能', collapsed: true, items: [
+                { text: '交易记录', link: '/Shopkeepers/other-features.trade-notifications' },
+                { text: '交易提醒', link: '/Shopkeepers/other-features.trade-notifications' },
+                { text: '购买时执行命令', link: '/Shopkeepers/other-features.selling-commands' },
+                { text: '普通村民编辑', link: '/Shopkeepers/other-features.editor-for-regular-villagers' },
+                { text: '附属插件', link: '/Shopkeepers/other-features.third-party-add-on-plugins' },
+              ]
+            },
+            {
+              text: '更多信息', collapsed: true, items: [
+                { text: '创建经济', link: '/Shopkeepers/more-information.creating-an-economy' },
+                { text: '物品序列化', link: '/Shopkeepers/more-information.item-serialization' },
+                { text: '已知漏洞', link: '/Shopkeepers/more-information.known-issues' },
+                { text: '常见问题', link: '/Shopkeepers/more-information.frequently-asked-questions' },
+              ]
+            }
           ]
         },
       ],
@@ -972,6 +1011,6 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/SnowCutieOwO/Continue' }
     ],
-    logo: '/favicon.ico'
+    logo: 'favicon.ico'
   }
 })
