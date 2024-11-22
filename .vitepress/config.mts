@@ -768,17 +768,19 @@ export default defineConfig({
         {
           text: 'Shopkeepers 维基', items: [
             { text: '首页', link: '/Shopkeepers/home' },
-            { text: '安装与更新', link: '/Shopkeepers/installtion-updating' },
-            { text: '配置', link: '/Shopkeepers/installtion-updating.configuration' },
-            { text: '语言文件', link: '/Shopkeepers/installtion-updating.language-files' },
-            { text: '权限', link: '/Shopkeepers/installtion-updating.permissions' },
-            { text: '统计数据', link: '/Shopkeepers/installtion-updating.plugin-statistics' },
-            { text: '创建商店', link: '/Shopkeepers/creating-shops' },
-            { text: '编辑商店', link: '/Shopkeepers/creating-shops.editing-shops' },
-            { text: '设置管理员商店', link: '/Shopkeepers/creating-shops.admin-shop-setup' },
-            { text: '设置玩家商店', link: '/Shopkeepers/creating-shops.setup-player-shop' },
-            { text: '变量物品', link: '/Shopkeepers/creating-shops.placeholder-items' },
-            { text: 'Citizens 村民商店', link: '/Shopkeepers/creating-shops.citizens-shopkeepers' },
+            { text: '安装与更新', collapsed: true, link: '/Shopkeepers/installtion-updating',items: [
+              { text: '配置', link: '/Shopkeepers/installtion-updating.configuration' },
+              { text: '语言文件', link: '/Shopkeepers/installtion-updating.language-files' },
+              { text: '权限', link: '/Shopkeepers/installtion-updating.permissions' },
+              { text: '统计数据', link: '/Shopkeepers/installtion-updating.plugin-statistics' },
+            ] },
+            { text: '创建商店', collapsed: true, link: '/Shopkeepers/creating-shops', items: [
+              { text: '编辑商店', link: '/Shopkeepers/creating-shops.editing-shops' },
+              { text: '设置管理员商店', link: '/Shopkeepers/creating-shops.admin-shop-setup' },
+              { text: '设置玩家商店', link: '/Shopkeepers/creating-shops.setup-player-shop' },
+              { text: '变量物品', link: '/Shopkeepers/creating-shops.placeholder-items' },
+              { text: 'Citizens 村民商店', link: '/Shopkeepers/creating-shops.citizens-shopkeepers' },
+            ] },
             { text: '命令列表', link: '/Shopkeepers/commands' },
             {
               text: '其他功能', collapsed: true, items: [
