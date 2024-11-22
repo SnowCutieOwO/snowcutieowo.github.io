@@ -17,7 +17,7 @@ HuskHomes 支持导入来自 EssentialsX(`v2.19.7`+)
 需要注意的是导入的数据会覆盖已存在的重复数据（例如，名称相同的家传送点会被导入的 Essentials 数据覆盖）。
 下文为导入数据的操作步骤：
 
-1. 在服务器上[安装最新版本的 HuskHomes]。
+1. 在服务器上[安装最新版本的 HuskHomes](guides.setup.md)。
 2. 确保你安装的 EssentialsX 使用的版本为 v2.19.7+ 且存在用户数据。若有必要可重启服务器。
 3. 输入命令 `/huskhomes import list` 可确认 EssentialsX 是否能导入。
 4. 输入命令 `/huskhomes import start EssentialsX` 来开始数据迁移。进度和导入的数据量将会在聊天栏和/或控制台一并显示。
