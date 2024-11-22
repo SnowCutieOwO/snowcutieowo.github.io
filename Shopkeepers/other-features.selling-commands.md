@@ -27,7 +27,7 @@
 
 ## 执行多条命令
 
-每个物品只能附加一条简单命令（见[限制内容](#)章节）。但是，你可以通过 Bukkit 自带的 [commands.yml](https://bukkit.fandom.com/wiki/Commands.yml) 定义更多命令的简写并使用它们。
+每个物品只能附加一条简单命令（见[局限性](#局限性)章节）。但是，你可以通过 Bukkit 自带的 [commands.yml](https://bukkit.fandom.com/wiki/Commands.yml) 定义更多命令的简写并使用它们。
 
 ## 以交易玩家身份执行命令
 
