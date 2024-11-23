@@ -115,7 +115,7 @@ identify-shop-creation-item-by-tag: true
 # *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
 
 # Determines the required config migrations. Do not edit manually!
-config-version: 6
+config-version: 9
 # The initial debugging state of the plugin.
 debug: false
 # Additional debugging options.
@@ -136,6 +136,7 @@ debug: false
 #    names.
 # - 'item-migrations': Logs whenever a shopkeeper performs item migrations
 #    (e.g. for trade offers).
+# - 'item-updates': Logs whenever items are updated via the UpdateItemEvent.
 # - 'item-conversions': Logs whenever we explicitly convert items to Spigot's
 #    data format. Note that this does not log when items get implicitly
 #    converted, which may happen under various circumstances.
@@ -162,12 +163,6 @@ language: en-default
 # Shopkeeper Data
 # *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
 
-# The file encoding to use for the save file. If you have issues with the save
-# file, such as special characters not being saved correctly, make sure that
-# this encoding supports these characters. It is recommended to keep this at
-# its default 'UTF-8'. It is not supported to dynamically change this encoding
-# after the save file has already been created.
-file-encoding: "UTF-8"
 # Whether to immediately save all shopkeeper data whenever a shopkeeper is
 # edited. If disabled, the shopkeeper data is saved in 5 minute intervals and
 # when the plugin is shut down.
@@ -253,6 +248,10 @@ register-world-guard-allow-shop-flag: true
 # If enabled, players will only be able to place shopkeepers in places that
 # have been designated as commercial areas by Towny.
 enable-towny-restrictions: false
+
+# If enabled, players are only able to place shopkeepers in places where no
+# other plugin denies them to interact with blocks.
+check-spawn-location-interaction-result: false
 
 # In order to guard against unnoticed changes to a player's currently open
 # inventory, the Shopkeepers plugin verifies that the open inventory still
@@ -737,13 +736,13 @@ simulate-trading-sounds-only-for-the-trading-player: true
 
 # This sound effect is played to players when they trigger a successful trade.
 trade-succeeded-sound:
-  sound: UI_BUTTON_CLICK
+  sound: 'minecraft:ui.button.click'
   pitch: 2.0
   volume: 0.3
 # This sound effect is played to players when their trade attempt fails for any
 # reason.
 trade-failed-sound:
-  sound: BLOCK_BARREL_CLOSE
+  sound: 'minecraft:block.barrel.close'
   pitch: 2.0
   volume: 0.5
 
@@ -776,12 +775,18 @@ notify-shop-owners-about-trades: true
 # This sound effect is played when a shop owner receives a trade notification.
 # Set this to an empty String to disable the sound effect.
 shop-owner-trade-notification-sound:
-  sound: ENTITY_EXPERIENCE_ORB_PICKUP
+  sound: 'minecraft:entity.experience_orb.pickup'
   volume: 0.25
 
 # *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
 # Trade Log
 # *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
+
+# The storage type to use for the trade log.
+# - 'DISABLED': Disables the logging of trades.
+# - 'SQLITE': Logs all trades to an SQLite database inside the plugin folder.
+# - 'CSV': Logs all trades to daily CSV files inside the plugin folder.
+trade-log-storage: 'DISABLED'
 
 # Players can trigger many equal trades in quick succession. For example, when
 # players trade by shift clicking the result slot, they can trigger up to 64
@@ -810,9 +815,6 @@ trade-log-merge-duration-ticks: 300
 # 'trade-log-merge-duration-ticks' effectively pointless. For performance
 # reasons, the actual duration may dynamically vary by several ticks.
 trade-log-next-merge-timeout-ticks: 100
-
-# Whether to log all trades to CSV files inside the plugin folder.
-log-trades-to-csv: false
 
 # Whether to also log the metadata of items. This includes, for example, their
 # display name, lore, enchantments, etc. This data will be logged in Spigot's

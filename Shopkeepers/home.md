@@ -25,7 +25,8 @@ Shopkeeper 是一个允许设置自定义村民交易的 Bukkit 插件。你可�
 
 一些社区成员已将维基翻译成不同的语言，如下列所示。它们由对应成员单独维护，且不一定最新。
 
-* [（旧）中文维基](https://github.com/Polar-Pumpkin/Shopkeepers-Chinese-Wiki/wiki)
+* [SnowCutieOwO 译中文维基（本维基）](https://snowcutieowo.github.io/Shopkeepers/README)
+* [Polar-Pumpkin 译（旧）中文维基](https://github.com/Polar-Pumpkin/Shopkeepers-Chinese-Wiki/wiki)
 
 *译者注：本文为重译版，与该最后更新于 2019 年的译文没有关联。*
 
