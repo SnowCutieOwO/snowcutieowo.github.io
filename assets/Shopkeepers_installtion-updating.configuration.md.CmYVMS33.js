@@ -21,7 +21,7 @@ import{_ as i,c as a,a7 as n,o as e}from"./chunks/framework.Bz4u1pnU.js";const g
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># Determines the required config migrations. Do not edit manually!</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">config-version</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">6</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">config-version</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">9</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># The initial debugging state of the plugin.</span></span>
 <span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">debug</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">false</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># Additional debugging options.</span></span>
@@ -42,6 +42,7 @@ import{_ as i,c as a,a7 as n,o as e}from"./chunks/framework.Bz4u1pnU.js";const g
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">#    names.</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># - &#39;item-migrations&#39;: Logs whenever a shopkeeper performs item migrations</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">#    (e.g. for trade offers).</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># - &#39;item-updates&#39;: Logs whenever items are updated via the UpdateItemEvent.</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># - &#39;item-conversions&#39;: Logs whenever we explicitly convert items to Spigot&#39;s</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">#    data format. Note that this does not log when items get implicitly</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">#    converted, which may happen under various circumstances.</span></span>
@@ -68,12 +69,6 @@ import{_ as i,c as a,a7 as n,o as e}from"./chunks/framework.Bz4u1pnU.js";const g
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># Shopkeeper Data</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*</span></span>
 <span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># The file encoding to use for the save file. If you have issues with the save</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># file, such as special characters not being saved correctly, make sure that</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># this encoding supports these characters. It is recommended to keep this at</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># its default &#39;UTF-8&#39;. It is not supported to dynamically change this encoding</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># after the save file has already been created.</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">file-encoding</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;UTF-8&quot;</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># Whether to immediately save all shopkeeper data whenever a shopkeeper is</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># edited. If disabled, the shopkeeper data is saved in 5 minute intervals and</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># when the plugin is shut down.</span></span>
@@ -159,6 +154,10 @@ import{_ as i,c as a,a7 as n,o as e}from"./chunks/framework.Bz4u1pnU.js";const g
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># If enabled, players will only be able to place shopkeepers in places that</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># have been designated as commercial areas by Towny.</span></span>
 <span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">enable-towny-restrictions</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">false</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># If enabled, players are only able to place shopkeepers in places where no</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># other plugin denies them to interact with blocks.</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">check-spawn-location-interaction-result</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">false</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># In order to guard against unnoticed changes to a player&#39;s currently open</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># inventory, the Shopkeepers plugin verifies that the open inventory still</span></span>
@@ -643,13 +642,13 @@ import{_ as i,c as a,a7 as n,o as e}from"./chunks/framework.Bz4u1pnU.js";const g
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># This sound effect is played to players when they trigger a successful trade.</span></span>
 <span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">trade-succeeded-sound</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  sound</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">UI_BUTTON_CLICK</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  sound</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;minecraft:ui.button.click&#39;</span></span>
 <span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  pitch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">2.0</span></span>
 <span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  volume</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0.3</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># This sound effect is played to players when their trade attempt fails for any</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># reason.</span></span>
 <span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">trade-failed-sound</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  sound</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">BLOCK_BARREL_CLOSE</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  sound</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;minecraft:block.barrel.close&#39;</span></span>
 <span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  pitch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">2.0</span></span>
 <span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  volume</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0.5</span></span>
 <span class="line"></span>
@@ -682,12 +681,18 @@ import{_ as i,c as a,a7 as n,o as e}from"./chunks/framework.Bz4u1pnU.js";const g
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># This sound effect is played when a shop owner receives a trade notification.</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># Set this to an empty String to disable the sound effect.</span></span>
 <span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">shop-owner-trade-notification-sound</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  sound</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">ENTITY_EXPERIENCE_ORB_PICKUP</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  sound</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;minecraft:entity.experience_orb.pickup&#39;</span></span>
 <span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  volume</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">0.25</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># Trade Log</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># The storage type to use for the trade log.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># - &#39;DISABLED&#39;: Disables the logging of trades.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># - &#39;SQLITE&#39;: Logs all trades to an SQLite database inside the plugin folder.</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># - &#39;CSV&#39;: Logs all trades to daily CSV files inside the plugin folder.</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">trade-log-storage</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;DISABLED&#39;</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># Players can trigger many equal trades in quick succession. For example, when</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># players trade by shift clicking the result slot, they can trigger up to 64</span></span>
@@ -716,9 +721,6 @@ import{_ as i,c as a,a7 as n,o as e}from"./chunks/framework.Bz4u1pnU.js";const g
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># &#39;trade-log-merge-duration-ticks&#39; effectively pointless. For performance</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># reasons, the actual duration may dynamically vary by several ticks.</span></span>
 <span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">trade-log-next-merge-timeout-ticks</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">100</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># Whether to log all trades to CSV files inside the plugin folder.</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">log-trades-to-csv</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">false</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># Whether to also log the metadata of items. This includes, for example, their</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># display name, lore, enchantments, etc. This data will be logged in Spigot&#39;s</span></span>
