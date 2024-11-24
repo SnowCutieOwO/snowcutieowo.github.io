@@ -47,7 +47,7 @@ export default defineConfig({
           { text: 'LuckPerms', link: '/LuckPerms/README' },
           { text: 'Oraxen', link: '/Oraxen/README' },
           { text: 'PlayerPoints', link: '/PlayerPoints/README' },
-          { text: 'Shopkeepers', link: '/Shopkeepers/README'},
+          { text: 'Shopkeepers', link: '/Shopkeepers/README' },
           { text: 'spark', link: '/spark/README' },
           { text: 'WorldEdit', link: '/WorldEdit/README' },
           { text: 'WorldGuard', link: '/WorldGuard/README' },
@@ -76,7 +76,7 @@ export default defineConfig({
             { text: 'LuckPerms', link: '/LuckPerms/README' },
             { text: 'Oraxen', link: '/Oraxen/README' },
             { text: 'PlayerPoints', link: '/PlayerPoints/README' },
-            { text: 'Shopkeepers', link: '/Shopkeepers/README'},
+            { text: 'Shopkeepers', link: '/Shopkeepers/README' },
             { text: 'spark', link: '/spark/README' },
             { text: 'WorldEdit', link: '/WorldEdit/README' },
             { text: 'WorldGuard', link: '/WorldGuard/README' },
@@ -764,23 +764,27 @@ export default defineConfig({
       ],
       '/Shopkeepers/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/Shopkeepers/README'},
+        { text: '前言', link: '/Shopkeepers/README' },
         {
           text: 'Shopkeepers 维基', items: [
             { text: '首页', link: '/Shopkeepers/home' },
-            { text: '安装与更新', collapsed: true, link: '/Shopkeepers/installtion-updating',items: [
-              { text: '配置', link: '/Shopkeepers/installtion-updating.configuration' },
-              { text: '语言文件', link: '/Shopkeepers/installtion-updating.language-files' },
-              { text: '权限', link: '/Shopkeepers/installtion-updating.permissions' },
-              { text: '统计数据', link: '/Shopkeepers/installtion-updating.plugin-statistics' },
-            ] },
-            { text: '创建商店', collapsed: true, link: '/Shopkeepers/creating-shops', items: [
-              { text: '编辑商店', link: '/Shopkeepers/creating-shops.editing-shops' },
-              { text: '设置管理员商店', link: '/Shopkeepers/creating-shops.admin-shop-setup' },
-              { text: '设置玩家商店', link: '/Shopkeepers/creating-shops.setup-player-shop' },
-              { text: '变量物品', link: '/Shopkeepers/creating-shops.placeholder-items' },
-              { text: 'Citizens 村民商店', link: '/Shopkeepers/creating-shops.citizens-shopkeepers' },
-            ] },
+            {
+              text: '安装与更新', collapsed: true, link: '/Shopkeepers/installtion-updating', items: [
+                { text: '配置', link: '/Shopkeepers/installtion-updating.configuration' },
+                { text: '语言文件', link: '/Shopkeepers/installtion-updating.language-files' },
+                { text: '权限', link: '/Shopkeepers/installtion-updating.permissions' },
+                { text: '统计数据', link: '/Shopkeepers/installtion-updating.plugin-statistics' },
+              ]
+            },
+            {
+              text: '创建商店', collapsed: true, link: '/Shopkeepers/creating-shops', items: [
+                { text: '编辑商店', link: '/Shopkeepers/creating-shops.editing-shops' },
+                { text: '设置管理员商店', link: '/Shopkeepers/creating-shops.admin-shop-setup' },
+                { text: '设置玩家商店', link: '/Shopkeepers/creating-shops.setup-player-shop' },
+                { text: '变量物品', link: '/Shopkeepers/creating-shops.placeholder-items' },
+                { text: 'Citizens 村民商店', link: '/Shopkeepers/creating-shops.citizens-shopkeepers' },
+              ]
+            },
             { text: '命令列表', link: '/Shopkeepers/commands' },
             {
               text: '其他功能', collapsed: true, items: [
@@ -846,96 +850,99 @@ export default defineConfig({
       '/WorldEdit/': [
         { text: '返回首页', link: '/index' },
         { text: '更新日志', link: '/WorldEdit/changelogs' },
+        { text: '前言', link: '/WorldEdit/README' },
         {
           text: 'WorldEdit 中文维基',
           items: [
-            { text: '前言', link: '/WorldEdit/README' },
-            { text: '目录', link: '/WorldEdit/table-of-contents' },
-            { text: '安装', link: '/WorldEdit/installtion' },
-            { text: '快速开始', link: '/WorldEdit/quick-start' },
-            { text: '配置文件', link: '/WorldEdit/configuration' },
-            { text: '权限', link: '/WorldEdit/permissions' },
-            { text: '命令', link: '/WorldEdit/commands' },
             {
-              text: '用法',
-              link: '/WorldEdit/usage.main',
-              collapsed: true,
-              items: [
+              text: '目录', link: '/WorldEdit/table-of-contents', items: [
+                { text: '安装', link: '/WorldEdit/installtion' },
+                { text: '快速开始', link: '/WorldEdit/quick-start' },
+                { text: '配置文件', link: '/WorldEdit/configuration' },
+                { text: '权限', link: '/WorldEdit/permissions' },
+                { text: '命令', link: '/WorldEdit/commands' },
                 {
-                  text: '通用',
-                  link: '/WorldEdit/usage.general.main',
+                  text: '用法',
+                  link: '/WorldEdit/usage.main',
                   collapsed: true,
                   items: [
-                    { text: '历史', link: '/WorldEdit/usage.general.history' },
-                    { text: '会话', link: '/WorldEdit/usage.general.sessions' },
-                    { text: '图案', link: '/WorldEdit/usage.general.patterns' },
-                    { text: '蒙版', link: '/WorldEdit/usage.general.masks' },
+                    {
+                      text: '通用',
+                      link: '/WorldEdit/usage.general.main',
+                      collapsed: true,
+                      items: [
+                        { text: '历史', link: '/WorldEdit/usage.general.history' },
+                        { text: '会话', link: '/WorldEdit/usage.general.sessions' },
+                        { text: '图案', link: '/WorldEdit/usage.general.patterns' },
+                        { text: '蒙版', link: '/WorldEdit/usage.general.masks' },
+                      ]
+                    },
+                    { text: '导航', link: '/WorldEdit/usage.navigation' },
+                    {
+                      text: '区域',
+                      link: '/WorldEdit/usage.regions.main',
+                      collapsed: true,
+                      items: [
+                        { text: '选区', link: '/WorldEdit/usage.regions.selection' },
+                        { text: '区域操作', link: '/WorldEdit/usage.regions.region-operations' },
+                      ]
+                    },
+                    { text: '剪贴板', link: '/WorldEdit/usage.clipboard' },
+                    { text: '生成', link: '/WorldEdit/usage.generation' },
+                    { text: '绑定工具', link: '/WorldEdit/usage.tools' },
+                    { text: '笔刷', link: '/WorldEdit/usage.brushes' },
+                    { text: '实用工具', link: '/WorldEdit/usage.utilities' },
+                    { text: '快照', link: '/WorldEdit/usage.snapshots' },
+                    {
+                      text: '其他',
+                      link: '/WorldEdit/usage.other.main',
+                      collapsed: true,
+                      items: [
+                        { text: '表达式', link: '/WorldEdit/usage.other.expression-syntax' },
+                        { text: '快速脚本', link: '/WorldEdit/usage.other.craftscripts' },
+                      ]
+                    },
                   ]
                 },
-                { text: '导航', link: '/WorldEdit/usage.navigation' },
                 {
-                  text: '区域',
-                  link: '/WorldEdit/usage.regions.main',
+                  text: '开发者 API',
+                  link: '/WorldEdit/developer-api.main',
                   collapsed: true,
                   items: [
-                    { text: '选区', link: '/WorldEdit/usage.regions.selection' },
-                    { text: '区域操作', link: '/WorldEdit/usage.regions.region-operations' },
+                    {
+                      text: 'API 概念',
+                      link: '/WorldEdit/developer-api.api-concepts.main',
+                      collapsed: true,
+                      items: [
+                        { text: '操作方', link: '/WorldEdit/developer-api.api-concepts.actors' },
+                        { text: '本地会话', link: '/WorldEdit/developer-api.api-concepts.local-sessions' },
+                        { text: '方块', link: '/WorldEdit/developer-api.api-concepts.blocks' },
+                        { text: '图案与蒙版', link: '/WorldEdit/developer-api.api-concepts.patterns-and-masks' },
+                        { text: '区段', link: '/WorldEdit/developer-api.api-concepts.extents' },
+                        { text: '区域', link: '/WorldEdit/developer-api.api-concepts.regions' },
+                        { text: '注册项', link: '/WorldEdit/developer-api.api-concepts.registries' },
+                        { text: '会话编辑', link: '/WorldEdit/developer-api.api-concepts.edit-sessions' },
+                        { text: '适配器', link: '/WorldEdit/developer-api.api-concepts.adapters' },
+                      ]
+                    },
+                    {
+                      text: 'API 示例',
+                      link: '/WorldEdit/developer-api.api-examples.main',
+                      collapsed: true,
+                      items: [
+                        { text: '剪贴板示例', link: '/WorldEdit/developer-api.api-examples.clipboard-examples' },
+                        { text: '结构示例', link: '/WorldEdit/developer-api.api-examples.schematic-examples' },
+                        { text: 'LocalSession 示例', link: '/WorldEdit/developer-api.api-examples.localsession-examples' },
+                      ]
+                    },
+                    { text: '内部 API', link: '/WorldEdit/developer-api.internal-apis' },
                   ]
                 },
-                { text: '剪贴板', link: '/WorldEdit/usage.clipboard' },
-                { text: '生成', link: '/WorldEdit/usage.generation' },
-                { text: '绑定工具', link: '/WorldEdit/usage.tools' },
-                { text: '笔刷', link: '/WorldEdit/usage.brushes' },
-                { text: '实用工具', link: '/WorldEdit/usage.utilities' },
-                { text: '快照', link: '/WorldEdit/usage.snapshots' },
-                {
-                  text: '其他',
-                  link: '/WorldEdit/usage.other.main',
-                  collapsed: true,
-                  items: [
-                    { text: '表达式', link: '/WorldEdit/usage.other.expression-syntax' },
-                    { text: '快速脚本', link: '/WorldEdit/usage.other.craftscripts' },
-                  ]
-                },
+                { text: '常见问题', link: '/WorldEdit/common-questions' },
+                { text: '获取帮助', link: '/WorldEdit/getting-help' },
+                { text: '源码', link: '/WorldEdit/source-code' },
               ]
             },
-            {
-              text: '开发者 API',
-              link: '/WorldEdit/developer-api.main',
-              collapsed: true,
-              items: [
-                {
-                  text: 'API 概念',
-                  link: '/WorldEdit/developer-api.api-concepts.main',
-                  collapsed: true,
-                  items: [
-                    { text: '操作方', link: '/WorldEdit/developer-api.api-concepts.actors' },
-                    { text: '本地会话', link: '/WorldEdit/developer-api.api-concepts.local-sessions' },
-                    { text: '方块', link: '/WorldEdit/developer-api.api-concepts.blocks' },
-                    { text: '图案与蒙版', link: '/WorldEdit/developer-api.api-concepts.patterns-and-masks' },
-                    { text: '区段', link: '/WorldEdit/developer-api.api-concepts.extents' },
-                    { text: '区域', link: '/WorldEdit/developer-api.api-concepts.regions' },
-                    { text: '注册项', link: '/WorldEdit/developer-api.api-concepts.registries' },
-                    { text: '会话编辑', link: '/WorldEdit/developer-api.api-concepts.edit-sessions' },
-                    { text: '适配器', link: '/WorldEdit/developer-api.api-concepts.adapters' },
-                  ]
-                },
-                {
-                  text: 'API 示例',
-                  link: '/WorldEdit/developer-api.api-examples.main',
-                  collapsed: true,
-                  items: [
-                    { text: '剪贴板示例', link: '/WorldEdit/developer-api.api-examples.clipboard-examples' },
-                    { text: '结构示例', link: '/WorldEdit/developer-api.api-examples.schematic-examples' },
-                    { text: 'LocalSession 示例', link: '/WorldEdit/developer-api.api-examples.localsession-examples' },
-                  ]
-                },
-                { text: '内部 API', link: '/WorldEdit/developer-api.internal-apis' },
-              ]
-            },
-            { text: '常见问题', link: '/WorldEdit/common-questions' },
-            { text: '获取帮助', link: '/WorldEdit/getting-help' },
-            { text: '源码', link: '/WorldEdit/source-code' },
           ]
         }
       ],
