@@ -37,4 +37,4 @@ CommandTimer 以任务的形式运作。任务是在一次执行表内同时触�
 
 这里是由社区维护的其他语言维基，我们不对这些内容的实时性做出保证。
 
-* 简体中文（本维基）：https://snowcutieowo.github.io/CommandTimer/#/
+* 简体中文（本维基）：https://snowcutieowo.github.io/CommandTimer/README
