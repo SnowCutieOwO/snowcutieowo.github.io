@@ -1,8 +1,4 @@
----
-title: WorldEdit 文档
----
-
-# {{ $frontmatter.title }}
+# WorldEdit 文档
 
 WorldEdit 是一个在 Minecraft 游戏内使用的快捷地图编辑器。通过一系列的命令与“笔刷”的组合，你可以将你的世界塑造成你想要的形状，或只是简单地执行多样化的地形修整操作。
 
@@ -18,7 +14,7 @@ WorldEdit 是一个在 Minecraft 游戏内使用的快捷地图编辑器。通�
 
 ## 文档
 
-* [前言](README.md)
+* [前言](index.md)
 * [更新日志](changelogs.md)
 * [目录](table-of-contents.md)
 * [安装](installtion.md)
