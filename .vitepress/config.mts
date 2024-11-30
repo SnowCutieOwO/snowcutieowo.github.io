@@ -33,24 +33,24 @@ export default defineConfig({
       {
         text: '维基列表',
         items: [
-          { text: 'ajLeaderboards', link: '/ajLeaderboards/README' },
-          { text: 'AureliumSkills（旧）', link: '/AureliumSkills/README' },
-          { text: 'Codex', link: '/Codex/README' },
-          { text: 'CommandTimer', link: '/CommandTimer/README' },
-          { text: 'DecentHolograms', link: 'DecentHolograms/README' },
-          { text: 'ExcellentCrates', link: '/ExcellentCrates/README' },
-          { text: 'ExcellentEnchants', link: '/ExcellentEnchants/README' },
-          { text: 'FallbackServer', link: '/FallbackServer/README' },
-          { text: 'HuskHomes', link: '/HuskHomes/README' },
-          { text: 'HuskSync', link: '/HuskSync/README' },
-          { text: 'LibreLogin', link: '/LibreLogin/README' },
-          { text: 'LuckPerms', link: '/LuckPerms/README' },
-          { text: 'Oraxen', link: '/Oraxen/README' },
-          { text: 'PlayerPoints', link: '/PlayerPoints/README' },
-          { text: 'Shopkeepers', link: '/Shopkeepers/README' },
-          { text: 'spark', link: '/spark/README' },
-          { text: 'WorldEdit', link: '/WorldEdit/README' },
-          { text: 'WorldGuard', link: '/WorldGuard/README' },
+          { text: 'ajLeaderboards', link: '/ajLeaderboards/index' },
+          { text: 'AureliumSkills（旧）', link: '/AureliumSkills/index' },
+          { text: 'Codex', link: '/Codex/index' },
+          { text: 'CommandTimer', link: '/CommandTimer/index' },
+          { text: 'DecentHolograms', link: 'DecentHolograms/index' },
+          { text: 'ExcellentCrates', link: '/ExcellentCrates/index' },
+          { text: 'ExcellentEnchants', link: '/ExcellentEnchants/index' },
+          { text: 'FallbackServer', link: '/FallbackServer/index' },
+          { text: 'HuskHomes', link: '/HuskHomes/index' },
+          { text: 'HuskSync', link: '/HuskSync/index' },
+          { text: 'LibreLogin', link: '/LibreLogin/index' },
+          { text: 'LuckPerms', link: '/LuckPerms/index' },
+          { text: 'Oraxen', link: '/Oraxen/index' },
+          { text: 'PlayerPoints', link: '/PlayerPoints/index' },
+          { text: 'Shopkeepers', link: '/Shopkeepers/index' },
+          { text: 'spark', link: '/spark/index' },
+          { text: 'WorldEdit', link: '/WorldEdit/index' },
+          { text: 'WorldGuard', link: '/WorldGuard/index' },
         ]
       }
     ],
@@ -62,30 +62,30 @@ export default defineConfig({
         {
           text: '维基列表',
           items: [
-            { text: 'ajLeaderboards', link: '/ajLeaderboards/README' },
-            { text: 'AureliumSkills（旧）', link: '/AureliumSkills/README' },
-            { text: 'Codex', link: '/Codex/README' },
-            { text: 'CommandTimer', link: '/CommandTimer/README' },
-            { text: 'DecentHolograms', link: 'DecentHolograms/README' },
-            { text: 'ExcellentCrates', link: '/ExcellentCrates/README' },
-            { text: 'ExcellentEnchants', link: '/ExcellentEnchants/README' },
-            { text: 'FallbackServer', link: '/FallbackServer/README' },
-            { text: 'HuskHomes', link: '/HuskHomes/README' },
-            { text: 'HuskSync', link: '/HuskSync/README' },
-            { text: 'LibreLogin', link: '/LibreLogin/README' },
-            { text: 'LuckPerms', link: '/LuckPerms/README' },
-            { text: 'Oraxen', link: '/Oraxen/README' },
-            { text: 'PlayerPoints', link: '/PlayerPoints/README' },
-            { text: 'Shopkeepers', link: '/Shopkeepers/README' },
-            { text: 'spark', link: '/spark/README' },
-            { text: 'WorldEdit', link: '/WorldEdit/README' },
-            { text: 'WorldGuard', link: '/WorldGuard/README' },
+            { text: 'ajLeaderboards', link: '/ajLeaderboards/index' },
+            { text: 'AureliumSkills（旧）', link: '/AureliumSkills/index' },
+            { text: 'Codex', link: '/Codex/index' },
+            { text: 'CommandTimer', link: '/CommandTimer/index' },
+            { text: 'DecentHolograms', link: 'DecentHolograms/index' },
+            { text: 'ExcellentCrates', link: '/ExcellentCrates/index' },
+            { text: 'ExcellentEnchants', link: '/ExcellentEnchants/index' },
+            { text: 'FallbackServer', link: '/FallbackServer/index' },
+            { text: 'HuskHomes', link: '/HuskHomes/index' },
+            { text: 'HuskSync', link: '/HuskSync/index' },
+            { text: 'LibreLogin', link: '/LibreLogin/index' },
+            { text: 'LuckPerms', link: '/LuckPerms/index' },
+            { text: 'Oraxen', link: '/Oraxen/index' },
+            { text: 'PlayerPoints', link: '/PlayerPoints/index' },
+            { text: 'Shopkeepers', link: '/Shopkeepers/index' },
+            { text: 'spark', link: '/spark/index' },
+            { text: 'WorldEdit', link: '/WorldEdit/index' },
+            { text: 'WorldGuard', link: '/WorldGuard/index' },
           ]
         }
       ],
       '/AureliumSkills/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/AureliumSkills/README' },
+        { text: '前言', link: '/AureliumSkills/index' },
         {
           text: 'AureliumSkills 维基',
           items: [
@@ -155,7 +155,7 @@ export default defineConfig({
       ],
       '/ajLeaderboards/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/ajLeaderboards/README' },
+        { text: '前言', link: '/ajLeaderboards/index' },
         {
           text: 'ajLeaderboards 中文维基',
           items: [
@@ -188,7 +188,7 @@ export default defineConfig({
       ],
       '/Codex/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/Codex/README' },
+        { text: '前言', link: '/Codex/index' },
         {
           text: 'Codex 维基',
           items: [
@@ -205,7 +205,7 @@ export default defineConfig({
       ],
       '/CommandTimer/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/CommandTimer/README' },
+        { text: '前言', link: '/CommandTimer/index' },
         {
           text: 'CommandTimer 维基',
           items: [
@@ -233,7 +233,7 @@ export default defineConfig({
       ],
       '/DecentHolograms/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/DecentHolograms/README' },
+        { text: '前言', link: '/DecentHolograms/index' },
         {
           text: 'DecentHolograms 维基', items: [
             { text: '欢迎', link: '/DecentHolograms/welcome' },
@@ -295,7 +295,7 @@ export default defineConfig({
       ],
       '/ExcellentCrates/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/ExcellentCrates/README' },
+        { text: '前言', link: '/ExcellentCrates/index' },
         {
           text: 'ExcellentCrates 维基', items: [
             {
@@ -330,7 +330,7 @@ export default defineConfig({
       ],
       '/ExcellentEnchants/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/ExcellentEnchants/README' },
+        { text: '前言', link: '/ExcellentEnchants/index' },
         {
           text: 'ExcellentEnchants 维基', items: [
             {
@@ -365,7 +365,7 @@ export default defineConfig({
       ],
       '/FallbackServer/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/FallbackServer/README' },
+        { text: '前言', link: '/FallbackServer/index' },
         {
           text: 'FallbackServer 维基', items: [
             { text: '👋 欢迎来到 FallbackServer 维基', link: '/FallbackServer/welcome-to-fallbackserver-wiki' },
@@ -399,7 +399,7 @@ export default defineConfig({
       ],
       '/HuskHomes/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/HuskHomes/README' },
+        { text: '前言', link: '/HuskHomes/index' },
         {
           text: 'HuskHomes 维基', items: [
             { text: '首页', link: '/HuskHomes/home' },
@@ -461,7 +461,7 @@ export default defineConfig({
       ],
       '/HuskSync/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/HuskSync/README' },
+        { text: '前言', link: '/HuskSync/index' },
         {
           text: 'HuskSync 维基', items: [
             { text: '首页', link: '/HuskSync/home' },
@@ -516,7 +516,7 @@ export default defineConfig({
       ],
       '/LibreLogin/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/LibreLogin/README' },
+        { text: '前言', link: '/LibreLogin/index' },
         {
           text: 'LibreLogin 维基', items: [
             { text: '插件功能', link: '/LibreLogin/features' },
@@ -548,7 +548,7 @@ export default defineConfig({
       ],
       '/LuckPerms/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/LuckPerms/README' },
+        { text: '前言', link: '/LuckPerms/index' },
         {
           text: 'LuckPerms 维基', items: [
             { text: '主页', link: '/LuckPerms/home' },
@@ -627,7 +627,7 @@ export default defineConfig({
       ],
       '/Oraxen/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/Oraxen/README' },
+        { text: '前言', link: '/Oraxen/index' },
         {
           text: 'Oraxen 维基', items: [
             { text: '初次使用', link: '/Oraxen/getting-started' },
@@ -744,7 +744,7 @@ export default defineConfig({
       ],
       '/PlayerPoints/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/PlayerPoints/README' },
+        { text: '前言', link: '/PlayerPoints/index' },
         {
           text: 'PlayerPoints 维基', items: [
             {
@@ -764,7 +764,7 @@ export default defineConfig({
       ],
       '/Shopkeepers/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/Shopkeepers/README' },
+        { text: '前言', link: '/Shopkeepers/index' },
         {
           text: 'Shopkeepers 维基', items: [
             { text: '首页', link: '/Shopkeepers/home' },
@@ -808,7 +808,7 @@ export default defineConfig({
       ],
       '/spark/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/spark/README' },
+        { text: '前言', link: '/spark/index' },
         {
           text: 'spark 维基', items: [
             {
@@ -850,7 +850,7 @@ export default defineConfig({
       '/WorldEdit/': [
         { text: '返回首页', link: '/index' },
         { text: '更新日志', link: '/WorldEdit/changelogs' },
-        { text: '前言', link: '/WorldEdit/README' },
+        { text: '前言', link: '/WorldEdit/index' },
         {
           text: 'WorldEdit 中文维基',
           items: [
@@ -948,7 +948,7 @@ export default defineConfig({
       ],
       '/WorldGuard/': [
         { text: '返回首页', link: '/index' },
-        { text: '前言', link: '/WorldGuard/README' },
+        { text: '前言', link: '/WorldGuard/index' },
         {
           text: 'WorldGuard 维基', items: [
             {
