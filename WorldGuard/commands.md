@@ -80,6 +80,7 @@ WorldGuard 的命令一般有下列几类：
 ```
 /wg debug testdamage -t other_player_name
 ```
+:::
 
 请注意测试并没有完全完成。这是因为 Bukkit 在进行某些操作时会抛出其他的事件。例如，当装满一个桶的时候，Bukkit 首先会发起一个桶被装满的事件，而这个事件是 WorldGuard 所无法模拟的。直到现在，一些 Minecraft 的特性（例如冒险模式和内置的出生点保护）可能还在发挥作用。
 
