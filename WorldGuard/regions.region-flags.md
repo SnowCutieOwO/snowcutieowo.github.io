@@ -150,7 +150,7 @@
 |item-frame-rotation|state|物品是否可以在物品展示框中旋转|
 |firework-damage|state|烟花是否可以对实体造成伤害|
 |use-anvil|state|是否可以使用铁砧|
-|use-dripleaf|state|是否可以使用（大型）垂滴叶
+|use-dripleaf|state|是否可以使用（大型）垂滴叶|
 
 ::: warning
 上述的这些标志都是指定玩家的。例如，`block-break` 标志，如果设置为 deny 的话，将会**禁止活塞推动或破坏方块**。
@@ -223,12 +223,12 @@
 |grass-growth|state|区域内的草方块是否会蔓延|
 |mycelium-spread|state|区域内的菌丝是否会蔓延|
 |vine-growth|state|区域内的藤蔓（和海草）是否会生长|
-|rock-growth|state|区域内的石头（如滴水石柱灯）是否会生长|
+|rock-growth|state|区域内的石头（如滴水石柱等）是否会生长|
 |sculk-growth|state|区域内的幽匿块（和幽匿脉络）是否会蔓延|
 |crop-growth|state|区域内的农作物（小麦、土豆、西瓜等）是否会生长|
 |soil-dry|state|区域中的耕地是否会变干|
 |coral-fade|state|区域中的珊瑚块脱水后是否会死亡|
-|copper-fade|铜块是否会氧化|
+|copper-fade|state|铜块是否会氧化|
 
 ::: warning
 标志 `fire-spread`、`water-flow`、`lava-flow` 和 `lava-fire` 需要在配置文本中启用“高频标志”才可正常使用。这是因为这些事件的触发会非常频繁，也就需要更多对区域的检查，并潜在地降低服务器的运行效率（或者只是警告服务器的内存占用略微上升）。
