@@ -10,8 +10,8 @@ hero:
     src: favicon.png
   actions:
     - theme: brand
-      text: Github 仓库地址
-      link: https://www.github.com/SnowCutieOwO/Continue
+      text: QQ 群
+      link: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Usutd8XHrHGQsLyhU4DukXvqueRiQEFZ&authKey=C2IT%2BGq7NxpVKPaYvoZYc%2Fu5WmnSsFSEAVOjbJRX6lF32bkFjgg4%2BY0yGdZyKNNs&noverify=0&group_code=707028557
     - theme: alt
       text: 爱发电
       link: https://afdian.com/a/SnowCutieOwO
@@ -19,13 +19,13 @@ hero:
 features:
   - title: WorldEdit
     details: WorldEdit 维基完整译文
-    link: '/WorldEdit/README'
+    link: '/WorldEdit/index'
   - title: WorldGuard
     details: WorldGuard 维基完整译文
-    link: '/WorldGuard/README'
+    link: '/WorldGuard/index'
   - title: ajLeaderboards
     details: ajLeaderboards 维基完整译文
-    link: '/ajLeaderboards/README'
+    link: '/ajLeaderboards/index'
 ---
 
 此为 [SnowCutieOwO/Continue](https://www.github.com/SnowCutieOwO/Continue) 仓库的配套维基链接。
