@@ -21,8 +21,7 @@ HuskHomes API 为下列内容提供了方法与类：
 
 * 除非你的插件以 HuskHomes 为硬依赖，否则你不应该将 HuskHomes API 调用至你的主类中，否则在本插件未安装时，你的插件将会弹出 `ClassNotFoundException` 报错。
 
-#### 创建对接类
-
+::: details 创建对接类
 ```Java
 public class HuskHomesAPIHook {
 
@@ -32,13 +31,13 @@ public class HuskHomesAPIHook {
 
 }
 ```
+:::
 
 ### 确认 HuskHomes 插件存在并实例化对接
 
 * 这段代码用来确保你的 HuskHomes 插件在你制作的插件读取 API 之前已经载入。
 
-#### 实例化对接
-
+::: details 实例化对接
 ```Java
 public class MyPlugin extends JavaPlugin {
 
@@ -52,12 +51,13 @@ public class MyPlugin extends JavaPlugin {
     }
 }
 ```
+:::
 
 ### 获取 API 的示例
 
 * 你现在可以通过调用 `HuskHomesAPI#getInstance` 来获取 API。
 
-#### 获取 API 实例
+::: details 获取 API 实例
 
 ```Java
 import net.william278.huskhomes.api.HuskHomesAPI;
@@ -73,11 +73,36 @@ public class HuskHomesAPIHook {
 }
 ```
 
+:::
+
 ### CompletableFuture
 HuskHomesAPI 的许多方法都返回浏览异步执行的 [CompletableFutures](https://www.baeldung.com/java-completablefuture)，以此确保它们依赖的数据库请求不会堵塞服务器的主线程。当一个计划任务（future）完成执行后，你可以通过 `#thenAccept()` 方法来接受返回内容。
 
 ::: warning 
 你不应该在 HuskHomesAPI 中返回的计划任务（future）上使用 `#join()` 方法，因为计划任务（future）是基于服务器的异步任务运行的，如果你尝试通过锁定主线程来操作它们的话，很有可能导致线程死锁并使你的服务器崩溃。
+:::
+
+## 获取玩家
+
+你可以通过 `HuskHomesAPI#adaptUser` 获取 OnlineUser 对象，这代表着连接至服务器的玩家。
+
+相似地（若你通过通用模块编译），你可以使用 `HuskHomesAPI#getOnlineUser(UUID)` 通过 UUID 获取 `Optional` 的在线用户；如果玩家存在并在线，该 optional 会包含该玩家的数据。
+
+::: details 获取 OnlineUser
+``` Java
+public class HuskHomesAPIHook {
+
+    private final HuskHomesAPI huskHomesAPI;
+
+    // This method prints out a player's homes into console using stdout
+    public void getAnOnlineUser(UUID uuid) {
+        OnlineUser user = huskHomesAPI.adaptUser(Bukkit.getPlayer(uuid));
+        System.out.println("Found " + user.getUsername() + "!");
+        Optional<OnlineUser> otherMethod = huskHomesAPI.getOnlineUser(uuid);
+    }
+
+}
+```
 :::
 
 ## 获取玩家的家传送点
@@ -86,7 +111,7 @@ HuskHomesAPI 的许多方法都返回浏览异步执行的 [CompletableFutures](
 
 请注意所有有关家传送点（`Home`）的内容也对地标传送点（`Warp`）有效（例如，使用 `HuskHomesAPI#getWarps` 来获取所有的地标传送点）。因为地标是公有的，所以获取地标并不需要 `User` 对象。 
 
-### 将一个玩家设置的家传送点输出在后台上
+::: details 将一个玩家设置的家传送点输出在后台上
 
 ```Java
 public class HuskHomesAPIHook {
@@ -120,12 +145,13 @@ public class HuskHomesAPIHook {
 
 }
 ```
+:::
 
 ## 创建家传送点
 
 若要创建一个家传送点，你可以在 API 实例上调用 `#createHome(owner, name, position)`。这个方法需要拥有家传送点、名称有效且位置可获取的玩家才可使用。
 
-### 创建家传送点
+::: details 创建家传送点
 
 ```Java
 public class HuskHomesAPIHook {
@@ -150,10 +176,13 @@ public class HuskHomesAPIHook {
 }
 ```
 
+:::
+
 ## 构建传送
 
 API 提供了一种方法来获取 `TeleportBuilder`，可以用于构建 `Teleport`（携带 `#toTeleport`）或 `TimedTeleport`（携带 `TimedTeleport`；一种要求玩家在原地停留一段时间才可进行传送的方法）。传送可以是跨服的。
-### 构建传送
+
+::: details 构建传送
 
 ```Java
 public class HuskHomesAPIHook {
@@ -184,11 +213,13 @@ public class HuskHomesAPIHook {
 }
 ```
 
+:::
+
 ### 延时传送
 
 延时传送是需要玩家原地停留一段时间才可进行的传送，所以玩家不会立即在战斗或在危险的时候传送。可通过在 `TeleportBuilder` 调用 `#toTimedTeleport()` 方法来取消。玩家所需要停留的预热时间是在配置文本中预先设置的。
 
-#### 构建一个延时传送
+::: details 构建一个延时传送
 
 ```Java
 public class HuskHomesAPIHook {
@@ -214,3 +245,5 @@ public class HuskHomesAPIHook {
 
 }
 ```
+
+:::
