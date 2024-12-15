@@ -36,7 +36,7 @@
 
 ::: details 必须使用数据库吗？支持哪些数据库呢？
 
-在单端上使用 HuskHomes 无需额外搭建数据库。如果你想要跨服使用本插件，你需要使用 MySQL、MariaDB 或 Postgre [数据库](documentation.database.md)。
+在单端上使用 HuskHomes 无需额外搭建数据库。如果你想要跨服使用本插件，你需要使用 MySQL、MariaDB 或 Postgre [数据库](setup.database.md)。
 
 HuskHomes 支持如下的数据库类型。标为“本地”的只对单端有效：
 

@@ -1,7 +1,7 @@
 # API 示例
 
 ::: info 请注意：
-HuskHomes API 本身仅支持 Bukkit，但是 Fabric 和 Sponge 支持 [API 事件](documentation.api.api-events.md)。
+HuskHomes API 本身仅支持 Bukkit，但是 Fabric 和 Sponge 支持 [API 事件](developers.api.api-events.md)。
 :::
 
 HuskHomes API 为下列内容提供了方法与类：

@@ -15,4 +15,4 @@
 |`%huskhomes_public_homes_list%`|返回该玩家开放家传送点的名称，以英文逗号分隔。|castle, tower|
 |`%huskhomes_ignoring_tp_requests%`|返回该玩家是否设置了无视传送请求。|true|
 
-† 仅在启用了[经济联动](documentation.economy-hook.md)的服务器上有效。
+† 仅在启用了[经济联动](features.economy-hook.md)的服务器上有效。

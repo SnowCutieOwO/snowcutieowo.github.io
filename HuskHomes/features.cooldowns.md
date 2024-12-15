@@ -2,11 +2,11 @@
 HuskHomes 支持在玩家执行特定操作时设置冷却。玩家在执行下一次相同的操作之前，必须要等待一段时间，否则操作就不会执行。冷却仅会在操作执行之后被刷新，玩家在冷却期间试图执行操作会被发送消息以提示剩余的冷却时间。
 
 ## 设置冷却
-冷却可以在 [`config.yml`](guides.config-files.md) 的 `cooldowns` 下设置。若要启用冷却，将 `enabled` 的值改为 `true`，并在 `cooldown_times` 下设置指定操作的冷却时间。冷却时间为整数，单位为秒。
+冷却可以在 [`config.yml`](setup.config-files.md) 的 `cooldowns` 下设置。若要启用冷却，将 `enabled` 的值改为 `true`，并在 `cooldown_times` 下设置指定操作的冷却时间。冷却时间为整数，单位为秒。
 
 ### 绕过冷却
 
-拥有[权限节点](guides.commands.md) `huskhomes.bypass_cooldowns` 的玩家可以无视冷却，并可立即执行他们想要的操作。
+拥有[权限节点](features.commands.md) `huskhomes.bypass_cooldowns` 的玩家可以无视冷却，并可立即执行他们想要的操作。
 
 ### 操作列表
 
