@@ -430,7 +430,6 @@ export default defineConfig({
                 { text: '🛏️ 全局重生', link: '/HuskHomes/documentation.global-respawning' },
                 { text: '🌎 全局主城', link: '/HuskHomes/documentation.global-spawn' },
                 { text: '✍️ 变量集群', link: '/HuskHomes/documentation.placeholders' },
-                { text: '⭐ GUI 拓展', link: '/HuskHomes/documentation.gui-add-on' },
                 { text: '🕸️ 旧版迁移 (v2 → v3)', link: '/HuskHomes/documentation.legacy-migration' },
                 {
                   text: '📦 API', link: '/HuskHomes/documentation.api', collapsed: true, items: [
