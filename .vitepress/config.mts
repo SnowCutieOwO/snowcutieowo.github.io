@@ -412,6 +412,7 @@ export default defineConfig({
                 { text: '⛔ 访问控制', link: '/HuskHomes/guides.managing-access' },
                 { text: '🖥️ 命令列表', link: '/HuskHomes/guides.commands' },
                 { text: '📜 冲突命令', link: '/HuskHomes/guides.command-conflicts' },
+                { text: '⚙️ 问题排查', link: '/HuskHomes/documentation.troubleshooting'}
                 { text: '❓ 常见问题', link: '/HuskHomes/guides.faq' },
               ]
             },
