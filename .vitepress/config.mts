@@ -405,37 +405,44 @@ export default defineConfig({
           text: 'HuskHomes 维基', items: [
             { text: '首页', link: '/HuskHomes/home' },
             {
-              text: '教程', collapsed: true, items: [
-                { text: '📚 安装教程', link: '/HuskHomes/guides.setup' },
-                { text: '📊 数据导入', link: '/HuskHomes/guides.importing-data' },
-                { text: '📄 配置文件', link: '/HuskHomes/guides.config-files' },
-                { text: '⛔ 访问控制', link: '/HuskHomes/guides.managing-access' },
-                { text: '🖥️ 命令列表', link: '/HuskHomes/guides.commands' },
-                { text: '📜 冲突命令', link: '/HuskHomes/guides.command-conflicts' },
-                { text: '⚙️ 问题排查', link: '/HuskHomes/documentation.troubleshooting'}
-                { text: '❓ 常见问题', link: '/HuskHomes/guides.faq' },
+              text: '安装', collapsed: true, items: [
+                { text: '📚 安装教程', link: '/HuskHomes/setup.setup' },
+                { text: '📁 数据库', link: '/HuskHomes/setup.database' },
+                { text: '⛅ Redis 支持', link: '/HuskHomes/setup.redis-support' },
+                { text: '⚠️ 兼容性', link: '/HuskHomes/setup.compatibility'},
+                { text: '📄 配置文件', link: '/HuskHomes/setup.config-files' },
+                { text: '⚙️ 问题排查', link: '/HuskHomes/setup.troubleshooting'},
+
               ]
             },
 
             {
-              text: '文档', collapsed: true, items: [
-                { text: '📁 数据库', link: '/HuskHomes/documentation.database' },
-                { text: '⛅ Redis 支持', link: '/HuskHomes/documentation.redis-support' },
-                { text: '📝 语言贡献', link: '/HuskHomes/documentation.translations' },
-                { text: '🟩 Plan 联动', link: '/HuskHomes/documentation.plan-hook' },
-                { text: '🗺️ 地图联动', link: '/HuskHomes/documentation.map-hooks' },
-                { text: '⏰ 冷却', link: '/HuskHomes/documentation.cooldowns' },
-                { text: '💵 经济联动', link: '/HuskHomes/documentation.economy-hook' },
-                { text: '⚠️ 严格 tpahere', link: '/HuskHomes/documentation.strict-tpahere' },
-                { text: '🚫 地标限制', link: '/HuskHomes/documentation.restricted-warps' },
-                { text: '🛏️ 全局重生', link: '/HuskHomes/documentation.global-respawning' },
-                { text: '🌎 全局主城', link: '/HuskHomes/documentation.global-spawn' },
-                { text: '✍️ 变量集群', link: '/HuskHomes/documentation.placeholders' },
-                { text: '🕸️ 旧版迁移 (v2 → v3)', link: '/HuskHomes/documentation.legacy-migration' },
+              text: '功能', collapsed: true, items: [
+                { text: '🖥️ 命令列表', link: '/HuskHomes/features.commands' },
+                { text: '🟩 Plan 联动', link: '/HuskHomes/features.plan-hook' },
+                { text: '🗺️ 地图联动', link: '/HuskHomes/features.map-hooks' },
+                { text: '💵 经济联动', link: '/HuskHomes/features.economy-hook' },
+                { text: '⚠️ 严格 tpahere', link: '/HuskHomes/features.strict-tpahere' },
+                { text: '🚫 地标限制', link: '/HuskHomes/features.restricted-warps' },
+                { text: '⏰ 冷却', link: '/HuskHomes/features.cooldowns' },
+                { text: '🌎 全局主城', link: '/HuskHomes/features.global-spawn' },
+                { text: '🛏️ 全局重生', link: '/HuskHomes/features.global-respawning' },
+                { text: '❓ 常见问题', link: '/HuskHomes/features.faq' },
+              ]
+            },
+            { text: '教程', collapsed: true, items: [
+                { text: '📊 导入数据', link: '/HuskHomes/guides.importing-data'},
+                { text: '⛔ 访问控制', link: '/HuskHomes/guides.managing-access' },
+                { text: '📜 冲突命令', link: '/HuskHomes/guides.command-conflicts' },
+                { text: '📝 语言贡献', link: '/HuskHomes/guides.translations' },
+                { text: '✍️ 变量集群', link: '/HuskHomes/guides.placeholders' },
+              ]
+            },
+            { text: '开发者', collapsed: true, items: [
                 {
-                  text: '📦 API', link: '/HuskHomes/documentation.api', collapsed: true, items: [
-                    { text: '💡 API 示例', link: '/HuskHomes/documentation.api.api-examples' },
-                    { text: '❗ API 事件', link: '/HuskHomes/documentation.api.api-events' },
+                  text: '📦 API', link: '/HuskHomes/developers.api', collapsed: true, items: [
+                    { text: '💡 API 示例', link: '/HuskHomes/developers.api.api-examples' },
+                    { text: '❗ API 事件', link: '/HuskHomes/developers.api.api-events' },
                   ]
                 },
               ]
@@ -444,7 +451,7 @@ export default defineConfig({
               text: '链接', collapsed: true, items: [
                 { text: '💻 GitHub', link: 'https://github.com/WiIIiam278/HuskHomes' },
                 {
-                  text: '📂 下载链接', link: 'https://william278.net/project/huskhomes/', collapsed: true, items: [
+                  text: '📂 获取 HuskHomes', link: 'https://william278.net/project/huskhomes/', collapsed: true, items: [
                     { text: '🔧 Modrinth', link: 'https://modrinth.com/plugin/huskhomes' },
                     { text: '🚰 Spigot', link: 'https://www.spigotmc.org/resources/huskhomes.83767/' },
                     { text: '🛒 Polymart', link: 'https://polymart.org/resource/huskhomes.284/' },
