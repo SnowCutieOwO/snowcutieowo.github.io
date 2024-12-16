@@ -1,6 +1,6 @@
 # API
 
-HuskSync API（v3）提供了更新和返回[快照数据](documentation.api-v3.data-snapshot-api.md)的方法，一系列 API 事件，可用于追踪数据何时被同步或保存，一系列同步自定义数据类型的序列化注册的基础方法。
+HuskSync API（v3）提供了更新和返回[快照数据](developers.api-v3.data-snapshot-api.md)的方法，一系列 API 事件，可用于追踪数据何时被同步或保存，一系列同步自定义数据类型的序列化注册的基础方法。
 
 ## 兼容性
 
@@ -159,6 +159,6 @@ public class HuskSyncAPIHook {
 
 现在你已经把所有东西都准备妥当了，你可以开始与 HuskSync API 进行交互了！
 
-* [数据快照 API](documentation.api-v3.data-snapshot-api.md) —— 获取、编辑、创建与删除数据快照并更新玩家
-* [自定义数据 API](documentation.api-v3.custom-data-api.md) —— 注册自定义数据类型以使得你的插件数据能被 HuskSync 同步
-* [API 事件](documentation.api-v3.api-events.md) —— 监听、取消与修改异步事件的数据结果
+* [数据快照 API](developers.api-v3.data-snapshot-api.md) —— 获取、编辑、创建与删除数据快照并更新玩家
+* [自定义数据 API](developers.api-v3.custom-data-api.md) —— 注册自定义数据类型以使得你的插件数据能被 HuskSync 同步
+* [API 事件](developers.api-v3.api-events.md) —— 监听、取消与修改异步事件的数据结果

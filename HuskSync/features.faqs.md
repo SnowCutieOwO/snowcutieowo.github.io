@@ -5,7 +5,7 @@
 
 ::: details 哪些数据可以被同步？
 
-HuskSync 支持同步许多数据，所有同步的数据种类均可按照你的喜好更高。请浏览“[同步功能](documentation.sync-features.md)”章节以获取可同步数据的完整列表。
+HuskSync 支持同步许多数据，所有同步的数据种类均可按照你的喜好更高。请浏览“[同步功能](features.sync-features.md)”章节以获取可同步数据的完整列表。
 
 :::
 
@@ -41,7 +41,7 @@ HuskSync 支持同步许多数据，所有同步的数据种类均可按照你�
 
 HuskSync 需要 Redis 来操作（原因如下）。Redis 是一种运行在内存中的数据库，可用于服务器之间的数据缓存与群组之间的信息交换。安装 Redis 的方法与安装 MySQL 的方式相似（译者注：是真的。尤其是 Windows，除 MySQL 有安装包需要解压外，二者均可通过 cmd 观察运行状态。）若你正在使用官方的服务器，则你可能需要咨询客服是否支持 Redis。若你正在寻找支持 Redis 的服务器提供商，我在[这里](https://william278.net/redis-hosts)为你提供了一个列表，你可以稍后浏览。
 
-更多信息请浏览 [Redis 安装教程]()。
+更多信息请浏览 [Redis 安装教程](setup.redis.md)。
 
 :::
 
@@ -51,7 +51,7 @@ HuskSync 需要 Redis 来操作（原因如下）。Redis 是一种运行在内�
 
 ::: details 是否需要数据库？插件支持哪些数据库？
 
-是的，HuskSync 需要一个[数据库](setup.database.md)服务器和 [Redis] 服务器才可使用。
+是的，HuskSync 需要一个[数据库](setup.database.md)服务器和 [Redis](setup.redis.md) 服务器才可使用。
 
 HuskSync 支持如下种类的数据库：
 

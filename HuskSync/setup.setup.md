@@ -26,7 +26,7 @@ HuskSync 需要一个数据库服务器，一个 Redis 服务器，以及任何�
 
 ### 2. 重启服务器
 
-* 开启，之后关闭服务器，使 HuskSync 生成一份[配置文件](guides.config-file.md)；
+* 开启，之后关闭服务器，使 HuskSync 生成一份[配置文件](setup.config-file.md)；
 * HuskSync 会因无法连接到数据库后在控制台报错并自行禁用。鉴于你还未设置登录凭据，所以这是预料之内的；
 * 对于高级用户：如果你喜欢的话，你可以自己创建一个 config.yml 文件并使得每个子服的 `/plugins/HuskSync/` 文件夹同步，更方便地更新配置文件。
 

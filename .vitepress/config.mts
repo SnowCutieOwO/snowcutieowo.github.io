@@ -409,9 +409,9 @@ export default defineConfig({
                 { text: '📚 安装教程', link: '/HuskHomes/setup.setup' },
                 { text: '📁 数据库', link: '/HuskHomes/setup.database' },
                 { text: '⛅ Redis 支持', link: '/HuskHomes/setup.redis-support' },
-                { text: '⚠️ 兼容性', link: '/HuskHomes/setup.compatibility'},
+                { text: '⚠️ 兼容性', link: '/HuskHomes/setup.compatibility' },
                 { text: '📄 配置文件', link: '/HuskHomes/setup.config-files' },
-                { text: '⚙️ 问题排查', link: '/HuskHomes/setup.troubleshooting'},
+                { text: '⚙️ 问题排查', link: '/HuskHomes/setup.troubleshooting' },
 
               ]
             },
@@ -430,15 +430,17 @@ export default defineConfig({
                 { text: '❓ 常见问题', link: '/HuskHomes/features.faq' },
               ]
             },
-            { text: '教程', collapsed: true, items: [
-                { text: '📊 导入数据', link: '/HuskHomes/guides.importing-data'},
+            {
+              text: '教程', collapsed: true, items: [
+                { text: '📊 导入数据', link: '/HuskHomes/guides.importing-data' },
                 { text: '⛔ 访问控制', link: '/HuskHomes/guides.managing-access' },
                 { text: '📜 冲突命令', link: '/HuskHomes/guides.command-conflicts' },
                 { text: '📝 语言贡献', link: '/HuskHomes/guides.translations' },
                 { text: '✍️ 变量集群', link: '/HuskHomes/guides.placeholders' },
               ]
             },
-            { text: '开发者', collapsed: true, items: [
+            {
+              text: '开发者', collapsed: true, items: [
                 {
                   text: '📦 API', link: '/HuskHomes/developers.api', collapsed: true, items: [
                     { text: '💡 API 示例', link: '/HuskHomes/developers.api.api-examples' },
@@ -476,14 +478,15 @@ export default defineConfig({
             {
               text: '安装', collapsed: true, items: [
                 { text: '📚 安装教程', link: '/HuskSync/setup.setup' },
-                { text: '💾 数据库', link: '/HuskSync/setup.databse' },
-                { text: '✨ Redis', link: '/HuskSync/setup.redis'},
+                { text: '💾 数据库', link: '/HuskSync/setup.database' },
+                { text: '✨ Redis', link: '/HuskSync/setup.redis' },
                 { text: '⚠️ 兼容相关', link: '/HuskSync/setup.compatbility' },
                 { text: '📄 配置文件', link: '/HuskSync/setup.config-file' },
                 { text: '🔗 问题排查', link: '/HuskSync/setup.troubleshooting' },
               ]
             },
-            { text: '功能', collapsed: true, items: [
+            {
+              text: '功能', collapsed: true, items: [
                 { text: '🖥️ 命令列表', link: '/HuskSync/features.commands' },
                 { text: '✅ 同步功能', link: '/HuskSync/features.sync-features' },
                 { text: '⚙️ 同步模式', link: '/HuskSync/features.sync-modes' },
@@ -502,12 +505,13 @@ export default defineConfig({
                 { text: '🎏 语言贡献', link: '/HuskSync/guides.translations' },
               ]
             },
-            { text: '开发者', collapsed: true, items: [
+            {
+              text: '开发者', collapsed: true, items: [
                 {
                   text: '📦 API v3', link: '/HuskSync/developers.api-v3', collapsed: true, items: [
                     { text: '📝 数据快照 API', link: '/HuskSync/developers.api-v3.data-snapshot-api' },
                     { text: '📝 自定义数据 API', link: '/HuskSync/developers.api-v3.custom-data-api' },
-                    { text: '❗ API 事件', link: '/HuskSync/vdocumentation.api-v3.api-events' },
+                    { text: '❗ API 事件', link: '/HuskSync/developers.api-v3.api-events' },
                   ]
                 },
                 { text: '🕸️ API v2<i>（旧版）</i>', link: '/HuskSync/developers.api-v2' },

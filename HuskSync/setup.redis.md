@@ -8,11 +8,11 @@ Redis 是一个用于数据缓存及跨服通信的服务器。HuskSync 需要�
 
 [Redis](http://redis.io/)（**RE**mote **DI**ctionary **S**erver，远程字典服务）是一个开源、内存加载数据的存储服务器，可用作缓存、通信断点、流数据引擎或数据库。
 
-HuskSync 需要 Redis，并使用它在玩家切换服务器及主/副通信执行管理员操作（如通过 [`/invsee` 命令]() 更新其他服务器上玩家的数据）时缓存数据。见“[常见问题](guides.faqs.md)”章节获取更多信息。
+HuskSync 需要 Redis，并使用它在玩家切换服务器及主/副通信执行管理员操作（如通过 [`/invsee` 命令](features.commands.md) 更新其他服务器上玩家的数据）时缓存数据。见“[常见问题](features.faqs.md)”章节获取更多信息。
 
 ## 配置
 
-若要配置 Redis，找到你的 [`config.yml`](setup.config-files.md)，并修改 `redis` 部分下的内容。将 `broker_type` 设置为 `REDIS`。
+若要配置 Redis，找到你的 [`config.yml`](setup.config-file.md)，并修改 `redis` 部分下的内容。将 `broker_type` 设置为 `REDIS`。
 
 ::: details 数据库选项（config.yml）
 ``` YAML

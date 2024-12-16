@@ -1,6 +1,6 @@
 # 自定义数据 API 
 
-HuskSync 允许你以现有的通用 DataSnapshot 格式保存并同步数据。本章节假设你已阅读过 [API](documentation.api-v3.md) 介绍并已熟悉了[数据快照 API](documentation.api-v3.data-snapshot-api.md)。本页着重讨论对于 Bukkit 上的 API 实现。
+HuskSync 允许你以现有的通用 DataSnapshot 格式保存并同步数据。本章节假设你已阅读过 [API](developers.api-v3.md) 介绍并已熟悉了[数据快照 API](developers.api-v3.data-snapshot-api.md)。本页着重讨论对于 Bukkit 上的 API 实现。
 
 若要这么做，你必须创建并注册一个平台的 `Data` 实现类（如 `BukkitData`）以及一个对应的 `Serializer` 类（如 `BukkitSerializer`）。你之后就可以通过 `OnlineUser#setData(Identifier, Data)` 方法向服务器添加自定义类型数据。
 
