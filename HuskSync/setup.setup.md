@@ -10,9 +10,9 @@ HuskSync 需要一个数据库服务器，一个 Redis 服务器，以及任何�
 * 任意数量的基于 Fabric 或 Spigot/Paper 的服务器。
     * 每个服务器运行的 Minecraft 版本必须相同
     * 不可以在 Fabric 和 Spigot 单端间同步数据
-    * HuskSync 必须安装在你的 Velocity、BungeeCord 及 Waterfall 群组端上
+    * HuskSync 不应安装在你的 Velocity、BungeeCord 及 Waterfall 群组端上
 * 运行了 MySQL v8.0+、MariaDB v5.0+、PostgreSQL 或 MongoDB 之一的[数据库](setup.database.md)服务器。
-* Redis 数据库（5.0 或更高版本）
+* [Redis](setup.redis.md) 数据库（5.0 或更高版本）
 
 ## 安装步骤
 
