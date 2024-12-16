@@ -474,35 +474,43 @@ export default defineConfig({
           text: 'HuskSync 维基', items: [
             { text: '首页', link: '/HuskSync/home' },
             {
-              text: '教程', collapsed: true, items: [
-                { text: '📚 安装教程', link: '/HuskSync/guides.setup' },
-                { text: '⚠️ 兼容相关', link: '/HuskSync/guides.compatbility' },
-                { text: '📄 配置文件', link: '/HuskSync/guides.config-file' },
-                { text: '🔗 问题排查', link: '/HuskSync/guides.troubleshooting' },
-                { text: '↪️ 数据切换', link: '/HuskSync/guides.data-rotation' },
-                { text: '↗️ 旧版迁移', link: '/HuskSync/guides.legacy-migration' },
-                { text: '✨ MPDB 迁移', link: '/HuskSync/guides.mpdb-migration' },
-                { text: '🎏 语言贡献', link: '/HuskSync/guides.translations' },
-                { text: '❓ 常见问题', link: '/HuskSync/guides.faqs' },
+              text: '安装', collapsed: true, items: [
+                { text: '📚 安装教程', link: '/HuskSync/setup.setup' },
+                { text: '💾 数据库', link: '/HuskSync/setup.databse' },
+                { text: '✨ Redis', link: '/HuskSync/setup.redis'},
+                { text: '⚠️ 兼容相关', link: '/HuskSync/setup.compatbility' },
+                { text: '📄 配置文件', link: '/HuskSync/setup.config-file' },
+                { text: '🔗 问题排查', link: '/HuskSync/setup.troubleshooting' },
+              ]
+            },
+            { text: '功能', collapsed: true, items: [
+                { text: '🖥️ 命令列表', link: '/HuskSync/features.commands' },
+                { text: '✅ 同步功能', link: '/HuskSync/features.sync-features' },
+                { text: '⚙️ 同步模式', link: '/HuskSync/features.sync-modes' },
+                { text: '↪️ 数据切换', link: '/HuskSync/features.data-rotation' },
+                { text: '❓ 常见问题', link: '/HuskSync/features.faqs' },
               ]
             },
             {
-              text: '文档', collapsed: true, items: [
-                { text: '🖥️ 命令列表', link: '/HuskSync/documentation.commands' },
-                { text: '✅ 同步功能', link: '/HuskSync/documentation.sync-features' },
-                { text: '⚙️ 同步模式', link: '/HuskSync/documentation.sync-modes' },
-                { text: '🟩 Plan 联动', link: '/HuskSync/documentation.plan-hook' },
-                { text: '☂️ 用户数据缓存', link: '/HuskSync/documentation.dumping-userdata' },
-                { text: '📋 事件优先级', link: '/HuskSync/documentation.event-priorties' },
-                { text: '⚔️ 背包保存', link: '/HuskSync/documentation.keep-inventory' },
+              text: '教程', collapsed: true, items: [
+                { text: '↗️ 旧版迁移', link: '/HuskSync/guides.legacy-migration' },
+                { text: '✨ MPDB 迁移', link: '/HuskSync/guides.mpdb-migration' },
+                { text: '☂️ 用户数据缓存', link: '/HuskSync/guides.dumping-userdata' },
+                { text: '🟩 Plan 联动', link: '/HuskSync/guides.plan-hook' },
+                { text: '📋 事件优先级', link: '/HuskSync/guides.event-priorties' },
+                { text: '⚔️ 背包保存', link: '/HuskSync/guides.keep-inventory' },
+                { text: '🎏 语言贡献', link: '/HuskSync/guides.translations' },
+              ]
+            },
+            { text: '开发者', collapsed: true, items: [
                 {
-                  text: '📦 API v3', link: '/HuskSync/documentation.api-v3', collapsed: true, items: [
-                    { text: '📝 数据快照 API', link: '/HuskSync/documentation.api-v3.data-snapshot-api' },
-                    { text: '📝 自定义数据 API', link: '/HuskSync/documentation.api-v3.custom-data-api' },
-                    { text: '❗ API 事件', link: '/HuskSync/documentation.api-v3.api-events' },
+                  text: '📦 API v3', link: '/HuskSync/developers.api-v3', collapsed: true, items: [
+                    { text: '📝 数据快照 API', link: '/HuskSync/developers.api-v3.data-snapshot-api' },
+                    { text: '📝 自定义数据 API', link: '/HuskSync/developers.api-v3.custom-data-api' },
+                    { text: '❗ API 事件', link: '/HuskSync/vdocumentation.api-v3.api-events' },
                   ]
                 },
-                { text: '🕸️ API v2<i>（旧版）</i>', link: '/HuskSync/documentation.api-v2' },
+                { text: '🕸️ API v2<i>（旧版）</i>', link: '/HuskSync/developers.api-v2' },
               ]
             },
             {

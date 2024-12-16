@@ -1,10 +1,11 @@
 # API v2
 
+HuskSync v2.0 提供了一个 API 用于获取和返回 `UserData` 对象；这是一个用户同步数据的快照。
+
 ::: warning 
 API v2 已不再受支持且不与 HuskSync v3.0 兼容。见[数据快照 API](documentation.api-v3.data-snapshot-api.md) 获取 v3 API 的相关信息。 🚨
 :::
 
-HuskSync 提供了一个 API 用于获取和返回 `UserData` 对象；这是一个用户同步数据的快照。
 该页面默认你已阅读 [API](documentation.api-v3.md) 介绍章节，并将 HuskSync（v2.x）的 API 导入了你的仓库。
 
 🚨 HuskSync API v2 仅针对 v2.0 - v2.2.8 的 HuskSync。它不与 v3.0+ 的 HuskSync 兼容。HuskSync v3 的等价 API 可以在[数据快照 API](documentation.api-v3.data-snapshot-api.md)找到。

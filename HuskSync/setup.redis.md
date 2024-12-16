@@ -1,11 +1,14 @@
-# Redis 数据库支持
-对于群组服，HuskHomes 支持以 Redis（需 5.0 以上版本）为插件的通信协议。如果你需要使用跨服随机传送，你必须使用 Redis。除此之外并无任何强制要求。
+# Redis
+
+Redis 是一个用于数据缓存及跨服通信的服务器。HuskSync 需要至少 5.0+ 的 Redis 才可与[数据库](setup.database.md)搭配使用。这里有很多种方式安装或获取 Redis 服务器。
+
+为了达到最佳预期，我们建议为本地运行（与其他服务器一并运行）的 Redis 服务器分配 1GB 运行内存。如果你有多台机器，则请在你运行了 Velocity/BungeeCord/Waterfall 的服务器上安装 Redis。
 
 ## 什么是 Redis？
 
 [Redis](http://redis.io/)（**RE**mote **DI**ctionary **S**erver，远程字典服务）是一个开源、内存加载数据的存储服务器，可用作缓存、通信断点、流数据引擎或数据库。
 
-HuskHomes 支持 Redis，并可以此作主/副通信频道处理跨服传送及传送请求，以及其他[命令](features.commands.md)
+HuskSync 需要 Redis，并使用它在玩家切换服务器及主/副通信执行管理员操作（如通过 [`/invsee` 命令]() 更新其他服务器上玩家的数据）时缓存数据。见“[常见问题](guides.faqs.md)”章节获取更多信息。
 
 ## 配置
 
@@ -13,20 +16,19 @@ HuskHomes 支持 Redis，并可以此作主/副通信频道处理跨服传送及
 
 ::: details 数据库选项（config.yml）
 ``` YAML
-# Type of network message broker to ues for cross-server networking (PLUGIN_MESSAGE or REDIS)
-broker_type: REDIS
-# Settings for if you're using REDIS as your message broker
+# Redis 设置
 redis:
-  host: localhost
-  port: 6379
-  # Password for your Redis server. Leave blank if you're not using a password.
-  password: ''
-  use_ssl: false
-  # Settings for if you're using Redis Sentinels.
-  # If you're not sure what this is, please ignore this section.
+  # 在此指定 Redis 服务器的登录凭证。若未设置登录密码，则将 "password" 项留空
+  credentials:
+    host: localhost
+    port: 6379
+    password: ''
+    use_ssl: false
+  # Redis 哨兵模式相关设置。请勿擅自修改，否则后果自负！
   sentinel:
-    master_name: ''
-    # List of host:port pairs
+    # 哨兵模式的主节点名称
+    master: ''
+    # 地址:端口列表
     nodes: []
     password: ''
 ```
@@ -55,13 +57,15 @@ user default on nopass ~* &* +@all
 
 ## 获取 Redis 服务器
 
-使用 HuskHomes 不必安装 Redis，但我们推荐你安装它，以获得更好的跨服通信表现。Redis 服务器还可以让你使用跨服传送功能，而这是普通插件通信协议所无法做到的。在不同服务器上获取 Redis 的教程可以在下文找到。HuskHomes 已经过 Redis 公开包调试，但应该也可以和其他分支的 Redis 或相关软件兼容。
+使用 HuskSync 必须使用 Redis 服务器。在不同服务器上获取 Redis 的教程可以在下文找到。HuskSync 已经过 Redis 公开包调试，但应该也可以和其他分支的 Redis 或相关软件兼容。
 
 为了达到最佳预期，我们建议为本地运行（与其他服务器一并运行）的 Redis 服务器分配 1GB 运行内存。如果你有多台机器，则请在你运行了 Velocity/BungeeCord/Waterfall 的服务器上安装 Redis。
 
 ### 若你正在使用服务器托管
 
-联系服务器提供商并请求其为你搭建 Redis。你可以向他们提供本页面的相关描述。如果还在找支持 Redis 的服务器提供商，我们的服务器提供商列表中提到了有关内容。
+联系服务器提供商并请求其为你搭建 Redis。你可以向他们提供本页面的相关描述。如果还在找支持 Redis 的服务器提供商，我们的[服务器提供商列表](https://william278.net/docs/website/redis-hosts)中提到了有关内容。
+
+如果你的服务器提供商没有提供 Redis，你就需要考虑 HuskSync 是否真的适合你了。如果你仍然需要 HuskSync，你可以选择通过 DigitalOcean 等机构租赁外部的 Redis 服务器，尽管我们不推荐这么做，这会导致游戏服务器及缓存之间的延迟增加，从而影响同步性能。
 
 ### 在 Linux 或 macOS 上的 Redis
 
