@@ -18,7 +18,7 @@ export default defineConfig({
     },
     config: (md) => {
       md.use(footnote);
-      md.use(checkbox)
+      md.use(checkbox);
       tabsPlugin(md)
     },
     math: true
@@ -46,6 +46,7 @@ export default defineConfig({
           { text: 'LibreLogin', link: '/LibreLogin/index' },
           { text: 'LuckPerms', link: '/LuckPerms/index' },
           { text: 'Oraxen', link: '/Oraxen/index' },
+          { text: 'PlaceholderAPI', link: '/PlaceholderAPI/index' },
           { text: 'PlayerPoints', link: '/PlayerPoints/index' },
           { text: 'Shopkeepers', link: '/Shopkeepers/index' },
           { text: 'spark', link: '/spark/index' },
@@ -75,6 +76,7 @@ export default defineConfig({
             { text: 'LibreLogin', link: '/LibreLogin/index' },
             { text: 'LuckPerms', link: '/LuckPerms/index' },
             { text: 'Oraxen', link: '/Oraxen/index' },
+            { text: 'PlaceholderAPI', link: '/PlaceholderAPI/index' },
             { text: 'PlayerPoints', link: '/PlayerPoints/index' },
             { text: 'Shopkeepers', link: '/Shopkeepers/index' },
             { text: 'spark', link: '/spark/index' },
@@ -761,6 +763,32 @@ export default defineConfig({
           ]
         },
 
+      ],
+      '/PlaceholderAPI/': [
+        { text: '返回首页', link: '/index' },
+        { text: '前言', link: '/PlaceholderAPI/index' },
+        {
+          text: 'PlaceholderAPI 维基', items: [
+            { text: '欢迎', link: '/PlaceholderAPI/welcome' },
+            {
+              text: '用户教程', collapsed: true, link: '/PlaceholderAPI/user-guides', items: [
+                { text: '命令', link: '/PlaceholderAPI/user-guides.commands' },
+                { text: '使用变量', link: '/PlaceholderAPI/user-guides.using-placeholders' },
+                { text: '变量列表', link: '/PlaceholderAPI/user-guides.placeholder-list' },
+                { text: '使用 PlaceholderAPI 的插件', link: '/PlaceholderAPI/user-guides.plugins-using-placeholderapi' }
+              ]
+            },
+            {
+              text: '开发者教程', collapsed: true, link: '/PlaceholderAPI/dev-guides', items: [
+                { text: '使用 PlaceholderAPI', link: '/PlaceholderAPI/dev-guides.using-placeholderapi' },
+                { text: '创建变量拓展', link: '/PlaceholderAPI/dev-guides.creating-a-placeholderexpansion' },
+                { text: 'eCloud', link: '/PlaceholderAPI/dev-guides.ecloud' }
+              ]
+            },
+            { text: '常见问题', link: '/PlaceholderAPI/common-issues' },
+            { text: '常被问到的问题', link: '/PlaceholderAPI/faq' },
+          ]
+        },
       ],
       '/PlayerPoints/': [
         { text: '返回首页', link: '/index' },
