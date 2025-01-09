@@ -130,11 +130,11 @@ server:
 
 ::::
 
-### 向 PlaceholderAPI 添加变量
+## 向 PlaceholderAPI 添加变量
 
 创建变量拓展的完整教程可以在稍后的“创建变量拓展”章节中浏览。
 
-### 在插件中设置变量
+## 在插件中设置变量
 
 PlaceholderAPI 提供了自动解析插件内其他插件变量的能力，从而使得其他成百上千的变量能够在插件内使用而无需额外代码兼容。  
 若要在你的插件内使用来自其他插件的变量，我们只需[将 PlaceholderAPI 设置为软依赖](#将-placeholderapi-设为软依赖)，然后使用 `setPlaceholders` 方法即可。
