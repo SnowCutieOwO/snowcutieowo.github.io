@@ -1052,7 +1052,7 @@
 在这里列出的变量都需要对应插件才可正常显示。
 
 大多数列出的变量并非 PlaceholderAPI 官方开发团队维护。  
-请在 [Github 议题#510](https://github.com/PlaceholderAPI/PlaceholderAPI/discussions/510)中获悉 PlaceholderAPI 官方开发团队维护的所有变量拓展。
+请在 [Github 议题#510](https://github.com/PlaceholderAPI/PlaceholderAPI/discussions/510) 中获悉 PlaceholderAPI 官方开发团队维护的所有变量拓展。
 
 ### [AAC](https://www.spigotmc.org/resources/6442/)
 
