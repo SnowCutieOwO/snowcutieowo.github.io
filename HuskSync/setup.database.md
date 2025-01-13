@@ -13,7 +13,7 @@ HuskSync 会将玩家数据及快照保存在你设置的服务器中。这和 [
 |`MYSQL`|MySQL 8.0+|
 |`MARIADB`|MariaDB 5.0+|
 |`POSTGRE`|PostgreSQL|
-|[`MONGO`]|MongoDB|
+|[`MONGO`](#mongodb-安装)|MongoDB|
 
 ## 配置
 
