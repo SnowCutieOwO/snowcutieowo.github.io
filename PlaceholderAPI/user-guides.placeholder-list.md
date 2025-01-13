@@ -497,7 +497,7 @@
 允许你通过 IP 或域名（带端口号）对服务器进行 ping 操作，以检查对应服务器的在线情况，返回其他信息等。  
 安装拓展后，对应变量有一到两分钟的“预热”时间。
 
-**注意：**插件在 PlaceholderAPI 的 config.yml 中有独立的更新间隔（update-delay）。
+**注意：** 插件在 PlaceholderAPI 的 config.yml 中有独立的更新间隔（update-delay）。
 
 请将 `<服务器 IP>` 替换为你的服务器/IP。
 
@@ -1132,6 +1132,7 @@
 ### [Advanced Abilities](https://www.spigotmc.org/resources/21983/)
 
 ::: tip 内置于插件
+:::
 
 ``` txt
 %advancedabilities_<技能名称>_level%  
@@ -1910,7 +1911,7 @@
 
 ### [ClansPro](https://www.spigotmc.org/resources/87515/)
 
-::: tip
+::: tip 内置于插件
 :::
 
 ``` txt
@@ -3220,7 +3221,7 @@
 
 ### [LuckPerms](https://www.spigotmc.org/resources/28140/)
 
-::: papi ecloud download LuckPerms
+::: tip papi ecloud download LuckPerms
 :::
 
 你可以在 [LuckPerms 的维基](https://luckperms.net/wiki/Placeholders)中找到完整的变量列表。
