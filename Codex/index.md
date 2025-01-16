@@ -11,5 +11,5 @@
 刚好就这个时间。把东西补全修复一下，就能直接拿上来用。    
 我都不清楚现在还有没有人在用这个插件。
 
-维基原文：https://ajneb97.gitbook.io/codex    
+维基原文：https://ajneb97.gitbook.io/codex  
 原站链接：https://www.spigotmc.org/resources/90371/  

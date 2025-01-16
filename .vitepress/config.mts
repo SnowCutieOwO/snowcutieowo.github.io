@@ -87,10 +87,12 @@ export default defineConfig({
       ],
       'other-sites': [
         { text: '返回首页', link: '/index' },
-        { text: '友链页面', items: [
-          { text: 'CSKB - 日冕知识库', link: '/other-sites/cskb' },
-          { text: 'HiMCBBS', link: '/other-sites/himcbbs' },
-        ] },
+        {
+          text: '友链页面', items: [
+            { text: 'CSKB - 日冕知识库', link: '/other-sites/cskb' },
+            { text: 'HiMCBBS', link: '/other-sites/himcbbs' },
+          ]
+        },
       ],
       '/AureliumSkills/': [
         { text: '返回首页', link: '/index' },
@@ -203,12 +205,20 @@ export default defineConfig({
           items: [
             { text: '首页', link: '/Codex/codex-wiki' },
             { text: '如何开始', link: '/Codex/how-to-start' },
-            { text: '分类教程', link: '/Codex/categories-tutorial' },
-            { text: '界面教程', link: '/Codex/inventory-tutorial' },
-            { text: '其他配置文件', link: '/Codex/other-configuration-files' },
+            { text: '分类教程', link: '/Codex/discoveries-categories-tutorial' },
+            { text: '物品教程', link: '/Codex/items-tutorial' },
+            { text: 'config.yml 教程', link: '/Codex/config-yml-tutorial' },
+            { text: 'inventory.yml 教程', link: '/Codex/inventory-yml-tutorial' },
+            { text: '动作', link: '/Codex/actions' },
             { text: '命令与权限', link: '/Codex/commands-and-permissions' },
             { text: 'PlaceholderAPI 变量', link: '/Codex/placeholderapi-variables' },
-            { text: '自定义可发现物教程', link: '/Codex/customized-discoveries-tutorial' }
+            { text: '自定义日志条目教程', link: '/Codex/customized-discoveries-tutorial' },
+            {
+              text: '默认文件', collapsed: true, items: [
+                { text: 'messages.yml', link: '/Codex/default-files.messages-yml' },
+                { text: 'inventory.yml', link: '/Codex/default-files.inventory-yml' }
+              ]
+            }
           ]
         },
       ],
