@@ -85,6 +85,13 @@ export default defineConfig({
           ]
         }
       ],
+      'other-sites': [
+        { text: '返回首页', link: '/index' },
+        { text: '友链页面', items: [
+          { text: 'CSKB - 日冕知识库', link: '/other-sites/cskb' },
+          { text: 'HiMCBBS', link: '/other-sites/himcbbs' },
+        ] },
+      ],
       '/AureliumSkills/': [
         { text: '返回首页', link: '/index' },
         { text: '前言', link: '/AureliumSkills/index' },
