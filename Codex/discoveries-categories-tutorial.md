@@ -264,7 +264,7 @@ click_actions:
 
 #### 已解锁条目
 
-显示在[分类界面](inventory-tutorial.md)的已解锁条目物品。所有来自于[这里](discoveries-categories-tutorial.md#2-已解锁条目)的变量都可使用。
+显示在[分类界面](inventory-yml-tutorial.md)的已解锁条目物品。所有来自于[这里](discoveries-categories-tutorial.md#2-已解锁条目)的变量都可使用。
 
 ``` YAML
 inventory_items:
@@ -281,7 +281,7 @@ inventory_items:
 
 #### 未解锁条目
 
-显示在[分类界面](inventory-tutorial.md)的未解锁条目物品。所有来自于[这里](discoveries-categories-tutorial.md#3-未解锁条目)的变量都可使用。
+显示在[分类界面](inventory-yml-tutorial.md)的未解锁条目物品。所有来自于[这里](discoveries-categories-tutorial.md#3-未解锁条目)的变量都可使用。
 
 ### 自定义奖励
 

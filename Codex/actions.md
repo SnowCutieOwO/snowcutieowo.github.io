@@ -1,6 +1,6 @@
 # 动作
 
-动作可以用于解锁条目时给予奖励。更多信息可在[这里](categories-tutorial.md)浏览。
+动作可以用于解锁条目时给予奖励。更多信息可在[这里](discoveries-categories-tutorial.md#奖励)浏览。
 
 ## 消息
 
