@@ -85,7 +85,7 @@ export default defineConfig({
           ]
         }
       ],
-      'other-sites': [
+      '/other-sites/': [
         { text: '返回首页', link: '/index' },
         {
           text: '友链页面', items: [

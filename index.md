@@ -15,6 +15,9 @@ hero:
     - theme: alt
       text: 爱发电
       link: https://afdian.com/a/SnowCutieOwO
+    - theme: alt
+      text: 友链页面
+      link: '/other-sites/'
 
 features:
   - title: WorldEdit
