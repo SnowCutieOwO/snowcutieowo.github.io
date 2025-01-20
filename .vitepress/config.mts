@@ -924,7 +924,7 @@ export default defineConfig({
               text: '📦 信息', collapsed: true, items: [
                 { text: '✅ 插件需求', link: '/UltimateShop/info.requirements' },
                 { text: '⚙️ 安装', link: '/UltimateShop/info.install' },
-                { text: '🔗 兼容性', link: '/UltimateShop/info.compability' },
+                { text: '🔗 兼容性', link: '/UltimateShop/info.compatibility' },
                 { text: '🛠️ 配置文件', link: '/UltimateShop/info.configuration-files' },
                 { text: '⌨️ 命令', link: '/UltimateShop/info.commands' },
                 { text: '📊 数据', link: '/UltimateShop/info.data' },
