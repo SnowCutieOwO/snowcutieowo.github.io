@@ -973,7 +973,7 @@ export default defineConfig({
             {
               text: '💰 动态定价', collapsed: true, items: [
                 { text: '🔄 动态定价', link: '/UltimateShop/dynamic-prices.dynamic-price' },
-                { text: '🔴 动态定价状态 - 仅付费版', link: '/UltimateShop/dynamic-price-status-premium' },
+                { text: '🔴 动态定价状态 - 仅付费版', link: '/UltimateShop/dynamic-prices.dynamic-price-status-premium' },
 
               ]
             },
