@@ -50,6 +50,7 @@ export default defineConfig({
           { text: 'PlayerPoints', link: '/PlayerPoints/index' },
           { text: 'Shopkeepers', link: '/Shopkeepers/index' },
           { text: 'spark', link: '/spark/index' },
+          { text: 'UltimateShop', link: '/UltimateShop/index' },
           { text: 'WorldEdit', link: '/WorldEdit/index' },
           { text: 'WorldGuard', link: '/WorldGuard/index' },
         ]
@@ -80,6 +81,7 @@ export default defineConfig({
             { text: 'PlayerPoints', link: '/PlayerPoints/index' },
             { text: 'Shopkeepers', link: '/Shopkeepers/index' },
             { text: 'spark', link: '/spark/index' },
+            { text: 'UltimateShop', link: '/UltimateShop/index' },
             { text: 'WorldEdit', link: '/WorldEdit/index' },
             { text: 'WorldGuard', link: '/WorldGuard/index' },
           ]
@@ -911,6 +913,95 @@ export default defineConfig({
         },
 
 
+      ],
+      '/UltimateShop/': [
+        { text: '返回首页', link: '/index' },
+        { text: '前言', link: '/UltimateShop/index' },
+        {
+          text: 'UltimateShop 中文维基', items: [
+            { text: '🎉 欢迎', link: '/UltimateShop/welcome' },
+            {
+              text: '📦 信息', collapsed: true, items: [
+                { text: '✅ 插件需求', link: '/UltimateShop/info.requirements' },
+                { text: '⚙️ 安装', link: '/UltimateShop/info.install' },
+                { text: '🔗 兼容性', link: '/UltimateShop/info.compability' },
+                { text: '🛠️ 配置文件', link: '/UltimateShop/info.configuration-files' },
+                { text: '⌨️ 命令', link: '/UltimateShop/info.commands' },
+                { text: '📊 数据', link: '/UltimateShop/info.data' },
+                { text: '🚀 性能', link: '/UltimateShop/info.performance' },
+                { text: '❓ 常见问题', link: '/UltimateShop/info.faq' },
+              ]
+            },
+            {
+              text: '📋 格式', collapsed: true, items: [
+                { text: '🛒 物品格式™ 的信息', link: '/UltimateShop/format.info-of-itemformat' },
+                { text: '📝 物品格式™', link: '/UltimateShop/format.itemformat' },
+                { text: '💹 经济格式™', link: '/UltimateShop/format.economyformat' },
+                { text: '🖼️ 展示物品格式', link: '/UltimateShop/format.display-item-format' },
+                { text: '🎬 动作格式', link: '/UltimateShop/format.action-format' },
+                { text: '⚖️ 条件格式', link: '/UltimateShop/format.condition-format' },
+                { text: '➗ 数学运算格式', link: '/UltimateShop/format.math-calculate-format' },
+              ]
+            },
+            {
+              text: '🔌 菜单', collapsed: true, items: [
+                { text: '🔲 全局菜单', link: '/UltimateShop/menus.general-menus' },
+                { text: '🔽 增量购买菜单', link: '/UltimateShop/menus.buy-more-menus' },
+                { text: '🛏️ 基岩版菜单 - 仅付费版', link: '/UltimateShop/menus.bedrock-menus-premium' },
+                { text: '🥉 额外物品描述', link: '/UltimateShop/menus.display-item-add-lore' },
+              ]
+            },
+            {
+              text: '🛍️ 商店', collapsed: true, items: [
+                { text: '📂 商店', link: '/UltimateShop/shops.shops' },
+                { text: '🛒 物品', link: '/UltimateShop/shops.products' },
+                { text: '💰 物品配置：单条目', link: '/UltimateShop/shops.products-config-single-thing' },
+                { text: '♻️ 物品配置：交易次数重置', link: '/UltimateShop/shops.product-config-buy-sell-times-reset' },
+                { text: '📚 普通示例', link: '/UltimateShop/shops.common-examples' },
+                { text: '🌱 示例：真实库存', link: '/UltimateShop/shops.example-stock-like-in-life' },
+                { text: '📅 示例：每日商店', link: '/UltimateShop/shops.example-daily-shops' },
+                { text: '🏆 示例：每日奖励', link: '/UltimateShop/shops.example-daily-rewards' },
+              ]
+            },
+            {
+              text: '📍 变量', collapsed: true, items: [
+                { text: '🔧 内置变量', link: '/UltimateShop/placeholders.built-in-placeholder' },
+                { text: '🔀 随机变量 - 仅付费版', link: '/UltimateShop/placeholders.random-placeholder-premium' },
+                { text: '🔖 折扣变量 - 仅付费版', link: '/UltimateShop/placeholders.discount-placeholder-premium' },
+              ]
+            },
+            {
+              text: '💰 动态定价', collapsed: true, items: [
+                { text: '🔄 动态定价', link: '/UltimateShop/dynamic-prices.dynamic-price' },
+                { text: '🔴 动态定价状态 - 仅付费版', link: '/UltimateShop/dynamic-price-status-premium' },
+
+              ]
+            },
+            {
+              text: '✨ 特色功能', collapsed: true, items: [
+                { text: '🎨 颜色代码', link: '/UltimateShop/features.color-code' },
+                { text: '💴 简单定价', link: '/UltimateShop/features.easy-prices' },
+                { text: '🪄 出售魔杖 - 仅付费版', link: '/UltimateShop/' },
+                { text: '💾 保存物品', link: '/UltimateShop/features.saved-item' },
+                { text: '🌍 本地化物品名称 - 仅付费版', link: '/UltimateShop/features.localized-item-name' },
+                { text: '🌐 多服同步 - 仅付费版', link: '/UltimateShop/features.multi-server-sync-premium' },
+                { text: '🔢 数字格式', link: '/UltimateShop/features.number-format' },
+                { text: '✏️ 游戏内编辑器 - 仅付费版', link: '/UltimateShop/features.in-game-editor-premium' },
+                { text: '🎮 自定义点击事件 - 仅付费版', link: '/UltimateShop/features.custom-click-event-premium' },
+                { text: '🔍 自定义物品匹配方法', link: '/UltimateShop/features.custom-item-match-method' },
+                { text: '🔑 物品给予方法', link: '/UltimateShop/features.give-item-method' },
+                { text: '💳 日志记录 - 仅付费版', link: '/UltimateShop/features.log-transaction-premium' },
+              ]
+            },
+            {
+              text: '💻 开发相关', collapsed: true, items: [
+                { text: '开发教程', link: '/UltimateShop/develop.develop-guide' },
+                { text: '与 UltimateShop 挂钩', link: '/UltimateShop/develop.hook-into-ultimateshop' },
+                { text: '无法实现的事', link: '/UltimateShop/develop.cant-do-things' },
+              ]
+            },
+          ]
+        },
       ],
       '/WorldEdit/': [
         { text: '返回首页', link: '/index' },
