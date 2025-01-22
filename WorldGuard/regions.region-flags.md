@@ -69,12 +69,12 @@
 
 |标志种类|释义|
 |---|---|
-|state|必须为“allow”或“deny”（后面会解释）|
+|state|状态，必须为“allow”或“deny”（后面会解释）|
 |string|任意形式的文本|
 |integer|整数（5 可以，但 5.5 不行）|
 |double|任意小数（5、5.5、2.425 等）|
 |location|世界中的指定位置|
-|boolean|必须为“true”或“false”|
+|boolean（布尔值）|必须为“true”或“false”|
 |set|一个包含不重复内容的列表
 
 还有其他的一些标志，但这些内容总体上不应被考虑。
@@ -104,7 +104,7 @@
 
 尽管如此，还是有可能在这些过程之后产生冲突的标志值。假设这里有两个不同的区域，且有着一样的优先级。此时，标志的值取决于它们的种类：
 
-* 对 state 类型的标志，若设置 `deny`，最终的值仍是 `deny`，若设置 `allow`，则最终的值是 `allow`。
+* 对 state（状态） 类型的标志，若设置 `deny`，最终的值仍是 `deny`，若设置 `allow`，则最终的值是 `allow`。
 * 对于其他种类的标志，结果不固定。因此，不能也不建议在重叠且优先级相同的区域中设置两条不同的欢迎/离开信息。
 
 ## 标志的默认值
@@ -123,35 +123,35 @@
 
 |标志|种类|描述|
 |---|---|---|
-|passthrough|state|这个标志是“passthrough build”的缩写，它和移动没有任何关系。<br>如果没有设置**（默认）**，那么区域会保护其中的方块；<br>如果设置为 `deny`，那么区域会保护其中的方块；<br>如果设置为 `allow`，那么区域不再会保护其中的方块。<br>这个标志是干什么用的？<br>在你使用其他标志（例如 PVP、治疗标志等）且你不想要阻止玩家的建筑行为；<br>为什么不把 `build` 标志设置为 `allow`（稍后解释）呢？这会覆盖其他区域的设置并允许玩家进行建筑！|
-|nonplayer-protection-domains|state|非玩家来源内容，例如活塞，通常是所有区域内的成员，或者只是其中一个优先级最高区域的成员，而在全局区域的情况下，则具体取决于 `use-max-priority-association` 配置文件中的设置。<br><br>区域的边界可以为非玩家来源通过 `nonplayer-protection-domains` 取消该设置。该标志是一个字符串的列表，描述区域各自所属的领域。如果一个非玩家来源是一个区域的成员，那么它也一定会是另一个同领域下区域的成员，只要这个领域内包含多于一个的区域。|
+|passthrough|state（状态）|这个标志是“passthrough build”的缩写，它和移动没有任何关系。<br>如果没有设置**（默认）**，那么区域会保护其中的方块；<br>如果设置为 `deny`，那么区域会保护其中的方块；<br>如果设置为 `allow`，那么区域不再会保护其中的方块。<br>这个标志是干什么用的？<br>在你使用其他标志（例如 PVP、治疗标志等）且你不想要阻止玩家的建筑行为；<br>为什么不把 `build` 标志设置为 `allow`（稍后解释）呢？这会覆盖其他区域的设置并允许玩家进行建筑！|
+|nonplayer-protection-domains|state（状态）|非玩家来源内容，例如活塞，通常是所有区域内的成员，或者只是其中一个优先级最高区域的成员，而在全局区域的情况下，则具体取决于 `use-max-priority-association` 配置文件中的设置。<br><br>区域的边界可以为非玩家来源通过 `nonplayer-protection-domains` 取消该设置。该标志是一个字符串的列表，描述区域各自所属的领域。如果一个非玩家来源是一个区域的成员，那么它也一定会是另一个同领域下区域的成员，只要这个领域内包含多于一个的区域。|
 
 ### 保护相关
 
 
 |标志|种类|描述|
 |---|---|---|
-|build|state|对于全部玩家或方块：<br>方块是否可以被放置或破坏；<br>门、拉杆等（但不限制在容器中的）是否可以使用；<br>实体和方块是否可以交互；<br>是否允许 PVP；<br>是否允许在床上睡觉；<br>是否能打开容器；<br>是否能放置载具（船、矿车等）；<br>等等...|
-|interact|state|包括所有能够“交互”的方块或实体：<br>门、拉杆等（但不限制在容器中的）是否可以使用；<br>载具（包括动物）是否可以骑乘；<br>等等...|
-|block-break|state|方块是否可以被破坏|
-|block-place|state|方块是否可以被放置|
-|use|state|门、拉杆等（但不限制在容器中的）是否可以使用|
-|damage-animals|state|是否能够攻击被动生物（牛、羊等）|
-|chest-access|state|是否能打开容器|
-|ride|state|载具（包括动物）是否可以骑乘|
-|pvp|state|是否允许 PVP|
-|sleep|state|是否允许在床上睡觉|
-|respawn-anchors|state|是否允许激活重生锚|
-|tnt|state|是否允许 TNT 爆炸破坏方块|
-|vehicle-place|state|是否允许放置载具（船、矿车等）|
-|vehicle-destroy|state|是否允许破坏载具|
-|lighter|state|是否可以使用打火石或烈焰弹|
-|block-trampling|state|耕地、乌龟蛋和嗅探兽蛋是否可以被破坏|
-|frosted-ice-form|state|是否允许带有冰霜行者的玩家在水上产生临时的冰块|
-|item-frame-rotation|state|物品是否可以在物品展示框中旋转|
-|firework-damage|state|烟花是否可以对实体造成伤害|
-|use-anvil|state|是否可以使用铁砧|
-|use-dripleaf|state|是否可以使用（大型）垂滴叶|
+|build|state（状态）|对于全部玩家或方块：<br>方块是否可以被放置或破坏；<br>门、拉杆等（但不限制在容器中的）是否可以使用；<br>实体和方块是否可以交互；<br>是否允许 PVP；<br>是否允许在床上睡觉；<br>是否能打开容器；<br>是否能放置载具（船、矿车等）；<br>等等...|
+|interact|state（状态）|包括所有能够“交互”的方块或实体：<br>门、拉杆等（但不限制在容器中的）是否可以使用；<br>载具（包括动物）是否可以骑乘；<br>等等...|
+|block-break|state（状态）|方块是否可以被破坏|
+|block-place|state（状态）|方块是否可以被放置|
+|use|state（状态）|门、拉杆等（但不限制在容器中的）是否可以使用|
+|damage-animals|state（状态）|是否能够攻击被动生物（牛、羊等）|
+|chest-access|state（状态）|是否能打开容器|
+|ride|state（状态）|载具（包括动物）是否可以骑乘|
+|pvp|state（状态）|是否允许 PVP|
+|sleep|state（状态）|是否允许在床上睡觉|
+|respawn-anchors|state（状态）|是否允许激活重生锚|
+|tnt|state（状态）|是否允许 TNT 爆炸破坏方块|
+|vehicle-place|state（状态）|是否允许放置载具（船、矿车等）|
+|vehicle-destroy|state（状态）|是否允许破坏载具|
+|lighter|state（状态）|是否可以使用打火石或烈焰弹|
+|block-trampling|state（状态）|耕地、乌龟蛋和嗅探兽蛋是否可以被破坏|
+|frosted-ice-form|state（状态）|是否允许带有冰霜行者的玩家在水上产生临时的冰块|
+|item-frame-rotation|state（状态）|物品是否可以在物品展示框中旋转|
+|firework-damage|state（状态）|烟花是否可以对实体造成伤害|
+|use-anvil|state（状态）|是否可以使用铁砧|
+|use-dripleaf|state（状态）|是否可以使用（大型）垂滴叶|
 
 ::: warning
 上述的这些标志都是指定玩家的。例如，`block-break` 标志，如果设置为 deny 的话，将会**禁止活塞推动或破坏方块**。
@@ -183,20 +183,20 @@
 
 |标志|种类|描述|
 |---|---|---|
-|creeper-explosion|state|苦力怕是否可以造成爆炸|
-|enderdragon-block-damage|state|末影龙是否可以破坏方块|
-|ghast-fireball|state|恶魂火球和凋灵的骷髅头是否可以造成爆炸|
-|other-explosion|state|爆炸是否造成伤害|
-|fire-spread|state|火焰是否可以蔓延|
-|enderman-grief|state|末影人是否可以拾起/放置方块|
-|snowman-trails|state|雪傀儡脚下是否会产生雪|
-|ravager-grief|state|劫掠兽是否可以破坏方块|
-|mob-damage|state|实体是否可以攻击玩家|
-|mob-spawning|state|是否禁止实体的生成，包括玩家使用刷怪蛋等方法手动放置的怪物|
+|creeper-explosion|state（状态）|苦力怕是否可以造成爆炸|
+|enderdragon-block-damage|state（状态）|末影龙是否可以破坏方块|
+|ghast-fireball|state（状态）|恶魂火球和凋灵的骷髅头是否可以造成爆炸|
+|other-explosion|state（状态）|爆炸是否造成伤害|
+|fire-spread|state（状态）|火焰是否可以蔓延|
+|enderman-grief|state（状态）|末影人是否可以拾起/放置方块|
+|snowman-trails|state（状态）|雪傀儡脚下是否会产生雪|
+|ravager-grief|state（状态）|劫掠兽是否可以破坏方块|
+|mob-damage|state（状态）|实体是否可以攻击玩家|
+|mob-spawning|state（状态）|是否禁止实体的生成，包括玩家使用刷怪蛋等方法手动放置的怪物|
 |deny-spawn|实体种类列表|禁止生成的实体列表|
-|entity-painting-destroy|state|非玩家来源是否可以破坏挂画|
-|entity-item-frame-destroy|state|非玩家来源是否可以破坏物品展示框|
-|wither-damage|state|凋灵是否可以造成伤害（比如刚生成时爆炸的伤害，而凋灵的骷髅头弹射物所造成的伤害则由上述的 ghast-fireball 控制）|
+|entity-painting-destroy|state（状态）|非玩家来源是否可以破坏挂画|
+|entity-item-frame-destroy|state（状态）|非玩家来源是否可以破坏物品展示框|
+|wither-damage|state（状态）|凋灵是否可以造成伤害（比如刚生成时爆炸的伤害，而凋灵的骷髅头弹射物所造成的伤害则由上述的 ghast-fireball 控制）|
 
 ::: info 示例：阻止羊和猪在主城生成
 实体种类必须在参数中指定：
@@ -210,26 +210,26 @@
 
 |标志名称|种类|描述|
 |---|---|---|
-|lava-fire|state|岩浆是否可以在其附近生成火焰|
-|lightning|state|是否允许雷击产生|
-|water-flow|state|是否允许水流动|
-|lava-flow|state|是否允许岩浆流动|
-|snow-fall|state|是否允许下雪时在区域内生成雪片|
-|snow-melt|state|区域内的雪是否会融化|
-|ice-form|state|区域内的水是否会结冰|
-|ice-melt|state|区域内的冰是否会融化|
-|frosted-ice-melt|state|区域内的霜冰（冰霜行者产生的冰）是否会融化|
-|mushroom-growth|state|是否允许区域内的蘑菇生长|
-|leaf-decay|state|区域内的树叶是否会自然腐烂|
-|grass-growth|state|区域内的草方块是否会蔓延|
-|mycelium-spread|state|区域内的菌丝是否会蔓延|
-|vine-growth|state|区域内的藤蔓（和海草）是否会生长|
-|rock-growth|state|区域内的石头（如滴水石柱等）是否会生长|
-|sculk-growth|state|区域内的幽匿块（和幽匿脉络）是否会蔓延|
-|crop-growth|state|区域内的农作物（小麦、土豆、西瓜等）是否会生长|
-|soil-dry|state|区域中的耕地是否会变干|
-|coral-fade|state|区域中的珊瑚块脱水后是否会死亡|
-|copper-fade|state|铜块是否会氧化|
+|lava-fire|state（状态）|岩浆是否可以在其附近生成火焰|
+|lightning|state（状态）|是否允许雷击产生|
+|water-flow|state（状态）|是否允许水流动|
+|lava-flow|state（状态）|是否允许岩浆流动|
+|snow-fall|state（状态）|是否允许下雪时在区域内生成雪片|
+|snow-melt|state（状态）|区域内的雪是否会融化|
+|ice-form|state（状态）|区域内的水是否会结冰|
+|ice-melt|state（状态）|区域内的冰是否会融化|
+|frosted-ice-melt|state（状态）|区域内的霜冰（冰霜行者产生的冰）是否会融化|
+|mushroom-growth|state（状态）|是否允许区域内的蘑菇生长|
+|leaf-decay|state（状态）|区域内的树叶是否会自然腐烂|
+|grass-growth|state（状态）|区域内的草方块是否会蔓延|
+|mycelium-spread|state（状态）|区域内的菌丝是否会蔓延|
+|vine-growth|state（状态）|区域内的藤蔓（和海草）是否会生长|
+|rock-growth|state（状态）|区域内的石头（如滴水石柱等）是否会生长|
+|sculk-growth|state（状态）|区域内的幽匿块（和幽匿脉络）是否会蔓延|
+|crop-growth|state（状态）|区域内的农作物（小麦、土豆、西瓜等）是否会生长|
+|soil-dry|state（状态）|区域中的耕地是否会变干|
+|coral-fade|state（状态）|区域中的珊瑚块脱水后是否会死亡|
+|copper-fade|state（状态）|铜块是否会氧化|
 
 ::: warning
 标志 `fire-spread`、`water-flow`、`lava-flow` 和 `lava-fire` 需要在配置文本中启用“高频标志”才可正常使用。这是因为这些事件的触发会非常频繁，也就需要更多对区域的检查，并潜在地降低服务器的运行效率（或者只是警告服务器的内存占用略微上升）。
@@ -239,23 +239,23 @@
 
 |标志名称|种类|描述|
 |---|---|---|
-|entry|state|玩家（默认为非成员）是否可以进入该区域|
-|exit|state|玩家（默认为非成员）是否可以离开该区域|
-|exit-via-teleport|state|玩家是否可以通过传送离开该区域。<br><br>仅在玩家被禁止以正常方式离开区域时有效。|
-|exit-override|boolean|是否总是允许玩家离开|
-|entry-deny-message|state|禁止玩家进入区域发送的消息|
-|exit-deny-message|state|禁止玩家离开区域发送的消息|
-|notify-enter|boolean|拥有 `worldguard.notify` 权限的玩家将会在玩家进入区域时收到提示消息|
-|notify-leave|boolean|拥有 `worldguard.notify` 权限的玩家将会在玩家离开区域时收到提示消息|
-|greeting|state|进入区域时向玩家发送的消息|
-|greeting-title|state|进入区域时向玩家发送的标题。使用换行符（`\n`）可发送一个子标题|
-|farewell|state|离开区域时向玩家发送的消息|
-|farewell-title|state|离开区域时向玩家发送的标题。使用换行符（`\n`）可发送一个子标题|
-|enderpearl|state|是否允许在区域内使用末影珍珠|
-|chorus-fruit-teleport|state|是否允许在区域内使用紫颂果传送|
+|entry|state（状态）|玩家（默认为非成员）是否可以进入该区域|
+|exit|state（状态）|玩家（默认为非成员）是否可以离开该区域|
+|exit-via-teleport|state（状态）|玩家是否可以通过传送离开该区域。<br><br>仅在玩家被禁止以正常方式离开区域时有效。|
+|exit-override|boolean（布尔值）|是否总是允许玩家离开|
+|entry-deny-message|state（状态）|禁止玩家进入区域发送的消息|
+|exit-deny-message|state（状态）|禁止玩家离开区域发送的消息|
+|notify-enter|boolean（布尔值）|拥有 `worldguard.notify` 权限的玩家将会在玩家进入区域时收到提示消息|
+|notify-leave|boolean（布尔值）|拥有 `worldguard.notify` 权限的玩家将会在玩家离开区域时收到提示消息|
+|greeting|state（状态）|进入区域时向玩家发送的消息|
+|greeting-title|state（状态）|进入区域时向玩家发送的标题。使用换行符（`\n`）可发送一个子标题|
+|farewell|state（状态）|离开区域时向玩家发送的消息|
+|farewell-title|state（状态）|离开区域时向玩家发送的标题。使用换行符（`\n`）可发送一个子标题|
+|enderpearl|state（状态）|是否允许在区域内使用末影珍珠|
+|chorus-fruit-teleport|state（状态）|是否允许在区域内使用紫颂果传送|
 |teleport|location|在玩家使用 `/region teleport` 传送至区域时，玩家固定出现在的地点|
 |spawn|location|在区域内死亡的玩家（默认成员）重生的位置|
-|teleport-message|state|输入命令 `/region teleport` 传送入区域内的玩家所发送的消息|
+|teleport-message|state（状态）|输入命令 `/region teleport` 传送入区域内的玩家所发送的消息|
 
 ::: tip
 正如上述，标志 `spawn` 仅对“成员”有效，这意味着只有该区域的成员才可使用这个功能。为标志设置区域组可以解决这个问题。
@@ -335,10 +335,10 @@
 
 |标志名称|种类|描述|
 |---|---|---|
-|pistons|state|是否允许使用活塞|
-|send-chat|state|玩家是否可以发送聊天消息|
-|receive-chat|state|玩家是否可以收到聊天消息|
-|potion-splash|state|药水是否可以拥有喷溅效果|
+|pistons|state（状态）|是否允许使用活塞|
+|send-chat|state（状态）|玩家是否可以发送聊天消息|
+|receive-chat|state（状态）|玩家是否可以收到聊天消息|
+|potion-splash|state（状态）|药水是否可以拥有喷溅效果|
 
 ::: info 提示
 WorldGuard 只能限制安装了本插件的服务器中的命令或聊天消息。若你正在使用群组等跨服同步消息的插件，WorldGuard 不能拦截这些消息。
