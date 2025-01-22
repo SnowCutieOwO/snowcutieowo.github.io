@@ -141,7 +141,10 @@ items:
 请注意，部分修改规则需要<font color="red">**付费版本的 MythicChanger，而非付费版本的 UltimateShop！**</font>
 
 ::: info
+
 若你正在使用**付费版本的 MythicChanger**，它会允许你通过添加 nbt-xxx 规则使用自定义 NBT 标签。你也可以使用 `/mc viewnbt` 命令来浏览手持物品的 NBT 数据。
+
+:::
 
 ``` YAML
 change-item:
