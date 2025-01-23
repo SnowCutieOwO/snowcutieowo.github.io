@@ -96,6 +96,12 @@ export default defineConfig({
           ]
         },
       ],
+      '/common/': [
+        { text: '返回首页', link: '/index' },
+        { text: '通例', link: '/common/index' },
+        { text: '支持 Folia 的插件列表', link: '/common/folia-plugins' },
+        { text: '翻译插件目录', link: '/common/translation-index' },
+      ],
       '/AureliumSkills/': [
         { text: '返回首页', link: '/index' },
         { text: '前言', link: '/AureliumSkills/index' },
