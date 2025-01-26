@@ -18,6 +18,9 @@ hero:
     - theme: alt
       text: 友链页面
       link: '/other-sites/'
+    - theme: alt
+      text: 凡例
+      link: '/common/'
 
 features:
   - title: WorldEdit
