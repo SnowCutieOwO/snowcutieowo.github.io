@@ -936,6 +936,7 @@ export default defineConfig({
                 { text: '📊 数据', link: '/UltimateShop/info.data' },
                 { text: '🚀 性能', link: '/UltimateShop/info.performance' },
                 { text: '❓ 常见问题', link: '/UltimateShop/info.faq' },
+                { text: '🆚 比较', link: '/UltimateShop/info.compare' }
               ]
             },
             {
