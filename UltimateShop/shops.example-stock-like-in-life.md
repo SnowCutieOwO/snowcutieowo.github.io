@@ -36,5 +36,5 @@
 
 我们需要修改：
 - `price-mode` 项设置为 `ANY` 或 `ALL`；
-- `buy-limits` 项设置为 `{sell-times-server}`。对于出售限制，你需要在此填入 `{buy-times-server}`。将 `{buy-times-player}` 变量替换为 `{sell-times-player}` 确保库存对玩家分别生效。
+- `buy-limits` 项设置为 `{sell-times-server}`。对于出售限制，你需要在此填入 `{buy-times-server}`。若替换为 `{buy-times-player}` 与 `{sell-times-player}` 则表示余量对玩家分别计算。
 - `buy-limits-reset-mode` 项设置为 `'NEVER'`。
