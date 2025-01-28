@@ -19,7 +19,7 @@ export default defineConfig({
     config: (md) => {
       md.use(footnote);
       md.use(checkbox);
-      tabsPlugin(md)
+      tabsPlugin(md);
     },
     math: true
   },

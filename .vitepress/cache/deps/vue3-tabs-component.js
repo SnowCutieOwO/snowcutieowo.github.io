@@ -20,7 +20,7 @@ import {
   vShow,
   watch,
   withDirectives
-} from "./chunk-XYSSNQS4.js";
+} from "./chunk-VJWGEPT5.js";
 
 // node_modules/vue3-tabs-component/dist/vue3-tabs-component.mjs
 var x = Symbol("addTab");

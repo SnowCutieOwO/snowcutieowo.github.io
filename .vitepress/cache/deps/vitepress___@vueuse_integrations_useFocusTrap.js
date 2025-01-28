@@ -1,14 +1,15 @@
 import {
   notNullish,
-  toValue,
+  toArray,
   tryOnScopeDispose,
   unrefElement
-} from "./chunk-3AKN4UHO.js";
+} from "./chunk-WWCW2THZ.js";
 import {
   computed,
   ref,
+  toValue,
   watch
-} from "./chunk-XYSSNQS4.js";
+} from "./chunk-VJWGEPT5.js";
 
 // node_modules/tabbable/dist/index.esm.js
 var candidateSelectors = ["input:not([inert])", "select:not([inert])", "textarea:not([inert])", "a[href]:not([inert])", "button:not([inert])", "[tabindex]:not(slot):not([inert])", "audio[controls]:not([inert])", "video[controls]:not([inert])", '[contenteditable]:not([contenteditable="false"]):not([inert])', "details>summary:first-of-type:not([inert])", "details:not([inert])"];
@@ -414,7 +415,7 @@ var activeFocusTraps = {
     if (trapStack.length > 0) {
       var activeTrap = trapStack[trapStack.length - 1];
       if (activeTrap !== trap) {
-        activeTrap.pause();
+        activeTrap._setPausedState(true);
       }
     }
     var trapIndex = trapStack.indexOf(trap);
@@ -430,8 +431,8 @@ var activeFocusTraps = {
     if (trapIndex !== -1) {
       trapStack.splice(trapIndex, 1);
     }
-    if (trapStack.length > 0) {
-      trapStack[trapStack.length - 1].unpause();
+    if (trapStack.length > 0 && !trapStack[trapStack.length - 1]._isManuallyPaused()) {
+      trapStack[trapStack.length - 1]._setPausedState(false);
     }
   }
 };
@@ -452,17 +453,6 @@ var isKeyBackward = function isKeyBackward2(e) {
 };
 var delay = function delay2(fn) {
   return setTimeout(fn, 0);
-};
-var findIndex = function findIndex2(arr, fn) {
-  var idx = -1;
-  arr.every(function(value, i) {
-    if (fn(value)) {
-      idx = i;
-      return false;
-    }
-    return true;
-  });
-  return idx;
 };
 var valueOrHandler = function valueOrHandler2(value) {
   for (var _len = arguments.length, params = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -515,6 +505,7 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
     mostRecentlyFocusedNode: null,
     active: false,
     paused: false,
+    manuallyPaused: false,
     // timer ID for when delayInitialFocus is true and initial focus in this trap
     //  has been delayed during activation
     delayInitialFocusTimer: void 0,
@@ -714,7 +705,7 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
           destinationNode = state.tabbableGroups[0].firstTabbableNode;
         }
       } else if (isBackward) {
-        var startOfGroupIndex = findIndex(state.tabbableGroups, function(_ref4) {
+        var startOfGroupIndex = state.tabbableGroups.findIndex(function(_ref4) {
           var firstTabbableNode = _ref4.firstTabbableNode;
           return target === firstTabbableNode;
         });
@@ -729,7 +720,7 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
           destinationNode = containerGroup.nextTabbableNode(target, false);
         }
       } else {
-        var lastOfGroupIndex = findIndex(state.tabbableGroups, function(_ref5) {
+        var lastOfGroupIndex = state.tabbableGroups.findIndex(function(_ref5) {
           var lastTabbableNode = _ref5.lastTabbableNode;
           return target === lastTabbableNode;
         });
@@ -1010,31 +1001,21 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
       return this;
     },
     pause: function pause(pauseOptions) {
-      if (state.paused || !state.active) {
+      if (!state.active) {
         return this;
       }
-      var onPause = getOption(pauseOptions, "onPause");
-      var onPostPause = getOption(pauseOptions, "onPostPause");
-      state.paused = true;
-      onPause === null || onPause === void 0 || onPause();
-      removeListeners();
-      updateObservedNodes();
-      onPostPause === null || onPostPause === void 0 || onPostPause();
-      return this;
+      state.manuallyPaused = true;
+      return this._setPausedState(true, pauseOptions);
     },
     unpause: function unpause(unpauseOptions) {
-      if (!state.paused || !state.active) {
+      if (!state.active) {
         return this;
       }
-      var onUnpause = getOption(unpauseOptions, "onUnpause");
-      var onPostUnpause = getOption(unpauseOptions, "onPostUnpause");
-      state.paused = false;
-      onUnpause === null || onUnpause === void 0 || onUnpause();
-      updateTabbableNodes();
-      addListeners();
-      updateObservedNodes();
-      onPostUnpause === null || onPostUnpause === void 0 || onPostUnpause();
-      return this;
+      state.manuallyPaused = false;
+      if (trapStack[trapStack.length - 1] !== this) {
+        return this;
+      }
+      return this._setPausedState(false, unpauseOptions);
     },
     updateContainerElements: function updateContainerElements(containerElements) {
       var elementsAsArray = [].concat(containerElements).filter(Boolean);
@@ -1048,6 +1029,38 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
       return this;
     }
   };
+  Object.defineProperties(trap, {
+    _isManuallyPaused: {
+      value: function value() {
+        return state.manuallyPaused;
+      }
+    },
+    _setPausedState: {
+      value: function value(paused, options) {
+        if (state.paused === paused) {
+          return this;
+        }
+        state.paused = paused;
+        if (paused) {
+          var onPause = getOption(options, "onPause");
+          var onPostPause = getOption(options, "onPostPause");
+          onPause === null || onPause === void 0 || onPause();
+          removeListeners();
+          updateObservedNodes();
+          onPostPause === null || onPostPause === void 0 || onPostPause();
+        } else {
+          var onUnpause = getOption(options, "onUnpause");
+          var onPostUnpause = getOption(options, "onPostUnpause");
+          onUnpause === null || onUnpause === void 0 || onUnpause();
+          updateTabbableNodes();
+          addListeners();
+          updateObservedNodes();
+          onPostUnpause === null || onPostUnpause === void 0 || onPostUnpause();
+        }
+        return this;
+      }
+    }
+  });
   trap.updateContainerElements(elements);
   return trap;
 };
@@ -1074,7 +1087,7 @@ function useFocusTrap(target, options = {}) {
   };
   const targets = computed(() => {
     const _targets = toValue(target);
-    return (Array.isArray(_targets) ? _targets : [_targets]).map((el) => {
+    return toArray(_targets).map((el) => {
       const _el = toValue(el);
       return typeof _el === "string" ? _el : unrefElement(_el);
     }).filter(notNullish);
@@ -1125,7 +1138,7 @@ tabbable/dist/index.esm.js:
 
 focus-trap/dist/focus-trap.esm.js:
   (*!
-  * focus-trap 7.6.1
+  * focus-trap 7.6.4
   * @license MIT, https://github.com/focus-trap/focus-trap/blob/master/LICENSE
   *)
 */

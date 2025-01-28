@@ -25,7 +25,7 @@ sell:
 
 ### 第三方插件物品
 
-由[受支持插件]()生成的物品会自动判断其物品 ID 并与物品格式内 `hook-item`  选项的物品 ID，所以无论它怎么变化，它最终都可以正常出售。
+由[受支持插件](info.compatibility.md)生成的物品会自动判断其物品 ID 并与物品格式内 `hook-item` 选项的物品 ID，所以无论它怎么变化，它最终都可以正常出售。
 
 ## 单物品自定义匹配方法 - 需要安装 MythicChanger
 
@@ -42,7 +42,7 @@ sell:
 
 对于如何配置 `match-item` 部分的教程，请阅读 MythicChanger 的维基。[点此访问](https://mythicchanger.superiormc.cn/configs/match-item)。需要注意是部分插件的匹配规则需要<font color="red">付费版本的 MythicChanger，而非付费版的 UltimateShop</font>！
 
-示例物品如下所示。在本示例中，绿宝石和钻石都可以出售，但只有钻石会在商店中显示。在玩家购买该物品后，他只会获得钻石，因为 `match-rule` 部分不影响购买。
+示例物品如下所示。在本示例中，绿宝石和钻石都可以出售，但只有钻石会在商店中显示。在玩家购买该物品后，他只会获得钻石，因为 `match-item` 部分不影响购买。
 
 ``` YAML
   A:
