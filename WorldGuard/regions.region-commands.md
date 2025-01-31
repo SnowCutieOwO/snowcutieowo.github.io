@@ -36,7 +36,7 @@
 ### 删除
 
 ```
-/rg removemember [-w <world>] [-a] <id> <members...>
+/rg removemember [-w <世界名称>] [-a] <id> <区域成员...>
 /rg remmember (...)
 /rg removemem (...)
 /rg remmem (...)
@@ -172,7 +172,7 @@
 ### 列表
 
 ```
-/rg list [-i <id search>] [-p <player>] [-w <world>] [<page>]
+/rg list [-i <搜索 ID>] [-p <玩家名称>] [-w <世界名称>] [<页码>]
 ```
 
 列出已经创建的区域。可提供数字用于翻到特定页。
