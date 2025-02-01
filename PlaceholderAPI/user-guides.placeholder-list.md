@@ -875,6 +875,9 @@
 
 ### Statistic
 
+::: tip papi ecloud download Statistic
+:::
+
 支持所有 SpigotAPI 提供的统计数据。`%statistic_<统计数据类型>%`
 
 对于指定方块、物品或实体等...
