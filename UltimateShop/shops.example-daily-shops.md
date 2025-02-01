@@ -6,28 +6,28 @@
 
 我们要先创建随机变量。这个变量可以与“[条件](format.condition-format.md)”组合使用，来实现每天商店中产生不同物品，以此完全达到每日商店插件的效果。
 
-在本示例中，我们创建了一个名为 `daily` 的随机变量。选项如下所述：
+在本示例中，我们在 `random_placeholder` 文件夹下创建了一个名为 `daily.yml` 的随机变量文件。选项如下所述：
 
 * `reset-mode` 与 `reset-time`：变量会每天刷新。
 * `element-amount`：这个变量会在刷新时随机选择五个元素，与商店中刷新的物品数量一致。
 * `elements`：返回内容决定了商店中出现的物品。所以元素的数量应当与商店中可能出现的物品数量相同。
+
+
 * 在本示例中，每日商店会有五个格子，七个不同的物品，意味着每天都会隐藏随机的两个物品，剩余五个物品则会被展示在商店的货架上。
 * 请参阅“[随机变量](placeholders.random-placeholder-premium.md)”章节来获取更多有关随机变量的信息。
 
 ``` YAML
-  random:
-    daily:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      element-amount: 5
-      elements:
-        - 'A'
-        - 'B'
-        - 'C'
-        - 'D'
-        - 'E'
-        - 'F'
-        - 'G'
+reset-mode: TIMED
+reset-time: '00:00:00'
+element-amount: 5
+elements:
+  - 'A'
+  - 'B'
+  - 'C'
+  - 'D'
+  - 'E'
+  - 'F'
+  - 'G'
 ```
 
 ## 配置商店
@@ -578,7 +578,67 @@ items:
           value: 'G'
 ```
 
-## 所有物品价格相同
+## 常问：过于复杂？
+
+自 3.4.3 开始，你可以自定义**单条目**的条件键名。如果你确认你的物品、买价与卖价使用了相同的条件，你可以将其键名设置为相同的值，避免重复设置条件。你可以在 `config.yml` 下找到这些设置：
+
+``` YAML
+conditions:
+  products-key: 'conditions'
+  buy-prices-key: 'conditions'
+  sell-prices-key: 'conditions'
+  display-item-key: 'conditions'
+```
+
+这个实例让所有 `conditions` 键值使用同一个值，所以商店配置应该看起来像：
+
+``` YAML
+items:
+  A:
+    price-mode: CLASSIC_ANY
+    product-mode: CLASSIC_ANY
+    products:
+      one:
+        material: REDSTONE
+        amount: 1
+        give-actions:
+          1:
+            type: message
+            message: 'Hello!'
+      two:
+        material: IRON_INGOT
+        amount: 1
+    sell-prices:
+      one:
+        economy-plugin: Vault
+        amount: 1
+        placeholder: '&6{amount} 硬币'
+        start-apply: 0
+      two:
+        economy-plugin: Vault
+        amount: 3
+        placeholder: '&6{amount} 硬币'
+        start-apply: 0
+    conditions:
+      one:
+        1:
+          type: placeholder
+          placeholder: '{random_daily}'
+          rule: '=='
+          value: 'A'
+      two:
+        1:
+          type: placeholder
+          placeholder: '{random_daily}'
+          rule: '=='
+          value: 'B'
+```
+
+在这个实例中，若满足条件 **one**，我们也会使用 ID 为 **one** 的售价与物品。
+
+对于动作，推荐你在单条目中使用 `give-actions`，而非 `buy-actions` 或 `sell-actions`，因为它们的条件相互分离且不可与单条目条件同步，配置它们会更加困难。 
+
+## 常问：所有物品价格相同？
 
 这是因为你只在这里创建了一个无条件的价格，这会导致所有物品价格相同。若你不需要这样，你可以通过设置 `display-item` 与 `products` 自定义价格。
 

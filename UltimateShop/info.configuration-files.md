@@ -12,6 +12,7 @@
 :::
 
 * `shops`：存储菜单配置文件的位置。
+* `random_placeholders`：存储随机变量配置文件的位置。
 * `config.yml`：存储插件主设置的位置。
 * `generated-item-format.yml`：使用 `/shop generateitemformat` 命令后，我们会将你手持的物品转化为（本插件特有的）**物品格式**并将判断后的内容存储在此文件中。
 * `XX_xx.json`：通过本地化物品名称功能自动生成的本地化文件。文件的名称取决于你为此功能设置的本地语言而变化。其通常以 `.json` 结尾。
@@ -27,6 +28,8 @@
 # UltimateShop 插件作者 @PQguanfang
 #
 # 本插件的维基: ultimateshop.superiormc.cn
+
+# 部分选项可能需要重启服务器才可以生效。
 
 debug: false
 
@@ -125,10 +128,19 @@ menu:
         buy: '购买'
         sell: '出售'
         buy-more: '选择数量'
+        sell-all: '全部出售'
+        # 若不需要可自行删除.
         back: '&c返回'
-  buy-more:
-    menu: buy-more
-    max-amount: 64
+  buy-more-menu:
+    default:
+      menu: buy-more
+      max-amount: 64
+    only-buy:
+      menu: buy-more-buy
+      max-amount: 64
+    only-sell:
+      menu: buy-more-sell
+      max-amount: 64
   auto-open:
     enabled: true
     menu: main
@@ -148,13 +160,16 @@ menu:
     buy-one-stack:
       1:
         type: buy
-        shop: {shop}
-        item: {item}
+        shop: '{shop}'
+        item: '{item}'
         amount: 64
 
 use-times:
   default-reset-mode: 'NEVER'
   default-reset-time: '00:00:00'
+  # 仅对 CUSTOM 类型重置模式有效.
+  default-reset-time-format: 'yyyy-MM-dd HH:mm:ss'
+  default-reset-value: 0
 
 math:
   enabled: true
@@ -234,29 +249,13 @@ placeholder:
       vip: 1.5
       mvp: 2
   discount-conditions:
-    vip:
-      type: permission
-      permission: 'group.vip'
+      1:
+        type: permission
+        permission: 'group.vip'
     mvp:
-      type: permission
-      permission: 'group.mvp'
-  # 仅付费版本。
-  random:
-    rotate:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      elements:
-        - 'A'
-        - 'B'
-        - 'C'
-    daily:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      element-amount: 2
-      elements:
-        - 'A'
-        - 'B'
-        - 'C'
+      1:
+        type: permission
+        permission: 'group.mvp'
   # 仅付费版本
   compare:
     up: '↑'
@@ -277,9 +276,11 @@ placeholder:
   refresh:
     format: "yyyy-MM-dd HH:mm:ss"
     never: "永不"
-  cooldown:
-    format: "yyyy-MM-dd HH:mm:ss"
-    now: "现在"
+  # 仅付费版
+  next:
+    with-day-format: "{d}d {h}h {m}m {s}s"
+    without-day-format: "{h}h {m}m {s}s"
+    never: "等待下次刷新"
   price:
     split-symbol-any: ', '
     split-symbol-all: ', '
@@ -304,8 +305,6 @@ placeholder:
     error: '&#ff3300错误!'
     buy-condition-not-meet: '&#ff3300未达到购买条件!'
     sell-condition-not-meet: '&#ff3300未达到出售条件!'
-    buy-in-cooldown: '&#ff3300尚在冷却!'
-    sell-in-cooldown: '&#ff3300尚在冷却!'
   # 仅付费版本。
   sell-stick:
     infinite: "&c无限"
@@ -332,6 +331,12 @@ prices:
     hook-item: AXE;;TEST_AXE
     amount: 1
     placeholder: '{amount} 神秘斧'
+
+conditions:
+  products-key: 'products-conditions'
+  buy-prices-key: 'buy-prices-conditions'
+  sell-prices-key: 'sell-prices-conditions'
+  display-item-key: 'display-item-conditions'
 
 # 仅付费版本
 sell-stick-items:

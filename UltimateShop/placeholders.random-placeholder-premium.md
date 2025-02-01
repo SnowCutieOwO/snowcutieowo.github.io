@@ -3,54 +3,32 @@
 
 我们在付费版中加入了新的 `{random}` 内建变量。
 
-## 付费
+## 配置
 
-* 打开 `config.yml`，找到如下内容：
+所有随机变量配置都存储在 `random_placeholder` 文件夹下。文件名称就是它的 ID，例如：`rotate.yml` 表示它的 ID 是 `rotate`。示例配置如下：
 
 ``` YAML
-placeholder:
-  # 仅付费版本。
-  random:
-    rotate:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      elements:
-        - 'A'
-        - 'B'
-        - 'C'
-    daily-shop:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      elements:
-        - 'rotate' # 这表示变量会包括所有旋转变量元素。
+reset-mode: TIMED
+reset-time: '00:00:00'
+elements:
+  - 'A'
+  - 'B'
+  - 'C'
 ```
-
-你可以按需修改。
 
 - `reset-mode`/`reset-time`：见下。
 - `element-amount`：选择元素的数量。**（在 3.1.0 被加入）**
 - `elements`：可随机的元素列表。
-    * 支持使用 `~` 符号选择随机数。例如，`5~100` 表示从 5 到 100 之间选择一个随机数。
+    * **支持使用 `~` 符号选择随机数。例如，`5~100` 表示从 5 到 100 之间选择一个随机数。**
 
 ``` YAML
-placeholder:
-  # 仅付费版本。
-  random:
-    rotate:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      elements:
-        - 'A'
-        - 'B'
-        - 'C'
-    daily-shop:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      element-amount: 2
-      elements:
-        - 'A'
-        - 'B'
-        - 'C'
+reset-mode: TIMED
+reset-time: '00:00:00'
+element-amount: 2
+elements:
+  - 'A'
+  - 'B'
+  - 'C'
 ```
 
 ## 使用变量
@@ -70,18 +48,16 @@ placeholder:
 
 ## 示例：随机价格
 
-创建新的随机变量
+### 创建新的随机变量
 
-在这个实例中，我们在 `config.yml` 中创建了一个新的随机变量 `price`。
+在这个实例中，我们在 `random_placeholder` 文件夹下创建了一个新的随机变量文件 `price.yml`。
 
 ``` YAML
-  random:
-    price:
-      reset-mode: TIMED
-      reset-time: '00:00:00'
-      elements:
-        # 随机生成 5 至 100 的数字.
-        - '5~100'
+reset-mode: TIMED
+reset-time: '00:00:00'
+elements:
+# 生成 5 至 100 的随机数.
+  - '5~100'
 ```
 
 ### 在物品配置中设置动态值

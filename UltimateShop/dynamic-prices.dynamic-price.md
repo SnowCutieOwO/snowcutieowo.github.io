@@ -2,10 +2,9 @@
 
 ## 启用数学功能
 
-修改 config.yml 文件下的这些内容：
+修改 `config.yml`：
 
-* 对于 1.2.8 的用户：将 `check-math: false` 改为 `check-math: true`。
-* 对于 1.2.9+ 的用户：见下
+* 将：
 
 ``` YAML
 math:
@@ -25,7 +24,8 @@ math:
 
 即可。
 
-- 将：
+* 将：
+
 ``` YAML
 placeholder:
   data:
@@ -33,11 +33,14 @@ placeholder:
 ```
 
 修改为
+
 ``` YAML
 placeholder:
   data:
     can-used-in-amount: true
 ```
+
+即可。
 
 ## 在物品配置中设置动态值
 
@@ -88,13 +91,13 @@ placeholder:
 
 那么，如何获得这个数字？很简单，它必须满足：
 
-<!-- $ \frac { 购买基础价 - 出售基础价 }  { 购买最高价 - 出售最低价 } /\ge \sum_{i=1}^{n}i $ （即$1+2+3+4+...+n $） -->
+$\frac { 购买基础价 - 出售基础价 }  { 购买最高价 - 出售最低价 } \ge \sum_{i=1}^{n}i$ （即 $1+2+3+4+...+n$）
 
-`(购买基础价 - 出售基础价) / (购买最高价 - 出售最低价) >= 1+2+...+n`
+<!-- `(购买基础价 - 出售基础价) / (购买最高价 - 出售最低价) >= 1+2+...+n` -->
 
-<!-- $ \frac {2.8-2.38} {0.1-0.06} \ge \sum_{i=1}^{4} $ -->
+<!-- (2.8-2.38)/(0.1-0.06) >= 1+2+3+4 -->
 
-在这个实例中，即：(2.8-2.38)/(0.1-0.06) >= 1+2+3+4 ，即本示例中的 <font color="red">n</font> 为 4。
+在这个实例中，即：$\frac {2.8-2.38} {0.1-0.06} \ge \sum_{i=1}^{n}$，解得 $n=4$，即本示例中的 $\textcolor{red}{n}$ 为 4。
 
 需要注意的是：<font color="red">不同的计算公式需要设置不同的 `max-amount` 和 `min-amount`。最安全的方法就是将交易价格修改为相同值。</font>
 
@@ -106,6 +109,19 @@ placeholder:
 * **1.5** 为交易后价格倍率。
 * 在本示例中，第一次只买不卖为 **100**，之后是 **150（+50%）**，之后是 **225（150+150*50%）**。
 * 不要忘了设置 `min-amount` 为接近 **100** 的数，以防止价格过低！
+
+## 可用变量
+
+* {buy-times-player}
+* {buy-times-server}
+* {sell-times-player}
+* {sell-times-server}
+* {last-buy-player}
+* {last-buy-server}
+* {last-sell-player}
+* {last-sell-server}
+
+有关这些变量的更多信息，请浏览[该章节](placeholders.built-in-placeholder.md)。
 
 ## 单玩家动态定价
 

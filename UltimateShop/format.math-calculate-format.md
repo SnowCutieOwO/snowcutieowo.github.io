@@ -29,21 +29,21 @@
 * `%` - 余除，即取二数相除之余。
     （示例：`7 % 4`，会返回 `3`）
 * `abs` - 取绝对值。
-    （示例：`abs$1`；`abs-1`，即 $ \left | -1 \right |$）
+    （示例：`abs$1`；`abs-1`，即 $\left|-1\right|$）
 * `round` - 四舍五入取整数。
     （示例：`round1.5`，`round(2.3)`）
 * `ceil` - 对其内的数字向上取整。
-    （示例：`ceil1.05`，即 $ \left \lceil 1.05 \right \rceil $）
+    （示例：`ceil1.05`，即 $\left \lceil1.05 \right \rceil$）
 * `floor` - 对其内的数字向下取整。
-    （示例：`floot0.95`，即 $ \left \lfloor 0.95 \right \rfloor  $）
+    （示例：`floot0.95`，即 $\left \lfloor0.95 \right \rfloor$）
 * `rand` - 在给定数字与 0 之间选择一个随机数。
     （示例：`rand4`）
 * `log` - 表示指定数的自然对数。
-    （示例：`log(e)`，即 $ \ln_{}{e} $）
+    （示例：`log(e)`，即 $\ln_{}{e}$）
 *  `sqrt` - 表示指定数的平方根。
-    （示例：`sqrt4`，即 $ \sqrt{4} $）
+    （示例：`sqrt4`，即 $\sqrt{4}$）
 * `cbrt` - 表示指定数的立方根。
-    （示例：`cbrt(8)`，即 $ \sqrt[3]{8} $）
+    （示例：`cbrt(8)`，即 $\sqrt[3]{8}$）
 * `sin` - 表示指定数的正弦值。
     （示例：`sin$2`）
 * `cos` - 表示指定数的余弦值。
