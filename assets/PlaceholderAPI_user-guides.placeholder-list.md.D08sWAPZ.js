@@ -282,7 +282,7 @@ import{_ as l,c as i,al as e,j as a,t as p,a as t,o as r}from"./chunks/framework
 <span class="line"><span>%speedpersec_expcollected%</span></span>
 <span class="line"><span>%speedpersec_damaging%</span></span>
 <span class="line"><span>%speedpersec_hurting%</span></span>
-<span class="line"><span>%speedpersec_clicking%</span></span></code></pre></div><h3 id="statistic" tabindex="-1">Statistic <a class="header-anchor" href="#statistic" aria-label="Permalink to &quot;Statistic&quot;">​</a></h3><p>支持所有 SpigotAPI 提供的统计数据。<code>%statistic_&lt;统计数据类型&gt;%</code></p><p>对于指定方块、物品或实体等...</p><div class="language-txt vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">txt</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span># 方块、物品、实体等...</span></span>
+<span class="line"><span>%speedpersec_clicking%</span></span></code></pre></div><h3 id="statistic" tabindex="-1">Statistic <a class="header-anchor" href="#statistic" aria-label="Permalink to &quot;Statistic&quot;">​</a></h3><div class="tip custom-block"><p class="custom-block-title">papi ecloud download Statistic</p></div><p>支持所有 SpigotAPI 提供的统计数据。<code>%statistic_&lt;统计数据类型&gt;%</code></p><p>对于指定方块、物品或实体等...</p><div class="language-txt vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">txt</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span># 方块、物品、实体等...</span></span>
 <span class="line"><span>%statistic_mine_block:&lt;材料名&gt;%</span></span>
 <span class="line"><span>%statistic_use_item:&lt;物品材料名&gt;%</span></span>
 <span class="line"><span>%statistic_break_item:&lt;物品材料名&gt;%</span></span>
@@ -2899,4 +2899,4 @@ import{_ as l,c as i,al as e,j as a,t as p,a as t,o as r}from"./chunks/framework
 <span class="line"><span>%xlt_{成就 ID}_top3score%</span></span>
 <span class="line"><span>%xlt_{成就 ID}_score%</span></span>
 <span class="line"><span>%xlt_{成就 ID}_position%</span></span>
-<span class="line"><span>%xlt_{成就 ID}_type%</span></span></code></pre></div><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>格子序号见下图。<img src="`+o+'" alt="img"> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>',1034))])}const k=l(c,[["render",d]]);export{b as __pageData,k as default};
+<span class="line"><span>%xlt_{成就 ID}_type%</span></span></code></pre></div><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>格子序号见下图。<img src="`+o+'" alt="img"> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>',1035))])}const k=l(c,[["render",d]]);export{b as __pageData,k as default};
