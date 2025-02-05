@@ -123,6 +123,7 @@ export default defineConfig({
     },
   },
   themeConfig: {
+    outlineTitle: '目录',
     // 文章翻页
     docFooter: {
       prev: '上一篇',
