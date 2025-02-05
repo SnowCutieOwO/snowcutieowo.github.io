@@ -34,17 +34,14 @@ features:
   - title: WorldGuard
     details: WorldGuard 维基完整译文
     link: '/WorldGuard/index'
-  - title: ajLeaderboards
-    details: ajLeaderboards 维基完整译文
-    link: '/ajLeaderboards/index'
+  - title: 更多内容...
+    details: 请在右上角菜单展开浏览
 ---
 
-此为 [SnowCutieOwO/Continue](https://www.github.com/SnowCutieOwO/Continue) 仓库的配套维基链接。
+- - -
 
+此为 [SnowCutieOwO/Continue](https://www.github.com/SnowCutieOwO/Continue) 仓库的配套维基链接。  
 本维基先前使用了[自行魔改的 Docsify](https://www.github.com/SnowCutieOwO/Docsify-Template)，后选用了 VitePress。
 
-# 开始使用
-
-你可以点击右上角的“维基列表”，浏览你需要的插件。
-
+你可以点击右上角的“维基列表”，浏览你需要的插件。  
 你也可以点击首页上的内容快速转到你需要的维基。

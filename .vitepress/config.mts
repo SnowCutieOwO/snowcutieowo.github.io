@@ -123,8 +123,46 @@ export default defineConfig({
     },
   },
   themeConfig: {
+    // 文章翻页
+    docFooter: {
+      prev: '上一篇',
+      next: '下一篇'
+    },
+    // 移动端 - 外观
+    darkModeSwitchLabel: '外观',
+    // 移动端 - 返回顶部
+    returnToTopLabel: '回到顶部',
+    // 移动端 - 菜单
+    sidebarMenuLabel: '菜单',
     search: {
-      provider: 'local'
+      provider: 'local',
+      options: {
+        locales: {
+          root: { 
+            translations: {
+              button: {
+                buttonText: '搜索',
+                buttonAriaLabel: '搜索'
+              },
+              modal: {
+                displayDetails: '显示详细列表',
+                resetButtonTitle: '重置搜索',
+                backButtonTitle: '关闭搜索',
+                noResultsText: '没有结果',
+                footer: {
+                  selectText: '选择',
+                  selectKeyAriaLabel: '输入',
+                  navigateText: '导航',
+                  navigateUpKeyAriaLabel: '上箭头',
+                  navigateDownKeyAriaLabel: '下箭头',
+                  closeText: '关闭',
+                  closeKeyAriaLabel: 'esc'
+                }
+              }
+            }
+          }
+        }
+      }
     },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -136,6 +174,7 @@ export default defineConfig({
           { text: 'AureliumSkills（旧）', link: '/AureliumSkills/index' },
           { text: 'Codex', link: '/Codex/index' },
           { text: 'CommandTimer', link: '/CommandTimer/index' },
+          { text: 'CoreProtect', link: '/CoreProtect/index' },
           { text: 'DecentHolograms', link: 'DecentHolograms/index' },
           { text: 'ExcellentCrates', link: '/ExcellentCrates/index' },
           { text: 'ExcellentEnchants', link: '/ExcellentEnchants/index' },
@@ -167,6 +206,7 @@ export default defineConfig({
             { text: 'AureliumSkills（旧）', link: '/AureliumSkills/index' },
             { text: 'Codex', link: '/Codex/index' },
             { text: 'CommandTimer', link: '/CommandTimer/index' },
+            { text: 'CoreProtect', link: '/CoreProtect/index' },
             { text: 'DecentHolograms', link: 'DecentHolograms/index' },
             { text: 'ExcellentCrates', link: '/ExcellentCrates/index' },
             { text: 'ExcellentEnchants', link: '/ExcellentEnchants/index' },
@@ -355,6 +395,36 @@ export default defineConfig({
             { text: '常见问题', link: '/CommandTimer/faq' },
             { text: '术语', link: '/CommandTimer/jargon' },
             { text: '杂项', link: '/CommandTimer/miscellaneous' },
+          ]
+        },
+      ],
+      '/CoreProtect/': [
+        { text: '返回首页', link: '/index' },
+        { text: '前言', link: '/CoreProtect/index' },
+        {
+          text: 'CoreProtect 维基', items: [
+            { text: '欢迎', link: '/CoreProtect/welcome' },
+            { text: '命令', link: '/CoreProtect/commands' },
+            { text: '配置', link: '/CoreProtect/configuration' },
+            { text: '语言', link: '/CoreProtect/languages' },
+            { text: '权限', link: '/CoreProtect/permissions' },
+            { text: '工具与集成', link: '/CoreProtect/tools-intergrations' },
+            {
+              text: 'API', collapsed: true, items: [
+                { text: 'CoreProtect API', link: '/CoreProtect/api.coreprotect-api' },
+                { text: '网络通信 API', link: '/CoreProtect/api.networking-api' },
+                {
+                  text: '版本', collapsed: true, items: [
+                    { text: 'API v10', link: '/CoreProtect/version.api-version-10' },
+                    { text: 'API v7', link: '/CoreProtect/version.api-version-7' },
+                    { text: 'API v8', link: '/CoreProtect/version.api-version-8' },
+                    { text: 'API v9', link: '/CoreProtect/version.api-version-9' },
+                  ]
+                },
+
+              ]
+            },
+
           ]
         },
       ],
@@ -1280,7 +1350,8 @@ export default defineConfig({
       ],
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/SnowCutieOwO/Continue' }
+      { icon: 'github', link: 'https://github.com/SnowCutieOwO/Continue' },
+      { icon: 'afdian', link: 'https://afdian.net/@SnowCutieOwO' }
     ],
     logo: 'favicon.ico'
   }
