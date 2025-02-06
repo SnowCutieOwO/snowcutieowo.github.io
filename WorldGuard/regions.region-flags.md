@@ -191,8 +191,8 @@
 |snowman-trails|state（状态）|雪傀儡脚下是否会产生雪|
 |ravager-grief|state（状态）|劫掠兽是否可以破坏方块|
 |mob-damage|state（状态）|实体是否可以攻击玩家|
-|mob-spawning|state（状态）|是否禁止实体的生成，包括玩家使用刷怪蛋等方法手动放置的怪物|
-|deny-spawn|实体种类列表|禁止生成的实体列表|
+|mob-spawning|state（状态）|是否禁止实体的生成，包括玩家使用命令、刷怪蛋等方法生成的怪物，下 `deny-spawn` 同|
+|deny-spawn|实体种类列表|禁止生成的实体列表，|
 |entity-painting-destroy|state（状态）|非玩家来源是否可以破坏挂画|
 |entity-item-frame-destroy|state（状态）|非玩家来源是否可以破坏物品展示框|
 |wither-damage|state（状态）|凋灵是否可以造成伤害（比如刚生成时爆炸的伤害，而凋灵的骷髅头弹射物所造成的伤害则由上述的 ghast-fireball 控制）|
