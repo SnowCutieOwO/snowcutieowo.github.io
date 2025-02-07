@@ -8,7 +8,7 @@
 
 ::: info
 
-若你的服务器已经正确安装并配置了 Floodgate，控制台会在 UltimateShop 加载时输出 `已挂钩 Floodgate（Hooking into Floodgate）`的消息。若这个消息没有出现但你坚信你的服务器安装了 Floodgate，这很有可能是你下载了插件的变肥版本。付费版本才会在启动时输出这条消息。
+若你的服务器已经正确安装并配置了 Floodgate，控制台会在 UltimateShop 加载时输出 `已挂钩 Floodgate（Hooking into Floodgate）`的消息。若这个消息没有出现但你坚信你的服务器安装了 Floodgate，这很有可能是你下载了插件的免费版本。付费版本才会在启动时输出这条消息。
 
 :::
 
