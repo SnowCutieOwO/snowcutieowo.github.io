@@ -65,6 +65,7 @@
 |GlobalMarketChest|否|是|仅语言文件|[SpigotMC](https://www.spigotmc.org/resources/globalmarketchest-gui-shop-plugin.64921/)|
 |HoloTeleport|否|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/93745)|
 |HuskClaims|否|是|仅语言文件|[Github](https://github.com/WiIIiam278/HuskClaims/blob/master/common/src/main/resources/locales/zh-cn.yml)|
+|HyperCurrencies|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/hypercurrencies.108601/)|
 |InteractiveBoard|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/interactiveboard.77114/)|
 |ItemFliter|否|是|仅语言文件|[Github](https://github.com/pustinek/ItemFilter/blob/master/src/main/resources/languages/ZHCN.yml)|
 |JClans|否|是|仅语言文件|[Github](https://github.com/TheJCN/JClans/blob/main/src/main/resources/zh_cn.yml)|
