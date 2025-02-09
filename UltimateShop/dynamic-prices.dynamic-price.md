@@ -112,14 +112,14 @@ $\frac { 购买基础价 - 出售基础价 }  { 购买最高价 - 出售最低�
 
 ## 可用变量
 
-* {buy-times-player}
-* {buy-times-server}
-* {sell-times-player}
-* {sell-times-server}
-* {last-buy-player}
-* {last-buy-server}
-* {last-sell-player}
-* {last-sell-server}
+* \{buy-times-player\}
+* \{buy-times-server\}
+* \{sell-times-player\}
+* \{sell-times-server\}
+* \{last-buy-player\}
+* \{last-buy-server\}
+* \{last-sell-player\}
+* \{last-sell-server\}
 
 有关这些变量的更多信息，请浏览[该章节](placeholders.built-in-placeholder.md)。
 
