@@ -50,6 +50,21 @@ items:
         placeholder: '&65 硬币'
 ```
 
+### <font color="green">直接</font>支持的保护插件列表
+
+若玩家在这些区域内没有打开容器的权限，则 UltimateShop 会阻止玩家在这些区域中使用出售魔杖。
+
+* BentoBox
+* Dominion
+* GriefPrevention
+* HuskTowns
+* HuskClaims
+* Lands
+* PlotSquared
+* Residence
+* Towny
+* WorldGuard
+
 ## 间接支持
 
 间接支持指代通过灵活运用插件的特性来使其与本插件关联。
