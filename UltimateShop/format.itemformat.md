@@ -540,3 +540,4 @@ damage-resistant: is_fall # 伤害类型标签
 
 * MythicChanger
 * AdvancedEnchantments <font color="red">- 付费</font>
+* NBTAPI <font color="red">- 付费</font>
