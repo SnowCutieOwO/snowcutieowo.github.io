@@ -17,11 +17,28 @@ sell:
   # 对于每个物品, 你可以添加 match-item 部分来制作自定义出售匹配方法, 更多信息请见 Wiki.
   sell-method: Bukkit
   # 仅支持 ItemFormat 出售方法.
-  ignore-item-format-key:
-    - 'lore' 
-    - 'damage'
-    - 'tool.damage-per-block'
+  item-format:
+    require-same-key: false
+    ignore-key:
+      - 'lore'
+      - 'damage'
+      - 'enchants'
+      - 'tool.damage-per-block'
+      - 'nbt.CustomNBTKey'
 ```
+
+对于 `item-format` 部分的选项：
+
+* `require-same-key`：这表示商店中的物品必须拥有玩家物品上的所有数据。  
+  例如：商店有一把不带任何附魔的钻石剑，如果玩家想将一把带锋利附魔的钻石剑出售至商店，且 `require-same-key` 选项为 `true`，则玩家无法完成这个操作。因为商店中的钻石剑没有附魔数据。
+* `ignore-key`：物品格式™列表，在检查物品是否相同时无视这些内容。  
+  例如：商店有一把带锋利附魔的钻石剑，如果玩家出售的钻石剑没有对应附魔，且该列表中没有设置 `enchants` 选项，则玩家无法完成这个操作。否则插件就会无视物品上的附魔并继续检查其他数据。
+
+::: info
+
+你可以通过命令 `/shop generateitemformat` 判断手持物品的物品格式，键名也会在其中显示。例如，如果你只想无视锋利附魔而保留其他附魔，则你可以在 `ignore-keys` 中填入 `enchants.sharpness` 而非 `enchants`。
+
+:::
 
 ### 第三方插件物品
 

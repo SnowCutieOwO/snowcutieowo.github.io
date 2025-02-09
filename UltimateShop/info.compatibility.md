@@ -179,6 +179,40 @@ plugin-enchants:
   PLANTER: 5 # 一个 AdvancedEnchantments 附魔
 ```
 
+## NBTAPI：额外物品格式 - <font color="red">仅付费版</font>
+
+该选项的格式为：
+
+``` YAML
+nbt:
+  <NBT 类型>:
+    <NBT 键名>: <NBT 值>
+```
+
+支持填入的 NBT 类型有：
+
+* byte
+* short
+* int
+* long
+* float
+* double
+* string
+
+例如：
+
+``` YAML
+nbt:
+  string: 
+    customNBT: 'Hello!'
+  int:
+    anotherNBTComponent.theNBTKey: 5
+```
+
 ## MythicChanger；自定义物品匹配
 
-自定义物品匹配方法功能需要用到 MythicChanger。
+[自定义物品匹配方法](features.custom-item-match-method.md)功能需要用到 MythicChanger。
+
+## PlacheolderAPI：额外变量
+
+UltimateShop 向 PlaceholderAPI 提供了这些新的变量。更多信息请[见此](placeholders.built-in-placeholder.md#placeholderapi-支持)。
