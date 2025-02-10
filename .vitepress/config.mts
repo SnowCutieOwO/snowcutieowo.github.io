@@ -379,7 +379,7 @@ export default defineConfig({
             { text: '初次使用', link: '/CommandTimer/getting-started' },
             {
               text: '配置详解',
-              collapsed: false,
+              collapsed: true,
               link: '/CommandTimer/configuration',
               items: [
                 { text: '命令', link: '/CommandTimer/configuration.commands' },
