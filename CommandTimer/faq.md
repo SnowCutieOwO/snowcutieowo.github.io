@@ -13,4 +13,4 @@
 
 ## 我能捐赠吗？
 
-若你想要捐赠，你可以向我的 PayPal 账户 `titivermessch@live.be` 捐赠
+若你想要捐赠，你可以向我的 PayPal 账户 `titivermessch@gmail.com` 捐赠
