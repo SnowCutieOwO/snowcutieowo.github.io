@@ -5,7 +5,7 @@
   原因：Shiki 不支持渲染 HOCON 格式
 -->
 
-```
+``` toml
 #  !!文件为 HOCON 格式!!
 #  HOCON 格式与 JSON 相似，但有一些额外特征。
 #  你可以在 Sponge 维基中找到更多信息：
@@ -221,6 +221,8 @@ info-user="UUID：%uuid%\n正版 UUID：%premium_uuid%\n最后上线：%last_see
 info-verification-mail-sent="验证邮件已发送！若收件箱中没有找到，请检查垃圾邮件箱。重置请求有效期为 10 分钟。"
 # 在玩家启用二步验证时显示的消息。
 kick-2fa-enabled="二步验证已启用！请重新进入服务器。"
+# 在玩家已经连接但试图从其他位置进入服务器时显示的消息。
+kick-already-connected="你已经进入服务器了！"
 # 在玩家使用错误密码登入服务器时显示的消息。
 kick-error-password-wrong="密码错误！"
 # 在玩家使用非法名称进入服务器时显示的消息。

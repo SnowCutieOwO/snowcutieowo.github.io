@@ -5,7 +5,7 @@
   原因：Shiki 不支持渲染 HOCON 格式
 -->
 
-```
+``` toml
 #  !!文件为 HOCON 格式!!
 #  HOCON 格式与 JSON 相似，但有一些额外特征。
 #  你可以在 Sponge 维基中找到更多信息：
@@ -113,10 +113,6 @@ lobby {
     root=[
         lobby1,
         lobby0
-    ],
-    bedwars§myserver§com=[
-        bedwars-hub-0,
-        bedwars-hub-1
     ]
 }
 mail {
@@ -146,6 +142,8 @@ migration {
             database=librelogin
             # 数据库的端口。
             host=localhost
+            # 数据库的 JDBC URL。如果不知道该设置的作用，请勿乱动。（对纯 mysql 请使用 jdbc:mariadb）
+            jdbc-url="jdbc:mariadb://%host%:%port%/%database%?autoReconnect=true&zeroDateTimeBehavior=convertToNull"
             # 数据库连接的最大持续时间。如果不知道该设置的作用，请勿乱动。
             max-life-time=600000
             # 数据库的密码。
@@ -155,6 +153,22 @@ migration {
             # 旧数据库表名。
             table=user-data
             # 数据库的用户名称。
+            user=root
+        }
+        postgresql {
+            # 数据库的名称。
+            database=librelogin
+            # 数据库的端口。
+            host=localhost
+            # 数据库连接的最大持续时间。如果不知道该设置的作用，请勿乱动。
+            max-life-time=600000
+            # 数据库的密码。
+            password=""
+            # 数据库的端口。
+            port=5432
+            # 旧数据库表名.
+            table=user-data
+            # 数据库用户名.
             user=root
         }
         sqlite {
@@ -171,7 +185,6 @@ migration {
     # authme-postgresql - 可用于转化 PostgreSQL AuthMe BCrypt 与 SHA256
     # aegis-mysql - 可用于转化 MySQL Aegis BCrypt
     # dba-mysql - 可用于转化 MySQL DynamicBungeeAuth，其使用了 SHA-512
-
     # nlogin-sqlite - 可用于转化 SQLite NLogin SHA512
     # nlogin-mysql - 可用于转化 MySQL NLogin SHA512
     # loginsecurity-mysql - 可用于转化 MySQL LoginSecurity BCrypt
