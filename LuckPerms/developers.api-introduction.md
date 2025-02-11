@@ -11,7 +11,7 @@ API 使用的是语义化版本号，也就是说在不向前兼容的版本出�
 当前的 API 版本为 `5.4`.
 
 * LuckPerms 的 API 包为 `net.luckperms.api`
-* JavaDocs 在[标准 JavaDoc](https://javadocs.dev/net.luckperms/api/latest)或 API [源码](https://github.com/LuckPerms/LuckPerms/tree/master/api/src/main/java/net/luckperms/api)中均可查询。
+* JavaDocs 在[标准 JavaDoc](https://javadoc.io/doc/net.luckperms/api/latest/)或 API [源码](https://github.com/LuckPerms/LuckPerms/tree/master/api/src/main/java/net/luckperms/api)中均可查询。
 
 ### 更新日志
 

@@ -9,9 +9,9 @@
 只需点击下载按钮，将文件保存在适当的位置即可。
 
 * 若你正在运行的是 Minecraft JE 版的*非模组*服，我们推荐你使用 [Paper](https://papermc.io/) 核心。
-* 若你正在运行的是 Minecraft JE 版的*模组*服，我们推荐你使用 [SpongeForge](https://www.spongepowered.org/) 核心。
-* 若你正在运行的是 Minecraft BE 版的服务器，我们推荐你使用 [NukkitX](https://cloudburstmc.org/) 核心。
-* 若你正在运行的是群组服，我们推荐你使用 [WaterFall](https://papermc.io/downloads#Waterfall)（BungeeCord）或 Velocity 核心。
+* 若你正在运行的是 Minecraft JE 版的*模组*服，我们推荐你使用 [Fabric](https://fabricmc.net/) 或 [NeoForge](https://neoforged.net/) 核心。
+* 若你正在运行的是 Minecraft BE 版的服务器，我们推荐你使用 [Nukkit](https://cloudburstmc.org/) 核心。
+* 若你正在运行的是群组服，我们推荐你使用 [Velocity](https://velocitypowered.com/) 或 [Waterfall](https://papermc.io/downloads#Waterfall)（BungeeCord）或 Velocity 核心。
 
 如果你还没有地方托管你的服务器，来看看我们的合作伙伴 [BisectHosting](https://bisecthosting.com/luck) 吧，这家提供商会为 LuckPerms 的用户在托管 Minecraft 服务器的套餐中提供 25% 的折扣。
 
@@ -23,35 +23,36 @@
 
 需要注意的是，虽然在第一步中提到 Sponge 可以使用“插件”，但它们与 bukkit 插件不相同。Sponge 版与 Bukkit 版 LuckPerms 的 jar 文件不同，因为这两个插件加载平台互不兼容。请确保你安装了正确的版本！
 
-![img](images/installation-1.png)    
-在你找到 plugins 或 mods 文件夹后，点击将第一步下载的 LuckPerms jar 文件上传至此。
+![img](images/installation-1.png)  
+在你进入 plugins 或 mods 文件夹后，点击“上传”按钮，等待界面出现后选择你在第一步下载的 LuckPerms jar 文件。最后点击“上传”。
 
-![img](images/installation-2.png)    
+![img](images/installation-2.png)  
 若你先前已经安装了旧版本的 LuckPerms，请先删除旧版本的 jar 文件。
 
 ## 第三步：完全重启你的服务器
 
-返回你的服务器控制台并通过点击“重启”按钮或输入 `stop` 等的方式重新启动服务器。
+返回你的服务器控制台并通过点击“重启”按钮或输入 `stop` 等方式重新启动服务器。
 
-这能让 LuckPerms 被载入且能生成默认配置文件。
+![img](images/installation-3.png) 
 
-在服务器重启后，你可以查看控制台，确保 LuckPerms 正常载入并启动。
+在服务器开始备份的时候，LuckPerms 会启用并创建默认的配置文件。你可以通过检查控制台来确保 LuckPerms 正常启用。
 
-![img](images/installation-3.png)    
+![img](images/installation-4.png)
+
 现在，LuckPerms 已被安装并在你的服务器上启用了！你可以接着阅读本维基的“用法”部分来获悉下一步该做的事！
 
 ## 第四步：配置 LuckPerms
 
 若要个性化 LuckPerms 的配置，你需要对其的配置文件进行修改。
 
-返回“文件管理器”，打开 `plugins` 文件夹（对于 Bukkit 和 Nukkit 等服务端而言）或 `config` 文件夹（对于 Sponge 或 Fabric 服务端而言）。之后，打开其中的 `LuckPerms` 文件夹。
+返回“文件管理器”，打开 `plugins` 文件夹（对于 Bukkit 和 Nukkit 等服务端而言）或 `config` 文件夹（对于 Sponge、Fabric 或 Forge 服务端而言）。之后，打开其中的 `LuckPerms` 文件夹。
 
-![img](images/installation-4.png)    
+![img](images/installation-5.png)    
 在这里你会找到一些文件。其中比较重要的是：
 * `config.yml` - 此为 Bukkit、Spigot、Nukkit 服务端的配置文件
 * `luckperms.conf` - 此为 Fabric 和 Sponge 服务端的配置文件
-* `luckprems-h2.mv.db` - 此为 LuckPerms 用于存储权限数据的数据库文件（勿删！）
-你可点击 `config.yml` 或 `luckperms.conf` 旁的编辑按钮，并在浏览器中编辑。也可以通过 FTP 进行修改。
+* `luckprems-h2-v2.mv.db` - 此为 LuckPerms 用于存储权限数据的数据库文件（勿删！）
+你可点击 `config.yml` 或 `luckperms.conf` 对其进行浏览或编辑。
 
 ## 第五步（可选）：配置 LuckPerms 的 MySQL 数据库或存储数据的 .yml 文件
 
@@ -61,35 +62,38 @@
 
 若你在一台服务器中运行多个服务端（或是计划在未来这么做），你就需要设置一个诸如 **MySQL** 的远程数据库来存储数据。
 
-大多数服务器托管商都会免费提供这些！[^1]点击“MySQL 数据库”的选项，再点击“创建数据库”，你应该会被要求填入四个内容：域名、数据库名、用户名以及密码。
+大多数服务器托管商都会免费提供这些！[^1]找到“数据库”菜单，再点击“创建数据库”。若弹出输入窗口，只需选择“MySQL”为数据库类型并输入名称即可。
 
-![img](images/installation-5.png)    
-在你设置好这些内容之后，请记下你所填入的内容（或复制表格文件），然后回到 文件管理器中 LuckPerms 的 `config.yml`/`luckperms.conf` 下，点击“编辑”。
+![img](images/installation-6.png)
+
+创建数据库后，弹出的窗口会显示数据库域名、名称、用户名及密码。
+
+![img](images/installation-7.png)
+
+获取这些内容后，记住这些内容（或复制你的表格）并返回文件管理器 LuckPerms 的 `config.yml`/`luckperms.conf` 下并将其打开。
 
 下拉至“存储设定（Storage Settings）” 并将 `storage-method` 设置为 `mysql`，然后再在 `data:` 下将刚才设置的内容填入此处。
 
-![img](images/installation-6.png)    
+![img](images/installation-8.png)    
 点击保存之后，重启你的服务器。
 
-你可以观察控制台日志来确认 MySQL 数据库是否正确安装。若你在 `Loading storage provider... [MYSQL]` 之后没有看见报错信息，说明你已经正确搭建了 MySQL 数据库！
+你可以观察控制台日志来确认 MySQL 数据库是否正确安装。若你在（载入数据提供者... [MYSQL]）`Loading storage provider... [MYSQL]` 之后没有看见报错信息，说明你已经正确搭建了 MySQL 数据库！
 
-![img](images/installation-7.png)    
-记住，群组服下的每一个子服都需要如此配置连接至同一个数据库（无需重复安装 MySQL）。
+![img](images/installation-9.png)    
+记住，群组服下的每一个子服都需要如此配置连接至同一个数据库（但无需重复安装 MySQL）。
 
 ## 常见问题
 
 ### 我应该把 LuckPerms 装在哪？
 
 * 若你正在运行的是群组服，你需要把 LuckPerms 安装至每个子服。
-* 若你也想要在 BungeeCord 群组上使用 LuckPerms 功能，你应该将 LuckPerms-Bungee.jar 放入 BungeeCord 的插件文件夹。
+* 若你也想要在 Velocity/BungeeCord 群组上使用 LuckPerms，你应该将 LuckPerms-Velocity.jar 或 LuckPerms-Bungee.jar 放入你的 Velocity/BungeeCord 的插件文件夹。
 * 若你选择只在群组服核心上安装 LuckPerms，不会对后端的其他子服造成任何影响。若你想要使用这些功能，你应当也在这些子服上安装 LuckPerms。
 
 ### 我可以只把 LuckPerms 装在 BungeeCord 上吗？
 
-* BungeeCord 使用的权限系统完全依赖于后端 Spigot/Sponge 服务器所用的权限系统。
-* 若你想要将原本 Bukkit/Sponge 处理的权限检查转交给 LuckPerms，你需要将 LuckPerms 安装在服务器上。
-* 若你想要将 BungeeCord 插件处理的权限检查转交给 LuckPerms，你需要在 BungeeCord 上安装 BungeeCord 版的 LuckPerms。
-* 你**可以**只将插件装在群组服上，但这会导致由 Bukkit/Sponge 插件处理的权限检查不会被 LuckPerms 处理。
+* 在 Velocity/Bungeecord 上使用的权限系统完全独立于后端子服。
+* 你**可以**只将插件装在群组服上，但这会导致由 Bukkit/Sponge 插件或 Fabric/Forge 模组处理的权限检查不会被 LuckPerms 处理。
 
 ## 要求
 
