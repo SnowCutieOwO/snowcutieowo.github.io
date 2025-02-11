@@ -95,14 +95,32 @@ L FallBackServerVelocity-版本号.jar
   ```
 * 回到你的文本编辑器并在“fallback”下的“default”组中加入你的服务器名称，需要**注意大小写**。下文是一个示例：
 ``` YAML
-# Add here all you lobbies that will be used
-# for the plugin as fallback and for balancing.
-# This list will also be used for /hub command (if enabled).
-# WARNING: It's case-sensitive.
-fallback_list:
-  - lobby1
-  - lobby2
-  - lobby3
+  # Add here your groups with their servers and lobbies.
+  fallback:
+    bedwars:
+      servers:
+        - bwgame1
+        - bwgame2
+        - bwgame3
+      lobbies:
+        - bwlobby1
+        - bwlobby2
+        - bwlobby3
+      mode: FALLBACK
+    survival:
+      servers:
+        - survival
+      lobbies:
+        - lobby1
+        - lobby2
+        - lobby3
+      mode: RECONNECT
+    default: # DON'T delete this default group.
+      servers:
+      - lobby1
+      - lobby2
+      - lobby3
+    mode: DEFAULT
 ```
 * 将配置保持在“mode: DEFAULT”，保存所有改动，你的大厅服就配置完成了。
 * 如上所述，“fallback”部分可以设置每个服在崩溃情况下的行为。它非常易于理解。为了进一步讲述，我会在这里放置一个示例。
