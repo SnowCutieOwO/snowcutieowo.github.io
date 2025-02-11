@@ -570,6 +570,7 @@ export default defineConfig({
             {
               text: '概览', collapsed: true, items: [
                 { text: '🌐 初次使用', link: '/FallbackServer/overview.first-startup-guide' },
+                { text: '📔 插件功能', link: '/FallbackServer/overview.features'},
                 { text: '💥 已知问题', link: '/FallbackServer/overview.known-errors-issues' },
                 { text: '🧬 版本类型', link: '/FallbackServer/overview.version-type' },
               ]
@@ -590,6 +591,7 @@ export default defineConfig({
             {
               text: '其他', collapsed: true, items: [
                 { text: '🚁 支持', link: '/FallbackServer/other.support' },
+                { text: '📸 视频（暂不开放）' }
               ]
             },
           ]
