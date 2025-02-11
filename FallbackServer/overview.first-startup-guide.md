@@ -14,7 +14,7 @@ L Fallback-Server-Addon-版本号.jar
 L FallBackServer-版本号.jar
 L FallBackServerVelocity-版本号.jar
 ```
-* 选择你使用的核心对应版本的插件文件（例如，你正在使用 Velocity，则将 `FallBackServerVelocity` 放入服务器插件文件夹。同理，使用 BungeeCord 则将 `FallBackServer` 放入，依此类推）；
+* 选择你使用的核心对应版本的插件文件（例如，你正在使用 Velocity，则将 `FallBackServerVelocity` 放入服务器插件文件夹。同理，使用 BungeeCord 则将 `FallBackServer` 放入，依此类推），你可以在[这里](overview.version-type.md)找到相关描述；
 将插件放入文件夹后重启服务器即可。
 
 ::: tip 注意
@@ -105,12 +105,11 @@ fallback_list:
   - lobby3
 ```
 * 将配置保持在“mode: DEFAULT”，保存所有改动，你的大厅服就配置完成了。
-* 如上所述，“fallback”部分可以设置每个服在崩溃情况下的行为。它非常易于理解。为了进一步讲述，我会在这里放置一个![示例](https://i.imgur.com/Tub8RhF.png)。
-<!--
-  这段文章需要改进：
-  原因：图片无法加载导致无法转成文字形式从而不能显示在这里。
-  因此在这里先暂时附上原链接。
--->
+* 如上所述，“fallback”部分可以设置每个服在崩溃情况下的行为。它非常易于理解。为了进一步讲述，我会在这里放置一个示例。
+
+![img](images/image1.png)
+
+* 在浏览上述配置之后，你就可以开始编写自己的配置了。需要注意的是，这只是一个用于理解配置的简单示例，你可以在[这里](https://i.imgur.com/kVXAthr.png)找到完整示例。
 * 在完成必要的修改之后，只需重启群组或执行命令 `/fs reload` 即可应用改动。
 * 你现在可能会思考“mode: FALLBACK”的意义。其实它相当简单。在玩家还连接到服务器却遇到服务器崩溃的情况时，插件会自动识别并将你的玩家引流回你预先设计好的大厅服。如果这些大厅服满员或不可用，则插件会将你的玩家重分配至“default”组中的服务器内，也就是你稍早前配置的那些内容，如果这些服务器仍然无法容纳足够的玩家，则这些玩家就会直接断开连接。
 
