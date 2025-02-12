@@ -121,6 +121,7 @@
 |SuperiorSkyBlock 2 OneBlock|否|是|仅语言文件|[Github](https://github.com/BG-Software-LLC/SSB-OneBlock/blob/dev/src/main/resources/lang/zh-CN.yml)|
 |SuperLobbyDeluxe|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/%E2%9C%AA-superlobbydeluxe-1-8-8-1-21-x-%E2%9C%AA.20400/)|
 |Supper Forge|是|是|仅语言文件|[SpigotMC](https://www.spigotmc.org/resources/supper-forge-1-8-x-1-18-x-%E2%9A%92%E2%9A%94-advanced-crafting-item-maker.97418/)|
+|Teleport+|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/teleport-1-7-x-1-13-x-best-plugin-for-teleportation.37136/)|
 |Time In a Bottle|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/time-in-a-bottle.75022/)|
 |The Best Ranks|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/%C2%BB-the-best-ranks-%C2%AB-gui-support-papi-support-easy-to-use-and-the-best-rank-plugin-ever-made.71674/)|
 |TheDungeons|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/%E2%9A%94%EF%B8%8Fthedungeons-automatic-generation-in-any-world.111120/)|
