@@ -12,7 +12,7 @@ hero:
   text: "续 - 维基档案馆"
   tagline: 维基仓库测试版
   image:
-    src: favicon.png
+    src: /favicon.png
   actions:
     - theme: brand
       text: QQ 群
@@ -28,13 +28,13 @@ hero:
       link: '/common/'
 
 features:
-  - title: WorldEdit
+  - title: 📖 WorldEdit
     details: WorldEdit 维基完整译文
     link: '/WorldEdit/index'
-  - title: WorldGuard
+  - title: 📖 WorldGuard
     details: WorldGuard 维基完整译文
     link: '/WorldGuard/index'
-  - title: 更多内容...
+  - title: 🔎 更多内容...
     details: 请在右上角菜单展开浏览
 ---
 

@@ -167,9 +167,13 @@ export default defineConfig({
     },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '首页', link: '/' },
+      { text: '🔙 返回首页', link: '/' },
+      { text: '🔖 友链页面', items: [
+        { text: 'CSKB - 日冕知识库', link: '/other-sites/cskb' },
+        { text: 'HiMCBBS', link: '/other-sites/himcbbs' }
+      ] },
       {
-        text: '维基列表',
+        text: '📘 维基列表',
         items: [
           { text: 'ajLeaderboards', link: '/ajLeaderboards/index' },
           { text: 'AureliumSkills（旧）', link: '/AureliumSkills/index' },
@@ -1356,6 +1360,6 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/SnowCutieOwO/Continue' },
       { icon: 'afdian', link: 'https://afdian.net/@SnowCutieOwO' }
     ],
-    logo: 'favicon.ico'
+    logo: '/public/favicon.svg'
   }
 })
