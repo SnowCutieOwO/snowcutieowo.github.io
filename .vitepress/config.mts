@@ -1360,6 +1360,6 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/SnowCutieOwO/Continue' },
       { icon: 'afdian', link: 'https://afdian.net/@SnowCutieOwO' }
     ],
-    logo: '/public/favicon.svg'
+    logo: 'favicon.svg'
   }
 })
