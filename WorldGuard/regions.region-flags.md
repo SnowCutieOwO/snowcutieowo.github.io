@@ -265,7 +265,7 @@
 :::
 
 ::: warning
-`greeting` 和 `farewell` 项需要配置文件中“使用玩家移动事件” 的设置**不**关闭。
+`greeting` 和 `farewell` 项需要配置文件中“使用玩家移动事件” 的设置**保持**开启。
 :::
 
 ::: info 示例：阻止非成员进入名为“secret_club”的区域
