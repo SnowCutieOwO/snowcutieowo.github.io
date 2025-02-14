@@ -45,6 +45,7 @@
 |DeathTotems (DeathWarden)|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/deathwarden.73535/)|
 |DecentHolograms|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/decentholograms-1-8-1-21-3-papi-support-no-dependencies.96927/)|
 |DeluxeTeleport|否|是|仅语言文件|[Github](https://github.com/MiniPixesoj/DeluxeTeleport/blob/main/src/main/resources/lang/zh-CN/messages.yml)|
+|DMentions|否|是|仅语言文件|[SpigotMC](https://www.spigotmc.org/resources/dmentions-%E2%9C%A8-advanced-player-mention.121452/)|
 |Don't Kill Friends|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/dont-kill-friends-%E2%80%94-tamed-animals-are-now-immortal.118145/)|
 |DragonSlayer|否|是|仅语言文件|[SpigotMC](https://www.spigotmc.org/resources/dragonslayer.36250/)|
 |DynamicFarming|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/dynamicfarming.77082/)|
