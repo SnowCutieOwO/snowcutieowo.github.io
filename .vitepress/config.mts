@@ -1358,7 +1358,7 @@ export default defineConfig({
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/SnowCutieOwO/Continue' },
-      { icon: 'afdian', link: 'https://afdian.net/@SnowCutieOwO' }
+      { icon: 'afdian', link: 'https://afdian.com/@SnowCutieOwO' }
     ],
     logo: 'favicon.svg'
   }
