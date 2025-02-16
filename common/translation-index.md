@@ -2,7 +2,7 @@
 
 在这里存储的插件译文与模组译文均会以表格列出，也有相关指路供你参考。
 
-![img](https://img.shields.io/badge/%E7%8E%B0%E5%AD%98%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6%E6%95%B0-120-93fdf9) ![img](https://img.shields.io/badge/%E9%85%8D%E7%BD%AE%E8%AF%91%E6%96%87%E6%80%BB%E5%AD%97%E6%95%B0-122484-ebfd93)（最后更新：2025/2/14）
+![img](https://img.shields.io/badge/%E7%8E%B0%E5%AD%98%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6%E6%95%B0-121-93fdf9) ![img](https://img.shields.io/badge/%E9%85%8D%E7%BD%AE%E8%AF%91%E6%96%87%E6%80%BB%E5%AD%97%E6%95%B0-123817-ebfd93)（最后更新：2025/2/16）
 
 ## 常见问题
 
@@ -116,6 +116,7 @@
 |Shopkeeper|是|是|仅语言文件|[Github](https://github.com/Shopkeepers/Language-Files/blob/v2.19.0/lang/language-zh_CN.yml)|
 |Slabbo|否|是|仅语言文件|[SpigotMC](https://www.spigotmc.org/resources/slabbo-1-8-x-1-21-x.81368/)|
 |SlotMachine|否|是|仅语言文件|[Crowdin](https://crowdin.com/project/slot-machine/zh-CN)|
+|Smart Spawner|否|是|仅语言文件|[SpigotMC](https://www.spigotmc.org/resources/smart-spawner-gui-spawner-plugin%E2%9C%A8-1-20-1-21-4-%EF%B8%8F.120743/)|
 |sRandomTP|否|是|仅语言文件|[Github](https://github.com/snezhok69/sRandomRTP/blob/master/src/main/resources/Lang/zh_cn.yml)|
 |StackMobs|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/stackmob-enhance-your-servers-performance.29999/)|
 |StarGate|否|是|仅语言文件|[Crowdin](https://crowdin.com/project/stargate-bukkit/zh-CN)|
