@@ -2,7 +2,7 @@
 
 在这里存储的插件译文与模组译文均会以表格列出，也有相关指路供你参考。
 
-![img](https://img.shields.io/badge/%E7%8E%B0%E5%AD%98%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6%E6%95%B0-121-93fdf9) ![img](https://img.shields.io/badge/%E9%85%8D%E7%BD%AE%E8%AF%91%E6%96%87%E6%80%BB%E5%AD%97%E6%95%B0-123817-ebfd93)（最后更新：2025/2/16）
+![img](https://img.shields.io/badge/%E7%8E%B0%E5%AD%98%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6%E6%95%B0-122-93fdf9) ![img](https://img.shields.io/badge/%E9%85%8D%E7%BD%AE%E8%AF%91%E6%96%87%E6%80%BB%E5%AD%97%E6%95%B0-124016-ebfd93)（最后更新：2025/2/17）
 
 ## 常见问题
 
@@ -79,6 +79,7 @@
 |LevelledMobs|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/levelledmobs.74304/)|
 |LibreLogin|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/librelogin-auto-login-2fa-bedrock-support.101040/)|
 |LightFly|否|是|仅语言文件|[Github](https://github.com/JaimeH-Q/LightFly/blob/main/src/main/resources/lang/zh_cn.yml)|
+|LightShowRegion|否|是|仅语言文件|[Github](https://github.com/kainlighty/LightShowRegion) [Modrinth](https://modrinth.com/plugin/lightshowregion)|
 |LiteEco|否|是|仅语言文件|[Github](https://github.com/EncryptSL/LiteEco/blob/main/src/main/resources/locale/zh_cn.yml)|
 |LiteFish|是|否|N/A|[Github](https://github.com/Azlagor322/LiteFish/blob/main/lang/zh_CN.json)|
 |LocketteX|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/73184)|
