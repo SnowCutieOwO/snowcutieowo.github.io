@@ -1150,7 +1150,8 @@ export default defineConfig({
               text: '📍 变量', collapsed: true, items: [
                 { text: '🔧 内置变量', link: '/UltimateShop/placeholders.built-in-placeholder' },
                 { text: '🔀 随机变量 - 仅付费版', link: '/UltimateShop/placeholders.random-placeholder-premium' },
-                { text: '🔖 折扣变量 - 仅付费版', link: '/UltimateShop/placeholders.discount-placeholder-premium' },
+                { text: '⛓️ 条件变量 - 仅付费版', link: '/UltimateShop/placeholders.conditional-placeholder-premium'},
+                { text: '🔖 示例：折扣', link: '/UltimateShop/placeholders.example-discount' },
               ]
             },
             {
