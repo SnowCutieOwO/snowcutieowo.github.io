@@ -72,6 +72,7 @@ sell:
     # 单位为刻。
     cooldown: 5
     hide-message: true
+    display-calculate-multiplier: true
     # 可填入的值: LEFT, RIGHT and LEFT;;RIGHT
     # 请勿修改, 否则后果自负。
     click-type: RIGHT
@@ -218,9 +219,9 @@ display-item:
 
 placeholder:
   auto-settings:
-    # 若启用, 插件会在所有价格变量后加入折扣价.
+    # 若启用, 插件会在所有价格变量后加入条件变量.
     # 避免重复计算.
-    add-discount-in-all-price-amount:
+    add-contditional-in-all-price-amount:
       enabled: false
       buy-placeholder: buy
       sell-placeholder: sell
@@ -236,26 +237,6 @@ placeholder:
     change-amount-in-all-price-placeholder:
       enabled: false
       replace-value: '%formatter_number_format_{amount}%'
-  # 仅付费版本。
-  discount:
-    buy:
-      mode: MIN
-      default: 1
-      vip: 0.5
-      mvp: 0.3
-    sell:
-      mode: MAX
-      default: 1
-      vip: 1.5
-      mvp: 2
-  discount-conditions:
-      1:
-        type: permission
-        permission: 'group.vip'
-    mvp:
-      1:
-        type: permission
-        permission: 'group.mvp'
   # 仅付费版本
   compare:
     up: '↑'
@@ -337,33 +318,6 @@ conditions:
   buy-prices-key: 'buy-prices-conditions'
   sell-prices-key: 'sell-prices-conditions'
   display-item-key: 'display-item-conditions'
-
-# 仅付费版本
-sell-stick-items:
-  A:
-    material: STICK
-    name: '&d出售魔杖 &7(5 使用次数)'
-    lore:
-      - '&f右键点击箱子即可将其内容全部出售!'
-      - ''
-      - '&c剩余使用次数: {times}'
-    usage-times: 5
-  B:
-    material: STICK
-    name: '&d高级出售魔杖 &7(50 使用次数)'
-    lore:
-      - '&f右键点击箱子即可将其内容全部出售!'
-      - ''
-      - '&c剩余使用次数: {times}'
-    usage-times: 50
-  C:
-    material: STICK
-    name: '&5史诗出售魔杖'
-    lore:
-      - '&f右键点击箱子即可将其内容全部出售!'
-      - ''
-      - '&c剩余使用次数: {times}'
-    usage-times: -1
 
 auto-save:
   enabled: true

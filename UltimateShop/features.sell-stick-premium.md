@@ -1,38 +1,30 @@
 # 🪄 出售魔杖 - 仅付费版
 
-打开 `config.yml` 并找到如下内容：
+所有出售魔杖都存储在 `random_placeholder` 文件夹下。文件名即为其 ID，例如，`A.yml` 即其 ID 为 `A`。示例配置如下：
 
 ``` YAML
-# 仅付费版
-sell-stick-items:
-  A:
-    material: STICK
-    name: '&d出售魔杖 &7(可使用 5 次)'
-    lore:
-      - '&f点击箱子使用这个物品!'
-      - ''
-      - '&c剩余使用次数: {times}'
-    usage-times: 5
-  B:
-    material: STICK
-    name: '&d高级出售魔杖 &7(可使用 50 次)'
-    lore:
-      - '&f点击箱子使用这个物品!'
-      - ''
-      - '&c剩余使用次数: {times}'
-    usage-times: 50
-  C:
-    material: STICK
-    name: '&5史诗出售魔杖
-    lore:
-      - '&f点击箱子使用这个物品!'
-      - ''
-      - '&c剩余使用次数: {times}'
-    usage-times: -1
+display-item:
+  material: STICK
+  name: '&d出售魔杖 &7(5 次)'
+  lore:
+    - '&f右键点击箱子使用!'
+    - ''
+    - '&c剩余使用次数: {times}'
+
+usage-times: 5
+
+multiplier: 1.2
+
+actions:
+  1:
+    type: sound
+    sound: 'block.note_block.pling'
+
+conditions: []
 ```
 
-`A` 和 `B` 为物品 ID，其下则是对应配置。
-
-此处可以使用[物品格式]()。
-
-* `usage-times`：物品最大使用次数。若次数小于零或无效，我们将其视作使用次数不限。
+* `display-item`：出售魔杖的显示物品。可以在此使用[物品格式](format.itemformat.md)。
+* `usage-times`：魔杖的最大使用次数。若该值小于零或不存在则为无限耐久。
+* `multiplier`：出售魔杖的倍率。仅支持经济类型翻倍。
+* `actions`：使用魔杖后触发的动作。可以在此使用[动作格式](format.action-format.md)
+* `conditions`：玩家使用该出售魔杖所需达到的条件。可以在此使用[条件格式](format.condition-format.md)。

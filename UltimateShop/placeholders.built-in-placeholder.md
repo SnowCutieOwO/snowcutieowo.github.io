@@ -36,7 +36,7 @@
 |`{random_<ID>;;<数字>}`|返回随机变量中选中指定数量的元素。若元素数量不足，我们会选择之前选择过的元素。你可以在随机变量中的 `element-amount` 选项中设置选择元素的最大数量。|插件内任意位置<br><font color="red">**仅付费版**</font>|
 |`{random-times_<ID>}`|显示随机变量的刷新时间。|插件内任意位置<br><font color="red">**仅付费版**</font>|
 |`{random-next_<ID>}`|显示随机变量刷新时间的倒计时。若未生成刷新时间，则会返回在 `config.yml` 中设置的值。|插件内任意位置<br><font color="red">**仅付费版**</font>|
-|`{discount_<ID>}`|使用折扣变量。<br>更多信息请见“[折扣](placeholders.discount-placeholder-premium.md)”章节。|插件内任意位置<br><font color="red">**仅付费版**</font>|
+|`{conditional_<ID>}`|使用条件变量。<br>更多信息请见“[条件变量](placeholders.conditional-placeholder-premium.md)”章节。|插件内任意位置<br><font color="red">**仅付费版**</font>|
 |`{compare_<数字1>_<数字2>}`|比较两个数字。返回的格式可在 `config.yml` 中修改。|插件内任意位置<br><font color="red">**仅付费版**</font>|
 |`{math_<公式>}`|计算输入的数学公式。例如 `{math_10+50}` 会返回 60。需要你在 `config.yml` 设置 `math.enabled` 为启用。你可以在 `placeholder.math.scale` 部分设置返回的小数位数。|插件内任意位置|
 

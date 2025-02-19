@@ -9,7 +9,7 @@
 |**多服同步**<br>付费版支持同步群组服数据。更多信息请见[多服同步](features.multi-server-sync-premium.md)章节。|❌|✅|
 |**本地化物品名称**<br>付费版无需添加展示名称即可设置物品本地化名称。更多信息请见[本地化物品名称](features.localized-item-name.md)章节。|❌|✅|
 |**随机变量**<br>付费版支持使用内建的随机变量。更多信息请见[随机变量](placeholders.random-placeholder-premium.md)章节。|❌|✅|
-|**折扣变量**<br>付费版支持使用内建的折扣变量。更多信息请见[折扣变量](placeholders.discount-placeholder-premium.md)章节。|❌|✅|
+|**条件变量**<br>付费版支持使用内建的条件变量。更多信息请见[条件变量](placeholders.conditional-placeholder-premium.md)章节。|❌|✅|
 |**动态定价状态**<br>付费版允许将动态价格与基准价格进行比较，并将其显示在描述中。更多信息请见[动态定价状态](dynamic-prices.dynamic-price-status-premium.md)章节。|❌|✅|
 |**更多内建变量**<br>付费版本支持更多内建变量。更多信息请见[内建变量](placeholders.built-in-placeholder.md)章节。|❌|✅|
 |**更多高级动作**<br>付费版支持使用更多高级动作。更多信息请见[动作格式](format.action-format.md)章节。|❌|✅|
