@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as t,al as n}from"./chunks/framework.CAEutmY3.js";const g=JSON.parse('{"title":"API","description":"","frontmatter":{},"headers":[],"relativePath":"Codex/api.md","filePath":"Codex/api.md"}'),l={name:"Codex/api.md"};function p(h,s,e,k,E,d){return t(),a("div",null,s[0]||(s[0]=[n("",7)]))}const o=i(l,[["render",p]]);export{g as __pageData,o as default};

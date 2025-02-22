@@ -1,0 +1,1 @@
+import{_ as r,c as t,o as a,al as o}from"./chunks/framework.CAEutmY3.js";const f=JSON.parse('{"title":"前言","description":"","frontmatter":{},"headers":[],"relativePath":"Codex/index.md","filePath":"Codex/index.md"}'),n={name:"Codex/index.md"};function s(p,e,i,d,_,c){return a(),t("div",null,e[0]||(e[0]=[o("",6)]))}const h=r(n,[["render",s]]);export{f as __pageData,h as default};
