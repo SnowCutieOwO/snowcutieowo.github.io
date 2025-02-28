@@ -88,7 +88,7 @@ public class SomeExpansion extends PlaceholderExpansion {
 ::: warning
 
 内部变量拓展不会被 PlaceholderAPI 自动注册，因为它们不是 expansions 文件夹下的单独 .jar 文件。  
-请见“[注册变量拓展]()”部分获悉详情。
+请见“[注册变量拓展](#注册你的变量拓展)”部分获悉详情。
 
 另外你还需要覆写此方法，并将 `persist()` 设置为 `true`。这可以告知 PlaceholderAPI 不要在插件重载时卸载你的变量拓展，否则会使其失效。
 

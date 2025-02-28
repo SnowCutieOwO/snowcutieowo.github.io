@@ -104,7 +104,7 @@ buy-limits-conditions:
 * `sell-prices`
 * `products`
 
-这些选项会单独介绍，请[点此]()浏览。
+这些选项会单独介绍，请[点此](shops.products-config-single-thing.md)浏览。
 
 ## 交易次数重置选项
 
@@ -117,7 +117,7 @@ buy-limits-conditions:
 * `sell-times-reset-time`
 * `sell-times-reset-time-format`
 
-这些选项会单独介绍，请[点此]()浏览。
+这些选项会单独介绍，请[点此](shops.product-config-buy-sell-times-reset.md)浏览。
 
 ## 动态值
 
