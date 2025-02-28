@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@red-asuka/vitepress-plugin-tabs": "^0.0.4",
+    "element-plus": "^2.9.5",
     "markdown-it-checkbox": "^1.1.0",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
