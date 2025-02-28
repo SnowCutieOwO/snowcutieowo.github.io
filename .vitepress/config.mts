@@ -500,33 +500,39 @@ export default defineConfig({
         { text: '前言', link: '/ExcellentCrates/index' },
         {
           text: 'ExcellentCrates 维基', items: [
-            {
-              text: '🏠 通用', collapsed: true, items: [
-                { text: '🔌 开始使用', link: '/ExcellentCrates/general.getting-started' },
-                { text: '📄 命令列表', link: '/ExcellentCrates/general.commands' },
-                { text: '⛔ 权限列表', link: '/ExcellentCrates/general.permissions' },
-                { text: '🧩 兼容性', link: '/ExcellentCrates/general.compatbility' },
-                { text: '❓ 常见功能问题', link: '/ExcellentCrates/general.common-questions' },
-                { text: '❗ 常见插件问题', link: '/ExcellentCrates/general.common-issues' },
-              ]
-            },
-            {
-              text: '⭐ 功能', collapsed: true, items: [
-                { text: '📱 游戏内编辑器', link: '/ExcellentCrates/features.in-game-editor' },
-                { text: '🏆 累抽奖励', link: '/ExcellentCrates/features.milestones' },
-                { text: '💻 虚拟宝箱与钥匙', link: '/ExcellentCrates/features.virtual-crates-keys' },
-                { text: '🎡 稀有度、权重与几率', link: '/ExcellentCrates/features.rarity-weights-chances' },
-                { text: '💵 开箱收费', link: '/ExcellentCrates/features.crate-open-cost' },
-                { text: '🎍 奖品预览', link: '/ExcellentCrates/features.crate-previews' },
-                { text: '⏳ 抽奖限制', link: '/ExcellentCrates/features.reward-win-limits' },
-                { text: '🎨 奖励变量', link: '/ExcellentCrates/features.reward-placeholders' },
-              ]
-            },
-            {
-              text: '🧰 实用', collapsed: true, items: [
-                { text: '变量列表', link: '/ExcellentCrates/utility.placeholders' },
-              ]
-            }
+            { text: '🏠 欢迎', link: '/ExcellentCrates/welcome' },
+            { text: '🖥️ 命令', link: '/ExcellentCrates/commands'},
+            { text: '⛔ 权限', link: '/ExcellentCrates/permissions'},
+            { text: '🔌 集成', collapsed: true, items: [
+              { text: '自定义物品', link: '/ExcellentCrates/intergrations.custom-items' },
+              { text: '悬浮字', link: '/ExcellentCrates/intergrations.holograms' },
+              { text: 'PlaceholderAPI', link: '/ExcellentCrates/intergrations.placeholderapi' }
+            ] },
+            { text: '⚠️ 常见插件问题', link: '/ExcellentCrates/common-issues' },
+            { text: '❓ 常见功能问题', link: '/ExcellentCrates/common-questions' },
+            { text: '🔧 编辑器界面', link: '/ExcellentCrates/editor-gui' },
+            { text: '⚙️ 配置文件', collapsed: true, items: [
+              { text: '跨服', link: '/ExcellentCrates/configuration.cross-server' },
+              { text: '兑换', link: '/ExcellentCrates/configuration.exchange' }
+            ] },
+            { text: '🧊 宝箱', collapsed: true, items: [
+              { text: '➕ 设置宝箱', link: '/ExcellentCrates/crates.setup-crates' },
+              { text: '💎 外观', link: '/ExcellentCrates/crates.appearance' },
+              { text: '🖼️ 预览', link: '/ExcellentCrates/crates.previews' },
+              { text: '👁️ 开箱动画', link: '/ExcellentCrates/crates.openings' },
+              { text: '🧱 放置', link: '/ExcellentCrates/crates.placement' },
+              { text: '🛑 开箱权限', link: '/ExcellentCrates/crates.open-permission' },
+              { text: '💲 开箱收费', link: '/ExcellentCrates/crates.open-cost' },
+              { text: '⌛ 开箱冷却', link: '/ExcellentCrates/crates.open-cooldown' },
+              { text: '🔑 钥匙需求', link: '/ExcellentCrates/crates.key-requirements' },
+              { text: '🪧 累抽奖励', link: '/ExcellentCrates/crates.milestones' },
+            ] },
+            { text: '🔑 钥匙', collapsed: true, items: [
+              { text: '➕ 设置钥匙', link: '/ExcellentCrates/keys' },
+              { text: '*️⃣ 虚拟钥匙', link: '/ExcellentCrates/keys' }
+            ] },
+            { text: '🔤 变量', link: '/ExcellentCrates/placeholders' },
+            { text: '🔧 开发者 API', link: '/ExcellentCrates/developer-api' }
           ]
         }
       ],
