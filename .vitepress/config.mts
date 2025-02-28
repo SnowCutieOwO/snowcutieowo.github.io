@@ -139,7 +139,7 @@ export default defineConfig({
       provider: 'local',
       options: {
         locales: {
-          root: { 
+          root: {
             translations: {
               button: {
                 buttonText: '搜索',
@@ -168,10 +168,12 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '🔙 返回首页', link: '/' },
-      { text: '🔖 友链页面', items: [
-        { text: 'CSKB - 日冕知识库', link: '/other-sites/cskb' },
-        { text: 'HiMCBBS', link: '/other-sites/himcbbs' }
-      ] },
+      {
+        text: '🔖 友链页面', items: [
+          { text: 'CSKB - 日冕知识库', link: '/other-sites/cskb' },
+          { text: 'HiMCBBS', link: '/other-sites/himcbbs' }
+        ]
+      },
       {
         text: '📘 维基列表',
         items: [
@@ -501,36 +503,44 @@ export default defineConfig({
         {
           text: 'ExcellentCrates 维基', items: [
             { text: '🏠 欢迎', link: '/ExcellentCrates/welcome' },
-            { text: '🖥️ 命令', link: '/ExcellentCrates/commands'},
-            { text: '⛔ 权限', link: '/ExcellentCrates/permissions'},
-            { text: '🔌 集成', collapsed: true, items: [
-              { text: '自定义物品', link: '/ExcellentCrates/intergrations.custom-items' },
-              { text: '悬浮字', link: '/ExcellentCrates/intergrations.holograms' },
-              { text: 'PlaceholderAPI', link: '/ExcellentCrates/intergrations.placeholderapi' }
-            ] },
+            { text: '🖥️ 命令', link: '/ExcellentCrates/commands' },
+            { text: '⛔ 权限', link: '/ExcellentCrates/permissions' },
+            {
+              text: '🔌 集成', collapsed: true, items: [
+                { text: '自定义物品', link: '/ExcellentCrates/intergrations.custom-items' },
+                { text: '悬浮字', link: '/ExcellentCrates/intergrations.holograms' },
+                { text: 'PlaceholderAPI', link: '/ExcellentCrates/intergrations.placeholderapi' }
+              ]
+            },
             { text: '⚠️ 常见插件问题', link: '/ExcellentCrates/common-issues' },
             { text: '❓ 常见功能问题', link: '/ExcellentCrates/common-questions' },
             { text: '🔧 编辑器界面', link: '/ExcellentCrates/editor-gui' },
-            { text: '⚙️ 配置文件', collapsed: true, items: [
-              { text: '跨服', link: '/ExcellentCrates/configuration.cross-server' },
-              { text: '兑换', link: '/ExcellentCrates/configuration.exchange' }
-            ] },
-            { text: '🧊 宝箱', collapsed: true, items: [
-              { text: '➕ 设置宝箱', link: '/ExcellentCrates/crates.setup-crates' },
-              { text: '💎 外观', link: '/ExcellentCrates/crates.appearance' },
-              { text: '🖼️ 预览', link: '/ExcellentCrates/crates.previews' },
-              { text: '👁️ 开箱动画', link: '/ExcellentCrates/crates.openings' },
-              { text: '🧱 放置', link: '/ExcellentCrates/crates.placement' },
-              { text: '🛑 开箱权限', link: '/ExcellentCrates/crates.open-permission' },
-              { text: '💲 开箱收费', link: '/ExcellentCrates/crates.open-cost' },
-              { text: '⌛ 开箱冷却', link: '/ExcellentCrates/crates.open-cooldown' },
-              { text: '🔑 钥匙需求', link: '/ExcellentCrates/crates.key-requirements' },
-              { text: '🪧 累抽奖励', link: '/ExcellentCrates/crates.milestones' },
-            ] },
-            { text: '🔑 钥匙', collapsed: true, items: [
-              { text: '➕ 设置钥匙', link: '/ExcellentCrates/keys' },
-              { text: '*️⃣ 虚拟钥匙', link: '/ExcellentCrates/keys' }
-            ] },
+            {
+              text: '⚙️ 配置文件', collapsed: true, items: [
+                { text: '跨服', link: '/ExcellentCrates/configuration.cross-server' },
+                { text: '兑换', link: '/ExcellentCrates/configuration.exchange' }
+              ]
+            },
+            {
+              text: '🧊 宝箱', collapsed: true, items: [
+                { text: '➕ 设置宝箱', link: '/ExcellentCrates/crates.setup-crates' },
+                { text: '💎 外观', link: '/ExcellentCrates/crates.appearance' },
+                { text: '🖼️ 预览', link: '/ExcellentCrates/crates.previews' },
+                { text: '👁️ 开箱动画', link: '/ExcellentCrates/crates.openings' },
+                { text: '🧱 放置', link: '/ExcellentCrates/crates.placement' },
+                { text: '🛑 开箱权限', link: '/ExcellentCrates/crates.open-permission' },
+                { text: '💲 开箱收费', link: '/ExcellentCrates/crates.open-cost' },
+                { text: '⌛ 开箱冷却', link: '/ExcellentCrates/crates.open-cooldown' },
+                { text: '🔑 钥匙需求', link: '/ExcellentCrates/crates.key-requirements' },
+                { text: '🪧 累抽奖励', link: '/ExcellentCrates/crates.milestones' },
+              ]
+            },
+            {
+              text: '🔑 钥匙', collapsed: true, items: [
+                { text: '➕ 设置钥匙', link: '/ExcellentCrates/keys' },
+                { text: '*️⃣ 虚拟钥匙', link: '/ExcellentCrates/keys' }
+              ]
+            },
             { text: '🔤 变量', link: '/ExcellentCrates/placeholders' },
             { text: '🔧 开发者 API', link: '/ExcellentCrates/developer-api' }
           ]
@@ -580,7 +590,7 @@ export default defineConfig({
             {
               text: '概览', collapsed: true, items: [
                 { text: '🌐 初次使用', link: '/FallbackServer/overview.first-startup-guide' },
-                { text: '📔 插件功能', link: '/FallbackServer/overview.features'},
+                { text: '📔 插件功能', link: '/FallbackServer/overview.features' },
                 { text: '💥 已知问题', link: '/FallbackServer/overview.known-errors-issues' },
                 { text: '🧬 版本类型', link: '/FallbackServer/overview.version-type' },
               ]
@@ -1156,7 +1166,7 @@ export default defineConfig({
               text: '📍 变量', collapsed: true, items: [
                 { text: '🔧 内置变量', link: '/UltimateShop/placeholders.built-in-placeholder' },
                 { text: '🔀 随机变量 - 仅付费版', link: '/UltimateShop/placeholders.random-placeholder-premium' },
-                { text: '⛓️ 条件变量 - 仅付费版', link: '/UltimateShop/placeholders.conditional-placeholder-premium'},
+                { text: '⛓️ 条件变量 - 仅付费版', link: '/UltimateShop/placeholders.conditional-placeholder-premium' },
                 { text: '🔖 示例：折扣', link: '/UltimateShop/placeholders.example-discount' },
               ]
             },
