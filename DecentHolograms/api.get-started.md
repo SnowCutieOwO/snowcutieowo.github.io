@@ -9,13 +9,9 @@
 
 将下列内容添加至你的构建文件中，来将 DecentHolograms API 加入项目。
 
-:::: tabs
+::: code-group 
 
-::: tab Gradle
-
-### build.gradle
-
-``` Kotlin
+``` Kotlin [build.gradle]
 repositories {
     maven { 
       id = "jitpack"
@@ -27,13 +23,8 @@ depencencies {
     compileOnly 'com.github.decentsoftware-eu:decentholograms:2.8.6'
 }
 ```
-:::
 
-::: tab Maven
-
-### pom.xml
-
-```XML
+``` XML [pom.xml]
 <repositories>
   <repository>
     <id>jitpack</id>
@@ -52,120 +43,116 @@ depencencies {
 ```
 :::
 
-::::
+:::: tip 收到了关于 NBT-API 不能正常载入的报错？
+试着将 CodeMC 的仓库加入你的构建文件：
 
-> [!TIP] 收到了关于 NBT-API 不能正常载入的报错？
-> 试着将 CodeMC 的仓库加入你的构建文件：
-> :::: tabs
->
-> ::: tab Gradle id='2'
-> 
-> ### build.gradle
->
-> ``` Kotlin
-> repositories {
->   // Other repositories, including jitpack
->   maven {
->     id = "codemc"
->     url = "https://repo.codemc.io/repository/maven-public/"
->   }
-> }
-> ```
-> :::
->
-> ::: tab Maven id='2'
-> 
-> ### pom.xml
-> 
-> ```XML
-> <repositories>
->   <!-- Other repositories, including jitpack -->
->   <repository>
->     <id>codemc</id>
->     <url>https://repo.codemc.io/repository/maven-public/</url>
->   </repository>
-> </repositories>
-> ```
-> 
-> :::
-> ::::
+::: code-group
+
+``` Kotlin [build.gradle]
+repositories {
+  // Other repositories, including jitpack
+  maven {
+    id = "codemc"
+    url = "https://repo.codemc.io/repository/maven-public/"
+  }
+}
+```
+
+``` XML [pom.xml]
+<repositories>
+<!-- 其他仓库, 包括 jitpack -->
+  <repository>
+    <id>codemc</id>
+    <url>https://repo.codemc.io/repository/maven-public/</url>
+  </repository>
+</repositories>
+```
+
+:::
+
+::::
 
 ## 作为（软）依赖导入
 
 DecentHolograms 需要安装在服务器中才可使用它的 API。
 为确保 DecentHolograms 先于你的插件载入，将它在你的 `plugin.yml` 或 `paper-plugin.yml` 文件中添加为软依赖，如下所示：
 
-### plugin.yml
+<el-tabs v-model="first" type="border-card" >
+<el-tab-pane label="plugin.yml" name="first">
+  
+  <el-tabs v-model="first" type="border-card" >
+  <el-tab-pane label="软依赖" name="first">
+    
+  ``` YAML
+  name: 'MyPlugin'
+  author: 'Me'
+  version: '1.0.0'
 
-:::: tabs
+  main: 'com.example.plugin.MyPlugin'
 
-::: tab 软依赖 id='3'
+  softdepend:
+    - DecentHolograms
+  ```
 
-```YAML
-name: 'MyPlugin'
-author: 'Me'
-version: '1.0.0'
+  </el-tab-pane>
 
-main: 'com.example.plugin.MyPlugin'
+  <el-tab-pane label="硬依赖" name="second">
+    
+  ``` YAML
+  name: 'MyPlugin'
+  author: 'Me'
+  version: '1.0.0'
 
-softdepend:
-  - DecentHolograms
-```
-:::
+  main: 'com.example.plugin.MyPlugin'
 
-::: tab 硬依赖 id='3'
+  depend:
+    - DecentHolograms
+  ```
 
-```YAML
-name: 'MyPlugin'
-author: 'Me'
-version: '1.0.0'
+  </el-tab-pane>
+  </el-tabs>
 
-main: 'com.example.plugin.MyPlugin'
+</el-tab-pane>
 
-depend:
-  - DecentHolograms
-```
+<el-tab-pane label="paper-plugin.yml" type="border-card" name="second">
 
-:::
+  <el-tabs v-model="first" type="border-card" >
+  <el-tab-pane label="软依赖" name="first">
+    
+  ``` YAML
+  name: 'MyPlugin'
+  author: 'Me'
+  version: '1.0.0'
 
-::::
+  main: 'com.example.plugin.MyPlugin'
 
-### paper-plugin.yml
+  dependencies:
+    server:
+      DecentHolograms:
+        load: BEFORE
+        required: false # 不存在时默认使用的值
+  ```
 
-:::: tabs
+  </el-tab-pane>
 
-::: tab 软依赖 id='4'
+  <el-tab-pane label="硬依赖" name="second">
+    
+  ``` YAML
+  name: 'MyPlugin'
+  author: 'Me'
+  version: '1.0.0'
 
-```YAML
-name: 'MyPlugin'
-author: 'Me'
-version: '1.0.0'
+  main: 'com.example.plugin.MyPlugin'
 
-main: 'com.example.plugin.MyPlugin'
+  dependencies:
+    server:
+      DecentHolograms:
+        load: BEFORE
+        required: true
+  ```
 
-dependencies:
-  server:
-    DecentHolograms:
-      load: BEFORE
-      required: false # This is the default when not present
-```
-:::
+  </el-tab-pane>
+  </el-tabs>
 
-::: tab 硬依赖 id='4'
-
-```YAML
-name: 'MyPlugin'
-author: 'Me'
-version: '1.0.0'
-
-main: 'com.example.plugin.MyPlugin'
-
-dependencies:
-  server:
-    DecentHolograms:
-      load: BEFORE
-      required: true
-```
-:::
-
-::::
+</el-tab-pane>
+</el-tabs>
