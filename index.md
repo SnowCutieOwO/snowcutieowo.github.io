@@ -2,11 +2,6 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
-head:
-  - - link
-    - rel: stylesheet
-      href: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css
-
 hero:
   name: "Continue Project"
   text: "续 - 维基档案馆"
