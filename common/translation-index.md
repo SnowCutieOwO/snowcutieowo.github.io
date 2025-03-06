@@ -111,7 +111,7 @@
 |ResourceWorld|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/%E2%9C%85-resource-world-%E2%9C%85-never-run-out-of-resources-must-have.75994/)|
 |RPGChat|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/rpgchat-1-8-1-21-4.87571/)|
 |SignIt|否|是|仅语言文件|[SpigotMC](https://www.spigotmc.org/resources/signit.94720/)|
-|SimpleClans|否|是|[Crodwin](https://crowdin.com/project/simpleclans/zh-CN)|
+|SimpleClans|否|是|仅语言文件|[Crodwin](https://crowdin.com/project/simpleclans/zh-CN)|
 |SimpleRTP|否|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/simplertp-1-19-1-21.61988/)|
 |Seasons|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/seasons.39298/)|
 |Shopkeeper|是|是|仅语言文件|[Github](https://github.com/Shopkeepers/Language-Files/blob/v2.19.0/lang/language-zh_CN.yml)|
