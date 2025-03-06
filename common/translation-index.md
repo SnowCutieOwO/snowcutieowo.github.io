@@ -149,7 +149,7 @@
 ## 模组
 
 |名称|已提交|当前状态（若有）|链接|
-|---|---|---|---|---|
+|---|---|---|---|
 |BlockMeterFabric|是|仅语言文本|[Modrinth](https://modrinth.com/mod/blockmeter)|
 |Client Tweaks|是|仅语言文本|[Modrinth](https://modrinth.com/mod/client-tweaks)|
 |Cave Dust|是|仅语言文本|[Modrinth](https://modrinth.com/mod/cave-dust)|

@@ -147,10 +147,12 @@ DecentHolograms 能显示的东西不只是文本，通过特定的格式，你�
 
 展示实体。可展示的实体列表在[这里](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html)查询
 
-> [!NOTE|label:提示]
-> * 实体显示位置固定。不可被修改。
-> * 部分实体不能在悬浮字中使用。完整列表[见此](https://github.com/DecentSoftware-eu/DecentHolograms/blob/f28df4373f4d56e17eb33005885222f726ac1350/src/main/java/eu/decentsoftware/holograms/api/utils/entity/DecentEntityType.java#L21-L51)（最后更新：2024 年 4 月 27 日）
+::: tip 提示
 
+* 实体显示位置固定。不可被修改。
+* 部分实体不能在悬浮字中使用。完整列表[见此](https://github.com/DecentSoftware-eu/DecentHolograms/blob/f28df4373f4d56e17eb33005885222f726ac1350/src/main/java/eu/decentsoftware/holograms/api/utils/entity/DecentEntityType.java#L21-L51)（最后更新：2024 年 4 月 27 日）
+
+:::
 
 :::: tabs
 
