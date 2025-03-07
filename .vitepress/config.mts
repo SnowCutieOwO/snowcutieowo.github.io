@@ -3,6 +3,8 @@ import footnote from 'markdown-it-footnote'
 import checkbox from 'markdown-it-checkbox'
 import tabsPlugin from '@red-asuka/vitepress-plugin-tabs'
 import mathjax3 from 'markdown-it-mathjax3'
+import { generateBreadcrumbsData } from '@nolebase/vitepress-plugin-breadcrumbs/vitepress'
+import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 
 const customElements = [
   'math',
@@ -137,6 +139,28 @@ export default defineConfig({
         isCustomElement: (tag) => customElements.includes(tag),
       },
     },
+  },
+  transformPageData(pageData, ctx) {
+    generateBreadcrumbsData(pageData, ctx)
+  },
+  vite: {
+    optimizeDeps: {
+      exclude: [
+        'nolebase@vitepress-plugin-breadcrumbs/client'
+      ]
+    },
+    ssr: {
+      noExternal: [
+        'nolebase@vitepress-plugin-breadcrumbs'
+      ]
+    },
+    plugins: [ 
+      GitChangelog({ 
+        // 填写在此处填写您的仓库链接
+        repoURL: () => 'https://github.com/SnowCutieOwO/snowcutieowo.github.io', 
+      }) as any, 
+      GitChangelogMarkdownSection(), 
+    ],
   },
   themeConfig: {
     outlineTitle: '目录',
