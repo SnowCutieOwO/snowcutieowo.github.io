@@ -151,7 +151,13 @@ export default defineConfig({
     },
     ssr: {
       noExternal: [
-        'nolebase@vitepress-plugin-breadcrumbs'
+        '@nolebase/vitepress-plugin-breadcrumbs',
+        '@nolebase/vitepress-plugin',
+        'element-plus',
+        'markdown-it-footnote',
+        'markdown-it-mathjax3',
+        'markdown-it-checkbox',
+        '@red-asuka/vitepress-plugin-tabs'
       ]
     },
     plugins: [ 
