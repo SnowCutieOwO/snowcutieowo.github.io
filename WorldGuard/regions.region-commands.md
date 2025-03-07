@@ -221,7 +221,7 @@
 
 ::: info 示例：将“mall”的`gerrting`标志的值设置为空白
 ```
-/rg list -p sk89q
+/rg flag mall greeting -e
 ```
 :::
 
