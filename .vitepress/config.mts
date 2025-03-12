@@ -6,6 +6,7 @@ import mathjax3 from 'markdown-it-mathjax3'
 import { generateBreadcrumbsData } from '@nolebase/vitepress-plugin-breadcrumbs/vitepress'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 import markdownItVideo from "@vrcd-community/markdown-it-video";
+import { tr } from 'element-plus/es/locale/index.mjs'
 
 const customElements = [
   'math',
@@ -132,8 +133,8 @@ export default defineConfig({
       md.use(mathjax3);
       tabsPlugin(md);
       md.use(markdownItVideo, {
-        youtube: {width: '100%', height: '387px'},
-        bilibili: {width: '100%', height: '387px'}
+        youtube: { width: '100%', height: '387px' },
+        bilibili: { width: '100%', height: '387px' }
       });
     },
     math: true
@@ -165,12 +166,12 @@ export default defineConfig({
         '@red-asuka/vitepress-plugin-tabs'
       ]
     },
-    plugins: [ 
-      GitChangelog({ 
+    plugins: [
+      GitChangelog({
         // 填写在此处填写您的仓库链接
-        repoURL: () => 'https://github.com/SnowCutieOwO/snowcutieowo.github.io', 
-      }) as any, 
-      GitChangelogMarkdownSection(), 
+        repoURL: () => 'https://github.com/SnowCutieOwO/snowcutieowo.github.io',
+      }) as any,
+      GitChangelogMarkdownSection(),
     ],
   },
   themeConfig: {
@@ -246,6 +247,7 @@ export default defineConfig({
           { text: 'PlayerPoints', link: '/PlayerPoints/index' },
           { text: 'Shopkeepers', link: '/Shopkeepers/index' },
           { text: 'spark', link: '/spark/index' },
+          { text: 'SuperiorSkyblock2', link: '/SuperiorSkyblock2/index' },
           { text: 'UltimateShop', link: '/UltimateShop/index' },
           { text: 'WorldEdit', link: '/WorldEdit/index' },
           { text: 'WorldGuard', link: '/WorldGuard/index' },
@@ -278,6 +280,7 @@ export default defineConfig({
             { text: 'PlayerPoints', link: '/PlayerPoints/index' },
             { text: 'Shopkeepers', link: '/Shopkeepers/index' },
             { text: 'spark', link: '/spark/index' },
+            { text: 'SuperiorSkyblock2', link: '/SuperiorSkyblock2/index' },
             { text: 'UltimateShop', link: '/UltimateShop/index' },
             { text: 'WorldEdit', link: '/WorldEdit/index' },
             { text: 'WorldGuard', link: '/WorldGuard/index' },
@@ -1162,6 +1165,80 @@ export default defineConfig({
         },
 
 
+      ],
+      '/SuperiorSkyblock2/': [
+        { text: '返回首页', link: '/index' },
+        { text: '前言', link: '/SuperiorSkyblock2/index' },
+        {
+          text: 'SuperiorSkyblock2 维基', items: [
+            {
+              text: '概览', link: '/SuperiorSkyblock2/overview', collapsed: false, items: [
+                {
+                  text: '命令与权限', collapsed: true, items: [
+                    { text: '玩家命令', link: '/SuperiorSkyblock2/overview.commands-and-permissions.player-commands' },
+                    { text: '管理员命令', link: '/SuperiorSkyblock2/overview.commands-and-permissions.admin-commands' },
+                    { text: '权限', link: '/SuperiorSkyblock2/overview.commands-and-permissions.permissions' }
+                  ]
+                },
+                {
+                  text: '变量', link: '/SuperiorSkyblock2/overview.placeholders', collapsed: true, items: [
+                    { text: '全局变量', link: '/SuperiorSkyblock2/overview.placeholders.global-placeholders' },
+                    { text: '岛屿变量', link: '/SuperiorSkyblock2/overview.placeholders.island-placeholders' },
+                    { text: '玩家变量', link: '/SuperiorSkyblock2/overview.placeholders.player-placeholders' },
+                    { text: '聊天变量', link: '/SuperiorSkyblock2/overview.placeholders.chat-placeholders' },
+                  ]
+                },
+                { text: '配置文件', link: '/SuperiorSkyblock2/overview.configuration-files' },
+                { text: '消息文件', link: '/SuperiorSkyblock2/overview.messages' },
+                { text: '岛屿标志', link: '/SuperiorSkyblock2/overview.island-flags' },
+                { text: '岛屿权限', link: '/SuperiorSkyblock2/overview.island-privileges' },
+                { text: '结构', link: '/SuperiorSkyblock2/overview.schematics' },
+                {
+                  text: '岛屿升级', link: '/SuperiorSkyblock2/overview.upgrades', collapsed: true, items: [
+                    { text: '岛屿翻倍卡', link: '/SuperiorSkyblock2/overview.upgrades.island-multipliers' }
+                  ]
+                },
+                {
+                  text: '菜单', link: '/SuperiorSkyblock2/overview.menus', collapsed: true, items: [
+                    { text: '银行日志菜单', link: '/SuperiorSkyblock2/overview.menus.bank-logs-menu' },
+                    { text: '群系菜单', link: '/SuperiorSkyblock2/overview.menus.biomes-menu' }
+                  ]
+                },
+                {
+                  text: '任务', link: '/SuperiorSkyblock2/overview.missions', collapsed: true, items: [
+                    { text: '方块任务', link: '/SuperiorSkyblock2/overview.missions.blocksmissions' },
+                    { text: '酿造任务', link: '/SuperiorSkyblock2/overview.missions.brewingmissions' },
+                    { text: '合成任务', link: '/SuperiorSkyblock2/overview.missions.craftingmissions' },
+                    { text: '附魔任务', link: '/SuperiorSkyblock2/overview.missions.enchantingmissions' },
+                    { text: '耕作任务', link: '/SuperiorSkyblock2/overview.missions.farmingmissions' },
+                    { text: '钓鱼任务', link: '/SuperiorSkyblock2/overview.missions.fishingmissions' },
+                    { text: '岛屿任务', link: '/SuperiorSkyblock2/overview.missions.islandmissions' },
+                    { text: '物品任务', link: '/SuperiorSkyblock2/overview.missions.itemsmissions' },
+                    { text: '击杀任务', link: '/SuperiorSkyblock2/overview.missions.killsmissions' },
+                    { text: '统计数据任务', link: '/SuperiorSkyblock2/overview.missions.statisticsmissions' },
+                  ]
+                },
+                { text: 'JavaScript 引擎', link: '/SuperiorSkyblock2/overview.javascript-engine' },
+                { text: '自定义方块', link: '/SuperiorSkyblock2/overview.custom-blocks' },
+                {
+                  text: 'API', link: '/SuperiorSkyblock2/overview.api', collapsed: true, items: [
+                    { text: '注册命令', link: '/SuperiorSkyblock2/overview.api.register-your-own-command' },
+                    { text: '注册方块键', link: '/SuperiorSkyblock2/overview.api.register-your-own-block-keys' }
+                  ]
+                },
+                {
+                  text: '附属', link: '/SuperiorSkyblock2/overview.addons', collapsed: true, items: [
+                    { text: 'SSBOneBlock', link: '/SuperiorSkyblock2/overview.addons.ssboneblock' },
+                    { text: 'SSBProxyBridge', link: '/SuperiorSkyblock2/overview.addons.ssbproxybridge' },
+                  ]
+                },
+                { text: '插件源码', link: 'https://github.com/BG-Software-LLC/SuperiorSkyblock2' },
+                { text: '漏洞跟踪', link: 'https://github.com/BG-Software-LLC/SuperiorSkyblock2/issues' },
+                { text: '插件下载', link: 'https://bg-software.com/superiorSkyblock/' },
+              ]
+            }
+          ]
+        }
       ],
       '/UltimateShop/': [
         { text: '返回首页', link: '/index' },
