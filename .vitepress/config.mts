@@ -5,6 +5,7 @@ import tabsPlugin from '@red-asuka/vitepress-plugin-tabs'
 import mathjax3 from 'markdown-it-mathjax3'
 import { generateBreadcrumbsData } from '@nolebase/vitepress-plugin-breadcrumbs/vitepress'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
+import markdownItVideo from "@vrcd-community/markdown-it-video";
 
 const customElements = [
   'math',
@@ -130,6 +131,10 @@ export default defineConfig({
       md.use(checkbox);
       md.use(mathjax3);
       tabsPlugin(md);
+      md.use(markdownItVideo, {
+        youtube: {width: '100%', height: '387px'},
+        bilibili: {width: '100%', height: '387px'}
+      });
     },
     math: true
   },
