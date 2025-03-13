@@ -16,7 +16,7 @@
 |名称|描述|支持菜单|
 |---|---|---|
 |`title`|菜单的自定义标题。支持彩色代码及 1.16+ 的十六进制彩色及变量。|全部|
-|`type`|菜单的类型。可在https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html找到所有支持的容器类型。|全部|
+|`type`|菜单的类型。可在 https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html 找到所有支持的容器类型。|全部|
 |`previous-menu`|是否在关闭该界面时显示上一级菜单。|全部|
 |`open-sound`|打开界面时播放的音效。应当遵循声音格式。|全部|
 |`back`|菜单的返回按钮。启用 `only-back-button` 后该项为必选。|全部|
