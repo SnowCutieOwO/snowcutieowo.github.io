@@ -27,7 +27,7 @@
 * 若你在使用 Essentials，请确保你安装了 [EssentialsX 和 EssentialsXChat](https://ci.ender.zone/job/EssentialsX/)。可别漏了名称里的 X！其他版本的 Essentials 可能不会与 LuckPerms 正常工作。
     * 输入命令 `/ess version` 来检查你的 Essentials 安装信息，这也会显示 Vault 是否安装在服务器上，以及你所使用的权限插件 —— 一般显示的就是 LuckPerms！如果你输入的命令只显示了“重载了 Essentials [版本号]”一类的消息，那么你正在运行的 Essentials 版本是过时的，应该升级到 EssentialsX（可点击上述链接进入）。
     * Essentials 提供了诸如 `{DISPLAYNAME}` 等的内建变量，这个变量将前后缀与显示名称结合在了一块，你可以将 Essentials 配置中的 `add-prefix-suffix` 项设置为 `false`。
-* 你的前后缀显示了，但不是你想要的内容？可能是设置了错误的权重导致的。如果你输入 `/lp user <玩家名称> meta info` 然后看见了一串 0，或者一大堆数字（属性）都是相同的，那么 LuckPerms 是取了这之间数字最大或者最靠前的一个，将其当做了玩家最终显示的前后缀。若要修改这个行为，你需要[使用正确的命令重设前后缀](command-usage.meta.md#lp-usergroup-玩家权限组-meta-setprefix-权重-前缀-上下文) —— 或者可以通过网页编辑器直接编辑左侧的数字。前后缀都是以权限节点的形式存储的，与其他权限一样，它们一般会遵循这个格式：`prefix.100.[Admin]` —— 这里的 `100` 就是权重，也就是你需要编辑的数字。
+* 你的前后缀显示了，但不是你想要的内容？可能是设置了错误的权重导致的。如果你输入 `/lp user <玩家名称> meta info` 然后看见了一串 0，或者一大堆数字（属性）都是相同的，那么 LuckPerms 是取了这之间数字最大或者最靠前的一个，将其当做了玩家最终显示的前后缀。若要修改这个行为，你需要[使用正确的命令重设前后缀](command-usage.meta.md#lp-usergroup-玩家权限组-meta-setprefix-权重-前缀-情境) —— 或者可以通过网页编辑器直接编辑左侧的数字。前后缀都是以权限节点的形式存储的，与其他权限一样，它们一般会遵循这个格式：`prefix.100.[Admin]` —— 这里的 `100` 就是权重，也就是你需要编辑的数字。
 * 最后，LuckPerms 配置的 `meta-formatting` 是非常重要的，除非必要否则不应修改这部分（例如[前后缀堆叠](how-to.stack-prefixes.md)）。如果你的前后缀工作不正常，很有可能就是这部分配置导致的。若你需要将其设置为默认，请确保 `format` 部分的格式与下文一致：
 ```YAML
 format:

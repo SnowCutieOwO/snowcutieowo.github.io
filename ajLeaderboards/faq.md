@@ -69,7 +69,7 @@ ajLeaderboards 能够在玩家离线时显示他们的前缀。
 
 ## 我如何给予奖励？
 
-目前，内置给予奖励的唯一方式是通过 [LuckPerms 的上下文（Context）](setup.luckperms-contexts.md) 给予排行榜中指定名次的玩家权限/前缀/后缀。
+目前，内置给予奖励的唯一方式是通过 [LuckPerms 的情境（Context）](setup.luckperms-contexts.md) 给予排行榜中指定名次的玩家权限/前缀/后缀。
 
 ## 玩家数据没有更新！
 

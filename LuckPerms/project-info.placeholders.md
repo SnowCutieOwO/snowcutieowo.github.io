@@ -41,7 +41,7 @@ LuckPerms 有一些变量可以被支持的插件引用。
 | `%luckperms_meta_all%`                          | `<元数据 键>`                 | 返回给定元数据键的所有对应值           |
 | `%luckperms_prefix_element%`                    | `<元素>`                  | 通过给定的“元数据组”元素定义返回一个前缀元素。更多信息请见[前缀堆叠](how-to.stack-prefixes.md) |
 | `%luckperms_suffix_element%`                    | `<元素>`                  | 通过给定的“元数据组”元素定义返回一个后缀元素。更多信息请见[后缀堆叠](how-to.stack-prefixes.md) |
-| `%luckperms_context%`                           | `[上下文键]` (*可选*) | 返回玩家当前的所有上下文。若给定键作为参数传入，只有给定键对应的值会被返回。 |
+| `%luckperms_context%`                           | `[情境键]` (*可选*) | 返回玩家当前的所有情境。若给定键作为参数传入，只有给定键对应的值会被返回。 |
 | `%luckperms_groups%`                            |                              | 返回玩家直接继承的权限组列表。 |
 | `%luckperms_inherited_groups%`                  |                              | 返回玩家（直接或间接）继承的权限组列表。|
 | `%luckperms_primary_group_name%`                |                              | 返回玩家的主权限组。              |

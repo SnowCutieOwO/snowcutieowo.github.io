@@ -66,10 +66,10 @@
 * /lp user <玩家> `parent`
 * /lp user <玩家> `meta`
 * /lp user <玩家> `editor`
-* /lp user <玩家> `promote` <路线> [上下文...]
-* /lp user <玩家> `demote` <路线> [上下文...]
+* /lp user <玩家> `promote` <路线> [情境...]
+* /lp user <玩家> `demote` <路线> [情境...]
 * /lp user <玩家> `showtracks`
-* /lp user <玩家> `clear` [上下文...]
+* /lp user <玩家> `clear` [情境...]
 * /lp user <玩家> `clone` <玩家>
 
 ### 权限组命令
@@ -87,7 +87,7 @@
 * /lp group <组名> `setweight` <权重>
 * /lp group <组名> `setdisplayname` <名称>
 * /lp group <组名> `showtracks`
-* /lp group <组名> `clear` [上下文...]
+* /lp group <组名> `clear` [情境...]
 * /lp group <组名> `rename` <新名称>
 * /lp group <组名> `clone` <复制组名称>
 
@@ -98,12 +98,12 @@
 一般以 `/lp user <玩家> permission ...` 或 `/lp group <组名> permission ...` 开头。
 
 * `info`
-* `set` <权限> <true/false> [上下文...]
-* `unset` <权限> [上下文...]
-* `settemp` <权限> <true/false> <时间> [施加模式] [上下文...]
-* `unsettemp` <权限> [时间] [上下文...]
+* `set` <权限> <true/false> [情境...]
+* `unset` <权限> [情境...]
+* `settemp` <权限> <true/false> <时间> [施加模式] [情境...]
+* `unsettemp` <权限> [时间] [情境...]
 * `check` <权限>
-* `clear` [上下文...]
+* `clear` [情境...]
 
 ### 继承命令
 
@@ -113,14 +113,14 @@
 一般以 `/lp user <user> parent ...` 或 `/lp group <组名> parent ...` 开头。
 
 * `info`
-* `set` <组名> [上下文...]
-* `add` <组名> [上下文...]
-* `remove` <组名> [上下文...]
-* `settrack` <路线名> <组名> [上下文...]
-* `addtemp` <组名> <时间> [施加模式] [上下文...]
-* `removetemp` <组名> [时间] [上下文...]
-* `clear` [上下文...]
-* `cleartrack` <路线名> [上下文...]
+* `set` <组名> [情境...]
+* `add` <组名> [情境...]
+* `remove` <组名> [情境...]
+* `settrack` <路线名> <组名> [情境...]
+* `addtemp` <组名> <时间> [施加模式] [情境...]
+* `removetemp` <组名> [时间] [情境...]
+* `clear` [情境...]
+* `cleartrack` <路线名> [情境...]
 * `switchprimarygroup` <组名>
 
 ### 元数据命令
@@ -128,23 +128,23 @@
 用于修改或浏览玩家或权限组元数据的命令。
 
 * `info`
-* `set` <键> <值> [上下文...]
-* `unset` <键> [上下文...]
-* `settemp` <键> <值> <时间> [施加模式] [上下文...]
-* `unsettemp` <键> [上下文...]
-* `addprefix` <权重> <前缀> [上下文...]
-* `addsuffix` <权重> <后缀> [上下文...]
-* `setprefix` [权重] <前缀> [上下文...]
-* `setsuffix` [权重] <后缀> [上下文...]
-* `removeprefix` <权重> [前缀] [上下文...]
-* `removesuffix` <权重> [后缀] [上下文...]
-* `addtempprefix` <权重> <前缀> <时间> [施加模式] [上下文...]
-* `addtempsuffix` <权重> <后缀> <时间> [施加模式] [上下文...]
-* `settempprefix` [权重] <前缀> <时间> [施加模式] [上下文...]
-* `settempsuffix` [权重] <后缀> <时间> [施加模式] [上下文...]
-* `removetempprefix` <权重> [前缀] [上下文...]
-* `removetempsuffix` <权重> [后缀] [上下文...]
-* `clear` [上下文...]
+* `set` <键> <值> [情境...]
+* `unset` <键> [情境...]
+* `settemp` <键> <值> <时间> [施加模式] [情境...]
+* `unsettemp` <键> [情境...]
+* `addprefix` <权重> <前缀> [情境...]
+* `addsuffix` <权重> <后缀> [情境...]
+* `setprefix` [权重] <前缀> [情境...]
+* `setsuffix` [权重] <后缀> [情境...]
+* `removeprefix` <权重> [前缀] [情境...]
+* `removesuffix` <权重> [后缀] [情境...]
+* `addtempprefix` <权重> <前缀> <时间> [施加模式] [情境...]
+* `addtempsuffix` <权重> <后缀> <时间> [施加模式] [情境...]
+* `settempprefix` [权重] <前缀> <时间> [施加模式] [情境...]
+* `settempsuffix` [权重] <后缀> <时间> [施加模式] [情境...]
+* `removetempprefix` <权重> [前缀] [情境...]
+* `removetempsuffix` <权重> [后缀] [情境...]
+* `clear` [情境...]
 
 
 ### 路线命令

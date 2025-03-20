@@ -19,9 +19,9 @@
 * [/lp group <权限组> `editor`](#lp-group-权限组-editor)
 * [/lp group <权限组> `listmembers` [页码]](#lp-group-权限组-listmembers-页码)
 * [/lp group <权限组> `setweight` <权重>](#lp-group-权限组-setweight-权重)
-* [/lp group <权限组> `setdisplayname` <名称> [上下文...]](#lp-group-权限组-setdisplayname-名称)
+* [/lp group <权限组> `setdisplayname` <名称> [情境...]](#lp-group-权限组-setdisplayname-名称)
 * [/lp group <权限组> `showtracks`](#lp-group-权限组-showtracks)
-* [/lp group <权限组> `clear` [上下文...]](#lp-group-权限组-clear-上下文)
+* [/lp group <权限组> `clear` [情境...]](#lp-group-权限组-clear-情境)
 * [/lp group <权限组> `rename` <新名称>](#lp-group-权限组-rename-新名称)
 * [/lp group <权限组> `clone` <复制组名称>](#lp-group-权限组-clone-复制组名称)
 
@@ -59,7 +59,7 @@
 **可用参数：** 
 
 * `<名称>` - 设置的名称
-* `[上下文...]` - 显示该名称的[上下文](features.context.md)
+* `[情境...]` - 显示该名称的[情境](features.context.md)
 
 设置权限组的显示名称。可以用于表示权限组的“别称”。
 
@@ -69,12 +69,12 @@
 
 显示该权限组所处的路线位置。
 
-## `/lp group <权限组> clear [上下文]`
+## `/lp group <权限组> clear [情境]`
 
 **所需权限：** `luckperms.group.clear`    
 **可用参数：** 
 
-* `[上下文...]` - 用于过滤的[上下文](features.context.md)
+* `[情境...]` - 用于过滤的[情境](features.context.md)
 
 清除权限组的权限、继承组及元数据内容。
 

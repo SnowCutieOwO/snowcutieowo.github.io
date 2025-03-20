@@ -18,10 +18,10 @@
     * [修改已有节点](#修改现存节点)
 * [读取玩家/权限组数据](#读取玩家权限组数据)
 * [修改玩家/权限组数据](#修改玩家权限组数据)
-* [上下文](#上下文基础)
+* [情境](#情境基础)
     * [重要的类](#重要的类)
     * [注册 ContextCalculators](#注册-contextcalculators)
-    * [查询活跃上下文/查询选项](#查询可用上下文查询设置)
+    * [查询活跃情境/查询选项](#查询可用情境查询设置)
 * [CachedData](#cacheddata-基础)
     * [进行权限检查](#进行权限检查)
     * [获取前后缀](#返回前后缀)
@@ -258,7 +258,7 @@ public void addPermission(UUID userUuid, String permission) {
 
 * key - 节点的键
 * value - 节点的值（false 表示负状态）
-* context - 节点生效的上下文
+* context - 节点生效的情境
 * expiry - 节点的失效时间
 
 这里有一些节点类型，它们都是基本 `Node` 类的延伸。
@@ -391,7 +391,7 @@ SortedSet<Node> getDistinctNodes();
 * 这些节点是根据“权重顺序”排列的。因为返回的类型是集合，因此重复的元素可能会丢失。
 * 浏览内容**不**包含继承数据。
 
-`QueryOptions` 字段封装了查询的相关设置。这部分会稍后讲到。若你不担心按上下文过滤的内容，只需使用 `QueryOptions.nonContextual()` 即可。
+`QueryOptions` 字段封装了查询的相关设置。这部分会稍后讲到。若你不担心按情境过滤的内容，只需使用 `QueryOptions.nonContextual()` 即可。
 
 ## 修改玩家/权限组数据
 
@@ -405,30 +405,30 @@ DataMutateResult result = user.data().add(Node.builder("your.node.here").build()
 
 不要忘了[保存](developers.api-usage.md#保存变动)你的改动！
 
-## 上下文基础
+## 情境基础
 
-上下文是 LuckPerms 的一个重要概念，在[这里](features.context.md)提及。它们在 API 通过几个重要的类封装。
+情境是 LuckPerms 的一个重要概念，在[这里](features.context.md)提及。它们在 API 通过几个重要的类封装。
 
 非常基础的概述：
 
-> **上下文**，基本来说就是**某条权限生效的要求**。    
-> 一个简单的“上下文”包含了一个 `key`（键）和 `value`（值），以 `key=value` 的形式连缀。（希望）这会用一个例子表述得更加清楚。
+> **情境**，基本来说就是**某条权限生效的要求**。    
+> 一个简单的“情境”包含了一个 `key`（键）和 `value`（值），以 `key=value` 的形式连缀。（希望）这会用一个例子表述得更加清楚。
 > 
-> 上下文可以被组合使用，称作“上下文组” —— 即一组上下文的键值对。
+> 情境可以被组合使用，称作“情境组” —— 即一组情境的键值对。
 > 
-> 上下文键是大小写敏感的，并会在所有实现中转化为小写。值也是大小写敏感的。上下文的键值不可以为 null 或空。键/值的长度若为零或只包含空格，则会被视作空。
+> 情境键是大小写敏感的，并会在所有实现中转化为小写。值也是大小写敏感的。情境的键值不可以为 null 或空。键/值的长度若为零或只包含空格，则会被视作空。
 
 ### 重要的类
 
 #### `ContextSet`
 
-“上下文组”即为一组上下文。
+“情境组”即为一组情境。
 
-内部来讲，一个上下文实际上就是 `Multimap<String, String>` 或 `<Map<String, Collection<String>>`，但重要的是，它**不**是 `Map<String, String>`。
+内部来讲，一个情境实际上就是 `Multimap<String, String>` 或 `<Map<String, Collection<String>>`，但重要的是，它**不**是 `Map<String, String>`。
 
 键可以对应多个值。
 
-`ContextSet` 示例定义了一系列方法，可以用于与上下文组的交互实现中。这些方法一般一看就懂 —— 但也在 JavaDocs 中有详细解释。
+`ContextSet` 示例定义了一系列方法，可以用于与情境组的交互实现中。这些方法一般一看就懂 —— 但也在 JavaDocs 中有详细解释。
 
 ### `ImmutableContextSet`
 
@@ -491,9 +491,9 @@ mutableCopy.add("something", "something-else");
 
 ### 注册 ContextCalculators
 
-一个“操作对象”（大多数情况下就是玩家）是一个可以被施加上下文的对象。
+一个“操作对象”（大多数情况下就是玩家）是一个可以被施加情境的对象。
 
-换句话说，一个“操作对象”就是一个有着**活跃上下文组**的对象。一个 `ContextCalculator` 是一个决定了给定操作对象的“活跃”上下文的对象。
+换句话说，一个“操作对象”就是一个有着**活跃情境组**的对象。一个 `ContextCalculator` 是一个决定了给定操作对象的“活跃”情境的对象。
 
 操作对象因平台不同而略有差异。
 
@@ -507,10 +507,10 @@ mutableCopy.add("something", "something-else");
 |Nukkit|`cn.nukkit.Player`|
 |Velocity|`com.velocitypowered.api.proxy.Player`|
 
-若要提供你自己的上下文，你需要创建并注册一个 `ContextCalculator`。
+若要提供你自己的情境，你需要创建并注册一个 `ContextCalculator`。
 
-例如，如果我想要为玩家的游戏模式提供上下文，从而让玩家只能在创造模式下设置权限，我按上文叙述的创建了一个计算器。
-`estimatePotentialContexts` 方法可以被添加，但不是必要的，它一般用于在 TAB 补全中显示上下文输入建议。
+例如，如果我想要为玩家的游戏模式提供情境，从而让玩家只能在创造模式下设置权限，我按上文叙述的创建了一个计算器。
+`estimatePotentialContexts` 方法可以被添加，但不是必要的，它一般用于在 TAB 补全中显示情境输入建议。
 
 ```Java
 public class CustomCalculator implements ContextCalculator<Player> {
@@ -537,9 +537,9 @@ public class CustomCalculator implements ContextCalculator<Player> {
 luckPerms.getContextManager().registerCalculator(new CustomCalculator());
 ```
 
-### 查询可用上下文/查询设置
+### 查询可用情境/查询设置
 
-你可以通过 `ContextManager` 查询操作对象的“活跃”上下文/搜索选项。
+你可以通过 `ContextManager` 查询操作对象的“活跃”情境/搜索选项。
 若你已经有了一个操作对象的实力，你可以直接使用这个。
 
 ```Java
@@ -555,7 +555,7 @@ Optional<ImmutableContextSet> contextSet = luckPerms.getContextManager().getCont
 Optional<QueryOptions> queryOptions = luckPerms.getContextManager().getQueryOptions(user);
 ```
 
-如果你非常需要获得一个实例，你可以回到服务器的“静态”上下文/查询选项。（这些都是用无视传递的操作对象提供了上下文/查询选项的 calculators 形成的。）
+如果你非常需要获得一个实例，你可以回到服务器的“静态”情境/查询选项。（这些都是用无视传递的操作对象提供了情境/查询选项的 calculators 形成的。）
 
 ```Java
 User user = ...;

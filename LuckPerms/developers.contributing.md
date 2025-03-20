@@ -83,7 +83,7 @@ bootstrap loader 插件负责在平台载入插件并将一切初始化。它体
 * `Storage` 为所有与插件的存储容器进行操作的根实例
 * `CommandManager` 处理所有 LuckPerms 的命令及其调用
 * `DependencyManager` 处理运行时的依赖载入等相关决定
-* `ContextManager` 处理玩家的上下文查找与缓存
+* `ContextManager` 处理玩家的情境查找与缓存
 * .. 还有很多，但愿名称/JavaDocs 能够解释这些的模块的功能。
 
 ## 代码风格

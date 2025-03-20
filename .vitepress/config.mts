@@ -387,7 +387,7 @@ export default defineConfig({
                 { text: '变量', link: '/ajLeaderboards/setup.placeholders' },
                 { text: '权限', link: '/ajLeaderboards/setup.permissions' },
                 { text: '消息变量', link: '/ajLeaderboards/setup.message-placeholders' },
-                { text: 'LuckPerms 上下文（Context）', link: '/ajLeaderboards/setup.luckperms-contexts' },
+                { text: 'LuckPerms 情境（Context）', link: '/ajLeaderboards/setup.luckperms-contexts' },
                 { text: '额外内容', link: '/ajLeaderboards/setup.extras' },
               ]
             },
@@ -867,7 +867,7 @@ export default defineConfig({
             {
               text: '功能', collapsed: true, items: [
                 { text: '网页编辑器', link: '/LuckPerms/features.web-editor' },
-                { text: '上下文', link: '/LuckPerms/features.context' },
+                { text: '情境', link: '/LuckPerms/features.context' },
                 { text: '权重', link: '/LuckPerms/features.weight' },
                 { text: '前缀、后缀与元数据', link: '/LuckPerms/features.prefix-suffix-meta' },
                 { text: '权限检查系统', link: '/LuckPerms/features.verbose' },

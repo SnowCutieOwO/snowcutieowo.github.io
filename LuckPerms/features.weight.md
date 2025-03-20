@@ -34,7 +34,7 @@ LuckPerms 中有两个独立且互不依赖的权重，即[权限组权重](#权
 
 ### 设置元数据权重
 
-这里有两种方法为前后缀设置权重：通过[命令](command-usage.meta.md#lp-usergroup-玩家权限组-meta-setprefix-权重-前缀-上下文)，或使用[编辑器](features.web-editor.md#luckperms-节点)。
+这里有两种方法为前后缀设置权重：通过[命令](command-usage.meta.md#lp-usergroup-玩家权限组-meta-setprefix-权重-前缀-情境)，或使用[编辑器](features.web-editor.md#luckperms-节点)。
 
 * 若使用前者，你只需在向玩家或权限组添加前后缀时使用如下命令即可：    
     `/lp user/group <玩家|权限组> meta setprefix/addprefix <权重> <前缀>`

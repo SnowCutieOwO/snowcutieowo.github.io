@@ -61,7 +61,7 @@ LuckPerms 提供了零散编辑权限的命令。这个命令应当小心使用�
 
 在命令中使用限制表达式时，应当将其用英文双引号 `" "` 包裹。
 
-若你想要移除带有指定世界或服务器上下文的权限或权限组的指定上下文，你只需将世界和/或上下文设置为 `global`，这基本上会将对应的权限和/或权限组的上下文移除并重设为“global”。
+若你想要移除带有指定世界或服务器情境的权限或权限组的指定情境，你只需将世界和/或情境设置为 `global`，这基本上会将对应的权限和/或权限组的情境移除并重设为“global”。
 
 ### 命令示例
 
@@ -71,7 +71,7 @@ LuckPerms 提供了零散编辑权限的命令。这个命令应当小心使用�
 
 #### `/lp bulkupdate users delete "server ~~ hub%" "world == nether"`
 
-会删除任意上下文中服务器名称以“hub”开头，世界以“nether”开头的玩家权限。
+会删除任意情境中服务器名称以“hub”开头，世界以“nether”开头的玩家权限。
 
 #### `/lp bulkupdate all delete "permission == essentials.fly"`
 
@@ -83,12 +83,12 @@ LuckPerms 提供了零散编辑权限的命令。这个命令应当小心使用�
 
 #### `/lp bulkupdate all update server global "server == factions"`
 
-会删除上下文中包含“server=factions”（仅在所处服务器为 factions 时生效）的任意条目。
+会删除情境中包含“server=factions”（仅在所处服务器为 factions 时生效）的任意条目。
 
 #### `/lp bulkupdate all update permission essentials.ban "permission == essentials.mute" "server == survival"`
 
-会修改上下文中包含“server=survival”（仅在所处服务器为 survival 时生效）的所有“essentials.mute”为“essentials.ban”
+会修改情境中包含“server=survival”（仅在所处服务器为 survival 时生效）的所有“essentials.mute”为“essentials.ban”
 
 #### `/lp bulkupdate all update server global "permission == group.mod" "server == survival"`
 
-会修改上下文中包含“server=survival”（仅在所处服务器为 survival 时生效）继承了“mod”组的至“survival”服务器内全部有效（基本表示移除这个上下文）
+会修改情境中包含“server=survival”（仅在所处服务器为 survival 时生效）继承了“mod”组的至“survival”服务器内全部有效（基本表示移除这个情境）
