@@ -99,5 +99,3 @@
 ExtraContexts 插件加入了原本 LuckPerms 中不存在的额外情境，例如 WorldGuard 情境，PlaceholderAPI 情境，以及更多！
 
 [见此](https://github.com/LuckPerms/ExtraContexts)浏览详细信息。
-
-[^1]: “情境”译文取自 PCD 对该维基的旧版翻译，在 LuckPerms 的本地化语言文件中则译作“情境”，为保持维基迭代一致性，此取前者，下文同。
