@@ -31,6 +31,8 @@ Sponge
 
 你可以在配置文件的 `economy` 下的 `free_home_slots` 设置修改玩家可以拥有的免费设家数量。默认值为 `5`。
 
+你也可以在游戏内通过 `/huskhomes homeslots <玩家名称> [view|add|remove|set]` [命令](features.commands.md)手动设置玩家的传送点槽位。（权限节点：`huskhomes.command.huskhomes.homeslots`）。
+
 ## 经济操作
 
 你可以在 `config.yml` 文件的 `costs` 一栏中为下列选项设置所消耗的经济单位。请注意这个设置区域默认只设置了 `additional_home_slot`、`make_home_public` 和 `random_teleport` 的经济消耗，可参照下表设置价格来启用这些操作的收费功能。
