@@ -761,33 +761,45 @@ export default defineConfig({
           text: 'HuskSync 维基', items: [
             { text: '首页', link: '/HuskSync/home' },
             {
-              text: '安装', collapsed: true, items: [
-                { text: '📚 安装教程', link: '/HuskSync/setup.setup' },
-                { text: '💾 数据库', link: '/HuskSync/setup.database' },
-                { text: '✨ Redis', link: '/HuskSync/setup.redis' },
+              text: '安装', items: [
+                {
+                  text: '📚 安装教程', link: '/HuskSync/setup.setup', collapsed: true, items: [
+                    { text: '✨ MPDB 迁移', link: '/HuskSync/setup.setup.mpdb-migration' },
+                    { text: '↗️ 旧版迁移', link: '/HuskSync/setup.setup.legacy-migration' },
+                  ]
+                },
+                {
+                  text: '📄 配置文件', link: '/HuskSync/setup.config', collapsed: true, items: [
+                    { text: '💾 数据库', link: '/HuskSync/setup.config.database' },
+                    { text: '✨ Redis', link: '/HuskSync/setup.config.redis' },
+                    { text: '🎏 语言贡献', link: '/HuskSync/setup.config.translations' },
+                  ]
+                },
                 { text: '⚠️ 兼容相关', link: '/HuskSync/setup.compatbility' },
-                { text: '📄 配置文件', link: '/HuskSync/setup.config-file' },
-                { text: '🔗 问题排查', link: '/HuskSync/setup.troubleshooting' },
+                {
+                  text: '❓ 常见问题', link: '/HuskSync/setup.faqs', collapsed: true, items: [
+                    { text: '🔗 问题排查', link: '/HuskSync/setup.faqs.troubleshooting' },
+                  ]
+                },
               ]
             },
             {
-              text: '功能', collapsed: true, items: [
+              text: '功能', items: [
                 { text: '🖥️ 命令列表', link: '/HuskSync/features.commands' },
-                { text: '✅ 同步功能', link: '/HuskSync/features.sync-features' },
-                { text: '⚙️ 同步模式', link: '/HuskSync/features.sync-modes' },
-                { text: '↪️ 数据切换', link: '/HuskSync/features.data-rotation' },
-                { text: '❓ 常见问题', link: '/HuskSync/features.faqs' },
+                {
+                  text: '✅ 同步功能', link: '/HuskSync/features.sync-features', collapsed: true, items: [
+                    { text: '⚙️ 同步模式', link: '/HuskSync/features.sync-features.sync-modes' },
+                    { text: '↪️ 数据切换', link: '/HuskSync/features.sync-features.data-rotation' },
+                  ]
+                },
+                { text: '🟩 Plan 统计联动', link: '/HuskSync/features.plan-analytics-hook' },
               ]
             },
             {
               text: '教程', collapsed: true, items: [
-                { text: '↗️ 旧版迁移', link: '/HuskSync/guides.legacy-migration' },
-                { text: '✨ MPDB 迁移', link: '/HuskSync/guides.mpdb-migration' },
                 { text: '☂️ 用户数据缓存', link: '/HuskSync/guides.dumping-userdata' },
-                { text: '🟩 Plan 联动', link: '/HuskSync/guides.plan-hook' },
-                { text: '📋 事件优先级', link: '/HuskSync/guides.event-priorties' },
                 { text: '⚔️ 背包保存', link: '/HuskSync/guides.keep-inventory' },
-                { text: '🎏 语言贡献', link: '/HuskSync/guides.translations' },
+                { text: '📋 事件优先级', link: '/HuskSync/guides.event-priorties' },
               ]
             },
             {
@@ -800,20 +812,15 @@ export default defineConfig({
                   ]
                 },
                 { text: '🕸️ API v2<i>（旧版）</i>', link: '/HuskSync/developers.api-v2' },
+                { text: '💻 源码', link: '/HuskSync/https://github.com/WiIIiam278/HuskSync' },
               ]
             },
             {
               text: '链接', collapsed: true, items: [
-                { text: '💻 GitHub', link: '/HuskSync/https://github.com/WiIIiam278/HuskSync' },
-                {
-                  text: '📂 购买 HuskSync', link: '/HuskSync/https://william278.net/project/husksync/', items: [
-                    { text: '🚰 Spigot', link: '/HuskSync/https://www.spigotmc.org/resources/husksync.97144/' },
-                    { text: '🛒 Polymart', link: '/HuskSync/https://polymart.org/resource/husksync.1634' },
-                    { text: '⚒️ Craftaro', link: '/HuskSync/https://craftaro.com/marketplace/product/husksync.758' },
-                    { text: '🛒 BuiltByBit', link: '/HuskSync/https://craftaro.com/marketplace/product/husksync.758' },
-                  ]
-                },
-                { text: '💬 Discord 支持', link: '/HuskSync/https://discord.gg/tVYhJfyDWG' },
+                { text: '🚰 Spigot', link: '/HuskSync/https://www.spigotmc.org/resources/husksync.97144/' },
+                { text: '🛒 Polymart', link: '/HuskSync/https://polymart.org/resource/husksync.1634' },
+                { text: '🛒 BuiltByBit', link: '/HuskSync/https://craftaro.com/marketplace/product/husksync.758' },
+                { text: '📊 bStats', link: 'https://bstats.org/plugin/bukkit/HuskSync%20-%20Bukkit/13140' }
               ]
             },
           ]
