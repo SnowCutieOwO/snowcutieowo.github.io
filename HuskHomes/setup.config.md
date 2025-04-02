@@ -8,7 +8,7 @@
 * 📄 `config.yml`：插件总配置
 * 📄 `server.yml`：（仅跨服模式时需要用到）服务器 ID 配置
 * 📄 `spawn.yml`：本地保存的服务器出生点位置。输入 /setspawn 命令后会出现该文件。
-* 📄 `messages-xx-xx.yml`：插件本地化语言文件，标记格式为 MineDown（见“[语言贡献]”章节）
+* 📄 `messages-xx-xx.yml`：插件本地化语言文件，标记格式为 MineDown（见“[语言贡献](setup.config.locales.md)”章节）
 
 ## 示例文件
 
