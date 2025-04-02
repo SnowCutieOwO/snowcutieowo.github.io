@@ -11,8 +11,8 @@ HuskSync 需要一个数据库服务器，一个 Redis 服务器，以及任何�
     * 每个服务器运行的 Minecraft 版本必须相同
     * 不可以在 Fabric 和 Spigot 单端间同步数据
     * HuskSync 不应安装在你的 Velocity、BungeeCord 及 Waterfall 群组端上
-* 运行了 MySQL v8.0+、MariaDB v5.0+、PostgreSQL 或 MongoDB 之一的[数据库](setup.database.md)服务器。
-* [Redis](setup.redis.md) 数据库（5.0 或更高版本）
+* 运行了 MySQL v8.0+、MariaDB v5.0+、PostgreSQL 或 MongoDB 之一的[数据库](setup.config.database.md)服务器。
+* [Redis](setup.config.redis.md) 数据库（5.0 或更高版本）
 
 ## 安装步骤
 
@@ -26,7 +26,7 @@ HuskSync 需要一个数据库服务器，一个 Redis 服务器，以及任何�
 
 ### 2. 重启服务器
 
-* 开启，之后关闭服务器，使 HuskSync 生成一份[配置文件](setup.config-file.md)；
+* 开启，之后关闭服务器，使 HuskSync 生成一份[配置文件](setup.config.md)；
 * HuskSync 会因无法连接到数据库后在控制台报错并自行禁用。鉴于你还未设置登录凭据，所以这是预料之内的；
 * 对于高级用户：如果你喜欢的话，你可以自己创建一个 config.yml 文件并使得每个子服的 `/plugins/HuskSync/` 文件夹同步，更方便地更新配置文件。
 
@@ -64,5 +64,5 @@ HuskSync 需要一个数据库服务器，一个 Redis 服务器，以及任何�
 
 * 若提供的 MySQL 和 Redis 数据库登录凭据有效，服务器开启之后数据同步功能就会正常运行；
 * 若你需要从 HuskSync 1.x 版本或 MySQLPlayerDataBridge 导入数据，请浏览下方的教程：
-  * [从旧版迁移](guides.legacy-migration.md)
-  * [从 MPDB 迁移](guides.mpdb-migration.md)
+  * [从旧版迁移](setup.setup.legacy-migration.md)
+  * [从 MPDB 迁移](setup.setup.mpdb-migration.md)

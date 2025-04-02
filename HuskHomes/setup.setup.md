@@ -30,7 +30,7 @@
 ### 2. 重启服务器并修改配置
 
 * 开启，之后关闭服务器，使 HuskSync 生成一份配置文件；
-* 你现在可以按喜好编辑[配置文件](setup.config-files.md)与本地语言文件了。
+* 你现在可以按喜好编辑[配置文件](setup.config.md)与本地语言文件了。
 
 ### 4. 重启服务器
 
@@ -54,7 +54,7 @@
 
 ### 3. 配置服务器启用跨服模式
 
-* 找到每个子服上的 HuskHomes 的[配置文件](setup.config-files.md)（Spigot 端为 `~/plugins/HuskHomes/config.yml`，Fabric/Sponge 端为 `~/config/huskhomes/config.yml`）；
+* 找到每个子服上的 HuskHomes 的[配置文件](setup.config.md)（Spigot 端为 `~/plugins/HuskHomes/config.yml`，Fabric/Sponge 端为 `~/config/huskhomes/config.yml`）；
 * 在 `database` 部分配置下，将 `type` 的值设置为 `MYSQL` 或 `MARIADB`（取决于你使用了哪种服务器）；
 * 在 `mysql/credentials` 部分配置中，输入你的 MySQL、MariaDB 或 PostgreSQL 数据库登录凭据；
 * 下滑并找到 `cross_server` 设置，将其修改为 `true`；
@@ -84,7 +84,7 @@
 ## 下一步
 
 * [命令与权限](features.commands.md)
-* [配置文件](setup.config-files.md)
-* [数据库](setup.database.md)
-* [Redis 支持](setup.redis-support.md)
-* [语言贡献](guides.translations.md)
+* [配置文件](setup.config.md)
+* [数据库](setup.config.database.md)
+* [Redis 支持](setup.config.redis.md)
+* [语言贡献](setup.config.locales.md)

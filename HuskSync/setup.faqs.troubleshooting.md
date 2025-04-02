@@ -31,11 +31,11 @@ HuskSync 会尝试鉴定版本并阻止同步。你的 Spigot/Fabric 服务器�
 
 ### Pterodactyl / Pelican 上的 Redis 连接出现问题
 
-Pterodactyl 内置的防火墙可阻止 [Redis](setup.redis.md) 服务器在各子服之间的通信。请为每个服务器添加信任，使其能在子服之间通信。使用 egg 安装 Redis 可能比后端的内部服务更加方便。见我们有关在[翼龙或 Pelican 面板上运行 Redis](setup.redis.md#pterodactyl翼龙面板-pelican-面板托管)的提示。
+Pterodactyl 内置的防火墙可阻止 [Redis](setup.config.redis.md) 服务器在各子服之间的通信。请为每个服务器添加信任，使其能在子服之间通信。使用 egg 安装 Redis 可能比后端的内部服务更加方便。见我们有关在[翼龙或 Pelican 面板上运行 Redis](setup.config.redis.md#pterodactyl翼龙面板-pelican-面板托管)的提示。
 
 ### Pterodactyl/Pelican 上的数据库连接出现问题
 
-若连接至面板的[数据库](setup.database.md)服务器数量大于一个，你可能需要在配置字段中加入 `useSSL=true` 的字样。
+若连接至面板的[数据库](setup.config.database.md)服务器数量大于一个，你可能需要在配置字段中加入 `useSSL=true` 的字样。
 
 ### 服务器重启后玩家数据同步出错
 

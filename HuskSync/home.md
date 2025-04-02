@@ -3,27 +3,27 @@
 
 ## 安装
 * [📚 安装教程](setup.setup.md)
-* [💾 数据库](setup.database.md)
-* [✨ Redis](setup.redis.md)
+* [💾 数据库](setup.config.database.md)
+* [✨ Redis](setup.config.redis.md)
 * [⚠️ 兼容相关](setup.compatbility.md)
-* [📄 配置文件](setup.config-file.md)
-* [🔗 问题排查](setup.troubleshooting.md)
+* [📄 配置文件](setup.config.md)
+* [🔗 问题排查](setup.faqs.troubleshooting.md)
 
 ## 功能
 * [🖥️ 命令列表](features.commands.md)
 * [✅ 同步功能](features.sync-features.md)
-* [⚙️ 同步模式](features.sync-modes.md)
-* [↪️ 数据切换](features.data-rotation.md)
-* [❓ 常见问题](features.faqs.md)
+* [⚙️ 同步模式](features.sync-features.sync-modes.md)
+* [↪️ 数据切换](features.sync-features.data-rotation.md)
+* [❓ 常见问题](setup.faqs.md)
 
 ## 教程
-* [↗️ 旧版迁移](guides.legacy-migration.md)
-* [✨ MPDB 迁移](guides.mpdb-migration.md)
+* [↗️ 旧版迁移](setup.setup.legacy-migration.md)
+* [✨ MPDB 迁移](setup.setup.mpdb-migration.md)
 * [☂️ 用户数据缓存](guides.dumping-userdata.md)
-* [🟩 Plan 联动](guides.plan-hook.md)
+* [🟩 Plan 联动](features.player-analytics-hook.md)
 * [📋 事件优先级](guides.event-priorties.md)
 * [⚔️ 背包保存](guides.keep-inventory.md)
-* [🎏 语言贡献](guides.translations.md)
+* [🎏 语言贡献](setup.config.locales.md)
 
 ## 开发者
 * [📦 API v3](developers.api-v3.md)
@@ -31,7 +31,7 @@
   * [📝 自定义数据 API](developers.api-v3.custom-data-api.md)
   * [❗ API 事件](developers.api-v3.api-events.md)
 
-* [🕸️ API v2*（旧版）*](developers.api-v2.md)
+* [🕸️ API v2*（旧版）*](developers.api-v2-legacy.md)
 ## 链接
 * [💻 GitHub](https://github.com/WiIIiam278/HuskSync)
   * [📂 购买 HuskSync](https://william278.net/project/husksync/)

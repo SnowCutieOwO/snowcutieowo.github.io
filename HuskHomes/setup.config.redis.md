@@ -9,7 +9,7 @@ HuskHomes 支持 Redis，并可以此作主/副通信频道处理跨服传送及
 
 ## 配置
 
-若要配置 Redis，找到你的 [`config.yml`](setup.config-files.md)，并修改 `redis` 部分下的内容。将 `broker_type` 设置为 `REDIS`。
+若要配置 Redis，找到你的 [`config.yml`](setup.config.md)，并修改 `redis` 部分下的内容。将 `broker_type` 设置为 `REDIS`。
 
 ::: details 数据库选项（config.yml）
 ``` YAML

@@ -694,7 +694,7 @@ export default defineConfig({
                 { text: '⚠️ 兼容性', link: '/HuskHomes/setup.compatibility' },
                 {
                   text: '❓ 常见问题', link: '/HuskHomes/setup.faqs', collapsed: true, items: [
-                    { text: '⚙️ 问题排查', link: '/HuskHomes/setup.troubleshooting' },
+                    { text: '⚙️ 问题排查', link: '/HuskHomes/setup.faqs.troubleshooting' },
                   ]
                 }
               ]
@@ -725,7 +725,7 @@ export default defineConfig({
               text: '联动', items: [
                 { text: '🏷️ PlaceholderAPI 联动', link: '/HuskHomes/hooks.placeholderapi-hook' },
                 { text: '💵 Vault 经济', link: '/HuskHomes/hooks.vault-economy' },
-                { text: '🟩 Plan 统计', link: '/HuskHomes/hooks.plan-analytics' },
+                { text: '🟩 Plan 统计', link: '/HuskHomes/hooks.player-analytics' },
                 { text: '🍀 LuckPerms', link: '/HuskHomes/hooks.luckperms' },
                 { text: '🗺️ Dynmap, BlueMap, Pl3xMap', link: '/HuskHomes/hooks.dynmap-bluemap-pl3xmap' },
               ]
@@ -772,7 +772,7 @@ export default defineConfig({
                   text: '📄 配置文件', link: '/HuskSync/setup.config', collapsed: true, items: [
                     { text: '💾 数据库', link: '/HuskSync/setup.config.database' },
                     { text: '✨ Redis', link: '/HuskSync/setup.config.redis' },
-                    { text: '🎏 语言贡献', link: '/HuskSync/setup.config.translations' },
+                    { text: '🎏 语言贡献', link: '/HuskSync/setup.config.locales' },
                   ]
                 },
                 { text: '⚠️ 兼容相关', link: '/HuskSync/setup.compatbility' },
@@ -788,11 +788,11 @@ export default defineConfig({
                 { text: '🖥️ 命令列表', link: '/HuskSync/features.commands' },
                 {
                   text: '✅ 同步功能', link: '/HuskSync/features.sync-features', collapsed: true, items: [
-                    { text: '⚙️ 同步模式', link: '/HuskSync/features.sync-features.sync-modes' },
-                    { text: '↪️ 数据切换', link: '/HuskSync/features.sync-features.data-rotation' },
+                    { text: '⚙️ 同步模式', link: '/HuskSync/features.sync-features.sync-features.sync-modes' },
+                    { text: '↪️ 数据切换', link: '/HuskSync/features.sync-features.sync-features.data-rotation' },
                   ]
                 },
-                { text: '🟩 Plan 统计联动', link: '/HuskSync/features.plan-analytics-hook' },
+                { text: '🟩 Plan 统计联动', link: '/HuskSync/features.player-analytics-hook' },
               ]
             },
             {
@@ -811,7 +811,7 @@ export default defineConfig({
                     { text: '❗ API 事件', link: '/HuskSync/developers.api-v3.api-events' },
                   ]
                 },
-                { text: '🕸️ API v2<i>（旧版）</i>', link: '/HuskSync/developers.api-v2' },
+                { text: '🕸️ API v2<i>（旧版）</i>', link: '/HuskSync/developers.api-v2-legacy-legacy' },
                 { text: '💻 源码', link: '/HuskSync/https://github.com/WiIIiam278/HuskSync' },
               ]
             },

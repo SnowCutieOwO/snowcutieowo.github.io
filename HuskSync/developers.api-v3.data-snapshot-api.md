@@ -170,7 +170,7 @@ huskSyncAPI.getCurrentData(user).thenAccept(optionalSnapshot -> {
 |自定义类型; `plugin:foo`|任意自定义类型|`#getData(Identifer)`|`#setData(Identifier)`|
 
 * 开发者可以提供自己的 `Data` 类来实现 `Data` 示例的同步与保存，并将他们类的 `Serializer<>` 注册为 `Identifier`。见[自定义数据 API](developers.api-v3.custom-data-api.md)章节获取更多信息。
-* 你只能在服务器上注册了序列化的快照或[配置文件](setup.config-file.md)启用的内置数据类型中获取数据。若你尝试从快照中获取不支持类型的数据，你会得到一个空的 `Optional`。
+* 你只能在服务器上注册了序列化的快照或[配置文件](setup.config.md)启用的内置数据类型中获取数据。若你尝试从快照中获取不支持类型的数据，你会得到一个空的 `Optional`。
 
 ### 4.2 编辑生命值、饥饿度、经验值和游戏模式数据
 
