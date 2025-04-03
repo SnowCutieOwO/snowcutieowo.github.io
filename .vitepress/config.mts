@@ -291,6 +291,7 @@ export default defineConfig({
         { text: '返回首页', link: '/index' },
         {
           text: '友链页面', items: [
+            { text: '布丁的个人博客', link: '/other-sites/puddingkc-s-blog' },
             { text: 'CSKB - 日冕知识库', link: '/other-sites/cskb' },
             { text: 'HiMCBBS', link: '/other-sites/himcbbs' },
           ]
