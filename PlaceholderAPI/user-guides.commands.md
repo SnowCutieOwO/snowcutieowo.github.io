@@ -79,7 +79,7 @@
 **示例：**
 
 ``` txt
-/papi parserel funnycube extended_clip %placeholder%
+/papi parserel funnycube extended_clip %变量%
 ```
 :::
 

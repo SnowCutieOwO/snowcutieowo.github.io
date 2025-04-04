@@ -11,7 +11,7 @@
 
 ## 它只显示 `%变量%` 而不是解析后的内容
 
-当插件或 [`/papi parse me %placeholder%`](user-guides.commands.md#papi-parse) 返回的内容没有变化时，你应当检查如下内容：
+当插件或 [`/papi parse me %变量%`](user-guides.commands.md#papi-parse) 返回的内容没有变化时，你应当检查如下内容：
 
 * ### 变量拓展是否正确安装。
     
