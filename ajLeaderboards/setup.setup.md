@@ -19,7 +19,7 @@ ajLeaderboards 通过读取玩家在插件中浏览的变量进行排序。正�
 ::: info 为什么我不能这么做？
 
 ajLeaderboards 是给那些没有内置排行榜功能的插件提供排行榜的。如果插件已经有内置的排行榜，你可以使用它们。
-ajLeaderboards 通过以玩家身份判断变量（如 `%vault_eco_balance` 来获取玩家的余额） ，再存储它们的值。然后插件将其整理并呈现在排行榜上。
+ajLeaderboards 通过以玩家身份判断变量（如 `%vault_eco_balance` 获取玩家的余额），再存储它们的值。然后插件将其整理并呈现在排行榜上。
 :::
 
 部分可使用的变量为 `%vault_eco_balance%`、`%statistic_player_kills%`、`%buildbattle_wins%`、`%statistic_time_played%`、`%villagedefense_kills%`、`%ajpk_stats_highscore%`，以及 `%thebridge_points%`
