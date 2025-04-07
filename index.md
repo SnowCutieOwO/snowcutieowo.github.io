@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: QQ 群
-      link: http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Usutd8XHrHGQsLyhU4DukXvqueRiQEFZ&authKey=C2IT%2BGq7NxpVKPaYvoZYc%2Fu5WmnSsFSEAVOjbJRX6lF32bkFjgg4%2BY0yGdZyKNNs&noverify=0&group_code=707028557
+      link: '/common/group'
     - theme: alt
       text: 爱发电
       link: https://afdian.com/a/SnowCutieOwO
