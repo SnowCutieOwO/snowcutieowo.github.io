@@ -14,7 +14,7 @@
 
 ## 概览
 
-玩家通过诸如耕作、挖矿、战斗或附魔等行为提升[技能](skills.md)等级。升级后玩家会获得不同的[属性效果](stats.md)，解锁并升级各式的[被动](abilities.md)及[魔法能力](mana-abilities.md)，还可获得其他自定义[奖励](rewards.md)。输入 `/skills` 命令后，玩家可以在菜单中浏览有关技能的所有信息。[菜单](menus.md)本身也可完全自定义。钓鱼与采掘能力会掉落自定义战利品，可通过[战利品表](loot.md)自定义和进一步拓展。玩家可以通过排行榜和等级与其他玩家竞争。插件也支持为物品添加穿戴或持有时生效的[属性修饰符](stat-modifiers.md)、[技能条件](skills.item-requirements.md)与[经验修饰符](skills.xp-multipliers.md)。此外，插件还提供了许多供管理员使用的[命令](commands.md)与[权限](permissions.md)来更好地管理玩家和控制访问。
+玩家通过诸如耕作、挖矿、战斗或附魔等行为提升[技能](skills.md)等级。升级后玩家会获得不同的[属性效果](stats.md)，解锁并升级各式的[被动](abilities.md)及[魔法能力](mana-abilities.md)，还可获得其他自定义[奖励](rewards.md)。输入 `/skills` 命令后，玩家可以在菜单中浏览有关技能的所有信息。[菜单](menus.md)本身也可完全自定义。钓鱼与采掘能力会掉落自定义战利品，可通过[战利品表](loot.md)自定义和进一步拓展。玩家可以通过排行榜和等级与其他玩家竞争。插件也支持为物品添加穿戴或持有时生效的[属性修饰符](stats.stat-modifiers.md)、[技能条件](skills.item-requirements.md)与[经验修饰符](skills.xp-multipliers.md)。此外，插件还提供了许多供管理员使用的[命令](commands.md)与[权限](permissions.md)来更好地管理玩家和控制访问。
 
 ## 技能
 

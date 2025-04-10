@@ -16,8 +16,8 @@
 
 使用它们的命令为：
 
-* `/sk modifier add [player] [属性] [name] [值] (是否静默)` - 为玩家添加修饰符
-* `/sk modifier remove [player] [name] (是否静默)` - 移除玩家身上的修饰符
+* `/sk modifier add [玩家名称] [属性] [名称] [值] (是否静默)` - 为玩家添加修饰符
+* `/sk modifier remove [玩家名称] [名称] (是否静默)` - 移除玩家身上的修饰符
 * `/sk modifier list (player) (stat)` - 列出玩家身上拥有的修饰符
 * `/sk modifier removeall (player) (stat) (是否静默)` - 移除玩家身上所有的修饰符
 
