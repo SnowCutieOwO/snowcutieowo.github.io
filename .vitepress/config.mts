@@ -230,6 +230,7 @@ export default defineConfig({
         text: '📘 维基列表',
         items: [
           { text: 'ajLeaderboards', link: '/ajLeaderboards/index' },
+          { text: 'AuraSkills', link: '/AuraSkills/index' },
           { text: 'AureliumSkills（旧）', link: '/AureliumSkills/index' },
           { text: 'Codex', link: '/Codex/index' },
           { text: 'CommandTimer', link: '/CommandTimer/index' },
@@ -263,6 +264,7 @@ export default defineConfig({
           text: '维基列表',
           items: [
             { text: 'ajLeaderboards', link: '/ajLeaderboards/index' },
+            { text: 'AuraSkills', link: '/AuraSkills/index' },
             { text: 'AureliumSkills（旧）', link: '/AureliumSkills/index' },
             { text: 'Codex', link: '/Codex/index' },
             { text: 'CommandTimer', link: '/CommandTimer/index' },
@@ -372,6 +374,45 @@ export default defineConfig({
             }
           ]
         },
+      ],
+      '/AuraSkills/': [
+        { text: '返回首页', link: '/index' },
+        { text: '前言', link: '/AuraSkills/index' },
+        { text: 'AuraSkills 维基', items: [
+          { text: 'AuraSkills', link: '/AuraSkills/auraskills' },
+          { text: '主配置', collapsed: true, link: '/AuraSkills/main-config', items: [
+            { text: 'SQL', link: '/AuraSkills/main-config.sql' }
+          ] },
+          { text: '技能', collapsed: true, link: '/AuraSkills/skills', items: [
+            { text: '经验条件', link: '/AuraSkills/skills.xp-requirements' },
+            { text: '经验倍率', link: '/AuraSkills/skills.xp-multipliers' },
+            { text: '物品条件', link: '/AuraSkills/skills.item-requirements' },
+          ] },
+          { text: '属性', collapsed: true, link: '/AuraSkills/stats', items: [
+            { text: '属性修饰符', link: '/AuraSkills/stats.stat-modifiers' }
+          ] },
+          { text: '能力', link: '/AuraSkills/abilities' },
+          { text: '魔法能力', link: '/AuraSkills/mana-abilities' },
+          { text: '经验来源', link: '/AuraSkills/sources' },
+          { text: '奖励', link: '/AuraSkills/rewards' },
+          { text: '战利品', link: '/AuraSkills/loot' },
+          { text: '菜单', link: '/AuraSkills/menus' },
+          { text: '消息', link: '/AuraSkills/messages' },
+          { text: '命令', link: '/AuraSkills/commands' },
+          { text: '权限', link: '/AuraSkills/permissions' },
+          { text: '变量', link: '/AuraSkills/placeholders' },
+          { text: '兼容插件', link: '/AuraSkills/compatible-plugins'},
+          { text: '迁移', link: '/AuraSkills/migration' },
+          { text: 'API', link: '/AuraSkills/api' },
+          { text: '常见问题', link: '/AuraSkills/faq' },
+          { text: '服务器要求', link: '/AuraSkills/server-requirements' },
+          { text: '不兼容内容', link: '/AuraSkills/incompatibilities' },
+          { text: '更新日志', items: [
+            { text: '2.0', link: '/AuraSkills/release-notes.2-0' },
+            { text: '2.1', link: '/AuraSkills/release-notes.2-1' },
+            { text: '2.2', link: '/AuraSkills/release-notes.2-2' },
+          ] }
+        ] },
       ],
       '/ajLeaderboards/': [
         { text: '返回首页', link: '/index' },
