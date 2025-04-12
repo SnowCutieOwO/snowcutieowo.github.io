@@ -187,3 +187,5 @@ public class JoinExample extends JavaPlugin implements Listener {
     }
 }
 ```
+
+:::
