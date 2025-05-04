@@ -2,7 +2,7 @@
 
 在这里存储的插件译文与模组译文均会以表格列出，也有相关指路供你参考。
 
-![img](https://img.shields.io/badge/%E7%8E%B0%E5%AD%98%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6%E6%95%B0-122-93fdf9) ![img](https://img.shields.io/badge/%E9%85%8D%E7%BD%AE%E8%AF%91%E6%96%87%E6%80%BB%E5%AD%97%E6%95%B0-124016-ebfd93)（最后更新：2025/2/17）
+![img](https://img.shields.io/badge/%E7%8E%B0%E5%AD%98%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6%E6%95%B0-123-93fdf9) ![img](https://img.shields.io/badge/%E9%85%8D%E7%BD%AE%E8%AF%91%E6%96%87%E6%80%BB%E5%AD%97%E6%95%B0-125143-ebfd93)（最后更新：2025/5/4）
 
 ## 常见问题
 
@@ -132,6 +132,7 @@
 |TheDungeons|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/%E2%9A%94%EF%B8%8Fthedungeons-automatic-generation-in-any-world.111120/)|
 |The Gold Economy|否|是|仅语言文件|[Github](https://github.com/ConfusedAlex/GoldEconomy/blob/master/src/main/resources/messages_zh_CN.properties)|
 |Towny Advanced|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/towny-advanced.72694/)|
+|TradeMe|否|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/trademe-with-api-to-create-custom-trades-1-7-10-1-21-x.7544/)|
 |Tweakin|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/tweakin-1-17-1-21-4.93444/)|
 |UltimateBlood|否|是|仅语言文件|[Github](https://github.com/andrewyernau/ultimateblood/blob/main/src/main/resources/lang/zhcn.yml)|
 |UltimateStacker|是|否|N/A|[Songoda](https://songoda.com/product/ultimatestacker-16)|
