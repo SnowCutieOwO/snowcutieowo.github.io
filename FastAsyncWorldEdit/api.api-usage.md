@@ -22,12 +22,12 @@ API 在开发时需要 Java 21。请确保将你的工具链指向 Java 21。
 ``` Kotlin
 repositories {
     mavenCentral()
-    maven { url = uri("https://repo.papermc.io/repository/maven-public/") }
-    maven { url = uri("https://maven.enginehub.org/repo/") }
+    maven("https://repo.papermc.io/repository/maven-public/")
+    maven("https://maven.enginehub.org/repo/")
 }
 
 dependencies {
-    implementation(platform("com.intellectualsites.bom:bom-newest:1.52")) // 参考: https://github.com/IntellectualSites/bom 
+    implementation(platform("com.intellectualsites.bom:bom-newest:1.52")) // Ref: https://github.com/IntellectualSites/bom 
     compileOnly("com.fastasyncworldedit:FastAsyncWorldEdit-Core")
 }
 ```
@@ -37,12 +37,12 @@ dependencies {
 ``` Kotlin
 repositories {
     mavenCentral()
-    maven { url = uri("https://repo.papermc.io/repository/maven-public/") }
-    maven { url = uri("https://maven.enginehub.org/repo/") }
+    maven("https://repo.papermc.io/repository/maven-public/")
+    maven("https://maven.enginehub.org/repo/")
 }
 
 dependencies {
-    implementation(platform("com.intellectualsites.bom:bom-newest:1.52")) // 参考: https://github.com/IntellectualSites/bom 
+    implementation(platform("com.intellectualsites.bom:bom-newest:1.52")) // Ref: https://github.com/IntellectualSites/bom 
     compileOnly("com.fastasyncworldedit:FastAsyncWorldEdit-Core")
     compileOnly("com.fastasyncworldedit:FastAsyncWorldEdit-Bukkit") { isTransitive = false }
 }
@@ -65,7 +65,7 @@ dependencies {
     <dependencies>
         <dependency>
             <groupId>com.intellectualsites.bom</groupId>
-            <artifactId>bom-newest</artifactId> <!--  参考: https://github.com/IntellectualSites/bom -->
+            <artifactId>bom-newest</artifactId> <!-- 参考: https://github.com/IntellectualSites/bom -->
             <version>1.52</version>
             <scope>import</scope>
             <type>pom</type>
@@ -96,7 +96,7 @@ dependencies {
     <dependencies>
         <dependency>
             <groupId>com.intellectualsites.bom</groupId>
-            <artifactId>bom-newest</artifactId> <!--  Ref: https://github.com/IntellectualSites/bom -->
+            <artifactId>bom-newest</artifactId> <!-- 参考: https://github.com/IntellectualSites/bom -->
             <version>1.52</version>
             <scope>import</scope>
             <type>pom</type>
