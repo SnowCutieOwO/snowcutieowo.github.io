@@ -23,7 +23,7 @@ ajLeaderboards 通过以玩家身份判断变量（如 `%vault_eco_balance` 获�
 
 :::
 
-部分可使用的变量为 `%vault_eco_balance%`、`%statistic_player_kills%`、`%buildbattle_wins%`、`%statistic_time_played%`、`%villagedefense_kills%`、`%ajpk_stats_highscore%`，以及 `%thebridge_points%`
+部分可使用的变量为 `%vault_eco_balance%`、`%statistic_player_kills%`、`%buildbattle_wins%`、`%statistic_time_played%`、`%villagedefense_kills%`、`%ajpk_stats_highscore%`，以及 `%thebridge_points%`。
 
 ::::
 
