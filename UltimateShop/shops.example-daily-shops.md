@@ -644,16 +644,17 @@ items:
 
 例如：
 
-``` YAML
+``` YAML {1-5}
 general-configs:
+  # 配置...
+
+items:
   sell-prices:
     1:
       economy-plugin: Vault
       amount: 1
-      placeholder: '&6{amount} 硬币'
+      placeholder: '&6{amount} Coins'
       start-apply: 0
-
-items:
   sell-prices-conditions:
     1:
       # 条件...

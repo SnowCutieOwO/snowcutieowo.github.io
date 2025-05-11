@@ -9,7 +9,6 @@
 ### <font color="green">直接支持的</font>自定义物品系列
 
 * ItemsAdder
-* Oraxen
 * EcoItems
 * EcoArmor
 * MMOItems
@@ -17,6 +16,8 @@
 * eco
 * NeigeItems
 * ExecutableItems
+* Nexo
+* CraftEngine
 
 ### <font color="green">直接支持的</font>自定义经济插件系列
 

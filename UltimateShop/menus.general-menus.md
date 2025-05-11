@@ -19,6 +19,7 @@
 * `conditions`：只有达到指定条件的玩家才可以打开该菜单。需要在此使用“[条件格式](format.condition-format.md)”。
 * `open-actions`：打开菜单时执行的动作。需要在此使用“[动作格式](format.action-format.md)”。
 * `close-actions`：关闭菜单时执行的动作。需要在此使用“[动作格式](format.action-format.md)”。**请注意，如果你已经打开一个菜单，此时再通过任何方式打开本插件内的其他菜单也会触发此菜单的关闭动作。**
+* `custom-command`: 普通菜单的自定义命令选项，若需要为商店设置打开的自定义命令，请将其添加在[商店](shops.shops.md)配置中。<font color="red">**（仅付费版）**</font>
 
 示例：
 
@@ -30,6 +31,10 @@ size: 54
 bedrock:
   enabled: true
   content: '&f欢迎来到商店.'
+
+custom-command:
+  name: 'mineral'
+  description: '自定义描述'
 
 conditions: []
   

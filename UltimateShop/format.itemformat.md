@@ -17,7 +17,7 @@ hook-plugin: MMOItems
 
 ### 对接物品
 
-对于 `EcoItems`、`Oraxen` 以及 `MythicMobs`，请直接填入物品 ID。
+对于 `EcoItems`、`Oraxen` 以及 `MythicMobs`，请直接填入 `物品 ID`。
 
 对于 `ItemsAdder` 和 `eco`，请填入 `命名空间:物品 ID`。
 
@@ -31,11 +31,13 @@ hook-plugin: MMOItems
 
 对于 `EcoArmor`，请填入 `盔甲套装 ID;;部位名称`。`部位名称`可为`BOOTS`（靴子）、`CHESTPLATE`（胸甲）、`ELYTRA`（鞘翅）、`HELMET`（头盔）、`LEGGINGS`（护腿）。
 
-对于 `MMOItems`，请填入 `<物品类型>;;<物品 ID>`。
+对于 `MMOItems`，格式为 `物品类型 ID;;物品 ID`。
 
 ``` YAML
 hook-item: AXE;;TEST_AXE
 ```
+
+对于 `CraftEngine`，格式为 `命名空间;;物品 ID`。
 
 ::: info 
 **等等！** 如果你只是想要从自定义物品插件获取物品，`hook-plugin` 与 `hook-item` 选项对你来说已经足够了。如果你的自定义物品插件不受支持，请使用如下的命令。下面的内容适用于原版物品。如果你在这里设置，我们将会替换其上已有的属性，导致最终结果和物品插件中的物品不完全相同。

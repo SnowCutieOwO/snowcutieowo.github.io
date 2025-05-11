@@ -8,6 +8,9 @@ settings:
   buy-more: true
   shop-name: '食物商店'
   hide-message: false
+  custom-command:
+    name: 'mineral'
+    description: '自定义描述'
 
 general-configs:
   # 这表示所有物品都会使用这些价格与物品模式.
@@ -34,7 +37,7 @@ items:
         amount: 5
         conditions:
           1:
-            type: permission: 
+            type: permission
             permission: 'group.vip'
         give-actions:
           1:
@@ -63,7 +66,7 @@ items:
         placeholder: '{amount} 点券'
         give-actions:
           1: 
-            type: message: 
+            type: message
             message: '看起来你已经卖出 5 个苹果了!'
     buy-actions:
       1:
@@ -137,7 +140,9 @@ buttons:
       lore:
         - '&7点击浏览上一页!'
     actions:
-      - 'shop_menu: crops'
+      1:
+        type: shop_menu
+        shop: 'crops'  
 ```  
 
 ## 设置
@@ -146,6 +151,7 @@ buttons:
 - `buy-more`：该商店中的商品是否能打开增量购买菜单。
 - `shop-name`：商店的显示名称，会被内置变量 `{shop-name}` 使用。
 - `hide-message`：是否隐藏玩家在商店中进行交易后显示的消息。
+- `custom-command`: 该商店的自定义命令设置。<font color="red">**（仅付费版）**</font>
 
 ## 全局配置
 
