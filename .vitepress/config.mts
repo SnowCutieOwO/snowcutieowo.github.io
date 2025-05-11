@@ -1251,6 +1251,7 @@ export default defineConfig({
                 { text: '正确使用报告浏览器', link: '/spark/spark.using-the-viewer' },
                 { text: '开发者 API', link: '/spark/spark.developer-api' },
                 { text: '配置文件', link: '/spark/spark.configuration' },
+                { text: '独立代理', link: '/spark/spark.standalone-agent' }
               ]
             },
 
