@@ -181,7 +181,7 @@ description:
 
 #### WorldGuard 区域
 
-对应条目会在进入 WorldGuard（https://dev.bukkit.org/projects/worldguard）区域时解锁。
+对应条目会在进入 [WorldGuard](https://dev.bukkit.org/projects/worldguard) 区域时解锁。
 
 ::: info 将 `type` 设置为 **WORLDGUARD_REGION**。
 
@@ -223,10 +223,15 @@ discovered_on:
 
 **`value.mob_type:`** MythicMobs 实体的 ID。你可以使用“;”表示多个 ID。
 
-:::: tabs
 
-::: tab 示例 1
-
+<el-tabs
+  v-model="activeName"
+  type="card"
+  class="demo-tabs"
+  @tab-click="handleClick"
+>
+  <el-tab-pane label="示例 1" name="first">
+  
 ``` YAML
 discovered_on:
   type: MYTHIC_MOB_KILL
@@ -234,20 +239,32 @@ discovered_on:
     mob_type: forest_corrupter
 ```
 
-:::
-
-::: tab 示例 2
-
+  </el-tab-pane>
+  <el-tab-pane label="示例 2" name="second">
+  
 ``` YAML
 discovered_on:
   type: MYTHIC_MOB_KILL
   value:
     mob_type: crab;super_crab;mega_crab
 ```
+  
+  </el-tab-pane>
+</el-tabs>
+
+
+<script lang="ts" setup>
+import { ref } from 'vue'
+import type { TabsPaneContext } from 'element-plus'
+
+const activeName = ref('first')
+
+const handleClick = (tab: TabsPaneContext, event: Event) => {
+  console.log(tab, event)
+}
+</script>
 
 :::
-
-::::
 
 ### 点击动作
 
@@ -256,6 +273,14 @@ discovered_on:
 ``` YAML
 click_actions:
 - "console_command: warp shadow_swamp %player%"
+```
+
+### 点击动作冷却
+
+在玩家点击与已解锁条目相关内容时触发动作的冷却时间（单位为秒）。
+
+``` YAML
+click_actions_cooldown: 60
 ```
 
 ### 自定义界面物品
@@ -282,6 +307,17 @@ inventory_items:
 #### 未解锁条目
 
 显示在[分类界面](inventory-yml-tutorial.md)的未解锁条目物品。所有来自于[这里](discoveries-categories-tutorial.md#3-未解锁条目)的变量都可使用。
+
+``` YAML
+inventory_items:
+  discovery_blocked:
+    id: GRAY_DYE
+    name: "&c??"
+    lore:
+    - "&7尚未发现该条目中的对应内容."
+    - ""
+    - "&7提示: 重要的城市."
+```
 
 ### 自定义奖励
 

@@ -27,4 +27,9 @@ inventoryDoesNotExists: "&c界面 &7%inventory% &c不存在."
 playerOpenInventory: "&a已为玩家 &e%player%&a 打开界面 &7%inventory%&a!"
 commandDoesNotExist: "&c命令不存在."
 pluginCriticalErrors: "&c插件检测到配置文件存在错误. 请通过 &7/codex verify &c检查."
+clickActionsCooldown: "&c你需要再等待 &7%time% &c才可以再次使用这个."
+seconds: 秒
+minutes: 分
+hours: 时
+days: 日
 ```
