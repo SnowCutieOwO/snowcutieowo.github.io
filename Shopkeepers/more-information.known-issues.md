@@ -148,6 +148,7 @@ use-static-uuid:
         - execute as_player "shopkeeper open <id>"
         ```
         如果有人知道延迟命令 1 刻执行更轻量的方法，请务必让我知道。
+* RivalHarvesterHoes：2025-01-09：一位用户报告称他无法编辑 Shopkeepers 村民（幼年村民未受影响），最终将问题定位于该插件。
 * 客户端侧模组：如果你碰到任何与其有关的问题，请尝试卸载所有客户端模组后复现。
     * [OffersHUD](https://github.com/naari3/offers-hud)：用户报告称打开交易界面时遇到问题。见 https://github.com/naari3/offers-hud/issues/50
 
