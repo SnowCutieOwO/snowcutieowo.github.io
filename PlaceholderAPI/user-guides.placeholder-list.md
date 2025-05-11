@@ -2635,6 +2635,25 @@
 %griefprevention_currentclaim_ownername%
 ```
 
+### [GrimAC](https://modrinth.com/plugin/grimac/)
+
+::: tip 内置于插件
+:::
+
+``` txt
+%grim_player%
+%grim_player_uuid%
+%grim_player_ping%
+%grim_player_brand%
+%grim_player_h_sensitivity%
+%grim_player_v_sensitivity%
+%grim_player_fast_math%
+%grim_player_tps%
+%grim_player_version%
+%grim_prefix%
+%grim_version%
+```
+
 ### [Guilds](https://www.spigotmc.org/resources/48920/)
 
 ::: tip 内置于插件
@@ -3609,6 +3628,14 @@
 %myprefixsystem_rank_color%
 ```
 
+### [NameColor](https://modrinth.com/plugin/namecolor)
+
+::: tip 内置于插件
+:::
+``` txt
+%namecolor_display_name%
+```
+
 ### [Nameless Plugin](https://www.spigotmc.org/resources/59032/)
 
 ::: tip 内置于插件
@@ -3957,7 +3984,7 @@
 ::: tip papi ecloud download playerstats
 :::
 
-详细信息及使用示例，请访问 [PlayerStatsExpansion Github 代码仓库](https://github.com/Artemis-the-gr8/PlayerStatsExpansion/tree/main)。
+有关此插件的详细信息及使用示例，请访问 [PlayerStatsExpansion Github 代码仓库](https://github.com/Artemis-the-gr8/PlayerStatsExpansion/tree/main)。
 
 ``` txt
 %playerstats_prefix% 
@@ -4001,6 +4028,33 @@
 %playtime_time%
 %playtime_timesjoined%
 %playtime_serveruptime%
+```
+
+### [PlayTimeManager](https://modrinth.com/plugin/playtimemanager)
+
+
+::: tip 内置于插件
+:::
+
+你可以在 [PlayTimeManager 的维基](https://github.com/TheGaBr0/PlayTimeManager/wiki/Placeholders)中找到完整的变量列表。
+
+``` txt
+%PTM_playtime%
+%PTM_playtime_#%
+%PTM_playtime_<玩家名称>%
+%PTM_playtime_#_<玩家名称>%
+%PTM_lastseen_<玩家名称>%
+%PTM_lastseen_elapsed_<玩家名称>%
+%PTM_lastseen_elapsed_#_<玩家名称>%
+%PTM_playtime_top_<名次>%
+%PTM_playtime_top_#_<名次>%
+%PTM_nickname_top_<名次>%
+%PTM_lastseen_top_<名次>%
+%PTM_lastseen_elapsed_top_<名次>%
+%PTM_lastseen_elapsed_top_#_<名次>%
+%PTM_lp_prefix_top_<名次>%
+%PTM_joinstreak%
+%PTM_joinstreak_<玩家名称>%
 ```
 
 ### [PlaytimeRewards](https://www.spigotmc.org/resources/100231/)

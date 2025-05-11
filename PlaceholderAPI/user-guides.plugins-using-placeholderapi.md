@@ -607,6 +607,11 @@
 [ ] 支持变量解析。
 [x] 自行提供变量。[链接](user-guides.placeholder-list.md#griefprevention)
 
+* [GrimAC](https://modrinth.com/plugin/grimac/)
+
+[x] 支持变量解析。
+[x] 自行提供变量。 [链接](user-guides.placeholder-list.md#grimac)
+
 * [Guilds](https://www.spigotmc.org/resources/48920/)
 
 [ ] 支持变量解析。
@@ -879,6 +884,11 @@
 
 ### N
 
+* [NameColor](https://modrinth.com/plugin/namecolor)
+
+[ ] 支持变量解析。
+[x] 自行提供变量。[链接](user-guides.placeholder-list.md#namecolor)
+
 * [Nameless Plugin](https://www.spigotmc.org/resources/59032/)
 
 [ ] 支持变量解析。
@@ -1007,6 +1017,12 @@
 
 [ ] 支持变量解析。
 [x] 自行提供变量。[链接](user-guides.placeholder-list.md#playtime)
+
+
+* [PlayTimeManager](https://modrinth.com/plugin/playtimemanager)
+
+[ ] 支持变量解析。
+[x] 自行提供变量。[链接](user-guides.placeholder-list.md#playtimemanager)
 
 * [PlaytimeRewards](https://www.spigotmc.org/resources/100231/)
 
