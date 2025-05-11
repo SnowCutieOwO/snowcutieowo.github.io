@@ -15,6 +15,9 @@
 * CoreProtect TNT
   添加了对 TNT 与苦力怕爆炸来源的记录。 
   https://www.spigotmc.org/resources/coreprotect-tnt-log-tnt-creeper-explode-source.69609/
+* CoreProtect Time-Lapse
+  CPTL 为 CoreProtect 的附属，用于创建基于历史数据的延时情景。  
+  https://modrinth.com/plugin/cptl 
 
 ## 工具
 
