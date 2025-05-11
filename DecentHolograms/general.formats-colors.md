@@ -225,12 +225,12 @@ DecentHolograms 能显示的东西不只是文本，通过特定的格式，你�
 
 ::: tab HeadDatabase 头颅
 
-`HEADDB_<id>` 可以用在悬浮字中。`<id>` 为 https://minecraft-heads.com 的数字。它一般可以在链接的参数中找到。
+`HEADDATABASE_<id>` 可以用在悬浮字中。`<id>` 为 https://minecraft-heads.com 的数字。它一般可以在链接的参数中找到。
 
 > [!NOTE] 示例
 > 通过 HeadDatabase 插件显示 https://minecraft-heads.com/custom-heads/head/1 的纹理
 > ```
-> #ICON: PLAYER_HEAD (HEADDB_1)
+> #ICON: PLAYER_HEAD (HEADDATABASE_1)
 > ```
 
 :::
