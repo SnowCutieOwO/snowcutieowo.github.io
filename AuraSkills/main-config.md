@@ -275,6 +275,7 @@
 * `placeholder_api` - 是否在菜单中解析 PlaceholderAPI 的变量。
 * `stats:`
   * `show_trait_values_directly` - 若为 true，`modifier` 为 1 且带有单个特征的属性将会显示特征值而非菜单中的值。这可以让默认拥有 20 生命值的玩家可以包括在显示的等级中。
+* `removal_protection` - 启用菜单界面按钮的额外保护。
 
 #### 战利品（旧译“道具池”）
 

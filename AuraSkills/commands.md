@@ -55,11 +55,12 @@
 |`/mana <玩家名称>`|显示玩家魔法量。|`auraskills.command.mana.other`|
 |`/mana add <玩家名称> <数量> [允许溢出] [是否静默]`|为玩家增加魔法值。若 `允许溢出` 为 true，则给予的魔法量可超出上限。默认情况下魔法量不会超出上限。|`auraskills.command.mana.remove`|
 |`/mana set <玩家名称> <数量> [允许溢出] [是否静默]`|为玩家设置魔法值。|`auraskills.command.mana.set`|
-|`/sk modifier add <玩家名称> <属性> <名称> <值> [是否静默] [是否叠加]`|为指定玩家添加一个属性修饰符。将 `是否静默` 设置为 true 则不会向玩家发送消息。将 `叠加计算` 设置为 true 时若存在同名修饰符则会叠加计算。|`auraskills.command.modifier`|
+|`/sk modifier add <玩家名称> <属性> <名称> <值> [计算方式] [是否静默] [是否叠加]`|为指定玩家添加一个属性修饰符。将 `是否静默` 设置为 true 则不会向玩家发送消息。将 `叠加计算` 设置为 true 时若存在同名修饰符则会叠加计算。|`auraskills.command.modifier`|
+|`/sk modifier addtemp <玩家名称> <属性名称> <名称> <值> <持续时间> [忽略离线] [计算方式] [是否静默] [叠加]`|给予玩家临时属性修饰符。`<持续时间>` 参数格式为 `[年]y[月]mo[日]d[时]h[分]m[秒]s`。有效的时间长度示例：`5s`、`10m` 以及 `4d2m1s`。`[忽略离线]` 参数决定了持续时间是否在玩家离线时仍然流逝（默认为 false）。|`auraskills.command.modifier`|
 |`/sk modifier remove <玩家名称> <名称> [是否静默]`|移除玩家身上指定的属性修饰符。|`auraskills.command.modifier`|
 |`/sk modifier list [玩家名称] [属性]`|列出所有属性修饰符。`玩家名称` 不填则默认检查自身拥有的修饰符。指定 `属性` 可只列出对应属性的修饰符。|`auraskills.command.modifier`|
 |`/sk modifier removeall [玩家名称] [属性] [是否静默]`|移除所有属性修饰符。`玩家名称` 不填则默认检查自身拥有的修饰符。指定 `属性` 可只移除对应属性的修饰符。|`auraskills.command.modifier`|
-|`/sk item modifier add <属性> <值> [添加描述]`|为手持物品添加物品修饰符。默认一并添加描述。|`auraskills.command.item.modifier`|
+|`/sk item modifier add <属性> <值> [计算方式] [添加描述]`|为手持物品添加物品修饰符。默认一并添加描述。|`auraskills.command.item.modifier`|
 |`/sk item modifier remove <属性> [移除描述]`|移除手持物品的物品修饰符，默认若有对应描述也会一并移除。|`auraskills.command.item.modifier`|
 |`/sk item modifier list`|列出手持物品包含的所有物品修饰符。|`auraskills.command.item.modifier`|
 |`/sk item modifier removeall`|移除手持物品包含的所有物品修饰符。|`auraskills.command.item.modifier`|
@@ -91,7 +92,8 @@
 |`/sk jobs remove <职业名称> [玩家名称]`|为自己或指定玩家退出某个职业。|`auraskills.command.jobs `（指定其他玩家时为 `auraskills.command.jobs.other`）|
 |`/sk jobs removeall [玩家名称]`|为自己或指定玩家退出所有职业。|`auraskills.command.jobs `（指定其他玩家时为 `auraskills.command.jobs.other`）|
 |`/sk trait add <玩家名称> <特征名称> <名称> <值> [是否静默] [是否叠加]`|以指定名称给予玩家特征修饰符。|`auraskills.command.modifier`|
-|`/sk trait add <玩家名称> <特征名称> <名称> <值> [是否静默] [是否叠加]`|移除玩家身上指定名称的特征修饰符。|`auraskills.command.modifier`|
+|`/sk trait add <玩家名称> <特征名称> <名称> <值> [计算方式] [是否静默] [是否叠加]`|移除玩家身上指定名称的特征修饰符。|`auraskills.command.modifier`|
+|`/sk trait addtemp <玩家名称> <trait> <名称> <值> <持续时间> [忽略离线] [计算方式] [是否静默] [叠加]`|`<持续时间>` 参数格式为 `[年]y[月]mo[日]d[时]h[分]m[秒]s`。有效的时间长度示例：`5s`、`10m` 以及 `4d2m1s`。`[忽略离线]` 参数决定了持续时间是否在玩家离线时仍然流逝（默认为 false）。|`auraskills.command.modifier`|
 |`/sk trait list [玩家名称] [特征名称]`|列出玩家身上拥有的特征修饰符。|`auraskills.command.modifier`|
 |`/sk trait removeall [玩家名称] [特征名称] [是否静默]`|移除玩家身上所有的特征修饰符。|`auraskills.command.modifier`|
 |`/sk item trait add <特征名称> <值> [添加描述]`|为手持物品添加物品特征修饰符，默认一并添加描述。|`auraskills.command.item.modifier`|

@@ -74,6 +74,8 @@
 ### skills:
 
 * `bar_length` - 经验进度条中显示的总字符数量。也影响升级菜单的经验条。
+* `percent_format` - `{percent}` 变量在进度组件中的小数位数。也对升级进度菜单中的经验条生效。
+* `current_xp_format` - `{current_xp}` 变量在进度组件中的小数位数。格式为 Java DemicalFormat。
 
 #### level_progression:
 
@@ -82,6 +84,7 @@
 * `item_per_page` - 每页菜单显示的技能物品（`unlocked`、`in_progress` 与 `locked`）数量。
 * `start_level` - 路线内第一个物品显示的等级。
 * `track` - 取值范围为 0 至 54 的数字列表，用于定位物品。路径的索引匹配了单页菜单内技能等级物品的位置，因此其长度应当与 `items_per_page` 匹配。
+* `xp_format` - `{source_xp}` 变量在经验来源模板与 multiplied_xp 组件中的小数位数。格式为 Java DemicalFormat。
 
 ### sources:
 

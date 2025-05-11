@@ -92,9 +92,9 @@ Skills:
 
 我们不提供更多支持。若你不确定 Mythic 的触发器/目标选择器或条件的工作机制，请前往其[官方维基](https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/home)或在 Discord 上寻求支持。
 
-### Oraxen
+### Nexo
 
-你可以在幸运属性/特征设置中像普通方块那样加入 Oraxen 自定义方块。你也可以指定 Oraxen 方块给予的经验数量（`oraxen:方块 ID`）。Oraxen 物品也可以直接用于经验来源菜单物品。
+你可以在幸运属性/特征设置中像普通方块那样加入 Nexo 自定义方块。你也可以指定 Nexo 方块给予的经验数量（`nexo:方块 ID`）。Nexo 物品也可以直接用于经验来源菜单物品。
 
 ### Slimefun
 

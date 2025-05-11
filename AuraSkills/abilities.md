@@ -29,13 +29,15 @@
 |`enable_message`|first_strike、revival|玩家是否在能力激活时收到 ActionBar 消息。|
 |`cooldown_ticks`|fisrt_strike|“先出之刃”技能刷新的间隔，单位为刻。默认为 6000（5 分钟）。|
 |`enable_enemy_message`|bleed|玩家对敌怪造成流血效果时是否发送 ActionBar 消息。|
+|`enable_self_message`|bleed|玩家是否在自身获得流血效果时收到 ActionBar 消息。|
 |`enable_stop_message`|bleed|玩家是否在自身流血效果停止时收到 ActionBar 消息。|
 |`base_ticks`|bleed|玩家未处于流血状态时增加的时间长度，单位为刻。|
 |`added_ticks`|bleed|玩家已处于流血状态时叠加的时间长度，单位为刻。|
 |`tick_period`|bleed|流血刻生效的 Minecraft 刻间隔。|
 |`show_particles`|bleed|在玩家因流血损失生命值时是否显示粒子效果。|
 |`health_percent_required`|fleeting|玩家触发“残血飞奔”技能时生命值的最低百分比。|
-|`add_item_lore`|炼药|是否对酿造药水增加额外时长的效果描述。|
+|`add_item_lore`|alchemist|是否对酿造药水增加额外时长的效果描述。|
+|`speed_reduction`|stun|受眩晕打击效果实体的减速程度。0.2 = 减速 20%。|
 
 ## 菜单
 

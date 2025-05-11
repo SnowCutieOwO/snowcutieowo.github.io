@@ -82,6 +82,7 @@ levels:
 
 * `stat` - 给予的属性名称，请填入诸如 `strength` 的英文原名。（必选）
 * `value` - 提升的属性等级，默认为 1。（可选）
+* `format` - 决定显示在菜单与升级消息中的小数位数。使用 Java DemicalFormat。
 
 示例：
 
