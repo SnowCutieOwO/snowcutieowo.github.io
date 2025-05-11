@@ -112,7 +112,7 @@ def __main__():
         else:
             finalResult = processResult(fileList, countList, ignoredList)
             finalResult = pandas.DataFrame(finalResult)
-            print(finalResult)
+            # print(finalResult) # 太浪费屏幕就不需要输出了，总之是调试用的玩意
             print('共',count[0],'字,','其中汉字',count[0]-count[1],'字,','中文标点符号',count[1],'字,','英文字母',count[2],'字,','数字符号',count[3],'字')
 
 
