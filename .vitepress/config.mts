@@ -421,7 +421,7 @@ export default defineConfig({
                 { text: '2.0', link: '/AuraSkills/release-notes.2-0' },
                 { text: '2.1', link: '/AuraSkills/release-notes.2-1' },
                 { text: '2.2', link: '/AuraSkills/release-notes.2-2' },
-                { text: '2.3', link: '/AuraSkills/release-notes.2.3' }
+                { text: '2.3', link: '/AuraSkills/release-notes.2-3' }
               ]
             }
           ]
