@@ -10,14 +10,14 @@ LuckPerms 是为多子服的群组设计的。你可以设置只在某个服务�
 
 ### 一些重要的配置选项：
 
-```YAML
+``` YAML
 # The name of the server, used for server specific permissions. Set to 'global' to disable.
 server: global
 ```
 
 这就是服务器的名称。若你想要设置只在某个服务器生效的权限，你需要通过修改这个选项为服务器命名。如果你想要的话，群组中的服务器也可以是同一个名字。
 
-```YAML
+``` YAML
 # If users on this server should have their global permissions/groups applied.
 include-global: true
 ```
@@ -34,7 +34,7 @@ LuckPerms 的权限可以分成仅在指定服务器生效（只在处于某个�
 
 #### 示例一
 
-```YAML
+``` YAML
 server: global
 include-global: true
 ```
@@ -44,7 +44,7 @@ include-global: true
 
 #### 示例二
 
-```YAML
+``` YAML
 server: lobby
 include-global: true
 ```
@@ -54,7 +54,7 @@ include-global: true
 
 #### 示例三
 
-```YAML
+``` YAML
 server: bungeecord
 include-global: false
 ```
@@ -64,7 +64,7 @@ include-global: false
 
 #### 示例四
 
-```YAML
+``` YAML
 server: global
 include-global: false
 ```

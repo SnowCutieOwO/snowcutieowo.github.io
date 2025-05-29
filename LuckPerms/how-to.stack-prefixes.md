@@ -11,7 +11,7 @@
 在聊天插件请求玩家前/后缀时，除了返回权重最高的前缀之外，LuckPerms 还能应用一些规则来将多个前后缀结合在一起。
 
 默认配置如下：
-```YAML
+``` YAML
 meta-formatting:
   prefix:
     format:
@@ -73,7 +73,7 @@ meta-formatting:
 
 在叠加系统中这都是可以实现的。每个堆叠中的“元素”都可以在 format 部分添加。
 
-```YAML
+``` YAML
 prefix:
   format:
     - "highest_on_track_prison"
@@ -89,7 +89,7 @@ prefix:
 
 “start”、“middle”与“end”允许控制元素的分隔方式。例如：
 
-```YAML
+``` YAML
 prefix:
   format:
     - "highest_on_track_prison"

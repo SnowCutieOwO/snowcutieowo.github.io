@@ -20,11 +20,11 @@ LuckPerms 以玩家的唯一标识（UUID）作为存储数据的索引。玩家
 在使用 BungeeCord 时，检查 BungeeCord 的 IP 转发系统是否正确设置和配置是**非常重要**的。
 
 在你的 BungeeCord 群组的 `config.yml` 文件中，你需要这样设置：
-```YAML
+``` YAML
 ip_forward: true
 ```
 在每个子服的 `spigot.yml` 中，你需要这样设置：
-```YAML
+``` YAML
 # 该选项可以在 "settings" 下找到
 bungeecord: true
 ```

@@ -80,7 +80,7 @@ server {
 
 将下文内容添加至 LuckPerms 的 `config.yml` 末尾：
 
-```YAML
+``` YAML
 web-editor-url: 'https://example.com/luckperms/editor/'
 verbose-viewer-url: 'https://example.com/luckperms/verbose/'
 tree-viewer-url: 'https://example.com/luckperms/treeview/'

@@ -24,7 +24,7 @@ docker run -it --rm ghcr.io/luckperms/luckperms
 
 你也可以使用 Docker Compose。创建一个叫 `docker-compose.yml` 的文件并复制以下内容：
 
-```YAML
+``` YAML
 version: "3.8"
 services:
   luckperms:

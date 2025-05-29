@@ -71,7 +71,7 @@ FLUSH PRIVILEGES;
 
 你可以编辑 LuckPerms 的配置文件，在“Storage”部分中，找到如下部分的配置并进行编辑即可：
 
-```YAML
+``` YAML
 data:
   pool-settings:
     # This setting allows you to define extra properties for connections.
@@ -132,7 +132,7 @@ data:
 
 你可以编辑 LuckPerms 的配置文件，在“Storage”部分中，找到如下部分的配置并进行编辑即可：
 
-```YAML
+``` YAML
 data:
   pool-settings:
     # This setting allows you to define extra properties for connections.

@@ -123,7 +123,7 @@ LuckPerms 会尝试（按下列来源）从多个来源找到并读取配置文�
 [系统配置](https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html)是一种配置 Java 应用的方式。它们既可以通过命令行的标签进行设置，也可以通过 [`java.lang.System`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/System.html) API 进行配置。
 
 例如，若要将下列内容从 LuckPerms 的 config.yml 复制到系统配置：
-```YAML
+``` YAML
 server: example
 
 storage-method: mysql
@@ -144,7 +144,7 @@ java
 [环境变量](https://en.wikipedia.org/wiki/Environment_variable) 是一种配置任意应用的常见方式。它们被定义的方式取决于你的安装过程。对于类 unix shell 的示例可在下文找到，但你也可以尝试在服务器未运行在 Docker 容器中的时候[方便地设置它们](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file)。 
 
 例如，若要将下列内容从 LuckPerms 的 config.yml 复制到系统变量：
-```YAML
+``` YAML
 server: example
 
 storage-method: mysql
@@ -170,7 +170,7 @@ java -jar server.jar
 
 #### 示例
 
-```YAML
+``` YAML
 server: global
 ```
 
@@ -182,7 +182,7 @@ server: global
 
 #### 示例
 
-```YAML
+``` YAML
 use-server-uuid-cache: false
 ```
 
@@ -197,7 +197,7 @@ use-server-uuid-cache: false
 若你的 MySQL 支持的话，选择 `mariadb` 会比 `mysql` 更好。除此之外，`h2` 也会比 `sqlite` 效率更高。
 
 #### 示例
-```YAML
+``` YAML
 storage-method: h2
 ```
 
@@ -212,7 +212,7 @@ storage-method: h2
 
 #### 示例
 
-```YAML
+``` YAML
 data:
   address: localhost
   database: minecraft
@@ -229,7 +229,7 @@ https://github.com/brettwooldridge/HikariCP/wiki/About-Pool-Sizing
 
 #### 示例
 
-```YAML
+``` YAML
 data:
   pool-settings:
     maximum-pool-size: 10
@@ -249,7 +249,7 @@ data:
 可用存储类型在上文已有提及。
 
 #### 示例
-```YAML
+``` YAML
 split-storage:
   enabled: true
   methods:
@@ -272,7 +272,7 @@ split-storage:
 
 #### 示例
 
-```YAML
+``` YAML
 data:
   sync-minutes: 3
 ```
@@ -283,7 +283,7 @@ data:
 
 若你不想要这么做，将该选项设置为 false 即可。
 
-```YAML
+``` YAML
 watch-files: true
 ```
 
@@ -305,7 +305,7 @@ watch-files: true
 
 #### 示例
 
-```YAML
+``` YAML
 messaging-service: none
 ```
 
@@ -315,7 +315,7 @@ messaging-service: none
 
 #### 示例
 
-```YAML
+``` YAML
 auto-push-updates: true
 ```
 
@@ -324,7 +324,7 @@ auto-push-updates: true
 是否允许 LuckPerms 通过通信服务器向连接的服务器推送登录条目。
 
 #### 示例
-```YAML
+``` YAML
 push-log-entries: true
 ```
 
@@ -335,7 +335,7 @@ push-log-entries: true
 如果你在 BungeeCord 和子服上一同安装了 LuckPerms，你应该将它们配置中的该项设置为 false 来防止玩家被此类消息重复提醒。
 
 #### 示例
-```YAML
+``` YAML
 broadcast-received-log-entries: true
 ```
 
@@ -350,14 +350,14 @@ broadcast-received-log-entries: true
 #### 示例
 
 单节点 redis：
-```YAML
+``` YAML
 redis:
   enabled: true
   address: localhost
   password: 'passw0rd'
 ```
 集群 redis：
-```YAML
+``` YAML
 redis:
   enabled: true
   addresses:
@@ -377,7 +377,7 @@ redis:
 
 #### 示例
 
-```YAML
+``` YAML
 rabbitmq:
   enabled: true
   address: localhost
@@ -396,7 +396,7 @@ rabbitmq:
 
 #### 示例
 
-```YAML
+``` YAML
 temporary-add-behaviour: deny
 ```
 
@@ -410,7 +410,7 @@ LuckPerms 如何决定玩家的“主”权限组。默认设置为 `parents-by-
 
 #### 示例
 
-```YAML
+``` YAML
 primary-group-calculation: parents-by-weight
 ```
 
@@ -422,7 +422,7 @@ primary-group-calculation: parents-by-weight
 
 #### 示例
 
-```YAML
+``` YAML
 argument-based-command-permissions: true
 ```
 
@@ -434,7 +434,7 @@ argument-based-command-permissions: true
 
 #### 示例
 
-```YAML
+``` YAML
 log-notify: true
 ```
 
@@ -454,7 +454,7 @@ LuckPerms 应该如何处理前后缀。
 
 #### 示例
 
-```YAML
+``` YAML
 inheritance-traversal-algorithm: depth-first-pre-order
 ```
 
@@ -466,7 +466,7 @@ inheritance-traversal-algorithm: depth-first-pre-order
 
 #### 示例
 
-```YAML
+``` YAML
 include-global: true
 ```
 
@@ -476,7 +476,7 @@ include-global: true
 
 #### 示例
 
-```YAML
+``` YAML
 include-global-world: true
 ```
 
@@ -498,7 +498,7 @@ include-global-world: true
 
 #### 示例
 
-```YAML
+``` YAML
 apply-global-groups: true
 ```
 
@@ -508,7 +508,7 @@ apply-global-groups: true
 
 #### 示例
 
-```YAML
+``` YAML
 apply-global-world-groups: true
 ```
 
@@ -522,7 +522,7 @@ apply-global-world-groups: true
 
 #### 示例
 
-```YAML
+``` YAML
 meta-value-selection-default: inheritance
 ```
 
@@ -534,7 +534,7 @@ meta-value-selection-default: inheritance
 
 #### 示例
 
-```YAML
+``` YAML
 meta-value-selection:
   max-homes: highest-number
 ```
@@ -548,7 +548,7 @@ If the plugin should apply wildcard permissions.
 
 #### 示例
 
-```YAML
+``` YAML
 apply-wildcards: true
 ```
 
@@ -560,7 +560,7 @@ apply-wildcards: true
 
 #### 示例
 
-```YAML
+``` YAML
 apply-regex: true
 ```
 
@@ -572,7 +572,7 @@ apply-regex: true
 
 #### 示例
 
-```YAML
+``` YAML
 apply-shorthand: true
 ```
 
@@ -586,7 +586,7 @@ apply-shorthand: true
 
 #### 示例
 
-```YAML
+``` YAML
 apply-bukkit-child-permissions: true
 ```
 
@@ -600,7 +600,7 @@ apply-bukkit-child-permissions: true
 
 #### 示例
 
-```YAML
+``` YAML
 apply-bukkit-default-permissions: true
 ```
 
@@ -616,7 +616,7 @@ apply-bukkit-default-permissions: true
 
 #### 示例
 
-```YAML
+``` YAML
 apply-bukkit-attachment-permissions: true
 ```
 
@@ -630,7 +630,7 @@ apply-bukkit-attachment-permissions: true
 
 #### 示例
 
-```YAML
+``` YAML
 apply-bungee-config-permissions: false
 ```
 
@@ -680,7 +680,7 @@ apply-sponge-default-subjects=true
 
 #### 示例
 
-```YAML
+``` YAML
 world-rewrite:
   world_nether: world
   world_the_end: world
@@ -694,7 +694,7 @@ world-rewrite:
 
 #### 示例
 
-```YAML
+``` YAML
 enable-ops: true
 ```
 
@@ -710,7 +710,7 @@ enable-ops: true
 
 #### 示例
 
-```YAML
+``` YAML
 auto-op: false
 ```
 
@@ -722,7 +722,7 @@ auto-op: false
 
 #### 示例
 
-```YAML
+``` YAML
 commands-allow-op: true
 ```
 
@@ -734,7 +734,7 @@ commands-allow-op: true
 
 #### 示例
 
-```YAML
+``` YAML
 use-vault-server: false
 ```
 
@@ -748,7 +748,7 @@ Vault 操作使用的服务器名称。
 
 #### 示例
 
-```YAML
+``` YAML
 vault-server: global
 ```
 
@@ -758,7 +758,7 @@ vault-server: global
 
 #### 示例
 
-```YAML
+``` YAML
 vault-include-global: true
 ```
 
@@ -770,7 +770,7 @@ Vault 操作是否无视任何提供的世界参数。
 
 #### 示例
 
-```YAML
+``` YAML
 vault-ignore-world: false
 ```
 
@@ -780,7 +780,7 @@ vault-ignore-world: false
 
 #### 示例
 
-```YAML
+``` YAML
 vault-debug: false
 ```
 
@@ -801,7 +801,7 @@ vault-debug: false
 
 #### 示例
 
-```YAML
+``` YAML
 debug-logins: false
 ```
 
@@ -813,7 +813,7 @@ debug-logins: false
 
 #### 示例
 
-```YAML
+``` YAML
 allow-invalid-usernames: false
 ```
 
@@ -823,7 +823,7 @@ allow-invalid-usernames: false
 
 #### 示例
 
-```YAML
+``` YAML
 prevent-primary-group-removal: false
 ```
 

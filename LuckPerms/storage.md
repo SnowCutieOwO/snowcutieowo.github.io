@@ -56,7 +56,7 @@ LuckPerms 可以用多种方法存储它的数据。选项可以在配置文件�
 在使用 `SQLite` 的情况下，所有数据都存在 `luckperms-sqlite.db` 文件中。
 
 若要使用这些选项，可按如下内容分别设置：
-```YAML
+``` YAML
 storage-method: h2
 # 或者使用 SQLite
 storage-mathod: sqlite
@@ -77,7 +77,7 @@ storage-mathod: sqlite
 部分示例文件可以在[文末](#示例文件)找到。
 
 若要使用这些选项，可按如下内容分别设置：
-```YAML
+``` YAML
 # 使用 yaml 格式的文件存储
 storage-method: yaml
 # 使用 json 格式的文件存储
@@ -97,7 +97,7 @@ storage-method: toml
 数据库结构可在[这里](https://github.com/LuckPerms/LuckPerms/tree/master/common/src/main/resources/me/lucko/luckperms/schema)找到。
 
 若要使用这些选项，可按如下内容分别设置：
-```YAML
+``` YAML
 # 使用 mysql 数据库存储
 storage-method: mysql
 # 使用 mariadb 数据库存储
@@ -111,7 +111,7 @@ storage-method: mongodb
 ### 示例文件
 
 #### 示例 YAML 文件
-```YAML
+``` YAML
 uuid: c1d60c50-70b5-4722-8057-87767557e50d
 name: Luck
 primary-group: default
