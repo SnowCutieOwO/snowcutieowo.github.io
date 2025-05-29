@@ -2,7 +2,7 @@
 
 此为默认的缓存配置。你可以用它来设置本插件缓存的存储方式。
 
-```YAML
+``` YAML
 # In this file, you can control where the cache is stored.
 
 # The method to use. h2 or mysql
