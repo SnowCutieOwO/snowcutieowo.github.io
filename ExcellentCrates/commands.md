@@ -10,7 +10,7 @@
 ## 插件命令
 
 
-<el-button type="warning" disabled><> 必选参数</el-button> <el-button type="success" disabled>[] 可选参数</el-button>
+<badge type="warning" text="<> 必选参数" /> <badge type="tip" text="[] 可选参数" />
 
 * `/crates [help]` - 列出可用的插件命令。
 * `/crates reload` - 重载插件。

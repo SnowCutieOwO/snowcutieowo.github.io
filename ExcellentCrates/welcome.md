@@ -54,15 +54,15 @@
 
 ## 依赖
    
-<el-button type="warning" disabled>必需</el-button> [nightcore](https://github.com/nulli0n/nightcore-spigot/releases)（2.7.3.2 或更高版本）
+<Badge type="warning" text="必需" /> [nightcore](https://github.com/nulli0n/nightcore-spigot/releases)（2.7.3.2 或更高版本）  
 
 <br>
 
-<el-button type="success" disabled>可选</el-button> [EconomyBridge](https://nightexpressdev.com/economy-bridge/)- 用于自定义物品和开箱收费支持。
+<Badge type="tip" text="可选" /> [EconomyBridge](https://nightexpressdev.com/economy-bridge/)- 用于自定义物品和开箱收费支持。  
 
 <br>
 
-<el-button type="success" disabled>可选</el-button> [ProtocolLib](https://ci.dmulloy2.net/job/ProtocolLib/) 或 [PacketEvents](https://spigotmc.org/resources/80279/) - 用于悬浮字相关内容。
+<Badge type="tip" text="可选" /> [ProtocolLib](https://ci.dmulloy2.net/job/ProtocolLib/) 或 [PacketEvents](https://spigotmc.org/resources/80279/) - 用于悬浮字相关内容。
 
 ## 下载
 
