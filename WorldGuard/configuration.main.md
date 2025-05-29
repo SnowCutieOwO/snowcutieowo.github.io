@@ -18,14 +18,14 @@ WorldGuard 的许多功能都存在于配置文件的设置中（例如禁用药
 
 ::: info 示例：按世界创建配置选项
 在主配置文件中，你将 `block-creeper-block-damage` 设置为了 true：
-```YAML
+``` YAML
 mobs:
     block-creeper-explosions: false
     block-creeper-block-damage: true
     block-wither-explosions: false
 ```
 但是你想要在下界把这个设置成 `false`。所以你需要打开 `worlds/world_nether/config.yml` 并将文件的内容替换为：
-```YAML
+``` YAML
 mobs:
     block-creeper-block-damage: false
 ```
@@ -79,7 +79,7 @@ mobs:
 
 ::: info 示例：禁用区域内工作台的保护
 可以按如下格式设置 `interaction-whitelist` 项：
-```YAML
+``` YAML
 interaction-whitelist: [workbench]
 ```
 :::
@@ -103,7 +103,7 @@ interaction-whitelist: [workbench]
 
 ::: info 示例：禁用夜视和速度药水
 在 Bukkit 文档找到的名称可以按如下方式填入：
-```YAML
+``` YAML
 block-potions: [night_vision, speed]
 ```
 :::
@@ -139,7 +139,7 @@ block-potions: [night_vision, speed]
 
 ::: info 示例：阻止红石线和红石火把被水冲毁
 材料名称取自 Bukkit 的材料名称列表：
-```YAML
+``` YAML
 physics:
     disable-water-damage-blocks: [redstone_wire, redstone_torch]
 ```

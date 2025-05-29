@@ -17,7 +17,7 @@
 ## 配置文件
 
 该模块的部署通过全局配置完成：
-```YAML
+``` YAML
 host-keys:
     your_username: bagels.play.example.com
     moderator1_name: manoverboard.play.example.com
