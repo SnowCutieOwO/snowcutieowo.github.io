@@ -60,7 +60,7 @@ Sponge
 
 ### 设置经济消耗（config.yml）
 
-```YAML
+``` YAML
 economy:
   # 启用经济插件联动（需要安装 Vault 与任意支持它的经济插件）
   enabled: false

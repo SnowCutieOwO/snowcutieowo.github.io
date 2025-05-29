@@ -24,7 +24,7 @@ HuskHomes 在你所选种类的数据库中存储玩家数据、家传送点、�
 若要修改数据库种类，你需要在 `config.yml` 的 `database` 设置下修改这些选项。
 
 数据库配置（config.yml）
-```YAML
+``` YAML
 database:
   # 使用的数据库种类 (SQLITE, H2, MYSQL 或 MARIADB)
   type: SQLITE

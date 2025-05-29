@@ -91,7 +91,7 @@ dependencies {
 ### 2. 将 HuskHomes 作为依赖导入
 
 将 HuskHomes 添加至你的插件中 `plugins.yml` 的 `softdepend`（作软依赖，即不强制要求安装 HuskHomes ）或 `depend`（作硬依赖，即强制要求安装 HuskHomes）下。
-```YAML
+``` YAML
 name: MyPlugin
 version: 1.0
 main: net.william278.myplugin.MyPlugin

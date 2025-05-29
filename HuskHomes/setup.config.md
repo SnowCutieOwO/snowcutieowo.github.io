@@ -14,7 +14,7 @@
 
 ### config.yml
 
-```YAML
+``` YAML
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 # ┃       HuskHomes Config       ┃
 # ┃    Developed by William278   ┃
@@ -206,7 +206,7 @@ disabled_commands: []
 
 只能在游戏内输入 `/setspawn` 命令后生成。
 
-```YAML
+``` YAML
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 # ┃ Server /spawn location cache ┃
 # ┃ Edit in-game using /setspawn ┃
@@ -225,7 +225,7 @@ world_uuid: 00000000-0000-0000-0000-000000000000
 
 仅当你将 HuskHomes 安装在群组子服且启用了跨服模式时会生成。
 
-```YAML
+``` YAML
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 # ┃     HuskHomes - Server ID    ┃
 # ┃    Developed by William278   ┃

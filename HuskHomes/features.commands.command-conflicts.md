@@ -16,7 +16,7 @@ EssentialsX（Spigot、Paper）
 为了禁用这些命令，你需要在 EssentialsX 的配置文件（位于 `Essentials/config.yml`）中的 `disabled-commands` 设置来禁用命令。下面是一个在 EssentialsX 禁用命令的设置。
 
 ### EssentialsX config.yml 文件
-```YAML
+``` YAML
 # 禁用命令将会阻止 Essentials 处理这些命令，该功能不会影响其他已经注册的相同命令。
 # 你不能禁用在其他插件中使用的命令，它们会优先注册。
 # 见 https://bukkit.fandom.com/wiki/Commands.yml#aliases 来连接其他插件的命令。
@@ -71,7 +71,7 @@ Spigot 提供了一个 [`commands.yml` 文件](https://bukkit.fandom.com/wiki/Co
 
 #### commands.yml 下的 HuskHomes 命令别称
 
-```YAML
+``` YAML
 aliases:
   home:
     - "huskhomes:home $1-"

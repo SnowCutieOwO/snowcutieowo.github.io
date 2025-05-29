@@ -107,7 +107,7 @@ HuskHomes 提供了一系列你可使用的命令。本章节将会为列出所�
 
 ### 在 config.yml 中禁用命令
 
-```YAML
+``` YAML
 # 被禁用的命令 (例: ['/home', '/warp'] 的设置会禁用 /home 和 /warp 两条命令)
 disabled_commands: [ '/rtp' ]
 ```

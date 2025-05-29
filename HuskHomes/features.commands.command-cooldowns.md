@@ -28,7 +28,7 @@ HuskHomes 支持在玩家执行特定操作时设置冷却。玩家在执行下�
 冷却在 `config.yml` 文件中，`cooldowns` 的 `cooldown_times` 下设置。默认情况下，只有一个随机传送（`random_teleport`）的冷却设置。可按照上表在这块区域中添加你想要的冷却。
 
 设置冷却（config.yml）
-```YAML
+``` YAML
 # 操作的冷却设置。详细文档：https://william278.net/docs/huskhomes/cooldowns
 cooldowns:
   # 是否在不同操作之间添加冷却
