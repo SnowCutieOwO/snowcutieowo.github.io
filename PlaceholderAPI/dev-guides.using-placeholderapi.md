@@ -59,7 +59,9 @@ dependencies {
 
 下一步就是打开你的 plugin.yml 或是 paper-plugin.yml，然后根据其是否可选，将 PlaceholderAPI 添加为依赖或软依赖。
 
-#### plugin.yml
+:::::: tabs
+
+::::: tab plugin.yml
 
 :::: tabs
 
@@ -91,7 +93,9 @@ depend: ["PlaceholderAPI"] # 这会将 PlacehodlerAPI 设置为插件的必选�
 
 ::::
 
-#### paper-plugins.yml
+:::::
+
+::::: tab paper-plugins.yml
 
 :::: tabs
 
@@ -129,6 +133,10 @@ server:
 :::
 
 ::::
+
+:::::
+
+::::::
 
 ## 向 PlaceholderAPI 添加变量
 
