@@ -46,7 +46,7 @@
 除位置和锁定地图的同步外，所有同步都是默认启用的。若要切换指定数据的同步功能，在 `config.yml` 下 `features:` 的 `synchronisation:` 项自行调整，将对应项的值修改为 `true`/`false` 即可。
 
 ### config.yml 下的示例
-```YAML
+``` YAML
 synchronization:
   # ...
   features:

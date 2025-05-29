@@ -9,7 +9,7 @@ HuskSync 提供了一个自定义事件优先级的方法—也就是，HuskSync
 ## 修改事件优先级
 
 在 HuskSync 2.1.3 或更高的版本，你可以在 `config.yml` 下的 `synchronization` 设置下修改事件的优先级，如下文所示：
-```YAML
+``` YAML
 synchronization:
   #(...)
   event_priorities:

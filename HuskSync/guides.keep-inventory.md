@@ -14,7 +14,7 @@ HuskSync 在玩家死亡时有特殊处理，以应对玩家死后切换服务�
 你需要将 `config.yml` 中的 `synchronization.save_on_death`（控制是否在死亡时生成快照）、`save_empty_drops_on_death`（控制空背包的玩家是否在死亡时产生快照）和 `synchronization.synchronise_dead_players_changing_server`（控制切换服务器时是否同步死亡玩家的背包）项设置为 `false`。
 
 ### config.yml 中的示例
-```YAML
+``` YAML
 synchronization:
     # ...
     save_on_death: false # <-- 将这个设置为 false

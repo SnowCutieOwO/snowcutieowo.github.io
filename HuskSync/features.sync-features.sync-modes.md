@@ -16,7 +16,7 @@ HuskSync 提供了两种分别使用 Redis 和 MySQL 的数据同步模式使得
 
 ### 在配置文本中修改同步模式
 
-```YAML
+``` YAML
 synchronization:
   # 所使用的数据同步模式 (LOCKSTEP 或 DELAY). 推荐大多数服务器核心使用 LOCKSTEP. 相关文件: https://william278.net/docs/husksync/sync-modes
   mode: LOCKSTEP

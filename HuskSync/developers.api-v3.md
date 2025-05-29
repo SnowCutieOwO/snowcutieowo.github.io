@@ -84,7 +84,7 @@ dependencies {
 ### 2. 将 HuskSync 导入为依赖
 
 * 在 `plugin.yml` 中将 HuskSync 添加为 `softdepend`（若不强制依赖 HuskSync）或 `depend`（若强制依赖 HuskSync）
-```YAML
+``` YAML
 name: MyPlugin
 version: 1.0
 main: net.william278.myplugin.MyPlugin

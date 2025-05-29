@@ -11,7 +11,7 @@
 ## 示例文件
 
 ### `config.yml`
-```YAML
+``` YAML
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 # ┃       HuskSync 主配置文件      ┃
 # ┃       插件作者 William278      ┃
@@ -154,7 +154,7 @@ synchronization:
 ```
 ### `server.yml`
 
-```YAML
+``` YAML
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 # ┃     HuskSync - 服务器 ID     ┃
 # ┃     插件作者 William278      ┃
