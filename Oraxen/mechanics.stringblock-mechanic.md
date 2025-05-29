@@ -10,7 +10,7 @@
 
 ### 全局配置
 
-```YAML
+``` YAML
 stringblock:
   tool_types:
     - WOODEN
@@ -25,7 +25,7 @@ stringblock:
 
 ### Oraxen 物品与纹理包配置
 
-```YAML
+``` YAML
 jasmine_flower:
   displayname: "<white>Jasmine Flower"
   material: PAPER
@@ -40,7 +40,7 @@ jasmine_flower:
 
 若要使用这个机制，你需要告诉 Oraxen 使用的模型（若要使用 Oraxen 自动生成的，只需将物品的 ID 填入其中即可）。然后你需要一个没有被其他物品使用的 `custom_variation`（例如默认情况下 1 用于某种植物，则你可以在这里填入 2）。这个示例中的配置允许你在用石镐挖掘这个方块时掉落物品。
 
-```YAML
+``` YAML
   Mechanics:
     stringblock:
       custom_variation: 2
@@ -58,7 +58,7 @@ jasmine_flower:
 
 有效的保护类型为 CONTAINER、DOOR、ATTACHABLE。
 
-```YAML
+``` YAML
 Mechanics:
   furniture:
     blocklocker:
@@ -70,7 +70,7 @@ Mechanics:
 
 ### 如何用自己的模型创建装饰？
 
-```YAML
+``` YAML
 oak_log_mini:
   displayname: "<white>oak_log_mini"
   material: PAPER

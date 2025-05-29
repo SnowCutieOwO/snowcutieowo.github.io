@@ -4,7 +4,7 @@
 ## 插件
 插件相关设置。在这里你可以决定某些内容的工作方式。
 
-```YAML
+``` YAML
 Plugin:
   commands:
     repair:
@@ -29,7 +29,7 @@ Plugin:
 
 ### 生成
 
-```YAML
+``` YAML
   generation:
     generate: true
     compression: BEST_COMPRESSION # 见源代码 Deflater.class
@@ -55,7 +55,7 @@ Plugin:
 
 ### 上传
 
-```YAML
+``` YAML
     enabled: true
     type: polymath # transfer.sh 或 polymath
     polymath:
@@ -70,7 +70,7 @@ Oraxen 集成了 Polymoth（以 Python 编写的高兼容性自定义网页服�
 
 你可以发送消息（通过踢出（KICK）、聊天栏、ActionBar 或者标题），并指定延迟和间隔（若你使用的是 ActionBar 或标题，则这里是不同消息之间的间隔）
 
-```YAML
+``` YAML
 receive:
   enabled: true
 
@@ -155,7 +155,7 @@ receive:
 
 ## 配置工具
 
-```YAML
+``` YAML
   enable_configs_updater: true
   error_item:
     material: PODZOL
@@ -165,7 +165,7 @@ receive:
 
 ## 自定义盔甲
 
-```YAML
+``` YAML
 CustomArmor:
   disable_leather_repair: true
 ```
@@ -180,13 +180,13 @@ CustomArmor:
 
 该选项可隐藏红色的计分板数字。
 
-```YAML
+``` YAML
     hide_scoreboard_numbers: true
 ```
 
 ### reset_recpies
 
-```YAML
+``` YAML
 reset_recipes: true
 ```
 
@@ -194,7 +194,7 @@ reset_recipes: true
 
 ## Oraxen 界面
 
-```YAML
+``` YAML
 oraxen_inventory:
   main_menu_title: "<shift:-18><glyph:menu_items><shift:-193>"
   menu_rows: 6

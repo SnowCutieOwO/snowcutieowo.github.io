@@ -21,7 +21,7 @@
 
 ## 较为全面的示例配置
 
-```YAML
+``` YAML
 Mechanics:
   custom:
     test:

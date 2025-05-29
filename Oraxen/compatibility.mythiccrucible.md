@@ -5,7 +5,7 @@ Crucible 是 MythicMobs 的一个拓展。
 
 若要这么做，只需在 Oraxen 的物品配置中增加 `crucible` 部分配置并指定对应插件的物品 ID 即可，如下文配置所示：
 
-```YAML
+``` YAML
 example_crucible:
   displayname: "<gradient:#59A7EA:#F1D2FF>测试"
   crucible:

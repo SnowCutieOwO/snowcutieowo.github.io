@@ -8,7 +8,7 @@
 
 ### 单物品示例配置
 
-```YAML
+``` YAML
 table:
   displayname: "<gray>Table"
   material: DIAMOND
@@ -37,7 +37,7 @@ table:
 
 当前版本，你可以设置的音效包括被放置、被破坏、损坏中、（走在其上的）脚步声、（摔在其上的）踩地声。
 
-```YAML
+``` YAML
 Mechanics:
   furniture:
     block_sounds:
@@ -56,7 +56,7 @@ Mechanics:
 
 我们推荐使用默认的那个，但你仍然可以选择修改这些选项。
 
-```YAML
+``` YAML
 Mechanics:
   furniture:
     block_sounds:
@@ -74,7 +74,7 @@ Mechanics:
 
 若要让一个家具能够旋转，你只需将如下内容添加至物品设置中即可。
 
-```YAML
+``` YAML
 Mechanics:
   furniture:
     rotatable: true
@@ -84,7 +84,7 @@ Mechanics:
 
 若要将 ModelEngine 的模型用作家具，只需将下文内容添加至你的物品设置中即可：
 
-```YAML
+``` YAML
 Mechanics:
   furniture:
     modelengine_id: name_of_your_bbmodel_file
@@ -101,7 +101,7 @@ Mechanics:
 默认情况下权限一栏为空，即表示任何人都可以使用唱片机播放音乐。
 
 
-```YAML
+``` YAML
 Mechanics:
   furniture:
     jukebox:
@@ -116,7 +116,7 @@ Mechanics:
 
 #### 单屏障：
 
-```YAML
+``` YAML
 Mechanics:
   furniture:
     barrier: true
@@ -124,7 +124,7 @@ Mechanics:
 
 #### 多屏障：
 
-```YAML
+``` YAML
 Mechanics:
   furniture:
       barriers:
@@ -143,7 +143,7 @@ Mechanics:
 
 目前，即使存在多个屏障，它也会为每个屏障生成一个座位。
 
-```YAML
+``` YAML
 Mechanics:
   furniture:
     seat: { height: 0.5 }
@@ -153,7 +153,7 @@ Mechanics:
 
 需要注意的是，这部分一般不推荐你修改。
 
-```YAML
+``` YAML
 Mechanics:
   furniture:
     seat: { height: -0.5, yaw: 90 }
@@ -165,7 +165,7 @@ Mechanics:
 
 它可以设置为 `STRICT` 或 `VERY_STRICT`。前者只允许如头颅般旋转 8 个位置，而后者只允许旋转 4 个位置。
 
-```YAML
+``` YAML
 chair:
   Mechanics:
     furniture:
@@ -184,7 +184,7 @@ chair:
 
 这里也存在着一个 `radius_limitation` 选项，允许你限制指定半径内家具的数量。
 
-```YAML
+``` YAML
 chair:
   Mechanics:
     furniture:
@@ -238,7 +238,7 @@ chair:
 
 你可以设置家具发光。这个选项对应了光强，且值必须处于 1 至 15 间。
 
-```YAML
+``` YAML
 Mechanics:
   furniture:
     barrier: true
@@ -255,7 +255,7 @@ Mechanics:
 
 有效的保护类型为 CONTAINER、DOOR、ATTACHABLE。
 
-```YAML
+``` YAML
 Mechanics:
   furniture:
     blocklocker:

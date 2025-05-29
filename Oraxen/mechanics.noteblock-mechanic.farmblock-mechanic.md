@@ -10,7 +10,7 @@
 
 全局配置可以用于启用或禁用这个机制。
 
-```YAML
+``` YAML
 noteblock:
   tool_types:
     - WOODEN
@@ -35,7 +35,7 @@ watering:
 
 在这种情况下你就不能没有预制模型而使用这个机制创建方块了，你需要为每个物品创建两个模型，一个是湿润状态，另一个则是干燥状态。
 
-```YAML
+``` YAML
 epic_box_dry:
   displayname: "<white>史诗盒子"
   material: PAPER
@@ -82,7 +82,7 @@ epic_box_wet:
 
 Oraxen 有一个洒水壶机制，这样你就能让某个物品充当水源将耕地方块湿润。它也需要两个模型，一个是装满水的状态，另一个则是空壶状态，下文为示例。
 
-```YAML
+``` YAML
 epic_watering_vacuum:
   displayname: '<white>史诗水壶'
   material: LEATHER_HORSE_ARMOR

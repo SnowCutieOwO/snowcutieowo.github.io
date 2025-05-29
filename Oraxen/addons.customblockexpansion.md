@@ -30,7 +30,7 @@
 
 ## 自定义楼梯
 
-```YAML
+``` YAML
 custom_stair:
   material: PAPER
   itemname: 自定义楼梯
@@ -49,7 +49,7 @@ custom_stair:
 
 ## 自定义台阶
 
-```YAML
+``` YAML
 custom_slab:
   material: PAPER
   itemname: 自定义台阶
@@ -78,7 +78,7 @@ custom_slab:
 
 手持形式物品的配置：
 
-```YAML
+``` YAML
 custom_door:
   material: PAPER
   itemname: Custom Door
@@ -95,7 +95,7 @@ custom_door:
 
 方块形式物品的配置：
 
-```YAML
+``` YAML
 custom_door_placed:
   # 负责处理放置形态方块所使用的模型及其生成
   # 这部分与其他所有在纹理包部分中的方块类型相同
@@ -114,7 +114,7 @@ custom_door_placed:
 
 ## 自定义活板门
 
-```YAML
+``` YAML
 custom_trapdoor:
   material: PAPER
   itemname: Custom Trapdoor
@@ -135,7 +135,7 @@ custom_trapdoor:
 
 对无需透明度的正常方块，请参考[音符盒机制](mechanics.noteblock-mechanic.md)章节。
 
-```YAML
+``` YAML
 custom_grate:
   material: PAPER
   itemname: Custom Grate

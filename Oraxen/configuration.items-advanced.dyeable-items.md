@@ -20,7 +20,7 @@ Oraxen 允许你创建基于药水（`POTION`）和皮革马铠（`LEATHER_HORSE
 
 ![img](images/image35.png)
 
-```YAML
+``` YAML
 
 clock:
   displayname: "<white>钟"

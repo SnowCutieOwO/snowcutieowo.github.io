@@ -10,7 +10,7 @@
 
 ### 配置
 
-```YAML
+``` YAML
 Mechanics:
   noteblock:
     custom_variation: 2
@@ -20,7 +20,7 @@ Mechanics:
 
 #### 去皮后掉落
 
-```YAML
+``` YAML
 Mechanics:
   noteblock:
     custom_variation: 2

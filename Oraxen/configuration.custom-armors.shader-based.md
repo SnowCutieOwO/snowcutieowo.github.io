@@ -33,7 +33,7 @@
 
 在这个示例中，我们会使用下面的配置作为参考：
 
-```YAML
+``` YAML
 ruby_helmet:
   displayname: "<gradient:#FA7CBB:#F14658>红宝石头盔"
   material: LEATHER_HELMET

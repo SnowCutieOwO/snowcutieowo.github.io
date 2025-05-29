@@ -17,7 +17,7 @@
 
 上述所有属性的示例：
 
-```YAML
+``` YAML
 my_item:
   itemname: <gradient:#4B36B1:#6699FF>My Item
   Components:
@@ -85,7 +85,7 @@ my_item:
 
 上述所有属性的示例：
 
-```YAML
+``` YAML
 my_item:
   itemname: <gradient:#4B36B1:#6699FF>My Item
   Components:
@@ -160,7 +160,7 @@ my_item:
 
 上述所有属性的示例：
 
-```YAML
+``` YAML
 my_item:
   itemname: <gradient:#4B36B1:#6699FF>My Item
   Components:
@@ -231,7 +231,7 @@ my_item:
 与格式刷类似，该功能允许你将模板物品的属性快速应用至其他物品。
 
 模板物品配置：
-```YAML
+``` YAML
 template_item:
   template: true
   material: DIAMOND_SWORD
@@ -239,7 +239,7 @@ template_item:
 ```
 
 在你想要复制模板属性的物品配置中：
-```YAML
+``` YAML
 template_item1:
   template: template_item
   displayname: 模板物品 1
@@ -258,7 +258,7 @@ template_item2:
 
 ::: tab 1.20.5+
 
-```YAML
+``` YAML
 my_item:
   itemname: "<red><bold>示例" # 示例名称
   #customname: "example" # 应当只用于保证与旧版的兼容性
@@ -268,7 +268,7 @@ my_item:
 
 ::: tab 1.18-1.20.4
 
-```YAML
+``` YAML
 my_item:
   displayname: "<red><bold>示例" # 示例名称
 ```
@@ -281,7 +281,7 @@ my_item:
 
 允许你修改物品的类型。
 
-```YAML
+``` YAML
 my_item:
   material: WOODEN_SWORD
 ```
@@ -290,7 +290,7 @@ my_item:
 
 允许你修改某些物品（如皮革盔甲）的染色颜色。
 
-```YAML
+``` YAML
 my_item:
   color: 3, 252, 136 # 此为 RGB 颜色格式
 ```
@@ -299,7 +299,7 @@ my_item:
 
 允许你在物品名称下添加自定义描述。
 
-```YAML
+``` YAML
 my_item:
   lore:
   - "一行描述"
@@ -310,7 +310,7 @@ my_item:
 
 允许 Oraxen 识别物品，默认情况下设置为 true，且你不应调整这个设置。如果修改，则物品的机制就不再起效。
 
-```YAML
+``` YAML
 my_item:
   injectID: false
 ```
@@ -321,7 +321,7 @@ my_item:
 
 不影响通过配置文件施加的附魔。
 
-```YAML
+``` YAML
 my_item:
   disable_enchanting: true
 ```
@@ -330,7 +330,7 @@ my_item:
 
 允许你将该物品在 Oraxen 的物品列表中隐藏。设置后它将不再在该界面中可见，但仍然可以通过 [Oraxen 的给予命令](usage.commands.md#获取物品)获取。在应用至其他插件例如界面图标时非常有用。
 
-```YAML
+``` YAML
   excludeFromInventory: true
 ```
 
@@ -343,7 +343,7 @@ my_item:
 1.20.5+ 的服务器使用 `max-durability` 标签而非该设置。
 :::
 
-```YAML
+``` YAML
 my_item:
   durability: 10
 ```
@@ -352,7 +352,7 @@ my_item:
 
 这会使物品不消耗任何耐久（真正意义上的无限耐久，通过原版 NBT 标签而非插件实现）
 
-```YAML
+``` YAML
 my_item:
   unbreakable: true
 ```
@@ -361,7 +361,7 @@ my_item:
 
 这会让物品无法堆叠。对诸如背包等独特物品的限制堆叠非常有用。
 
-```YAML
+``` YAML
 my_item:
   unstackable: true
 ```
@@ -370,7 +370,7 @@ my_item:
 
 允许设置物品的标志（ItemFlags），所有可用的标志可在[这里](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/ItemFlag.html)浏览。
 
-```YAML
+``` YAML
 my_item:
   ItemFlags:
     - HIDE_ENCHANTS
@@ -385,7 +385,7 @@ my_item:
 
 这允许你向你的药水类物品添加自定义药水效果。可以在[这里](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html)浏览可用药水效果。
 
-```YAML
+``` YAML
 my_item:
   PotionEffects:
     # - type: 在这里获取完整效果列表: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
@@ -406,7 +406,7 @@ my_item:
 
 允许你向物品添加 Minecraft 原版的属性。它们非常强大，能够让你制作增加生命上限、提升玩家速度的物品。可以在[这里](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html)获取完整的属性列表。
 
-```YAML
+``` YAML
 my_item:
   AttributeModifiers:
     # - attribute: 在这里获取完整列表: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html
@@ -424,7 +424,7 @@ my_item:
 
 若你想要为物品添加附魔（甚至是超出原版等级上限的附魔，如锋利 15），你可以试着编辑这部分配置。
 
-```YAML
+``` YAML
 my_item:
   Enchantments:
     protection: 4
@@ -477,7 +477,7 @@ soul_speed
 
 ### 如何指定自定义模型数据（Custom Model Data）？
 
-```YAML
+``` YAML
 my_item:
   Pack:
     generate_model: true

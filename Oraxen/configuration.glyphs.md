@@ -12,7 +12,7 @@
 
 然后你就可以在 glyphs 文件夹下的任何 yaml 文件中添加自己的配置。每个自定义字符的配置文件不应相同。数字则对应 Unicode 字符表中会使用的字符位置。height 参数允许你修改字符的比例，而 ascent 决定了字符显示的纵向偏移程度。
 
-```YAML
+``` YAML
 heart:
   texture: default/chat/heart
   ascent: 8
@@ -41,7 +41,7 @@ heart:
 
 下文即为 `fonts.yml` 中一个条目的示例：
 
-```YAML
+``` YAML
 bitmaps:
   example_bitmap:
     texture: example/example_bitmap
@@ -63,7 +63,7 @@ ascent 与 height 属性会对位图中所有的自定义字符生效。
 
 下文即为使用上述位图的自定义字符配置。
 
-```YAML
+``` YAML
 example_glyph:
   texture: default/chat/example_glyph
   bitmap:
@@ -82,7 +82,7 @@ example_glyph:
 
 若未指定，则它们会为默认的 `false`。
 
-```YAML
+``` YAML
 heart:
   texture: default/chat/heart
   is_emoji: true
@@ -98,7 +98,7 @@ heart:
 
 你需要向你的自定义字符部分添加一个 `chat` 子设置：
 
-```YAML
+``` YAML
 chat:
   placeholders:
     - "<3"
@@ -115,7 +115,7 @@ chat:
 
 自动补全设置目前只对 1.19.3 及以上的服务器有效。
 
-```YAML
+``` YAML
 chat:
   tabcomplete: true
   placeholders:

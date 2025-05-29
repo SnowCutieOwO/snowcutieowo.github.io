@@ -22,7 +22,7 @@
 
 只需设置材料，无需重复指定纹理图标：
 
-```YAML
+``` YAML
 ruby_helmet:
   displayname: "<gradient:#FA7CBB:#F14658>Ruby Helmet"
   material: PAPER
@@ -41,7 +41,7 @@ Oraxen 会在你没有手动指定的情况下自动为其分配。
 
 值必须为 `oraxen:盔甲名称`，所以在本示例中为：
 
-```YAML
+``` YAML
 ruby_helmet:
   Components:
     equippable:

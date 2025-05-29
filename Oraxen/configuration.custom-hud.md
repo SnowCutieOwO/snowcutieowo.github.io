@@ -63,7 +63,7 @@
 
 ## 示例 hud.yml
 
-```YAML
+``` YAML
 update_time_in_ticks: 40
 huds:
   balance:

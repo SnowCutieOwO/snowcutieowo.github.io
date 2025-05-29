@@ -13,7 +13,7 @@ Spigot 链接：https://www.spigotmc.org/resources/free-crate-reloaded-mystery-c
 
 ### 示例
 
-```YAML
+``` YAML
 reward:
   rewards:
     - 'unique:(), chance:(1),   oraxen-item:(common_material 15)'
@@ -28,7 +28,7 @@ reward:
 
 ### 示例
 
-```YAML
+``` YAML
 reward:
   rewards:
     - 'unique:(), chance:(1),    cmd:(heal {player}), oraxen-display:(heal_icon)'

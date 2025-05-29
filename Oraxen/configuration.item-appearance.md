@@ -11,7 +11,7 @@
 
 将你需要的贴图放置在 pack 文件夹下的 textures 文件夹。然后你可以通过替换材质的方法让 Oraxen 生成模型：
 
-```YAML
+``` YAML
   Pack:
     generate_model: true
     parent_model: "item/handheld"
@@ -24,7 +24,7 @@
 
 你也可以用相似的方法声明贴图，在使用方块父模型时更加有用。
 
-```YAML
+``` YAML
 Pack:
   generate_model: true
   parent_model: "block/cube"
@@ -41,7 +41,7 @@ Pack:
 请在模型和贴图名称上只使用小写字符。大写字符在 1.11 之后的 Minecraft 便不再受到支持（尽管 Optifine 为他们的使用者保留了这个功能）。
 :::
 
-```YAML
+``` YAML
   Pack:
     generate_model: false
     model: example_model.json # json 后缀可以去掉
@@ -68,7 +68,7 @@ Pack:
 
 若你想要为诸如盾的物品创建模型，你需要指定右键点击时使用的阻挡模型，但对 Oraxen 来说这非常简单。下文是一个示例配置：
 
-```YAML
+``` YAML
   Pack:
     generate_model: false
     model: example_shield.json # json 后缀是可以去掉的
@@ -81,7 +81,7 @@ Pack:
 
 下文是一个示例配置：
 
-```YAML
+``` YAML
   Pack:
     generate_model: false
     model: default/combat_bow
@@ -95,7 +95,7 @@ Pack:
 
 ## 使用 `charged_model`（上膛）json 模型（如弩等物品）
 
-```YAML
+``` YAML
   Pack:
     generate_model: false
     model: default/custom_bow
@@ -111,7 +111,7 @@ Pack:
 
 ## 使用 `cast_model`（抛竿）json 模型（如鱼竿等物品）
 
-```YAML
+``` YAML
   Pack:
     generate_model: false
     model: default/fishing_rod
@@ -122,7 +122,7 @@ Pack:
 
 ## 使用 `damaged_model`（耐久度）json 模型（对不同耐久的物品）
 
-```YAML
+``` YAML
 Pack:
   generate_model: false
   model: default/diamond_sword

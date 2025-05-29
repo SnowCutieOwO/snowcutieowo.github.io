@@ -24,7 +24,7 @@
 
 ### 父方块示例
 
-```YAML
+``` YAML
 mainBlock:
   displayname: "<white>Frozen Mushroom Stem"
   material: PAPER
@@ -62,7 +62,7 @@ mainBlock:
 
 #### LOG 类型示例
 
-```YAML
+``` YAML
 # 这不包括上文示例的父模型配置
 mainBlockY:
   excludeFromInventory: true # 使得物品栏只包含基础方块
@@ -94,7 +94,7 @@ mainBlockZ:
 
 #### FURNANCE 类型示例
 
-```YAML
+``` YAML
 # 这不包括上文示例的父模型配置
 mainBlockNorth:
   excludeFromInventory: true # 使得物品栏只包含基础方块
@@ -139,7 +139,7 @@ mainBlockEast:
 
 #### DROPPER 类型示例
 
-```YAML
+``` YAML
 # 这不包括上文示例的父模型配置
 mainBlockNorth:
   excludeFromInventory: true # 使得物品栏只包含基础方块

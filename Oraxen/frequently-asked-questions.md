@@ -65,7 +65,7 @@ https://github.com/lolgeny/item-tooltip-remover
 
 前往 `settings.yml` 并按如下设置进行调整：
 
-```YAML
+``` YAML
   upload:
     enabled: false
 Pack:

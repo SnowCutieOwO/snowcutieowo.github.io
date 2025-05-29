@@ -15,7 +15,7 @@ Oraxen 的物品根配置对任何物品都相同（你可以使用任何材料�
 
 `block/cube_all`、`block/cross`、`block/orientable`、`block/orientable_vertical` 与 `block/cube_column`。
 
-```YAML
+``` YAML
 my_block:
   displayname: "My block"
   material: DIAMOND
@@ -36,7 +36,7 @@ my_block:
 
 若要使用这个机制，你需要告诉 Oraxen 使用哪个模型（对于交由插件处理的，只需将物品名称放入即可）。之后你需要使用其他方块不使用的 `custom_variation`（因为默认情况下 1 会被洞穴方块使用，你你可以使用诸如 2 的值）。这个示例掉落配置允许你通过石镐挖掘这个方块并获取其掉落物。
 
-```YAML
+``` YAML
 Mechanics:
   noteblock:
     custom_variation: 2
@@ -52,7 +52,7 @@ Mechanics:
 
 你可以在 `hardness` 部分配置中设置方块挖掘的最适工具及挖掘速度。
 
-```YAML
+``` YAML
 Mechanics:
   noteblock:
     custom_variation: 2
@@ -79,7 +79,7 @@ Mechanics:
 
 这里也存在着一个 `radius_limitation` 选项，允许你限制指定半径内家具的数量。
 
-```YAML
+``` YAML
 chair:
   Mechanics:
     furniture:
@@ -113,7 +113,7 @@ chair:
 
 你可以通过 `light` 选项来让方块发光。
 
-```YAML
+``` YAML
 Mechanics:
   noteblock:
     custom_variation: 2
@@ -131,7 +131,7 @@ Mechanics:
 
 有效的保护类型为 CONTAINER、DOOR、ATTACHABLE。
 
-```YAML
+``` YAML
 Mechanics:
   furniture:
     blocklocker:
@@ -165,7 +165,7 @@ Mechanics:
 
 **DISPOSAL** 即为自定义垃圾桶，你可以向其中丢入物品，关闭界面后它们会被销毁。
 
-```YAML
+``` YAML
 Mechanics:
   noteblock:
     barrier: true
@@ -184,7 +184,7 @@ Mechanics:
 
 这是一个能为你的方块模拟沙子与砂砾机制的设置。将它放置在其他方块侧，然后它会在没有底部方块支撑的情况下坠落。
 
-```YAML
+``` YAML
 Mechanics:
   noteblock:
     is_falling: true # 若未指定则为 false
@@ -194,7 +194,7 @@ Mechanics:
 
 这个实例配置向你展示了如何创建支持时运与精准采集的普通硬度矿物。
 
-```YAML
+``` YAML
 amethyst_ore:
   displayname: "<light_purple>紫水晶矿"
   material: DIAMOND
@@ -234,7 +234,7 @@ amethyst_ore:
 
 ## 带模型的自定义方块
 
-```YAML
+``` YAML
 box_block:
   displayname: "<white>box"
   material: PAPER

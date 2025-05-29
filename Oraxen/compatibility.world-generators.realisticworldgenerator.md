@@ -23,7 +23,7 @@ SpigotMC 链接：https://www.spigotmc.org/resources/realisticworldgenerator.159
 
 现在你就可以将你的新矿物添加至生成配置中。在本示例中，配置如下：
 
-```YAML
+``` YAML
   amethyst:
     min: 0
     chance: 2.0
@@ -43,7 +43,7 @@ SpigotMC 链接：https://www.spigotmc.org/resources/realisticworldgenerator.159
 
 配置大致如下：
 
-```YAML
+``` YAML
   amethyst:
     min: 0
     chance: 2.0

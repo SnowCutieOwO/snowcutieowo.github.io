@@ -16,7 +16,7 @@ Github 继承版：https://github.com/FxRayHughes/TrMenu/releases
 
 Oraxen 物品不是默认材料，所以你应该按 `<oraxen:item_id>` 的形式将其引入：
 
-```YAML
+``` YAML
   mats: '<oraxen:your_item_id>'
 ```
 

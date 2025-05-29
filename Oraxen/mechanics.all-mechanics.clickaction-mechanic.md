@@ -11,7 +11,7 @@
 
 接下来，在 `mechanics` 不分，你可以在任何 `noteblock-mechanic`、`furniture-mechanic` 或 `stringblock-mechanic` 下添加默认的 clickAction 机制。
 
-```YAML
+``` YAML
 Mechanics:      
   noteblock/furniture/stringblock:
     clickActions:
@@ -25,7 +25,7 @@ Mechanics:
 
 如果你没有使用条件，你需要在必要的地方插入括号：
 
-```YAML
+``` YAML
 Mechanics:
   noteblock/furniture/stringblock:
     clickActions:

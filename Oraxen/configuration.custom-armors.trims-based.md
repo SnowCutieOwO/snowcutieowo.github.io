@@ -32,7 +32,7 @@
 
 只需设置材料并指定两次纹理图标即可：
 
-```YAML
+``` YAML
 ruby_helmet:
   displayname: "<gradient:#FA7CBB:#F14658>红宝石头盔"
   material: CHAINMAIL_HELMET
@@ -52,7 +52,7 @@ Oraxen 会在未指定该内容的情况下自动分配。
 
 值应当为 `oraxen:盔甲名称`，所以在我们的示例中，它应该像这样：
 
-```YAML
+``` YAML
 ruby_helmet:
   trim_pattern: oraxen:ruby
 ```

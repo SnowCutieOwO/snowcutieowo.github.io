@@ -10,7 +10,7 @@
 
 ### 全局配置
 
-```YAML
+``` YAML
 stringblock:
   tool_types:
     - WOODEN
@@ -27,7 +27,7 @@ stringblock:
 
 你可以选择将下列内容添加至你的绊线方块。
 
-```YAML
+``` YAML
 sapling:
   Mechanics:
     stringblock:

@@ -4,7 +4,7 @@
 
 Oraxen 有一个种植作物的系统，能够显示多个植物生长的阶段，下文为示例。
 
-```YAML
+``` YAML
 rose_plant:
   displayname: "<gradient:#46EEAA:#2CBFC7>玫瑰丛"
   material: COOKED_BEEF
@@ -37,7 +37,7 @@ rose_seed:
 
 ## 第一个生长阶段
 
-```YAML
+``` YAML
 rose_plant_stage1:
   material: PAPER
   Mechanics:
@@ -61,7 +61,7 @@ rose_plant_stage1:
 
 ## 第二个生长阶段
 
-```YAML
+``` YAML
 rose_plant_stage2:
   material: PAPER
   Mechanics:
@@ -85,7 +85,7 @@ rose_plant_stage2:
 
 ## 第三个生长阶段
 
-```YAML
+``` YAML
 rose_plant_stage2:
   material: PAPER
   Mechanics:

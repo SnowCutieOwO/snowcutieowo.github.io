@@ -9,14 +9,14 @@ Spigot 插件链接：https://www.spigotmc.org/resources/bossshoppro-the-most-po
 
 ### 用法
 
-```YAML
+``` YAML
 OraxenTest:
     MenuItem:
       oraxen: <oraxen 物品名称>
       amount: <物品数量(可选, 默认为 1)>
 ```
 ### 示例
-```YAML
+``` YAML
 OraxenTest:
     MenuItem:
       oraxen: oraxen_icon_test
@@ -26,7 +26,7 @@ OraxenTest:
 
 ### 用法（与 ITEM 格式相似）
 
-```YAML
+``` YAML
 OraxenTest:
     RewardType: ORAXEN(也可使用 ORAXEN-ITEM 与 ITEM-ORAXEN)
     Reward:
@@ -38,7 +38,7 @@ OraxenTest:
 
 ### 示例
 
-```YAML
+``` YAML
 OraxenTest:
     RewardType: ORAXEN
     Reward:
@@ -52,7 +52,7 @@ OraxenTest:
 
 ### 用法（与 ITEM 格式相似）
 
-```YAML
+``` YAML
 OraxenTest:
     PriceType: ORAXEN(也可使用 ORAXEN-ITEM 与 ITEM-ORAXEN)
     Price:
@@ -63,7 +63,7 @@ OraxenTest:
 
 ### 示例
 
-```YAML
+``` YAML
 OraxenTest:
     PriceType: ORAXEN
     Price:

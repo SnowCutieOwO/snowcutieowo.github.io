@@ -13,7 +13,7 @@
 
 下文为用到了本机制的自定义食物设置：
 
-```YAML
+``` YAML
 Mechanics:
   food:
     hunger: 10
@@ -48,7 +48,7 @@ Mechanics:
 
 #### 单物品配置
 
-```YAML
+``` YAML
 backpack:
   displayname: backpack
   material: PAPER
@@ -77,7 +77,7 @@ backpack:
 
 如果你的 `sound.yml` 如下文所示：
 
-```YAML
+``` YAML
 sounds:
   my_music_disc_song.mysong:
     category: record
@@ -88,7 +88,7 @@ sounds:
 
 若你正在将 sounds.json 导入其他命名空间，则一般情况下它就不会为 minecraft。
 
-```YAML
+``` YAML
 Mechanics:
   music_disc:
     song: "minecraft:my_music_disc_song.mysong"
@@ -102,7 +102,7 @@ Mechanics:
 
 这里有两个选项可供使用：ratio（比率）与 fixed_amount（固定值）。你只能为一个物品选择其中一种。前者允许你按百分比修复物品耐久度（0.15 则表示为物品恢复 15% 耐久，1.0 表示完全修复物品）。后者则允许你为物品恢复指定数值的耐久度（输入 10 则表示它可以为物品恢复 10 点耐久值）。
 
-```YAML
+``` YAML
 Mechanics:
   durability:
     value: 5000 # 钻石剑的默认耐久为 1561 点
@@ -114,7 +114,7 @@ Mechanics:
 
 它们所实现的功能一般可以望文生义。
 
-```YAML
+``` YAML
 Mechanics:
   misc:
     breaks_from_cactus: true
@@ -133,7 +133,7 @@ Mechanics:
 
 #### 单物品配置
 
-```YAML
+``` YAML
 Mechanics:
   repair:
     ratio: 0.10 # 10%
@@ -144,7 +144,7 @@ Mechanics:
 
 若你启用了 `oraxen_durability_only`，则这个机制只会对使用了 Oraxen 耐久系统的物品生效。
 
-```YAML
+``` YAML
 repair:
   enabled: true
   oraxen_durability_only: false
@@ -156,7 +156,7 @@ repair:
 
 #### 单物品配置
 
-```YAML
+``` YAML
 Mechanics:
   commands:
     cooldown: 5 # 单位为秒的示例冷却时间。此项可选
@@ -181,7 +181,7 @@ Mechanics:
 
 [这里](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html)是可供使用的完整药水效果列表。
 
-```YAML
+``` YAML
 Mechanics:
   armor_effects:
     night_vision: # 药水效果类型
@@ -194,7 +194,7 @@ Mechanics:
 
 你也可以设置套装效果。
 
-```YAML
+``` YAML
 Mechanics:
   armor_effects:
     night_vision:
@@ -216,7 +216,7 @@ Mechanics:
 
 #### 单物品配置（简明）
 
-```YAML
+``` YAML
 Mechanics:
   aura:
     type: simple # 可用类型: [ simple, ring, helix ]
@@ -229,7 +229,7 @@ Mechanics:
 
 #### 单物品配置（简明）
 
-```YAML
+``` YAML
 Mechanics:
   hat:
     enabled: true
@@ -241,7 +241,7 @@ Mechanics:
 
 #### 单物品配置
 
-```YAML
+``` YAML
 Mechanics:
   skinnable: {}
 ```
@@ -252,7 +252,7 @@ Mechanics:
 
 #### 单物品配置
 
-```YAML
+``` YAML
 Mechanics:
   itemtype:
     value: SUPER_MATERIAL # your itemType
@@ -264,7 +264,7 @@ Mechanics:
 
 #### 单物品配置
 
-```YAML
+``` YAML
 soulbound:
   lose_chance: 0
 ```
@@ -279,7 +279,7 @@ soulbound:
 
 #### 单物品配置
 
-```YAML
+``` YAML
 Mechanics:
   skin: 
     consume: true # 消耗 1 个外观物品
@@ -293,7 +293,7 @@ Mechanics:
 
 #### 单物品配置
 
-```YAML
+``` YAML
  Mechanics:
    thor:
     lightning_bolts_amount: 5 # 生成的闪电数量
@@ -307,7 +307,7 @@ Mechanics:
 
 #### 单物品配置
 
-```YAML
+``` YAML
 Mechanics:
   lifeleech:
     amount: 2 # 从对手处偷取的生命值点数，1 点生命 = 1/2 颗心
@@ -319,7 +319,7 @@ Mechanics:
 
 #### 单物品配置
 
-```YAML
+``` YAML
   Mechanics:
   energyblast:
     delay: 20000
@@ -340,7 +340,7 @@ Mechanics:
 
 #### 单物品配置
 
-```YAML
+``` YAML
 Mechanics:
   witherskull:
     charged: false # 充能的凋零之首会破坏方块
@@ -355,7 +355,7 @@ Mechanics:
 
 #### 单物品配置
 
-```YAML
+``` YAML
 Mechanics:
   harvesting:
     cooldown: 10000 # 10 秒冷却时间
@@ -369,7 +369,7 @@ Mechanics:
 
 #### 单物品配置
 
-```YAML
+``` YAML
 Mechanics:
   bigmining:
     radius: 1 # 以被挖掘方块为中心的破坏范围
@@ -382,7 +382,7 @@ Mechanics:
 
 #### 单物品配置
 
-```YAML
+``` YAML
 Mechanics:
   smelting:
     enabled: true
@@ -397,7 +397,7 @@ Mechanics:
 
 比率（ratio）对应了转化为附魔之瓶与消耗经验值的比值。
 
-```YAML
+``` YAML
 Mechanics:
   bottledexp:
     ratio: 0.95 # 每转化 1 个附魔之瓶就需要消耗 1/20 的经验值
@@ -405,7 +405,7 @@ Mechanics:
 
 ### 全局配置
 
-```YAML
+``` YAML
 bottledexp:
   enabled: true
   durability_cost: 1
@@ -421,7 +421,7 @@ bottledexp:
 
 硬度为破坏动画切换的间隔，概率则为挖掘后掉落基岩的概率（0.10 表示 10%，0.5 表示 50%，而 1.0 表示 100%）
 
-```YAML
+``` YAML
 Mechanics:
   bedrockbreak:
     hardness: 10
@@ -432,7 +432,7 @@ Mechanics:
 
 若你将 `disable_on_first_layer` 设置为了 true，则玩家将不能挖掘最底层的基岩。`durability_cost` 则为挖掘一次基岩成功后损失的耐久值。
 
-```YAML
+``` YAML
 bedrockbreak:
   enabled: true
   disable_on_first_layer: false

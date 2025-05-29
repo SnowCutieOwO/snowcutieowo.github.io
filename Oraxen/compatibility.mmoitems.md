@@ -5,7 +5,7 @@ MMOItems 引入了带有独特攻击效果的物品
 
 若要实现这个，只需向 Oraxen 的物品配置中加入一个 `mmoitem` 部分即可，如下：
 
-```YAML
+``` YAML
 example_mmoitem:
   displayname: "<gradient:#59A7EA:#F1D2FF>测试"
 

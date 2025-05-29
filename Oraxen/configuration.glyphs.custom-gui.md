@@ -2,7 +2,7 @@
 
 **通过 Oraxen 的自定义字符，你可以创建自定义界面，下文为示例**
 
-```YAML
+``` YAML
 customshop:
   texture: custom/default/custom/gui_tienda.png
   ascent: 13
@@ -27,7 +27,7 @@ customshop:
 隐形元素常见于菜单内的按钮。若要创建隐形元素，你需要让某个元素带上透明材质。下文为一个例子。
 :::
 
-```YAML
+``` YAML
 invisible_item:
   displayname: "<white>"
   material: PAPER

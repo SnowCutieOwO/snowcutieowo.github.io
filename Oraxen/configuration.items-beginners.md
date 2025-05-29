@@ -17,7 +17,7 @@
 
 我难以决定物品的具体分类（这像武器还是工具？），所以我在物品文件夹下创建了 **super_cool_items.yml**。这里是我添加的内容：
 
-```YAML
+``` YAML
 onyx_axe:
   displayname: "<#6f737d>缟玛瑙斧"
   material: DIAMOND_AXE
@@ -29,7 +29,7 @@ onyx_axe:
 
 通常你需要创建两个 json 文件：一个用于向游戏表示如何显示材质，另一个则向游戏表示何时显示（如果所有的钻石斧都拥有同一个材质，那会相当难堪），在 Oraxen 中这些是不必要的，我们只需要指定向图片添加的不同材质层（一般只有一层，但在可染色物品例如皮革盔甲上可以指定更多层）。这里是我添加的内容：
 
-```YAML
+``` YAML
 onyx_axe:
   displayname: "<black>缟玛瑙斧"
   material: DIAMOND_AXE
@@ -52,7 +52,7 @@ onyx_axe:
 
 在每个物品的配置中你可以添加一个机制部分，并加入一大堆酷炫的东西。另外，如果你觉得现有的机制还不能让你满意（我已经尽可能加了很多机制），你可以通过 Oraxen API 向插件添加一些新的机制（见[编写自定义机制](developers.create-your-own-mechanic.md)）。我想给我的斧头加上超高的耐久度，并能让它挖掘基岩。这里是我写的：
 
-```YAML
+``` YAML
 onyx_axe:
   displayname: "<black>缟玛瑙斧"
   material: DIAMOND_AXE

@@ -19,7 +19,7 @@ SpigotMC 链接：https://www.spigotmc.org/resources/iris-world-gen-the-dimensio
 
 找到这部分的配置：
 
-```YAML
+``` YAML
     "ORES": "All settings in regards to deposits. Contains the ores spawning in your world.",
     "deposits": [
         {
@@ -36,7 +36,7 @@ SpigotMC 链接：https://www.spigotmc.org/resources/iris-world-gen-the-dimensio
 
 通过第一步的自定义矿物属性添加你自己的配置。如下文所示：
 
-```YAML
+``` YAML
     {
       "minHeight": 2,
       "maxPerChunk": 2,

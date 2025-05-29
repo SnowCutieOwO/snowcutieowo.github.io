@@ -34,7 +34,7 @@ Oraxen 利用了物品展示实体与交互实体来实现家具的功能。
 
 下文为示例配置：
 
-```YAML
+``` YAML
 cart:
   displayname: "<gray>推车"
   material: PAPER
@@ -114,7 +114,7 @@ cart:
 
 它有一个 `block_light` 和 `sky_light` 选项，用于设置 Minecraft 所使用的不同种类光照。示例配置如下：
 
-```YAML
+``` YAML
 display_entity_properties:
   brightness:
     block_light: 15
@@ -125,7 +125,7 @@ display_entity_properties:
 
 它有 `x`、`y` 与 `z` 属性，可用于调整各个轴上的缩放比例。示例配置如下：
 
-```YAML
+``` YAML
 display_entity_properties:
   scale:
     x: 1

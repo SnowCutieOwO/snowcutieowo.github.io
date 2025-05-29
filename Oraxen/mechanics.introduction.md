@@ -11,7 +11,7 @@
 
 如你在[对应部分的初学者教程](configuration.items-beginners.md)所见的那样，你只需添加新的一部分“mechanics”配置，其中包含的就是你需要的各种机制。
 
-```YAML
+``` YAML
 example_item:
   material: DIAMOND_AXE
   Mechanics:
@@ -30,7 +30,7 @@ example_item:
 
 这些配置会被保存在 Oraxen 插件文件夹的 `mechanics.yml` 中。它们允许你修改一些物品用到的全局设定。你可能不常用到它，但它总归是有用的。例如，基岩破坏机制允许你破坏基岩。大多数服务器不希望他们的玩家挖穿世界——最后一层基岩。在 `bedrockbreak`（基岩破坏）机制的配置中，你就可以设置这个细节（这也会对所有使用了这个机制的物品生效）。
 
-```YAML
+``` YAML
 bedrockbreak:
   enabled: true
   disable_on_first_layer: false # 此项

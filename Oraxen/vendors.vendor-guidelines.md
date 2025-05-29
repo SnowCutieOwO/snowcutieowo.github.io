@@ -71,7 +71,7 @@ Oraxen 有几种解决问题的方法。
 
 示例配置文件如下：
 
-```YAML
+``` YAML
 my_example_item:
   displayname: "<red>自定义物品"
   material: PAPER
@@ -84,7 +84,7 @@ my_example_item:
 
 如果你在使用 2D 物品，则 `Pack` 部分应当看起来像这样：
 
-```YAML
+``` YAML
 Pack:
   generate_model: true
   parent_model: "item/generated"
@@ -94,7 +94,7 @@ Pack:
 
 另外，`textures` 也接受指定的根名：
 
-```YAML
+``` YAML
 Pack:
   generate_model: true
   parent_model: "item/generated"
@@ -128,7 +128,7 @@ Pack:
 
 下文为示例配置：
 
-```YAML
+``` YAML
 my_example_block:
   displayname: "<red>My Example Block"
   material: PAPER
@@ -167,7 +167,7 @@ my_example_block:
 
 下文为示例配置文件：
 
-```YAML
+``` YAML
 my_example_block:
   displayname: "<red>自定义方块"
   material: PAPER
@@ -192,7 +192,7 @@ my_example_block:
 
 下文为示例配置：
 
-```YAML
+``` YAML
 my_example_furniture:
   displayname: "<red>示例家具"
   material: PAPER
@@ -246,7 +246,7 @@ ItemsAdder 因其使用了盔甲架，会使用相同的 `HEAD`。
 
 你可以按如下格式放置多个屏障：
 
-```YAML
+``` YAML
 Mechanics:
   furniture:
     barriers:
