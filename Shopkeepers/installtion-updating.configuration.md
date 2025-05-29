@@ -27,11 +27,11 @@
   示例：旧格式为 `display-name: '&aShopkeeper'`，而新格式则为 `display-name: '{"text":"Shopkeeper","italic":false,"color":"green"}'`
 
 * 若要指定不带特殊数据的物品，你可以使用更简洁的表达方式。例如：
-```YAML
+``` YAML
 shop-creation-item: VILLAGER_SPAWN_EGG
 ```
 而不是
-```YAML
+``` YAML
 shop-creation-item:
   type: VILLAGER_SPAWN_EGG
 ```
@@ -48,7 +48,7 @@ shop-creation-item:
 
 ## 示例配置文件
 
-```YAML
+``` YAML
 currency-item:
   type: EMERALD
   display-name: '{"text":"珍奇宝石","italic":false,"color":"green"}'
@@ -69,7 +69,7 @@ currency-item:
 
 在检查游戏内物品是否与配置文件中要求的物品相符时，我们只会检查它包含的指定数据。这意味着检查的物品**不会**完全相同，而是物品**能否包含额外数据**而仍然符合要求。例如，在指定如下数据时：
 
-```YAML
+``` YAML
 shop-creation-item:
   type: VILLAGER_SPAWN_EGG
   display-name: '{"text":"Shopkeeper","italic":false,"color":"green"}'
@@ -81,12 +81,12 @@ shop-creation-item:
 
 其他方面的限制（因实现的应用较为简单），例如不支持要求物品**不包含**某个数据。例如，不能指定物品不包含特殊显示名称，或者不包含任何描述或附魔。下述两种配置都会允许玩家通过村民刷怪蛋而无视物品上的名称。
 
-```YAML
+``` YAML
 shop-creation-item:
   type: VILLAGER_SPAWN_EGG
 ```
 
-```YAML
+``` YAML
 shop-creation-item:
   type: VILLAGER_SPAWN_EGG
   display-name: ''
@@ -100,14 +100,14 @@ shop-creation-item:
 
 这个行为通过下文的配置控制，你可以在默认配置中的注释中找到有关描述。
 
-```YAML
+``` YAML
 add-shop-creation-item-tag: true
 identify-shop-creation-item-by-tag: true
 ```
 
 ## 默认配置
 
-```YAML
+``` YAML
 # *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*
 # Shopkeepers Config
 # Wiki: https://github.com/Shopkeepers/Shopkeepers-Wiki/wiki/Configuration

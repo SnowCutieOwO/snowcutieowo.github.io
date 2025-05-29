@@ -8,7 +8,7 @@
 
 你也可以在插件的 [plugin.yml](https://github.com/Shopkeepers/Shopkeepers/blob/master/modules/main/src/main/resources/plugin.yml) 中找到所有保持最新的**静态**权限、默认分配的权限及其子权限。
 
-```YAML
+``` YAML
 permissions:
     # Command permissions:
     shopkeeper.help:
