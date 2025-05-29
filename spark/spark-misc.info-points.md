@@ -17,7 +17,7 @@ spark 中的“信息点”是一段额外的信息，它在 spark 浏览器中�
 ### 方法描述格式
 
 一段方法描述看起来会像这样：
-```YAML
+``` YAML
 - method: net.minecraft.network.protocol.PlayerConnectionUtils.run()
   description: >
     Manages player (client) connections to the server, in particular the processing of incoming
@@ -31,7 +31,7 @@ spark 中的“信息点”是一段额外的信息，它在 spark 浏览器中�
 
 对某个方法的描述看起来会像是这样：
 
-```YAML
+``` YAML
 - thread: Server thread
   description: >
     The main server thread that the game loop is executed on. See the
@@ -44,7 +44,7 @@ spark 中的“信息点”是一段额外的信息，它在 spark 浏览器中�
 ### 描述相同的多个方法/线程
 
 如果多个方法或线程必须拥有同一条描述，它们可以通过 YAML 的列表语法加在一起：
-```YAML
+``` YAML
 - methods:
   - net.minecraft.server.MinecraftServer.waitUntilNextTick()
   - net.minecraft.server.IAsyncTaskHandler.sleepForTick()
@@ -52,7 +52,7 @@ spark 中的“信息点”是一段额外的信息，它在 spark 浏览器中�
     todo
 ```
 
-```YAML
+``` YAML
 - threads:
   - Server thread
   - Main thread
@@ -63,7 +63,7 @@ spark 中的“信息点”是一段额外的信息，它在 spark 浏览器中�
 ### 正则匹配
 
 `method`/`thread` 键所需的值通常为完全匹配状态。但是，也可以在这里通过 `/` 符号插入正则表达式。
-```YAML
+``` YAML
 - thread: /^Craft Scheduler Thread.*$/
   description: >
     todo
