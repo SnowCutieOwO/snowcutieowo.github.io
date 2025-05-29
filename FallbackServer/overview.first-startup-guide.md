@@ -66,7 +66,7 @@ L FallBackServerVelocity-版本号.jar
 * 根据你使的核心种类打开对应的 config.yml（`BungeeCord`）或 velocity.toml（`Velocity`）。
 * 复制大厅服的名称，如下文所示：
   - BungeeCord(Waterfall)：
-  ```YAML
+  ``` YAML
   servers:
     lobby1:
       motd: '&1Just another Waterfall - Forced Host'
