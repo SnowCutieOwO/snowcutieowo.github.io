@@ -2,7 +2,7 @@
 将悬浮字做成一颗树的示例
 
 ## hologram_tree.yml
-```YAML
+``` YAML
 location: world:0.500:100.000:0.500
 enabled: true
 display-range: 64

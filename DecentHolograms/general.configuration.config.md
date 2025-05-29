@@ -6,7 +6,7 @@
 :::
 
 ## config.yml
-```YAML
+``` YAML
 # # # # # # # # # # # # # # # # #
 #
 # Welcome to DecentHolograms config.yml.

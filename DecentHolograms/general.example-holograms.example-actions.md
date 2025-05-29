@@ -2,7 +2,7 @@
 带交互触发动作的悬浮字
 
 ## hologram_actions.yml
-```YAML
+``` YAML
 location: world:0.500:100.000:0.500
 enabled: true
 display-range: 64

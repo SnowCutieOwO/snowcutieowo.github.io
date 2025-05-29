@@ -22,7 +22,7 @@
 
 #### config.yml
 
-```YAML
+``` YAML
 # ...
 
 damage-display:
@@ -59,7 +59,7 @@ damage-display:
 
 #### config.yml
 
-```YAML
+``` YAML
 # ...
 
 healing-display:

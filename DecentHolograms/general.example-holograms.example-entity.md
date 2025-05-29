@@ -2,7 +2,7 @@
 包含实体的悬浮字
 
 ## hologram_entity.yml
-```YAML
+``` YAML
 location: world:0.500:100.000:0.500
 enabled: true
 display-range: 64

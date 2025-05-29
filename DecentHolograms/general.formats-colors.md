@@ -186,53 +186,61 @@ DecentHolograms 能显示的东西不只是文本，通过特定的格式，你�
 
 下列选项可以填入 `(<值>)` 中的 `<值>` 参数中：
 
-:::: tabs
+::::: tabs
 
-::: tab 玩家名称
+:::: tab 玩家名称
 
 有效的玩家名称。
 
-> [!NOTE] 示例
-> 显示玩家 `d0by` 的头颅。
-> ```
-> #ICON: PLAYER_HEAD (d0by)
-> ```
+::: info 示例
+显示玩家 `d0by` 的头颅。
+```
+#ICON: PLAYER_HEAD (d0by)
+```
 :::
 
-::: tab 变量
+::::
+
+:::: tab 变量
 
 能够转化为玩家名称的变量。内建变量与 PlaceholderAPI 变量均可。
 
-> [!NOTE] 示例
-> 显示看向悬浮字的玩家头颅。
-> ```
-> #ICON: PLAYER_HEAD ({player})
-> ```
-
-:::
-
-::: tab Base64 编码纹理
-
-可以使用 Base64 纹理。这些值可以在诸如 https://minecraft-heads.com 的地方找到，通常在 `value`（值） 一栏。
-
-> [!NOTE] 示例
-> 显示 https://minecraft-heads.com/custom-heads/head/1 的纹理。
-> ```
-> #ICON: PLAYER_HEAD (eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTYzNmRlZTgwNmJhNDdhMmM0MGU5NWI1N2ExMmYzN2RlNmMyZTY3N2YyMTYwMTMyYTA3ZTI0ZWVmZmE2In19fQ==)
-> ```
-
-:::
-
-::: tab HeadDatabase 头颅
-
-`HEADDATABASE_<id>` 可以用在悬浮字中。`<id>` 为 https://minecraft-heads.com 的数字。它一般可以在链接的参数中找到。
-
-> [!NOTE] 示例
-> 通过 HeadDatabase 插件显示 https://minecraft-heads.com/custom-heads/head/1 的纹理
-> ```
-> #ICON: PLAYER_HEAD (HEADDATABASE_1)
-> ```
+::: info 示例
+显示看向悬浮字的玩家头颅。
+```
+#ICON: PLAYER_HEAD ({player})
+```
 
 :::
 
 ::::
+
+:::: tab Base64 编码纹理
+
+可以使用 Base64 纹理。这些值可以在诸如 https://minecraft-heads.com 的地方找到，通常在 `value`（值） 一栏。
+
+::: info 示例
+显示 https://minecraft-heads.com/custom-heads/head/1 的纹理。
+```
+#ICON: PLAYER_HEAD (eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTYzNmRlZTgwNmJhNDdhMmM0MGU5NWI1N2ExMmYzN2RlNmMyZTY3N2YyMTYwMTMyYTA3ZTI0ZWVmZmE2In19fQ==)
+```
+:::
+
+::::
+
+:::: tab HeadDatabase 头颅
+
+`HEADDATABASE_<id>` 可以用在悬浮字中。`<id>` 为 https://minecraft-heads.com 的数字。它一般可以在链接的参数中找到。
+
+::: info 示例
+
+通过 HeadDatabase 插件显示 https://minecraft-heads.com/custom-heads/head/1 的纹理
+```
+#ICON: PLAYER_HEAD (HEADDATABASE_1)
+```
+
+:::
+
+::::
+
+:::::

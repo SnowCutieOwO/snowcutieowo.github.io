@@ -2,7 +2,7 @@
 显示 Minecraft 合成配方的示例悬浮字
 
 ## hologram_recipe.yml
-```YAML
+``` YAML
 location: world:0.500:100.000:0.500
 enabled: true
 display-range: 64
