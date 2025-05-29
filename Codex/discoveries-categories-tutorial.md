@@ -219,52 +219,29 @@ discovered_on:
 
 对应条目会在击杀 MythicMobs 实体时解锁。
 
-::: info 将 `type` 设置为 **MYTHIC_MOB_KILL**.
+:::: info 将 `type` 设置为 **MYTHIC_MOB_KILL**.
 
 **`value.mob_type:`** MythicMobs 实体的 ID。你可以使用“;”表示多个 ID。
 
-
-<el-tabs
-  v-model="activeName"
-  type="card"
-  class="demo-tabs"
-  @tab-click="handleClick"
->
-  <el-tab-pane label="示例 1" name="first">
+::: code-group
   
-``` YAML
+``` YAML [示例1]
 discovered_on:
   type: MYTHIC_MOB_KILL
   value:
     mob_type: forest_corrupter
 ```
 
-  </el-tab-pane>
-  <el-tab-pane label="示例 2" name="second">
-  
-``` YAML
+``` YAML [示例2]
 discovered_on:
   type: MYTHIC_MOB_KILL
   value:
     mob_type: crab;super_crab;mega_crab
 ```
-  
-  </el-tab-pane>
-</el-tabs>
-
-
-<script lang="ts" setup>
-import { ref } from 'vue'
-import type { TabsPaneContext } from 'element-plus'
-
-const activeName = ref('first')
-
-const handleClick = (tab: TabsPaneContext, event: Event) => {
-  console.log(tab, event)
-}
-</script>
 
 :::
+
+::::
 
 ### 点击动作
 
