@@ -16,16 +16,6 @@ import{_ as e,C as l,c as E,o as r,j as i,b1 as d,G as n,a,w as h}from"./chunks/
 <span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">    generate-new-one</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">false</span></span>
 <span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">    file</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&#39;zh_cn.json&#39;</span></span>
 <span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 仅 Paper 系服务端可用.</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">paper-api</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  save-item</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">true</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">  # 对于 Paper 服务端用户, 启用该选项可使本插件直接通过他们的 API 获取头颅, 从而提升性能.</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  skull</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">true</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">  use-component</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">    menu-title</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">false</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">    message</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">false</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">    item</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">false</span></span>
-<span class="line"></span>
 <span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">sell</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">  # 可填入的值: Bukkit 或 ItemFormat.</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">  # 每一个物品都可通过 match-item 部分来设置自定义出售机制, 更多信息请浏览维基.</span></span>
