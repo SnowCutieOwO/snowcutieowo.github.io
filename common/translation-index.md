@@ -2,7 +2,7 @@
 
 在这里存储的插件译文与模组译文均会以表格列出，也有相关指路供你参考。
 
-![img](https://img.shields.io/badge/%E7%8E%B0%E5%AD%98%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6%E6%95%B0-123-93fdf9) ![img](https://img.shields.io/badge/%E9%85%8D%E7%BD%AE%E8%AF%91%E6%96%87%E6%80%BB%E5%AD%97%E6%95%B0-125143-ebfd93)（最后更新：2025/5/4）
+![img](https://img.shields.io/badge/%E7%8E%B0%E5%AD%98%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6%E6%95%B0-127-93fdf9) ![img](https://img.shields.io/badge/%E9%85%8D%E7%BD%AE%E8%AF%91%E6%96%87%E6%80%BB%E5%AD%97%E6%95%B0-128466-ebfd93)（最后更新：2025/5/31）
 
 ## 常见问题
 
@@ -42,6 +42,8 @@
 |ChatItem|否|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/chatitem-display-items-in-chat.19064/)|
 |CharacterDialogue|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/95868)|
 |CombatPlus|否|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/%E2%9A%94%EF%B8%8F-combat-plus-%E2%9A%94%EF%B8%8F-the-all-in-one-combat-system-must-have.76788/)|
+|Combat Weaponry Plus|否|是|仅语言文件|[Github](https://github.com/DeskTecc/Combat-weaponry-plus-plugin-minecraft/blob/version-1.21.4/src/main/resources/lang/lang-zhcn.yml) [SpigotMC](https://www.spigotmc.org/resources/combat-weaponry-plus-continued.122437/)|
+|CratesPlus|否|是|仅语言文件|[Github（多语言仓库）](https://github.com/CratesPlus/Translations/blob/main/simplified-chinese.yml) [Github（代码仓库）](https://github.com/CratesPlus/CratesPlus)|
 |CreativeManager|否|是|仅语言文件|[Github](https://github.com/K0bus/CreativeManager/blob/master/src/main/resources/lang/zh_CN.yml)|
 |CustomCrafting|否|是|仅语言文件|[Github](https://github.com/WolfyScript/CustomCrafting/blob/master/src/main/resources/lang/zh_CN.json)|
 |DeathTotems (DeathWarden)|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/deathwarden.73535/)|
@@ -72,12 +74,14 @@
 |InteractiveBoard|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/interactiveboard.77114/)|
 |ItemFliter|否|是|仅语言文件|[Github](https://github.com/pustinek/ItemFilter/blob/master/src/main/resources/languages/ZHCN.yml)|
 |JClans|否|是|仅语言文件|[Github](https://github.com/TheJCN/JClans/blob/main/src/main/resources/zh_cn.yml)|
+|Karma|否|是|仅语言文件|[Github](https://github.com/Rosstail/Karma/blob/master/src/main/resources/lang/zh_CN.yml) [SpigotMC](https://www.spigotmc.org/resources/karma.76077/)|
 |Keys|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/%E2%9A%A1%EF%B8%8Fkeys-%E2%86%A3-locks-keys-and-hooks.77664/)|
 |Kizuki Anticheat|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/kizuki-anticheat-1-8-8-1-12-2.90468/)|
 |Lands|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/53313)|
 |LagFixer|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/lagfixer-1-16-1-21-%E2%9A%A1%EF%B8%8Fbest-performance-solution-%EF%B8%8F-1200-servers-%E2%9C%85-lightweight-and-asynchronous.111684/)|
 |LevelledMobs|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/levelledmobs.74304/)|
 |LibreLogin|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/librelogin-auto-login-2fa-bedrock-support.101040/)|
+|LightCoins|否|是|仅语言文件|[Github](https://github.com/lightPlugins/lightCoins/blob/dev/src/main/resources/language/zhcn.yml) [SpgiotMC](https://www.spigotmc.org/resources/%E2%9A%A1-lightcoins%E2%84%A2-1-21-5-velocity-mysql-redis-support-infinit-virtual-currencies.83862/)|
 |LightFly|否|是|仅语言文件|[Github](https://github.com/JaimeH-Q/LightFly/blob/main/src/main/resources/lang/zh_cn.yml)|
 |LightShowRegion|否|是|仅语言文件|[Github](https://github.com/kainlighty/LightShowRegion) [Modrinth](https://modrinth.com/plugin/lightshowregion)|
 |LiteEco|否|是|仅语言文件|[Github](https://github.com/EncryptSL/LiteEco/blob/main/src/main/resources/locale/zh_cn.yml)|
@@ -145,6 +149,7 @@
 |Wuufu's Waypoints|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/wuufus-waypoints-1-13-1-21.76603/)|
 |XClaim|是|是|仅语言文件|[Github](https://github.com/WasabiThumb/xclaim/blob/master/src/main/resources/lang/zh.json)|
 |xCommands|是|否|N/A|[SpigotMC](https://www.spigotmc.org/resources/xcommands.113183/)|
+|zHomes|否|是|仅语言文件|[Github](https://github.com/yL3oft/zHomes/blob/master/src/main/resources/languages/zhcn.yml) [SpigotMC](https://www.spigotmc.org/resources/zhomes.123141/)|
 |ZMusic|否|否|[拒绝合并](https://github.com/RealHeart/ZMusic/issues/30)|[SpigotMC](https://www.spigotmc.org/resources/zmusic-1-20-ready-powerful-music-system.83027/)|
 
 ## 模组
