@@ -6,22 +6,22 @@
 
 ## 插件
 
-* WorldEdit
+* WorldEdit\
   使用 WorldEdit 选区为半径，并记录 WorldEdit 对世界的编辑情况。  
   https://dev.bukkit.org/projects/worldedit
-* CoreProtect-Anti-Xray
+* CoreProtect-Anti-Xray\
   记录玩家在指定时间段内挖掘了多少矿物。  
   https://dev.bukkit.org/bukkit-plugins/coreprotect-anti-xray/
-* CoreProtect TNT
-  添加了对 TNT 与苦力怕爆炸来源的记录。 
+* CoreProtect TNT\
+  添加了对 TNT 与苦力怕爆炸来源的记录。  
   https://www.spigotmc.org/resources/coreprotect-tnt-log-tnt-creeper-explode-source.69609/
-* CoreProtect Time-Lapse
+* CoreProtect Time-Lapse\
   CPTL 为 CoreProtect 的附属，用于创建基于历史数据的延时情景。  
   https://modrinth.com/plugin/cptl 
 
 ## 工具
 
-* CoreProtect Lookup Web Interface
+* CoreProtect Lookup Web Interface\
   通过易于理解的网页界面查询 CoreProtect 的历史记录。  
   https://www.spigotmc.org/resources/coreprotect-lookup-web-interface.28033/
 * Watson
