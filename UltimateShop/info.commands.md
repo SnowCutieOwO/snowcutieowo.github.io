@@ -1,5 +1,10 @@
 # ⌨️ 命令
 
+
+## ultimateshop.bypassprice
+
+这个权限可以绕过价格检查，购买任何东西都无需付款。
+
 ## /shop menu <菜单ID>/<商店ID>
 
 打开普通菜单或商店菜单。
@@ -19,7 +24,7 @@
 
 ## /shop quicksell <商店ID> <商品ID> \[数量\]
 
-与快速购买相同，将 quickbuy 替换为 quicksell 即可。
+与快速购买相同，将 `quickbuy` 替换为 `quicksell` 即可。
 
 `amount` 可替换为 `*` 符号，此时插件会将背包中所有符合条件的物品出售。**<font color="Red">（仅付费版本）</font>**
 
@@ -31,7 +36,7 @@
 
 ## /shop givesellstick <物品 ID> <玩家 ID> \[数量\] **<font color="Red">（仅付费版本）</font>**
 
-给予指定玩家指定数量（不填则默认为 1）的出售魔杖。
+给予指定玩家指定数量（不填则默认为 **1**）的出售魔杖。
 
 需要权限 `ultimateshop.givesellstick`。
 

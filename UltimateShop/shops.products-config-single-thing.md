@@ -123,8 +123,8 @@ items:
         placeholder: '&6{amount} 硬币'
         start-apply: 0
     conditions:
-      one:
-        1:
+      one: # 条件 ID
+        1: # 表示第一个条件
           type: placeholder
           placeholder: '{random_daily}'
           rule: '=='

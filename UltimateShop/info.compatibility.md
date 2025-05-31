@@ -72,13 +72,13 @@ items:
 
 * 保存物品：我们在命令章节介绍了 `/shop saveitem` 命令，之后通过物品格式中的 `material` 选项使用物品 ID 即可。
 * 购买操作：我们在商店章节介绍了 `buy-actions` 功能。在动作章节，我们也提及购买操作支持执行命令，所以只需在这里调用对应插件的给予命令即可。
-* 给予操作：我们在简化流程章节提及了这个内容，与购买操作相似。另外该章节也有相应示例给出。
+* 给予操作：我们在简化流程章节提及了这个内容，与**购买操作**相似。另外该章节也有相应示例给出。
 
 ### 示例：将不支持的物品库插件用作商品
 
 在该示例中，我们首先要通过展示物品选项描述的**物品格式**来表示不兼容插件的物品，这样玩家就可以看到实际物品。
 
-在 `products` 部分，我们使用自定义出售匹配功能，这允许插件自行判断出售的物品是否符合要求，例如包含描述等。接着，我们使用 `give-actions` 格式来执行物品给予命令，这样玩家就可以在购买后收到对应物品。
+在 `products` 部分，我们使用[自定义出售匹配功能](features.custom-item-match-method.md)，这允许插件自行判断出售的物品是否符合要求，例如是否包含指定描述（`contains-lore`）等。接着，我们使用 `give-actions` 格式来执行物品给予命令，这样玩家就可以在购买后收到对应物品。
 
 ``` YAML
     display-item:
@@ -153,14 +153,8 @@ items:
 
 **付费版本**：[点此下载](https://www.spigotmc.org/resources/mythicchanger-premium-match-and-modify-all-your-items-without-trouble-1-14-1-21.115913/)
 
-对于如何配置 `change-item` 部分，请阅读 MythicChanger 的维基，[点此](https://simple.superiormc.cn/)访问。  
+对于如何配置 `change-item` 部分，请阅读 MythicChanger 的维基，[点此](https://mythicchanger.superiormc.cn/)访问。  
 请注意，部分修改规则需要<font color="red">**付费版本的 MythicChanger，而非付费版本的 UltimateShop！**</font>
-
-::: info
-
-若你正在使用**付费版本的 MythicChanger**，它会允许你通过添加 nbt-xxx 规则使用自定义 NBT 标签。你也可以使用 `/mc viewnbt` 命令来浏览手持物品的 NBT 数据。
-
-:::
 
 ``` YAML
 change-item:

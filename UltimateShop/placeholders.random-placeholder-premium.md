@@ -5,7 +5,7 @@
 
 ## 配置
 
-所有随机变量配置都存储在 `random_placeholder` 文件夹下。文件名称就是它的 ID，例如：`rotate.yml` 表示它的 ID 是 `rotate`。示例配置如下：
+所有随机变量配置都存储在 `random_placeholders` 文件夹下。文件名称就是它的 ID，例如：`rotate.yml` 表示它的 ID 是 `rotate`。示例配置如下：
 
 ``` YAML
 reset-mode: TIMED

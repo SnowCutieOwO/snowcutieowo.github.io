@@ -43,16 +43,6 @@ config-files:
     generate-new-one: false
     file: 'zh_cn.json'
 
-# 仅 Paper 系服务端可用.
-paper-api:
-  save-item: true
-  # 对于 Paper 服务端用户, 启用该选项可使本插件直接通过他们的 API 获取头颅, 从而提升性能.
-  skull: true
-  use-component:
-    menu-title: false
-    message: false
-    item: false
-
 sell:
   # 可填入的值: Bukkit 或 ItemFormat.
   # 每一个物品都可通过 match-item 部分来设置自定义出售机制, 更多信息请浏览维基.

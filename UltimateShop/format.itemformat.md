@@ -72,6 +72,45 @@ min-amount: 1
 max-amount: 15
 ```
 
+## 物品属性组件（仅 1.21.5+，需要 Paper 系服务端）<font color="red">- 仅付费版</font>
+
+通过 Paper 的 DataComponent API 而非 Spigot 的 ItemMeta API，达到轻松修改物品的目的。除此之外，所有 1.21.5+ 的物品属性都只会在 `component` 设置部分中生效，如 **weapon**。更多信息[见此](format.itemformat.component-format.md)。
+
+
+``` YAML
+component:
+  name: '<blue>村好剑'
+  lore:
+    - '<gray>这真是太棒了!'
+  custom-model-data:
+    float: # 自定义模型数据类型
+      - '1'
+  max-stack: 6
+  food:
+    can-always-eat: true
+    nutrition: 5
+    saturation: 5
+  tool:
+    damage-per-block: 5
+    mining-speed: 1.3
+    destroy-blocks-in-creative: true
+    rules:
+      # 方块名称, 挖掘速度, 是否掉落
+      - 'stone, 1.4, true'
+  song: otherside
+  hide-tooltip:
+    - 'lore'
+  enchants:
+    mending: 1
+  glow: true
+  attributes:
+    max_health: 
+      name: 'GENERIC_MAX_HEALTH' # 属性 ID
+      amount: 5
+      operation: ADD_NUMBER
+      slot: MAINHAND
+```
+
 ## 自定义名称/显示名称
 
 根据配置文件，这里有两种格式，一种是 1.9 之前使用的旧版颜色，或者稍后版本中使用的文本组件。前者使用我们创建的颜色格式，后者则使用 MiniMessages 格式，更多内容可在[这里](https://docs.advntr.dev/minimessage/format.html)详细阅读。

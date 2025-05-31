@@ -151,7 +151,7 @@ buttons:
 - `buy-more`：该商店中的商品是否能打开增量购买菜单。
 - `shop-name`：商店的显示名称，会被内置变量 `{shop-name}` 使用。
 - `hide-message`：是否隐藏玩家在商店中进行交易后显示的消息。
-- `custom-command`: 该商店的自定义命令设置。<font color="red">**（仅付费版）**</font>
+- `custom-command`: 该商店的自定义开启命令设置。若不设置，则商店只能通过 `/shop menu` 命令打开。<font color="red">**（仅付费版）**</font>
 
 ## 全局配置
 

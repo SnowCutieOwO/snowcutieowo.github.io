@@ -39,12 +39,15 @@
           - ''
           - '&#ff3300已领取过!'
     display-item-conditions:
-      claimed: 
-        1:
+      claimed: # 条件 ID
+        1: # 表示第一个条件
           type: placeholder
           placeholder: '%ultimateshop_streak_A_{buy-times-player}%'
           rule: '>'
           value: '0'
+        2: # 你可以按条件格式添加更多条件
+          type: world
+          world: 'testCondition'
       default:
         1:
           type: placeholder

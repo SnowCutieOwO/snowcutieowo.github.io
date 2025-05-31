@@ -1376,7 +1376,11 @@ export default defineConfig({
             {
               text: '📋 格式', collapsed: true, items: [
                 { text: '🛒 物品格式™ 的信息', link: '/UltimateShop/format.info-of-itemformat' },
-                { text: '📝 物品格式™', link: '/UltimateShop/format.itemformat' },
+                {
+                  text: '📝 物品格式™', link: '/UltimateShop/format.itemformat', collapsed: true, items: [
+                    { text: '物品组件格式', link: '/UltimateShop/format.itemformat.component-format' }
+                  ]
+                },
                 { text: '💹 经济格式™', link: '/UltimateShop/format.economyformat' },
                 { text: '🖼️ 展示物品格式', link: '/UltimateShop/format.display-item-format' },
                 { text: '🎬 动作格式', link: '/UltimateShop/format.action-format' },

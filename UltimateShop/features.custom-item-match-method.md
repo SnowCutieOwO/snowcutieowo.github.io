@@ -57,7 +57,7 @@ sell:
 * 免费版：[点此下载](https://www.spigotmc.org/resources/mythicchanger-match-and-modify-all-your-items-without-trouble-1-14-1-21.98523/)
 * 付费版：[点此下载](https://www.spigotmc.org/resources/mythicchanger-premium-match-and-modify-all-your-items-without-trouble-1-14-1-21.115913/)
 
-对于如何配置 `match-item` 部分的教程，请阅读 MythicChanger 的维基。[点此访问](https://mythicchanger.superiormc.cn/configs/match-item)。需要注意是部分插件的匹配规则需要<font color="red">付费版本的 MythicChanger，而非付费版的 UltimateShop</font>！
+对于如何配置 `match-item` 部分的教程，请阅读 MythicChanger 的维基。[点此访问](https://mythicchanger.superiormc.cn/)。需要注意是部分插件的匹配规则需要<font color="red">付费版本的 MythicChanger，而非付费版的 UltimateShop</font>！
 
 示例物品如下所示。在本示例中，绿宝石和钻石都可以出售，但只有钻石会在商店中显示。在玩家购买该物品后，他只会获得钻石，因为 `match-item` 部分不影响购买。
 
