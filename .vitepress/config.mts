@@ -6,7 +6,6 @@ import mathjax3 from 'markdown-it-mathjax3'
 import { generateBreadcrumbsData } from '@nolebase/vitepress-plugin-breadcrumbs/vitepress'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 import markdownItVideo from "@vrcd-community/markdown-it-video";
-import { tr } from 'element-plus/es/locale/index.mjs'
 
 const customElements = [
   'math',
@@ -175,6 +174,14 @@ export default defineConfig({
     ],
   },
   themeConfig: {
+    notFound: {
+      title: '页面不存在',
+      quote: "找不到你请求的页面！", // set to '' to hide
+      linkLabel: '返回首页', // aria-label
+      linkText: '返回首页',
+      code: '<img src="./public/404-poop.png">'
+    },
+    outline: [2, 3],
     outlineTitle: '目录',
     // 文章翻页
     docFooter: {

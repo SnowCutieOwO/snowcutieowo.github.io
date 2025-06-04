@@ -10,6 +10,7 @@ import { NolebaseBreadcrumbs } from '@nolebase/vitepress-plugin-breadcrumbs/clie
 import { h } from 'vue'
 import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-changelog/client'
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
+import errorLayout from './error.vue'
 
 export default {
   extends: DefaultTheme,
@@ -22,7 +23,11 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // 将面包屑导航组件添加到文档上方
-      'doc-before': () => h(NolebaseBreadcrumbs), 
+      'doc-before': () => h(NolebaseBreadcrumbs),
+      'not-found': () => h(errorLayout), 
+      /* 
+        This part of code is contributed & suggested by Discord@brc_dd in VueLand, thanks!
+      */
     })
   }
 } satisfies Theme
