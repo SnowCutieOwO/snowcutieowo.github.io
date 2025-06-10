@@ -5,7 +5,9 @@ HuskHomes 提供了一系列你可使用的命令。本章节将会为列出所�
 ## 命令与权限表
 
 ::: info 提示
-若你安装了多个命令相似的插件，你可能需要[创建命令别称](features.commands.command-conflicts.md#commandsyml-下的-huskhomes-命令别称)来让 HuskHomes 的命令能被优先执行。
+
+若你安装了多个命令相似的插件，你可能需要[创建命令别称](features.commands.command-conflicts.md#commandsyml-下的-huskhomes-命令别称)使 HuskHomes 能正常执行命令。
+
 :::
 
 ||解释|
@@ -83,9 +85,9 @@ HuskHomes 提供了一系列你可使用的命令。本章节将会为列出所�
 
 ### 注释
 
-† — 若使用了通过权限限制的地标传送，玩家仍需要 `huskhomes.command.warp.(地标名称)` 才可以浏览或传送至地标位置。
+† — 若使用了通过权限限制的地标传送，玩家需要 `huskhomes.command.warp.(地标名称)` 权限才可以浏览或传送至地标位置。
 
-‡ — 需要在 [`config.yml`](setup.config.md) 中将 return_by_death 项启用后才可使用。
+‡ — 需要在 [`config.yml`](setup.config.md) 中将 `return_by_death` 项启用后才可使用。
 
 ### 命令别称
 
@@ -103,7 +105,7 @@ HuskHomes 提供了一系列你可使用的命令。本章节将会为列出所�
 
 ## 禁用命令
 
-若你需要禁用一条命令，可以在配置文件下该部分中 `disabled_commands` 处添加对应的命令，这样做它就不会被注册。
+在配置文件 `disabled_commands` 处添加对应的命令，可以注销并禁用对应的命令。
 
 ### 在 config.yml 中禁用命令
 
@@ -116,7 +118,7 @@ disabled_commands: [ '/rtp' ]
 
 你可以通过权限节点修改玩家能够创建的家最大数量、免费创建的家数量以及开放家传送点的数量。
 
-* `huskhomes.max_homes.<数量>` — 决定了玩家可以设置的家传送点数量上限
+* `huskhomes.max_homes.<数量>` — 决定了玩家的家传送点数量上限
 * `huskhomes.free_homes.<数量>` — 决定了玩家可免费设置的家传送点数量，在此之后设置的所有家传送点都需要付费†
 * `huskhomes.max_public_homes.<数量>` — 决定了玩家可开放的最大家传送点数量
 
@@ -132,11 +134,11 @@ disabled_commands: [ '/rtp' ]
 
 * `huskhomes.teleport_warmup.<时间秒数>` - 决定玩家在传送前需要原地站定多久。
 
-HuskHomes 会在相同权限中取数值设置最大者生效，且忽略 `stack_permission_limits` 的值。
+HuskHomes 会在相同权限中取数值设置最大者生效，忽略 `stack_permission_limits` 的值。
 
 ## 绕过权限节点
 
-这些权限可以让你绕过传送预热、传送冷却和传送收费。
+这些权限可以分别绕过传送预热、传送冷却和传送收费。
 
 |描述|权限节点|默认状态|
 |---|---|---|
