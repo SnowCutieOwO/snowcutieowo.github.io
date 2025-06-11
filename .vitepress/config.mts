@@ -313,6 +313,12 @@ export default defineConfig({
         { text: '通例', link: '/common/index' },
         { text: '支持 Folia 的插件列表', link: '/common/folia-plugins' },
         { text: '翻译插件目录', link: '/common/translation-index' },
+        {
+          text: '🌟 个人向教程', link: '/common/personal-guide', collapsed: true, items: [
+            { text: '安装教程', link: '/common/personal-guides.installtion' },
+            { text: '实用链接', link: '/common/personal-guides.useful-links' }
+          ]
+        }
       ],
       '/AureliumSkills/': [
         { text: '返回首页', link: '/index' },
