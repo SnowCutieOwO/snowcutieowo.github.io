@@ -11,6 +11,7 @@ import { h } from 'vue'
 import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-changelog/client'
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import errorLayout from './error.vue'
+import '../theme/theme.css'
 
 export default {
   extends: DefaultTheme,
