@@ -6,6 +6,8 @@ import mathjax3 from 'markdown-it-mathjax3'
 import { generateBreadcrumbsData } from '@nolebase/vitepress-plugin-breadcrumbs/vitepress'
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 import markdownItVideo from "@vrcd-community/markdown-it-video";
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
+import CodeBlockPlugin from '../.vitepress/plugins/codeblock.mjs';
 
 const customElements = [
   'math',
@@ -135,6 +137,8 @@ export default defineConfig({
         youtube: { width: '100%', height: '387px' },
         bilibili: { width: '100%', height: '387px' }
       });
+      md.use(groupIconMdPlugin);
+      md.use(CodeBlockPlugin);
     },
     math: true
   },
@@ -171,6 +175,7 @@ export default defineConfig({
         repoURL: () => 'https://github.com/SnowCutieOwO/snowcutieowo.github.io',
       }) as any,
       GitChangelogMarkdownSection(),
+      groupIconVitePlugin(),
     ],
   },
   themeConfig: {
