@@ -40,8 +40,8 @@
 
 技能在 `skills.yml` 下编辑。每个技能都在完整命名空间 ID 下有其对应部分的配置（以 `auraskills/` 为开头的都是默认技能）。如下为带有注释的耕作技能示例配置：
 
-``` YAML [skills.auraskills/farming.yml]
-auraskills/farming: # T技能的命名空间 ID
+``` YAML title="skills.auraskills/farming.yml"
+auraskills/farming: # 技能的命名空间 ID
   abilities: # 技能升级获取的能力
     - auraskills/bountiful_harvest
     - auraskills/farmer

@@ -219,20 +219,26 @@ discovered_on:
 
 对应条目会在击杀 MythicMobs 实体时解锁。
 
-:::: info 将 `type` 设置为 **MYTHIC_MOB_KILL**.
+::::: info 将 `type` 设置为 **MYTHIC_MOB_KILL**.
 
 **`value.mob_type:`** MythicMobs 实体的 ID。你可以使用“;”表示多个 ID。
 
-::: code-group
-  
-``` YAML [示例1]
+:::: tabs
+
+::: tab 示例1
+
+``` YAML
 discovered_on:
   type: MYTHIC_MOB_KILL
   value:
     mob_type: forest_corrupter
 ```
 
-``` YAML [示例2]
+:::
+
+::: tab 示例2
+
+``` YAML
 discovered_on:
   type: MYTHIC_MOB_KILL
   value:
@@ -242,6 +248,8 @@ discovered_on:
 :::
 
 ::::
+
+:::::
 
 ### 点击动作
 

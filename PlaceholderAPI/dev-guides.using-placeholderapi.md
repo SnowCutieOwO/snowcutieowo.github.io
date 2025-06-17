@@ -12,7 +12,7 @@
 :::: tabs
 
 ::: tab Maven 
-``` XML [pom.xml]
+``` XML title="pom.xml"
     <repositories>
         <repository>
             <id>placeholderapi</id>
@@ -31,7 +31,7 @@
 :::
 
 ::: tab Gradle
-``` Kotlin [build.gradle]
+``` Kotlin title="build.gradle"
 repositories {
     maven {
         url = 'https://repo.extendedclip.com/releases/'
@@ -67,7 +67,7 @@ dependencies {
 
 ::: tab 可选依赖
 
-``` YAML [plugin.yml]
+``` YAML title="plugin.yml"
 name: ExamplePlugin
 version: 1.0
 author: author
@@ -80,7 +80,7 @@ softdepend: ["PlaceholderAPI"] # 这会将 PlacehodlerAPI 设置为插件的可�
 
 ::: tab 必选依赖
 
-``` YAML [plugin.yml]
+``` YAML title="plugin.yml"
 name: ExamplePlugin
 version: 1.0
 author: author
@@ -101,7 +101,7 @@ depend: ["PlaceholderAPI"] # 这会将 PlacehodlerAPI 设置为插件的必选�
 
 ::: tab 可选依赖
 
-``` YAML [paper-plugin.yml]
+``` YAML title="paper-plugin.yml"
 name: ExamplePlugin
 version: 1.0
 author: author
@@ -118,7 +118,7 @@ server:
 
 ::: tab 必选依赖
 
-``` YAML [paper-plugin.yml]
+``` YAML title="paper-plugin.yml"
 name: ExamplePlugin
 version: 1.0
 author: author
@@ -156,7 +156,7 @@ PlaceholderAPI 提供了自动解析插件内其他插件变量的能力，从�
 
 下文假设 PlaceholderAPI 是软依赖，以便更好应对该插件不存在的情况。
 
-``` Java [JoinExample.java]
+``` Java title="JoinExample.java"
 package at.helpch.placeholderapi;
 
 import me.clip.placeholderapi.PlaceholderAPI;

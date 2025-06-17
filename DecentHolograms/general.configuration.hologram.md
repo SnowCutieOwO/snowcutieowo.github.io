@@ -6,7 +6,7 @@
 
 ## 示例
 
-``` YAML [hologram.yml]
+``` YAML title="hologram.yml"
 location: world:0.500:100.0:0.500
 enabled: true
 display-range: 64
