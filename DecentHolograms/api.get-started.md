@@ -11,7 +11,7 @@
 
 ::: code-group 
 
-``` Kotlin [build.gradle]
+``` Kotlin title="build.gradle"
 repositories {
     maven { 
       id = "jitpack"
@@ -24,7 +24,7 @@ depencencies {
 }
 ```
 
-``` XML [pom.xml]
+``` XML title="pom.xml"
 <repositories>
   <repository>
     <id>jitpack</id>
@@ -48,7 +48,7 @@ depencencies {
 
 ::: code-group
 
-``` Kotlin [build.gradle]
+``` Kotlin title="build.gradle"
 repositories {
   // Other repositories, including jitpack
   maven {
@@ -58,7 +58,7 @@ repositories {
 }
 ```
 
-``` XML [pom.xml]
+``` XML title="pom.xml"
 <repositories>
 <!-- 其他仓库, 包括 jitpack -->
   <repository>
