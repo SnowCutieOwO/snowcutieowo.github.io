@@ -30,7 +30,7 @@ touch config.json
 
 之后，打开新创建的 `config.json` 文件，并加入下文内容：
 
-```JSON
+``` JSON
 {
   "host": "127.0.0.1",
   "port": 8080,

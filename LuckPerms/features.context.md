@@ -65,7 +65,7 @@
 
 例如，如果我们想要添加自己的情境 `"server-type"`，来表示服务器名称（已经由 LuckPerms 提供）之外的服务器类型，只需这样设置：
 
-```JSON
+``` JSON
 {
   "static-contexts": {
     "server-type": "skyblock"
@@ -83,7 +83,7 @@
 
 例如，若要在文件中加入默认情境，找到 static-contexts 部分：
 
-```JSON
+``` JSON
 {
  "default-contexts": {
     "world": "world_nether",

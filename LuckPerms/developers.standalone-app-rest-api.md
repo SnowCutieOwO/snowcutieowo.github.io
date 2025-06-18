@@ -63,7 +63,7 @@ LuckPerms REST API 是一个可以在独立应用（上述提及）中使用的�
 它非常简单：
 
 1. 在 jar 的底层目录创建一个叫 `extension.json` 的文件，并将下文复制进去：
-    ```JSON
+    ``` JSON
     {"class": "com.example.extension.MainClass"}
     ```
     （将其替换为你的主类！）
