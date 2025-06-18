@@ -11,7 +11,7 @@
 GET https://spark.lucko.me/abc123?raw=1
 ```
 你应该会得到一个类似下文的 JSON 结构文本：
-```JSON
+``` JSON
 {
   "metadata": {
     "user": {
@@ -25,10 +25,12 @@ GET https://spark.lucko.me/abc123?raw=1
 ```
 
 你也可以在参数末尾添加诸如 `&path=some.jsonpath.here` 等内容按 [JSON 路径](https://github.com/json-path/JsonPath)进行过滤。
-```HTTP
+
+``` HTTP
 GET https://spark.lucko.me/abc123?raw=1&path=metadata.platform
 ```
-```JSON
+
+``` JSON
 {
   "type": 0,
   "name": "Bukkit",
@@ -49,11 +51,14 @@ spark 所使用的存储服务称作 [bytebin](https://github.com/lucko/bytebin)
 spark 所使用的指定接口为 https://spark-usercontent.lucko.me/
 
 若要收集指定报告中的原数据（如 `https://spark.lucko.me/abc123/`），需要向用户内容端发送一个 GET 的 HTTPS 请求：
-```HTTP
+
+``` HTTP
 GET https://spark-usercontent.lucko.me/abc123
 ```
+
 若成功发送，则你会收到一个类似下文的信息：
-```HTTP
+
+``` HTTP
 HTTP/2 200
 Content-Type: application/x-spark-sampler
 Last-Modified: Tue, 07 Mar 2023 13:16:44 GMT
