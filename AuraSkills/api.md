@@ -14,9 +14,7 @@ API 包含了 `api` 与 `api-bukkit` 子模块。这允许 API 在版本间保�
 
 ### Maven
 
-#### pom.xml
-
-``` XML
+``` XML title="pom.xml"
 <dependency>
     <groupId>dev.aurelium</groupId>
     <artifactId>auraskills-api-bukkit</artifactId>
@@ -29,9 +27,7 @@ API 包含了 `api` 与 `api-bukkit` 子模块。这允许 API 在版本间保�
 
 Groovy DSL：
 
-#### build.gradle
-
-``` Kotlin
+``` Kotlin title="build.gradle"
 repositories {
      mavenCentral()
 }
@@ -43,9 +39,7 @@ dependencies {
 
 Kotlin DSL：
 
-#### build.gradle.kts
-
-``` Kotlin
+``` Kotlin title="build.gradle.kts"
 repositories {
      mavenCentral()
 }
