@@ -89,7 +89,7 @@
 
 ## 示例
 
-```JSON
+``` JSON
 {
   "name": "alert_job_levelup",
   "commands": [
