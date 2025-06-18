@@ -51,7 +51,7 @@ Pack:
 
 通常情况下你将贴图放在文件夹中，打开 json 文件并找到前几行，你应该能看到诸如下文的类似文本：
 
-```JSON
+``` JSON
 {
 	"__comment": "Designed by HighBridRed for Oraxen",
 	"textures": {
