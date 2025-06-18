@@ -841,7 +841,7 @@ LuckPerms 默认只提供一个静态情境，称作“server（服务器）”�
 
 为了实现这个功能，在所有的公会服务器上，你可以添加一个静态情境，名字叫做 `servertype`，并将其设置为 `factions`。
 
-```JSON
+``` JSON
 {
   "static-contexts": {
   	"servertype": "factions"
@@ -855,7 +855,7 @@ LuckPerms 默认只提供一个静态情境，称作“server（服务器）”�
 
 默认情境即为在服务器中执行命令时，各个情境的缺省值。
 
-```JSON
+``` JSON
 {
   "default-contexts": {
   	"server": "survival"
