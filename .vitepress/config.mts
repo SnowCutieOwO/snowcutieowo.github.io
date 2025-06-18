@@ -162,7 +162,6 @@ export default defineConfig({
       noExternal: [
         '@nolebase/vitepress-plugin-breadcrumbs',
         '@nolebase/vitepress-plugin',
-        'element-plus',
         'markdown-it-footnote',
         'markdown-it-mathjax3',
         'markdown-it-checkbox',
