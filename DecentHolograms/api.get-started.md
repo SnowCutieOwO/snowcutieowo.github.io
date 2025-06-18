@@ -77,13 +77,15 @@ repositories {
 DecentHolograms 需要安装在服务器中才可使用它的 API。
 为确保 DecentHolograms 先于你的插件载入，将它在你的 `plugin.yml` 或 `paper-plugin.yml` 文件中添加为软依赖，如下所示：
 
-<el-tabs v-model="first" type="border-card" >
-<el-tab-pane label="plugin.yml" name="first">
-  
-  <el-tabs v-model="first" type="border-card" >
-  <el-tab-pane label="软依赖" name="first">
-    
-  ``` YAML
+:::::: tabs
+
+::::: tab plugin.yml
+
+:::: tabs
+
+::: tab 软依赖
+
+``` YAML title="plugin.yml"
   name: 'MyPlugin'
   author: 'Me'
   version: '1.0.0'
@@ -92,13 +94,13 @@ DecentHolograms 需要安装在服务器中才可使用它的 API。
 
   softdepend:
     - DecentHolograms
-  ```
+```
 
-  </el-tab-pane>
+:::
 
-  <el-tab-pane label="硬依赖" name="second">
-    
-  ``` YAML
+::: tab 硬依赖
+
+``` YAML title="plugin.yml"
   name: 'MyPlugin'
   author: 'Me'
   version: '1.0.0'
@@ -107,19 +109,21 @@ DecentHolograms 需要安装在服务器中才可使用它的 API。
 
   depend:
     - DecentHolograms
-  ```
+```
 
-  </el-tab-pane>
-  </el-tabs>
+:::
 
-</el-tab-pane>
+::::
 
-<el-tab-pane label="paper-plugin.yml" type="border-card" name="second">
+:::::
 
-  <el-tabs v-model="first" type="border-card" >
-  <el-tab-pane label="软依赖" name="first">
-    
-  ``` YAML
+::::: tab paper-plugin.yml
+
+:::: tabs
+
+::: tab 软依赖
+
+``` YAML title="paper-plugin.yml"
   name: 'MyPlugin'
   author: 'Me'
   version: '1.0.0'
@@ -131,13 +135,13 @@ DecentHolograms 需要安装在服务器中才可使用它的 API。
       DecentHolograms:
         load: BEFORE
         required: false # 不存在时默认使用的值
-  ```
+```
 
-  </el-tab-pane>
+:::
 
-  <el-tab-pane label="硬依赖" name="second">
-    
-  ``` YAML
+::: tab 硬依赖
+
+``` YAML title="paper-plugin.yml"
   name: 'MyPlugin'
   author: 'Me'
   version: '1.0.0'
@@ -149,10 +153,12 @@ DecentHolograms 需要安装在服务器中才可使用它的 API。
       DecentHolograms:
         load: BEFORE
         required: true
-  ```
+```
 
-  </el-tab-pane>
-  </el-tabs>
+:::
 
-</el-tab-pane>
-</el-tabs>
+::::
+
+:::::
+
+::::::
