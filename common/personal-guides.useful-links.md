@@ -2,7 +2,7 @@
 
 其实早就该把网盘上的东西移到这里来了，只是因为懒而拖着迟迟没有写。
 
-::: detail Minecraft 相关
+::: details Minecraft 相关
 
 * [Rikonardo 恶意插件扫描](https://scan.rikonardo.com/)
 * [Benchmarks 优化开服参数](https://github.com/brucethemoose/Minecraft-Performance-Flags-Benchmarks)
@@ -11,7 +11,7 @@
 
 :::
 
-::: detail Java 相关
+::: details Java 相关
 
 * [OpenJDK（微软）下载页面](https://learn.microsoft.com/zh-cn/java/openjdk/download)
 * [CFR Java 源代码反编译](http://www.benf.org/other/cfr/)
@@ -19,7 +19,7 @@
 
 :::
 
-::: detail 短网址
+::: details 短网址
 
 * [网址缩短 1](http://suo.im/)
 * [网址缩短 2](https://s.201a.cn/)
@@ -30,13 +30,13 @@
 
 :::
 
-::: detail 二维码
+::: details 二维码
 
 * [草料二维码生成与识别](https://cli.im/)
 
 :::
 
-::: detail 下载工具
+::: details 下载工具
 
 * [在线下载](https://d.serctl.com/?dl_start)
 * [Motrix 下载工具](https://github.com/agalwood/Motrix/releases)
@@ -44,14 +44,14 @@
 
 :::
 
-::: detail 图床工具
+::: details 图床工具
 
 * [ImgURL](https://www.imgurl.org/)
 * [MiaoMC](https://image.miaomc.cn/)
 
 :::
 
-::: detail 剪贴板工具
+::: details 剪贴板工具
 
 * [NoPaste](https://nopaste.boris.sh/)
 * [DPaste](https://dpaste.org/)
@@ -67,7 +67,7 @@
 
 :::
 
-::: detail 网盘/快传网站
+::: details 网盘/快传网站
 
 * [樱花快传](https://send.itzmx.com/)
 * [MuseTransfer](https://musetransfer.com/)

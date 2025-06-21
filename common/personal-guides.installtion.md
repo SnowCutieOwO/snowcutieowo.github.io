@@ -2,7 +2,7 @@
 
 本章节将会指导你安装各种程序。
 
-:::: detail fnm
+:::: details fnm
 
 1. 按下 Win+R，输入 cmd，并回车。
 2. 输入 `winget install Schniz.fnm`，并回车。
@@ -18,7 +18,7 @@
     1. 打开界面，输入 `reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d @^%USERPROFILE^%\autorun.cmd" "2^>NUL /f`
     2. 在 `%USERPROFILE%` 对应目录下创建 `autorun.cmd` 文件，并填入如下内容：
 
-``` bash
+``` bash title="autorun.cmd"
 @echo off
 :: for /F will launch a new instance of cmd so we create a guard to prevent an infnite loop
 if not defined FNM_AUTORUN_GUARD (
@@ -31,14 +31,14 @@ if not defined FNM_AUTORUN_GUARD (
     1. 在系统环境变量中加入 `CMDER_ROOT`，值为你安装 Cmder 的位置，且指向 `/bin` 文件夹。
     2. 在 `config/user_profile.cmd` 文件中，加入这些内容：
 
-``` bash
+``` bash title="config/user_profile.cmd"
 :: %CMDER_ROOT%\config\user_profile.cmd
 call "%CMDER_ROOT%\bin\fnm_init.cmd"
 ```
 
-    3. 在 `bin/` 文件夹中，创建 `fnm_init.cmd` 并添加如下内容：
+3. 在 `bin/` 文件夹中，创建 `fnm_init.cmd` 并添加如下内容：
 
-``` bash
+``` bash title="fnm_init.cmd"
 :: %CMDER_ROOT%\bin\fnm_init.cmd
 @echo off
 FOR /f "tokens=*" %%z IN ('fnm env --use-on-cd') DO CALL %%z
