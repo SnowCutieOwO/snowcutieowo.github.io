@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 import footnote from 'markdown-it-footnote'
-import checkbox from 'markdown-it-checkbox'
+import taskLists from 'markdown-it-task-checkbox'
 import tabsPlugin from '@red-asuka/vitepress-plugin-tabs'
 import mathjax3 from 'markdown-it-mathjax3'
 import { generateBreadcrumbsData } from '@nolebase/vitepress-plugin-breadcrumbs/vitepress'
@@ -8,6 +8,8 @@ import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-p
 import markdownItVideo from "@vrcd-community/markdown-it-video";
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
 import CodeBlockPlugin from '../.vitepress/plugins/codeblock.mjs';
+import { figure } from '@mdit/plugin-figure';
+import { attrs } from "@mdit/plugin-attrs";
 
 const customElements = [
   'math',
@@ -130,7 +132,7 @@ export default defineConfig({
     },
     config: (md) => {
       md.use(footnote);
-      md.use(checkbox);
+      md.use(taskLists);
       md.use(mathjax3);
       tabsPlugin(md);
       md.use(markdownItVideo, {
@@ -139,6 +141,8 @@ export default defineConfig({
       });
       md.use(groupIconMdPlugin);
       md.use(CodeBlockPlugin);
+      md.use(figure);
+      md.use(attrs);
     },
     math: true
   },

@@ -9,13 +9,14 @@ import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-chang
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import errorLayout from './error.vue'
 import '../theme/theme.css'
+import '@theojs/lumen/pic'
 
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
-    app.component('Tab', Tab)
-    app.component('Tabs', Tabs)
-    app.use(NolebaseGitChangelogPlugin) 
+    app.component('Tab', Tab);
+    app.component('Tabs', Tabs);
+    app.use(NolebaseGitChangelogPlugin)
   },
   Layout: () => {
     return h(DefaultTheme.Layout, null, {

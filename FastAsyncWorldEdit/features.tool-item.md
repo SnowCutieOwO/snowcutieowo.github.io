@@ -19,12 +19,7 @@ FAWE 工具物品（包括导航工具）可通过一般的创造选项卡或 `/
 * `worldedit.navigation.jumpto.tool`
 * `worldedit.navigation.thru.tool`
 
-<center>
-
-![image](images/image.png)
-指南针
-
-</center>
+![image](images/image.png "指南针")
 
 ## 魔杖工具物品
 

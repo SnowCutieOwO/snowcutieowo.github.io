@@ -1,10 +1,6 @@
 # 自述
 
-<center>
-
-![image](images/fawe-logo.png)
-
-</center>
+![](images/fawe-logo.png){width="250" height="200"}
 
 ## 关于插件
 
