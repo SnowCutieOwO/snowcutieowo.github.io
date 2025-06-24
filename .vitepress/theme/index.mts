@@ -10,6 +10,7 @@ import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import errorLayout from './error.vue'
 import '../theme/theme.css'
 import '@theojs/lumen/pic'
+import ProgressBar from '../theme/progress_bar.vue'
 
 export default {
   extends: DefaultTheme,
@@ -23,9 +24,10 @@ export default {
       // 将面包屑导航组件添加到文档上方
       'doc-before': () => h(NolebaseBreadcrumbs),
       'not-found': () => h(errorLayout), 
+      'layout-top': () => h(ProgressBar),
       /* 
         This part of code is contributed & suggested by Discord@brc_dd in VueLand, thanks!
       */
     })
-  }
+  },
 } satisfies Theme
