@@ -3,7 +3,7 @@
 
 DecentHolograms 能显示的东西不只是文本，通过特定的格式，你可以在悬浮字中展示悬浮物品、穿戴在（小）盔甲架的头部的物品、甚至是实体。
 
-![img](images/line-types.png)
+![](images/line-types.png)
 
 
 ::: info 

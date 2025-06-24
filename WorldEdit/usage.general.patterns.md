@@ -78,8 +78,8 @@
 //replace #existing #clipboard
 ```
 **使用图 1 的结构将小山的部分方块替换，注意图片中重复的方块。**
-![img](https://worldedit.enginehub.org/en/latest/_images/clipboard.png)     
-![img](https://worldedit.enginehub.org/en/latest/_images/clipboard_replace.png)
+![](https://worldedit.enginehub.org/en/latest/_images/clipboard.png)     
+![](https://worldedit.enginehub.org/en/latest/_images/clipboard_replace.png)
 使用偏移对齐剪贴板的内容：
 ```
 //set #clipboard@[2,0,1]

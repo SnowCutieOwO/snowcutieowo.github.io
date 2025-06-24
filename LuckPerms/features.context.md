@@ -22,7 +22,7 @@
 `lp user Luck permission set minecraft.command.gamemode true server=lobby world=nether`。
 * 在使用网络编辑器时，你可以点击 `Add Context`（添加情境/增设情境），并填入键与值。与命令相同，`key`（键）为情境的类型，而 `value` 则为它的值。示例如下：
 
-![img](images/context-1.gif)
+![](images/context-1.gif)
 
 情境可以被组合使用，称作“情境组” —— 即一组情境的键值对。
 

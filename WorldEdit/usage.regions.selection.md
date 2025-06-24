@@ -21,7 +21,7 @@ WorldEdit 允许你通过选择两点作为一个**长方体**（想想看立体
 
 ::: tip
 你也可以选择其他形状，例如平面多边形、椭球、球体和圆柱等。这些选区的更多信息稍后会在本文提到。
-![img](https://worldedit.enginehub.org/en/latest/_images/cuboid.png)
+![](https://worldedit.enginehub.org/en/latest/_images/cuboid.png)
 这里有几种不同的方式选择这两点，且你可以混合搭配。
 :::
 
@@ -87,7 +87,7 @@ WorldEdit 允许你通过选择两点作为一个**长方体**（想想看立体
 
 ::: info 示例：向上扩大选区    
 例如，如果你输入了命令 `//expand 10 up`，你的选区会如图所示地向上方扩大。
-![img](https://worldedit.enginehub.org/en/latest/_images/expand_up.png)
+![](https://worldedit.enginehub.org/en/latest/_images/expand_up.png)
 :::
 
 ### 减小选区
@@ -101,7 +101,7 @@ WorldEdit 允许你通过选择两点作为一个**长方体**（想想看立体
 
 ::: info 示例：向下缩小   
 哪种方式可以缩小选区？如果你使用了命令 `//contract 10 down`，则选区就会如图所示一般从顶部缩小。
-![img](https://worldedit.enginehub.org/en/latest/_images/contract_down.png)
+![](https://worldedit.enginehub.org/en/latest/_images/contract_down.png)
 :::
 
 ### 全向扩大和缩小

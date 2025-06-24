@@ -1,6 +1,6 @@
 # 插件统计数据
 
-![img](https://bstats.org/signatures/bukkit/Shopkeepers.svg)
+![](https://bstats.org/signatures/bukkit/Shopkeepers.svg)
 
 本插件使用了 [bStats](https://bstats.org/plugin/bukkit/Shopkeepers/) 来收集**匿名**数据，这可以帮助我们知道哪些服务器正在使用插件，哪些 Minecraft 版本更多地使用本插件，以及本插件的哪些功能使用得比较多。
 

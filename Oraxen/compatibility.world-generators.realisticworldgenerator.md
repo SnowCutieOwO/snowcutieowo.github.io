@@ -19,7 +19,7 @@ SpigotMC 链接：https://www.spigotmc.org/resources/realisticworldgenerator.159
 
 首先你需要找到你的自定义方块数据。你可以在任何安装 Oraxen 的服务器上在客户端中找到。只需放置你的方块（你可以通过命令或者 Oraxen 的展示界面获取）然后对着它按下 F3，即可获取你需要的信息。
 
-![img](images/image47.png)
+![](images/image47.png)
 
 现在你就可以将你的新矿物添加至生成配置中。在本示例中，配置如下：
 

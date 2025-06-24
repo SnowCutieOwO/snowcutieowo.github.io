@@ -52,7 +52,7 @@
 之后，输入命令 `lp user <你的名称> permission luckperms.* true`（别担心，这条命令的意思会在之后讲到）
 
 返回的结果应该会像这样：
-![img](images/getting-started-1.png)
+![](images/getting-started-1.png)
 
 这条命令的意思就是，给予你自己 `luckperms.*` 权限（或理解为将该权限的状态在你身上设置为 true）。你会注意到这条权限的末尾有一个 `*` 子服。这表示通配符，表示它会将以“luckperms”开头的**所有**权限都给予玩家。
 
@@ -63,35 +63,35 @@
 你可以使用“creategroup”命令创建一个组。让我们先创建一个叫“admin”的组，然后再为它分配一个权限吧。
 
 首先，输入命令 `lp creategroup admin`。这会创建一个新的空权限组“admin”。
-![img](images/getting-started-2.png)
+![](images/getting-started-2.png)
 
 接下来，我们需要将一个指定的权限加入“admin”组。修改一个组的命令是 `lp group <权限组名称>`。如果你直接输入这条命令，它会显示一串可用的子命令。
-![img](images/getting-started-3.png)
+![](images/getting-started-3.png)
 
 既然我们想添加一个权限，那么我们所需要的子命令就是“permission”。这可以允许你修改这个权限组所持有的权限。再次输入命令 `lp group admin permission` 可以列出这条命令下的子命令。
-![img](images/getting-started-4.png)
+![](images/getting-started-4.png)
 
 之后，我们找到了我们可以使用的更多调命令。首条就是另一个“info”命令。因为它是“permission”的一个子命令，信息查询命令会返回权限组所拥有的权限。接下来的子命令就是“set”。
 
 记住，我们之前用过这条命令来给予玩家“luckperms.*”权限。在这里它也有效。
 
 只需输入命令而不带其它参数便可显示命令教程。例如：
-![img](images/getting-started-5.png)
+![](images/getting-started-5.png)
 
 例如，我想给予我的“admin”组“minecraft.command.ban”权限，我可以直接输入命令 `lp group admin permission set minecraft.command.ban true`。
-![img](images/getting-started-6.png)
+![](images/getting-started-6.png)
 
 该命令会让 `admin` 组拥有 `minecraft.command.ban` 权限。末尾的 true 则是我们此次指定分配权限所设置的状态。你可以将分配权限的状态设置为 `true` 或者 `false`。将一个权限设置为 true 表示对应组或用户拥有该权限，而将其设置为 false 则意思相反（也就是将该权限从他们身上夺去）。
 
 如果之后我不想要让“admin”组拥有这个权限了，我就可以通过取消设置来去除这个权限，输入命令 `lp group admin permission unset minecraft.command.ban` 即可。
-![img](images/getting-started-7.png)
+![](images/getting-started-7.png)
 
 ### 将用户添加至权限组
 
 将用户添加至权限组可通过“parent”命令完成。（我们只需将上一部分所属的“permission”换成“parent”即可）。
 
 例如，若要将我自己加入“admin”组，我可以执行命令 `lp user luck parent add admin`
-![img](images/getting-started-8.png)
+![](images/getting-started-8.png)
 
 这条命令会将玩家 `luck` 加至 `admin` 组中。这意味着任何“admin”组拥有的权限，我“luck”也会继承其拥有状态。
 
@@ -113,7 +113,7 @@
 若要实现，我可以让组之间相互继承。
 
 命令 `lp group admin parent add mod` 将会让“超级管理员”组继承所有“管理员”组的权限。之后我也可以对“管理员”组做出相同的改变，即命令 `lp group mod parent add default`。
-![img](images/getting-started-9.png)
+![](images/getting-started-9.png)
 
 继承是连续的，所以即便“超级管理员”只声明继承了“管理员”组的权限，但因“管理员”组继承了“默认”组的权限，这意味着“超级管理员”组也会因此拥有“默认”组的权限，也就是**同时拥有**“管理员”组和“默认”组的权限。
 
@@ -124,4 +124,4 @@
 解除权限组继承使用的命令与声明继承权限组的命令非常相似。
 
 若要将我自己移出“admin”组，我只需输入命令 `lp user Luck parent remove admin`。
-![img](images/getting-started-10.png)
+![](images/getting-started-10.png)

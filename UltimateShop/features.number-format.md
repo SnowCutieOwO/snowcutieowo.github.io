@@ -23,7 +23,7 @@
         start-apply: 0  
 ```
 
-![img](images/image11.png)
+![](images/image11.png)
 
 * 自 3.3.2 版本开始，你可以在 `config.yml` 中让插件帮你修改 `{amount}` 变量，而非手动修改！
 

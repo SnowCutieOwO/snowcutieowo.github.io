@@ -9,7 +9,7 @@
 
 这里是我在 Photoshop 的 16x16 画布中创建的贴图（看起来风格与原版相近）：
 
-![img](images/image32.png 'Photoshop 截图')
+![](images/image32.png 'Photoshop 截图')
 
 然后，我将文件保存为 *onyx_axe.png*。
 
@@ -82,11 +82,11 @@ onyx_axe:
 
 我通过命令 `/o inv` 将斧头放入背包，这是我得到的：
 
-![img](images/image33.png '我和我的缟玛瑙斧')
+![](images/image33.png '我和我的缟玛瑙斧')
 
 我也能挖开基岩：
 
-![img](images/image34.png '我用我的缟玛瑙斧挖基岩')
+![](images/image34.png '我用我的缟玛瑙斧挖基岩')
 
 ::: info 提示
 如果你能做到这一步，恭喜你，你已经创建了你的第一个物品。👍

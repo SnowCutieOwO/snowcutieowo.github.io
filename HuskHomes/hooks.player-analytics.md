@@ -1,6 +1,6 @@
 # Plan 插件联动
 HuskHomes 支持在[玩家统计](https://playeranalytics.net)（Plan）面板上显示关于玩家设置家传送点与地标的相关信息。
-![img](https://attachment.mcbbs.net/data/myattachment/forum/202307/22/133146k779mk7sstcpt7ss.png)
+![](https://attachment.mcbbs.net/data/myattachment/forum/202307/22/133146k779mk7sstcpt7ss.png)
 
 ![Plan 插件联动](images/plan-hook.png)
 

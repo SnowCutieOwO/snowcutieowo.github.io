@@ -8,7 +8,7 @@
 
 首先，你要先创建一个 png 贴图。例如，在 `default/chat` 文件夹下的 `heart.png` 文件。
 
-![img](images/image43.png 'heart.png')
+![](images/image43.png 'heart.png')
 
 然后你就可以在 glyphs 文件夹下的任何 yaml 文件中添加自己的配置。每个自定义字符的配置文件不应相同。数字则对应 Unicode 字符表中会使用的字符位置。height 参数允许你修改字符的比例，而 ascent 决定了字符显示的纵向偏移程度。
 
@@ -25,7 +25,7 @@ heart:
 
 请检查控制台是否出现了报错，因为它会告诉你究竟是哪个自定义字符配置出错，并且告诉你它为何会出错。
 
-![img](images/image44.png)
+![](images/image44.png)
 
 ## 多位图自定义字符
 
@@ -51,7 +51,7 @@ bitmaps:
     height: 8
 ```
 
-![img](images/image45.png)
+![](images/image45.png)
 
 如你所见，这个图片有四行九列。
 

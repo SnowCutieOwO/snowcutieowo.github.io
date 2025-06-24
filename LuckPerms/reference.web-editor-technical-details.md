@@ -59,7 +59,7 @@ LuckPerms 的网页编辑器是运行在浏览器中的特殊应用，允许服�
 
 服务器会返回一个 `hello-reply` 消息来告知编辑器下一步操作。
 
-![img](images/webeditor-technical-1.png)
+![](images/webeditor-technical-1.png)
 
 在连接建立后，服务器只会接收以编辑器密钥签名的信息。
 
@@ -72,7 +72,7 @@ LuckPerms 的网页编辑器是运行在浏览器中的特殊应用，允许服�
 * 保持 WebSocket 频道活跃。一些中间 Web 代理会强制要求 keepalive，若消息一段时间内没有发送，则 socket 连接会被视作超时。
 * 使得网页编辑器能够知晓服务器是否仍在监听，这样就可以使用 socket 来发送更新。
 
-![img](images/webeditor-technical-2.png)
+![](images/webeditor-technical-2.png)
 
 服务器也会使用 `pong` 消息来告知它已从 socket 断开连接。这样做的原因如下：
 
@@ -89,4 +89,4 @@ LuckPerms 的网页编辑器是运行在浏览器中的特殊应用，允许服�
 
 服务器会应用改动，然后上传 bytebin 中的刷新状态，并通过 socket 将负载 ID 传回。
 
-![img](images/webeditor-technical-3.png)
+![](images/webeditor-technical-3.png)

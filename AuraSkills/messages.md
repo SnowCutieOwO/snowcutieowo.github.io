@@ -29,7 +29,7 @@
 
 如果你的语言尚无译文，或你的语言中有错译的情况，你可以在 [Crowdin](https://crowdin.com/project/aureliumskills) 上进行检查。你可以直接逐个翻译消息，也可以直接上传译毕的消息文件。如果你的语言没有出现于此，你可以在 [Discord](https://discord.gg/Bh2EZfB) 上询问并要求添加。
 
-![img](images/image.png)
+![](images/image.png)
 
 若要上传消息文件，点击“上传翻译”。若要下载消息文件，请点击“下载”。
 

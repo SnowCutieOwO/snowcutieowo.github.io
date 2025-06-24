@@ -68,9 +68,9 @@
 * `-b` 会将选区内的生物群系一并堆叠复制（可能需要重进游戏才能见到变动）。
 
 ::: info 一些堆叠复制命令的用法  
-![img](https://worldedit.enginehub.org/en/latest/_images/stack_bridge.jpg)    
+![](https://worldedit.enginehub.org/en/latest/_images/stack_bridge.jpg)    
 通过 `//stack` 命令延长的桥    
-![img](https://worldedit.enginehub.org/en/latest/_images/stack_tunnel.jpg)    
+![](https://worldedit.enginehub.org/en/latest/_images/stack_tunnel.jpg)    
 快速地在一座山中挖掘隧道。请在这么做之前确保你已经选中了天花板和地板上的方块。
 :::
 
@@ -115,7 +115,7 @@
 ## 自然化
 
 命令 `//naturalize` 会让地形通过覆盖泥土与草方块自然化。
-![img](https://worldedit.enginehub.org/en/latest/_images/naturalize.jpg)
+![](https://worldedit.enginehub.org/en/latest/_images/naturalize.jpg)
 这会让地面看起来更加自然。
 
 ## 生成植被

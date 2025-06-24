@@ -22,13 +22,13 @@ HuskSync 将会为每个玩家保存 16 份最近的数据快照（包括当前�
 
 若要浏览玩家的数据快照，在游戏内使用命令 `/userdata list [玩家名称]`。玩家最近保存的快照将会从数据库中读取，并按照从新到旧的顺序排列。在快照上点击可浏览详细信息。
 
-![img](images/data-snapshot-list.png)
+![](images/data-snapshot-list.png)
 
 被星标标注的快照表示它已被标记。鼠标移动到其上可显示详细信息。
 
 你可以点击列表中的内容，浏览其中的每个快照。相似地，若要浏览一个用户最近的数据，请使用 `/userdata view [玩家名称]`。
 
-![img](images/data-snapshot-viewer.png)
+![](images/data-snapshot-viewer.png)
 
 ## 管理玩家数据
 

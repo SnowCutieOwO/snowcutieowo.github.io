@@ -12,7 +12,7 @@
 
 若要达到这个数字，每个 tick 处理的耗时不能超过 50 毫秒。
 
-![img](images/ticks-lagging-breakdown.png '一个服务器刻循环的示意图。')
+![](images/ticks-lagging-breakdown.png '一个服务器刻循环的示意图。')
 
 
 这个例子中，一些 tick 计算的耗时超过了 50 毫秒，这导致一秒内只有 16 个 tick 参与计算。如果这种情况一直存在，spark 就会认为服务器的 **TPS** 是 **16**。
@@ -23,7 +23,7 @@
 
 不卡的情况下，MSPT 一般**小于 50** 毫秒/刻。
 
-![img](images/ticks-lagging-breakdown.png '一个服务器刻循环的示意图。')
+![](images/ticks-lagging-breakdown.png '一个服务器刻循环的示意图。')
 
 
 使用与上文相同的例子，你可以看到每个 tick 的耗时略有差异。
@@ -36,6 +36,6 @@ spark 也会使用这个数字计算其他内容：中值和 95% 分位数。
 
 这就是 `/spark tps` 命令中显示的一堆数字的真正含义。😎
 
-![img](images/tps-and-mspt.png)
+![](images/tps-and-mspt.png)
 
 spark 会自动将这些数值按服务器的健康情况标为*绿*、*黄*或*红*色。

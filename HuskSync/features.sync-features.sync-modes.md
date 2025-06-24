@@ -2,7 +2,7 @@
 
 HuskSync 提供了两种分别使用 Redis 和 MySQL 的数据同步模式使得玩家可以跨服读取数据（见下）。这些同步模式会改变数据在服务器间的同步方法，可以在 `config.yml` 下修改。
 
-![img](images/system-diagram.png)
+![](images/system-diagram.png)
 
 ## 可用模式
 

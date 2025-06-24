@@ -34,7 +34,7 @@ elements:
 
 本示例使用的多个选项都在“[商店](shops.shops.md)”章节中提及。如果你对其中的选项功能有疑问，可以前往这个章节了解。
 
-![img](images/image4.png)
+![](images/image4.png)
 
 ``` YAML
 settings:

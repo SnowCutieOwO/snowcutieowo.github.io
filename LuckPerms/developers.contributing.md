@@ -28,7 +28,7 @@ LuckPerms 有着许多抽象概念，用于化解重复代码并将其与逻辑�
 
 下文为解释了该抽象概念的图表。
 
-![img](images/contributing-1.png)
+![](images/contributing-1.png)
 
 在这里我以 Bukkit 为例子，其他平台的类大致相似。
 

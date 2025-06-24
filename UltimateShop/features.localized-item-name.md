@@ -151,7 +151,7 @@ config-files:
 * 例如我在这里输入了 `zh_cn.json`。启动服务器后，插件就会开始下载文件。
 * 若下载成功，插件就会显示本地化物品名称，如下所示：
 
-![img](images/image9.png)
+![](images/image9.png)
 
 ## 问题
 

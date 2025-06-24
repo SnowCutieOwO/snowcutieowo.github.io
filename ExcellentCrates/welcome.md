@@ -1,6 +1,6 @@
 # 关于
 
-![img](images/header.png)
+![](images/header.png)
 
 **ExcellentCrates** 是一款轻量、强大、功能丰富且高自定义的抽奖箱插件。
 

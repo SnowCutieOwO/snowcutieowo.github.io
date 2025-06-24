@@ -79,7 +79,7 @@ ajLeaderboards 通过以玩家身份判断变量（如 `%vault_eco_balance` 获�
 
 悬浮字实际效果如下：
 
-![img](images/hologram_example.png)
+![](images/hologram_example.png)
 
 如果悬浮字不显示（只显示原来带百分号的一串字），请确保你的悬浮字插件支持 PlaceholderAPI 变量。如果不支持，我还是推荐你使用 [DecentHolograms](https://www.spigotmc.org/resources/decent-holograms-1-8-1-19-papi-support-no-dependencies.96927/)。
 

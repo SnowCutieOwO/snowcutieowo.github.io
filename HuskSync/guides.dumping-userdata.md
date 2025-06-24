@@ -10,7 +10,7 @@
 2. 使用命令 `/userdata list <玩家名称>` 命令来浏览用户数据条目列表。
 3. 点击选定用户的指定用户数据条目。此时会出现数据快照预览界面，下方会出现会两个新的按钮。
 
-![img](images/data-dumping.png)
+![](images/data-dumping.png)
 
 ## 输出至文件
 

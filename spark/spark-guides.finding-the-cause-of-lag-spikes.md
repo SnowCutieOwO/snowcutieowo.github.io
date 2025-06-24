@@ -27,7 +27,7 @@
 
 你可以指定设定值为耗时而不是百分比，例如命令 `/spark tickmonitor --threshold-tick 50` 会报告任何耗时超过 50 毫秒的滴答（这个值是服务器开始卡顿的临界时间）。
 
-![img](images/finding-lag-tickmonitor.png '一张图片，显示了滴答监视器的开启和关闭，以及结果显示。')
+![](images/finding-lag-tickmonitor.png '一张图片，显示了滴答监视器的开启和关闭，以及结果显示。')
 
 这之后，你只需要等待。若你正经历的卡顿能在游戏里感受到，那么尝试在监视器的输出与游戏实际体验相结合，找到问题所在。
 
@@ -35,7 +35,7 @@
 
 为了在这里解释，我在这里应用 WorldEdit“制造”了一次卡顿。:)
 
-![img](images/finding-lag-tickmonitor-demo.png '一张图片，显示了滴答监控器检测到的卡顿。')
+![](images/finding-lag-tickmonitor-demo.png '一张图片，显示了滴答监控器检测到的卡顿。')
 
 如你所见，WorldEdit 在本次操作中的滴答耗时甚至超过了 1000%！
 
@@ -55,4 +55,4 @@
 
 例如...
 
-![img](images/finding-lag-example-viewer.png '一张图片，显示了 WorldEdit 为本次造成卡顿的根源。')
+![](images/finding-lag-example-viewer.png '一张图片，显示了 WorldEdit 为本次造成卡顿的根源。')

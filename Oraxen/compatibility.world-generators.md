@@ -8,8 +8,8 @@ Oraxen 不原生支持矿物生成，但是你可以搭配其他的世界生成�
 
 ### 对基于音符盒（note_block）的方块（默认）
 
-![img](images/image46.png '基于音符盒的自定义方块')
+![](images/image46.png '基于音符盒的自定义方块')
 
 ### 对基于蘑菇块（mushroom）的方块
 
-![img](images/image47.png '基于蘑菇块的自定义方块')
+![](images/image47.png '基于蘑菇块的自定义方块')

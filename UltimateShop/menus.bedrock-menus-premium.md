@@ -15,7 +15,7 @@
 * 所有基岩版玩家都会使用全新的界面。如果没有，你可以尝试将 `config.y,ml` 中的 `menu.bedrock.check-method` 选项从 **FLOODGATE** 切换为 **UUID**。
 * 基岩版界面会自动生成，无需任何手动配置。
 
-![img](images/image.png)
+![](images/image.png)
 
 ## 基岩版按钮的额外设置
 
@@ -98,7 +98,7 @@
 
 示例：
 
-![img](images/image2.png)
+![](images/image2.png)
 
 在物品配置中（菜单配置与其相似）：
 
@@ -139,4 +139,4 @@ open-actions:
       only-sell: '&6卖价: {sell-price}'
 ```
 
-![img](images/image3.png)
+![](images/image3.png)

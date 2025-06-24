@@ -1,4 +1,4 @@
-# ![img](images/banner.png)
+# ![](images/banner.png)
 欢迎！此为 HuskSync 3.x+ 的插件文档。你可以在下文的目录中随意翻阅你想要的内容。
 
 ## 安装

@@ -101,7 +101,7 @@ $\frac { 购买基础价 - 出售基础价 }  { 购买最高价 - 出售最低�
 
 需要注意的是：<font color="red">不同的计算公式需要设置不同的 `max-amount` 和 `min-amount`。最安全的方法就是将交易价格修改为相同值。</font>
 
-![img](images/image5.png)
+![](images/image5.png)
 
 另一个普通的动态定价公式即为基于百分比修改价格，如：`100 * (1.5 ^ ({buy-times-server}-{sell-times-server}))`。在本示例中：
 

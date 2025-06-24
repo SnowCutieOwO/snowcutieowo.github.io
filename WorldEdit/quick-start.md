@@ -39,7 +39,7 @@
 ## 创建选区
 
 长方体，是一个立体的矩形选区，你可以通过确定这个长方体对角线上的顶点来创建具体的选区。
-![img](https://worldedit.enginehub.org/en/latest/_images/cuboid.png)
+![](https://worldedit.enginehub.org/en/latest/_images/cuboid.png)
 你要如何选择这两点呢？你可以：
 
 * 手持木斧，使用鼠标的左和右键点击方块来选择两点（可使用命令 `//wand` 来获取一把木斧）；

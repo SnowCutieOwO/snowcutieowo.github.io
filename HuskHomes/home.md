@@ -1,4 +1,4 @@
-# ![img](images/banner.png)
+# ![](images/banner.png)
 
 欢迎来到 HuskHomes v4.x+ 的插件文档，这是一个强大而直观的插件，包含了由作者 William278 开发的家、地标以及传送管理系统。
 请在下文的章节上点击来浏览相关的内容。

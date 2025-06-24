@@ -84,4 +84,4 @@ forest_corrupter:
         mob_type: forest_corrupter
 ```
 
-![img](images/image7.png)
+![](images/image7.png)

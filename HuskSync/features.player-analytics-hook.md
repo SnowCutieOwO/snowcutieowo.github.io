@@ -1,7 +1,7 @@
 # Plan 插件联动
 HuskSync 支持在玩家的[统计界面](https://github.com/plan-player-analytics/Plan)（Plan）显示信息。
 
-![img](images/plan-hook.png)
+![](images/plan-hook.png)
 
 ## 需求
 

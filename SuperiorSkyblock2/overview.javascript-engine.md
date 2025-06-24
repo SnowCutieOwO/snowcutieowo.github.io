@@ -22,7 +22,7 @@
 
 首先，下载你所需要的脚本引擎。你可以在 [Jenkins 页面](https://hub.bg-software.com/job/SuperiorSkyblock%20Addons/)上找到所有脚本引擎的构建。
 
-![img](images/image.png)
+![](images/image.png)
 
 ## 第二步：将引擎放入模块文件夹
 

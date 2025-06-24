@@ -42,4 +42,4 @@
 
 ## 展示
 
-![img](images/image6.png)
+![](images/image6.png)

@@ -25,4 +25,4 @@ log-transaction:
 
 ## 示例图片
 
-![img](images/image10.png)
+![](images/image10.png)

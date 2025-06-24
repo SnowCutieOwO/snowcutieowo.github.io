@@ -55,8 +55,8 @@
 
 网页浏览器显示的内容与游戏内基本相同，但在处理大量检查时分析起来更简单。
 
-![img](images/verbose-1.png)
+![](images/verbose-1.png)
 
 你可以直接在条目上点击来查询检查的更多信息：
 
-![img](images/verbose-2.png)
+![](images/verbose-2.png)

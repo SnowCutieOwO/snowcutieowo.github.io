@@ -28,7 +28,7 @@ WorldEdit 有一个强大的剪贴板，允许你复制或者粘贴一块区域�
 
 当你将结构复制进你的剪贴板之后，你就可以把它们粘贴在世界中。命令的最后一个参数是可选的：如果你想要把剪贴板的结构粘贴在复制时的位置，只需输入命令 `//paste -o`，否则就会按照你的相对位置粘贴。
 **需要注意的是如果你使用了相对位置粘贴，粘贴时你的位置就是执行复制命令时的位置。**例如，如果你在复制的时候位于你的城堡上空，那么粘贴时，城堡将会在你的脚下。
-![img](https://worldedit.enginehub.org/en/latest/_images/copypasta.png)    
+![](https://worldedit.enginehub.org/en/latest/_images/copypasta.png)    
 显示相对位置对剪贴板的粘贴功能的影响。
 
 与复制/剪切命令相同，粘贴命令也有相同的三个参数：
@@ -50,7 +50,7 @@ WorldEdit 有一个强大的剪贴板，允许你复制或者粘贴一块区域�
 
 需要注意的是旋转命令也可以在 X 轴和 Z 轴之间以一定的角度旋转，尽管你必须将不旋转的那个轴的角度设置为 0 度，例如，只将一个结构在 X 轴上旋转，可以输入命令 `//rotate 0 90`，而只在 Z 轴上旋转，则可以输入命令 `//rotate 0 90`。在这两个方向上的旋转可以让你将原本的建筑水平或垂直翻转，反之亦然。
 
-![img](https://worldedit.enginehub.org/en/latest/_images/rotate.png '根据你的相对位置旋转建筑')    
+![](https://worldedit.enginehub.org/en/latest/_images/rotate.png '根据你的相对位置旋转建筑')    
 
 ## 翻转
 
@@ -62,7 +62,7 @@ WorldEdit 有一个强大的剪贴板，允许你复制或者粘贴一块区域�
 |`east` 或 `west`|YZ 轴交叉的平面|
 |`` 或 ``|XZ 轴交叉的平面|
 
-![img](https://worldedit.enginehub.org/en/latest/_images/flip.png '通过指定的平面翻转剪贴板')    
+![](https://worldedit.enginehub.org/en/latest/_images/flip.png '通过指定的平面翻转剪贴板')    
 
 ## 载入与保存
 

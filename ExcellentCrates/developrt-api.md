@@ -2,12 +2,7 @@
 
 你可以通过 Maven 将 **ExcellentCrates** 导入你的项目。请将 `{版本}` 替换为下方显示的最新版本：
 
-<center>
-
-![img](https://repo.nightexpressdev.com/api/badge/latest/releases/su/nightexpress/excellentcrates/ExcellentCrates?color=40c14a&name=ExcellentCrates&prefix=v)
-
-</center>
-
+![](https://repo.nightexpressdev.com/api/badge/latest/releases/su/nightexpress/excellentcrates/ExcellentCrates?color=40c14a&name=ExcellentCrates&prefix=v)
 
 ``` XML
 <repository>

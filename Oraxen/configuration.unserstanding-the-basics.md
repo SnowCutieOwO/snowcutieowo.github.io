@@ -17,7 +17,7 @@
 
 ## Oraxen 文件夹的结构
 
-![img](images/image29.png 'Oraxen 文件夹的结构图例')
+![](images/image29.png 'Oraxen 文件夹的结构图例')
 
 ### 全局配置
 

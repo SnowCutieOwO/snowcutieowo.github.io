@@ -18,7 +18,7 @@ docker run -it --rm ghcr.io/luckperms/luckperms
 ```
 
 这将会启动一个命令行界面，就像你将它放在服务器中运行一样。
-![img](images/standalone-1.png)
+![](images/standalone-1.png)
 
 你可以使用[环境变量](configuration.md)来配置你的数据库地址/用户名/密码。
 

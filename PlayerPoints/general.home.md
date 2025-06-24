@@ -1,4 +1,4 @@
-![img](https://camo.githubusercontent.com/e993ac7c5c25abe0a515230e237f1d8fedfaa8b8c2cfa5fc4f0075ffd47ff4c2/68747470733a2f2f696d6775722e636f6d2f5446547a4475642e706e67)
+![](https://camo.githubusercontent.com/e993ac7c5c25abe0a515230e237f1d8fedfaa8b8c2cfa5fc4f0075ffd47ff4c2/68747470733a2f2f696d6775722e636f6d2f5446547a4475642e706e67)
 # 什么是 PlayerPoints？
 PlayerPoints 是一个简洁高效的经济插件，允许管理玩家用作货币的点数。它可以用于所有支持 PlayerPoints 的插件，或通过 Vault 与本插件进行交互。
 

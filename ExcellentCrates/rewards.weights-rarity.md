@@ -28,7 +28,7 @@ ExcellentCrates 使用了权重系统决定宝箱奖励的可能性（即随机�
 
 看看如下的表格：
 
-![img](images/weights.png)
+![](images/weights.png)
 
 这张图代表了宝箱奖励。这里有**三种不同稀有度**的 **9 个奖励物品**。
 
@@ -76,7 +76,7 @@ ExcellentCrates 使用了权重系统决定宝箱奖励的可能性（即随机�
 
 如果上述示例还是难以理解，那么我们再将它简化一下！
 
-![img](images/weights_ez.png)
+![](images/weights_ez.png)
 
 这个表格代表着宝箱奖励，这里有**一个稀有度**下的**九个奖励**。
 

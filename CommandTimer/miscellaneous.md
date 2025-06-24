@@ -4,7 +4,7 @@
 
 除正常的统计信息外，本插件还注册了载入定时任务和每秒服务器上执行任务的次数。本插件不会读取或保存存储在配置文件中的任何个人数据。
 
-![img](https://bstats.org/signatures/bukkit/commandtimer.svg)
+![](https://bstats.org/signatures/bukkit/commandtimer.svg)
 
 统计信息的详细内容可在[这里](https://bstats.org/plugin/bukkit/CommandTimer/9657)浏览
 

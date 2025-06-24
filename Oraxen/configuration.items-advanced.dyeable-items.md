@@ -18,7 +18,7 @@ Oraxen 允许你创建基于药水（`POTION`）和皮革马铠（`LEATHER_HORSE
 
 ### 然后在该模式下选中所有需要被染色的材质面即可！
 
-![img](images/image35.png)
+![](images/image35.png)
 
 ``` YAML
 

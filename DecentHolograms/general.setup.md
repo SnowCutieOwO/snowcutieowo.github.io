@@ -38,14 +38,14 @@ DecentHolograms 是一个面向管理员用户开放的插件，它将管理插�
 
 > /dh create example
 
-![img](images/hologram-create.png)
+![](images/hologram-create.png)
 
 ### 编辑悬浮字行
 
 > /dh line set example 1 1 &3&lDECENT HOLOGRAMS    
 > /dh line add example 1 &fHologram plugin
 
-![img](images/hologram-edit.png)
+![](images/hologram-edit.png)
 
 ### 添加悬浮字页
 你可以根据你的需要添加任意数量的悬浮字页。
@@ -53,7 +53,7 @@ DecentHolograms 是一个面向管理员用户开放的插件，它将管理插�
 > /dh page add example    
 > /dh page switch example 2
 
-![img](images/hologram-page.png)
+![](images/hologram-page.png)
 
 ### 设置执行操作
 

@@ -23,21 +23,21 @@
 
 需要注意的是，虽然在第一步中提到 Sponge 可以使用“插件”，但它们与 bukkit 插件不相同。Sponge 版与 Bukkit 版 LuckPerms 的 jar 文件不同，因为这两个插件加载平台互不兼容。请确保你安装了正确的版本！
 
-![img](images/installation-1.png)  
+![](images/installation-1.png)  
 在你进入 plugins 或 mods 文件夹后，点击“上传”按钮，等待界面出现后选择你在第一步下载的 LuckPerms jar 文件。最后点击“上传”。
 
-![img](images/installation-2.png)  
+![](images/installation-2.png)  
 若你先前已经安装了旧版本的 LuckPerms，请先删除旧版本的 jar 文件。
 
 ## 第三步：完全重启你的服务器
 
 返回你的服务器控制台并通过点击“重启”按钮或输入 `stop` 等方式重新启动服务器。
 
-![img](images/installation-3.png) 
+![](images/installation-3.png) 
 
 在服务器开始备份的时候，LuckPerms 会启用并创建默认的配置文件。你可以通过检查控制台来确保 LuckPerms 正常启用。
 
-![img](images/installation-4.png)
+![](images/installation-4.png)
 
 现在，LuckPerms 已被安装并在你的服务器上启用了！你可以接着阅读本维基的“用法”部分来获悉下一步该做的事！
 
@@ -47,7 +47,7 @@
 
 返回“文件管理器”，打开 `plugins` 文件夹（对于 Bukkit 和 Nukkit 等服务端而言）或 `config` 文件夹（对于 Sponge、Fabric 或 Forge 服务端而言）。之后，打开其中的 `LuckPerms` 文件夹。
 
-![img](images/installation-5.png)    
+![](images/installation-5.png)    
 在这里你会找到一些文件。其中比较重要的是：
 * `config.yml` - 此为 Bukkit、Spigot、Nukkit 服务端的配置文件
 * `luckperms.conf` - 此为 Fabric 和 Sponge 服务端的配置文件
@@ -64,22 +64,22 @@
 
 大多数服务器托管商都会免费提供这些！[^1]找到“数据库”菜单，再点击“创建数据库”。若弹出输入窗口，只需选择“MySQL”为数据库类型并输入名称即可。
 
-![img](images/installation-6.png)
+![](images/installation-6.png)
 
 创建数据库后，弹出的窗口会显示数据库域名、名称、用户名及密码。
 
-![img](images/installation-7.png)
+![](images/installation-7.png)
 
 获取这些内容后，记住这些内容（或复制你的表格）并返回文件管理器 LuckPerms 的 `config.yml`/`luckperms.conf` 下并将其打开。
 
 下拉至“存储设定（Storage Settings）” 并将 `storage-method` 设置为 `mysql`，然后再在 `data:` 下将刚才设置的内容填入此处。
 
-![img](images/installation-8.png)    
+![](images/installation-8.png)    
 点击保存之后，重启你的服务器。
 
 你可以观察控制台日志来确认 MySQL 数据库是否正确安装。若你在（载入数据提供者... [MYSQL]）`Loading storage provider... [MYSQL]` 之后没有看见报错信息，说明你已经正确搭建了 MySQL 数据库！
 
-![img](images/installation-9.png)    
+![](images/installation-9.png)    
 记住，群组服下的每一个子服都需要如此配置连接至同一个数据库（但无需重复安装 MySQL）。
 
 ## 常见问题

@@ -4,7 +4,7 @@ HuskSync API（v3）提供了更新和返回[快照数据](developers.api-v3.dat
 
 ## 兼容性
 
-[![img](https://repo.william278.net/api/badge/latest/releases/net/william278/husksync/husksync-common?color=00fb9a&name=Maven&prefix=v)](https://repo.william278.net/#/releases/net/william278/husksync/)
+[![](https://repo.william278.net/api/badge/latest/releases/net/william278/husksync/husksync-common?color=00fb9a&name=Maven&prefix=v)](https://repo.william278.net/#/releases/net/william278/husksync/)
 
 HuskSync API 的版本与插件发行版相同。请注意大版本更新和紧急修复可能会导致 API 产生变动，但绝不会毫无提醒。
 
@@ -57,7 +57,7 @@ HuskSync API 仅对下列平台开放使用：
 </repositories>
 ```
 
-将依赖按下列各式导入 `pom.xml`。请将 `VERSION` 替换为 HuskSync 的最新版本（去掉左侧的“v”）：![img](https://img.shields.io/github/v/tag/WiIIiam278/HuskSync?color=%23ffffff&label=%20&style=flat-square)
+将依赖按下列各式导入 `pom.xml`。请将 `VERSION` 替换为 HuskSync 的最新版本（去掉左侧的“v”）：![](https://img.shields.io/github/v/tag/WiIIiam278/HuskSync?color=%23ffffff&label=%20&style=flat-square)
 
 ### 1.2 通过 Gradle 安装
 
@@ -73,7 +73,7 @@ allprojects {
 }
 ```
 
-按如下格式导入依赖。将 `VERSION` 替换为 HuskSync 的最新版本号（去掉左侧的“v”）：![img](https://img.shields.io/github/v/tag/WiIIiam278/HuskSync?color=%23ffffff&label=%20&style=flat-square)
+按如下格式导入依赖。将 `VERSION` 替换为 HuskSync 的最新版本号（去掉左侧的“v”）：![](https://img.shields.io/github/v/tag/WiIIiam278/HuskSync?color=%23ffffff&label=%20&style=flat-square)
 
 ```Kotlin
 dependencies {

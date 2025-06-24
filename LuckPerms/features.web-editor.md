@@ -31,11 +31,11 @@ LuckPerms 的一大特色就是网页编辑器，允许你通过简单易懂的�
 
 在绘画就绪后，你会收到一条链接。
 
-![img](images/webeditor-1.png)
+![](images/webeditor-1.png)
 
 若要继续，点击连接，并点击“是”。
 
-![img](images/webeditor-2.png)
+![](images/webeditor-2.png)
 
 这时，你设置的默认浏览器就会打开你刚刚创建的编辑会话界面。
 
@@ -55,19 +55,19 @@ LuckPerms 的一大特色就是网页编辑器，允许你通过简单易懂的�
 
 你可以一次添加多个权限！只需将它们复制进输入框里，剩下的操作与添加单个权限无异。
 
-![img](images/webeditor-3.gif)
+![](images/webeditor-3.gif)
 
 ### 编辑现存数据
 
 若要编辑表格中的任意值，只需点击对应内容即可。
 
-![img](images/webeditor-4.gif)
+![](images/webeditor-4.gif)
 
 ### 数据排序
 
 若要修改排序设置，在列标题上点击即可按对应条目进行排序。
 
-![img](images/webeditor-5.gif)
+![](images/webeditor-5.gif)
 
 ### LuckPerms 节点
 
@@ -88,8 +88,8 @@ LuckPerms 的一大特色就是网页编辑器，允许你通过简单易懂的�
 
 点击右上角的“保存”按钮，或使用快捷键 `CTRL+S`，编辑器会生成一条命令，这条命令需要你复制到服务器内或控制台执行来应用更改。直接点击命令可将其复制到剪贴板。
 
-![img](images/webeditor-6.gif)
+![](images/webeditor-6.gif)
 
 在输入命令后，聊天栏会显示本次改动内容的概括。
 
-![img](images/webeditor-7.png)
+![](images/webeditor-7.png)

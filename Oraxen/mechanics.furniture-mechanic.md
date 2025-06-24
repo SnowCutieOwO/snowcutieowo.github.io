@@ -4,7 +4,7 @@
 
 ## 家具机制
 
-![img](images/image48.png '示例家具')
+![](images/image48.png '示例家具')
 
 ### 单物品示例配置
 

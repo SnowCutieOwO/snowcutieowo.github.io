@@ -6289,4 +6289,4 @@ OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOxxxxxxxx
 %xlt_{成就 ID}_type%
 ```
 
-[^1]: 格子序号见下图。![img](images/inventory-slots.png)
+[^1]: 格子序号见下图。![](images/inventory-slots.png)
