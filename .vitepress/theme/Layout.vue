@@ -1,24 +1,21 @@
-<!-- .vitepress/theme/progress_bar.vue -->
-
-<!-- 
-
-Special thanks to Discord@brc_dd
-
-He's really a helpful contributor..!
-
--->
+<!-- .vitepress/theme/Layout.vue -->
 
 <script setup lang="ts">
 import { BProgress } from '@bprogress/core'
+import { NolebaseBreadcrumbs } from '@nolebase/vitepress-plugin-breadcrumbs/client'
 import { useRouter } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import NotFound from './error.vue'
 
 import '@bprogress/core/css'
+
+const { Layout } = DefaultTheme
 
 const router = useRouter()
 
 BProgress.configure({
-  showSpinner: false
+  showSpinner: false,
+  easing: 'ease'
 })
 
 router.onBeforeRouteChange = () => {
@@ -31,7 +28,14 @@ router.onAfterRouteChange = () => {
 </script>
 
 <template>
-  <DefaultTheme.Layout />
+  <Layout>
+    <template #doc-before>
+      <NolebaseBreadcrumbs />
+    </template>
+    <template #not-found>
+      <NotFound />
+    </template>
+  </Layout>
 </template>
 
 <style>

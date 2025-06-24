@@ -46,8 +46,8 @@
     * 药水箭：`[long（长效）] [strong（强力）] [tipped（药水（箭））] [potion] <arrow> [of] [long（长效）] [strong（强力）] <药水类型> [2|ii] [tipped（药水（箭））] [potion] <arrow（（药水）箭）> [2|ii]`
 * `<药水类型>` 需与药水名称匹配。
     * 与上文的物品类型与附魔 ID 相似，药水名称的判定在某些地方也会适当宽松。
-    * 我们支持的药水种类可以在创造模式界面（见 https://zh.minecraft.wiki/w/%E8%8D%AF%E6%B0%B4）中找到。不支持自定义药水与其他属性的物品。
-    * Bukkit 原生药水效果名称（https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionType.html）与部分药水效果名称（https://zh.minecraft.wiki/w/%E7%8A%B6%E6%80%81%E6%95%88%E6%9E%9C）都可被识别，但不公开支持。它们可能会在未来被移除。请尝试保持使用 Minecraft 的药水名称。例如，请使用 `healing` 而非 `instant heal` 或 `instant health`。
+    * 我们支持的药水种类可以在创造模式界面（见 [https://zh.minecraft.wiki/w/%E8%8D%AF%E6%B0%B4](https://zh.minecraft.wiki/w/%E8%8D%AF%E6%B0%B4)）中找到。不支持自定义药水与其他属性的物品。
+    * Bukkit 原生药水效果名称（[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionType.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionType.html)）与部分药水效果名称（[https://zh.minecraft.wiki/w/%E7%8A%B6%E6%80%81%E6%95%88%E6%9E%9C](https://zh.minecraft.wiki/w/%E7%8A%B6%E6%80%81%E6%95%88%E6%9E%9C)）都可被识别，但不公开支持。它们可能会在未来被移除。请尝试保持使用 Minecraft 的药水名称。例如，请使用 `healing` 而非 `instant heal` 或 `instant health`。
 * 关键词 `splash`、`lingering` 与 `arrow` 用于分别不同的物品类型。如果没有出现这些词，则生成普通的药水。
 * 关键词 `long`、`strong`、`2` 与 `ii` 用于指定药水的延时或强效变种。暂时没有既能延时又能强效的药水类型。也就是说，对于一种药水，只能使用其中一个关键词。
   但是，目前插件会无视额外添加的关键词。如果指定的药水效果不支持所选的关键词，则它也会被忽略。但这可能会在未来版本中发生改动，或变得更加严格。
