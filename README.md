@@ -8,6 +8,7 @@
 
 * [Github Pages](https://snowcutieowo.github.io/)
 * [纪念版加速线路](https://doc.mcbbs.co/snowcutieowo)（由猫提供）
+* [Netlify](https://continue-project.netlify.app/)
 
 > [!IMPORTANT]
 > 由于主仓库受到 Github 的限制而无法在取消原域名的基础上展示页面，因此本仓库将会永久保留直至我想出更好的方法。
