@@ -12,7 +12,7 @@
 
 ## 命令
 
-**别称：**`line`、`l`
+**别称：**`line`、`l`\
 **权限：**`dh.command.lines`
 
 ::: info 命令帮助
@@ -24,14 +24,14 @@
 
 ### `/dh l add <悬浮字> <页码> [内容]`
 
-**别称：**`append`
+**别称：**`append`\
 **权限：**`dh.command.lines.add`
 
 向悬浮字添加一行新的文本。
 
 * `<悬浮字>` - 悬浮字的名称。
 * `<页码>` - 页码索引，即待编辑行所在页。
-* `[内容]` - 新行的默认内容。不填则为[配置文本中 `defaults.text`] 下的内容。
+* `[内容]` - 新行的默认内容。不填则为[配置文本中 `defaults.text`](general.configuration.config.md) 下的内容。
 
 ### `/dh l addflag <悬浮字> <页码> <行号> <标志>`
 
@@ -58,8 +58,7 @@
 
 ### `/dh l edit <悬浮字> <页码> <行号>`
 
-**别称：**`e`
-
+**别称：**`e`\
 **权限：**`dh.command.lines.edit`
 
 向你发送一条聊天消息，可通过点击直接在聊天栏生成编辑命令。
@@ -70,8 +69,7 @@
 
 ### `/dh l height <悬浮字> <页码> <行号> <高度>`
 
-**别称：**`setheight`
-
+**别称：**`setheight`\
 **权限：**`dh.command.lines.height`
 
 设置所在行的高度。
@@ -104,8 +102,7 @@
 
 ### `/dh l offsetx <悬浮字> <页码> <行号> <偏移>`
 
-**别称：**`offx`、`xoff`、`xoffset`
-
+**别称：**`offx`、`xoff`、`xoffset`\
 **权限：**`dh.command.lines.offsetx`
 
 设置悬浮字行的 X 轴偏移。
@@ -117,8 +114,7 @@
 
 ### `/dh l offsetz <悬浮字> <页码> <行号> <偏移>`
 
-**别称：**`offz`、`zoff`、`zoffset`
-
+**别称：**`offz`、`zoff`、`zoffset`\
 **权限：**`dh.command.lines.offsetz`
 
 * `<悬浮字>` - 悬浮字的名称。
@@ -128,8 +124,7 @@
 
 ### `/dh l remove <悬浮字> <页码> <行号>`
 
-**别称：**`del`、`delete`、`rem`
-
+**别称：**`del`、`delete`、`rem`\
 **权限：**`dh.command.lines.remove`
 
 从悬浮字中删除指定行的文本。
@@ -162,7 +157,7 @@
 
 ### `/dh l setfacing <悬浮字> <页码> <行号> <朝向>`
 
-**别称：**`facing`、`face`
+**别称：**`facing`、`face`\
 **权限：**`dh.command.lines.setfacing`
 
 设置悬浮字的面朝方向（yaw）。仅影响 `#HEAD:`、`#SMALLHEAD:` 与 `#ENTITY` 内容的悬浮字行。
@@ -174,8 +169,7 @@
 
 ### `/dh l setpermission <悬浮字> <页码> <行号> [权限]`
 
-**别称：**`perm`、`permission`、`setperm`
-
+**别称：**`perm`、`permission`、`setperm`\
 **权限：**`dh.command.lines.setpermission`
 
 设置浏览悬浮字行所需的权限。
